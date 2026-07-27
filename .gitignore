@@ -1,0 +1,43 @@
+# Secrets & local env
+.env
+.env.local
+*.pem
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.eggs/
+dist/
+build/
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+*.egg
+
+# Heavy / regenerable Google caches (keep processed + graph + fixtures in git)
+data/raw/
+data/backup/
+data/quota_ledger.json
+!data/fixtures/
+!data/fixtures/**
+
+# Local matplotlib / IDE noise
+.mplconfig/
+.cache/
+models/
+*.pt
+*.pth
+*.bin
+*.safetensors
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+
+# Accidental local screenshots
+Screenshot*.png

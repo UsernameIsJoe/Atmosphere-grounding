@@ -1,0 +1,125 @@
+seed: 42
+
+region:
+  id: harvard_mit_corridor
+  name: "Harvard–MIT corridor, Cambridge, MA, USA"
+  # Midpoint between Harvard Square and MIT
+  center:
+    lat: 42.3668
+    lng: -71.1065
+  # Corridor between Harvard Square (NW) and MIT (SE)
+  bbox:
+    south: 42.3550
+    west: -71.1250
+    north: 42.3800
+    east: -71.0850
+  language: en
+
+places:
+  search_queries:
+    - "parks near Harvard Square Cambridge Massachusetts"
+    - "parks near MIT Cambridge Massachusetts"
+    - "parks near Central Square Cambridge Massachusetts"
+    - "public plazas Cambridge Massachusetts Harvard MIT"
+    - "public gardens Cambridge Massachusetts Harvard Yard"
+    - "Cambridge Common park"
+    - "Killian Court MIT"
+    - "John F Kennedy Park Cambridge"
+  include_types:
+    - park
+    - tourist_attraction
+  exclude_name_substrings:
+    - cafe
+    - café
+    - coffee
+    - restaurant
+    - bar
+    - hotel
+    - motel
+  search_radius_m: 2500
+  max_places: 60
+  max_photos_per_place: 3
+  max_reviews_per_place: 20
+
+atmospheres:
+  active:
+    - inviting
+    - safe
+    - calm
+  lexicon_path: configs/lexicon.yaml
+
+quota:
+  soft_fraction: 0.5
+  free_monthly_caps:
+    text_search: 5000
+    place_details_enterprise: 1000
+    place_photos: 1000
+  hard_caps:
+    text_search: 20
+    place_details_enterprise: 60
+    place_photos: 180
+
+paths:
+  raw_dir: data/raw
+  processed_dir: data/processed
+  graph_dir: data/graph
+  fixtures_dir: data/fixtures
+  backup_dir: data/backup/google
+  quota_ledger: data/quota_ledger.json
+
+models:
+  ollama:
+    model: llama3.2:3b
+    temperature: 0.1
+    timeout_s: 120
+  # Vision backends: "transformers" | "heuristic"
+  vision_backend: transformers
+  siglip_model: google/siglip-base-patch16-224
+  grounding_dino_model: IDEA-Research/grounding-dino-tiny
+  dinov2_model: facebook/dinov2-small
+  match_top_k_images: 3
+  grounding_box_threshold: 0.25
+  grounding_text_threshold: 0.25
+  detection_vocabulary:
+    - tree
+    - bench
+    - path
+    - walkway
+    - fence
+    - gate
+    - lighting
+    - lamp
+    - water
+    - fountain
+    - grass
+    - lawn
+    - playground
+    - building
+    - facade
+    - people
+    - bicycle
+    - sign
+    - stairs
+    - plaza
+    - canopy
+    - shade
+
+extract:
+  run_fusion_pass: true
+
+correlation:
+  # Human-chosen after reviewing visuals of steps/step8_cosine_percentiles.html:
+  # treat scores at/below the 10th percentile as mismatches.
+  mismatch_mode: cosine_percentile
+  mismatch_percentile: 10
+  # Kept for optional modes / legacy:
+  mismatch_z_threshold: -0.75
+  atmosphere_distractors:
+    - energetic
+    - excluding
+    - disorienting
+
+collect:
+  dry_run: false
+  use_fixtures: false
+  backup_on_collect: true

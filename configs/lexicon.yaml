@@ -1,0 +1,29 @@
+# Theory-based urban atmosphere lexicon.
+# Pilot activates a subset via cambridge_pilot.yaml → atmospheres.active
+
+atmospheres:
+  - calm
+  - energetic
+  - inviting
+  - excluding
+  - legible
+  - disorienting
+  - open
+  - compressed
+  - exploratory
+  - safe
+  - vibrant
+
+# Optional short glosses to steer LLM extraction (visual, place-level).
+glosses:
+  calm: "visually quiet, soft, low-stimulation spatial character"
+  energetic: "visually lively, active, high-motion spatial character"
+  inviting: "visually welcoming, approachable entrance or seating character"
+  excluding: "visually hostile, barrier-like, unwelcoming spatial character"
+  legible: "visually clear paths, readable layout, easy orientation"
+  disorienting: "visually confusing, maze-like, hard to orient"
+  open: "visually spacious, sky/horizon visible, low enclosure"
+  compressed: "visually tight, enclosed, narrow spatial character"
+  exploratory: "visually varied paths, discovery-oriented layout"
+  safe: "visually protected, well-lit, overlooked, low-threat cues"
+  vibrant: "visually colorful, active street life, sensory richness"
