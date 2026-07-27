@@ -1,0 +1,9 @@
+{
+  "n_evidence": 3676,
+  "backend": "transformers",
+  "atmospheres": [
+    "inviting",
+    "safe",
+    "calm"
+  ]
+}

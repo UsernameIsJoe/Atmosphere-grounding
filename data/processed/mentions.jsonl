@@ -1,0 +1,200 @@
+{"place_id": "ChIJQXMWnUV344kRzs9-HfLoekk", "review_index": 0, "atmosphere": "safe", "phrase": "", "nouns": ["gate"], "visual_confidence": 0.9, "extractor": "ollama"}
+{"place_id": "ChIJQXMWnUV344kRzs9-HfLoekk", "review_index": 1, "atmosphere": "calm", "phrase": "plenty of shade", "nouns": ["shade"], "visual_confidence": 1.0, "extractor": "ollama"}
+{"place_id": "ChIJQXMWnUV344kRzs9-HfLoekk", "review_index": 2, "atmosphere": "safe", "phrase": "usually find a good space", "nouns": ["space"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJQXMWnUV344kRzs9-HfLoekk", "review_index": 3, "atmosphere": "safe", "phrase": "open grass spaces", "nouns": ["spaces"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJQXMWnUV344kRzs9-HfLoekk", "review_index": 4, "atmosphere": "safe", "phrase": "", "nouns": ["park"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJFapjVFl344kRXcKedI8Cuc0", "review_index": 0, "atmosphere": "safe", "phrase": "", "nouns": ["courts", "backboards", "rims"], "visual_confidence": 0.9, "extractor": "ollama"}
+{"place_id": "ChIJFapjVFl344kRXcKedI8Cuc0", "review_index": 1, "atmosphere": "calm", "phrase": "peaceful", "nouns": ["park", "river"], "visual_confidence": 0.9, "extractor": "ollama"}
+{"place_id": "ChIJFapjVFl344kRXcKedI8Cuc0", "review_index": 2, "atmosphere": "safe", "phrase": "good hoops and lights", "nouns": ["hoops", "lights"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJFapjVFl344kRXcKedI8Cuc0", "review_index": 3, "atmosphere": "safe", "phrase": "", "nouns": ["post"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJFapjVFl344kRXcKedI8Cuc0", "review_index": 4, "atmosphere": "safe", "phrase": "", "nouns": ["bushes"], "visual_confidence": 0.5, "extractor": "ollama"}
+{"place_id": "ChIJC5eyB0J344kRIgcXIHRzdK4", "review_index": 0, "atmosphere": "inviting", "phrase": "seating areas", "nouns": ["areas"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJC5eyB0J344kRIgcXIHRzdK4", "review_index": 2, "atmosphere": "inviting", "phrase": "beautiful park", "nouns": ["park"], "visual_confidence": 0.9, "extractor": "ollama"}
+{"place_id": "ChIJC5eyB0J344kRIgcXIHRzdK4", "review_index": 3, "atmosphere": "safe", "phrase": "", "nouns": ["path"], "visual_confidence": 0.0, "extractor": "ollama"}
+{"place_id": "ChIJC5eyB0J344kRIgcXIHRzdK4", "review_index": 4, "atmosphere": "calm", "phrase": "like oh I got tired let me just go to sleep in the grass", "nouns": ["grass"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJdelVAGp344kRnbhJtYxqBuo", "review_index": 1, "atmosphere": "inviting", "phrase": "amazing park", "nouns": ["park"], "visual_confidence": 0.9, "extractor": "ollama"}
+{"place_id": "ChIJdelVAGp344kRnbhJtYxqBuo", "review_index": 2, "atmosphere": "safe", "phrase": "Good from ages 2 and up", "nouns": ["swings"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJdelVAGp344kRnbhJtYxqBuo", "review_index": 3, "atmosphere": "safe", "phrase": "lots of street parking", "nouns": ["parking"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJdelVAGp344kRnbhJtYxqBuo", "review_index": 4, "atmosphere": "safe", "phrase": "yet again", "nouns": ["drive", "parking"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJqawa215344kROpcUJbbE0Vg", "review_index": 0, "atmosphere": "calm", "phrase": "one of the best and quiet times", "nouns": ["road", "time"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJqawa215344kROpcUJbbE0Vg", "review_index": 1, "atmosphere": "inviting", "phrase": "sit down", "nouns": ["sun"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJqawa215344kROpcUJbbE0Vg", "review_index": 2, "atmosphere": "safe", "phrase": "seems like", "nouns": ["park"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJqawa215344kROpcUJbbE0Vg", "review_index": 3, "atmosphere": "calm", "phrase": "So nice and peaceful", "nouns": ["park"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJqawa215344kROpcUJbbE0Vg", "review_index": 4, "atmosphere": "safe", "phrase": "", "nouns": ["road"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJ8_RCvWp344kRCTRS1Lks6KU", "review_index": 0, "atmosphere": "calm", "phrase": "sitting under the fairy lights in a comfy Adirondack chair", "nouns": ["fairy lights", "chair"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJ8_RCvWp344kRCTRS1Lks6KU", "review_index": 2, "atmosphere": "calm", "phrase": "beautiful and calming", "nouns": ["lights"], "visual_confidence": 1.0, "extractor": "ollama"}
+{"place_id": "ChIJ8_RCvWp344kRCTRS1Lks6KU", "review_index": 3, "atmosphere": "calm", "phrase": "relax", "nouns": ["place"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJ8_RCvWp344kRCTRS1Lks6KU", "review_index": 4, "atmosphere": "calm", "phrase": "quiet", "nouns": ["park"], "visual_confidence": 0.9, "extractor": "ollama"}
+{"place_id": "ChIJE12gBq1w44kR_N0FJNiKAcg", "review_index": 0, "atmosphere": "calm", "phrase": "chill", "nouns": ["park"], "visual_confidence": 0.9, "extractor": "ollama"}
+{"place_id": "ChIJE12gBq1w44kR_N0FJNiKAcg", "review_index": 1, "atmosphere": "safe", "phrase": "", "nouns": ["park"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJE12gBq1w44kR_N0FJNiKAcg", "review_index": 2, "atmosphere": "safe", "phrase": "", "nouns": ["trash cans"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJE12gBq1w44kR_N0FJNiKAcg", "review_index": 3, "atmosphere": "safe", "phrase": "", "nouns": ["field"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJK-7ymsF344kRN70NFmyfvK8", "review_index": 0, "atmosphere": "inviting", "phrase": "", "nouns": ["benches", "toys"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJK-7ymsF344kRN70NFmyfvK8", "review_index": 1, "atmosphere": "calm", "phrase": "giving families and all a peace with calm pause", "nouns": ["pause"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJK-7ymsF344kRN70NFmyfvK8", "review_index": 2, "atmosphere": "safe", "phrase": "", "nouns": ["park"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJK-7ymsF344kRN70NFmyfvK8", "review_index": 3, "atmosphere": "safe", "phrase": "Great place", "nouns": ["place"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJK-7ymsF344kRN70NFmyfvK8", "review_index": 4, "atmosphere": "safe", "phrase": "", "nouns": ["gated park"], "visual_confidence": 0.9, "extractor": "ollama"}
+{"place_id": "ChIJ0zpihlJ344kRCAOlne5GEoc", "review_index": 0, "atmosphere": "safe", "phrase": "fenced in playground", "nouns": ["playground"], "visual_confidence": 0.9, "extractor": "ollama"}
+{"place_id": "ChIJ0zpihlJ344kRCAOlne5GEoc", "review_index": 1, "atmosphere": "inviting", "phrase": "Great people watching", "nouns": ["people"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJ0zpihlJ344kRCAOlne5GEoc", "review_index": 2, "atmosphere": "safe", "phrase": "", "nouns": ["fountain"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJ0zpihlJ344kRCAOlne5GEoc", "review_index": 3, "atmosphere": "safe", "phrase": "", "nouns": ["path"], "visual_confidence": 0.5, "extractor": "ollama"}
+{"place_id": "ChIJ0zpihlJ344kRCAOlne5GEoc", "review_index": 4, "atmosphere": "safe", "phrase": "", "nouns": ["park"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJeR3K0F5344kRjtZYF7-MPlw", "review_index": 0, "atmosphere": "calm", "phrase": "meditative walk", "nouns": ["labyrinth"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJeR3K0F5344kRjtZYF7-MPlw", "review_index": 1, "atmosphere": "safe", "phrase": "spot", "nouns": ["spot"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJeR3K0F5344kRjtZYF7-MPlw", "review_index": 2, "atmosphere": "calm", "phrase": "Good place for reading a book", "nouns": ["place"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJeR3K0F5344kRjtZYF7-MPlw", "review_index": 3, "atmosphere": "calm", "phrase": "", "nouns": ["twilight"], "visual_confidence": 0.2, "extractor": "ollama"}
+{"place_id": "ChIJeR3K0F5344kRjtZYF7-MPlw", "review_index": 4, "atmosphere": "calm", "phrase": "great", "nouns": ["fountains"], "visual_confidence": 0.5, "extractor": "ollama"}
+{"place_id": "ChIJlegDpmd344kRZ8VMOsqJ5xM", "review_index": 0, "atmosphere": "calm", "phrase": "quite and small", "nouns": ["park"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJlegDpmd344kRZ8VMOsqJ5xM", "review_index": 1, "atmosphere": "safe", "phrase": "The park is clean, feels very safe", "nouns": ["park"], "visual_confidence": 0.9, "extractor": "ollama"}
+{"place_id": "ChIJlegDpmd344kRZ8VMOsqJ5xM", "review_index": 2, "atmosphere": "calm", "phrase": "tranquil natural beauty, peaceful contemplation and serene civic pride", "nouns": ["pathways", "green spaces", "river"], "visual_confidence": 0.9, "extractor": "ollama"}
+{"place_id": "ChIJlegDpmd344kRZ8VMOsqJ5xM", "review_index": 3, "atmosphere": "safe", "phrase": "", "nouns": ["path"], "visual_confidence": 0.5, "extractor": "ollama"}
+{"place_id": "ChIJlegDpmd344kRZ8VMOsqJ5xM", "review_index": 4, "atmosphere": "calm", "phrase": "good views", "nouns": ["views"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJK89zW1R344kRz7jYZfKShKA", "review_index": 0, "atmosphere": "inviting", "phrase": "A charming and cozy park", "nouns": ["park"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJK89zW1R344kRz7jYZfKShKA", "review_index": 1, "atmosphere": "calm", "phrase": "quiet spaces", "nouns": ["spaces"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJK89zW1R344kRz7jYZfKShKA", "review_index": 2, "atmosphere": "inviting", "phrase": "cute little spot", "nouns": ["spot"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJK89zW1R344kRz7jYZfKShKA", "review_index": 3, "atmosphere": "inviting", "phrase": "It's a great place to sit and talk with another person and relax here", "nouns": ["bench", "table"], "visual_confidence": 0.9, "extractor": "ollama"}
+{"place_id": "ChIJK89zW1R344kRz7jYZfKShKA", "review_index": 4, "atmosphere": "calm", "phrase": "Peaceful and shady", "nouns": ["shady"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJibK7VF9344kRqxrHJkNsISk", "review_index": 0, "atmosphere": "safe", "phrase": "clean facilities", "nouns": ["facilities"], "visual_confidence": 1.0, "extractor": "ollama"}
+{"place_id": "ChIJibK7VF9344kRqxrHJkNsISk", "review_index": 1, "atmosphere": "calm", "phrase": "quiet neighborhood", "nouns": ["neighborhood"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJibK7VF9344kRqxrHJkNsISk", "review_index": 2, "atmosphere": "safe", "phrase": "", "nouns": ["here"], "visual_confidence": 0.5, "extractor": "ollama"}
+{"place_id": "ChIJibK7VF9344kRqxrHJkNsISk", "review_index": 4, "atmosphere": "safe", "phrase": "", "nouns": ["park"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJ70NXYP1544kRXnfSiB1r4as", "review_index": 0, "atmosphere": "inviting", "phrase": "cute place to walk and sit", "nouns": ["place", "bench"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJ70NXYP1544kRXnfSiB1r4as", "review_index": 1, "atmosphere": "safe", "phrase": "", "nouns": ["bench"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJ70NXYP1544kRXnfSiB1r4as", "review_index": 2, "atmosphere": "inviting", "phrase": "urban park", "nouns": ["park"], "visual_confidence": 0.9, "extractor": "ollama"}
+{"place_id": "ChIJ70NXYP1544kRXnfSiB1r4as", "review_index": 3, "atmosphere": "safe", "phrase": "well maintained", "nouns": ["park"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJ70NXYP1544kRXnfSiB1r4as", "review_index": 4, "atmosphere": "inviting", "phrase": "Super cute park", "nouns": ["park"], "visual_confidence": 0.9, "extractor": "ollama"}
+{"place_id": "ChIJM3icQVN344kRZsmgAwN0zc8", "review_index": 1, "atmosphere": "inviting", "phrase": "It was so cool to hear marching band music outside, and then when I went to look - I saw an entire band playing in the park!", "nouns": ["park"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJM3icQVN344kRZsmgAwN0zc8", "review_index": 2, "atmosphere": "inviting", "phrase": "Very nice park enjoyed by all", "nouns": ["park", "benches", "tables"], "visual_confidence": 0.9, "extractor": "ollama"}
+{"place_id": "ChIJM3icQVN344kRZsmgAwN0zc8", "review_index": 3, "atmosphere": "safe", "phrase": "plenty of benches", "nouns": ["benches"], "visual_confidence": 0.9, "extractor": "ollama"}
+{"place_id": "ChIJM3icQVN344kRZsmgAwN0zc8", "review_index": 4, "atmosphere": "safe", "phrase": "", "nouns": ["parks", "police"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJw9Pt_EN344kRkOjxvQDgKbo", "review_index": 0, "atmosphere": "inviting", "phrase": "The Yard is the oldest part of the university, bounded by historic brick walls and filled with towering elms, wide grassy lawns, and iconic 18th-century dormitories like Massachusetts Hall (the oldest surviving building on campus).", "nouns": ["walls", "elms", "lawns"], "visual_confidence": 0.9, "extractor": "ollama"}
+{"place_id": "ChIJw9Pt_EN344kRkOjxvQDgKbo", "review_index": 1, "atmosphere": "calm", "phrase": "", "nouns": [], "visual_confidence": 0.0, "extractor": "ollama"}
+{"place_id": "ChIJw9Pt_EN344kRkOjxvQDgKbo", "review_index": 2, "atmosphere": "calm", "phrase": "The atmosphere is calm yet vibrant", "nouns": ["architecture", "green spaces"], "visual_confidence": 0.9, "extractor": "ollama"}
+{"place_id": "ChIJw9Pt_EN344kRkOjxvQDgKbo", "review_index": 3, "atmosphere": "safe", "phrase": "We were just disappointed that you can", "nouns": ["green spaces"], "visual_confidence": 0.5, "extractor": "ollama"}
+{"place_id": "ChIJw9Pt_EN344kRkOjxvQDgKbo", "review_index": 4, "atmosphere": "inviting", "phrase": "soak up the academic atmosphere", "nouns": ["walk"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJOdNat01344kRr8NyNS4Is-8", "review_index": 0, "atmosphere": "safe", "phrase": "Gates can close to keep the little kids in.", "nouns": ["gates"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJOdNat01344kRr8NyNS4Is-8", "review_index": 1, "atmosphere": "calm", "phrase": "quiet", "nouns": ["playground"], "visual_confidence": 0.9, "extractor": "ollama"}
+{"place_id": "ChIJOdNat01344kRr8NyNS4Is-8", "review_index": 2, "atmosphere": "safe", "phrase": "", "nouns": ["park"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJOdNat01344kRr8NyNS4Is-8", "review_index": 3, "atmosphere": "safe", "phrase": "hidden location", "nouns": ["location"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJOdNat01344kRr8NyNS4Is-8", "review_index": 4, "atmosphere": "safe", "phrase": "public park", "nouns": ["park"], "visual_confidence": 0.9, "extractor": "ollama"}
+{"place_id": "ChIJaeBhK1d344kRma9tUbssEBo", "review_index": 0, "atmosphere": "safe", "phrase": "green areas, benches, gardens, and trash cans", "nouns": ["benches", "gardens"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJaeBhK1d344kRma9tUbssEBo", "review_index": 1, "atmosphere": "safe", "phrase": "Always great safe place", "nouns": ["place"], "visual_confidence": 1.0, "extractor": "ollama"}
+{"place_id": "ChIJaeBhK1d344kRma9tUbssEBo", "review_index": 2, "atmosphere": "calm", "phrase": "relax and enjoy the scenery", "nouns": ["scenery"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJaeBhK1d344kRma9tUbssEBo", "review_index": 3, "atmosphere": "safe", "phrase": "park", "nouns": ["park"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJ25L83fx544kRiuWNvWYdSLA", "review_index": 0, "atmosphere": "inviting", "phrase": "Really cool park with unique equipment to play on!", "nouns": ["park", "equipment"], "visual_confidence": 0.9, "extractor": "ollama"}
+{"place_id": "ChIJ25L83fx544kRiuWNvWYdSLA", "review_index": 1, "atmosphere": "safe", "phrase": "utilize the benches", "nouns": ["benches"], "visual_confidence": 0.9, "extractor": "ollama"}
+{"place_id": "ChIJ25L83fx544kRiuWNvWYdSLA", "review_index": 2, "atmosphere": "safe", "phrase": "", "nouns": ["park"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJ25L83fx544kRiuWNvWYdSLA", "review_index": 3, "atmosphere": "calm", "phrase": "Peaceful", "nouns": ["green space"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJ25L83fx544kRiuWNvWYdSLA", "review_index": 4, "atmosphere": "safe", "phrase": "", "nouns": ["playground", "fence"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJ38dFa69w44kRDZBuTuaYXkk", "review_index": 0, "atmosphere": "safe", "phrase": "", "nouns": ["road traffic"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJ38dFa69w44kRDZBuTuaYXkk", "review_index": 1, "atmosphere": "safe", "phrase": "security came out instantly", "nouns": ["security"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJ38dFa69w44kRDZBuTuaYXkk", "review_index": 2, "atmosphere": "inviting", "phrase": "This is the place to come for making your day the best one.", "nouns": ["tables", "benches", "chairs", "courts"], "visual_confidence": 0.9, "extractor": "ollama"}
+{"place_id": "ChIJ38dFa69w44kRDZBuTuaYXkk", "review_index": 3, "atmosphere": "safe", "phrase": "", "nouns": ["elevator"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJ38dFa69w44kRDZBuTuaYXkk", "review_index": 4, "atmosphere": "inviting", "phrase": "Delightful roof garden next to Marriot Hotel", "nouns": ["garden"], "visual_confidence": 0.9, "extractor": "ollama"}
+{"place_id": "ChIJb8XYuVV344kRcoLcVhEuE1A", "review_index": 0, "atmosphere": "calm", "phrase": "quite", "nouns": ["park"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJb8XYuVV344kRcoLcVhEuE1A", "review_index": 1, "atmosphere": "safe", "phrase": "Beautiful park", "nouns": ["park"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJb8XYuVV344kRcoLcVhEuE1A", "review_index": 2, "atmosphere": "safe", "phrase": "", "nouns": ["university commons"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJb8XYuVV344kRcoLcVhEuE1A", "review_index": 3, "atmosphere": "safe", "phrase": "", "nouns": ["property"], "visual_confidence": 0.5, "extractor": "ollama"}
+{"place_id": "ChIJb8XYuVV344kRcoLcVhEuE1A", "review_index": 4, "atmosphere": "inviting", "phrase": "watch party", "nouns": ["bench"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJsU8r3bFw44kRsWnYyHOKfkk", "review_index": 0, "atmosphere": "calm", "phrase": "relax and enjoy ourselves", "nouns": ["park"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJsU8r3bFw44kRsWnYyHOKfkk", "review_index": 1, "atmosphere": "calm", "phrase": "nice patio", "nouns": ["patio"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJsU8r3bFw44kRsWnYyHOKfkk", "review_index": 2, "atmosphere": "safe", "phrase": "1/2 of the space was empty", "nouns": ["space"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJsU8r3bFw44kRsWnYyHOKfkk", "review_index": 4, "atmosphere": "inviting", "phrase": "", "nouns": ["state park"], "visual_confidence": 0.0, "extractor": "ollama"}
+{"place_id": "ChIJ6ZPQHapw44kR0GWA414vJOI", "review_index": 0, "atmosphere": "calm", "phrase": "Great campus view", "nouns": ["view"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJ6ZPQHapw44kR0GWA414vJOI", "review_index": 1, "atmosphere": "inviting", "phrase": "welcoming, refreshing feel", "nouns": ["grass"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJ6ZPQHapw44kR0GWA414vJOI", "review_index": 2, "atmosphere": "safe", "phrase": "caters to young and old", "nouns": ["young", "old"], "visual_confidence": 0.5, "extractor": "ollama"}
+{"place_id": "ChIJ6ZPQHapw44kR0GWA414vJOI", "review_index": 3, "atmosphere": "inviting", "phrase": "you can feel the knowledge in the air", "nouns": ["air"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJ6ZPQHapw44kR0GWA414vJOI", "review_index": 4, "atmosphere": "safe", "phrase": "great location", "nouns": ["location"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJl4SpjlR344kR-a5J8f_YNvo", "review_index": 0, "atmosphere": "calm", "phrase": "relax", "nouns": ["park"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJl4SpjlR344kR-a5J8f_YNvo", "review_index": 1, "atmosphere": "inviting", "phrase": "Very cute nice area to relax", "nouns": ["area"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJl4SpjlR344kR-a5J8f_YNvo", "review_index": 2, "atmosphere": "inviting", "phrase": "some character", "nouns": ["character"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJl4SpjlR344kR-a5J8f_YNvo", "review_index": 3, "atmosphere": "calm", "phrase": "", "nouns": ["bench"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJl4SpjlR344kR-a5J8f_YNvo", "review_index": 4, "atmosphere": "safe", "phrase": "", "nouns": ["park"], "visual_confidence": 0.5, "extractor": "ollama"}
+{"place_id": "ChIJ_Qt69Px544kR9sYP5zl1kw4", "review_index": 0, "atmosphere": "safe", "phrase": "", "nouns": ["park", "chickens"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJ_Qt69Px544kR9sYP5zl1kw4", "review_index": 2, "atmosphere": "safe", "phrase": "", "nouns": ["security camera"], "visual_confidence": 1.0, "extractor": "ollama"}
+{"place_id": "ChIJ_Qt69Px544kR9sYP5zl1kw4", "review_index": 3, "atmosphere": "inviting", "phrase": "Really great for the toddler and preschool set!", "nouns": ["sand", "water feature"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJ_Qt69Px544kR9sYP5zl1kw4", "review_index": 4, "atmosphere": "safe", "phrase": "", "nouns": ["park"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJZweWZOJ544kReZtPOq9YZGQ", "review_index": 0, "atmosphere": "safe", "phrase": "always clean", "nouns": ["path"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJZweWZOJ544kReZtPOq9YZGQ", "review_index": 1, "atmosphere": "safe", "phrase": "", "nouns": ["park"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJZweWZOJ544kReZtPOq9YZGQ", "review_index": 2, "atmosphere": "safe", "phrase": "Very safe area", "nouns": ["area"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJZweWZOJ544kReZtPOq9YZGQ", "review_index": 3, "atmosphere": "safe", "phrase": "", "nouns": ["city"], "visual_confidence": 0.5, "extractor": "ollama"}
+{"place_id": "ChIJZweWZOJ544kReZtPOq9YZGQ", "review_index": 4, "atmosphere": "inviting", "phrase": "hang out", "nouns": ["place"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJhaThd61w44kRKvSIN6DksY8", "review_index": 0, "atmosphere": "safe", "phrase": "relatively fenced in", "nouns": ["fenced"], "visual_confidence": 0.9, "extractor": "ollama"}
+{"place_id": "ChIJhaThd61w44kRKvSIN6DksY8", "review_index": 1, "atmosphere": "safe", "phrase": "", "nouns": ["grass"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJhaThd61w44kRKvSIN6DksY8", "review_index": 2, "atmosphere": "calm", "phrase": "chill and relax", "nouns": ["park"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJhaThd61w44kRKvSIN6DksY8", "review_index": 4, "atmosphere": "calm", "phrase": "quiet circular segment with seats facing a round structure", "nouns": ["segment", "structure"], "visual_confidence": 0.9, "extractor": "ollama"}
+{"place_id": "ChIJfbjtxEN344kRXfCglgyQaOI", "review_index": 0, "atmosphere": "inviting", "phrase": "public space next to the Harvard Yard", "nouns": ["bench", "table"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJfbjtxEN344kRXfCglgyQaOI", "review_index": 1, "atmosphere": "calm", "phrase": "", "nouns": ["water", "rocks"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJfbjtxEN344kRXfCglgyQaOI", "review_index": 2, "atmosphere": "calm", "phrase": "Its calm environment makes you feel comfortable and welcome.", "nouns": ["environment"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJfbjtxEN344kRXfCglgyQaOI", "review_index": 3, "atmosphere": "calm", "phrase": "beautifully appointed and versatile spaces", "nouns": ["spaces"], "visual_confidence": 0.2, "extractor": "ollama"}
+{"place_id": "ChIJfbjtxEN344kRXfCglgyQaOI", "review_index": 4, "atmosphere": "inviting", "phrase": "beautiful and clean venue", "nouns": ["venue"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJB6Xitahw44kR9i_MAEut2RE", "review_index": 1, "atmosphere": "safe", "phrase": "", "nouns": [], "visual_confidence": 0.0, "extractor": "ollama"}
+{"place_id": "ChIJB6Xitahw44kR9i_MAEut2RE", "review_index": 2, "atmosphere": "safe", "phrase": "", "nouns": ["bathroom"], "visual_confidence": 1.0, "extractor": "ollama"}
+{"place_id": "ChIJB6Xitahw44kR9i_MAEut2RE", "review_index": 3, "atmosphere": "safe", "phrase": "", "nouns": ["path"], "visual_confidence": 0.5, "extractor": "ollama"}
+{"place_id": "ChIJrwIkbZ5x44kReubXVxjKNJo", "review_index": 0, "atmosphere": "safe", "phrase": "", "nouns": ["place"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJrwIkbZ5x44kReubXVxjKNJo", "review_index": 1, "atmosphere": "safe", "phrase": "", "nouns": ["garage"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJrwIkbZ5x44kReubXVxjKNJo", "review_index": 2, "atmosphere": "calm", "phrase": "open-air", "nouns": ["air"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJrwIkbZ5x44kReubXVxjKNJo", "review_index": 3, "atmosphere": "safe", "phrase": "", "nouns": ["venue"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJrwIkbZ5x44kReubXVxjKNJo", "review_index": 4, "atmosphere": "calm", "phrase": "chill", "nouns": ["place"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJecplvEJ344kRdjumhjIYylk", "review_index": 0, "atmosphere": "inviting", "phrase": "the unmistakable atmosphere of one of the most famous universities in the world", "nouns": ["university"], "visual_confidence": 0.9, "extractor": "ollama"}
+{"place_id": "ChIJecplvEJ344kRdjumhjIYylk", "review_index": 1, "atmosphere": "inviting", "phrase": "a romantic, intellectual energy in the air", "nouns": ["benches"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJecplvEJ344kRdjumhjIYylk", "review_index": 2, "atmosphere": "inviting", "phrase": "Such a cute area to walk around", "nouns": ["area"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJecplvEJ344kRdjumhjIYylk", "review_index": 3, "atmosphere": "calm", "phrase": "the calm energy of the square", "nouns": ["square"], "visual_confidence": 0.9, "extractor": "ollama"}
+{"place_id": "ChIJecplvEJ344kRdjumhjIYylk", "review_index": 4, "atmosphere": "inviting", "phrase": "soaking in the atmosphere", "nouns": ["square"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJ__94-qpw44kRBYtpW0T5yA4", "review_index": 0, "atmosphere": "safe", "phrase": "well-lit", "nouns": ["attendant"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJ__94-qpw44kRBYtpW0T5yA4", "review_index": 1, "atmosphere": "safe", "phrase": "Good luck getting a spot here", "nouns": ["spot"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJ__94-qpw44kRBYtpW0T5yA4", "review_index": 2, "atmosphere": "safe", "phrase": "", "nouns": ["garage"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJ__94-qpw44kRBYtpW0T5yA4", "review_index": 4, "atmosphere": "safe", "phrase": "quite cheap", "nouns": ["street"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJqbhAWkJ344kR8qCzVUUg3Z8", "review_index": 1, "atmosphere": "calm", "phrase": "", "nouns": ["comfortable"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJqbhAWkJ344kR8qCzVUUg3Z8", "review_index": 2, "atmosphere": "safe", "phrase": "The sink was super big so it only broke after my family of 12 had all gotten on!", "nouns": ["sink"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJqbhAWkJ344kR8qCzVUUg3Z8", "review_index": 4, "atmosphere": "safe", "phrase": "Good spot but need to update bathroom we need more public bathroom & rest stops on highways & public areas", "nouns": ["bathroom", "rest stops"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJzyuk_lN344kRQcvilFvl7Bo", "review_index": 0, "atmosphere": "inviting", "phrase": "Nice environment", "nouns": ["environment"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJzyuk_lN344kRQcvilFvl7Bo", "review_index": 1, "atmosphere": "calm", "phrase": "", "nouns": ["square"], "visual_confidence": 0.0, "extractor": "ollama"}
+{"place_id": "ChIJzyuk_lN344kRQcvilFvl7Bo", "review_index": 2, "atmosphere": "safe", "phrase": "", "nouns": ["stores", "restaurants", "bar"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJzyuk_lN344kRQcvilFvl7Bo", "review_index": 3, "atmosphere": "safe", "phrase": "", "nouns": ["pot shops"], "visual_confidence": 0.5, "extractor": "ollama"}
+{"place_id": "ChIJzyuk_lN344kRQcvilFvl7Bo", "review_index": 4, "atmosphere": "safe", "phrase": "", "nouns": ["parking"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJgbyV0EJ344kRTzLd70y72lA", "review_index": 0, "atmosphere": "inviting", "phrase": "relax", "nouns": ["lounge"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJgbyV0EJ344kRTzLd70y72lA", "review_index": 1, "atmosphere": "inviting", "phrase": "the definitive modern town square for the entire Harvard community", "nouns": ["square"], "visual_confidence": 0.9, "extractor": "ollama"}
+{"place_id": "ChIJgbyV0EJ344kRTzLd70y72lA", "review_index": 2, "atmosphere": "inviting", "phrase": "very spacious with lots of room to stretch your legs", "nouns": ["building"], "visual_confidence": 0.9, "extractor": "ollama"}
+{"place_id": "ChIJgbyV0EJ344kRTzLd70y72lA", "review_index": 3, "atmosphere": "inviting", "phrase": "Great place to come and get work done.", "nouns": ["building"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJgbyV0EJ344kRTzLd70y72lA", "review_index": 4, "atmosphere": "inviting", "phrase": "an airy, multi-level place to rest with lots of tables and seating", "nouns": ["tables", "seating"], "visual_confidence": 0.9, "extractor": "ollama"}
+{"place_id": "ChIJgaT0OeR544kRDWVr7eYaS-g", "review_index": 0, "atmosphere": "calm", "phrase": "relax", "nouns": ["park"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJgaT0OeR544kRDWVr7eYaS-g", "review_index": 1, "atmosphere": "safe", "phrase": "Great views of the surrounding Harvard landmarks and the river.", "nouns": ["views", "river"], "visual_confidence": 0.9, "extractor": "ollama"}
+{"place_id": "ChIJgaT0OeR544kRDWVr7eYaS-g", "review_index": 2, "atmosphere": "calm", "phrase": "Just relax and enjoy sunset", "nouns": ["sunset"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJgaT0OeR544kRDWVr7eYaS-g", "review_index": 3, "atmosphere": "calm", "phrase": "quiet place", "nouns": ["river"], "visual_confidence": 0.9, "extractor": "ollama"}
+{"place_id": "ChIJgaT0OeR544kRDWVr7eYaS-g", "review_index": 4, "atmosphere": "calm", "phrase": "", "nouns": ["vegetation"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJL9hFHWh344kR4u0Ypc7ug18", "review_index": 0, "atmosphere": "inviting", "phrase": "comfortable and welcoming", "nouns": ["place"], "visual_confidence": 0.9, "extractor": "ollama"}
+{"place_id": "ChIJL9hFHWh344kR4u0Ypc7ug18", "review_index": 1, "atmosphere": "inviting", "phrase": "public atmosphere", "nouns": ["place"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJL9hFHWh344kR4u0Ypc7ug18", "review_index": 2, "atmosphere": "safe", "phrase": "Great times", "nouns": ["times"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJL9hFHWh344kR4u0Ypc7ug18", "review_index": 3, "atmosphere": "calm", "phrase": "", "nouns": ["lighting"], "visual_confidence": 0.5, "extractor": "ollama"}
+{"place_id": "ChIJL9hFHWh344kR4u0Ypc7ug18", "review_index": 4, "atmosphere": "inviting", "phrase": "best happening place", "nouns": ["place"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJMzhNVv5544kRqKx1Mlb1iLA", "review_index": 0, "atmosphere": "safe", "phrase": "", "nouns": ["building"], "visual_confidence": 0.5, "extractor": "ollama"}
+{"place_id": "ChIJMzhNVv5544kRqKx1Mlb1iLA", "review_index": 1, "atmosphere": "inviting", "phrase": "Entrance free of charge.", "nouns": ["entrance"], "visual_confidence": 0.9, "extractor": "ollama"}
+{"place_id": "ChIJMzhNVv5544kRqKx1Mlb1iLA", "review_index": 2, "atmosphere": "safe", "phrase": "", "nouns": ["path", "fence"], "visual_confidence": 0.5, "extractor": "ollama"}
+{"place_id": "ChIJMzhNVv5544kRqKx1Mlb1iLA", "review_index": 3, "atmosphere": "safe", "phrase": "", "nouns": ["building", "reception"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJMzhNVv5544kRqKx1Mlb1iLA", "review_index": 4, "atmosphere": "safe", "phrase": "", "nouns": ["campus"], "visual_confidence": 0.5, "extractor": "ollama"}
+{"place_id": "ChIJbaeXiER344kRR_f4e89EQuM", "review_index": 0, "atmosphere": "inviting", "phrase": "see the art pieces", "nouns": ["art pieces"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJbaeXiER344kRR_f4e89EQuM", "review_index": 1, "atmosphere": "inviting", "phrase": "SO elegant", "nouns": ["galleries"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJbaeXiER344kRR_f4e89EQuM", "review_index": 2, "atmosphere": "inviting", "phrase": "perfect example", "nouns": ["museum"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJbaeXiER344kRR_f4e89EQuM", "review_index": 3, "atmosphere": "safe", "phrase": "perfect size", "nouns": ["size"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJbaeXiER344kRR_f4e89EQuM", "review_index": 4, "atmosphere": "safe", "phrase": "", "nouns": ["fence"], "visual_confidence": 0.5, "extractor": "ollama"}
+{"place_id": "ChIJ0WEQ3kJ344kRgqD4jNgR18s", "review_index": 0, "atmosphere": "safe", "phrase": "", "nouns": ["stop", "maps"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJ0WEQ3kJ344kRgqD4jNgR18s", "review_index": 1, "atmosphere": "calm", "phrase": "passing through here seemed like being part of a movie", "nouns": ["here"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJ0WEQ3kJ344kRgqD4jNgR18s", "review_index": 2, "atmosphere": "calm", "phrase": "", "nouns": ["plaza"], "visual_confidence": 0.0, "extractor": "ollama"}
+{"place_id": "ChIJ0WEQ3kJ344kRgqD4jNgR18s", "review_index": 3, "atmosphere": "calm", "phrase": "staring at the beautiful buildings and reading historical plaques", "nouns": ["buildings"], "visual_confidence": 0.9, "extractor": "ollama"}
+{"place_id": "ChIJ0WEQ3kJ344kRgqD4jNgR18s", "review_index": 4, "atmosphere": "safe", "phrase": "The Station is always clean", "nouns": ["station"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJCdxNHFF344kRZyXENOL_AzI", "review_index": 0, "atmosphere": "inviting", "phrase": "lovely experience", "nouns": ["building", "spaces"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJCdxNHFF344kRZyXENOL_AzI", "review_index": 1, "atmosphere": "safe", "phrase": "", "nouns": ["kitchen"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJCdxNHFF344kRZyXENOL_AzI", "review_index": 2, "atmosphere": "safe", "phrase": "I avoid your city while staying in Belmont (wild how far I’m willing to drive around to avoid) because it’s a standstill with no lanes.", "nouns": ["city", "lanes"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJCdxNHFF344kRZyXENOL_AzI", "review_index": 3, "atmosphere": "safe", "phrase": "", "nouns": ["boston city hall"], "visual_confidence": 0.0, "extractor": "ollama"}
+{"place_id": "ChIJCdxNHFF344kRZyXENOL_AzI", "review_index": 4, "atmosphere": "safe", "phrase": "", "nouns": ["space"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJ5b-LegB644kRvUOaAysmcRU", "review_index": 0, "atmosphere": "calm", "phrase": "The interior and exterior are beautiful.", "nouns": ["building"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJ5b-LegB644kRvUOaAysmcRU", "review_index": 1, "atmosphere": "calm", "phrase": "beautiful perspective", "nouns": ["glass", "perspective"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJ5b-LegB644kRvUOaAysmcRU", "review_index": 2, "atmosphere": "safe", "phrase": "", "nouns": ["seating lines"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJ5b-LegB644kRvUOaAysmcRU", "review_index": 3, "atmosphere": "safe", "phrase": "", "nouns": ["orchestra"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJ5b-LegB644kRvUOaAysmcRU", "review_index": 4, "atmosphere": "safe", "phrase": "Well maintained place", "nouns": ["place"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJe9YuL0F344kRe7q8SEaMPWE", "review_index": 0, "atmosphere": "inviting", "phrase": "not very large", "nouns": ["museum"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJe9YuL0F344kRe7q8SEaMPWE", "review_index": 1, "atmosphere": "safe", "phrase": "Great taxidermy animals (mammals and fish and birds)!!", "nouns": ["animals", "fish", "birds"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJe9YuL0F344kRe7q8SEaMPWE", "review_index": 2, "atmosphere": "safe", "phrase": "", "nouns": ["museum"], "visual_confidence": 0.8, "extractor": "ollama"}
+{"place_id": "ChIJe9YuL0F344kRe7q8SEaMPWE", "review_index": 3, "atmosphere": "inviting", "phrase": "You could spend the whole day in here!", "nouns": ["here"], "visual_confidence": 0.9, "extractor": "ollama"}
+{"place_id": "ChIJe9YuL0F344kRe7q8SEaMPWE", "review_index": 4, "atmosphere": "calm", "phrase": "the museum was calm and quiet early in the morning", "nouns": ["museum"], "visual_confidence": 0.9, "extractor": "ollama"}

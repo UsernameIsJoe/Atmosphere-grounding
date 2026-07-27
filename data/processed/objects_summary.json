@@ -1,0 +1,6 @@
+{
+  "n_detections": 2151,
+  "n_places": 43,
+  "backend": "transformers",
+  "vocab_size": 22
+}

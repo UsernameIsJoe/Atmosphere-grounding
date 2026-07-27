@@ -1,0 +1,49 @@
+{
+  "id": "places/fixture_cambridge_common",
+  "displayName": {
+    "text": "Cambridge Common",
+    "languageCode": "en"
+  },
+  "location": {
+    "latitude": 42.3765,
+    "longitude": -71.122
+  },
+  "types": [
+    "park",
+    "tourist_attraction"
+  ],
+  "formattedAddress": "Cambridge Common, Cambridge, MA",
+  "rating": 4.6,
+  "userRatingCount": 1200,
+  "reviews": [
+    {
+      "rating": 5,
+      "text": {
+        "text": "A calm green lawn with shade trees and benches \u2014 peaceful place to sit.",
+        "languageCode": "en"
+      }
+    },
+    {
+      "rating": 4,
+      "text": {
+        "text": "Welcoming paths and an inviting entrance near the playground; feels open and friendly.",
+        "languageCode": "en"
+      }
+    },
+    {
+      "rating": 5,
+      "text": {
+        "text": "Well-lit walkways at dusk make it feel safe for families walking through.",
+        "languageCode": "en"
+      }
+    }
+  ],
+  "photos": [
+    {
+      "name": "places/fixture_cambridge_common/photos/0"
+    },
+    {
+      "name": "places/fixture_cambridge_common/photos/1"
+    }
+  ]
+}

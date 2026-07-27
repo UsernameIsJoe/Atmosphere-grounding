@@ -1,0 +1,7413 @@
+{
+  "nodes": [
+    {
+      "id": "place:ChIJecplvEJ344kRdjumhjIYylk",
+      "label": "Harvard Square",
+      "group": "Place",
+      "title": "Harvard Square | jaccard=0.0357 align=0.0714"
+    },
+    {
+      "id": "place:ChIJw9Pt_EN344kRkOjxvQDgKbo",
+      "label": "Harvard Yard",
+      "group": "Place",
+      "title": "Harvard Yard | jaccard=0.0312 align=0.106"
+    },
+    {
+      "id": "place:ChIJe9YuL0F344kRe7q8SEaMPWE",
+      "label": "The Harvard Museum of Natural History",
+      "group": "Place",
+      "title": "The Harvard Museum of Natural History | jaccard=0.0 align=0.0754"
+    },
+    {
+      "id": "place:ChIJbaeXiER344kRR_f4e89EQuM",
+      "label": "Harvard Art Museums",
+      "group": "Place",
+      "title": "Harvard Art Museums | jaccard=0.0 align=0.0385"
+    },
+    {
+      "id": "place:ChIJC5eyB0J344kRIgcXIHRzdK4",
+      "label": "Cambridge Common",
+      "group": "Place",
+      "title": "Cambridge Common | jaccard=0.0645 align=0.0426"
+    },
+    {
+      "id": "place:ChIJ6ZPQHapw44kR0GWA414vJOI",
+      "label": "Killian Court",
+      "group": "Place",
+      "title": "Killian Court | jaccard=0.037 align=0.0731"
+    },
+    {
+      "id": "place:ChIJgaT0OeR544kRDWVr7eYaS-g",
+      "label": "Magazine Beach",
+      "group": "Place",
+      "title": "Magazine Beach | jaccard=0.0 align=0.0713"
+    },
+    {
+      "id": "place:ChIJlegDpmd344kRZ8VMOsqJ5xM",
+      "label": "John F Kennedy Memorial Park",
+      "group": "Place",
+      "title": "John F Kennedy Memorial Park | jaccard=0.0286 align=0.0718"
+    },
+    {
+      "id": "place:ChIJzyuk_lN344kRQcvilFvl7Bo",
+      "label": "Central Square",
+      "group": "Place",
+      "title": "Central Square | jaccard=0.0 align=0.0499"
+    },
+    {
+      "id": "place:ChIJ0zpihlJ344kRCAOlne5GEoc",
+      "label": "Sennott Park",
+      "group": "Place",
+      "title": "Sennott Park | jaccard=0.1667 align=0.0507"
+    },
+    {
+      "id": "place:ChIJfbjtxEN344kRXfCglgyQaOI",
+      "label": "Harvard Science Center Plaza",
+      "group": "Place",
+      "title": "Harvard Science Center Plaza | jaccard=0.0625 align=0.0716"
+    },
+    {
+      "id": "place:ChIJMzhNVv5544kRqKx1Mlb1iLA",
+      "label": "MIT List Visual Arts Center",
+      "group": "Place",
+      "title": "MIT List Visual Arts Center | jaccard=0.1034 align=0.0558"
+    },
+    {
+      "id": "place:ChIJ5b-LegB644kRvUOaAysmcRU",
+      "label": "MIT Kresge Auditorium",
+      "group": "Place",
+      "title": "MIT Kresge Auditorium | jaccard=0.0323 align=0.0843"
+    },
+    {
+      "id": "place:ChIJQXMWnUV344kRzs9-HfLoekk",
+      "label": "Joan Lorentz Park",
+      "group": "Place",
+      "title": "Joan Lorentz Park | jaccard=0.0357 align=0.0673"
+    },
+    {
+      "id": "place:ChIJdelVAGp344kRnbhJtYxqBuo",
+      "label": "Alexander W. Kemp Playground",
+      "group": "Place",
+      "title": "Alexander W. Kemp Playground | jaccard=0.0 align=0.0706"
+    },
+    {
+      "id": "place:ChIJqawa215344kROpcUJbbE0Vg",
+      "label": "Riverbend Park",
+      "group": "Place",
+      "title": "Riverbend Park | jaccard=0.0 align=0.0801"
+    },
+    {
+      "id": "place:ChIJ38dFa69w44kRDZBuTuaYXkk",
+      "label": "Urban Park (UP) Roof Garden",
+      "group": "Place",
+      "title": "Urban Park (UP) Roof Garden | jaccard=0.0303 align=0.0394"
+    },
+    {
+      "id": "place:ChIJ0WEQ3kJ344kRgqD4jNgR18s",
+      "label": "Harvard",
+      "group": "Place",
+      "title": "Harvard | jaccard=0.0323 align=0.0897"
+    },
+    {
+      "id": "place:ChIJibK7VF9344kRqxrHJkNsISk",
+      "label": "Riverside Press Park",
+      "group": "Place",
+      "title": "Riverside Press Park | jaccard=0.0 align=0.0709"
+    },
+    {
+      "id": "place:ChIJ70NXYP1544kRXnfSiB1r4as",
+      "label": "Dana Square Park",
+      "group": "Place",
+      "title": "Dana Square Park | jaccard=0.04 align=0.076"
+    },
+    {
+      "id": "place:ChIJE12gBq1w44kR_N0FJNiKAcg",
+      "label": "Greene-Rose Heritage Park",
+      "group": "Place",
+      "title": "Greene-Rose Heritage Park | jaccard=0.0 align=0.0567"
+    },
+    {
+      "id": "place:ChIJ25L83fx544kRiuWNvWYdSLA",
+      "label": "Old Morse Park",
+      "group": "Place",
+      "title": "Old Morse Park | jaccard=0.0938 align=0.0797"
+    },
+    {
+      "id": "place:ChIJFapjVFl344kRXcKedI8Cuc0",
+      "label": "Corporal Burns Playground",
+      "group": "Place",
+      "title": "Corporal Burns Playground | jaccard=0.0 align=0.0319"
+    },
+    {
+      "id": "place:ChIJM3icQVN344kRZsmgAwN0zc8",
+      "label": "Clement Morgan Park",
+      "group": "Place",
+      "title": "Clement Morgan Park | jaccard=0.04 align=0.0535"
+    },
+    {
+      "id": "place:ChIJgbyV0EJ344kRTzLd70y72lA",
+      "label": "Richard A. and Susan F. Smith Campus Center",
+      "group": "Place",
+      "title": "Richard A. and Susan F. Smith Campus Center | jaccard=0.0385 align=0.0805"
+    },
+    {
+      "id": "place:ChIJqbhAWkJ344kR8qCzVUUg3Z8",
+      "label": "Portland Loo-Public Restroom",
+      "group": "Place",
+      "title": "Portland Loo-Public Restroom | jaccard=0.0 align=0.0376"
+    },
+    {
+      "id": "place:ChIJ_Qt69Px544kR9sYP5zl1kw4",
+      "label": "Fulmore Park",
+      "group": "Place",
+      "title": "Fulmore Park | jaccard=0.0 align=0.0789"
+    },
+    {
+      "id": "place:ChIJL9hFHWh344kR4u0Ypc7ug18",
+      "label": "One Brattle Square",
+      "group": "Place",
+      "title": "One Brattle Square | jaccard=0.0 align=0.0476"
+    },
+    {
+      "id": "place:ChIJeR3K0F5344kRjtZYF7-MPlw",
+      "label": "Wheeler Park",
+      "group": "Place",
+      "title": "Wheeler Park | jaccard=0.0 align=0.0461"
+    },
+    {
+      "id": "place:ChIJK-7ymsF344kRN70NFmyfvK8",
+      "label": "Cooper Square Park",
+      "group": "Place",
+      "title": "Cooper Square Park | jaccard=0.0323 align=0.0781"
+    },
+    {
+      "id": "place:ChIJrwIkbZ5x44kReubXVxjKNJo",
+      "label": "Kendall/MIT Open Space",
+      "group": "Place",
+      "title": "Kendall/MIT Open Space | jaccard=0.0 align=0.0383"
+    },
+    {
+      "id": "place:ChIJOdNat01344kRr8NyNS4Is-8",
+      "label": "Robert Paine Square Playground",
+      "group": "Place",
+      "title": "Robert Paine Square Playground | jaccard=0.069 align=0.0765"
+    },
+    {
+      "id": "place:ChIJZweWZOJ544kReZtPOq9YZGQ",
+      "label": "Alberico Park",
+      "group": "Place",
+      "title": "Alberico Park | jaccard=0.0357 align=0.0643"
+    },
+    {
+      "id": "place:ChIJK89zW1R344kRz7jYZfKShKA",
+      "label": "Franklin Street Park",
+      "group": "Place",
+      "title": "Franklin Street Park | jaccard=0.037 align=0.0698"
+    },
+    {
+      "id": "place:ChIJhaThd61w44kRKvSIN6DksY8",
+      "label": "Market Park - Arthur J. Shallow Playground",
+      "group": "Place",
+      "title": "Market Park - Arthur J. Shallow Playground | jaccard=0.0417 align=0.0883"
+    },
+    {
+      "id": "place:ChIJl4SpjlR344kR-a5J8f_YNvo",
+      "label": "Jill Brown-Rhone Park",
+      "group": "Place",
+      "title": "Jill Brown-Rhone Park | jaccard=0.0357 align=0.0419"
+    },
+    {
+      "id": "place:ChIJaeBhK1d344kRma9tUbssEBo",
+      "label": "McElroy Park",
+      "group": "Place",
+      "title": "McElroy Park | jaccard=0.0357 align=0.0545"
+    },
+    {
+      "id": "place:ChIJ8_RCvWp344kRCTRS1Lks6KU",
+      "label": "Winthrop Park",
+      "group": "Place",
+      "title": "Winthrop Park | jaccard=0.0 align=0.0865"
+    },
+    {
+      "id": "atmosphere:inviting",
+      "label": "inviting",
+      "group": "Atmosphere",
+      "title": "inviting"
+    },
+    {
+      "id": "atmosphere:safe",
+      "label": "safe",
+      "group": "Atmosphere",
+      "title": "safe"
+    },
+    {
+      "id": "atmosphere:calm",
+      "label": "calm",
+      "group": "Atmosphere",
+      "title": "calm"
+    },
+    {
+      "id": "noun:park",
+      "label": "park",
+      "group": "NounComment",
+      "title": "park"
+    },
+    {
+      "id": "noun:building",
+      "label": "building",
+      "group": "NounBoth",
+      "title": "building"
+    },
+    {
+      "id": "noun:playground",
+      "label": "playground",
+      "group": "NounBoth",
+      "title": "playground"
+    },
+    {
+      "id": "noun:bench",
+      "label": "bench",
+      "group": "NounBoth",
+      "title": "bench"
+    },
+    {
+      "id": "noun:place",
+      "label": "place",
+      "group": "NounComment",
+      "title": "place"
+    },
+    {
+      "id": "noun:fountain",
+      "label": "fountain",
+      "group": "NounBoth",
+      "title": "fountain"
+    },
+    {
+      "id": "noun:path walkway",
+      "label": "path walkway",
+      "group": "NounBoth",
+      "title": "path walkway"
+    },
+    {
+      "id": "noun:tree",
+      "label": "tree",
+      "group": "NounBoth",
+      "title": "tree"
+    },
+    {
+      "id": "noun:grass lawn",
+      "label": "grass lawn",
+      "group": "NounBoth",
+      "title": "grass lawn"
+    },
+    {
+      "id": "noun:benches",
+      "label": "benches",
+      "group": "NounComment",
+      "title": "benches"
+    },
+    {
+      "id": "noun:square",
+      "label": "square",
+      "group": "NounComment",
+      "title": "square"
+    },
+    {
+      "id": "noun:basketball court",
+      "label": "basketball court",
+      "group": "NounComment",
+      "title": "basketball court"
+    },
+    {
+      "id": "noun:shade",
+      "label": "shade",
+      "group": "NounBoth",
+      "title": "shade"
+    },
+    {
+      "id": "noun:canopy",
+      "label": "canopy",
+      "group": "NounBoth",
+      "title": "canopy"
+    },
+    {
+      "id": "noun:fence",
+      "label": "fence",
+      "group": "NounBoth",
+      "title": "fence"
+    },
+    {
+      "id": "noun:people",
+      "label": "people",
+      "group": "NounBoth",
+      "title": "people"
+    },
+    {
+      "id": "noun:tables",
+      "label": "tables",
+      "group": "NounComment",
+      "title": "tables"
+    },
+    {
+      "id": "noun:museum",
+      "label": "museum",
+      "group": "NounComment",
+      "title": "museum"
+    },
+    {
+      "id": "noun:space",
+      "label": "space",
+      "group": "NounComment",
+      "title": "space"
+    },
+    {
+      "id": "noun:kids",
+      "label": "kids",
+      "group": "NounComment",
+      "title": "kids"
+    },
+    {
+      "id": "noun:lamp",
+      "label": "lamp",
+      "group": "NounBoth",
+      "title": "lamp"
+    },
+    {
+      "id": "noun:lighting lamp",
+      "label": "lighting lamp",
+      "group": "NounBoth",
+      "title": "lighting lamp"
+    },
+    {
+      "id": "noun:area",
+      "label": "area",
+      "group": "NounComment",
+      "title": "area"
+    },
+    {
+      "id": "noun:bathroom",
+      "label": "bathroom",
+      "group": "NounComment",
+      "title": "bathroom"
+    },
+    {
+      "id": "noun:garage",
+      "label": "garage",
+      "group": "NounComment",
+      "title": "garage"
+    },
+    {
+      "id": "noun:spaces",
+      "label": "spaces",
+      "group": "NounComment",
+      "title": "spaces"
+    },
+    {
+      "id": "noun:swings",
+      "label": "swings",
+      "group": "NounComment",
+      "title": "swings"
+    },
+    {
+      "id": "noun:slides",
+      "label": "slides",
+      "group": "NounComment",
+      "title": "slides"
+    },
+    {
+      "id": "noun:sandpit",
+      "label": "sandpit",
+      "group": "NounComment",
+      "title": "sandpit"
+    },
+    {
+      "id": "noun:climbing facilities",
+      "label": "climbing facilities",
+      "group": "NounComment",
+      "title": "climbing facilities"
+    },
+    {
+      "id": "noun:gated park",
+      "label": "gated park",
+      "group": "NounComment",
+      "title": "gated park"
+    },
+    {
+      "id": "noun:walkers",
+      "label": "walkers",
+      "group": "NounComment",
+      "title": "walkers"
+    },
+    {
+      "id": "noun:cars",
+      "label": "cars",
+      "group": "NounComment",
+      "title": "cars"
+    },
+    {
+      "id": "noun:fountains",
+      "label": "fountains",
+      "group": "NounComment",
+      "title": "fountains"
+    },
+    {
+      "id": "noun:river",
+      "label": "river",
+      "group": "NounComment",
+      "title": "river"
+    },
+    {
+      "id": "noun:sign",
+      "label": "sign",
+      "group": "NounBoth",
+      "title": "sign"
+    },
+    {
+      "id": "noun:gate",
+      "label": "gate",
+      "group": "NounBoth",
+      "title": "gate"
+    },
+    {
+      "id": "noun:stairs",
+      "label": "stairs",
+      "group": "NounBoth",
+      "title": "stairs"
+    },
+    {
+      "id": "noun:green spaces",
+      "label": "green spaces",
+      "group": "NounComment",
+      "title": "green spaces"
+    },
+    {
+      "id": "noun:book",
+      "label": "book",
+      "group": "NounComment",
+      "title": "book"
+    },
+    {
+      "id": "noun:green post",
+      "label": "green post",
+      "group": "NounComment",
+      "title": "green post"
+    },
+    {
+      "id": "noun:water",
+      "label": "water",
+      "group": "NounBoth",
+      "title": "water"
+    },
+    {
+      "id": "noun:time",
+      "label": "time",
+      "group": "NounComment",
+      "title": "time"
+    },
+    {
+      "id": "noun:building building facade",
+      "label": "building building facade",
+      "group": "NounComment",
+      "title": "building building facade"
+    },
+    {
+      "id": "noun:bicycle",
+      "label": "bicycle",
+      "group": "NounBoth",
+      "title": "bicycle"
+    },
+    {
+      "id": "noun:lamp lamp",
+      "label": "lamp lamp",
+      "group": "NounComment",
+      "title": "lamp lamp"
+    },
+    {
+      "id": "noun:library",
+      "label": "library",
+      "group": "NounComment",
+      "title": "library"
+    },
+    {
+      "id": "noun:backboards",
+      "label": "backboards",
+      "group": "NounComment",
+      "title": "backboards"
+    },
+    {
+      "id": "noun:courts",
+      "label": "courts",
+      "group": "NounComment",
+      "title": "courts"
+    },
+    {
+      "id": "noun:areas",
+      "label": "areas",
+      "group": "NounComment",
+      "title": "areas"
+    },
+    {
+      "id": "noun:drive",
+      "label": "drive",
+      "group": "NounComment",
+      "title": "drive"
+    },
+    {
+      "id": "noun:families",
+      "label": "families",
+      "group": "NounComment",
+      "title": "families"
+    },
+    {
+      "id": "noun:parking",
+      "label": "parking",
+      "group": "NounComment",
+      "title": "parking"
+    },
+    {
+      "id": "noun:festival",
+      "label": "festival",
+      "group": "NounComment",
+      "title": "festival"
+    },
+    {
+      "id": "noun:road",
+      "label": "road",
+      "group": "NounComment",
+      "title": "road"
+    },
+    {
+      "id": "noun:sun",
+      "label": "sun",
+      "group": "NounComment",
+      "title": "sun"
+    },
+    {
+      "id": "noun:chair",
+      "label": "chair",
+      "group": "NounComment",
+      "title": "chair"
+    },
+    {
+      "id": "noun:fairy lights",
+      "label": "fairy lights",
+      "group": "NounComment",
+      "title": "fairy lights"
+    },
+    {
+      "id": "noun:building facade",
+      "label": "building facade",
+      "group": "NounBoth",
+      "title": "building facade"
+    },
+    {
+      "id": "noun:gate stairs",
+      "label": "gate stairs",
+      "group": "NounBoth",
+      "title": "gate stairs"
+    },
+    {
+      "id": "noun:break",
+      "label": "break",
+      "group": "NounComment",
+      "title": "break"
+    },
+    {
+      "id": "noun:kid",
+      "label": "kid",
+      "group": "NounComment",
+      "title": "kid"
+    },
+    {
+      "id": "noun:pause",
+      "label": "pause",
+      "group": "NounComment",
+      "title": "pause"
+    },
+    {
+      "id": "noun:path",
+      "label": "path",
+      "group": "NounBoth",
+      "title": "path"
+    },
+    {
+      "id": "noun:soccer pitch",
+      "label": "soccer pitch",
+      "group": "NounComment",
+      "title": "soccer pitch"
+    },
+    {
+      "id": "noun:bunnies",
+      "label": "bunnies",
+      "group": "NounComment",
+      "title": "bunnies"
+    },
+    {
+      "id": "noun:exhibit",
+      "label": "exhibit",
+      "group": "NounComment",
+      "title": "exhibit"
+    },
+    {
+      "id": "noun:green space",
+      "label": "green space",
+      "group": "NounComment",
+      "title": "green space"
+    },
+    {
+      "id": "noun:pathways",
+      "label": "pathways",
+      "group": "NounComment",
+      "title": "pathways"
+    },
+    {
+      "id": "noun:cambridge",
+      "label": "cambridge",
+      "group": "NounComment",
+      "title": "cambridge"
+    },
+    {
+      "id": "noun:shady",
+      "label": "shady",
+      "group": "NounComment",
+      "title": "shady"
+    },
+    {
+      "id": "noun:spot",
+      "label": "spot",
+      "group": "NounComment",
+      "title": "spot"
+    },
+    {
+      "id": "noun:table",
+      "label": "table",
+      "group": "NounComment",
+      "title": "table"
+    },
+    {
+      "id": "noun:children",
+      "label": "children",
+      "group": "NounComment",
+      "title": "children"
+    },
+    {
+      "id": "noun:climbing structures",
+      "label": "climbing structures",
+      "group": "NounComment",
+      "title": "climbing structures"
+    },
+    {
+      "id": "noun:neighborhood",
+      "label": "neighborhood",
+      "group": "NounComment",
+      "title": "neighborhood"
+    },
+    {
+      "id": "noun:basketball courts",
+      "label": "basketball courts",
+      "group": "NounComment",
+      "title": "basketball courts"
+    },
+    {
+      "id": "noun:band",
+      "label": "band",
+      "group": "NounComment",
+      "title": "band"
+    },
+    {
+      "id": "noun:central",
+      "label": "central",
+      "group": "NounComment",
+      "title": "central"
+    },
+    {
+      "id": "noun:parks",
+      "label": "parks",
+      "group": "NounComment",
+      "title": "parks"
+    },
+    {
+      "id": "noun:police",
+      "label": "police",
+      "group": "NounComment",
+      "title": "police"
+    },
+    {
+      "id": "noun:bench stairs",
+      "label": "bench stairs",
+      "group": "NounBoth",
+      "title": "bench stairs"
+    },
+    {
+      "id": "noun:campus",
+      "label": "campus",
+      "group": "NounComment",
+      "title": "campus"
+    },
+    {
+      "id": "noun:elms",
+      "label": "elms",
+      "group": "NounComment",
+      "title": "elms"
+    },
+    {
+      "id": "noun:gates",
+      "label": "gates",
+      "group": "NounComment",
+      "title": "gates"
+    },
+    {
+      "id": "noun:location",
+      "label": "location",
+      "group": "NounComment",
+      "title": "location"
+    },
+    {
+      "id": "noun:sand pit",
+      "label": "sand pit",
+      "group": "NounComment",
+      "title": "sand pit"
+    },
+    {
+      "id": "noun:gardens",
+      "label": "gardens",
+      "group": "NounComment",
+      "title": "gardens"
+    },
+    {
+      "id": "noun:memorial",
+      "label": "memorial",
+      "group": "NounComment",
+      "title": "memorial"
+    },
+    {
+      "id": "noun:scenery",
+      "label": "scenery",
+      "group": "NounComment",
+      "title": "scenery"
+    },
+    {
+      "id": "noun:equipment",
+      "label": "equipment",
+      "group": "NounComment",
+      "title": "equipment"
+    },
+    {
+      "id": "noun:lawn",
+      "label": "lawn",
+      "group": "NounBoth",
+      "title": "lawn"
+    },
+    {
+      "id": "noun:chairs",
+      "label": "chairs",
+      "group": "NounComment",
+      "title": "chairs"
+    },
+    {
+      "id": "noun:city",
+      "label": "city",
+      "group": "NounComment",
+      "title": "city"
+    },
+    {
+      "id": "noun:garden",
+      "label": "garden",
+      "group": "NounComment",
+      "title": "garden"
+    },
+    {
+      "id": "noun:hotel",
+      "label": "hotel",
+      "group": "NounComment",
+      "title": "hotel"
+    },
+    {
+      "id": "noun:meal",
+      "label": "meal",
+      "group": "NounComment",
+      "title": "meal"
+    },
+    {
+      "id": "noun:display",
+      "label": "display",
+      "group": "NounComment",
+      "title": "display"
+    },
+    {
+      "id": "noun:grass",
+      "label": "grass",
+      "group": "NounBoth",
+      "title": "grass"
+    },
+    {
+      "id": "noun:knowledge",
+      "label": "knowledge",
+      "group": "NounComment",
+      "title": "knowledge"
+    },
+    {
+      "id": "noun:paradise",
+      "label": "paradise",
+      "group": "NounComment",
+      "title": "paradise"
+    },
+    {
+      "id": "noun:varieties",
+      "label": "varieties",
+      "group": "NounComment",
+      "title": "varieties"
+    },
+    {
+      "id": "noun:aunt",
+      "label": "aunt",
+      "group": "NounComment",
+      "title": "aunt"
+    },
+    {
+      "id": "noun:buildings",
+      "label": "buildings",
+      "group": "NounComment",
+      "title": "buildings"
+    },
+    {
+      "id": "noun:character",
+      "label": "character",
+      "group": "NounComment",
+      "title": "character"
+    },
+    {
+      "id": "noun:chickens",
+      "label": "chickens",
+      "group": "NounComment",
+      "title": "chickens"
+    },
+    {
+      "id": "noun:sand",
+      "label": "sand",
+      "group": "NounComment",
+      "title": "sand"
+    },
+    {
+      "id": "noun:water feature",
+      "label": "water feature",
+      "group": "NounComment",
+      "title": "water feature"
+    },
+    {
+      "id": "noun:fence gate",
+      "label": "fence gate",
+      "group": "NounBoth",
+      "title": "fence gate"
+    },
+    {
+      "id": "noun:bridge",
+      "label": "bridge",
+      "group": "NounComment",
+      "title": "bridge"
+    },
+    {
+      "id": "noun:fenced",
+      "label": "fenced",
+      "group": "NounComment",
+      "title": "fenced"
+    },
+    {
+      "id": "noun:environment",
+      "label": "environment",
+      "group": "NounComment",
+      "title": "environment"
+    },
+    {
+      "id": "noun:rocks",
+      "label": "rocks",
+      "group": "NounComment",
+      "title": "rocks"
+    },
+    {
+      "id": "noun:venue",
+      "label": "venue",
+      "group": "NounComment",
+      "title": "venue"
+    },
+    {
+      "id": "noun:air",
+      "label": "air",
+      "group": "NounComment",
+      "title": "air"
+    },
+    {
+      "id": "noun:food trucks",
+      "label": "food trucks",
+      "group": "NounComment",
+      "title": "food trucks"
+    },
+    {
+      "id": "noun:vibe",
+      "label": "vibe",
+      "group": "NounComment",
+      "title": "vibe"
+    },
+    {
+      "id": "noun:bicycles",
+      "label": "bicycles",
+      "group": "NounComment",
+      "title": "bicycles"
+    },
+    {
+      "id": "noun:bookstores",
+      "label": "bookstores",
+      "group": "NounComment",
+      "title": "bookstores"
+    },
+    {
+      "id": "noun:charm",
+      "label": "charm",
+      "group": "NounComment",
+      "title": "charm"
+    },
+    {
+      "id": "noun:culture",
+      "label": "culture",
+      "group": "NounComment",
+      "title": "culture"
+    },
+    {
+      "id": "noun:eateries",
+      "label": "eateries",
+      "group": "NounComment",
+      "title": "eateries"
+    },
+    {
+      "id": "noun:history",
+      "label": "history",
+      "group": "NounComment",
+      "title": "history"
+    },
+    {
+      "id": "noun:comfortable",
+      "label": "comfortable",
+      "group": "NounComment",
+      "title": "comfortable"
+    },
+    {
+      "id": "noun:rest stops",
+      "label": "rest stops",
+      "group": "NounComment",
+      "title": "rest stops"
+    },
+    {
+      "id": "noun:sink",
+      "label": "sink",
+      "group": "NounComment",
+      "title": "sink"
+    },
+    {
+      "id": "noun:bar",
+      "label": "bar",
+      "group": "NounComment",
+      "title": "bar"
+    },
+    {
+      "id": "noun:family",
+      "label": "family",
+      "group": "NounComment",
+      "title": "family"
+    },
+    {
+      "id": "noun:groceries",
+      "label": "groceries",
+      "group": "NounComment",
+      "title": "groceries"
+    },
+    {
+      "id": "noun:pot shops",
+      "label": "pot shops",
+      "group": "NounComment",
+      "title": "pot shops"
+    },
+    {
+      "id": "noun:restaurants",
+      "label": "restaurants",
+      "group": "NounComment",
+      "title": "restaurants"
+    },
+    {
+      "id": "noun:shops",
+      "label": "shops",
+      "group": "NounComment",
+      "title": "shops"
+    },
+    {
+      "id": "noun:coffee",
+      "label": "coffee",
+      "group": "NounComment",
+      "title": "coffee"
+    },
+    {
+      "id": "noun:entrance",
+      "label": "entrance",
+      "group": "NounComment",
+      "title": "entrance"
+    },
+    {
+      "id": "noun:food",
+      "label": "food",
+      "group": "NounComment",
+      "title": "food"
+    },
+    {
+      "id": "noun:charles river",
+      "label": "charles river",
+      "group": "NounComment",
+      "title": "charles river"
+    },
+    {
+      "id": "noun:friends",
+      "label": "friends",
+      "group": "NounComment",
+      "title": "friends"
+    },
+    {
+      "id": "noun:insects",
+      "label": "insects",
+      "group": "NounComment",
+      "title": "insects"
+    },
+    {
+      "id": "noun:sunset",
+      "label": "sunset",
+      "group": "NounComment",
+      "title": "sunset"
+    },
+    {
+      "id": "noun:massachusetts",
+      "label": "massachusetts",
+      "group": "NounComment",
+      "title": "massachusetts"
+    },
+    {
+      "id": "noun:reception",
+      "label": "reception",
+      "group": "NounComment",
+      "title": "reception"
+    },
+    {
+      "id": "noun:art",
+      "label": "art",
+      "group": "NounComment",
+      "title": "art"
+    },
+    {
+      "id": "noun:art pieces",
+      "label": "art pieces",
+      "group": "NounComment",
+      "title": "art pieces"
+    },
+    {
+      "id": "noun:courtyard",
+      "label": "courtyard",
+      "group": "NounComment",
+      "title": "courtyard"
+    },
+    {
+      "id": "noun:galleries",
+      "label": "galleries",
+      "group": "NounComment",
+      "title": "galleries"
+    },
+    {
+      "id": "noun:harvard",
+      "label": "harvard",
+      "group": "NounComment",
+      "title": "harvard"
+    },
+    {
+      "id": "noun:maps",
+      "label": "maps",
+      "group": "NounComment",
+      "title": "maps"
+    },
+    {
+      "id": "noun:station",
+      "label": "station",
+      "group": "NounComment",
+      "title": "station"
+    },
+    {
+      "id": "noun:stop",
+      "label": "stop",
+      "group": "NounComment",
+      "title": "stop"
+    },
+    {
+      "id": "noun:transportation",
+      "label": "transportation",
+      "group": "NounComment",
+      "title": "transportation"
+    },
+    {
+      "id": "noun:glass",
+      "label": "glass",
+      "group": "NounComment",
+      "title": "glass"
+    },
+    {
+      "id": "noun:orchestra",
+      "label": "orchestra",
+      "group": "NounComment",
+      "title": "orchestra"
+    },
+    {
+      "id": "noun:perspective",
+      "label": "perspective",
+      "group": "NounComment",
+      "title": "perspective"
+    },
+    {
+      "id": "noun:seating lines",
+      "label": "seating lines",
+      "group": "NounComment",
+      "title": "seating lines"
+    },
+    {
+      "id": "noun:animals",
+      "label": "animals",
+      "group": "NounComment",
+      "title": "animals"
+    },
+    {
+      "id": "noun:birds",
+      "label": "birds",
+      "group": "NounComment",
+      "title": "birds"
+    },
+    {
+      "id": "noun:fish",
+      "label": "fish",
+      "group": "NounComment",
+      "title": "fish"
+    },
+    {
+      "id": "noun:fossils",
+      "label": "fossils",
+      "group": "NounComment",
+      "title": "fossils"
+    },
+    {
+      "id": "noun:geodes",
+      "label": "geodes",
+      "group": "NounComment",
+      "title": "geodes"
+    },
+    {
+      "id": "noun:here",
+      "label": "here",
+      "group": "NounComment",
+      "title": "here"
+    },
+    {
+      "id": "noun:morning",
+      "label": "morning",
+      "group": "NounComment",
+      "title": "morning"
+    },
+    {
+      "id": "noun:playground building",
+      "label": "playground building",
+      "group": "NounImage",
+      "title": "playground building"
+    },
+    {
+      "id": "noun:canopy shade",
+      "label": "canopy shade",
+      "group": "NounImage",
+      "title": "canopy shade"
+    }
+  ],
+  "edges": [
+    {
+      "from": "atmosphere:inviting",
+      "to": "noun:park",
+      "label": "",
+      "hoverLabel": "comment×36",
+      "title": "atmosphere→comment noun (count=36)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:inviting",
+      "to": "noun:building",
+      "label": "",
+      "hoverLabel": "comment×16",
+      "title": "atmosphere→comment noun (count=16)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:inviting",
+      "to": "noun:playground",
+      "label": "",
+      "hoverLabel": "comment×11",
+      "title": "atmosphere→comment noun (count=11)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:inviting",
+      "to": "noun:bench",
+      "label": "",
+      "hoverLabel": "comment×11",
+      "title": "atmosphere→comment noun (count=11)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:inviting",
+      "to": "noun:place",
+      "label": "",
+      "hoverLabel": "comment×10",
+      "title": "atmosphere→comment noun (count=10)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:inviting",
+      "to": "noun:fountain",
+      "label": "",
+      "hoverLabel": "comment×9",
+      "title": "atmosphere→comment noun (count=9)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:inviting",
+      "to": "noun:path walkway",
+      "label": "",
+      "hoverLabel": "comment×7",
+      "title": "atmosphere→comment noun (count=7)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:inviting",
+      "to": "noun:tree",
+      "label": "",
+      "hoverLabel": "comment×6",
+      "title": "atmosphere→comment noun (count=6)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:inviting",
+      "to": "noun:grass lawn",
+      "label": "",
+      "hoverLabel": "comment×6",
+      "title": "atmosphere→comment noun (count=6)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:inviting",
+      "to": "noun:benches",
+      "label": "",
+      "hoverLabel": "comment×6",
+      "title": "atmosphere→comment noun (count=6)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:inviting",
+      "to": "noun:square",
+      "label": "",
+      "hoverLabel": "comment×5",
+      "title": "atmosphere→comment noun (count=5)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:inviting",
+      "to": "noun:basketball court",
+      "label": "",
+      "hoverLabel": "comment×5",
+      "title": "atmosphere→comment noun (count=5)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:inviting",
+      "to": "noun:shade",
+      "label": "",
+      "hoverLabel": "comment×4",
+      "title": "atmosphere→comment noun (count=4)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:inviting",
+      "to": "noun:canopy",
+      "label": "",
+      "hoverLabel": "comment×4",
+      "title": "atmosphere→comment noun (count=4)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:inviting",
+      "to": "noun:fence",
+      "label": "",
+      "hoverLabel": "comment×4",
+      "title": "atmosphere→comment noun (count=4)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:inviting",
+      "to": "noun:people",
+      "label": "",
+      "hoverLabel": "comment×4",
+      "title": "atmosphere→comment noun (count=4)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:inviting",
+      "to": "noun:tables",
+      "label": "",
+      "hoverLabel": "comment×4",
+      "title": "atmosphere→comment noun (count=4)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:inviting",
+      "to": "noun:museum",
+      "label": "",
+      "hoverLabel": "comment×4",
+      "title": "atmosphere→comment noun (count=4)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:inviting",
+      "to": "noun:space",
+      "label": "",
+      "hoverLabel": "comment×3",
+      "title": "atmosphere→comment noun (count=3)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:inviting",
+      "to": "noun:kids",
+      "label": "",
+      "hoverLabel": "comment×3",
+      "title": "atmosphere→comment noun (count=3)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:safe",
+      "to": "noun:park",
+      "label": "",
+      "hoverLabel": "comment×4",
+      "title": "atmosphere→comment noun (count=4)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:safe",
+      "to": "noun:path walkway",
+      "label": "",
+      "hoverLabel": "comment×3",
+      "title": "atmosphere→comment noun (count=3)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:safe",
+      "to": "noun:place",
+      "label": "",
+      "hoverLabel": "comment×3",
+      "title": "atmosphere→comment noun (count=3)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:safe",
+      "to": "noun:building",
+      "label": "",
+      "hoverLabel": "comment×3",
+      "title": "atmosphere→comment noun (count=3)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:safe",
+      "to": "noun:lamp",
+      "label": "",
+      "hoverLabel": "comment×2",
+      "title": "atmosphere→comment noun (count=2)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:safe",
+      "to": "noun:lighting lamp",
+      "label": "",
+      "hoverLabel": "comment×2",
+      "title": "atmosphere→comment noun (count=2)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:safe",
+      "to": "noun:benches",
+      "label": "",
+      "hoverLabel": "comment×2",
+      "title": "atmosphere→comment noun (count=2)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:safe",
+      "to": "noun:area",
+      "label": "",
+      "hoverLabel": "comment×2",
+      "title": "atmosphere→comment noun (count=2)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:safe",
+      "to": "noun:fence",
+      "label": "",
+      "hoverLabel": "comment×2",
+      "title": "atmosphere→comment noun (count=2)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:safe",
+      "to": "noun:bathroom",
+      "label": "",
+      "hoverLabel": "comment×2",
+      "title": "atmosphere→comment noun (count=2)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:safe",
+      "to": "noun:garage",
+      "label": "",
+      "hoverLabel": "comment×2",
+      "title": "atmosphere→comment noun (count=2)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:safe",
+      "to": "noun:spaces",
+      "label": "",
+      "hoverLabel": "comment×1",
+      "title": "atmosphere→comment noun (count=1)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:safe",
+      "to": "noun:swings",
+      "label": "",
+      "hoverLabel": "comment×1",
+      "title": "atmosphere→comment noun (count=1)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:safe",
+      "to": "noun:slides",
+      "label": "",
+      "hoverLabel": "comment×1",
+      "title": "atmosphere→comment noun (count=1)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:safe",
+      "to": "noun:sandpit",
+      "label": "",
+      "hoverLabel": "comment×1",
+      "title": "atmosphere→comment noun (count=1)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:safe",
+      "to": "noun:climbing facilities",
+      "label": "",
+      "hoverLabel": "comment×1",
+      "title": "atmosphere→comment noun (count=1)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:safe",
+      "to": "noun:gated park",
+      "label": "",
+      "hoverLabel": "comment×1",
+      "title": "atmosphere→comment noun (count=1)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:safe",
+      "to": "noun:walkers",
+      "label": "",
+      "hoverLabel": "comment×1",
+      "title": "atmosphere→comment noun (count=1)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:safe",
+      "to": "noun:cars",
+      "label": "",
+      "hoverLabel": "comment×1",
+      "title": "atmosphere→comment noun (count=1)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:safe",
+      "to": "noun:fountains",
+      "label": "",
+      "hoverLabel": "comment×1",
+      "title": "atmosphere→comment noun (count=1)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:calm",
+      "to": "noun:park",
+      "label": "",
+      "hoverLabel": "comment×6",
+      "title": "atmosphere→comment noun (count=6)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:calm",
+      "to": "noun:canopy",
+      "label": "",
+      "hoverLabel": "comment×6",
+      "title": "atmosphere→comment noun (count=6)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:calm",
+      "to": "noun:grass lawn",
+      "label": "",
+      "hoverLabel": "comment×5",
+      "title": "atmosphere→comment noun (count=5)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:calm",
+      "to": "noun:path walkway",
+      "label": "",
+      "hoverLabel": "comment×3",
+      "title": "atmosphere→comment noun (count=3)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:calm",
+      "to": "noun:tree",
+      "label": "",
+      "hoverLabel": "comment×3",
+      "title": "atmosphere→comment noun (count=3)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:calm",
+      "to": "noun:river",
+      "label": "",
+      "hoverLabel": "comment×2",
+      "title": "atmosphere→comment noun (count=2)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:calm",
+      "to": "noun:building",
+      "label": "",
+      "hoverLabel": "comment×2",
+      "title": "atmosphere→comment noun (count=2)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:calm",
+      "to": "noun:bench",
+      "label": "",
+      "hoverLabel": "comment×2",
+      "title": "atmosphere→comment noun (count=2)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:calm",
+      "to": "noun:shade",
+      "label": "",
+      "hoverLabel": "comment×2",
+      "title": "atmosphere→comment noun (count=2)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:calm",
+      "to": "noun:fence",
+      "label": "",
+      "hoverLabel": "comment×2",
+      "title": "atmosphere→comment noun (count=2)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:calm",
+      "to": "noun:sign",
+      "label": "",
+      "hoverLabel": "comment×2",
+      "title": "atmosphere→comment noun (count=2)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:calm",
+      "to": "noun:gate",
+      "label": "",
+      "hoverLabel": "comment×2",
+      "title": "atmosphere→comment noun (count=2)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:calm",
+      "to": "noun:stairs",
+      "label": "",
+      "hoverLabel": "comment×2",
+      "title": "atmosphere→comment noun (count=2)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:calm",
+      "to": "noun:lamp",
+      "label": "",
+      "hoverLabel": "comment×2",
+      "title": "atmosphere→comment noun (count=2)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:calm",
+      "to": "noun:green spaces",
+      "label": "",
+      "hoverLabel": "comment×2",
+      "title": "atmosphere→comment noun (count=2)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:calm",
+      "to": "noun:book",
+      "label": "",
+      "hoverLabel": "comment×1",
+      "title": "atmosphere→comment noun (count=1)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:calm",
+      "to": "noun:fountains",
+      "label": "",
+      "hoverLabel": "comment×1",
+      "title": "atmosphere→comment noun (count=1)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:calm",
+      "to": "noun:green post",
+      "label": "",
+      "hoverLabel": "comment×1",
+      "title": "atmosphere→comment noun (count=1)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:calm",
+      "to": "noun:water",
+      "label": "",
+      "hoverLabel": "comment×1",
+      "title": "atmosphere→comment noun (count=1)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:calm",
+      "to": "noun:time",
+      "label": "",
+      "hoverLabel": "comment×1",
+      "title": "atmosphere→comment noun (count=1)",
+      "color": "#50f0a0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:inviting",
+      "to": "noun:tree",
+      "label": "",
+      "hoverLabel": "visual×293",
+      "title": "ASSOCIATED_WITH (visual) {'atmosphere': 'inviting', 'noun': 'tree', 'count': '293', 'confidence': '0.0325', 'level': 'scene'}",
+      "color": "#3020e0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:inviting",
+      "to": "noun:bench",
+      "label": "",
+      "hoverLabel": "visual×216",
+      "title": "ASSOCIATED_WITH (visual) {'atmosphere': 'inviting', 'noun': 'bench', 'count': '216', 'confidence': '0.0344', 'level': 'scene'}",
+      "color": "#3020e0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:inviting",
+      "to": "noun:building",
+      "label": "",
+      "hoverLabel": "visual×161",
+      "title": "ASSOCIATED_WITH (visual) {'atmosphere': 'inviting', 'noun': 'building', 'count': '161', 'confidence': '0.0319', 'level': 'scene'}",
+      "color": "#3020e0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:inviting",
+      "to": "noun:playground",
+      "label": "",
+      "hoverLabel": "visual×149",
+      "title": "ASSOCIATED_WITH (visual) {'atmosphere': 'inviting', 'noun': 'playground', 'count': '149', 'confidence': '0.0331', 'level': 'scene'}",
+      "color": "#3020e0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:inviting",
+      "to": "noun:lamp",
+      "label": "",
+      "hoverLabel": "visual×147",
+      "title": "ASSOCIATED_WITH (visual) {'atmosphere': 'inviting', 'noun': 'lamp', 'count': '147', 'confidence': '0.0213', 'level': 'scene'}",
+      "color": "#3020e0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:inviting",
+      "to": "noun:people",
+      "label": "",
+      "hoverLabel": "visual×129",
+      "title": "ASSOCIATED_WITH (visual) {'atmosphere': 'inviting', 'noun': 'people', 'count': '129', 'confidence': '0.0304', 'level': 'scene'}",
+      "color": "#3020e0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:inviting",
+      "to": "noun:canopy",
+      "label": "",
+      "hoverLabel": "visual×102",
+      "title": "ASSOCIATED_WITH (visual) {'atmosphere': 'inviting', 'noun': 'canopy', 'count': '102', 'confidence': '0.0308', 'level': 'scene'}",
+      "color": "#3020e0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:inviting",
+      "to": "noun:grass lawn",
+      "label": "",
+      "hoverLabel": "visual×94",
+      "title": "ASSOCIATED_WITH (visual) {'atmosphere': 'inviting', 'noun': 'grass lawn', 'count': '94', 'confidence': '0.0385', 'level': 'scene'}",
+      "color": "#3020e0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:inviting",
+      "to": "noun:path walkway",
+      "label": "",
+      "hoverLabel": "visual×85",
+      "title": "ASSOCIATED_WITH (visual) {'atmosphere': 'inviting', 'noun': 'path walkway', 'count': '85', 'confidence': '0.0319', 'level': 'scene'}",
+      "color": "#3020e0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:inviting",
+      "to": "noun:sign",
+      "label": "",
+      "hoverLabel": "visual×76",
+      "title": "ASSOCIATED_WITH (visual) {'atmosphere': 'inviting', 'noun': 'sign', 'count': '76', 'confidence': '0.026', 'level': 'scene'}",
+      "color": "#3020e0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:inviting",
+      "to": "noun:fence",
+      "label": "",
+      "hoverLabel": "visual×49",
+      "title": "ASSOCIATED_WITH (visual) {'atmosphere': 'inviting', 'noun': 'fence', 'count': '49', 'confidence': '0.0319', 'level': 'scene'}",
+      "color": "#3020e0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:inviting",
+      "to": "noun:stairs",
+      "label": "",
+      "hoverLabel": "visual×35",
+      "title": "ASSOCIATED_WITH (visual) {'atmosphere': 'inviting', 'noun': 'stairs', 'count': '35', 'confidence': '0.0342', 'level': 'scene'}",
+      "color": "#3020e0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:inviting",
+      "to": "noun:fountain",
+      "label": "",
+      "hoverLabel": "visual×26",
+      "title": "ASSOCIATED_WITH (visual) {'atmosphere': 'inviting', 'noun': 'fountain', 'count': '26', 'confidence': '0.0403', 'level': 'scene'}",
+      "color": "#3020e0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:inviting",
+      "to": "noun:building building facade",
+      "label": "",
+      "hoverLabel": "visual×26",
+      "title": "ASSOCIATED_WITH (visual) {'atmosphere': 'inviting', 'noun': 'building building facade', 'count': '26', 'confidence': '0.028', 'level': 'context'}",
+      "color": "#3020e0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:inviting",
+      "to": "noun:bicycle",
+      "label": "",
+      "hoverLabel": "visual×23",
+      "title": "ASSOCIATED_WITH (visual) {'atmosphere': 'inviting', 'noun': 'bicycle', 'count': '23', 'confidence': '0.029', 'level': 'scene'}",
+      "color": "#3020e0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:safe",
+      "to": "noun:tree",
+      "label": "",
+      "hoverLabel": "visual×149",
+      "title": "ASSOCIATED_WITH (visual) {'atmosphere': 'safe', 'noun': 'tree', 'count': '149', 'confidence': '0.0176', 'level': 'scene'}",
+      "color": "#3020e0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:safe",
+      "to": "noun:bench",
+      "label": "",
+      "hoverLabel": "visual×115",
+      "title": "ASSOCIATED_WITH (visual) {'atmosphere': 'safe', 'noun': 'bench', 'count': '115', 'confidence': '0.0179', 'level': 'scene'}",
+      "color": "#3020e0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:safe",
+      "to": "noun:building",
+      "label": "",
+      "hoverLabel": "visual×102",
+      "title": "ASSOCIATED_WITH (visual) {'atmosphere': 'safe', 'noun': 'building', 'count': '102', 'confidence': '0.0172', 'level': 'scene'}",
+      "color": "#3020e0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:safe",
+      "to": "noun:playground",
+      "label": "",
+      "hoverLabel": "visual×96",
+      "title": "ASSOCIATED_WITH (visual) {'atmosphere': 'safe', 'noun': 'playground', 'count': '96', 'confidence': '0.0199', 'level': 'scene'}",
+      "color": "#3020e0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:safe",
+      "to": "noun:lamp",
+      "label": "",
+      "hoverLabel": "visual×91",
+      "title": "ASSOCIATED_WITH (visual) {'atmosphere': 'safe', 'noun': 'lamp', 'count': '91', 'confidence': '0.0051', 'level': 'object'}",
+      "color": "#3020e0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:safe",
+      "to": "noun:people",
+      "label": "",
+      "hoverLabel": "visual×75",
+      "title": "ASSOCIATED_WITH (visual) {'atmosphere': 'safe', 'noun': 'people', 'count': '75', 'confidence': '0.0076', 'level': 'context'}",
+      "color": "#3020e0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:safe",
+      "to": "noun:canopy",
+      "label": "",
+      "hoverLabel": "visual×60",
+      "title": "ASSOCIATED_WITH (visual) {'atmosphere': 'safe', 'noun': 'canopy', 'count': '60', 'confidence': '0.0202', 'level': 'scene'}",
+      "color": "#3020e0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:safe",
+      "to": "noun:grass lawn",
+      "label": "",
+      "hoverLabel": "visual×49",
+      "title": "ASSOCIATED_WITH (visual) {'atmosphere': 'safe', 'noun': 'grass lawn', 'count': '49', 'confidence': '0.0234', 'level': 'scene'}",
+      "color": "#3020e0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:safe",
+      "to": "noun:path walkway",
+      "label": "",
+      "hoverLabel": "visual×47",
+      "title": "ASSOCIATED_WITH (visual) {'atmosphere': 'safe', 'noun': 'path walkway', 'count': '47', 'confidence': '0.0125', 'level': 'context'}",
+      "color": "#3020e0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:safe",
+      "to": "noun:sign",
+      "label": "",
+      "hoverLabel": "visual×44",
+      "title": "ASSOCIATED_WITH (visual) {'atmosphere': 'safe', 'noun': 'sign', 'count': '44', 'confidence': '0.0179', 'level': 'object'}",
+      "color": "#3020e0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:safe",
+      "to": "noun:fence",
+      "label": "",
+      "hoverLabel": "visual×29",
+      "title": "ASSOCIATED_WITH (visual) {'atmosphere': 'safe', 'noun': 'fence', 'count': '29', 'confidence': '0.019', 'level': 'scene'}",
+      "color": "#3020e0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:safe",
+      "to": "noun:stairs",
+      "label": "",
+      "hoverLabel": "visual×27",
+      "title": "ASSOCIATED_WITH (visual) {'atmosphere': 'safe', 'noun': 'stairs', 'count': '27', 'confidence': '0.03', 'level': 'context'}",
+      "color": "#3020e0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:safe",
+      "to": "noun:fountain",
+      "label": "",
+      "hoverLabel": "visual×17",
+      "title": "ASSOCIATED_WITH (visual) {'atmosphere': 'safe', 'noun': 'fountain', 'count': '17', 'confidence': '0.0141', 'level': 'object'}",
+      "color": "#3020e0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:safe",
+      "to": "noun:lamp lamp",
+      "label": "",
+      "hoverLabel": "visual×11",
+      "title": "ASSOCIATED_WITH (visual) {'atmosphere': 'safe', 'noun': 'lamp lamp', 'count': '11', 'confidence': '-0.0076', 'level': 'object'}",
+      "color": "#3020e0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:safe",
+      "to": "noun:gate",
+      "label": "",
+      "hoverLabel": "visual×10",
+      "title": "ASSOCIATED_WITH (visual) {'atmosphere': 'safe', 'noun': 'gate', 'count': '10', 'confidence': '0.0053', 'level': 'object'}",
+      "color": "#3020e0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:calm",
+      "to": "noun:tree",
+      "label": "",
+      "hoverLabel": "visual×161",
+      "title": "ASSOCIATED_WITH (visual) {'atmosphere': 'calm', 'noun': 'tree', 'count': '161', 'confidence': '0.015', 'level': 'scene'}",
+      "color": "#3020e0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:calm",
+      "to": "noun:bench",
+      "label": "",
+      "hoverLabel": "visual×118",
+      "title": "ASSOCIATED_WITH (visual) {'atmosphere': 'calm', 'noun': 'bench', 'count': '118', 'confidence': '0.0071', 'level': 'scene'}",
+      "color": "#3020e0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:calm",
+      "to": "noun:playground",
+      "label": "",
+      "hoverLabel": "visual×83",
+      "title": "ASSOCIATED_WITH (visual) {'atmosphere': 'calm', 'noun': 'playground', 'count': '83', 'confidence': '0.0089', 'level': 'context'}",
+      "color": "#3020e0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:calm",
+      "to": "noun:building",
+      "label": "",
+      "hoverLabel": "visual×79",
+      "title": "ASSOCIATED_WITH (visual) {'atmosphere': 'calm', 'noun': 'building', 'count': '79', 'confidence': '0.0109', 'level': 'context'}",
+      "color": "#3020e0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:calm",
+      "to": "noun:lamp",
+      "label": "",
+      "hoverLabel": "visual×72",
+      "title": "ASSOCIATED_WITH (visual) {'atmosphere': 'calm', 'noun': 'lamp', 'count': '72', 'confidence': '-0.0021', 'level': 'object'}",
+      "color": "#3020e0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:calm",
+      "to": "noun:grass lawn",
+      "label": "",
+      "hoverLabel": "visual×65",
+      "title": "ASSOCIATED_WITH (visual) {'atmosphere': 'calm', 'noun': 'grass lawn', 'count': '65', 'confidence': '0.0125', 'level': 'scene'}",
+      "color": "#3020e0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:calm",
+      "to": "noun:path walkway",
+      "label": "",
+      "hoverLabel": "visual×63",
+      "title": "ASSOCIATED_WITH (visual) {'atmosphere': 'calm', 'noun': 'path walkway', 'count': '63', 'confidence': '0.0107', 'level': 'context'}",
+      "color": "#3020e0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:calm",
+      "to": "noun:people",
+      "label": "",
+      "hoverLabel": "visual×55",
+      "title": "ASSOCIATED_WITH (visual) {'atmosphere': 'calm', 'noun': 'people', 'count': '55', 'confidence': '0.0028', 'level': 'context'}",
+      "color": "#3020e0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:calm",
+      "to": "noun:canopy",
+      "label": "",
+      "hoverLabel": "visual×52",
+      "title": "ASSOCIATED_WITH (visual) {'atmosphere': 'calm', 'noun': 'canopy', 'count': '52', 'confidence': '0.0063', 'level': 'scene'}",
+      "color": "#3020e0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:calm",
+      "to": "noun:sign",
+      "label": "",
+      "hoverLabel": "visual×36",
+      "title": "ASSOCIATED_WITH (visual) {'atmosphere': 'calm', 'noun': 'sign', 'count': '36', 'confidence': '0.0038', 'level': 'scene'}",
+      "color": "#3020e0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:calm",
+      "to": "noun:fence",
+      "label": "",
+      "hoverLabel": "visual×34",
+      "title": "ASSOCIATED_WITH (visual) {'atmosphere': 'calm', 'noun': 'fence', 'count': '34', 'confidence': '0.0092', 'level': 'scene'}",
+      "color": "#3020e0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:calm",
+      "to": "noun:building building facade",
+      "label": "",
+      "hoverLabel": "visual×19",
+      "title": "ASSOCIATED_WITH (visual) {'atmosphere': 'calm', 'noun': 'building building facade', 'count': '19', 'confidence': '0.0203', 'level': 'scene'}",
+      "color": "#3020e0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:calm",
+      "to": "noun:fountain",
+      "label": "",
+      "hoverLabel": "visual×16",
+      "title": "ASSOCIATED_WITH (visual) {'atmosphere': 'calm', 'noun': 'fountain', 'count': '16', 'confidence': '0.0078', 'level': 'context'}",
+      "color": "#3020e0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:calm",
+      "to": "noun:stairs",
+      "label": "",
+      "hoverLabel": "visual×12",
+      "title": "ASSOCIATED_WITH (visual) {'atmosphere': 'calm', 'noun': 'stairs', 'count': '12', 'confidence': '0.0016', 'level': 'scene'}",
+      "color": "#3020e0",
+      "width": 0.55
+    },
+    {
+      "from": "atmosphere:calm",
+      "to": "noun:water",
+      "label": "",
+      "hoverLabel": "visual×9",
+      "title": "ASSOCIATED_WITH (visual) {'atmosphere': 'calm', 'noun': 'water', 'count': '9', 'confidence': '0.0329', 'level': 'object'}",
+      "color": "#3020e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJQXMWnUV344kRzs9-HfLoekk",
+      "to": "atmosphere:inviting",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJQXMWnUV344kRzs9-HfLoekk",
+      "to": "atmosphere:safe",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJQXMWnUV344kRzs9-HfLoekk",
+      "to": "atmosphere:calm",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJQXMWnUV344kRzs9-HfLoekk",
+      "to": "noun:book",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJQXMWnUV344kRzs9-HfLoekk",
+      "to": "noun:library",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJQXMWnUV344kRzs9-HfLoekk",
+      "to": "noun:park",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJQXMWnUV344kRzs9-HfLoekk",
+      "to": "noun:playground",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJQXMWnUV344kRzs9-HfLoekk",
+      "to": "noun:shade",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJQXMWnUV344kRzs9-HfLoekk",
+      "to": "noun:space",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJQXMWnUV344kRzs9-HfLoekk",
+      "to": "noun:spaces",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJQXMWnUV344kRzs9-HfLoekk",
+      "to": "noun:square",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJFapjVFl344kRXcKedI8Cuc0",
+      "to": "atmosphere:inviting",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJFapjVFl344kRXcKedI8Cuc0",
+      "to": "atmosphere:calm",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJFapjVFl344kRXcKedI8Cuc0",
+      "to": "noun:backboards",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJFapjVFl344kRXcKedI8Cuc0",
+      "to": "noun:basketball court",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJFapjVFl344kRXcKedI8Cuc0",
+      "to": "noun:bench",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJFapjVFl344kRXcKedI8Cuc0",
+      "to": "noun:building",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJFapjVFl344kRXcKedI8Cuc0",
+      "to": "noun:canopy",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJFapjVFl344kRXcKedI8Cuc0",
+      "to": "noun:courts",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJFapjVFl344kRXcKedI8Cuc0",
+      "to": "noun:fence",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJFapjVFl344kRXcKedI8Cuc0",
+      "to": "noun:fountains",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJC5eyB0J344kRIgcXIHRzdK4",
+      "to": "atmosphere:inviting",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJC5eyB0J344kRIgcXIHRzdK4",
+      "to": "noun:areas",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJC5eyB0J344kRIgcXIHRzdK4",
+      "to": "noun:park",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJdelVAGp344kRnbhJtYxqBuo",
+      "to": "atmosphere:inviting",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJdelVAGp344kRnbhJtYxqBuo",
+      "to": "atmosphere:safe",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJdelVAGp344kRnbhJtYxqBuo",
+      "to": "atmosphere:calm",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJdelVAGp344kRnbhJtYxqBuo",
+      "to": "noun:climbing facilities",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJdelVAGp344kRnbhJtYxqBuo",
+      "to": "noun:drive",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJdelVAGp344kRnbhJtYxqBuo",
+      "to": "noun:families",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJdelVAGp344kRnbhJtYxqBuo",
+      "to": "noun:kids",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJdelVAGp344kRnbhJtYxqBuo",
+      "to": "noun:park",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJdelVAGp344kRnbhJtYxqBuo",
+      "to": "noun:parking",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJdelVAGp344kRnbhJtYxqBuo",
+      "to": "noun:playground",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJdelVAGp344kRnbhJtYxqBuo",
+      "to": "noun:sandpit",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJqawa215344kROpcUJbbE0Vg",
+      "to": "atmosphere:inviting",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJqawa215344kROpcUJbbE0Vg",
+      "to": "atmosphere:calm",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJqawa215344kROpcUJbbE0Vg",
+      "to": "noun:festival",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJqawa215344kROpcUJbbE0Vg",
+      "to": "noun:grass lawn",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJqawa215344kROpcUJbbE0Vg",
+      "to": "noun:park",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJqawa215344kROpcUJbbE0Vg",
+      "to": "noun:path walkway",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJqawa215344kROpcUJbbE0Vg",
+      "to": "noun:playground",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJqawa215344kROpcUJbbE0Vg",
+      "to": "noun:river",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJqawa215344kROpcUJbbE0Vg",
+      "to": "noun:road",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJqawa215344kROpcUJbbE0Vg",
+      "to": "noun:sun",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ8_RCvWp344kRCTRS1Lks6KU",
+      "to": "atmosphere:inviting",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ8_RCvWp344kRCTRS1Lks6KU",
+      "to": "atmosphere:calm",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ8_RCvWp344kRCTRS1Lks6KU",
+      "to": "noun:bench",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ8_RCvWp344kRCTRS1Lks6KU",
+      "to": "noun:building",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ8_RCvWp344kRCTRS1Lks6KU",
+      "to": "noun:canopy",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ8_RCvWp344kRCTRS1Lks6KU",
+      "to": "noun:chair",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ8_RCvWp344kRCTRS1Lks6KU",
+      "to": "noun:fairy lights",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ8_RCvWp344kRCTRS1Lks6KU",
+      "to": "noun:fountain",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ8_RCvWp344kRCTRS1Lks6KU",
+      "to": "noun:park",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ8_RCvWp344kRCTRS1Lks6KU",
+      "to": "noun:tree",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJE12gBq1w44kR_N0FJNiKAcg",
+      "to": "atmosphere:inviting",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJE12gBq1w44kR_N0FJNiKAcg",
+      "to": "noun:bench",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJE12gBq1w44kR_N0FJNiKAcg",
+      "to": "noun:building",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJE12gBq1w44kR_N0FJNiKAcg",
+      "to": "noun:building facade",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJE12gBq1w44kR_N0FJNiKAcg",
+      "to": "noun:canopy",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJE12gBq1w44kR_N0FJNiKAcg",
+      "to": "noun:fence",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJE12gBq1w44kR_N0FJNiKAcg",
+      "to": "noun:fountain",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJE12gBq1w44kR_N0FJNiKAcg",
+      "to": "noun:gate",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJE12gBq1w44kR_N0FJNiKAcg",
+      "to": "noun:gate stairs",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJK-7ymsF344kRN70NFmyfvK8",
+      "to": "atmosphere:inviting",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJK-7ymsF344kRN70NFmyfvK8",
+      "to": "atmosphere:safe",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJK-7ymsF344kRN70NFmyfvK8",
+      "to": "noun:benches",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJK-7ymsF344kRN70NFmyfvK8",
+      "to": "noun:break",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJK-7ymsF344kRN70NFmyfvK8",
+      "to": "noun:cars",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJK-7ymsF344kRN70NFmyfvK8",
+      "to": "noun:families",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJK-7ymsF344kRN70NFmyfvK8",
+      "to": "noun:gated park",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJK-7ymsF344kRN70NFmyfvK8",
+      "to": "noun:kid",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJK-7ymsF344kRN70NFmyfvK8",
+      "to": "noun:park",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJK-7ymsF344kRN70NFmyfvK8",
+      "to": "noun:pause",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ0zpihlJ344kRCAOlne5GEoc",
+      "to": "atmosphere:inviting",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ0zpihlJ344kRCAOlne5GEoc",
+      "to": "noun:basketball court",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ0zpihlJ344kRCAOlne5GEoc",
+      "to": "noun:building",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ0zpihlJ344kRCAOlne5GEoc",
+      "to": "noun:fountain",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ0zpihlJ344kRCAOlne5GEoc",
+      "to": "noun:park",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ0zpihlJ344kRCAOlne5GEoc",
+      "to": "noun:path",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ0zpihlJ344kRCAOlne5GEoc",
+      "to": "noun:people",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ0zpihlJ344kRCAOlne5GEoc",
+      "to": "noun:playground",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ0zpihlJ344kRCAOlne5GEoc",
+      "to": "noun:soccer pitch",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJeR3K0F5344kRjtZYF7-MPlw",
+      "to": "atmosphere:inviting",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJeR3K0F5344kRjtZYF7-MPlw",
+      "to": "atmosphere:safe",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJeR3K0F5344kRjtZYF7-MPlw",
+      "to": "atmosphere:calm",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJeR3K0F5344kRjtZYF7-MPlw",
+      "to": "noun:bench",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJeR3K0F5344kRjtZYF7-MPlw",
+      "to": "noun:building",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJeR3K0F5344kRjtZYF7-MPlw",
+      "to": "noun:building facade",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJeR3K0F5344kRjtZYF7-MPlw",
+      "to": "noun:bunnies",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJeR3K0F5344kRjtZYF7-MPlw",
+      "to": "noun:canopy",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJeR3K0F5344kRjtZYF7-MPlw",
+      "to": "noun:fence",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJeR3K0F5344kRjtZYF7-MPlw",
+      "to": "noun:fountains",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJeR3K0F5344kRjtZYF7-MPlw",
+      "to": "noun:gate",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJlegDpmd344kRZ8VMOsqJ5xM",
+      "to": "atmosphere:inviting",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJlegDpmd344kRZ8VMOsqJ5xM",
+      "to": "atmosphere:safe",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJlegDpmd344kRZ8VMOsqJ5xM",
+      "to": "atmosphere:calm",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJlegDpmd344kRZ8VMOsqJ5xM",
+      "to": "noun:building facade",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJlegDpmd344kRZ8VMOsqJ5xM",
+      "to": "noun:exhibit",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJlegDpmd344kRZ8VMOsqJ5xM",
+      "to": "noun:green space",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJlegDpmd344kRZ8VMOsqJ5xM",
+      "to": "noun:green spaces",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJlegDpmd344kRZ8VMOsqJ5xM",
+      "to": "noun:park",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJlegDpmd344kRZ8VMOsqJ5xM",
+      "to": "noun:pathways",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJlegDpmd344kRZ8VMOsqJ5xM",
+      "to": "noun:river",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJK89zW1R344kRz7jYZfKShKA",
+      "to": "atmosphere:inviting",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJK89zW1R344kRz7jYZfKShKA",
+      "to": "atmosphere:calm",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJK89zW1R344kRz7jYZfKShKA",
+      "to": "noun:bench",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJK89zW1R344kRz7jYZfKShKA",
+      "to": "noun:cambridge",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJK89zW1R344kRz7jYZfKShKA",
+      "to": "noun:park",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJK89zW1R344kRz7jYZfKShKA",
+      "to": "noun:shady",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJK89zW1R344kRz7jYZfKShKA",
+      "to": "noun:spaces",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJK89zW1R344kRz7jYZfKShKA",
+      "to": "noun:spot",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJK89zW1R344kRz7jYZfKShKA",
+      "to": "noun:table",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJibK7VF9344kRqxrHJkNsISk",
+      "to": "atmosphere:inviting",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJibK7VF9344kRqxrHJkNsISk",
+      "to": "atmosphere:calm",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJibK7VF9344kRqxrHJkNsISk",
+      "to": "noun:building",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJibK7VF9344kRqxrHJkNsISk",
+      "to": "noun:children",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJibK7VF9344kRqxrHJkNsISk",
+      "to": "noun:climbing structures",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJibK7VF9344kRqxrHJkNsISk",
+      "to": "noun:fountain",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJibK7VF9344kRqxrHJkNsISk",
+      "to": "noun:neighborhood",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJibK7VF9344kRqxrHJkNsISk",
+      "to": "noun:park",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ70NXYP1544kRXnfSiB1r4as",
+      "to": "atmosphere:inviting",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ70NXYP1544kRXnfSiB1r4as",
+      "to": "atmosphere:safe",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ70NXYP1544kRXnfSiB1r4as",
+      "to": "noun:basketball court",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ70NXYP1544kRXnfSiB1r4as",
+      "to": "noun:basketball courts",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ70NXYP1544kRXnfSiB1r4as",
+      "to": "noun:bench",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ70NXYP1544kRXnfSiB1r4as",
+      "to": "noun:benches",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ70NXYP1544kRXnfSiB1r4as",
+      "to": "noun:park",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ70NXYP1544kRXnfSiB1r4as",
+      "to": "noun:place",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ70NXYP1544kRXnfSiB1r4as",
+      "to": "noun:playground",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJM3icQVN344kRZsmgAwN0zc8",
+      "to": "atmosphere:inviting",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJM3icQVN344kRZsmgAwN0zc8",
+      "to": "noun:band",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJM3icQVN344kRZsmgAwN0zc8",
+      "to": "noun:benches",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJM3icQVN344kRZsmgAwN0zc8",
+      "to": "noun:central",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJM3icQVN344kRZsmgAwN0zc8",
+      "to": "noun:park",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJM3icQVN344kRZsmgAwN0zc8",
+      "to": "noun:parks",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJM3icQVN344kRZsmgAwN0zc8",
+      "to": "noun:police",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJM3icQVN344kRZsmgAwN0zc8",
+      "to": "noun:tables",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJw9Pt_EN344kRkOjxvQDgKbo",
+      "to": "atmosphere:inviting",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJw9Pt_EN344kRkOjxvQDgKbo",
+      "to": "atmosphere:safe",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJw9Pt_EN344kRkOjxvQDgKbo",
+      "to": "atmosphere:calm",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJw9Pt_EN344kRkOjxvQDgKbo",
+      "to": "noun:bench stairs",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJw9Pt_EN344kRkOjxvQDgKbo",
+      "to": "noun:building facade",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJw9Pt_EN344kRkOjxvQDgKbo",
+      "to": "noun:campus",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJw9Pt_EN344kRkOjxvQDgKbo",
+      "to": "noun:canopy",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJw9Pt_EN344kRkOjxvQDgKbo",
+      "to": "noun:elms",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJw9Pt_EN344kRkOjxvQDgKbo",
+      "to": "noun:fountain",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJw9Pt_EN344kRkOjxvQDgKbo",
+      "to": "noun:gate",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJw9Pt_EN344kRkOjxvQDgKbo",
+      "to": "noun:grass lawn",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJOdNat01344kRr8NyNS4Is-8",
+      "to": "atmosphere:inviting",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJOdNat01344kRr8NyNS4Is-8",
+      "to": "atmosphere:safe",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJOdNat01344kRr8NyNS4Is-8",
+      "to": "atmosphere:calm",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJOdNat01344kRr8NyNS4Is-8",
+      "to": "noun:basketball court",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJOdNat01344kRr8NyNS4Is-8",
+      "to": "noun:gates",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJOdNat01344kRr8NyNS4Is-8",
+      "to": "noun:location",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJOdNat01344kRr8NyNS4Is-8",
+      "to": "noun:park",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJOdNat01344kRr8NyNS4Is-8",
+      "to": "noun:playground",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJOdNat01344kRr8NyNS4Is-8",
+      "to": "noun:sand pit",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJaeBhK1d344kRma9tUbssEBo",
+      "to": "atmosphere:inviting",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJaeBhK1d344kRma9tUbssEBo",
+      "to": "atmosphere:safe",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJaeBhK1d344kRma9tUbssEBo",
+      "to": "atmosphere:calm",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJaeBhK1d344kRma9tUbssEBo",
+      "to": "noun:benches",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJaeBhK1d344kRma9tUbssEBo",
+      "to": "noun:gardens",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJaeBhK1d344kRma9tUbssEBo",
+      "to": "noun:memorial",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJaeBhK1d344kRma9tUbssEBo",
+      "to": "noun:park",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJaeBhK1d344kRma9tUbssEBo",
+      "to": "noun:place",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJaeBhK1d344kRma9tUbssEBo",
+      "to": "noun:scenery",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ25L83fx544kRiuWNvWYdSLA",
+      "to": "atmosphere:inviting",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ25L83fx544kRiuWNvWYdSLA",
+      "to": "atmosphere:safe",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ25L83fx544kRiuWNvWYdSLA",
+      "to": "atmosphere:calm",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ25L83fx544kRiuWNvWYdSLA",
+      "to": "noun:basketball court",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ25L83fx544kRiuWNvWYdSLA",
+      "to": "noun:benches",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ25L83fx544kRiuWNvWYdSLA",
+      "to": "noun:building",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ25L83fx544kRiuWNvWYdSLA",
+      "to": "noun:equipment",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ25L83fx544kRiuWNvWYdSLA",
+      "to": "noun:fence",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ25L83fx544kRiuWNvWYdSLA",
+      "to": "noun:green space",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ25L83fx544kRiuWNvWYdSLA",
+      "to": "noun:lawn",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ25L83fx544kRiuWNvWYdSLA",
+      "to": "noun:park",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ38dFa69w44kRDZBuTuaYXkk",
+      "to": "atmosphere:inviting",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ38dFa69w44kRDZBuTuaYXkk",
+      "to": "atmosphere:calm",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ38dFa69w44kRDZBuTuaYXkk",
+      "to": "noun:benches",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ38dFa69w44kRDZBuTuaYXkk",
+      "to": "noun:break",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ38dFa69w44kRDZBuTuaYXkk",
+      "to": "noun:chairs",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ38dFa69w44kRDZBuTuaYXkk",
+      "to": "noun:city",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ38dFa69w44kRDZBuTuaYXkk",
+      "to": "noun:courts",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ38dFa69w44kRDZBuTuaYXkk",
+      "to": "noun:garden",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ38dFa69w44kRDZBuTuaYXkk",
+      "to": "noun:hotel",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ38dFa69w44kRDZBuTuaYXkk",
+      "to": "noun:meal",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ6ZPQHapw44kR0GWA414vJOI",
+      "to": "atmosphere:inviting",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ6ZPQHapw44kR0GWA414vJOI",
+      "to": "noun:display",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ6ZPQHapw44kR0GWA414vJOI",
+      "to": "noun:grass",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ6ZPQHapw44kR0GWA414vJOI",
+      "to": "noun:knowledge",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ6ZPQHapw44kR0GWA414vJOI",
+      "to": "noun:location",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ6ZPQHapw44kR0GWA414vJOI",
+      "to": "noun:paradise",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ6ZPQHapw44kR0GWA414vJOI",
+      "to": "noun:place",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ6ZPQHapw44kR0GWA414vJOI",
+      "to": "noun:tree",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ6ZPQHapw44kR0GWA414vJOI",
+      "to": "noun:varieties",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJl4SpjlR344kR-a5J8f_YNvo",
+      "to": "atmosphere:inviting",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJl4SpjlR344kR-a5J8f_YNvo",
+      "to": "atmosphere:safe",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJl4SpjlR344kR-a5J8f_YNvo",
+      "to": "noun:area",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJl4SpjlR344kR-a5J8f_YNvo",
+      "to": "noun:aunt",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJl4SpjlR344kR-a5J8f_YNvo",
+      "to": "noun:bench",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJl4SpjlR344kR-a5J8f_YNvo",
+      "to": "noun:building",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJl4SpjlR344kR-a5J8f_YNvo",
+      "to": "noun:buildings",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJl4SpjlR344kR-a5J8f_YNvo",
+      "to": "noun:character",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJl4SpjlR344kR-a5J8f_YNvo",
+      "to": "noun:fountain",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJl4SpjlR344kR-a5J8f_YNvo",
+      "to": "noun:lawn",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ_Qt69Px544kR9sYP5zl1kw4",
+      "to": "atmosphere:inviting",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ_Qt69Px544kR9sYP5zl1kw4",
+      "to": "noun:chickens",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ_Qt69Px544kR9sYP5zl1kw4",
+      "to": "noun:kids",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ_Qt69Px544kR9sYP5zl1kw4",
+      "to": "noun:park",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ_Qt69Px544kR9sYP5zl1kw4",
+      "to": "noun:sand",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ_Qt69Px544kR9sYP5zl1kw4",
+      "to": "noun:water feature",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJZweWZOJ544kReZtPOq9YZGQ",
+      "to": "atmosphere:inviting",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJZweWZOJ544kReZtPOq9YZGQ",
+      "to": "atmosphere:safe",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJZweWZOJ544kReZtPOq9YZGQ",
+      "to": "noun:area",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJZweWZOJ544kReZtPOq9YZGQ",
+      "to": "noun:bench",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJZweWZOJ544kReZtPOq9YZGQ",
+      "to": "noun:bicycle",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJZweWZOJ544kReZtPOq9YZGQ",
+      "to": "noun:building",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJZweWZOJ544kReZtPOq9YZGQ",
+      "to": "noun:canopy",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJZweWZOJ544kReZtPOq9YZGQ",
+      "to": "noun:city",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJZweWZOJ544kReZtPOq9YZGQ",
+      "to": "noun:fence gate",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJZweWZOJ544kReZtPOq9YZGQ",
+      "to": "noun:fountain",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJhaThd61w44kRKvSIN6DksY8",
+      "to": "atmosphere:inviting",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJhaThd61w44kRKvSIN6DksY8",
+      "to": "atmosphere:safe",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJhaThd61w44kRKvSIN6DksY8",
+      "to": "atmosphere:calm",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJhaThd61w44kRKvSIN6DksY8",
+      "to": "noun:bench",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJhaThd61w44kRKvSIN6DksY8",
+      "to": "noun:bridge",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJhaThd61w44kRKvSIN6DksY8",
+      "to": "noun:building",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJhaThd61w44kRKvSIN6DksY8",
+      "to": "noun:canopy",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJhaThd61w44kRKvSIN6DksY8",
+      "to": "noun:fence",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJhaThd61w44kRKvSIN6DksY8",
+      "to": "noun:fenced",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJhaThd61w44kRKvSIN6DksY8",
+      "to": "noun:gate",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJhaThd61w44kRKvSIN6DksY8",
+      "to": "noun:lamp",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJfbjtxEN344kRXfCglgyQaOI",
+      "to": "atmosphere:inviting",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJfbjtxEN344kRXfCglgyQaOI",
+      "to": "noun:bench",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJfbjtxEN344kRXfCglgyQaOI",
+      "to": "noun:environment",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJfbjtxEN344kRXfCglgyQaOI",
+      "to": "noun:rocks",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJfbjtxEN344kRXfCglgyQaOI",
+      "to": "noun:spaces",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJfbjtxEN344kRXfCglgyQaOI",
+      "to": "noun:table",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJfbjtxEN344kRXfCglgyQaOI",
+      "to": "noun:venue",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJfbjtxEN344kRXfCglgyQaOI",
+      "to": "noun:water",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJrwIkbZ5x44kReubXVxjKNJo",
+      "to": "atmosphere:inviting",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJrwIkbZ5x44kReubXVxjKNJo",
+      "to": "atmosphere:safe",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJrwIkbZ5x44kReubXVxjKNJo",
+      "to": "noun:air",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJrwIkbZ5x44kReubXVxjKNJo",
+      "to": "noun:city",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJrwIkbZ5x44kReubXVxjKNJo",
+      "to": "noun:food trucks",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJrwIkbZ5x44kReubXVxjKNJo",
+      "to": "noun:garage",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJrwIkbZ5x44kReubXVxjKNJo",
+      "to": "noun:place",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJrwIkbZ5x44kReubXVxjKNJo",
+      "to": "noun:venue",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJrwIkbZ5x44kReubXVxjKNJo",
+      "to": "noun:vibe",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJecplvEJ344kRdjumhjIYylk",
+      "to": "atmosphere:inviting",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJecplvEJ344kRdjumhjIYylk",
+      "to": "atmosphere:safe",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJecplvEJ344kRdjumhjIYylk",
+      "to": "atmosphere:calm",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJecplvEJ344kRdjumhjIYylk",
+      "to": "noun:area",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJecplvEJ344kRdjumhjIYylk",
+      "to": "noun:benches",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJecplvEJ344kRdjumhjIYylk",
+      "to": "noun:bicycles",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJecplvEJ344kRdjumhjIYylk",
+      "to": "noun:bookstores",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJecplvEJ344kRdjumhjIYylk",
+      "to": "noun:charm",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJecplvEJ344kRdjumhjIYylk",
+      "to": "noun:culture",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJecplvEJ344kRdjumhjIYylk",
+      "to": "noun:eateries",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJecplvEJ344kRdjumhjIYylk",
+      "to": "noun:history",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJqbhAWkJ344kR8qCzVUUg3Z8",
+      "to": "atmosphere:safe",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJqbhAWkJ344kR8qCzVUUg3Z8",
+      "to": "noun:bathroom",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJqbhAWkJ344kR8qCzVUUg3Z8",
+      "to": "noun:comfortable",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJqbhAWkJ344kR8qCzVUUg3Z8",
+      "to": "noun:rest stops",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJqbhAWkJ344kR8qCzVUUg3Z8",
+      "to": "noun:sink",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJzyuk_lN344kRQcvilFvl7Bo",
+      "to": "atmosphere:inviting",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJzyuk_lN344kRQcvilFvl7Bo",
+      "to": "noun:bar",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJzyuk_lN344kRQcvilFvl7Bo",
+      "to": "noun:building",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJzyuk_lN344kRQcvilFvl7Bo",
+      "to": "noun:environment",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJzyuk_lN344kRQcvilFvl7Bo",
+      "to": "noun:family",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJzyuk_lN344kRQcvilFvl7Bo",
+      "to": "noun:groceries",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJzyuk_lN344kRQcvilFvl7Bo",
+      "to": "noun:pot shops",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJzyuk_lN344kRQcvilFvl7Bo",
+      "to": "noun:restaurants",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJzyuk_lN344kRQcvilFvl7Bo",
+      "to": "noun:shops",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJgbyV0EJ344kRTzLd70y72lA",
+      "to": "atmosphere:inviting",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJgbyV0EJ344kRTzLd70y72lA",
+      "to": "atmosphere:safe",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJgbyV0EJ344kRTzLd70y72lA",
+      "to": "atmosphere:calm",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJgbyV0EJ344kRTzLd70y72lA",
+      "to": "noun:building",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJgbyV0EJ344kRTzLd70y72lA",
+      "to": "noun:canopy",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJgbyV0EJ344kRTzLd70y72lA",
+      "to": "noun:coffee",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJgbyV0EJ344kRTzLd70y72lA",
+      "to": "noun:entrance",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJgbyV0EJ344kRTzLd70y72lA",
+      "to": "noun:fence",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJgbyV0EJ344kRTzLd70y72lA",
+      "to": "noun:food",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJgbyV0EJ344kRTzLd70y72lA",
+      "to": "noun:grass lawn",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJgbyV0EJ344kRTzLd70y72lA",
+      "to": "noun:lighting lamp",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJgaT0OeR544kRDWVr7eYaS-g",
+      "to": "atmosphere:inviting",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJgaT0OeR544kRDWVr7eYaS-g",
+      "to": "atmosphere:safe",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJgaT0OeR544kRDWVr7eYaS-g",
+      "to": "atmosphere:calm",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJgaT0OeR544kRDWVr7eYaS-g",
+      "to": "noun:bench",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJgaT0OeR544kRDWVr7eYaS-g",
+      "to": "noun:charles river",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJgaT0OeR544kRDWVr7eYaS-g",
+      "to": "noun:friends",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJgaT0OeR544kRDWVr7eYaS-g",
+      "to": "noun:insects",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJgaT0OeR544kRDWVr7eYaS-g",
+      "to": "noun:park",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJgaT0OeR544kRDWVr7eYaS-g",
+      "to": "noun:path walkway",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJgaT0OeR544kRDWVr7eYaS-g",
+      "to": "noun:river",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJgaT0OeR544kRDWVr7eYaS-g",
+      "to": "noun:sunset",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJL9hFHWh344kR4u0Ypc7ug18",
+      "to": "atmosphere:inviting",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJL9hFHWh344kR4u0Ypc7ug18",
+      "to": "noun:bench",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJL9hFHWh344kR4u0Ypc7ug18",
+      "to": "noun:building",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJL9hFHWh344kR4u0Ypc7ug18",
+      "to": "noun:canopy",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJL9hFHWh344kR4u0Ypc7ug18",
+      "to": "noun:fence",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJL9hFHWh344kR4u0Ypc7ug18",
+      "to": "noun:fountain",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJL9hFHWh344kR4u0Ypc7ug18",
+      "to": "noun:gate",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJL9hFHWh344kR4u0Ypc7ug18",
+      "to": "noun:grass lawn",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJL9hFHWh344kR4u0Ypc7ug18",
+      "to": "noun:lamp",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJMzhNVv5544kRqKx1Mlb1iLA",
+      "to": "atmosphere:inviting",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJMzhNVv5544kRqKx1Mlb1iLA",
+      "to": "noun:building",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJMzhNVv5544kRqKx1Mlb1iLA",
+      "to": "noun:entrance",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJMzhNVv5544kRqKx1Mlb1iLA",
+      "to": "noun:fence",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJMzhNVv5544kRqKx1Mlb1iLA",
+      "to": "noun:massachusetts",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJMzhNVv5544kRqKx1Mlb1iLA",
+      "to": "noun:path",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJMzhNVv5544kRqKx1Mlb1iLA",
+      "to": "noun:reception",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJbaeXiER344kRR_f4e89EQuM",
+      "to": "atmosphere:inviting",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJbaeXiER344kRR_f4e89EQuM",
+      "to": "atmosphere:safe",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJbaeXiER344kRR_f4e89EQuM",
+      "to": "atmosphere:calm",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJbaeXiER344kRR_f4e89EQuM",
+      "to": "noun:art",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJbaeXiER344kRR_f4e89EQuM",
+      "to": "noun:art pieces",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJbaeXiER344kRR_f4e89EQuM",
+      "to": "noun:bench",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJbaeXiER344kRR_f4e89EQuM",
+      "to": "noun:canopy",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJbaeXiER344kRR_f4e89EQuM",
+      "to": "noun:courtyard",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJbaeXiER344kRR_f4e89EQuM",
+      "to": "noun:fountain",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJbaeXiER344kRR_f4e89EQuM",
+      "to": "noun:galleries",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJbaeXiER344kRR_f4e89EQuM",
+      "to": "noun:grass lawn",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ0WEQ3kJ344kRgqD4jNgR18s",
+      "to": "atmosphere:inviting",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ0WEQ3kJ344kRgqD4jNgR18s",
+      "to": "atmosphere:safe",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ0WEQ3kJ344kRgqD4jNgR18s",
+      "to": "noun:buildings",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ0WEQ3kJ344kRgqD4jNgR18s",
+      "to": "noun:harvard",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ0WEQ3kJ344kRgqD4jNgR18s",
+      "to": "noun:maps",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ0WEQ3kJ344kRgqD4jNgR18s",
+      "to": "noun:square",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ0WEQ3kJ344kRgqD4jNgR18s",
+      "to": "noun:station",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ0WEQ3kJ344kRgqD4jNgR18s",
+      "to": "noun:stop",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ0WEQ3kJ344kRgqD4jNgR18s",
+      "to": "noun:transportation",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ5b-LegB644kRvUOaAysmcRU",
+      "to": "atmosphere:inviting",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ5b-LegB644kRvUOaAysmcRU",
+      "to": "atmosphere:safe",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ5b-LegB644kRvUOaAysmcRU",
+      "to": "atmosphere:calm",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ5b-LegB644kRvUOaAysmcRU",
+      "to": "noun:building",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ5b-LegB644kRvUOaAysmcRU",
+      "to": "noun:glass",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ5b-LegB644kRvUOaAysmcRU",
+      "to": "noun:orchestra",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ5b-LegB644kRvUOaAysmcRU",
+      "to": "noun:perspective",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ5b-LegB644kRvUOaAysmcRU",
+      "to": "noun:place",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ5b-LegB644kRvUOaAysmcRU",
+      "to": "noun:seating lines",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJe9YuL0F344kRe7q8SEaMPWE",
+      "to": "atmosphere:inviting",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJe9YuL0F344kRe7q8SEaMPWE",
+      "to": "atmosphere:safe",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJe9YuL0F344kRe7q8SEaMPWE",
+      "to": "atmosphere:calm",
+      "label": "",
+      "hoverLabel": "MENTIONS",
+      "title": "place → atmosphere (comment corpus)",
+      "color": "#f0f080",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJe9YuL0F344kRe7q8SEaMPWE",
+      "to": "noun:animals",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJe9YuL0F344kRe7q8SEaMPWE",
+      "to": "noun:birds",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJe9YuL0F344kRe7q8SEaMPWE",
+      "to": "noun:building",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJe9YuL0F344kRe7q8SEaMPWE",
+      "to": "noun:fish",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJe9YuL0F344kRe7q8SEaMPWE",
+      "to": "noun:fossils",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJe9YuL0F344kRe7q8SEaMPWE",
+      "to": "noun:geodes",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJe9YuL0F344kRe7q8SEaMPWE",
+      "to": "noun:here",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJe9YuL0F344kRe7q8SEaMPWE",
+      "to": "noun:morning",
+      "label": "",
+      "hoverLabel": "comment",
+      "title": "place → comment noun",
+      "color": "#f0b0e0",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJecplvEJ344kRdjumhjIYylk",
+      "to": "noun:building",
+      "label": "",
+      "hoverLabel": "DETECTS×7",
+      "title": "DETECTS count=7",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJecplvEJ344kRdjumhjIYylk",
+      "to": "noun:tree",
+      "label": "",
+      "hoverLabel": "DETECTS×5",
+      "title": "DETECTS count=5",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJecplvEJ344kRdjumhjIYylk",
+      "to": "noun:canopy",
+      "label": "",
+      "hoverLabel": "DETECTS×5",
+      "title": "DETECTS count=5",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJecplvEJ344kRdjumhjIYylk",
+      "to": "noun:sign",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJecplvEJ344kRdjumhjIYylk",
+      "to": "noun:people",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJecplvEJ344kRdjumhjIYylk",
+      "to": "noun:playground",
+      "label": "",
+      "hoverLabel": "DETECTS×3",
+      "title": "DETECTS count=3",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJw9Pt_EN344kRkOjxvQDgKbo",
+      "to": "noun:tree",
+      "label": "",
+      "hoverLabel": "DETECTS×10",
+      "title": "DETECTS count=10",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJw9Pt_EN344kRkOjxvQDgKbo",
+      "to": "noun:lamp",
+      "label": "",
+      "hoverLabel": "DETECTS×7",
+      "title": "DETECTS count=7",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJw9Pt_EN344kRkOjxvQDgKbo",
+      "to": "noun:grass lawn",
+      "label": "",
+      "hoverLabel": "DETECTS×6",
+      "title": "DETECTS count=6",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJw9Pt_EN344kRkOjxvQDgKbo",
+      "to": "noun:building facade",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJw9Pt_EN344kRkOjxvQDgKbo",
+      "to": "noun:building",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJw9Pt_EN344kRkOjxvQDgKbo",
+      "to": "noun:path walkway",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJe9YuL0F344kRe7q8SEaMPWE",
+      "to": "noun:tree",
+      "label": "",
+      "hoverLabel": "DETECTS×6",
+      "title": "DETECTS count=6",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJe9YuL0F344kRe7q8SEaMPWE",
+      "to": "noun:path walkway",
+      "label": "",
+      "hoverLabel": "DETECTS×3",
+      "title": "DETECTS count=3",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJe9YuL0F344kRe7q8SEaMPWE",
+      "to": "noun:lamp",
+      "label": "",
+      "hoverLabel": "DETECTS×3",
+      "title": "DETECTS count=3",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJe9YuL0F344kRe7q8SEaMPWE",
+      "to": "noun:building",
+      "label": "",
+      "hoverLabel": "DETECTS×2",
+      "title": "DETECTS count=2",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJe9YuL0F344kRe7q8SEaMPWE",
+      "to": "noun:sign",
+      "label": "",
+      "hoverLabel": "DETECTS×2",
+      "title": "DETECTS count=2",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJe9YuL0F344kRe7q8SEaMPWE",
+      "to": "noun:gate",
+      "label": "",
+      "hoverLabel": "DETECTS×2",
+      "title": "DETECTS count=2",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJbaeXiER344kRR_f4e89EQuM",
+      "to": "noun:lamp",
+      "label": "",
+      "hoverLabel": "DETECTS×9",
+      "title": "DETECTS count=9",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJbaeXiER344kRR_f4e89EQuM",
+      "to": "noun:bench",
+      "label": "",
+      "hoverLabel": "DETECTS×5",
+      "title": "DETECTS count=5",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJbaeXiER344kRR_f4e89EQuM",
+      "to": "noun:people",
+      "label": "",
+      "hoverLabel": "DETECTS×5",
+      "title": "DETECTS count=5",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJbaeXiER344kRR_f4e89EQuM",
+      "to": "noun:path walkway",
+      "label": "",
+      "hoverLabel": "DETECTS×3",
+      "title": "DETECTS count=3",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJbaeXiER344kRR_f4e89EQuM",
+      "to": "noun:playground building",
+      "label": "",
+      "hoverLabel": "DETECTS×2",
+      "title": "DETECTS count=2",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJbaeXiER344kRR_f4e89EQuM",
+      "to": "noun:sign",
+      "label": "",
+      "hoverLabel": "DETECTS×2",
+      "title": "DETECTS count=2",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJC5eyB0J344kRIgcXIHRzdK4",
+      "to": "noun:bench",
+      "label": "",
+      "hoverLabel": "DETECTS×10",
+      "title": "DETECTS count=10",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJC5eyB0J344kRIgcXIHRzdK4",
+      "to": "noun:tree",
+      "label": "",
+      "hoverLabel": "DETECTS×7",
+      "title": "DETECTS count=7",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJC5eyB0J344kRIgcXIHRzdK4",
+      "to": "noun:people",
+      "label": "",
+      "hoverLabel": "DETECTS×5",
+      "title": "DETECTS count=5",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJC5eyB0J344kRIgcXIHRzdK4",
+      "to": "noun:playground",
+      "label": "",
+      "hoverLabel": "DETECTS×5",
+      "title": "DETECTS count=5",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJC5eyB0J344kRIgcXIHRzdK4",
+      "to": "noun:sign",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJC5eyB0J344kRIgcXIHRzdK4",
+      "to": "noun:path walkway",
+      "label": "",
+      "hoverLabel": "DETECTS×3",
+      "title": "DETECTS count=3",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ6ZPQHapw44kR0GWA414vJOI",
+      "to": "noun:tree",
+      "label": "",
+      "hoverLabel": "DETECTS×8",
+      "title": "DETECTS count=8",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ6ZPQHapw44kR0GWA414vJOI",
+      "to": "noun:building",
+      "label": "",
+      "hoverLabel": "DETECTS×5",
+      "title": "DETECTS count=5",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ6ZPQHapw44kR0GWA414vJOI",
+      "to": "noun:canopy",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ6ZPQHapw44kR0GWA414vJOI",
+      "to": "noun:path walkway",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ6ZPQHapw44kR0GWA414vJOI",
+      "to": "noun:people",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ6ZPQHapw44kR0GWA414vJOI",
+      "to": "noun:grass lawn",
+      "label": "",
+      "hoverLabel": "DETECTS×3",
+      "title": "DETECTS count=3",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJgaT0OeR544kRDWVr7eYaS-g",
+      "to": "noun:tree",
+      "label": "",
+      "hoverLabel": "DETECTS×9",
+      "title": "DETECTS count=9",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJgaT0OeR544kRDWVr7eYaS-g",
+      "to": "noun:building",
+      "label": "",
+      "hoverLabel": "DETECTS×8",
+      "title": "DETECTS count=8",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJgaT0OeR544kRDWVr7eYaS-g",
+      "to": "noun:people",
+      "label": "",
+      "hoverLabel": "DETECTS×5",
+      "title": "DETECTS count=5",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJgaT0OeR544kRDWVr7eYaS-g",
+      "to": "noun:playground",
+      "label": "",
+      "hoverLabel": "DETECTS×5",
+      "title": "DETECTS count=5",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJgaT0OeR544kRDWVr7eYaS-g",
+      "to": "noun:water",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJgaT0OeR544kRDWVr7eYaS-g",
+      "to": "noun:canopy",
+      "label": "",
+      "hoverLabel": "DETECTS×3",
+      "title": "DETECTS count=3",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJlegDpmd344kRZ8VMOsqJ5xM",
+      "to": "noun:tree",
+      "label": "",
+      "hoverLabel": "DETECTS×7",
+      "title": "DETECTS count=7",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJlegDpmd344kRZ8VMOsqJ5xM",
+      "to": "noun:path walkway",
+      "label": "",
+      "hoverLabel": "DETECTS×6",
+      "title": "DETECTS count=6",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJlegDpmd344kRZ8VMOsqJ5xM",
+      "to": "noun:grass lawn",
+      "label": "",
+      "hoverLabel": "DETECTS×5",
+      "title": "DETECTS count=5",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJlegDpmd344kRZ8VMOsqJ5xM",
+      "to": "noun:playground",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJlegDpmd344kRZ8VMOsqJ5xM",
+      "to": "noun:sign",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJlegDpmd344kRZ8VMOsqJ5xM",
+      "to": "noun:bench",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJzyuk_lN344kRQcvilFvl7Bo",
+      "to": "noun:bicycle",
+      "label": "",
+      "hoverLabel": "DETECTS×8",
+      "title": "DETECTS count=8",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJzyuk_lN344kRQcvilFvl7Bo",
+      "to": "noun:tree",
+      "label": "",
+      "hoverLabel": "DETECTS×7",
+      "title": "DETECTS count=7",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJzyuk_lN344kRQcvilFvl7Bo",
+      "to": "noun:sign",
+      "label": "",
+      "hoverLabel": "DETECTS×6",
+      "title": "DETECTS count=6",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJzyuk_lN344kRQcvilFvl7Bo",
+      "to": "noun:playground",
+      "label": "",
+      "hoverLabel": "DETECTS×5",
+      "title": "DETECTS count=5",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJzyuk_lN344kRQcvilFvl7Bo",
+      "to": "noun:building",
+      "label": "",
+      "hoverLabel": "DETECTS×5",
+      "title": "DETECTS count=5",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJzyuk_lN344kRQcvilFvl7Bo",
+      "to": "noun:canopy",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ0zpihlJ344kRCAOlne5GEoc",
+      "to": "noun:bench",
+      "label": "",
+      "hoverLabel": "DETECTS×9",
+      "title": "DETECTS count=9",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ0zpihlJ344kRCAOlne5GEoc",
+      "to": "noun:fence",
+      "label": "",
+      "hoverLabel": "DETECTS×5",
+      "title": "DETECTS count=5",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ0zpihlJ344kRCAOlne5GEoc",
+      "to": "noun:playground",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ0zpihlJ344kRCAOlne5GEoc",
+      "to": "noun:canopy",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ0zpihlJ344kRCAOlne5GEoc",
+      "to": "noun:grass lawn",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ0zpihlJ344kRCAOlne5GEoc",
+      "to": "noun:building",
+      "label": "",
+      "hoverLabel": "DETECTS×3",
+      "title": "DETECTS count=3",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJfbjtxEN344kRXfCglgyQaOI",
+      "to": "noun:grass lawn",
+      "label": "",
+      "hoverLabel": "DETECTS×7",
+      "title": "DETECTS count=7",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJfbjtxEN344kRXfCglgyQaOI",
+      "to": "noun:tree",
+      "label": "",
+      "hoverLabel": "DETECTS×7",
+      "title": "DETECTS count=7",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJfbjtxEN344kRXfCglgyQaOI",
+      "to": "noun:playground",
+      "label": "",
+      "hoverLabel": "DETECTS×6",
+      "title": "DETECTS count=6",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJfbjtxEN344kRXfCglgyQaOI",
+      "to": "noun:canopy",
+      "label": "",
+      "hoverLabel": "DETECTS×5",
+      "title": "DETECTS count=5",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJfbjtxEN344kRXfCglgyQaOI",
+      "to": "noun:people",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJfbjtxEN344kRXfCglgyQaOI",
+      "to": "noun:building facade",
+      "label": "",
+      "hoverLabel": "DETECTS×3",
+      "title": "DETECTS count=3",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJMzhNVv5544kRqKx1Mlb1iLA",
+      "to": "noun:lamp",
+      "label": "",
+      "hoverLabel": "DETECTS×14",
+      "title": "DETECTS count=14",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJMzhNVv5544kRqKx1Mlb1iLA",
+      "to": "noun:tree",
+      "label": "",
+      "hoverLabel": "DETECTS×8",
+      "title": "DETECTS count=8",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJMzhNVv5544kRqKx1Mlb1iLA",
+      "to": "noun:stairs",
+      "label": "",
+      "hoverLabel": "DETECTS×5",
+      "title": "DETECTS count=5",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJMzhNVv5544kRqKx1Mlb1iLA",
+      "to": "noun:people",
+      "label": "",
+      "hoverLabel": "DETECTS×5",
+      "title": "DETECTS count=5",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJMzhNVv5544kRqKx1Mlb1iLA",
+      "to": "noun:bench",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJMzhNVv5544kRqKx1Mlb1iLA",
+      "to": "noun:canopy",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ5b-LegB644kRvUOaAysmcRU",
+      "to": "noun:lamp",
+      "label": "",
+      "hoverLabel": "DETECTS×24",
+      "title": "DETECTS count=24",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ5b-LegB644kRvUOaAysmcRU",
+      "to": "noun:bench",
+      "label": "",
+      "hoverLabel": "DETECTS×9",
+      "title": "DETECTS count=9",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ5b-LegB644kRvUOaAysmcRU",
+      "to": "noun:grass lawn",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ5b-LegB644kRvUOaAysmcRU",
+      "to": "noun:canopy",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ5b-LegB644kRvUOaAysmcRU",
+      "to": "noun:fence",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ5b-LegB644kRvUOaAysmcRU",
+      "to": "noun:playground",
+      "label": "",
+      "hoverLabel": "DETECTS×3",
+      "title": "DETECTS count=3",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJQXMWnUV344kRzs9-HfLoekk",
+      "to": "noun:bench",
+      "label": "",
+      "hoverLabel": "DETECTS×10",
+      "title": "DETECTS count=10",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJQXMWnUV344kRzs9-HfLoekk",
+      "to": "noun:tree",
+      "label": "",
+      "hoverLabel": "DETECTS×8",
+      "title": "DETECTS count=8",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJQXMWnUV344kRzs9-HfLoekk",
+      "to": "noun:path walkway",
+      "label": "",
+      "hoverLabel": "DETECTS×5",
+      "title": "DETECTS count=5",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJQXMWnUV344kRzs9-HfLoekk",
+      "to": "noun:playground",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJQXMWnUV344kRzs9-HfLoekk",
+      "to": "noun:people",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJQXMWnUV344kRzs9-HfLoekk",
+      "to": "noun:canopy",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJdelVAGp344kRnbhJtYxqBuo",
+      "to": "noun:tree",
+      "label": "",
+      "hoverLabel": "DETECTS×7",
+      "title": "DETECTS count=7",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJdelVAGp344kRnbhJtYxqBuo",
+      "to": "noun:playground",
+      "label": "",
+      "hoverLabel": "DETECTS×7",
+      "title": "DETECTS count=7",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJdelVAGp344kRnbhJtYxqBuo",
+      "to": "noun:canopy",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJdelVAGp344kRnbhJtYxqBuo",
+      "to": "noun:building",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJdelVAGp344kRnbhJtYxqBuo",
+      "to": "noun:grass lawn",
+      "label": "",
+      "hoverLabel": "DETECTS×3",
+      "title": "DETECTS count=3",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJdelVAGp344kRnbhJtYxqBuo",
+      "to": "noun:people",
+      "label": "",
+      "hoverLabel": "DETECTS×3",
+      "title": "DETECTS count=3",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJqawa215344kROpcUJbbE0Vg",
+      "to": "noun:tree",
+      "label": "",
+      "hoverLabel": "DETECTS×14",
+      "title": "DETECTS count=14",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJqawa215344kROpcUJbbE0Vg",
+      "to": "noun:playground",
+      "label": "",
+      "hoverLabel": "DETECTS×7",
+      "title": "DETECTS count=7",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJqawa215344kROpcUJbbE0Vg",
+      "to": "noun:people",
+      "label": "",
+      "hoverLabel": "DETECTS×7",
+      "title": "DETECTS count=7",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJqawa215344kROpcUJbbE0Vg",
+      "to": "noun:building",
+      "label": "",
+      "hoverLabel": "DETECTS×5",
+      "title": "DETECTS count=5",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJqawa215344kROpcUJbbE0Vg",
+      "to": "noun:water",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJqawa215344kROpcUJbbE0Vg",
+      "to": "noun:grass lawn",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ38dFa69w44kRDZBuTuaYXkk",
+      "to": "noun:bench",
+      "label": "",
+      "hoverLabel": "DETECTS×12",
+      "title": "DETECTS count=12",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ38dFa69w44kRDZBuTuaYXkk",
+      "to": "noun:building",
+      "label": "",
+      "hoverLabel": "DETECTS×10",
+      "title": "DETECTS count=10",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ38dFa69w44kRDZBuTuaYXkk",
+      "to": "noun:tree",
+      "label": "",
+      "hoverLabel": "DETECTS×7",
+      "title": "DETECTS count=7",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ38dFa69w44kRDZBuTuaYXkk",
+      "to": "noun:playground",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ38dFa69w44kRDZBuTuaYXkk",
+      "to": "noun:grass lawn",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ38dFa69w44kRDZBuTuaYXkk",
+      "to": "noun:path walkway",
+      "label": "",
+      "hoverLabel": "DETECTS×3",
+      "title": "DETECTS count=3",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ0WEQ3kJ344kRgqD4jNgR18s",
+      "to": "noun:lamp",
+      "label": "",
+      "hoverLabel": "DETECTS×11",
+      "title": "DETECTS count=11",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ0WEQ3kJ344kRgqD4jNgR18s",
+      "to": "noun:bench",
+      "label": "",
+      "hoverLabel": "DETECTS×6",
+      "title": "DETECTS count=6",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ0WEQ3kJ344kRgqD4jNgR18s",
+      "to": "noun:path walkway",
+      "label": "",
+      "hoverLabel": "DETECTS×5",
+      "title": "DETECTS count=5",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ0WEQ3kJ344kRgqD4jNgR18s",
+      "to": "noun:people",
+      "label": "",
+      "hoverLabel": "DETECTS×5",
+      "title": "DETECTS count=5",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ0WEQ3kJ344kRgqD4jNgR18s",
+      "to": "noun:stairs",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ0WEQ3kJ344kRgqD4jNgR18s",
+      "to": "noun:bicycle",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJibK7VF9344kRqxrHJkNsISk",
+      "to": "noun:tree",
+      "label": "",
+      "hoverLabel": "DETECTS×26",
+      "title": "DETECTS count=26",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJibK7VF9344kRqxrHJkNsISk",
+      "to": "noun:playground",
+      "label": "",
+      "hoverLabel": "DETECTS×7",
+      "title": "DETECTS count=7",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJibK7VF9344kRqxrHJkNsISk",
+      "to": "noun:people",
+      "label": "",
+      "hoverLabel": "DETECTS×5",
+      "title": "DETECTS count=5",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJibK7VF9344kRqxrHJkNsISk",
+      "to": "noun:bench",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJibK7VF9344kRqxrHJkNsISk",
+      "to": "noun:sign",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJibK7VF9344kRqxrHJkNsISk",
+      "to": "noun:canopy",
+      "label": "",
+      "hoverLabel": "DETECTS×3",
+      "title": "DETECTS count=3",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ70NXYP1544kRXnfSiB1r4as",
+      "to": "noun:tree",
+      "label": "",
+      "hoverLabel": "DETECTS×8",
+      "title": "DETECTS count=8",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ70NXYP1544kRXnfSiB1r4as",
+      "to": "noun:building",
+      "label": "",
+      "hoverLabel": "DETECTS×6",
+      "title": "DETECTS count=6",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ70NXYP1544kRXnfSiB1r4as",
+      "to": "noun:playground",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ70NXYP1544kRXnfSiB1r4as",
+      "to": "noun:path walkway",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ70NXYP1544kRXnfSiB1r4as",
+      "to": "noun:bench",
+      "label": "",
+      "hoverLabel": "DETECTS×3",
+      "title": "DETECTS count=3",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ70NXYP1544kRXnfSiB1r4as",
+      "to": "noun:grass lawn",
+      "label": "",
+      "hoverLabel": "DETECTS×3",
+      "title": "DETECTS count=3",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJE12gBq1w44kR_N0FJNiKAcg",
+      "to": "noun:bench",
+      "label": "",
+      "hoverLabel": "DETECTS×13",
+      "title": "DETECTS count=13",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJE12gBq1w44kR_N0FJNiKAcg",
+      "to": "noun:tree",
+      "label": "",
+      "hoverLabel": "DETECTS×9",
+      "title": "DETECTS count=9",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJE12gBq1w44kR_N0FJNiKAcg",
+      "to": "noun:canopy",
+      "label": "",
+      "hoverLabel": "DETECTS×6",
+      "title": "DETECTS count=6",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJE12gBq1w44kR_N0FJNiKAcg",
+      "to": "noun:building",
+      "label": "",
+      "hoverLabel": "DETECTS×6",
+      "title": "DETECTS count=6",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJE12gBq1w44kR_N0FJNiKAcg",
+      "to": "noun:playground",
+      "label": "",
+      "hoverLabel": "DETECTS×5",
+      "title": "DETECTS count=5",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJE12gBq1w44kR_N0FJNiKAcg",
+      "to": "noun:sign",
+      "label": "",
+      "hoverLabel": "DETECTS×3",
+      "title": "DETECTS count=3",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ25L83fx544kRiuWNvWYdSLA",
+      "to": "noun:bench",
+      "label": "",
+      "hoverLabel": "DETECTS×9",
+      "title": "DETECTS count=9",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ25L83fx544kRiuWNvWYdSLA",
+      "to": "noun:playground",
+      "label": "",
+      "hoverLabel": "DETECTS×6",
+      "title": "DETECTS count=6",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ25L83fx544kRiuWNvWYdSLA",
+      "to": "noun:tree",
+      "label": "",
+      "hoverLabel": "DETECTS×6",
+      "title": "DETECTS count=6",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ25L83fx544kRiuWNvWYdSLA",
+      "to": "noun:sign",
+      "label": "",
+      "hoverLabel": "DETECTS×5",
+      "title": "DETECTS count=5",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ25L83fx544kRiuWNvWYdSLA",
+      "to": "noun:bicycle",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ25L83fx544kRiuWNvWYdSLA",
+      "to": "noun:canopy",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJFapjVFl344kRXcKedI8Cuc0",
+      "to": "noun:people",
+      "label": "",
+      "hoverLabel": "DETECTS×6",
+      "title": "DETECTS count=6",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJFapjVFl344kRXcKedI8Cuc0",
+      "to": "noun:playground",
+      "label": "",
+      "hoverLabel": "DETECTS×5",
+      "title": "DETECTS count=5",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJFapjVFl344kRXcKedI8Cuc0",
+      "to": "noun:tree",
+      "label": "",
+      "hoverLabel": "DETECTS×5",
+      "title": "DETECTS count=5",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJFapjVFl344kRXcKedI8Cuc0",
+      "to": "noun:path walkway",
+      "label": "",
+      "hoverLabel": "DETECTS×3",
+      "title": "DETECTS count=3",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJFapjVFl344kRXcKedI8Cuc0",
+      "to": "noun:grass lawn",
+      "label": "",
+      "hoverLabel": "DETECTS×2",
+      "title": "DETECTS count=2",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJFapjVFl344kRXcKedI8Cuc0",
+      "to": "noun:canopy",
+      "label": "",
+      "hoverLabel": "DETECTS×2",
+      "title": "DETECTS count=2",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJM3icQVN344kRZsmgAwN0zc8",
+      "to": "noun:bicycle",
+      "label": "",
+      "hoverLabel": "DETECTS×8",
+      "title": "DETECTS count=8",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJM3icQVN344kRZsmgAwN0zc8",
+      "to": "noun:playground",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJM3icQVN344kRZsmgAwN0zc8",
+      "to": "noun:sign",
+      "label": "",
+      "hoverLabel": "DETECTS×3",
+      "title": "DETECTS count=3",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJM3icQVN344kRZsmgAwN0zc8",
+      "to": "noun:tree",
+      "label": "",
+      "hoverLabel": "DETECTS×3",
+      "title": "DETECTS count=3",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJM3icQVN344kRZsmgAwN0zc8",
+      "to": "noun:people",
+      "label": "",
+      "hoverLabel": "DETECTS×3",
+      "title": "DETECTS count=3",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJM3icQVN344kRZsmgAwN0zc8",
+      "to": "noun:building facade",
+      "label": "",
+      "hoverLabel": "DETECTS×2",
+      "title": "DETECTS count=2",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJgbyV0EJ344kRTzLd70y72lA",
+      "to": "noun:lamp",
+      "label": "",
+      "hoverLabel": "DETECTS×18",
+      "title": "DETECTS count=18",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJgbyV0EJ344kRTzLd70y72lA",
+      "to": "noun:tree",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJgbyV0EJ344kRTzLd70y72lA",
+      "to": "noun:playground building",
+      "label": "",
+      "hoverLabel": "DETECTS×3",
+      "title": "DETECTS count=3",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJgbyV0EJ344kRTzLd70y72lA",
+      "to": "noun:bench",
+      "label": "",
+      "hoverLabel": "DETECTS×3",
+      "title": "DETECTS count=3",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJgbyV0EJ344kRTzLd70y72lA",
+      "to": "noun:people",
+      "label": "",
+      "hoverLabel": "DETECTS×3",
+      "title": "DETECTS count=3",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJgbyV0EJ344kRTzLd70y72lA",
+      "to": "noun:stairs",
+      "label": "",
+      "hoverLabel": "DETECTS×2",
+      "title": "DETECTS count=2",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJqbhAWkJ344kR8qCzVUUg3Z8",
+      "to": "noun:tree",
+      "label": "",
+      "hoverLabel": "DETECTS×7",
+      "title": "DETECTS count=7",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJqbhAWkJ344kR8qCzVUUg3Z8",
+      "to": "noun:canopy",
+      "label": "",
+      "hoverLabel": "DETECTS×6",
+      "title": "DETECTS count=6",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJqbhAWkJ344kR8qCzVUUg3Z8",
+      "to": "noun:playground",
+      "label": "",
+      "hoverLabel": "DETECTS×5",
+      "title": "DETECTS count=5",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJqbhAWkJ344kR8qCzVUUg3Z8",
+      "to": "noun:building",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJqbhAWkJ344kR8qCzVUUg3Z8",
+      "to": "noun:lamp",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJqbhAWkJ344kR8qCzVUUg3Z8",
+      "to": "noun:stairs",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ_Qt69Px544kR9sYP5zl1kw4",
+      "to": "noun:tree",
+      "label": "",
+      "hoverLabel": "DETECTS×7",
+      "title": "DETECTS count=7",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ_Qt69Px544kR9sYP5zl1kw4",
+      "to": "noun:bench",
+      "label": "",
+      "hoverLabel": "DETECTS×6",
+      "title": "DETECTS count=6",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ_Qt69Px544kR9sYP5zl1kw4",
+      "to": "noun:building",
+      "label": "",
+      "hoverLabel": "DETECTS×6",
+      "title": "DETECTS count=6",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ_Qt69Px544kR9sYP5zl1kw4",
+      "to": "noun:playground",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ_Qt69Px544kR9sYP5zl1kw4",
+      "to": "noun:grass lawn",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ_Qt69Px544kR9sYP5zl1kw4",
+      "to": "noun:fence",
+      "label": "",
+      "hoverLabel": "DETECTS×3",
+      "title": "DETECTS count=3",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJL9hFHWh344kR4u0Ypc7ug18",
+      "to": "noun:building",
+      "label": "",
+      "hoverLabel": "DETECTS×8",
+      "title": "DETECTS count=8",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJL9hFHWh344kR4u0Ypc7ug18",
+      "to": "noun:gate",
+      "label": "",
+      "hoverLabel": "DETECTS×5",
+      "title": "DETECTS count=5",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJL9hFHWh344kR4u0Ypc7ug18",
+      "to": "noun:tree",
+      "label": "",
+      "hoverLabel": "DETECTS×5",
+      "title": "DETECTS count=5",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJL9hFHWh344kR4u0Ypc7ug18",
+      "to": "noun:playground",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJL9hFHWh344kR4u0Ypc7ug18",
+      "to": "noun:sign",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJL9hFHWh344kR4u0Ypc7ug18",
+      "to": "noun:grass lawn",
+      "label": "",
+      "hoverLabel": "DETECTS×3",
+      "title": "DETECTS count=3",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJeR3K0F5344kRjtZYF7-MPlw",
+      "to": "noun:bench",
+      "label": "",
+      "hoverLabel": "DETECTS×6",
+      "title": "DETECTS count=6",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJeR3K0F5344kRjtZYF7-MPlw",
+      "to": "noun:building",
+      "label": "",
+      "hoverLabel": "DETECTS×6",
+      "title": "DETECTS count=6",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJeR3K0F5344kRjtZYF7-MPlw",
+      "to": "noun:tree",
+      "label": "",
+      "hoverLabel": "DETECTS×5",
+      "title": "DETECTS count=5",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJeR3K0F5344kRjtZYF7-MPlw",
+      "to": "noun:playground",
+      "label": "",
+      "hoverLabel": "DETECTS×5",
+      "title": "DETECTS count=5",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJeR3K0F5344kRjtZYF7-MPlw",
+      "to": "noun:people",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJeR3K0F5344kRjtZYF7-MPlw",
+      "to": "noun:grass lawn",
+      "label": "",
+      "hoverLabel": "DETECTS×3",
+      "title": "DETECTS count=3",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJK-7ymsF344kRN70NFmyfvK8",
+      "to": "noun:bench",
+      "label": "",
+      "hoverLabel": "DETECTS×13",
+      "title": "DETECTS count=13",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJK-7ymsF344kRN70NFmyfvK8",
+      "to": "noun:playground",
+      "label": "",
+      "hoverLabel": "DETECTS×6",
+      "title": "DETECTS count=6",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJK-7ymsF344kRN70NFmyfvK8",
+      "to": "noun:canopy",
+      "label": "",
+      "hoverLabel": "DETECTS×5",
+      "title": "DETECTS count=5",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJK-7ymsF344kRN70NFmyfvK8",
+      "to": "noun:building",
+      "label": "",
+      "hoverLabel": "DETECTS×5",
+      "title": "DETECTS count=5",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJK-7ymsF344kRN70NFmyfvK8",
+      "to": "noun:tree",
+      "label": "",
+      "hoverLabel": "DETECTS×3",
+      "title": "DETECTS count=3",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJK-7ymsF344kRN70NFmyfvK8",
+      "to": "noun:fence",
+      "label": "",
+      "hoverLabel": "DETECTS×2",
+      "title": "DETECTS count=2",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJrwIkbZ5x44kReubXVxjKNJo",
+      "to": "noun:tree",
+      "label": "",
+      "hoverLabel": "DETECTS×8",
+      "title": "DETECTS count=8",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJrwIkbZ5x44kReubXVxjKNJo",
+      "to": "noun:playground",
+      "label": "",
+      "hoverLabel": "DETECTS×8",
+      "title": "DETECTS count=8",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJrwIkbZ5x44kReubXVxjKNJo",
+      "to": "noun:building",
+      "label": "",
+      "hoverLabel": "DETECTS×8",
+      "title": "DETECTS count=8",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJrwIkbZ5x44kReubXVxjKNJo",
+      "to": "noun:lamp",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJrwIkbZ5x44kReubXVxjKNJo",
+      "to": "noun:people",
+      "label": "",
+      "hoverLabel": "DETECTS×3",
+      "title": "DETECTS count=3",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJrwIkbZ5x44kReubXVxjKNJo",
+      "to": "noun:canopy shade",
+      "label": "",
+      "hoverLabel": "DETECTS×3",
+      "title": "DETECTS count=3",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJOdNat01344kRr8NyNS4Is-8",
+      "to": "noun:bench",
+      "label": "",
+      "hoverLabel": "DETECTS×9",
+      "title": "DETECTS count=9",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJOdNat01344kRr8NyNS4Is-8",
+      "to": "noun:tree",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJOdNat01344kRr8NyNS4Is-8",
+      "to": "noun:fountain",
+      "label": "",
+      "hoverLabel": "DETECTS×3",
+      "title": "DETECTS count=3",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJOdNat01344kRr8NyNS4Is-8",
+      "to": "noun:playground",
+      "label": "",
+      "hoverLabel": "DETECTS×3",
+      "title": "DETECTS count=3",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJOdNat01344kRr8NyNS4Is-8",
+      "to": "noun:stairs",
+      "label": "",
+      "hoverLabel": "DETECTS×3",
+      "title": "DETECTS count=3",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJOdNat01344kRr8NyNS4Is-8",
+      "to": "noun:sign",
+      "label": "",
+      "hoverLabel": "DETECTS×3",
+      "title": "DETECTS count=3",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJZweWZOJ544kReZtPOq9YZGQ",
+      "to": "noun:tree",
+      "label": "",
+      "hoverLabel": "DETECTS×10",
+      "title": "DETECTS count=10",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJZweWZOJ544kReZtPOq9YZGQ",
+      "to": "noun:path walkway",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJZweWZOJ544kReZtPOq9YZGQ",
+      "to": "noun:playground",
+      "label": "",
+      "hoverLabel": "DETECTS×3",
+      "title": "DETECTS count=3",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJZweWZOJ544kReZtPOq9YZGQ",
+      "to": "noun:lamp",
+      "label": "",
+      "hoverLabel": "DETECTS×3",
+      "title": "DETECTS count=3",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJZweWZOJ544kReZtPOq9YZGQ",
+      "to": "noun:building",
+      "label": "",
+      "hoverLabel": "DETECTS×3",
+      "title": "DETECTS count=3",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJZweWZOJ544kReZtPOq9YZGQ",
+      "to": "noun:sign",
+      "label": "",
+      "hoverLabel": "DETECTS×3",
+      "title": "DETECTS count=3",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJK89zW1R344kRz7jYZfKShKA",
+      "to": "noun:path walkway",
+      "label": "",
+      "hoverLabel": "DETECTS×6",
+      "title": "DETECTS count=6",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJK89zW1R344kRz7jYZfKShKA",
+      "to": "noun:tree",
+      "label": "",
+      "hoverLabel": "DETECTS×5",
+      "title": "DETECTS count=5",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJK89zW1R344kRz7jYZfKShKA",
+      "to": "noun:building",
+      "label": "",
+      "hoverLabel": "DETECTS×5",
+      "title": "DETECTS count=5",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJK89zW1R344kRz7jYZfKShKA",
+      "to": "noun:fountain",
+      "label": "",
+      "hoverLabel": "DETECTS×5",
+      "title": "DETECTS count=5",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJK89zW1R344kRz7jYZfKShKA",
+      "to": "noun:canopy",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJK89zW1R344kRz7jYZfKShKA",
+      "to": "noun:playground",
+      "label": "",
+      "hoverLabel": "DETECTS×3",
+      "title": "DETECTS count=3",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJhaThd61w44kRKvSIN6DksY8",
+      "to": "noun:bench",
+      "label": "",
+      "hoverLabel": "DETECTS×6",
+      "title": "DETECTS count=6",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJhaThd61w44kRKvSIN6DksY8",
+      "to": "noun:playground",
+      "label": "",
+      "hoverLabel": "DETECTS×5",
+      "title": "DETECTS count=5",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJhaThd61w44kRKvSIN6DksY8",
+      "to": "noun:building",
+      "label": "",
+      "hoverLabel": "DETECTS×5",
+      "title": "DETECTS count=5",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJhaThd61w44kRKvSIN6DksY8",
+      "to": "noun:tree",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJhaThd61w44kRKvSIN6DksY8",
+      "to": "noun:stairs",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJhaThd61w44kRKvSIN6DksY8",
+      "to": "noun:canopy",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJl4SpjlR344kR-a5J8f_YNvo",
+      "to": "noun:lamp",
+      "label": "",
+      "hoverLabel": "DETECTS×7",
+      "title": "DETECTS count=7",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJl4SpjlR344kR-a5J8f_YNvo",
+      "to": "noun:sign",
+      "label": "",
+      "hoverLabel": "DETECTS×7",
+      "title": "DETECTS count=7",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJl4SpjlR344kR-a5J8f_YNvo",
+      "to": "noun:people",
+      "label": "",
+      "hoverLabel": "DETECTS×5",
+      "title": "DETECTS count=5",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJl4SpjlR344kR-a5J8f_YNvo",
+      "to": "noun:building",
+      "label": "",
+      "hoverLabel": "DETECTS×5",
+      "title": "DETECTS count=5",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJl4SpjlR344kR-a5J8f_YNvo",
+      "to": "noun:tree",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJl4SpjlR344kR-a5J8f_YNvo",
+      "to": "noun:playground",
+      "label": "",
+      "hoverLabel": "DETECTS×3",
+      "title": "DETECTS count=3",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJaeBhK1d344kRma9tUbssEBo",
+      "to": "noun:sign",
+      "label": "",
+      "hoverLabel": "DETECTS×6",
+      "title": "DETECTS count=6",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJaeBhK1d344kRma9tUbssEBo",
+      "to": "noun:fountain",
+      "label": "",
+      "hoverLabel": "DETECTS×5",
+      "title": "DETECTS count=5",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJaeBhK1d344kRma9tUbssEBo",
+      "to": "noun:grass lawn",
+      "label": "",
+      "hoverLabel": "DETECTS×5",
+      "title": "DETECTS count=5",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJaeBhK1d344kRma9tUbssEBo",
+      "to": "noun:building",
+      "label": "",
+      "hoverLabel": "DETECTS×5",
+      "title": "DETECTS count=5",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJaeBhK1d344kRma9tUbssEBo",
+      "to": "noun:playground",
+      "label": "",
+      "hoverLabel": "DETECTS×3",
+      "title": "DETECTS count=3",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJaeBhK1d344kRma9tUbssEBo",
+      "to": "noun:tree",
+      "label": "",
+      "hoverLabel": "DETECTS×3",
+      "title": "DETECTS count=3",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ8_RCvWp344kRCTRS1Lks6KU",
+      "to": "noun:bench",
+      "label": "",
+      "hoverLabel": "DETECTS×16",
+      "title": "DETECTS count=16",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ8_RCvWp344kRCTRS1Lks6KU",
+      "to": "noun:tree",
+      "label": "",
+      "hoverLabel": "DETECTS×8",
+      "title": "DETECTS count=8",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ8_RCvWp344kRCTRS1Lks6KU",
+      "to": "noun:canopy",
+      "label": "",
+      "hoverLabel": "DETECTS×5",
+      "title": "DETECTS count=5",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ8_RCvWp344kRCTRS1Lks6KU",
+      "to": "noun:building",
+      "label": "",
+      "hoverLabel": "DETECTS×5",
+      "title": "DETECTS count=5",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ8_RCvWp344kRCTRS1Lks6KU",
+      "to": "noun:building facade",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    },
+    {
+      "from": "place:ChIJ8_RCvWp344kRCTRS1Lks6KU",
+      "to": "noun:people",
+      "label": "",
+      "hoverLabel": "DETECTS×4",
+      "title": "DETECTS count=4",
+      "color": "#f06020",
+      "width": 0.55
+    }
+  ]
+}

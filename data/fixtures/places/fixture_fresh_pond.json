@@ -1,0 +1,48 @@
+{
+  "id": "places/fixture_fresh_pond",
+  "displayName": {
+    "text": "Fresh Pond Reservation",
+    "languageCode": "en"
+  },
+  "location": {
+    "latitude": 42.3855,
+    "longitude": -71.148
+  },
+  "types": [
+    "park"
+  ],
+  "formattedAddress": "Fresh Pond, Cambridge, MA",
+  "rating": 4.7,
+  "userRatingCount": 2100,
+  "reviews": [
+    {
+      "rating": 5,
+      "text": {
+        "text": "Serene loop around the reservoir; calm water and tree canopy.",
+        "languageCode": "en"
+      }
+    },
+    {
+      "rating": 5,
+      "text": {
+        "text": "Inviting wooden boardwalk and shaded seating near the water.",
+        "languageCode": "en"
+      }
+    },
+    {
+      "rating": 4,
+      "text": {
+        "text": "Busy parking but the path feels secure and safe with other walkers around.",
+        "languageCode": "en"
+      }
+    }
+  ],
+  "photos": [
+    {
+      "name": "places/fixture_fresh_pond/photos/0"
+    },
+    {
+      "name": "places/fixture_fresh_pond/photos/1"
+    }
+  ]
+}

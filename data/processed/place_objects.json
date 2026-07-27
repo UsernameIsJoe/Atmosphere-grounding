@@ -1,0 +1,3968 @@
+[
+  {
+    "place_id": "ChIJ0WEQ3kJ344kRgqD4jNgR18s",
+    "objects": [
+      {
+        "noun": "lamp",
+        "count": 11
+      },
+      {
+        "noun": "bench",
+        "count": 6
+      },
+      {
+        "noun": "path walkway",
+        "count": 5
+      },
+      {
+        "noun": "people",
+        "count": 5
+      },
+      {
+        "noun": "stairs",
+        "count": 4
+      },
+      {
+        "noun": "bicycle",
+        "count": 4
+      },
+      {
+        "noun": "gate",
+        "count": 3
+      },
+      {
+        "noun": "canopy",
+        "count": 3
+      },
+      {
+        "noun": "playground building",
+        "count": 2
+      },
+      {
+        "noun": "sign",
+        "count": 2
+      },
+      {
+        "noun": "grass",
+        "count": 1
+      },
+      {
+        "noun": "facade",
+        "count": 1
+      },
+      {
+        "noun": "tree",
+        "count": 1
+      },
+      {
+        "noun": "building",
+        "count": 1
+      },
+      {
+        "noun": "playground",
+        "count": 1
+      },
+      {
+        "noun": "fence gate",
+        "count": 1
+      },
+      {
+        "noun": "grass lawn",
+        "count": 1
+      },
+      {
+        "noun": "fence",
+        "count": 1
+      },
+      {
+        "noun": "lighting lamp",
+        "count": 1
+      },
+      {
+        "noun": "fountain",
+        "count": 1
+      }
+    ],
+    "object_list": [
+      "lamp",
+      "bench",
+      "path walkway",
+      "people",
+      "stairs",
+      "bicycle",
+      "gate",
+      "canopy",
+      "playground building",
+      "sign",
+      "grass",
+      "facade",
+      "tree",
+      "building",
+      "playground",
+      "fence gate",
+      "grass lawn",
+      "fence",
+      "lighting lamp",
+      "fountain"
+    ]
+  },
+  {
+    "place_id": "ChIJ0zpihlJ344kRCAOlne5GEoc",
+    "objects": [
+      {
+        "noun": "bench",
+        "count": 9
+      },
+      {
+        "noun": "fence",
+        "count": 5
+      },
+      {
+        "noun": "playground",
+        "count": 4
+      },
+      {
+        "noun": "canopy",
+        "count": 4
+      },
+      {
+        "noun": "grass lawn",
+        "count": 4
+      },
+      {
+        "noun": "building",
+        "count": 3
+      },
+      {
+        "noun": "sign",
+        "count": 3
+      },
+      {
+        "noun": "path walkway",
+        "count": 3
+      },
+      {
+        "noun": "people",
+        "count": 3
+      },
+      {
+        "noun": "tree",
+        "count": 2
+      },
+      {
+        "noun": "building facade",
+        "count": 2
+      },
+      {
+        "noun": "lamp",
+        "count": 1
+      },
+      {
+        "noun": "bench stairs",
+        "count": 1
+      },
+      {
+        "noun": "gate",
+        "count": 1
+      },
+      {
+        "noun": "fountain",
+        "count": 1
+      },
+      {
+        "noun": "shade",
+        "count": 1
+      },
+      {
+        "noun": "lighting",
+        "count": 1
+      }
+    ],
+    "object_list": [
+      "bench",
+      "fence",
+      "playground",
+      "canopy",
+      "grass lawn",
+      "building",
+      "sign",
+      "path walkway",
+      "people",
+      "tree",
+      "building facade",
+      "lamp",
+      "bench stairs",
+      "gate",
+      "fountain",
+      "shade",
+      "lighting"
+    ]
+  },
+  {
+    "place_id": "ChIJ25L83fx544kRiuWNvWYdSLA",
+    "objects": [
+      {
+        "noun": "bench",
+        "count": 9
+      },
+      {
+        "noun": "playground",
+        "count": 6
+      },
+      {
+        "noun": "tree",
+        "count": 6
+      },
+      {
+        "noun": "sign",
+        "count": 5
+      },
+      {
+        "noun": "bicycle",
+        "count": 4
+      },
+      {
+        "noun": "canopy",
+        "count": 4
+      },
+      {
+        "noun": "building",
+        "count": 3
+      },
+      {
+        "noun": "fence",
+        "count": 3
+      },
+      {
+        "noun": "people",
+        "count": 3
+      },
+      {
+        "noun": "lawn",
+        "count": 2
+      },
+      {
+        "noun": "path walkway",
+        "count": 2
+      },
+      {
+        "noun": "building facade",
+        "count": 2
+      },
+      {
+        "noun": "grass lawn",
+        "count": 2
+      },
+      {
+        "noun": "lighting lamp",
+        "count": 1
+      },
+      {
+        "noun": "fence gate",
+        "count": 1
+      },
+      {
+        "noun": "lighting",
+        "count": 1
+      },
+      {
+        "noun": "shade",
+        "count": 1
+      },
+      {
+        "noun": "water",
+        "count": 1
+      },
+      {
+        "noun": "stairs",
+        "count": 1
+      }
+    ],
+    "object_list": [
+      "bench",
+      "playground",
+      "tree",
+      "sign",
+      "bicycle",
+      "canopy",
+      "building",
+      "fence",
+      "people",
+      "lawn",
+      "path walkway",
+      "building facade",
+      "grass lawn",
+      "lighting lamp",
+      "fence gate",
+      "lighting",
+      "shade",
+      "water",
+      "stairs"
+    ]
+  },
+  {
+    "place_id": "ChIJ38dFa69w44kRDZBuTuaYXkk",
+    "objects": [
+      {
+        "noun": "bench",
+        "count": 12
+      },
+      {
+        "noun": "building",
+        "count": 10
+      },
+      {
+        "noun": "tree",
+        "count": 7
+      },
+      {
+        "noun": "playground",
+        "count": 4
+      },
+      {
+        "noun": "grass lawn",
+        "count": 4
+      },
+      {
+        "noun": "path walkway",
+        "count": 3
+      },
+      {
+        "noun": "fence",
+        "count": 3
+      },
+      {
+        "noun": "building facade",
+        "count": 3
+      },
+      {
+        "noun": "people",
+        "count": 3
+      },
+      {
+        "noun": "facade",
+        "count": 3
+      },
+      {
+        "noun": "lamp",
+        "count": 2
+      },
+      {
+        "noun": "stairs",
+        "count": 1
+      },
+      {
+        "noun": "lighting",
+        "count": 1
+      },
+      {
+        "noun": "bicycle",
+        "count": 1
+      },
+      {
+        "noun": "plaza",
+        "count": 1
+      },
+      {
+        "noun": "lawn",
+        "count": 1
+      }
+    ],
+    "object_list": [
+      "bench",
+      "building",
+      "tree",
+      "playground",
+      "grass lawn",
+      "path walkway",
+      "fence",
+      "building facade",
+      "people",
+      "facade",
+      "lamp",
+      "stairs",
+      "lighting",
+      "bicycle",
+      "plaza",
+      "lawn"
+    ]
+  },
+  {
+    "place_id": "ChIJ5b-LegB644kRvUOaAysmcRU",
+    "objects": [
+      {
+        "noun": "lamp",
+        "count": 24
+      },
+      {
+        "noun": "bench",
+        "count": 9
+      },
+      {
+        "noun": "grass lawn",
+        "count": 4
+      },
+      {
+        "noun": "canopy",
+        "count": 4
+      },
+      {
+        "noun": "fence",
+        "count": 4
+      },
+      {
+        "noun": "playground",
+        "count": 3
+      },
+      {
+        "noun": "tree",
+        "count": 3
+      },
+      {
+        "noun": "sign",
+        "count": 3
+      },
+      {
+        "noun": "facade",
+        "count": 2
+      },
+      {
+        "noun": "people",
+        "count": 2
+      },
+      {
+        "noun": "path walkway",
+        "count": 2
+      },
+      {
+        "noun": "walkway",
+        "count": 2
+      },
+      {
+        "noun": "playground building",
+        "count": 2
+      },
+      {
+        "noun": "gate",
+        "count": 1
+      },
+      {
+        "noun": "stairs",
+        "count": 1
+      },
+      {
+        "noun": "water",
+        "count": 1
+      },
+      {
+        "noun": "lighting lamp",
+        "count": 1
+      },
+      {
+        "noun": "fountain",
+        "count": 1
+      }
+    ],
+    "object_list": [
+      "lamp",
+      "bench",
+      "grass lawn",
+      "canopy",
+      "fence",
+      "playground",
+      "tree",
+      "sign",
+      "facade",
+      "people",
+      "path walkway",
+      "walkway",
+      "playground building",
+      "gate",
+      "stairs",
+      "water",
+      "lighting lamp",
+      "fountain"
+    ]
+  },
+  {
+    "place_id": "ChIJ6ZPQHapw44kR0GWA414vJOI",
+    "objects": [
+      {
+        "noun": "tree",
+        "count": 8
+      },
+      {
+        "noun": "building",
+        "count": 5
+      },
+      {
+        "noun": "canopy",
+        "count": 4
+      },
+      {
+        "noun": "path walkway",
+        "count": 4
+      },
+      {
+        "noun": "people",
+        "count": 4
+      },
+      {
+        "noun": "grass lawn",
+        "count": 3
+      },
+      {
+        "noun": "playground",
+        "count": 3
+      },
+      {
+        "noun": "sign",
+        "count": 3
+      },
+      {
+        "noun": "bench",
+        "count": 3
+      },
+      {
+        "noun": "building facade",
+        "count": 3
+      },
+      {
+        "noun": "bicycle",
+        "count": 2
+      },
+      {
+        "noun": "fountain",
+        "count": 2
+      },
+      {
+        "noun": "playground building",
+        "count": 1
+      },
+      {
+        "noun": "water",
+        "count": 1
+      },
+      {
+        "noun": "shade",
+        "count": 1
+      },
+      {
+        "noun": "gate",
+        "count": 1
+      },
+      {
+        "noun": "lamp",
+        "count": 1
+      }
+    ],
+    "object_list": [
+      "tree",
+      "building",
+      "canopy",
+      "path walkway",
+      "people",
+      "grass lawn",
+      "playground",
+      "sign",
+      "bench",
+      "building facade",
+      "bicycle",
+      "fountain",
+      "playground building",
+      "water",
+      "shade",
+      "gate",
+      "lamp"
+    ]
+  },
+  {
+    "place_id": "ChIJ70NXYP1544kRXnfSiB1r4as",
+    "objects": [
+      {
+        "noun": "tree",
+        "count": 8
+      },
+      {
+        "noun": "building",
+        "count": 6
+      },
+      {
+        "noun": "playground",
+        "count": 4
+      },
+      {
+        "noun": "path walkway",
+        "count": 4
+      },
+      {
+        "noun": "bench",
+        "count": 3
+      },
+      {
+        "noun": "grass lawn",
+        "count": 3
+      },
+      {
+        "noun": "canopy",
+        "count": 3
+      },
+      {
+        "noun": "people",
+        "count": 3
+      },
+      {
+        "noun": "shade",
+        "count": 3
+      },
+      {
+        "noun": "facade",
+        "count": 3
+      },
+      {
+        "noun": "gate",
+        "count": 2
+      },
+      {
+        "noun": "stairs",
+        "count": 2
+      },
+      {
+        "noun": "fence gate",
+        "count": 2
+      },
+      {
+        "noun": "sign",
+        "count": 1
+      },
+      {
+        "noun": "lamp",
+        "count": 1
+      },
+      {
+        "noun": "fountain",
+        "count": 1
+      },
+      {
+        "noun": "fence",
+        "count": 1
+      },
+      {
+        "noun": "bench stairs",
+        "count": 1
+      }
+    ],
+    "object_list": [
+      "tree",
+      "building",
+      "playground",
+      "path walkway",
+      "bench",
+      "grass lawn",
+      "canopy",
+      "people",
+      "shade",
+      "facade",
+      "gate",
+      "stairs",
+      "fence gate",
+      "sign",
+      "lamp",
+      "fountain",
+      "fence",
+      "bench stairs"
+    ]
+  },
+  {
+    "place_id": "ChIJ8_RCvWp344kRCTRS1Lks6KU",
+    "objects": [
+      {
+        "noun": "bench",
+        "count": 16
+      },
+      {
+        "noun": "tree",
+        "count": 8
+      },
+      {
+        "noun": "canopy",
+        "count": 5
+      },
+      {
+        "noun": "building",
+        "count": 5
+      },
+      {
+        "noun": "building facade",
+        "count": 4
+      },
+      {
+        "noun": "people",
+        "count": 4
+      },
+      {
+        "noun": "sign",
+        "count": 4
+      },
+      {
+        "noun": "path walkway",
+        "count": 3
+      },
+      {
+        "noun": "fence",
+        "count": 3
+      },
+      {
+        "noun": "gate",
+        "count": 3
+      },
+      {
+        "noun": "grass lawn",
+        "count": 2
+      },
+      {
+        "noun": "bench stairs",
+        "count": 2
+      },
+      {
+        "noun": "playground",
+        "count": 2
+      },
+      {
+        "noun": "bicycle",
+        "count": 2
+      },
+      {
+        "noun": "bench fountain",
+        "count": 1
+      },
+      {
+        "noun": "lamp",
+        "count": 1
+      },
+      {
+        "noun": "fountain",
+        "count": 1
+      },
+      {
+        "noun": "shade",
+        "count": 1
+      },
+      {
+        "noun": "lawn",
+        "count": 1
+      }
+    ],
+    "object_list": [
+      "bench",
+      "tree",
+      "canopy",
+      "building",
+      "building facade",
+      "people",
+      "sign",
+      "path walkway",
+      "fence",
+      "gate",
+      "grass lawn",
+      "bench stairs",
+      "playground",
+      "bicycle",
+      "bench fountain",
+      "lamp",
+      "fountain",
+      "shade",
+      "lawn"
+    ]
+  },
+  {
+    "place_id": "ChIJB6Xitahw44kR9i_MAEut2RE",
+    "objects": [
+      {
+        "noun": "path walkway",
+        "count": 5
+      },
+      {
+        "noun": "canopy",
+        "count": 4
+      },
+      {
+        "noun": "bench stairs",
+        "count": 3
+      },
+      {
+        "noun": "tree",
+        "count": 3
+      },
+      {
+        "noun": "fountain",
+        "count": 3
+      },
+      {
+        "noun": "lamp",
+        "count": 3
+      },
+      {
+        "noun": "people",
+        "count": 3
+      },
+      {
+        "noun": "playground",
+        "count": 2
+      },
+      {
+        "noun": "fence gate",
+        "count": 2
+      },
+      {
+        "noun": "grass lawn",
+        "count": 1
+      },
+      {
+        "noun": "fence",
+        "count": 1
+      },
+      {
+        "noun": "building",
+        "count": 1
+      },
+      {
+        "noun": "facade",
+        "count": 1
+      },
+      {
+        "noun": "stairs",
+        "count": 1
+      },
+      {
+        "noun": "playground building",
+        "count": 1
+      },
+      {
+        "noun": "sign",
+        "count": 1
+      },
+      {
+        "noun": "gate",
+        "count": 1
+      }
+    ],
+    "object_list": [
+      "path walkway",
+      "canopy",
+      "bench stairs",
+      "tree",
+      "fountain",
+      "lamp",
+      "people",
+      "playground",
+      "fence gate",
+      "grass lawn",
+      "fence",
+      "building",
+      "facade",
+      "stairs",
+      "playground building",
+      "sign",
+      "gate"
+    ]
+  },
+  {
+    "place_id": "ChIJC5eyB0J344kRIgcXIHRzdK4",
+    "objects": [
+      {
+        "noun": "bench",
+        "count": 10
+      },
+      {
+        "noun": "tree",
+        "count": 7
+      },
+      {
+        "noun": "people",
+        "count": 5
+      },
+      {
+        "noun": "playground",
+        "count": 5
+      },
+      {
+        "noun": "sign",
+        "count": 4
+      },
+      {
+        "noun": "path walkway",
+        "count": 3
+      },
+      {
+        "noun": "grass lawn",
+        "count": 3
+      },
+      {
+        "noun": "fountain",
+        "count": 3
+      },
+      {
+        "noun": "canopy",
+        "count": 3
+      },
+      {
+        "noun": "fence",
+        "count": 2
+      },
+      {
+        "noun": "facade",
+        "count": 2
+      },
+      {
+        "noun": "building facade",
+        "count": 2
+      },
+      {
+        "noun": "fountain building",
+        "count": 1
+      },
+      {
+        "noun": "plaza",
+        "count": 1
+      },
+      {
+        "noun": "fence gate",
+        "count": 1
+      },
+      {
+        "noun": "stairs",
+        "count": 1
+      },
+      {
+        "noun": "lighting lamp",
+        "count": 1
+      },
+      {
+        "noun": "bicycle",
+        "count": 1
+      },
+      {
+        "noun": "shade",
+        "count": 1
+      },
+      {
+        "noun": "building",
+        "count": 1
+      }
+    ],
+    "object_list": [
+      "bench",
+      "tree",
+      "people",
+      "playground",
+      "sign",
+      "path walkway",
+      "grass lawn",
+      "fountain",
+      "canopy",
+      "fence",
+      "facade",
+      "building facade",
+      "fountain building",
+      "plaza",
+      "fence gate",
+      "stairs",
+      "lighting lamp",
+      "bicycle",
+      "shade",
+      "building"
+    ]
+  },
+  {
+    "place_id": "ChIJCdxNHFF344kRZyXENOL_AzI",
+    "objects": [
+      {
+        "noun": "bench",
+        "count": 10
+      },
+      {
+        "noun": "tree",
+        "count": 7
+      },
+      {
+        "noun": "stairs",
+        "count": 6
+      },
+      {
+        "noun": "building",
+        "count": 6
+      },
+      {
+        "noun": "sign",
+        "count": 5
+      },
+      {
+        "noun": "lamp",
+        "count": 4
+      },
+      {
+        "noun": "canopy",
+        "count": 4
+      },
+      {
+        "noun": "people",
+        "count": 3
+      },
+      {
+        "noun": "playground",
+        "count": 3
+      },
+      {
+        "noun": "fence",
+        "count": 3
+      },
+      {
+        "noun": "path walkway",
+        "count": 3
+      },
+      {
+        "noun": "fence gate",
+        "count": 2
+      },
+      {
+        "noun": "grass lawn",
+        "count": 2
+      },
+      {
+        "noun": "shade",
+        "count": 2
+      },
+      {
+        "noun": "fountain",
+        "count": 2
+      },
+      {
+        "noun": "grass",
+        "count": 1
+      },
+      {
+        "noun": "gate",
+        "count": 1
+      },
+      {
+        "noun": "lighting",
+        "count": 1
+      },
+      {
+        "noun": "playground building",
+        "count": 1
+      },
+      {
+        "noun": "lighting lamp",
+        "count": 1
+      }
+    ],
+    "object_list": [
+      "bench",
+      "tree",
+      "stairs",
+      "building",
+      "sign",
+      "lamp",
+      "canopy",
+      "people",
+      "playground",
+      "fence",
+      "path walkway",
+      "fence gate",
+      "grass lawn",
+      "shade",
+      "fountain",
+      "grass",
+      "gate",
+      "lighting",
+      "playground building",
+      "lighting lamp"
+    ]
+  },
+  {
+    "place_id": "ChIJE12gBq1w44kR_N0FJNiKAcg",
+    "objects": [
+      {
+        "noun": "bench",
+        "count": 13
+      },
+      {
+        "noun": "tree",
+        "count": 9
+      },
+      {
+        "noun": "canopy",
+        "count": 6
+      },
+      {
+        "noun": "building",
+        "count": 6
+      },
+      {
+        "noun": "playground",
+        "count": 5
+      },
+      {
+        "noun": "sign",
+        "count": 3
+      },
+      {
+        "noun": "building facade",
+        "count": 3
+      },
+      {
+        "noun": "fence",
+        "count": 3
+      },
+      {
+        "noun": "grass lawn",
+        "count": 2
+      },
+      {
+        "noun": "shade",
+        "count": 2
+      },
+      {
+        "noun": "gate stairs",
+        "count": 2
+      },
+      {
+        "noun": "path walkway",
+        "count": 1
+      },
+      {
+        "noun": "fountain",
+        "count": 1
+      },
+      {
+        "noun": "gate",
+        "count": 1
+      },
+      {
+        "noun": "playground plaza",
+        "count": 1
+      },
+      {
+        "noun": "water",
+        "count": 1
+      },
+      {
+        "noun": "plaza",
+        "count": 1
+      },
+      {
+        "noun": "lighting",
+        "count": 1
+      },
+      {
+        "noun": "people",
+        "count": 1
+      },
+      {
+        "noun": "bench stairs",
+        "count": 1
+      }
+    ],
+    "object_list": [
+      "bench",
+      "tree",
+      "canopy",
+      "building",
+      "playground",
+      "sign",
+      "building facade",
+      "fence",
+      "grass lawn",
+      "shade",
+      "gate stairs",
+      "path walkway",
+      "fountain",
+      "gate",
+      "playground plaza",
+      "water",
+      "plaza",
+      "lighting",
+      "people",
+      "bench stairs"
+    ]
+  },
+  {
+    "place_id": "ChIJFapjVFl344kRXcKedI8Cuc0",
+    "objects": [
+      {
+        "noun": "people",
+        "count": 6
+      },
+      {
+        "noun": "playground",
+        "count": 5
+      },
+      {
+        "noun": "tree",
+        "count": 5
+      },
+      {
+        "noun": "path walkway",
+        "count": 3
+      },
+      {
+        "noun": "grass lawn",
+        "count": 2
+      },
+      {
+        "noun": "canopy",
+        "count": 2
+      },
+      {
+        "noun": "building",
+        "count": 2
+      },
+      {
+        "noun": "water",
+        "count": 2
+      },
+      {
+        "noun": "walkway plaza",
+        "count": 2
+      },
+      {
+        "noun": "bench",
+        "count": 1
+      },
+      {
+        "noun": "shade",
+        "count": 1
+      },
+      {
+        "noun": "fence",
+        "count": 1
+      },
+      {
+        "noun": "sign",
+        "count": 1
+      },
+      {
+        "noun": "bench fence",
+        "count": 1
+      },
+      {
+        "noun": "gate",
+        "count": 1
+      },
+      {
+        "noun": "grass",
+        "count": 1
+      },
+      {
+        "noun": "lamp",
+        "count": 1
+      },
+      {
+        "noun": "building facade",
+        "count": 1
+      }
+    ],
+    "object_list": [
+      "people",
+      "playground",
+      "tree",
+      "path walkway",
+      "grass lawn",
+      "canopy",
+      "building",
+      "water",
+      "walkway plaza",
+      "bench",
+      "shade",
+      "fence",
+      "sign",
+      "bench fence",
+      "gate",
+      "grass",
+      "lamp",
+      "building facade"
+    ]
+  },
+  {
+    "place_id": "ChIJK-7ymsF344kRN70NFmyfvK8",
+    "objects": [
+      {
+        "noun": "bench",
+        "count": 13
+      },
+      {
+        "noun": "playground",
+        "count": 6
+      },
+      {
+        "noun": "canopy",
+        "count": 5
+      },
+      {
+        "noun": "building",
+        "count": 5
+      },
+      {
+        "noun": "tree",
+        "count": 3
+      },
+      {
+        "noun": "fence",
+        "count": 2
+      },
+      {
+        "noun": "sign",
+        "count": 2
+      },
+      {
+        "noun": "gate",
+        "count": 2
+      },
+      {
+        "noun": "people",
+        "count": 2
+      },
+      {
+        "noun": "bicycle",
+        "count": 2
+      },
+      {
+        "noun": "fountain",
+        "count": 1
+      },
+      {
+        "noun": "shade",
+        "count": 1
+      },
+      {
+        "noun": "building facade",
+        "count": 1
+      },
+      {
+        "noun": "bench stairs",
+        "count": 1
+      },
+      {
+        "noun": "path walkway",
+        "count": 1
+      },
+      {
+        "noun": "stairs",
+        "count": 1
+      },
+      {
+        "noun": "lawn",
+        "count": 1
+      },
+      {
+        "noun": "water",
+        "count": 1
+      },
+      {
+        "noun": "grass lawn",
+        "count": 1
+      }
+    ],
+    "object_list": [
+      "bench",
+      "playground",
+      "canopy",
+      "building",
+      "tree",
+      "fence",
+      "sign",
+      "gate",
+      "people",
+      "bicycle",
+      "fountain",
+      "shade",
+      "building facade",
+      "bench stairs",
+      "path walkway",
+      "stairs",
+      "lawn",
+      "water",
+      "grass lawn"
+    ]
+  },
+  {
+    "place_id": "ChIJK89zW1R344kRz7jYZfKShKA",
+    "objects": [
+      {
+        "noun": "path walkway",
+        "count": 6
+      },
+      {
+        "noun": "tree",
+        "count": 5
+      },
+      {
+        "noun": "building",
+        "count": 5
+      },
+      {
+        "noun": "fountain",
+        "count": 5
+      },
+      {
+        "noun": "canopy",
+        "count": 4
+      },
+      {
+        "noun": "playground",
+        "count": 3
+      },
+      {
+        "noun": "bench",
+        "count": 3
+      },
+      {
+        "noun": "grass lawn",
+        "count": 3
+      },
+      {
+        "noun": "sign",
+        "count": 2
+      },
+      {
+        "noun": "water",
+        "count": 2
+      },
+      {
+        "noun": "fence",
+        "count": 2
+      },
+      {
+        "noun": "lamp",
+        "count": 2
+      },
+      {
+        "noun": "grass",
+        "count": 1
+      },
+      {
+        "noun": "bicycle",
+        "count": 1
+      },
+      {
+        "noun": "gate",
+        "count": 1
+      },
+      {
+        "noun": "bench stairs",
+        "count": 1
+      },
+      {
+        "noun": "plaza",
+        "count": 1
+      }
+    ],
+    "object_list": [
+      "path walkway",
+      "tree",
+      "building",
+      "fountain",
+      "canopy",
+      "playground",
+      "bench",
+      "grass lawn",
+      "sign",
+      "water",
+      "fence",
+      "lamp",
+      "grass",
+      "bicycle",
+      "gate",
+      "bench stairs",
+      "plaza"
+    ]
+  },
+  {
+    "place_id": "ChIJL9hFHWh344kR4u0Ypc7ug18",
+    "objects": [
+      {
+        "noun": "building",
+        "count": 8
+      },
+      {
+        "noun": "gate",
+        "count": 5
+      },
+      {
+        "noun": "tree",
+        "count": 5
+      },
+      {
+        "noun": "playground",
+        "count": 4
+      },
+      {
+        "noun": "sign",
+        "count": 4
+      },
+      {
+        "noun": "grass lawn",
+        "count": 3
+      },
+      {
+        "noun": "people",
+        "count": 3
+      },
+      {
+        "noun": "stairs",
+        "count": 2
+      },
+      {
+        "noun": "fountain",
+        "count": 2
+      },
+      {
+        "noun": "canopy",
+        "count": 2
+      },
+      {
+        "noun": "fence",
+        "count": 2
+      },
+      {
+        "noun": "plaza",
+        "count": 2
+      },
+      {
+        "noun": "bench",
+        "count": 2
+      },
+      {
+        "noun": "walkway",
+        "count": 1
+      },
+      {
+        "noun": "path walkway",
+        "count": 1
+      },
+      {
+        "noun": "lamp",
+        "count": 1
+      }
+    ],
+    "object_list": [
+      "building",
+      "gate",
+      "tree",
+      "playground",
+      "sign",
+      "grass lawn",
+      "people",
+      "stairs",
+      "fountain",
+      "canopy",
+      "fence",
+      "plaza",
+      "bench",
+      "walkway",
+      "path walkway",
+      "lamp"
+    ]
+  },
+  {
+    "place_id": "ChIJM3icQVN344kRZsmgAwN0zc8",
+    "objects": [
+      {
+        "noun": "bicycle",
+        "count": 8
+      },
+      {
+        "noun": "playground",
+        "count": 4
+      },
+      {
+        "noun": "sign",
+        "count": 3
+      },
+      {
+        "noun": "tree",
+        "count": 3
+      },
+      {
+        "noun": "people",
+        "count": 3
+      },
+      {
+        "noun": "building facade",
+        "count": 2
+      },
+      {
+        "noun": "fence",
+        "count": 2
+      },
+      {
+        "noun": "bench",
+        "count": 2
+      },
+      {
+        "noun": "building",
+        "count": 2
+      },
+      {
+        "noun": "gate",
+        "count": 1
+      },
+      {
+        "noun": "walkway",
+        "count": 1
+      },
+      {
+        "noun": "canopy",
+        "count": 1
+      },
+      {
+        "noun": "walkway plaza",
+        "count": 1
+      },
+      {
+        "noun": "grass lawn",
+        "count": 1
+      },
+      {
+        "noun": "lamp",
+        "count": 1
+      }
+    ],
+    "object_list": [
+      "bicycle",
+      "playground",
+      "sign",
+      "tree",
+      "people",
+      "building facade",
+      "fence",
+      "bench",
+      "building",
+      "gate",
+      "walkway",
+      "canopy",
+      "walkway plaza",
+      "grass lawn",
+      "lamp"
+    ]
+  },
+  {
+    "place_id": "ChIJMzhNVv5544kRqKx1Mlb1iLA",
+    "objects": [
+      {
+        "noun": "lamp",
+        "count": 14
+      },
+      {
+        "noun": "tree",
+        "count": 8
+      },
+      {
+        "noun": "stairs",
+        "count": 5
+      },
+      {
+        "noun": "people",
+        "count": 5
+      },
+      {
+        "noun": "bench",
+        "count": 4
+      },
+      {
+        "noun": "canopy",
+        "count": 4
+      },
+      {
+        "noun": "playground",
+        "count": 4
+      },
+      {
+        "noun": "path walkway",
+        "count": 3
+      },
+      {
+        "noun": "bicycle",
+        "count": 3
+      },
+      {
+        "noun": "grass lawn",
+        "count": 3
+      },
+      {
+        "noun": "sign",
+        "count": 2
+      },
+      {
+        "noun": "building facade",
+        "count": 1
+      },
+      {
+        "noun": "grass",
+        "count": 1
+      },
+      {
+        "noun": "fence",
+        "count": 1
+      },
+      {
+        "noun": "playground building",
+        "count": 1
+      },
+      {
+        "noun": "gate",
+        "count": 1
+      },
+      {
+        "noun": "water",
+        "count": 1
+      },
+      {
+        "noun": "lighting lamp",
+        "count": 1
+      },
+      {
+        "noun": "facade",
+        "count": 1
+      }
+    ],
+    "object_list": [
+      "lamp",
+      "tree",
+      "stairs",
+      "people",
+      "bench",
+      "canopy",
+      "playground",
+      "path walkway",
+      "bicycle",
+      "grass lawn",
+      "sign",
+      "building facade",
+      "grass",
+      "fence",
+      "playground building",
+      "gate",
+      "water",
+      "lighting lamp",
+      "facade"
+    ]
+  },
+  {
+    "place_id": "ChIJOdNat01344kRr8NyNS4Is-8",
+    "objects": [
+      {
+        "noun": "bench",
+        "count": 9
+      },
+      {
+        "noun": "tree",
+        "count": 4
+      },
+      {
+        "noun": "fountain",
+        "count": 3
+      },
+      {
+        "noun": "playground",
+        "count": 3
+      },
+      {
+        "noun": "stairs",
+        "count": 3
+      },
+      {
+        "noun": "sign",
+        "count": 3
+      },
+      {
+        "noun": "fence gate",
+        "count": 2
+      },
+      {
+        "noun": "canopy",
+        "count": 2
+      },
+      {
+        "noun": "building facade",
+        "count": 2
+      },
+      {
+        "noun": "building",
+        "count": 2
+      },
+      {
+        "noun": "people",
+        "count": 2
+      },
+      {
+        "noun": "shade",
+        "count": 2
+      },
+      {
+        "noun": "grass lawn",
+        "count": 1
+      },
+      {
+        "noun": "water",
+        "count": 1
+      },
+      {
+        "noun": "bench bicycle",
+        "count": 1
+      },
+      {
+        "noun": "path walkway",
+        "count": 1
+      },
+      {
+        "noun": "facade",
+        "count": 1
+      },
+      {
+        "noun": "gate",
+        "count": 1
+      },
+      {
+        "noun": "lamp",
+        "count": 1
+      },
+      {
+        "noun": "bicycle",
+        "count": 1
+      }
+    ],
+    "object_list": [
+      "bench",
+      "tree",
+      "fountain",
+      "playground",
+      "stairs",
+      "sign",
+      "fence gate",
+      "canopy",
+      "building facade",
+      "building",
+      "people",
+      "shade",
+      "grass lawn",
+      "water",
+      "bench bicycle",
+      "path walkway",
+      "facade",
+      "gate",
+      "lamp",
+      "bicycle"
+    ]
+  },
+  {
+    "place_id": "ChIJQXMWnUV344kRzs9-HfLoekk",
+    "objects": [
+      {
+        "noun": "bench",
+        "count": 10
+      },
+      {
+        "noun": "tree",
+        "count": 8
+      },
+      {
+        "noun": "path walkway",
+        "count": 5
+      },
+      {
+        "noun": "playground",
+        "count": 4
+      },
+      {
+        "noun": "people",
+        "count": 4
+      },
+      {
+        "noun": "canopy",
+        "count": 4
+      },
+      {
+        "noun": "lamp",
+        "count": 4
+      },
+      {
+        "noun": "grass lawn",
+        "count": 3
+      },
+      {
+        "noun": "building facade",
+        "count": 3
+      },
+      {
+        "noun": "sign",
+        "count": 3
+      },
+      {
+        "noun": "fence",
+        "count": 3
+      },
+      {
+        "noun": "stairs",
+        "count": 2
+      },
+      {
+        "noun": "building",
+        "count": 2
+      },
+      {
+        "noun": "gate",
+        "count": 2
+      },
+      {
+        "noun": "facade",
+        "count": 2
+      },
+      {
+        "noun": "lighting",
+        "count": 1
+      },
+      {
+        "noun": "fence gate",
+        "count": 1
+      },
+      {
+        "noun": "plaza",
+        "count": 1
+      }
+    ],
+    "object_list": [
+      "bench",
+      "tree",
+      "path walkway",
+      "playground",
+      "people",
+      "canopy",
+      "lamp",
+      "grass lawn",
+      "building facade",
+      "sign",
+      "fence",
+      "stairs",
+      "building",
+      "gate",
+      "facade",
+      "lighting",
+      "fence gate",
+      "plaza"
+    ]
+  },
+  {
+    "place_id": "ChIJZweWZOJ544kReZtPOq9YZGQ",
+    "objects": [
+      {
+        "noun": "tree",
+        "count": 10
+      },
+      {
+        "noun": "path walkway",
+        "count": 4
+      },
+      {
+        "noun": "playground",
+        "count": 3
+      },
+      {
+        "noun": "lamp",
+        "count": 3
+      },
+      {
+        "noun": "building",
+        "count": 3
+      },
+      {
+        "noun": "sign",
+        "count": 3
+      },
+      {
+        "noun": "stairs",
+        "count": 2
+      },
+      {
+        "noun": "canopy",
+        "count": 2
+      },
+      {
+        "noun": "grass lawn",
+        "count": 2
+      },
+      {
+        "noun": "bench",
+        "count": 2
+      },
+      {
+        "noun": "water",
+        "count": 2
+      },
+      {
+        "noun": "bicycle",
+        "count": 1
+      },
+      {
+        "noun": "fence gate",
+        "count": 1
+      },
+      {
+        "noun": "fountain",
+        "count": 1
+      },
+      {
+        "noun": "bench playground",
+        "count": 1
+      },
+      {
+        "noun": "grass",
+        "count": 1
+      },
+      {
+        "noun": "gate",
+        "count": 1
+      },
+      {
+        "noun": "path walkway plaza",
+        "count": 1
+      },
+      {
+        "noun": "fence",
+        "count": 1
+      }
+    ],
+    "object_list": [
+      "tree",
+      "path walkway",
+      "playground",
+      "lamp",
+      "building",
+      "sign",
+      "stairs",
+      "canopy",
+      "grass lawn",
+      "bench",
+      "water",
+      "bicycle",
+      "fence gate",
+      "fountain",
+      "bench playground",
+      "grass",
+      "gate",
+      "path walkway plaza",
+      "fence"
+    ]
+  },
+  {
+    "place_id": "ChIJ_Qt69Px544kR9sYP5zl1kw4",
+    "objects": [
+      {
+        "noun": "tree",
+        "count": 7
+      },
+      {
+        "noun": "bench",
+        "count": 6
+      },
+      {
+        "noun": "building",
+        "count": 6
+      },
+      {
+        "noun": "playground",
+        "count": 4
+      },
+      {
+        "noun": "grass lawn",
+        "count": 4
+      },
+      {
+        "noun": "fence",
+        "count": 3
+      },
+      {
+        "noun": "people",
+        "count": 3
+      },
+      {
+        "noun": "stairs",
+        "count": 3
+      },
+      {
+        "noun": "path walkway",
+        "count": 2
+      },
+      {
+        "noun": "gate",
+        "count": 2
+      },
+      {
+        "noun": "building facade",
+        "count": 2
+      },
+      {
+        "noun": "lawn",
+        "count": 2
+      },
+      {
+        "noun": "fountain",
+        "count": 1
+      },
+      {
+        "noun": "bicycle",
+        "count": 1
+      },
+      {
+        "noun": "grass",
+        "count": 1
+      },
+      {
+        "noun": "plaza",
+        "count": 1
+      }
+    ],
+    "object_list": [
+      "tree",
+      "bench",
+      "building",
+      "playground",
+      "grass lawn",
+      "fence",
+      "people",
+      "stairs",
+      "path walkway",
+      "gate",
+      "building facade",
+      "lawn",
+      "fountain",
+      "bicycle",
+      "grass",
+      "plaza"
+    ]
+  },
+  {
+    "place_id": "ChIJ__94-qpw44kRBYtpW0T5yA4",
+    "objects": [
+      {
+        "noun": "playground",
+        "count": 3
+      },
+      {
+        "noun": "sign",
+        "count": 3
+      },
+      {
+        "noun": "water",
+        "count": 2
+      },
+      {
+        "noun": "building",
+        "count": 2
+      },
+      {
+        "noun": "walkway",
+        "count": 1
+      },
+      {
+        "noun": "path walkway",
+        "count": 1
+      }
+    ],
+    "object_list": [
+      "playground",
+      "sign",
+      "water",
+      "building",
+      "walkway",
+      "path walkway"
+    ]
+  },
+  {
+    "place_id": "ChIJaeBhK1d344kRma9tUbssEBo",
+    "objects": [
+      {
+        "noun": "sign",
+        "count": 6
+      },
+      {
+        "noun": "fountain",
+        "count": 5
+      },
+      {
+        "noun": "grass lawn",
+        "count": 5
+      },
+      {
+        "noun": "building",
+        "count": 5
+      },
+      {
+        "noun": "playground",
+        "count": 3
+      },
+      {
+        "noun": "tree",
+        "count": 3
+      },
+      {
+        "noun": "path walkway",
+        "count": 3
+      },
+      {
+        "noun": "bench",
+        "count": 3
+      },
+      {
+        "noun": "canopy",
+        "count": 2
+      },
+      {
+        "noun": "fence",
+        "count": 2
+      },
+      {
+        "noun": "stairs",
+        "count": 2
+      },
+      {
+        "noun": "bicycle",
+        "count": 1
+      },
+      {
+        "noun": "shade",
+        "count": 1
+      },
+      {
+        "noun": "facade",
+        "count": 1
+      },
+      {
+        "noun": "building facade",
+        "count": 1
+      },
+      {
+        "noun": "lamp",
+        "count": 1
+      },
+      {
+        "noun": "gate",
+        "count": 1
+      },
+      {
+        "noun": "grass",
+        "count": 1
+      }
+    ],
+    "object_list": [
+      "sign",
+      "fountain",
+      "grass lawn",
+      "building",
+      "playground",
+      "tree",
+      "path walkway",
+      "bench",
+      "canopy",
+      "fence",
+      "stairs",
+      "bicycle",
+      "shade",
+      "facade",
+      "building facade",
+      "lamp",
+      "gate",
+      "grass"
+    ]
+  },
+  {
+    "place_id": "ChIJb8XYuVV344kRcoLcVhEuE1A",
+    "objects": [
+      {
+        "noun": "tree",
+        "count": 8
+      },
+      {
+        "noun": "bench",
+        "count": 6
+      },
+      {
+        "noun": "lamp",
+        "count": 5
+      },
+      {
+        "noun": "fence",
+        "count": 4
+      },
+      {
+        "noun": "playground",
+        "count": 3
+      },
+      {
+        "noun": "building facade",
+        "count": 3
+      },
+      {
+        "noun": "canopy",
+        "count": 3
+      },
+      {
+        "noun": "stairs",
+        "count": 3
+      },
+      {
+        "noun": "grass lawn",
+        "count": 3
+      },
+      {
+        "noun": "building",
+        "count": 3
+      },
+      {
+        "noun": "path walkway",
+        "count": 2
+      },
+      {
+        "noun": "bench stairs",
+        "count": 1
+      },
+      {
+        "noun": "lawn",
+        "count": 1
+      },
+      {
+        "noun": "people",
+        "count": 1
+      },
+      {
+        "noun": "fountain",
+        "count": 1
+      },
+      {
+        "noun": "shade",
+        "count": 1
+      },
+      {
+        "noun": "lighting lamp",
+        "count": 1
+      },
+      {
+        "noun": "walkway",
+        "count": 1
+      }
+    ],
+    "object_list": [
+      "tree",
+      "bench",
+      "lamp",
+      "fence",
+      "playground",
+      "building facade",
+      "canopy",
+      "stairs",
+      "grass lawn",
+      "building",
+      "path walkway",
+      "bench stairs",
+      "lawn",
+      "people",
+      "fountain",
+      "shade",
+      "lighting lamp",
+      "walkway"
+    ]
+  },
+  {
+    "place_id": "ChIJbaeXiER344kRR_f4e89EQuM",
+    "objects": [
+      {
+        "noun": "lamp",
+        "count": 9
+      },
+      {
+        "noun": "bench",
+        "count": 5
+      },
+      {
+        "noun": "people",
+        "count": 5
+      },
+      {
+        "noun": "path walkway",
+        "count": 3
+      },
+      {
+        "noun": "playground building",
+        "count": 2
+      },
+      {
+        "noun": "sign",
+        "count": 2
+      },
+      {
+        "noun": "fountain",
+        "count": 2
+      },
+      {
+        "noun": "playground",
+        "count": 2
+      },
+      {
+        "noun": "tree",
+        "count": 1
+      },
+      {
+        "noun": "stairs",
+        "count": 1
+      },
+      {
+        "noun": "lighting",
+        "count": 1
+      },
+      {
+        "noun": "facade",
+        "count": 1
+      },
+      {
+        "noun": "canopy",
+        "count": 1
+      },
+      {
+        "noun": "grass lawn",
+        "count": 1
+      }
+    ],
+    "object_list": [
+      "lamp",
+      "bench",
+      "people",
+      "path walkway",
+      "playground building",
+      "sign",
+      "fountain",
+      "playground",
+      "tree",
+      "stairs",
+      "lighting",
+      "facade",
+      "canopy",
+      "grass lawn"
+    ]
+  },
+  {
+    "place_id": "ChIJdelVAGp344kRnbhJtYxqBuo",
+    "objects": [
+      {
+        "noun": "tree",
+        "count": 7
+      },
+      {
+        "noun": "playground",
+        "count": 7
+      },
+      {
+        "noun": "canopy",
+        "count": 4
+      },
+      {
+        "noun": "building",
+        "count": 4
+      },
+      {
+        "noun": "grass lawn",
+        "count": 3
+      },
+      {
+        "noun": "people",
+        "count": 3
+      },
+      {
+        "noun": "fence",
+        "count": 3
+      },
+      {
+        "noun": "bench",
+        "count": 3
+      },
+      {
+        "noun": "shade",
+        "count": 3
+      },
+      {
+        "noun": "stairs",
+        "count": 2
+      },
+      {
+        "noun": "path walkway",
+        "count": 2
+      },
+      {
+        "noun": "lamp",
+        "count": 2
+      },
+      {
+        "noun": "lawn",
+        "count": 1
+      },
+      {
+        "noun": "bench stairs",
+        "count": 1
+      },
+      {
+        "noun": "gate",
+        "count": 1
+      }
+    ],
+    "object_list": [
+      "tree",
+      "playground",
+      "canopy",
+      "building",
+      "grass lawn",
+      "people",
+      "fence",
+      "bench",
+      "shade",
+      "stairs",
+      "path walkway",
+      "lamp",
+      "lawn",
+      "bench stairs",
+      "gate"
+    ]
+  },
+  {
+    "place_id": "ChIJe9YuL0F344kRe7q8SEaMPWE",
+    "objects": [
+      {
+        "noun": "tree",
+        "count": 6
+      },
+      {
+        "noun": "path walkway",
+        "count": 3
+      },
+      {
+        "noun": "lamp",
+        "count": 3
+      },
+      {
+        "noun": "building",
+        "count": 2
+      },
+      {
+        "noun": "sign",
+        "count": 2
+      },
+      {
+        "noun": "gate",
+        "count": 2
+      },
+      {
+        "noun": "playground",
+        "count": 2
+      },
+      {
+        "noun": "fountain",
+        "count": 2
+      },
+      {
+        "noun": "grass lawn",
+        "count": 1
+      },
+      {
+        "noun": "bench",
+        "count": 1
+      },
+      {
+        "noun": "canopy",
+        "count": 1
+      },
+      {
+        "noun": "water",
+        "count": 1
+      },
+      {
+        "noun": "playground building",
+        "count": 1
+      }
+    ],
+    "object_list": [
+      "tree",
+      "path walkway",
+      "lamp",
+      "building",
+      "sign",
+      "gate",
+      "playground",
+      "fountain",
+      "grass lawn",
+      "bench",
+      "canopy",
+      "water",
+      "playground building"
+    ]
+  },
+  {
+    "place_id": "ChIJeR3K0F5344kRjtZYF7-MPlw",
+    "objects": [
+      {
+        "noun": "bench",
+        "count": 6
+      },
+      {
+        "noun": "building",
+        "count": 6
+      },
+      {
+        "noun": "tree",
+        "count": 5
+      },
+      {
+        "noun": "playground",
+        "count": 5
+      },
+      {
+        "noun": "people",
+        "count": 4
+      },
+      {
+        "noun": "grass lawn",
+        "count": 3
+      },
+      {
+        "noun": "path walkway",
+        "count": 3
+      },
+      {
+        "noun": "building facade",
+        "count": 3
+      },
+      {
+        "noun": "fence",
+        "count": 3
+      },
+      {
+        "noun": "canopy",
+        "count": 3
+      },
+      {
+        "noun": "sign",
+        "count": 3
+      },
+      {
+        "noun": "stairs",
+        "count": 2
+      },
+      {
+        "noun": "lighting",
+        "count": 2
+      },
+      {
+        "noun": "gate",
+        "count": 2
+      },
+      {
+        "noun": "lamp",
+        "count": 2
+      },
+      {
+        "noun": "grass",
+        "count": 1
+      },
+      {
+        "noun": "path",
+        "count": 1
+      },
+      {
+        "noun": "shade",
+        "count": 1
+      },
+      {
+        "noun": "bench fence",
+        "count": 1
+      },
+      {
+        "noun": "bicycle",
+        "count": 1
+      }
+    ],
+    "object_list": [
+      "bench",
+      "building",
+      "tree",
+      "playground",
+      "people",
+      "grass lawn",
+      "path walkway",
+      "building facade",
+      "fence",
+      "canopy",
+      "sign",
+      "stairs",
+      "lighting",
+      "gate",
+      "lamp",
+      "grass",
+      "path",
+      "shade",
+      "bench fence",
+      "bicycle"
+    ]
+  },
+  {
+    "place_id": "ChIJecplvEJ344kRdjumhjIYylk",
+    "objects": [
+      {
+        "noun": "building",
+        "count": 7
+      },
+      {
+        "noun": "tree",
+        "count": 5
+      },
+      {
+        "noun": "canopy",
+        "count": 5
+      },
+      {
+        "noun": "sign",
+        "count": 4
+      },
+      {
+        "noun": "people",
+        "count": 4
+      },
+      {
+        "noun": "playground",
+        "count": 3
+      },
+      {
+        "noun": "stairs",
+        "count": 3
+      },
+      {
+        "noun": "fence",
+        "count": 3
+      },
+      {
+        "noun": "gate",
+        "count": 2
+      },
+      {
+        "noun": "lighting",
+        "count": 2
+      },
+      {
+        "noun": "bicycle",
+        "count": 2
+      },
+      {
+        "noun": "bench",
+        "count": 2
+      },
+      {
+        "noun": "lamp",
+        "count": 1
+      },
+      {
+        "noun": "path walkway",
+        "count": 1
+      },
+      {
+        "noun": "shade",
+        "count": 1
+      },
+      {
+        "noun": "lighting lamp",
+        "count": 1
+      },
+      {
+        "noun": "grass lawn",
+        "count": 1
+      },
+      {
+        "noun": "path walkway plaza",
+        "count": 1
+      }
+    ],
+    "object_list": [
+      "building",
+      "tree",
+      "canopy",
+      "sign",
+      "people",
+      "playground",
+      "stairs",
+      "fence",
+      "gate",
+      "lighting",
+      "bicycle",
+      "bench",
+      "lamp",
+      "path walkway",
+      "shade",
+      "lighting lamp",
+      "grass lawn",
+      "path walkway plaza"
+    ]
+  },
+  {
+    "place_id": "ChIJfbjtxEN344kRXfCglgyQaOI",
+    "objects": [
+      {
+        "noun": "grass lawn",
+        "count": 7
+      },
+      {
+        "noun": "tree",
+        "count": 7
+      },
+      {
+        "noun": "playground",
+        "count": 6
+      },
+      {
+        "noun": "canopy",
+        "count": 5
+      },
+      {
+        "noun": "people",
+        "count": 4
+      },
+      {
+        "noun": "building facade",
+        "count": 3
+      },
+      {
+        "noun": "sign",
+        "count": 3
+      },
+      {
+        "noun": "path walkway",
+        "count": 3
+      },
+      {
+        "noun": "fence gate",
+        "count": 3
+      },
+      {
+        "noun": "shade",
+        "count": 2
+      },
+      {
+        "noun": "building",
+        "count": 2
+      },
+      {
+        "noun": "stairs",
+        "count": 2
+      },
+      {
+        "noun": "bench",
+        "count": 2
+      },
+      {
+        "noun": "lamp",
+        "count": 2
+      },
+      {
+        "noun": "water fountain",
+        "count": 1
+      },
+      {
+        "noun": "gate",
+        "count": 1
+      },
+      {
+        "noun": "fountain",
+        "count": 1
+      }
+    ],
+    "object_list": [
+      "grass lawn",
+      "tree",
+      "playground",
+      "canopy",
+      "people",
+      "building facade",
+      "sign",
+      "path walkway",
+      "fence gate",
+      "shade",
+      "building",
+      "stairs",
+      "bench",
+      "lamp",
+      "water fountain",
+      "gate",
+      "fountain"
+    ]
+  },
+  {
+    "place_id": "ChIJgaT0OeR544kRDWVr7eYaS-g",
+    "objects": [
+      {
+        "noun": "tree",
+        "count": 9
+      },
+      {
+        "noun": "building",
+        "count": 8
+      },
+      {
+        "noun": "people",
+        "count": 5
+      },
+      {
+        "noun": "playground",
+        "count": 5
+      },
+      {
+        "noun": "water",
+        "count": 4
+      },
+      {
+        "noun": "canopy",
+        "count": 3
+      },
+      {
+        "noun": "sign",
+        "count": 3
+      },
+      {
+        "noun": "fountain",
+        "count": 3
+      },
+      {
+        "noun": "building facade",
+        "count": 3
+      },
+      {
+        "noun": "fence",
+        "count": 2
+      },
+      {
+        "noun": "facade",
+        "count": 2
+      },
+      {
+        "noun": "bench",
+        "count": 2
+      },
+      {
+        "noun": "path walkway",
+        "count": 2
+      },
+      {
+        "noun": "walkway",
+        "count": 1
+      },
+      {
+        "noun": "grass lawn",
+        "count": 1
+      }
+    ],
+    "object_list": [
+      "tree",
+      "building",
+      "people",
+      "playground",
+      "water",
+      "canopy",
+      "sign",
+      "fountain",
+      "building facade",
+      "fence",
+      "facade",
+      "bench",
+      "path walkway",
+      "walkway",
+      "grass lawn"
+    ]
+  },
+  {
+    "place_id": "ChIJgbyV0EJ344kRTzLd70y72lA",
+    "objects": [
+      {
+        "noun": "lamp",
+        "count": 18
+      },
+      {
+        "noun": "tree",
+        "count": 4
+      },
+      {
+        "noun": "playground building",
+        "count": 3
+      },
+      {
+        "noun": "bench",
+        "count": 3
+      },
+      {
+        "noun": "people",
+        "count": 3
+      },
+      {
+        "noun": "stairs",
+        "count": 2
+      },
+      {
+        "noun": "path walkway",
+        "count": 2
+      },
+      {
+        "noun": "fence",
+        "count": 2
+      },
+      {
+        "noun": "sign",
+        "count": 1
+      },
+      {
+        "noun": "walkway",
+        "count": 1
+      },
+      {
+        "noun": "grass lawn",
+        "count": 1
+      },
+      {
+        "noun": "lighting lamp",
+        "count": 1
+      },
+      {
+        "noun": "canopy",
+        "count": 1
+      },
+      {
+        "noun": "gate",
+        "count": 1
+      }
+    ],
+    "object_list": [
+      "lamp",
+      "tree",
+      "playground building",
+      "bench",
+      "people",
+      "stairs",
+      "path walkway",
+      "fence",
+      "sign",
+      "walkway",
+      "grass lawn",
+      "lighting lamp",
+      "canopy",
+      "gate"
+    ]
+  },
+  {
+    "place_id": "ChIJhaThd61w44kRKvSIN6DksY8",
+    "objects": [
+      {
+        "noun": "bench",
+        "count": 6
+      },
+      {
+        "noun": "playground",
+        "count": 5
+      },
+      {
+        "noun": "building",
+        "count": 5
+      },
+      {
+        "noun": "tree",
+        "count": 4
+      },
+      {
+        "noun": "stairs",
+        "count": 4
+      },
+      {
+        "noun": "canopy",
+        "count": 4
+      },
+      {
+        "noun": "fence",
+        "count": 3
+      },
+      {
+        "noun": "grass",
+        "count": 2
+      },
+      {
+        "noun": "grass lawn",
+        "count": 2
+      },
+      {
+        "noun": "path walkway",
+        "count": 2
+      },
+      {
+        "noun": "sign",
+        "count": 1
+      },
+      {
+        "noun": "people",
+        "count": 1
+      },
+      {
+        "noun": "walkway",
+        "count": 1
+      },
+      {
+        "noun": "fountain",
+        "count": 1
+      },
+      {
+        "noun": "gate",
+        "count": 1
+      },
+      {
+        "noun": "lamp",
+        "count": 1
+      },
+      {
+        "noun": "plaza",
+        "count": 1
+      }
+    ],
+    "object_list": [
+      "bench",
+      "playground",
+      "building",
+      "tree",
+      "stairs",
+      "canopy",
+      "fence",
+      "grass",
+      "grass lawn",
+      "path walkway",
+      "sign",
+      "people",
+      "walkway",
+      "fountain",
+      "gate",
+      "lamp",
+      "plaza"
+    ]
+  },
+  {
+    "place_id": "ChIJibK7VF9344kRqxrHJkNsISk",
+    "objects": [
+      {
+        "noun": "tree",
+        "count": 26
+      },
+      {
+        "noun": "playground",
+        "count": 7
+      },
+      {
+        "noun": "people",
+        "count": 5
+      },
+      {
+        "noun": "bench",
+        "count": 4
+      },
+      {
+        "noun": "sign",
+        "count": 4
+      },
+      {
+        "noun": "canopy",
+        "count": 3
+      },
+      {
+        "noun": "path walkway",
+        "count": 3
+      },
+      {
+        "noun": "building",
+        "count": 3
+      },
+      {
+        "noun": "fountain",
+        "count": 2
+      },
+      {
+        "noun": "fence gate",
+        "count": 2
+      },
+      {
+        "noun": "fence",
+        "count": 2
+      },
+      {
+        "noun": "water",
+        "count": 2
+      },
+      {
+        "noun": "bench stairs",
+        "count": 1
+      },
+      {
+        "noun": "facade",
+        "count": 1
+      },
+      {
+        "noun": "shade",
+        "count": 1
+      },
+      {
+        "noun": "walkway plaza",
+        "count": 1
+      },
+      {
+        "noun": "grass lawn",
+        "count": 1
+      },
+      {
+        "noun": "building facade",
+        "count": 1
+      },
+      {
+        "noun": "lawn",
+        "count": 1
+      },
+      {
+        "noun": "lamp",
+        "count": 1
+      }
+    ],
+    "object_list": [
+      "tree",
+      "playground",
+      "people",
+      "bench",
+      "sign",
+      "canopy",
+      "path walkway",
+      "building",
+      "fountain",
+      "fence gate",
+      "fence",
+      "water",
+      "bench stairs",
+      "facade",
+      "shade",
+      "walkway plaza",
+      "grass lawn",
+      "building facade",
+      "lawn",
+      "lamp"
+    ]
+  },
+  {
+    "place_id": "ChIJl4SpjlR344kR-a5J8f_YNvo",
+    "objects": [
+      {
+        "noun": "lamp",
+        "count": 7
+      },
+      {
+        "noun": "sign",
+        "count": 7
+      },
+      {
+        "noun": "people",
+        "count": 5
+      },
+      {
+        "noun": "building",
+        "count": 5
+      },
+      {
+        "noun": "tree",
+        "count": 4
+      },
+      {
+        "noun": "playground",
+        "count": 3
+      },
+      {
+        "noun": "canopy",
+        "count": 3
+      },
+      {
+        "noun": "bench",
+        "count": 2
+      },
+      {
+        "noun": "fence",
+        "count": 2
+      },
+      {
+        "noun": "fountain",
+        "count": 2
+      },
+      {
+        "noun": "lawn",
+        "count": 2
+      },
+      {
+        "noun": "bicycle",
+        "count": 2
+      },
+      {
+        "noun": "lighting",
+        "count": 1
+      },
+      {
+        "noun": "path walkway",
+        "count": 1
+      },
+      {
+        "noun": "facade",
+        "count": 1
+      },
+      {
+        "noun": "stairs",
+        "count": 1
+      },
+      {
+        "noun": "lighting lamp",
+        "count": 1
+      },
+      {
+        "noun": "water",
+        "count": 1
+      },
+      {
+        "noun": "building facade",
+        "count": 1
+      },
+      {
+        "noun": "facade canopy",
+        "count": 1
+      }
+    ],
+    "object_list": [
+      "lamp",
+      "sign",
+      "people",
+      "building",
+      "tree",
+      "playground",
+      "canopy",
+      "bench",
+      "fence",
+      "fountain",
+      "lawn",
+      "bicycle",
+      "lighting",
+      "path walkway",
+      "facade",
+      "stairs",
+      "lighting lamp",
+      "water",
+      "building facade",
+      "facade canopy"
+    ]
+  },
+  {
+    "place_id": "ChIJlegDpmd344kRZ8VMOsqJ5xM",
+    "objects": [
+      {
+        "noun": "tree",
+        "count": 7
+      },
+      {
+        "noun": "path walkway",
+        "count": 6
+      },
+      {
+        "noun": "grass lawn",
+        "count": 5
+      },
+      {
+        "noun": "playground",
+        "count": 4
+      },
+      {
+        "noun": "sign",
+        "count": 4
+      },
+      {
+        "noun": "bench",
+        "count": 4
+      },
+      {
+        "noun": "fence",
+        "count": 3
+      },
+      {
+        "noun": "people",
+        "count": 2
+      },
+      {
+        "noun": "lighting lamp",
+        "count": 2
+      },
+      {
+        "noun": "building facade",
+        "count": 2
+      },
+      {
+        "noun": "fountain",
+        "count": 2
+      },
+      {
+        "noun": "stairs",
+        "count": 2
+      },
+      {
+        "noun": "fence gate",
+        "count": 2
+      },
+      {
+        "noun": "lamp",
+        "count": 2
+      },
+      {
+        "noun": "bicycle",
+        "count": 1
+      },
+      {
+        "noun": "canopy",
+        "count": 1
+      },
+      {
+        "noun": "bench stairs",
+        "count": 1
+      },
+      {
+        "noun": "building",
+        "count": 1
+      }
+    ],
+    "object_list": [
+      "tree",
+      "path walkway",
+      "grass lawn",
+      "playground",
+      "sign",
+      "bench",
+      "fence",
+      "people",
+      "lighting lamp",
+      "building facade",
+      "fountain",
+      "stairs",
+      "fence gate",
+      "lamp",
+      "bicycle",
+      "canopy",
+      "bench stairs",
+      "building"
+    ]
+  },
+  {
+    "place_id": "ChIJqawa215344kROpcUJbbE0Vg",
+    "objects": [
+      {
+        "noun": "tree",
+        "count": 14
+      },
+      {
+        "noun": "playground",
+        "count": 7
+      },
+      {
+        "noun": "people",
+        "count": 7
+      },
+      {
+        "noun": "building",
+        "count": 5
+      },
+      {
+        "noun": "water",
+        "count": 4
+      },
+      {
+        "noun": "grass lawn",
+        "count": 4
+      },
+      {
+        "noun": "path walkway",
+        "count": 3
+      },
+      {
+        "noun": "canopy",
+        "count": 3
+      },
+      {
+        "noun": "bench",
+        "count": 2
+      },
+      {
+        "noun": "fence gate",
+        "count": 2
+      },
+      {
+        "noun": "lamp",
+        "count": 2
+      },
+      {
+        "noun": "gate",
+        "count": 1
+      },
+      {
+        "noun": "stairs",
+        "count": 1
+      },
+      {
+        "noun": "shade",
+        "count": 1
+      },
+      {
+        "noun": "bicycle",
+        "count": 1
+      }
+    ],
+    "object_list": [
+      "tree",
+      "playground",
+      "people",
+      "building",
+      "water",
+      "grass lawn",
+      "path walkway",
+      "canopy",
+      "bench",
+      "fence gate",
+      "lamp",
+      "gate",
+      "stairs",
+      "shade",
+      "bicycle"
+    ]
+  },
+  {
+    "place_id": "ChIJqbhAWkJ344kR8qCzVUUg3Z8",
+    "objects": [
+      {
+        "noun": "tree",
+        "count": 7
+      },
+      {
+        "noun": "canopy",
+        "count": 6
+      },
+      {
+        "noun": "playground",
+        "count": 5
+      },
+      {
+        "noun": "building",
+        "count": 4
+      },
+      {
+        "noun": "lamp",
+        "count": 4
+      },
+      {
+        "noun": "stairs",
+        "count": 4
+      },
+      {
+        "noun": "grass lawn",
+        "count": 3
+      },
+      {
+        "noun": "gate facade",
+        "count": 3
+      },
+      {
+        "noun": "gate",
+        "count": 3
+      },
+      {
+        "noun": "bench",
+        "count": 3
+      },
+      {
+        "noun": "bicycle",
+        "count": 2
+      },
+      {
+        "noun": "sign",
+        "count": 2
+      },
+      {
+        "noun": "path walkway",
+        "count": 1
+      },
+      {
+        "noun": "bench fence",
+        "count": 1
+      },
+      {
+        "noun": "people",
+        "count": 1
+      },
+      {
+        "noun": "fence",
+        "count": 1
+      },
+      {
+        "noun": "fountain",
+        "count": 1
+      },
+      {
+        "noun": "playground facade",
+        "count": 1
+      },
+      {
+        "noun": "lighting lamp",
+        "count": 1
+      }
+    ],
+    "object_list": [
+      "tree",
+      "canopy",
+      "playground",
+      "building",
+      "lamp",
+      "stairs",
+      "grass lawn",
+      "gate facade",
+      "gate",
+      "bench",
+      "bicycle",
+      "sign",
+      "path walkway",
+      "bench fence",
+      "people",
+      "fence",
+      "fountain",
+      "playground facade",
+      "lighting lamp"
+    ]
+  },
+  {
+    "place_id": "ChIJrwIkbZ5x44kReubXVxjKNJo",
+    "objects": [
+      {
+        "noun": "tree",
+        "count": 8
+      },
+      {
+        "noun": "playground",
+        "count": 8
+      },
+      {
+        "noun": "building",
+        "count": 8
+      },
+      {
+        "noun": "lamp",
+        "count": 4
+      },
+      {
+        "noun": "people",
+        "count": 3
+      },
+      {
+        "noun": "canopy shade",
+        "count": 3
+      },
+      {
+        "noun": "sign",
+        "count": 3
+      },
+      {
+        "noun": "bench",
+        "count": 3
+      },
+      {
+        "noun": "grass lawn",
+        "count": 2
+      },
+      {
+        "noun": "fountain",
+        "count": 2
+      },
+      {
+        "noun": "building facade",
+        "count": 1
+      },
+      {
+        "noun": "plaza",
+        "count": 1
+      },
+      {
+        "noun": "bicycle",
+        "count": 1
+      },
+      {
+        "noun": "path walkway plaza",
+        "count": 1
+      },
+      {
+        "noun": "facade",
+        "count": 1
+      }
+    ],
+    "object_list": [
+      "tree",
+      "playground",
+      "building",
+      "lamp",
+      "people",
+      "canopy shade",
+      "sign",
+      "bench",
+      "grass lawn",
+      "fountain",
+      "building facade",
+      "plaza",
+      "bicycle",
+      "path walkway plaza",
+      "facade"
+    ]
+  },
+  {
+    "place_id": "ChIJsU8r3bFw44kRsWnYyHOKfkk",
+    "objects": [
+      {
+        "noun": "lamp",
+        "count": 10
+      },
+      {
+        "noun": "bench",
+        "count": 3
+      },
+      {
+        "noun": "playground building",
+        "count": 2
+      },
+      {
+        "noun": "sign",
+        "count": 2
+      },
+      {
+        "noun": "path walkway",
+        "count": 2
+      },
+      {
+        "noun": "plaza",
+        "count": 2
+      },
+      {
+        "noun": "lighting lamp",
+        "count": 1
+      },
+      {
+        "noun": "playground",
+        "count": 1
+      },
+      {
+        "noun": "grass lawn",
+        "count": 1
+      },
+      {
+        "noun": "path",
+        "count": 1
+      },
+      {
+        "noun": "people",
+        "count": 1
+      },
+      {
+        "noun": "canopy",
+        "count": 1
+      }
+    ],
+    "object_list": [
+      "lamp",
+      "bench",
+      "playground building",
+      "sign",
+      "path walkway",
+      "plaza",
+      "lighting lamp",
+      "playground",
+      "grass lawn",
+      "path",
+      "people",
+      "canopy"
+    ]
+  },
+  {
+    "place_id": "ChIJw9Pt_EN344kRkOjxvQDgKbo",
+    "objects": [
+      {
+        "noun": "tree",
+        "count": 10
+      },
+      {
+        "noun": "lamp",
+        "count": 7
+      },
+      {
+        "noun": "grass lawn",
+        "count": 6
+      },
+      {
+        "noun": "building facade",
+        "count": 4
+      },
+      {
+        "noun": "building",
+        "count": 4
+      },
+      {
+        "noun": "path walkway",
+        "count": 4
+      },
+      {
+        "noun": "gate",
+        "count": 4
+      },
+      {
+        "noun": "playground",
+        "count": 3
+      },
+      {
+        "noun": "sign",
+        "count": 3
+      },
+      {
+        "noun": "fence",
+        "count": 3
+      },
+      {
+        "noun": "people",
+        "count": 2
+      },
+      {
+        "noun": "canopy",
+        "count": 2
+      },
+      {
+        "noun": "fountain",
+        "count": 2
+      },
+      {
+        "noun": "bench stairs",
+        "count": 2
+      },
+      {
+        "noun": "lighting lamp",
+        "count": 1
+      }
+    ],
+    "object_list": [
+      "tree",
+      "lamp",
+      "grass lawn",
+      "building facade",
+      "building",
+      "path walkway",
+      "gate",
+      "playground",
+      "sign",
+      "fence",
+      "people",
+      "canopy",
+      "fountain",
+      "bench stairs",
+      "lighting lamp"
+    ]
+  },
+  {
+    "place_id": "ChIJzyuk_lN344kRQcvilFvl7Bo",
+    "objects": [
+      {
+        "noun": "bicycle",
+        "count": 8
+      },
+      {
+        "noun": "tree",
+        "count": 7
+      },
+      {
+        "noun": "sign",
+        "count": 6
+      },
+      {
+        "noun": "playground",
+        "count": 5
+      },
+      {
+        "noun": "building",
+        "count": 5
+      },
+      {
+        "noun": "canopy",
+        "count": 4
+      },
+      {
+        "noun": "people",
+        "count": 3
+      },
+      {
+        "noun": "stairs",
+        "count": 3
+      },
+      {
+        "noun": "lamp",
+        "count": 3
+      },
+      {
+        "noun": "bench",
+        "count": 2
+      },
+      {
+        "noun": "fence",
+        "count": 2
+      },
+      {
+        "noun": "path walkway",
+        "count": 2
+      },
+      {
+        "noun": "grass lawn",
+        "count": 2
+      },
+      {
+        "noun": "gate",
+        "count": 2
+      },
+      {
+        "noun": "water",
+        "count": 1
+      },
+      {
+        "noun": "bench stairs",
+        "count": 1
+      }
+    ],
+    "object_list": [
+      "bicycle",
+      "tree",
+      "sign",
+      "playground",
+      "building",
+      "canopy",
+      "people",
+      "stairs",
+      "lamp",
+      "bench",
+      "fence",
+      "path walkway",
+      "grass lawn",
+      "gate",
+      "water",
+      "bench stairs"
+    ]
+  }
+]

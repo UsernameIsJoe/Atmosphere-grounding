@@ -1,0 +1,8 @@
+{
+  "n_places": 43,
+  "mismatch_rate": 0.11627906976744186,
+  "mismatch_mode": "cosine_percentile",
+  "mismatch_cosine_threshold": 0.02134,
+  "mean_noun_jaccard": 0.02943255813953488,
+  "mean_review_image_align": 0.05845348837209303
+}

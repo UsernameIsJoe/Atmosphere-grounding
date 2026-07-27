@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"/>
+<title>Step 2 places map</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>html,body,#map{height:100%;margin:0;background:#0b0b0f}</style></head>
+<body><div id="map"></div>
+<script>
+const map=L.map('map').setView([42.365,-71.105],13);
+L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png',{
+  attribution:'&copy; OSM &copy; CARTO', maxZoom:19
+}).addTo(map);
+L.circleMarker([42.378451899999995,-71.1157207],{radius:10,color:'#e0f0f0',weight:1,fillColor:'#50f0a0',fillOpacity:0.85}).bindPopup("<b>The Harvard Museum of Natural History</b><br/>#1 \u00b7 reviews=5 \u00b7 images=3").addTo(map);
+L.circleMarker([42.3774667,-71.1212515],{radius:10,color:'#e0f0f0',weight:1,fillColor:'#50f0a0',fillOpacity:0.85}).bindPopup("<b>Alexander W. Kemp Playground</b><br/>#2 \u00b7 reviews=5 \u00b7 images=3").addTo(map);
+L.circleMarker([42.3767099,-71.1209014],{radius:10,color:'#e0f0f0',weight:1,fillColor:'#50f0a0',fillOpacity:0.85}).bindPopup("<b>Cambridge Common</b><br/>#3 \u00b7 reviews=5 \u00b7 images=3").addTo(map);
+L.circleMarker([42.375797899999995,-71.1167948],{radius:10,color:'#e0f0f0',weight:1,fillColor:'#50f0a0',fillOpacity:0.85}).bindPopup("<b>Harvard Science Center Plaza</b><br/>#4 \u00b7 reviews=5 \u00b7 images=3").addTo(map);
+L.circleMarker([42.3749331,-71.1189684],{radius:10,color:'#e0f0f0',weight:1,fillColor:'#50f0a0',fillOpacity:0.85}).bindPopup("<b>Portland Loo-Public Restroom</b><br/>#5 \u00b7 reviews=5 \u00b7 images=3").addTo(map);
+L.circleMarker([42.374389799999996,-71.11670029999999],{radius:10,color:'#e0f0f0',weight:1,fillColor:'#50f0a0',fillOpacity:0.85}).bindPopup("<b>Harvard Yard</b><br/>#6 \u00b7 reviews=5 \u00b7 images=3").addTo(map);
+L.circleMarker([42.3740898,-71.11435820000001],{radius:10,color:'#e0f0f0',weight:1,fillColor:'#50f0a0',fillOpacity:0.85}).bindPopup("<b>Harvard Art Museums</b><br/>#7 \u00b7 reviews=5 \u00b7 images=3").addTo(map);
+L.circleMarker([42.3734652,-71.1106452],{radius:10,color:'#e0f0f0',weight:1,fillColor:'#50f0a0',fillOpacity:0.85}).bindPopup("<b>Joan Lorentz Park</b><br/>#8 \u00b7 reviews=5 \u00b7 images=3").addTo(map);
+L.circleMarker([42.373464999999996,-71.1189467],{radius:10,color:'#e0f0f0',weight:1,fillColor:'#50f0a0',fillOpacity:0.85}).bindPopup("<b>Harvard Square</b><br/>#9 \u00b7 reviews=5 \u00b7 images=3").addTo(map);
+L.circleMarker([42.373362,-71.118956],{radius:10,color:'#e0f0f0',weight:1,fillColor:'#50f0a0',fillOpacity:0.85}).bindPopup("<b>Harvard</b><br/>#10 \u00b7 reviews=5 \u00b7 images=3").addTo(map);
+L.circleMarker([42.373280099999995,-71.1211033],{radius:10,color:'#e0f0f0',weight:1,fillColor:'#50f0a0',fillOpacity:0.85}).bindPopup("<b>One Brattle Square</b><br/>#11 \u00b7 reviews=5 \u00b7 images=3").addTo(map);
+L.circleMarker([42.37268230000001,-71.1185993],{radius:10,color:'#e0f0f0',weight:1,fillColor:'#50f0a0',fillOpacity:0.85}).bindPopup("<b>Richard A. and Susan F. Smith Campus Center</b><br/>#12 \u00b7 reviews=5 \u00b7 images=3").addTo(map);
+L.circleMarker([42.37242330000001,-71.1204705],{radius:10,color:'#e0f0f0',weight:1,fillColor:'#50f0a0',fillOpacity:0.85}).bindPopup("<b>Winthrop Park</b><br/>#13 \u00b7 reviews=5 \u00b7 images=3").addTo(map);
+L.circleMarker([42.3710618,-71.1014951],{radius:10,color:'#e0f0f0',weight:1,fillColor:'#50f0a0',fillOpacity:0.85}).bindPopup("<b>Robert Paine Square Playground</b><br/>#14 \u00b7 reviews=5 \u00b7 images=3").addTo(map);
+L.circleMarker([42.3706642,-71.1231275],{radius:10,color:'#e0f0f0',weight:1,fillColor:'#50f0a0',fillOpacity:0.85}).bindPopup("<b>John F Kennedy Memorial Park</b><br/>#15 \u00b7 reviews=5 \u00b7 images=3").addTo(map);
+L.circleMarker([42.369447699999995,-71.1078406],{radius:10,color:'#e0f0f0',weight:1,fillColor:'#50f0a0',fillOpacity:0.85}).bindPopup("<b>Cooper Square Park</b><br/>#16 \u00b7 reviews=5 \u00b7 images=3").addTo(map);
+L.circleMarker([42.369185099999996,-71.1179284],{radius:10,color:'#e0f0f0',weight:1,fillColor:'#50f0a0',fillOpacity:0.85}).bindPopup("<b>Riverbend Park</b><br/>#17 \u00b7 reviews=5 \u00b7 images=3").addTo(map);
+L.circleMarker([42.3684961,-71.0999495],{radius:10,color:'#e0f0f0',weight:1,fillColor:'#50f0a0',fillOpacity:0.85}).bindPopup("<b>Sennott Park</b><br/>#18 \u00b7 reviews=5 \u00b7 images=3").addTo(map);
+L.circleMarker([42.3677403,-71.11039110000002],{radius:10,color:'#e0f0f0',weight:1,fillColor:'#50f0a0',fillOpacity:0.85}).bindPopup("<b>Franklin Street Park</b><br/>#19 \u00b7 reviews=5 \u00b7 images=3").addTo(map);
+L.circleMarker([42.367427899999996,-71.1154519],{radius:10,color:'#e0f0f0',weight:1,fillColor:'#50f0a0',fillOpacity:0.85}).bindPopup("<b>Corporal Burns Playground</b><br/>#20 \u00b7 reviews=5 \u00b7 images=3").addTo(map);
+L.circleMarker([42.3673335,-71.0943552],{radius:10,color:'#e0f0f0',weight:1,fillColor:'#50f0a0',fillOpacity:0.85}).bindPopup("<b>Market Park - Arthur J. Shallow Playground</b><br/>#21 \u00b7 reviews=5 \u00b7 images=3").addTo(map);
+L.circleMarker([42.3671437,-71.10567739999999],{radius:10,color:'#e0f0f0',weight:1,fillColor:'#50f0a0',fillOpacity:0.85}).bindPopup("<b>Cambridge City Hall</b><br/>#22 \u00b7 reviews=5 \u00b7 images=3").addTo(map);
+L.circleMarker([42.366152299999996,-71.094903],{radius:10,color:'#e0f0f0',weight:1,fillColor:'#50f0a0',fillOpacity:0.85}).bindPopup("<b>Greene-Rose Heritage Park</b><br/>#23 \u00b7 reviews=5 \u00b7 images=3").addTo(map);
+L.circleMarker([42.3661406,-71.0909247],{radius:10,color:'#e0f0f0',weight:1,fillColor:'#50f0a0',fillOpacity:0.85}).bindPopup("<b>State Park</b><br/>#24 \u00b7 reviews=5 \u00b7 images=3").addTo(map);
+L.circleMarker([42.3652701,-71.1061043],{radius:10,color:'#e0f0f0',weight:1,fillColor:'#50f0a0',fillOpacity:0.85}).bindPopup("<b>McElroy Park</b><br/>#25 \u00b7 reviews=4 \u00b7 images=3").addTo(map);
+L.circleMarker([42.3650455,-71.1025628],{radius:10,color:'#e0f0f0',weight:1,fillColor:'#50f0a0',fillOpacity:0.85}).bindPopup("<b>Central Square</b><br/>#26 \u00b7 reviews=5 \u00b7 images=3").addTo(map);
+L.circleMarker([42.3648634,-71.09868469999999],{radius:10,color:'#e0f0f0',weight:1,fillColor:'#50f0a0',fillOpacity:0.85}).bindPopup("<b>Clement Morgan Park</b><br/>#27 \u00b7 reviews=5 \u00b7 images=3").addTo(map);
+L.circleMarker([42.364795699999995,-71.11552929999999],{radius:10,color:'#e0f0f0',weight:1,fillColor:'#50f0a0',fillOpacity:0.85}).bindPopup("<b>Wheeler Park</b><br/>#28 \u00b7 reviews=5 \u00b7 images=3").addTo(map);
+L.circleMarker([42.3632989,-71.099891],{radius:10,color:'#e0f0f0',weight:1,fillColor:'#50f0a0',fillOpacity:0.85}).bindPopup("<b>Jill Brown-Rhone Park</b><br/>#29 \u00b7 reviews=5 \u00b7 images=3").addTo(map);
+L.circleMarker([42.36315,-71.0865638],{radius:10,color:'#e0f0f0',weight:1,fillColor:'#50f0a0',fillOpacity:0.85}).bindPopup("<b>Urban Park (UP) Roof Garden</b><br/>#30 \u00b7 reviews=5 \u00b7 images=3").addTo(map);
+L.circleMarker([42.3622094,-71.1153288],{radius:10,color:'#e0f0f0',weight:1,fillColor:'#50f0a0',fillOpacity:0.85}).bindPopup("<b>Riverside Press Park</b><br/>#31 \u00b7 reviews=5 \u00b7 images=3").addTo(map);
+L.circleMarker([42.361512399999995,-71.0856337],{radius:10,color:'#e0f0f0',weight:1,fillColor:'#50f0a0',fillOpacity:0.85}).bindPopup("<b>Kendall/MIT Open Space</b><br/>#32 \u00b7 reviews=5 \u00b7 images=3").addTo(map);
+L.circleMarker([42.361411499999996,-71.1014951],{radius:10,color:'#e0f0f0',weight:1,fillColor:'#50f0a0',fillOpacity:0.85}).bindPopup("<b>University Park Commons</b><br/>#33 \u00b7 reviews=5 \u00b7 images=3").addTo(map);
+L.circleMarker([42.3614101,-71.1078064],{radius:10,color:'#e0f0f0',weight:1,fillColor:'#50f0a0',fillOpacity:0.85}).bindPopup("<b>Dana Square Park</b><br/>#34 \u00b7 reviews=5 \u00b7 images=3").addTo(map);
+L.circleMarker([42.3610052,-71.0878262],{radius:10,color:'#e0f0f0',weight:1,fillColor:'#50f0a0',fillOpacity:0.85}).bindPopup("<b>MIT List Visual Arts Center</b><br/>#35 \u00b7 reviews=5 \u00b7 images=3").addTo(map);
+L.circleMarker([42.360928699999995,-71.112613],{radius:10,color:'#e0f0f0',weight:1,fillColor:'#50f0a0',fillOpacity:0.85}).bindPopup("<b>Alberico Park</b><br/>#36 \u00b7 reviews=5 \u00b7 images=3").addTo(map);
+L.circleMarker([42.3603652,-71.0948682],{radius:8,color:'#e0f0f0',weight:1,fillColor:'#50f0a0',fillOpacity:0.85}).bindPopup("<b>MIT Visitor Parking Lot</b><br/>#37 \u00b7 reviews=5 \u00b7 images=2").addTo(map);
+L.circleMarker([42.359209799999995,-71.09318209999999],{radius:10,color:'#e0f0f0',weight:1,fillColor:'#50f0a0',fillOpacity:0.85}).bindPopup("<b>Harvard-MIT Health Sciences and Technology</b><br/>#38 \u00b7 reviews=5 \u00b7 images=3").addTo(map);
+L.circleMarker([42.3590924,-71.0916628],{radius:10,color:'#e0f0f0',weight:1,fillColor:'#50f0a0',fillOpacity:0.85}).bindPopup("<b>Killian Court</b><br/>#39 \u00b7 reviews=5 \u00b7 images=3").addTo(map);
+L.circleMarker([42.3581396,-71.095013],{radius:10,color:'#e0f0f0',weight:1,fillColor:'#50f0a0',fillOpacity:0.85}).bindPopup("<b>MIT Kresge Auditorium</b><br/>#40 \u00b7 reviews=5 \u00b7 images=3").addTo(map);
+L.circleMarker([42.3580328,-71.10780849999999],{radius:10,color:'#e0f0f0',weight:1,fillColor:'#50f0a0',fillOpacity:0.85}).bindPopup("<b>Old Morse Park</b><br/>#41 \u00b7 reviews=5 \u00b7 images=3").addTo(map);
+L.circleMarker([42.357217299999995,-71.10650869999999],{radius:10,color:'#e0f0f0',weight:1,fillColor:'#50f0a0',fillOpacity:0.85}).bindPopup("<b>Fulmore Park</b><br/>#42 \u00b7 reviews=5 \u00b7 images=3").addTo(map);
+L.circleMarker([42.355278299999995,-71.1138805],{radius:10,color:'#e0f0f0',weight:1,fillColor:'#50f0a0',fillOpacity:0.85}).bindPopup("<b>Magazine Beach</b><br/>#43 \u00b7 reviews=5 \u00b7 images=3").addTo(map);
+</script></body></html>

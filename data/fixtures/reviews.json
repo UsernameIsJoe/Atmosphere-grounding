@@ -1,0 +1,65 @@
+[
+  {
+    "place_id": "fixture_cambridge_common",
+    "review_index": 0,
+    "rating": 5,
+    "language": "en",
+    "text": "A calm green lawn with shade trees and benches \u2014 peaceful place to sit."
+  },
+  {
+    "place_id": "fixture_cambridge_common",
+    "review_index": 1,
+    "rating": 4,
+    "language": "en",
+    "text": "Welcoming paths and an inviting entrance near the playground; feels open and friendly."
+  },
+  {
+    "place_id": "fixture_cambridge_common",
+    "review_index": 2,
+    "rating": 5,
+    "language": "en",
+    "text": "Well-lit walkways at dusk make it feel safe for families walking through."
+  },
+  {
+    "place_id": "fixture_danehy_park",
+    "review_index": 0,
+    "rating": 5,
+    "language": "en",
+    "text": "Quiet trails and calm water views; relaxing benches along the path."
+  },
+  {
+    "place_id": "fixture_danehy_park",
+    "review_index": 1,
+    "rating": 4,
+    "language": "en",
+    "text": "Safe fenced playground area with good lighting and clear sightlines."
+  },
+  {
+    "place_id": "fixture_danehy_park",
+    "review_index": 2,
+    "rating": 4,
+    "language": "en",
+    "text": "Food was expensive."
+  },
+  {
+    "place_id": "fixture_fresh_pond",
+    "review_index": 0,
+    "rating": 5,
+    "language": "en",
+    "text": "Serene loop around the reservoir; calm water and tree canopy."
+  },
+  {
+    "place_id": "fixture_fresh_pond",
+    "review_index": 1,
+    "rating": 5,
+    "language": "en",
+    "text": "Inviting wooden boardwalk and shaded seating near the water."
+  },
+  {
+    "place_id": "fixture_fresh_pond",
+    "review_index": 2,
+    "rating": 4,
+    "language": "en",
+    "text": "Busy parking but the path feels secure and safe with other walkers around."
+  }
+]

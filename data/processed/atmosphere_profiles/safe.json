@@ -1,0 +1,152 @@
+{
+  "atmosphere": "safe",
+  "n_mention_places": 24,
+  "n_counterexample_places": 19,
+  "level_counts": {
+    "scene": 353,
+    "object": 295,
+    "context": 345
+  },
+  "recurring_nouns": [
+    {
+      "noun": "tree",
+      "count": 149,
+      "n_places": 21,
+      "precision_vs_mentions": 1.0,
+      "counterexample_places": []
+    },
+    {
+      "noun": "bench",
+      "count": 115,
+      "n_places": 17,
+      "precision_vs_mentions": 1.0,
+      "counterexample_places": []
+    },
+    {
+      "noun": "building",
+      "count": 102,
+      "n_places": 16,
+      "precision_vs_mentions": 1.0,
+      "counterexample_places": []
+    },
+    {
+      "noun": "playground",
+      "count": 96,
+      "n_places": 20,
+      "precision_vs_mentions": 1.0,
+      "counterexample_places": []
+    },
+    {
+      "noun": "lamp",
+      "count": 91,
+      "n_places": 12,
+      "precision_vs_mentions": 1.0,
+      "counterexample_places": []
+    },
+    {
+      "noun": "people",
+      "count": 75,
+      "n_places": 13,
+      "precision_vs_mentions": 1.0,
+      "counterexample_places": []
+    },
+    {
+      "noun": "canopy",
+      "count": 60,
+      "n_places": 15,
+      "precision_vs_mentions": 1.0,
+      "counterexample_places": []
+    },
+    {
+      "noun": "grass lawn",
+      "count": 49,
+      "n_places": 9,
+      "precision_vs_mentions": 1.0,
+      "counterexample_places": []
+    },
+    {
+      "noun": "path walkway",
+      "count": 47,
+      "n_places": 13,
+      "precision_vs_mentions": 1.0,
+      "counterexample_places": []
+    },
+    {
+      "noun": "sign",
+      "count": 44,
+      "n_places": 14,
+      "precision_vs_mentions": 1.0,
+      "counterexample_places": []
+    },
+    {
+      "noun": "fence",
+      "count": 29,
+      "n_places": 8,
+      "precision_vs_mentions": 1.0,
+      "counterexample_places": []
+    },
+    {
+      "noun": "stairs",
+      "count": 27,
+      "n_places": 7,
+      "precision_vs_mentions": 1.0,
+      "counterexample_places": []
+    },
+    {
+      "noun": "fountain",
+      "count": 17,
+      "n_places": 6,
+      "precision_vs_mentions": 1.0,
+      "counterexample_places": []
+    },
+    {
+      "noun": "lamp lamp",
+      "count": 11,
+      "n_places": 1,
+      "precision_vs_mentions": 1.0,
+      "counterexample_places": []
+    },
+    {
+      "noun": "gate",
+      "count": 10,
+      "n_places": 5,
+      "precision_vs_mentions": 1.0,
+      "counterexample_places": []
+    },
+    {
+      "noun": "path",
+      "count": 8,
+      "n_places": 6,
+      "precision_vs_mentions": 1.0,
+      "counterexample_places": []
+    },
+    {
+      "noun": "bench stairs",
+      "count": 8,
+      "n_places": 2,
+      "precision_vs_mentions": 1.0,
+      "counterexample_places": []
+    },
+    {
+      "noun": "bicycle",
+      "count": 7,
+      "n_places": 2,
+      "precision_vs_mentions": 1.0,
+      "counterexample_places": []
+    },
+    {
+      "noun": "building facade building",
+      "count": 6,
+      "n_places": 1,
+      "precision_vs_mentions": 1.0,
+      "counterexample_places": []
+    },
+    {
+      "noun": "gate facade",
+      "count": 6,
+      "n_places": 1,
+      "precision_vs_mentions": 1.0,
+      "counterexample_places": []
+    }
+  ]
+}

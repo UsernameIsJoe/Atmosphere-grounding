@@ -1,0 +1,25 @@
+{
+  "n_nodes": 4300,
+  "n_edges": 16620,
+  "node_kinds": {
+    "Region": 1,
+    "Place": 43,
+    "Image": 128,
+    "Atmosphere": 3,
+    "Phrase": 224,
+    "Noun": 225,
+    "VisualEvidence": 3676
+  },
+  "edge_kinds": {
+    "IN_REGION": 43,
+    "HAS_IMAGE": 128,
+    "MENTIONS": 448,
+    "ALIGNED_TO": 94,
+    "DETECTS": 4302,
+    "SUPPORTED_BY": 3676,
+    "ASSOCIATED_WITH": 114,
+    "CONTAINS_NOUN": 4139,
+    "FROM_IMAGE": 3676
+  },
+  "graphml": "/Users/tumenglun/Desktop/Extend study/data/graph/cambridge_pilot.graphml"
+}

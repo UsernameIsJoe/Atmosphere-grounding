@@ -1,0 +1,13 @@
+{
+  "n_places": 43,
+  "n_likely_mismatch": 5,
+  "mismatch_mode": "cosine_percentile",
+  "mismatch_percentile": 10.0,
+  "mismatch_cosine_threshold": 0.02134,
+  "mean_noun_jaccard": 0.0294,
+  "mean_review_image_align": 0.0585,
+  "mismatch_rate": 0.1163,
+  "mismatch_reasons": {
+    "cosine<=P10(0.0213)": 5
+  }
+}

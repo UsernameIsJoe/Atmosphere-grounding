@@ -1,0 +1,48 @@
+[
+  {
+    "place_id": "fixture_cambridge_common",
+    "resource_name": "places/fixture_cambridge_common",
+    "name": "Cambridge Common",
+    "lat": 42.3765,
+    "lng": -71.122,
+    "types": [
+      "park",
+      "tourist_attraction"
+    ],
+    "formatted_address": "Cambridge Common, Cambridge, MA",
+    "rating": 4.6,
+    "user_rating_count": 1200,
+    "n_photos": 2,
+    "n_reviews": 3
+  },
+  {
+    "place_id": "fixture_danehy_park",
+    "resource_name": "places/fixture_danehy_park",
+    "name": "Danehy Park",
+    "lat": 42.389,
+    "lng": -71.135,
+    "types": [
+      "park"
+    ],
+    "formatted_address": "Danehy Park, Cambridge, MA",
+    "rating": 4.5,
+    "user_rating_count": 800,
+    "n_photos": 2,
+    "n_reviews": 3
+  },
+  {
+    "place_id": "fixture_fresh_pond",
+    "resource_name": "places/fixture_fresh_pond",
+    "name": "Fresh Pond Reservation",
+    "lat": 42.3855,
+    "lng": -71.148,
+    "types": [
+      "park"
+    ],
+    "formatted_address": "Fresh Pond, Cambridge, MA",
+    "rating": 4.7,
+    "user_rating_count": 2100,
+    "n_photos": 2,
+    "n_reviews": 3
+  }
+]

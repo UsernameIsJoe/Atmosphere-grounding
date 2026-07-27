@@ -1,0 +1,1610 @@
+{
+  "region": "Harvard–MIT corridor, Cambridge, MA, USA",
+  "atmospheres": {
+    "inviting": {
+      "associated_nouns": [
+        {
+          "atmosphere": "inviting",
+          "noun": "tree",
+          "count": "293",
+          "confidence": "0.0325",
+          "level": "scene"
+        },
+        {
+          "atmosphere": "inviting",
+          "noun": "bench",
+          "count": "216",
+          "confidence": "0.0344",
+          "level": "scene"
+        },
+        {
+          "atmosphere": "inviting",
+          "noun": "building",
+          "count": "161",
+          "confidence": "0.0319",
+          "level": "scene"
+        },
+        {
+          "atmosphere": "inviting",
+          "noun": "playground",
+          "count": "149",
+          "confidence": "0.0331",
+          "level": "scene"
+        },
+        {
+          "atmosphere": "inviting",
+          "noun": "lamp",
+          "count": "147",
+          "confidence": "0.0213",
+          "level": "scene"
+        },
+        {
+          "atmosphere": "inviting",
+          "noun": "people",
+          "count": "129",
+          "confidence": "0.0304",
+          "level": "scene"
+        },
+        {
+          "atmosphere": "inviting",
+          "noun": "canopy",
+          "count": "102",
+          "confidence": "0.0308",
+          "level": "scene"
+        },
+        {
+          "atmosphere": "inviting",
+          "noun": "grass lawn",
+          "count": "94",
+          "confidence": "0.0385",
+          "level": "scene"
+        },
+        {
+          "atmosphere": "inviting",
+          "noun": "path walkway",
+          "count": "85",
+          "confidence": "0.0319",
+          "level": "scene"
+        },
+        {
+          "atmosphere": "inviting",
+          "noun": "sign",
+          "count": "76",
+          "confidence": "0.026",
+          "level": "scene"
+        },
+        {
+          "atmosphere": "inviting",
+          "noun": "fence",
+          "count": "49",
+          "confidence": "0.0319",
+          "level": "scene"
+        },
+        {
+          "atmosphere": "inviting",
+          "noun": "stairs",
+          "count": "35",
+          "confidence": "0.0342",
+          "level": "scene"
+        },
+        {
+          "atmosphere": "inviting",
+          "noun": "fountain",
+          "count": "26",
+          "confidence": "0.0403",
+          "level": "scene"
+        },
+        {
+          "atmosphere": "inviting",
+          "noun": "building building facade",
+          "count": "26",
+          "confidence": "0.028",
+          "level": "context"
+        },
+        {
+          "atmosphere": "inviting",
+          "noun": "bicycle",
+          "count": "23",
+          "confidence": "0.029",
+          "level": "scene"
+        },
+        {
+          "atmosphere": "inviting",
+          "noun": "building facade",
+          "count": "17",
+          "confidence": "0.0389",
+          "level": "scene"
+        },
+        {
+          "atmosphere": "inviting",
+          "noun": "gate",
+          "count": "13",
+          "confidence": "0.0399",
+          "level": "scene"
+        },
+        {
+          "atmosphere": "inviting",
+          "noun": "park",
+          "count": "11",
+          "confidence": "0.0267",
+          "level": "scene"
+        },
+        {
+          "atmosphere": "inviting",
+          "noun": "path",
+          "count": "11",
+          "confidence": "0.0159",
+          "level": "context"
+        },
+        {
+          "atmosphere": "inviting",
+          "noun": "water",
+          "count": "11",
+          "confidence": "0.0188",
+          "level": "scene"
+        },
+        {
+          "atmosphere": "inviting",
+          "noun": "playground park",
+          "count": "9",
+          "confidence": "0.0427",
+          "level": "scene"
+        },
+        {
+          "atmosphere": "inviting",
+          "noun": "animals",
+          "count": "9",
+          "confidence": "0.0069",
+          "level": "scene"
+        },
+        {
+          "atmosphere": "inviting",
+          "noun": "grass",
+          "count": "6",
+          "confidence": "0.0472",
+          "level": "scene"
+        },
+        {
+          "atmosphere": "inviting",
+          "noun": "building building",
+          "count": "6",
+          "confidence": "0.0164",
+          "level": "context"
+        },
+        {
+          "atmosphere": "inviting",
+          "noun": "building facade building",
+          "count": "6",
+          "confidence": "0.0711",
+          "level": "scene"
+        }
+      ],
+      "sample_phrases": [
+        {
+          "place_id": "ChIJQXMWnUV344kRzs9-HfLoekk",
+          "phrase": "a small park near Harvard square that is suitable for families with young children",
+          "nouns": [
+            "park",
+            "square",
+            "library"
+          ],
+          "visual_confidence": 0.0
+        },
+        {
+          "place_id": "ChIJQXMWnUV344kRzs9-HfLoekk",
+          "phrase": "beautiful space with plenty of shade in the hot days to sit under and dog hours in the morning.",
+          "nouns": [
+            "space",
+            "shade"
+          ],
+          "visual_confidence": 1.0
+        },
+        {
+          "place_id": "ChIJQXMWnUV344kRzs9-HfLoekk",
+          "phrase": "a very nice park with a playground nearby",
+          "nouns": [
+            "park",
+            "playground"
+          ],
+          "visual_confidence": 0.0
+        },
+        {
+          "place_id": "ChIJQXMWnUV344kRzs9-HfLoekk",
+          "phrase": "",
+          "nouns": [
+            "park"
+          ],
+          "visual_confidence": 0.0
+        },
+        {
+          "place_id": "ChIJFapjVFl344kRXcKedI8Cuc0",
+          "phrase": "nice courts and enough people to play pick up games",
+          "nouns": [
+            "courts",
+            "backboards",
+            "rims"
+          ],
+          "visual_confidence": 0.0
+        },
+        {
+          "place_id": "ChIJFapjVFl344kRXcKedI8Cuc0",
+          "phrase": "Great spot to play basketball.",
+          "nouns": [
+            "basketball court"
+          ],
+          "visual_confidence": 0.0
+        },
+        {
+          "place_id": "ChIJC5eyB0J344kRIgcXIHRzdK4",
+          "phrase": "Nice place to unwind, jog, or dogwalk.",
+          "nouns": [
+            "areas"
+          ],
+          "visual_confidence": 0.8
+        },
+        {
+          "place_id": "ChIJC5eyB0J344kRIgcXIHRzdK4",
+          "phrase": "beautiful park",
+          "nouns": [
+            "park"
+          ],
+          "visual_confidence": 0.9
+        },
+        {
+          "place_id": "ChIJdelVAGp344kRnbhJtYxqBuo",
+          "phrase": "amazing park",
+          "nouns": [
+            "park"
+          ],
+          "visual_confidence": 0.9
+        },
+        {
+          "place_id": "ChIJdelVAGp344kRnbhJtYxqBuo",
+          "phrase": "Amazing playground to take your kids too while visiting Harvard.",
+          "nouns": [
+            "playground",
+            "kids"
+          ],
+          "visual_confidence": 0.0
+        },
+        {
+          "place_id": "ChIJdelVAGp344kRnbhJtYxqBuo",
+          "phrase": "great playground with lots of street parking",
+          "nouns": [
+            "playground",
+            "parking"
+          ],
+          "visual_confidence": 0.0
+        },
+        {
+          "place_id": "ChIJdelVAGp344kRnbhJtYxqBuo",
+          "phrase": "",
+          "nouns": [
+            "drive",
+            "parking",
+            "kids",
+            "families"
+          ],
+          "visual_confidence": 0.0
+        },
+        {
+          "place_id": "ChIJqawa215344kROpcUJbbE0Vg",
+          "phrase": "great park for runs/walks",
+          "nouns": [
+            "park",
+            "tree",
+            "playground",
+            "grass lawn",
+            "path walkway"
+          ],
+          "visual_confidence": 0.8
+        },
+        {
+          "place_id": "ChIJqawa215344kROpcUJbbE0Vg",
+          "phrase": "",
+          "nouns": [
+            "park",
+            "festival",
+            "river",
+            "road"
+          ],
+          "visual_confidence": 0.0
+        },
+        {
+          "place_id": "ChIJ8_RCvWp344kRCTRS1Lks6KU",
+          "phrase": "relax",
+          "nouns": [
+            "bench",
+            "tree",
+            "canopy",
+            "building",
+            "fountain"
+          ],
+          "visual_confidence": 0.8
+        },
+        {
+          "place_id": "ChIJE12gBq1w44kR_N0FJNiKAcg",
+          "phrase": "Wonderful time had by all my son was one of the vendors he teaches cpr and urban shooting experience which it's certification for self defense.",
+          "nouns": [
+            "park",
+            "vendor",
+            "son"
+          ],
+          "visual_confidence": 0.0
+        },
+        {
+          "place_id": "ChIJE12gBq1w44kR_N0FJNiKAcg",
+          "phrase": "Very nice park.",
+          "nouns": [
+            "park"
+          ],
+          "visual_confidence": 1.0
+        },
+        {
+          "place_id": "ChIJE12gBq1w44kR_N0FJNiKAcg",
+          "phrase": "",
+          "nouns": [
+            "bench",
+            "tree",
+            "canopy",
+            "building",
+            "playground",
+            "sign",
+            "building facade",
+            "fence",
+            "grass lawn",
+            "shade",
+            "gate stairs",
+            "path walkway",
+            "fountain",
+            "gate",
+            "plaza",
+            "lighting",
+            "people"
+          ],
+          "visual_confidence": 1.0
+        },
+        {
+          "place_id": "ChIJK-7ymsF344kRN70NFmyfvK8",
+          "phrase": "Lots of shade and toys here.",
+          "nouns": [
+            "benches",
+            "toys",
+            "shade"
+          ],
+          "visual_confidence": 0.8
+        },
+        {
+          "place_id": "ChIJK-7ymsF344kRN70NFmyfvK8",
+          "phrase": "Creates a needed break to the brick and pavement giving families and all a peace with calm pause.",
+          "nouns": [
+            "break",
+            "families",
+            "pause"
+          ],
+          "visual_confidence": 0.8
+        },
+        {
+          "place_id": "ChIJK-7ymsF344kRN70NFmyfvK8",
+          "phrase": "",
+          "nouns": [
+            "park"
+          ],
+          "visual_confidence": 0.0
+        },
+        {
+          "place_id": "ChIJK-7ymsF344kRN70NFmyfvK8",
+          "phrase": "Great place to bring your little kid's",
+          "nouns": [
+            "place",
+            "kid"
+          ],
+          "visual_confidence": 0.0
+        },
+        {
+          "place_id": "ChIJ0zpihlJ344kRCAOlne5GEoc",
+          "phrase": "Great park!",
+          "nouns": [
+            "park"
+          ],
+          "visual_confidence": 0.0
+        },
+        {
+          "place_id": "ChIJ0zpihlJ344kRCAOlne5GEoc",
+          "phrase": "Great people watching",
+          "nouns": [
+            "people"
+          ],
+          "visual_confidence": 0.8
+        },
+        {
+          "place_id": "ChIJ0zpihlJ344kRCAOlne5GEoc",
+          "phrase": "special park with various play areas and a fountain for kids to cool down",
+          "nouns": [
+            "park",
+            "basketball court",
+            "soccer pitch",
+            "playground",
+            "fountain"
+          ],
+          "visual_confidence": 0.8
+        },
+        {
+          "place_id": "ChIJ0zpihlJ344kRCAOlne5GEoc",
+          "phrase": "",
+          "nouns": [
+            "path",
+            "fountain"
+          ],
+          "visual_confidence": 0.0
+        },
+        {
+          "place_id": "ChIJ0zpihlJ344kRCAOlne5GEoc",
+          "phrase": "playing in this park",
+          "nouns": [
+            "park",
+            "building"
+          ],
+          "visual_confidence": 0.9
+        },
+        {
+          "place_id": "ChIJeR3K0F5344kRjtZYF7-MPlw",
+          "phrase": "spot",
+          "nouns": [
+            "spot"
+          ],
+          "visual_confidence": 0.0
+        },
+        {
+          "place_id": "ChIJeR3K0F5344kRjtZYF7-MPlw",
+          "phrase": "a place that feels welcoming and approachable",
+          "nouns": [
+            "park",
+            "bunnies"
+          ],
+          "visual_confidence": 0.0
+        },
+        {
+          "place_id": "ChIJlegDpmd344kRZ8VMOsqJ5xM",
+          "phrase": "This park is an excellent spot for anyone looking to take a break from the hustle and bustle of the city and enjoy a moment of quiet reflection.",
+          "nouns": [
+            "park",
+            "green space"
+          ],
+          "visual_confidence": 0.8
+        },
+        {
+          "place_id": "ChIJlegDpmd344kRZ8VMOsqJ5xM",
+          "phrase": "beautiful and memorable exhibit",
+          "nouns": [
+            "exhibit",
+            "building facade"
+          ],
+          "visual_confidence": 1.0
+        },
+        {
+          "place_id": "ChIJK89zW1R344kRz7jYZfKShKA",
+          "phrase": "A charming and cozy park that is nestled in the heart of Cambridge.",
+          "nouns": [
+            "park",
+            "cambridge"
+          ],
+          "visual_confidence": 0.8
+        },
+        {
+          "place_id": "ChIJK89zW1R344kRz7jYZfKShKA",
+          "phrase": "cute little spot",
+          "nouns": [
+            "spot"
+          ],
+          "visual_confidence": 0.8
+        },
+        {
+          "place_id": "ChIJK89zW1R344kRz7jYZfKShKA",
+          "phrase": "It's a great place to sit and talk with another person and relax here",
+          "nouns": [
+            "bench",
+            "table"
+          ],
+          "visual_confidence": 0.9
+        },
+        {
+          "place_id": "ChIJibK7VF9344kRqxrHJkNsISk",
+          "phrase": "Very nice park",
+          "nouns": [
+            "park"
+          ],
+          "visual_confidence": 0.5
+        },
+        {
+          "place_id": "ChIJibK7VF9344kRqxrHJkNsISk",
+          "phrase": "",
+          "nouns": [
+            "children",
+            "building",
+            "fountain"
+          ],
+          "visual_confidence": 0.0
+        },
+        {
+          "place_id": "ChIJibK7VF9344kRqxrHJkNsISk",
+          "phrase": "Great park- good Climbing structures",
+          "nouns": [
+            "park",
+            "climbing structures"
+          ],
+          "visual_confidence": 0.0
+        },
+        {
+          "place_id": "ChIJ70NXYP1544kRXnfSiB1r4as",
+          "phrase": "Very cute place to walk and sit!",
+          "nouns": [
+            "place",
+            "bench"
+          ],
+          "visual_confidence": 0.8
+        },
+        {
+          "place_id": "ChIJ70NXYP1544kRXnfSiB1r4as",
+          "phrase": "Great for children",
+          "nouns": [
+            "park",
+            "benches",
+            "playground",
+            "basketball court"
+          ],
+          "visual_confidence": 0.9
+        },
+        {
+          "place_id": "ChIJ70NXYP1544kRXnfSiB1r4as",
+          "phrase": "Perfect spot for having picnics!",
+          "nouns": [
+            "park",
+            "basketball courts"
+          ],
+          "visual_confidence": 0.8
+        }
+      ]
+    },
+    "safe": {
+      "associated_nouns": [
+        {
+          "atmosphere": "safe",
+          "noun": "tree",
+          "count": "149",
+          "confidence": "0.0176",
+          "level": "scene"
+        },
+        {
+          "atmosphere": "safe",
+          "noun": "bench",
+          "count": "115",
+          "confidence": "0.0179",
+          "level": "scene"
+        },
+        {
+          "atmosphere": "safe",
+          "noun": "building",
+          "count": "102",
+          "confidence": "0.0172",
+          "level": "scene"
+        },
+        {
+          "atmosphere": "safe",
+          "noun": "playground",
+          "count": "96",
+          "confidence": "0.0199",
+          "level": "scene"
+        },
+        {
+          "atmosphere": "safe",
+          "noun": "lamp",
+          "count": "91",
+          "confidence": "0.0051",
+          "level": "object"
+        },
+        {
+          "atmosphere": "safe",
+          "noun": "people",
+          "count": "75",
+          "confidence": "0.0076",
+          "level": "context"
+        },
+        {
+          "atmosphere": "safe",
+          "noun": "canopy",
+          "count": "60",
+          "confidence": "0.0202",
+          "level": "scene"
+        },
+        {
+          "atmosphere": "safe",
+          "noun": "grass lawn",
+          "count": "49",
+          "confidence": "0.0234",
+          "level": "scene"
+        },
+        {
+          "atmosphere": "safe",
+          "noun": "path walkway",
+          "count": "47",
+          "confidence": "0.0125",
+          "level": "context"
+        },
+        {
+          "atmosphere": "safe",
+          "noun": "sign",
+          "count": "44",
+          "confidence": "0.0179",
+          "level": "object"
+        },
+        {
+          "atmosphere": "safe",
+          "noun": "fence",
+          "count": "29",
+          "confidence": "0.019",
+          "level": "scene"
+        },
+        {
+          "atmosphere": "safe",
+          "noun": "stairs",
+          "count": "27",
+          "confidence": "0.03",
+          "level": "context"
+        },
+        {
+          "atmosphere": "safe",
+          "noun": "fountain",
+          "count": "17",
+          "confidence": "0.0141",
+          "level": "object"
+        },
+        {
+          "atmosphere": "safe",
+          "noun": "lamp lamp",
+          "count": "11",
+          "confidence": "-0.0076",
+          "level": "object"
+        },
+        {
+          "atmosphere": "safe",
+          "noun": "gate",
+          "count": "10",
+          "confidence": "0.0053",
+          "level": "object"
+        },
+        {
+          "atmosphere": "safe",
+          "noun": "path",
+          "count": "8",
+          "confidence": "0.0111",
+          "level": "context"
+        },
+        {
+          "atmosphere": "safe",
+          "noun": "bench stairs",
+          "count": "8",
+          "confidence": "0.0017",
+          "level": "context"
+        },
+        {
+          "atmosphere": "safe",
+          "noun": "bicycle",
+          "count": "7",
+          "confidence": "0.0191",
+          "level": "context"
+        },
+        {
+          "atmosphere": "safe",
+          "noun": "building facade building",
+          "count": "6",
+          "confidence": "-0.0096",
+          "level": "object"
+        },
+        {
+          "atmosphere": "safe",
+          "noun": "gate facade",
+          "count": "6",
+          "confidence": "0.0546",
+          "level": "scene"
+        },
+        {
+          "atmosphere": "safe",
+          "noun": "building building facade",
+          "count": "5",
+          "confidence": "0.0148",
+          "level": "scene"
+        },
+        {
+          "atmosphere": "safe",
+          "noun": "water",
+          "count": "5",
+          "confidence": "-0.0032",
+          "level": "context"
+        },
+        {
+          "atmosphere": "safe",
+          "noun": "grass",
+          "count": "4",
+          "confidence": "0.0118",
+          "level": "context"
+        },
+        {
+          "atmosphere": "safe",
+          "noun": "facade",
+          "count": "4",
+          "confidence": "0.0138",
+          "level": "object"
+        },
+        {
+          "atmosphere": "safe",
+          "noun": "playground building",
+          "count": "4",
+          "confidence": "-0.0065",
+          "level": "context"
+        }
+      ],
+      "sample_phrases": [
+        {
+          "place_id": "ChIJQXMWnUV344kRzs9-HfLoekk",
+          "phrase": "open grass spaces",
+          "nouns": [
+            "spaces"
+          ],
+          "visual_confidence": 0.8
+        },
+        {
+          "place_id": "ChIJdelVAGp344kRnbhJtYxqBuo",
+          "phrase": "Good from ages 2 and up with baby swings, regular swings and a bigass tire swing to chill on as well as multiple slides, enormous sandpit, climbing facilities and a dragonboat for anyone who’s into that.",
+          "nouns": [
+            "swings",
+            "slides",
+            "sandpit",
+            "climbing facilities"
+          ],
+          "visual_confidence": 0.8
+        },
+        {
+          "place_id": "ChIJK-7ymsF344kRN70NFmyfvK8",
+          "phrase": "",
+          "nouns": [
+            "gated park",
+            "walkers",
+            "cars"
+          ],
+          "visual_confidence": 0.9
+        },
+        {
+          "place_id": "ChIJeR3K0F5344kRjtZYF7-MPlw",
+          "phrase": "great",
+          "nouns": [
+            "fountains"
+          ],
+          "visual_confidence": 0.0
+        },
+        {
+          "place_id": "ChIJlegDpmd344kRZ8VMOsqJ5xM",
+          "phrase": "The park is clean, feels very safe, and is generally not too crowded, even on weekends.",
+          "nouns": [
+            "park"
+          ],
+          "visual_confidence": 0.9
+        },
+        {
+          "place_id": "ChIJ70NXYP1544kRXnfSiB1r4as",
+          "phrase": "Beautiful urban park.",
+          "nouns": [
+            "park"
+          ],
+          "visual_confidence": 1.0
+        },
+        {
+          "place_id": "ChIJw9Pt_EN344kRkOjxvQDgKbo",
+          "phrase": "",
+          "nouns": [],
+          "visual_confidence": 0.0
+        },
+        {
+          "place_id": "ChIJw9Pt_EN344kRkOjxvQDgKbo",
+          "phrase": "visually protected, well-lit, overlooked, low-threat cues",
+          "nouns": [
+            "lamp",
+            "lighting lamp",
+            "path walkway",
+            "bench stairs"
+          ],
+          "visual_confidence": 0.9
+        },
+        {
+          "place_id": "ChIJw9Pt_EN344kRkOjxvQDgKbo",
+          "phrase": "",
+          "nouns": [],
+          "visual_confidence": 1.0
+        },
+        {
+          "place_id": "ChIJOdNat01344kRr8NyNS4Is-8",
+          "phrase": "Gates can close to keep the little kids in.",
+          "nouns": [
+            "gates"
+          ],
+          "visual_confidence": 0.8
+        },
+        {
+          "place_id": "ChIJOdNat01344kRr8NyNS4Is-8",
+          "phrase": "Another great Cambridge public Park!",
+          "nouns": [
+            "park"
+          ],
+          "visual_confidence": 0.0
+        },
+        {
+          "place_id": "ChIJaeBhK1d344kRma9tUbssEBo",
+          "phrase": "green areas, benches, gardens, and trash cans",
+          "nouns": [
+            "benches",
+            "gardens"
+          ],
+          "visual_confidence": 0.8
+        },
+        {
+          "place_id": "ChIJaeBhK1d344kRma9tUbssEBo",
+          "phrase": "Always great safe place",
+          "nouns": [
+            "place"
+          ],
+          "visual_confidence": 1.0
+        },
+        {
+          "place_id": "ChIJ25L83fx544kRiuWNvWYdSLA",
+          "phrase": "utilize the benches",
+          "nouns": [
+            "benches"
+          ],
+          "visual_confidence": 0.9
+        },
+        {
+          "place_id": "ChIJl4SpjlR344kR-a5J8f_YNvo",
+          "phrase": "Very cute nice area to relax the whole area around there is under construction all the buildings so there's going to be new life around that area can't wait for it all to be done and it's going to be new people around to enjoy that beautiful little area",
+          "nouns": [
+            "area",
+            "buildings"
+          ],
+          "visual_confidence": 0.0
+        },
+        {
+          "place_id": "ChIJZweWZOJ544kReZtPOq9YZGQ",
+          "phrase": "",
+          "nouns": [
+            "park"
+          ],
+          "visual_confidence": 0.8
+        },
+        {
+          "place_id": "ChIJZweWZOJ544kReZtPOq9YZGQ",
+          "phrase": "Very safe area",
+          "nouns": [
+            "area"
+          ],
+          "visual_confidence": 0.8
+        },
+        {
+          "place_id": "ChIJhaThd61w44kRKvSIN6DksY8",
+          "phrase": "relatively fenced in",
+          "nouns": [
+            "fenced"
+          ],
+          "visual_confidence": 0.9
+        },
+        {
+          "place_id": "ChIJhaThd61w44kRKvSIN6DksY8",
+          "phrase": "",
+          "nouns": [
+            "bench",
+            "building",
+            "fence",
+            "gate",
+            "lamp"
+          ],
+          "visual_confidence": 0.7
+        },
+        {
+          "place_id": "ChIJhaThd61w44kRKvSIN6DksY8",
+          "phrase": "",
+          "nouns": [],
+          "visual_confidence": 1.0
+        },
+        {
+          "place_id": "ChIJB6Xitahw44kR9i_MAEut2RE",
+          "phrase": "",
+          "nouns": [
+            "bathroom"
+          ],
+          "visual_confidence": 1.0
+        },
+        {
+          "place_id": "ChIJrwIkbZ5x44kReubXVxjKNJo",
+          "phrase": "",
+          "nouns": [
+            "garage"
+          ],
+          "visual_confidence": 0.8
+        },
+        {
+          "place_id": "ChIJecplvEJ344kRdjumhjIYylk",
+          "phrase": "a very beautiful and peaceful place with a unique atmosphere that combines history, culture, and charm",
+          "nouns": [
+            "place",
+            "history",
+            "culture",
+            "charm"
+          ],
+          "visual_confidence": 0.9
+        },
+        {
+          "place_id": "ChIJecplvEJ344kRdjumhjIYylk",
+          "phrase": "",
+          "nouns": [],
+          "visual_confidence": 0.9
+        },
+        {
+          "place_id": "ChIJ__94-qpw44kRBYtpW0T5yA4",
+          "phrase": "",
+          "nouns": [
+            "garage"
+          ],
+          "visual_confidence": 0.0
+        },
+        {
+          "place_id": "ChIJ__94-qpw44kRBYtpW0T5yA4",
+          "phrase": "quite cheap",
+          "nouns": [
+            "street"
+          ],
+          "visual_confidence": 0.8
+        },
+        {
+          "place_id": "ChIJqbhAWkJ344kR8qCzVUUg3Z8",
+          "phrase": "",
+          "nouns": [
+            "comfortable"
+          ],
+          "visual_confidence": 0.0
+        },
+        {
+          "place_id": "ChIJqbhAWkJ344kR8qCzVUUg3Z8",
+          "phrase": "The sink was super big so it only broke after my family of 12 had all gotten on!",
+          "nouns": [
+            "sink"
+          ],
+          "visual_confidence": 0.8
+        },
+        {
+          "place_id": "ChIJqbhAWkJ344kR8qCzVUUg3Z8",
+          "phrase": "Good spot but need to update bathroom we need more public bathroom & rest stops on highways & public areas",
+          "nouns": [
+            "bathroom",
+            "rest stops"
+          ],
+          "visual_confidence": 0.8
+        },
+        {
+          "place_id": "ChIJgbyV0EJ344kRTzLd70y72lA",
+          "phrase": "visually protected, well-lit, overlooked, low-threat cues",
+          "nouns": [
+            "lighting lamp",
+            "path walkway",
+            "fence"
+          ],
+          "visual_confidence": 0.8
+        },
+        {
+          "place_id": "ChIJgaT0OeR544kRDWVr7eYaS-g",
+          "phrase": "",
+          "nouns": [],
+          "visual_confidence": 0.0
+        },
+        {
+          "place_id": "ChIJgaT0OeR544kRDWVr7eYaS-g",
+          "phrase": "",
+          "nouns": [],
+          "visual_confidence": 0.7
+        },
+        {
+          "place_id": "ChIJgaT0OeR544kRDWVr7eYaS-g",
+          "phrase": "",
+          "nouns": [
+            "wildlife",
+            "insects"
+          ],
+          "visual_confidence": 0.0
+        },
+        {
+          "place_id": "ChIJbaeXiER344kRR_f4e89EQuM",
+          "phrase": "",
+          "nouns": [],
+          "visual_confidence": 1.0
+        },
+        {
+          "place_id": "ChIJbaeXiER344kRR_f4e89EQuM",
+          "phrase": "visually protected, well-lit, overlooked, low-threat cues",
+          "nouns": [
+            "lighting",
+            "path walkway",
+            "stairs",
+            "fountain",
+            "sign"
+          ],
+          "visual_confidence": 0.9
+        },
+        {
+          "place_id": "ChIJ0WEQ3kJ344kRgqD4jNgR18s",
+          "phrase": "",
+          "nouns": [
+            "stop",
+            "maps"
+          ],
+          "visual_confidence": 0.8
+        },
+        {
+          "place_id": "ChIJ0WEQ3kJ344kRgqD4jNgR18s",
+          "phrase": "",
+          "nouns": [],
+          "visual_confidence": 0.0
+        },
+        {
+          "place_id": "ChIJ5b-LegB644kRvUOaAysmcRU",
+          "phrase": "The interior and exterior are beautiful.",
+          "nouns": [
+            "building"
+          ],
+          "visual_confidence": 0.0
+        },
+        {
+          "place_id": "ChIJ5b-LegB644kRvUOaAysmcRU",
+          "phrase": "",
+          "nouns": [
+            "seating lines"
+          ],
+          "visual_confidence": 0.8
+        },
+        {
+          "place_id": "ChIJ5b-LegB644kRvUOaAysmcRU",
+          "phrase": "Well maintained place",
+          "nouns": [
+            "place"
+          ],
+          "visual_confidence": 0.8
+        }
+      ]
+    },
+    "calm": {
+      "associated_nouns": [
+        {
+          "atmosphere": "calm",
+          "noun": "tree",
+          "count": "161",
+          "confidence": "0.015",
+          "level": "scene"
+        },
+        {
+          "atmosphere": "calm",
+          "noun": "bench",
+          "count": "118",
+          "confidence": "0.0071",
+          "level": "scene"
+        },
+        {
+          "atmosphere": "calm",
+          "noun": "playground",
+          "count": "83",
+          "confidence": "0.0089",
+          "level": "context"
+        },
+        {
+          "atmosphere": "calm",
+          "noun": "building",
+          "count": "79",
+          "confidence": "0.0109",
+          "level": "context"
+        },
+        {
+          "atmosphere": "calm",
+          "noun": "lamp",
+          "count": "72",
+          "confidence": "-0.0021",
+          "level": "object"
+        },
+        {
+          "atmosphere": "calm",
+          "noun": "grass lawn",
+          "count": "65",
+          "confidence": "0.0125",
+          "level": "scene"
+        },
+        {
+          "atmosphere": "calm",
+          "noun": "path walkway",
+          "count": "63",
+          "confidence": "0.0107",
+          "level": "context"
+        },
+        {
+          "atmosphere": "calm",
+          "noun": "people",
+          "count": "55",
+          "confidence": "0.0028",
+          "level": "context"
+        },
+        {
+          "atmosphere": "calm",
+          "noun": "canopy",
+          "count": "52",
+          "confidence": "0.0063",
+          "level": "scene"
+        },
+        {
+          "atmosphere": "calm",
+          "noun": "sign",
+          "count": "36",
+          "confidence": "0.0038",
+          "level": "scene"
+        },
+        {
+          "atmosphere": "calm",
+          "noun": "fence",
+          "count": "34",
+          "confidence": "0.0092",
+          "level": "scene"
+        },
+        {
+          "atmosphere": "calm",
+          "noun": "building building facade",
+          "count": "19",
+          "confidence": "0.0203",
+          "level": "scene"
+        },
+        {
+          "atmosphere": "calm",
+          "noun": "fountain",
+          "count": "16",
+          "confidence": "0.0078",
+          "level": "context"
+        },
+        {
+          "atmosphere": "calm",
+          "noun": "stairs",
+          "count": "12",
+          "confidence": "0.0016",
+          "level": "scene"
+        },
+        {
+          "atmosphere": "calm",
+          "noun": "water",
+          "count": "9",
+          "confidence": "0.0329",
+          "level": "object"
+        },
+        {
+          "atmosphere": "calm",
+          "noun": "playground building",
+          "count": "7",
+          "confidence": "-0.0213",
+          "level": "context"
+        },
+        {
+          "atmosphere": "calm",
+          "noun": "building facade building",
+          "count": "6",
+          "confidence": "0.0345",
+          "level": "scene"
+        },
+        {
+          "atmosphere": "calm",
+          "noun": "gate",
+          "count": "5",
+          "confidence": "0.0176",
+          "level": "scene"
+        },
+        {
+          "atmosphere": "calm",
+          "noun": "building building",
+          "count": "4",
+          "confidence": "0.0049",
+          "level": "context"
+        },
+        {
+          "atmosphere": "calm",
+          "noun": "grass",
+          "count": "3",
+          "confidence": "0.0088",
+          "level": "context"
+        },
+        {
+          "atmosphere": "calm",
+          "noun": "path",
+          "count": "3",
+          "confidence": "-0.0115",
+          "level": "object"
+        },
+        {
+          "atmosphere": "calm",
+          "noun": "bicycle",
+          "count": "3",
+          "confidence": "-0.0115",
+          "level": "context"
+        },
+        {
+          "atmosphere": "calm",
+          "noun": "lawn",
+          "count": "2",
+          "confidence": "0.0097",
+          "level": "context"
+        },
+        {
+          "atmosphere": "calm",
+          "noun": "facade",
+          "count": "2",
+          "confidence": "0.0229",
+          "level": "context"
+        },
+        {
+          "atmosphere": "calm",
+          "noun": "fence gate",
+          "count": "2",
+          "confidence": "-0.0112",
+          "level": "context"
+        }
+      ],
+      "sample_phrases": [
+        {
+          "place_id": "ChIJQXMWnUV344kRzs9-HfLoekk",
+          "phrase": "lie about and read a book",
+          "nouns": [
+            "book"
+          ],
+          "visual_confidence": 0.0
+        },
+        {
+          "place_id": "ChIJFapjVFl344kRXcKedI8Cuc0",
+          "phrase": "peaceful",
+          "nouns": [
+            "park",
+            "river"
+          ],
+          "visual_confidence": 0.9
+        },
+        {
+          "place_id": "ChIJFapjVFl344kRXcKedI8Cuc0",
+          "phrase": "",
+          "nouns": [
+            "fountains",
+            "park",
+            "green post",
+            "building",
+            "path walkway",
+            "grass lawn",
+            "canopy",
+            "water",
+            "bench",
+            "shade",
+            "fence",
+            "sign",
+            "gate"
+          ],
+          "visual_confidence": 0.8
+        },
+        {
+          "place_id": "ChIJdelVAGp344kRnbhJtYxqBuo",
+          "phrase": "",
+          "nouns": [],
+          "visual_confidence": 0.0
+        },
+        {
+          "place_id": "ChIJqawa215344kROpcUJbbE0Vg",
+          "phrase": "one of the best and quiet times I've spent before",
+          "nouns": [
+            "time"
+          ],
+          "visual_confidence": 0.0
+        },
+        {
+          "place_id": "ChIJqawa215344kROpcUJbbE0Vg",
+          "phrase": "enjoy the sun",
+          "nouns": [
+            "sun"
+          ],
+          "visual_confidence": 1.0
+        },
+        {
+          "place_id": "ChIJqawa215344kROpcUJbbE0Vg",
+          "phrase": "So nice and peaceful",
+          "nouns": [
+            "park"
+          ],
+          "visual_confidence": 0.8
+        },
+        {
+          "place_id": "ChIJ8_RCvWp344kRCTRS1Lks6KU",
+          "phrase": "sitting under the fairy lights in a comfy Adirondack chair",
+          "nouns": [
+            "fairy lights",
+            "chair"
+          ],
+          "visual_confidence": 0.8
+        },
+        {
+          "place_id": "ChIJ8_RCvWp344kRCTRS1Lks6KU",
+          "phrase": "quiet",
+          "nouns": [
+            "park"
+          ],
+          "visual_confidence": 0.9
+        },
+        {
+          "place_id": "ChIJeR3K0F5344kRjtZYF7-MPlw",
+          "phrase": "meditative walk through a labyrinth",
+          "nouns": [
+            "labyrinth"
+          ],
+          "visual_confidence": 0.8
+        },
+        {
+          "place_id": "ChIJeR3K0F5344kRjtZYF7-MPlw",
+          "phrase": "Good place for reading a book",
+          "nouns": [
+            "bench",
+            "building",
+            "tree",
+            "grass lawn",
+            "path walkway",
+            "building facade",
+            "fence",
+            "canopy",
+            "sign",
+            "stairs",
+            "lighting",
+            "gate",
+            "lamp",
+            "grass",
+            "path",
+            "shade"
+          ],
+          "visual_confidence": 0.8
+        },
+        {
+          "place_id": "ChIJlegDpmd344kRZ8VMOsqJ5xM",
+          "phrase": "quiet and small",
+          "nouns": [
+            "park"
+          ],
+          "visual_confidence": 0.8
+        },
+        {
+          "place_id": "ChIJlegDpmd344kRZ8VMOsqJ5xM",
+          "phrase": "The setting feels respectful and inspiring without being overly formal or somber.",
+          "nouns": [],
+          "visual_confidence": 0.9
+        },
+        {
+          "place_id": "ChIJlegDpmd344kRZ8VMOsqJ5xM",
+          "phrase": "tranquil natural beauty, peaceful contemplation and serene civic pride",
+          "nouns": [
+            "pathways",
+            "green spaces",
+            "river"
+          ],
+          "visual_confidence": 0.9
+        },
+        {
+          "place_id": "ChIJK89zW1R344kRz7jYZfKShKA",
+          "phrase": "quiet spaces",
+          "nouns": [
+            "spaces"
+          ],
+          "visual_confidence": 0.8
+        },
+        {
+          "place_id": "ChIJK89zW1R344kRz7jYZfKShKA",
+          "phrase": "Peaceful and shady",
+          "nouns": [
+            "shady"
+          ],
+          "visual_confidence": 0.8
+        },
+        {
+          "place_id": "ChIJibK7VF9344kRqxrHJkNsISk",
+          "phrase": "quiet neighborhood",
+          "nouns": [
+            "neighborhood"
+          ],
+          "visual_confidence": 0.8
+        },
+        {
+          "place_id": "ChIJw9Pt_EN344kRkOjxvQDgKbo",
+          "phrase": "visually quiet, soft, low-stimulation spatial character",
+          "nouns": [
+            "grass lawn",
+            "tree",
+            "canopy",
+            "fountain",
+            "people"
+          ],
+          "visual_confidence": 0.9
+        },
+        {
+          "place_id": "ChIJw9Pt_EN344kRkOjxvQDgKbo",
+          "phrase": "Beautiful campus with lots of green spaces.",
+          "nouns": [
+            "campus",
+            "green spaces"
+          ],
+          "visual_confidence": 0.0
+        },
+        {
+          "place_id": "ChIJw9Pt_EN344kRkOjxvQDgKbo",
+          "phrase": "",
+          "nouns": [],
+          "visual_confidence": 1.0
+        },
+        {
+          "place_id": "ChIJOdNat01344kRr8NyNS4Is-8",
+          "phrase": "",
+          "nouns": [],
+          "visual_confidence": 0.4
+        },
+        {
+          "place_id": "ChIJOdNat01344kRr8NyNS4Is-8",
+          "phrase": "quiet",
+          "nouns": [
+            "playground"
+          ],
+          "visual_confidence": 0.9
+        },
+        {
+          "place_id": "ChIJaeBhK1d344kRma9tUbssEBo",
+          "phrase": "relax and enjoy the scenery",
+          "nouns": [
+            "scenery"
+          ],
+          "visual_confidence": 0.8
+        },
+        {
+          "place_id": "ChIJ25L83fx544kRiuWNvWYdSLA",
+          "phrase": "",
+          "nouns": [],
+          "visual_confidence": 0.7
+        },
+        {
+          "place_id": "ChIJ25L83fx544kRiuWNvWYdSLA",
+          "phrase": "Peaceful",
+          "nouns": [
+            "green space"
+          ],
+          "visual_confidence": 0.8
+        },
+        {
+          "place_id": "ChIJ38dFa69w44kRDZBuTuaYXkk",
+          "phrase": "a neat spot to visit to take a break from the urban hustle and bustle",
+          "nouns": [
+            "spot",
+            "break"
+          ],
+          "visual_confidence": 0.0
+        },
+        {
+          "place_id": "ChIJhaThd61w44kRKvSIN6DksY8",
+          "phrase": "",
+          "nouns": [
+            "canopy",
+            "stairs",
+            "path walkway",
+            "plaza"
+          ],
+          "visual_confidence": 0.6
+        },
+        {
+          "place_id": "ChIJhaThd61w44kRKvSIN6DksY8",
+          "phrase": "chill and relax",
+          "nouns": [
+            "park"
+          ],
+          "visual_confidence": 0.8
+        },
+        {
+          "place_id": "ChIJhaThd61w44kRKvSIN6DksY8",
+          "phrase": "quiet circular segment with seats facing a round structure",
+          "nouns": [
+            "segment",
+            "structure"
+          ],
+          "visual_confidence": 0.9
+        },
+        {
+          "place_id": "ChIJecplvEJ344kRdjumhjIYylk",
+          "phrase": "Walking through Harvard Square in February feels like being wrapped in a moment that’s both quiet and vibrant",
+          "nouns": [],
+          "visual_confidence": 0.9
+        },
+        {
+          "place_id": "ChIJecplvEJ344kRdjumhjIYylk",
+          "phrase": "the calm energy of the square, a sense of tradition and academic culture that makes the place feel important and inspiring",
+          "nouns": [
+            "square",
+            "culture"
+          ],
+          "visual_confidence": 0.9
+        },
+        {
+          "place_id": "ChIJecplvEJ344kRdjumhjIYylk",
+          "phrase": "",
+          "nouns": [],
+          "visual_confidence": 0.7
+        },
+        {
+          "place_id": "ChIJgbyV0EJ344kRTzLd70y72lA",
+          "phrase": "relax",
+          "nouns": [
+            "lounge",
+            "terrace"
+          ],
+          "visual_confidence": 0.0
+        },
+        {
+          "place_id": "ChIJgbyV0EJ344kRTzLd70y72lA",
+          "phrase": "visually quiet, soft, low-stimulation spatial character",
+          "nouns": [
+            "grass lawn",
+            "canopy"
+          ],
+          "visual_confidence": 0.7
+        },
+        {
+          "place_id": "ChIJgaT0OeR544kRDWVr7eYaS-g",
+          "phrase": "Just relax and enjoy sunset",
+          "nouns": [
+            "sunset"
+          ],
+          "visual_confidence": 0.8
+        },
+        {
+          "place_id": "ChIJbaeXiER344kRR_f4e89EQuM",
+          "phrase": "",
+          "nouns": [],
+          "visual_confidence": 0.8
+        },
+        {
+          "place_id": "ChIJbaeXiER344kRR_f4e89EQuM",
+          "phrase": "visually quiet, soft, low-stimulation spatial character",
+          "nouns": [
+            "lamp",
+            "tree",
+            "canopy",
+            "grass lawn"
+          ],
+          "visual_confidence": 0.7
+        },
+        {
+          "place_id": "ChIJ5b-LegB644kRvUOaAysmcRU",
+          "phrase": "beautiful perspective",
+          "nouns": [
+            "glass",
+            "perspective"
+          ],
+          "visual_confidence": 0.8
+        },
+        {
+          "place_id": "ChIJe9YuL0F344kRe7q8SEaMPWE",
+          "phrase": "",
+          "nouns": [],
+          "visual_confidence": 0.7
+        },
+        {
+          "place_id": "ChIJe9YuL0F344kRe7q8SEaMPWE",
+          "phrase": "",
+          "nouns": [],
+          "visual_confidence": 0.5
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "places/fixture_danehy_park",
+  "displayName": {
+    "text": "Danehy Park",
+    "languageCode": "en"
+  },
+  "location": {
+    "latitude": 42.389,
+    "longitude": -71.135
+  },
+  "types": [
+    "park"
+  ],
+  "formattedAddress": "Danehy Park, Cambridge, MA",
+  "rating": 4.5,
+  "userRatingCount": 800,
+  "reviews": [
+    {
+      "rating": 5,
+      "text": {
+        "text": "Quiet trails and calm water views; relaxing benches along the path.",
+        "languageCode": "en"
+      }
+    },
+    {
+      "rating": 4,
+      "text": {
+        "text": "Safe fenced playground area with good lighting and clear sightlines.",
+        "languageCode": "en"
+      }
+    },
+    {
+      "rating": 4,
+      "text": {
+        "text": "Food was expensive.",
+        "languageCode": "en"
+      }
+    }
+  ],
+  "photos": [
+    {
+      "name": "places/fixture_danehy_park/photos/0"
+    },
+    {
+      "name": "places/fixture_danehy_park/photos/1"
+    }
+  ]
+}
