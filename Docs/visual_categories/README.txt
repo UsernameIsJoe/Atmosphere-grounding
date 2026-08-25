@@ -14,20 +14,27 @@ Read in order:
   3. Docs/visual_categories/phase3_extractors.txt
      Extractor tags (dino / seg / siglip / metric) per family.
 
+  4. Docs/visual_categories/phase4_extractor_benchmark.txt
+     Pilot-image benchmark of extractors (OK / WEAK / FAIL) + recommendations.
+
 Machine-readable freeze:
 
   configs/visual_categories_v1.yaml
+    (phrases, seg_class_maps, metric_formulas populated from Phase 4)
+
+Pipeline:
+  src/atmosphere_grounding/ground/visual_categories.py
+  CLI: atmosphere visual-categories
+  Outputs: data/processed/visual_features.jsonl, place_visual_features.json
 
 Design invariants:
   - Categories describe images; they do NOT pre-bind to atmosphere lexicon.
   - Image is primary unit; place aggregates images.
   - v1 taxonomy fixed; schema extensible for later versions.
-  - Phrase lists and metric formulas deferred.
 
-Next work (not done yet):
-  - Curate Grounding DINO / SigLIP phrase lists per dino/siglip family
-  - Define metric formulas and segmentation class maps
-  - Wire extractors into the pipeline
+Next work:
+  - Full-corpus visual-features run (all pilot images)
   - Place-holdout verification using category feature space vs comments
+  - Optional: tune remaining WEAK DINO families; stronger SigLIP checkpoint
 
 ================================================================================

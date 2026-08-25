@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Visual category extractor preview</title>
+<style>
+  body { font-family: "IBM Plex Sans", "Source Sans 3", system-ui, sans-serif;
+         margin: 0; background: #1a1d21; color: #e8eaed; }
+  header { padding: 1.5rem 2rem; border-bottom: 1px solid #333; }
+  header h1 { margin: 0 0 .4rem; font-size: 1.4rem; font-weight: 600; }
+  header p { margin: 0; color: #9aa0a6; max-width: 52rem; line-height: 1.45; }
+  .card { padding: 1.5rem 2rem; border-bottom: 1px solid #2a2e33; }
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  figure { margin: 0; }
+  img { width: 100%; height: auto; border-radius: 4px; background: #111; }
+  figcaption { color: #9aa0a6; font-size: .85rem; margin-top: .35rem; }
+  .feats { display: grid; grid-template-columns: 1fr 1fr; gap: .5rem .75rem;
+            margin-top: 1rem; font-size: .82rem; }
+  .feat { background: #24282e; padding: .55rem .7rem; border-radius: 4px;
+           line-height: 1.35; }
+  @media (max-width: 900px) {
+    .pair, .feats { grid-template-columns: 1fr; }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Visual category extractors — pilot preview</h1>
+  <p>
+    6 Cambridge pilot photos. Left: Grounding DINO boxes for key families.
+    Right: Mask2Former ADE20K segmentation overlay. Below: per-family DINO / seg / SigLIP / metric
+    scores from <code>configs/visual_categories_v1.yaml</code>.
+  </p>
+</header>
+
+            <section class="card">
+              <h2>Image 00 — ChIJQXMWnUV344kRzs9-HfLoekk/00.jpg</h2>
+              <div class="pair">
+                <figure>
+                  <img src="00_dino.jpg" alt="dino"/>
+                  <figcaption>DINO boxes (selected families)</figcaption>
+                </figure>
+                <figure>
+                  <img src="00_seg.jpg" alt="seg"/>
+                  <figcaption>Segmentation overlay (ADE20K colors)</figcaption>
+                </figure>
+              </div>
+              <div class="feats"><div class='feat'><b>seating</b><br/>dino: hits=2 best=0.31 labels=[&#x27;park bench picnic&#x27;, &#x27;bench bench&#x27;]</div><div class='feat'><b>tree</b><br/>dino: hits=13 best=0.37 labels=[&#x27;tree&#x27;, &#x27;tree&#x27;, &#x27;tree&#x27;, &#x27;tree&#x27;, &#x27;tree&#x27;]<br/>seg: fraction=0.489</div><div class='feat'><b>path_walkway</b><br/>dino: hits=2 best=0.28 labels=[&#x27;footpath&#x27;, &#x27;walkway footpath&#x27;]<br/>seg: fraction=0.010</div><div class='feat'><b>people</b><br/>dino: hits=8 best=0.64 labels=[&#x27;person&#x27;, &#x27;person&#x27;, &#x27;person&#x27;, &#x27;person&#x27;, &#x27;person&#x27;]</div><div class='feat'><b>building_mass</b><br/>dino: hits=2 best=0.38 labels=[&#x27;building large building building front&#x27;, &#x27;building large b<br/>seg: fraction=0.089</div><div class='feat'><b>sign</b><br/>dino: hits=3 best=0.37 labels=[&#x27;street sign&#x27;, &#x27;street sign&#x27;, &#x27;street sign&#x27;]</div><div class='feat'><b>fence</b><br/>dino: hits=0 best=0.00 labels=[]</div><div class='feat'><b>bicycle</b><br/>dino: hits=4 best=0.41 labels=[&#x27;bicycle picnic&#x27;, &#x27;bicycle bike parked bicycle&#x27;, &#x27;bicycle b</div><div class='feat'><b>sky_openness</b><br/>seg: fraction=0.075<br/>siglip: enclosed space with little sky (0.023)</div><div class='feat'><b>building_enclosure</b><br/>seg: fraction=0.089<br/>siglip: open area with few buildings (0.092)</div><div class='feat'><b>vegetation_enclosure</b><br/>seg: fraction=0.825<br/>siglip: open lawn with few trees (0.093)</div><div class='feat'><b>ground_openness</b><br/>seg: fraction=0.010<br/>siglip: wide open paved plaza (0.073)</div><div class='feat'><b>brightness_level</b><br/>metric[mean_luminance]=0.328</div><div class='feat'><b>luminance_contrast</b><br/>metric[luminance_std]=0.281</div><div class='feat'><b>edge_complexity</b><br/>metric[gradient_edge_density]=0.068</div><div class='feat'><b>lit_area_soft</b><br/>siglip: brightly lit plaza (0.036)</div><div class='feat'><b>gathering_cluster_soft</b><br/>siglip: empty plaza with no people (0.054)</div><div class='feat'><b>focal_dominance_soft</b><br/>siglip: single dominant object in the scene (0.032)<br/>metric[gradient_edge_density]=0.068</div></div>
+            </section>
+            
+            <section class="card">
+              <h2>Image 01 — ChIJK-7ymsF344kRN70NFmyfvK8/00.jpg</h2>
+              <div class="pair">
+                <figure>
+                  <img src="01_dino.jpg" alt="dino"/>
+                  <figcaption>DINO boxes (selected families)</figcaption>
+                </figure>
+                <figure>
+                  <img src="01_seg.jpg" alt="seg"/>
+                  <figcaption>Segmentation overlay (ADE20K colors)</figcaption>
+                </figure>
+              </div>
+              <div class="feats"><div class='feat'><b>seating</b><br/>dino: hits=8 best=0.50 labels=[&#x27;bench park bench&#x27;, &#x27;bench park bench&#x27;, &#x27;bench bench&#x27;, &#x27;cha</div><div class='feat'><b>tree</b><br/>dino: hits=5 best=0.49 labels=[&#x27;tree&#x27;, &#x27;tree canopy leafy canopy&#x27;, &#x27;large tree mature tree<br/>seg: fraction=0.448</div><div class='feat'><b>path_walkway</b><br/>dino: hits=1 best=0.25 labels=[&#x27;path&#x27;]<br/>seg: fraction=0.383</div><div class='feat'><b>people</b><br/>dino: hits=2 best=0.34 labels=[&#x27;person&#x27;, &#x27;person&#x27;]</div><div class='feat'><b>building_mass</b><br/>dino: hits=1 best=0.33 labels=[&#x27;building large building building front&#x27;]<br/>seg: fraction=0.097</div><div class='feat'><b>sign</b><br/>dino: hits=1 best=0.29 labels=[&#x27;sign park sign information board&#x27;]</div><div class='feat'><b>fence</b><br/>dino: hits=0 best=0.00 labels=[]</div><div class='feat'><b>bicycle</b><br/>dino: hits=1 best=0.26 labels=[&#x27;parked bicycle&#x27;]</div><div class='feat'><b>sky_openness</b><br/>seg: fraction=0.056<br/>siglip: open sky (0.018)</div><div class='feat'><b>building_enclosure</b><br/>seg: fraction=0.097<br/>siglip: open area with few buildings (0.064)</div><div class='feat'><b>vegetation_enclosure</b><br/>seg: fraction=0.448<br/>siglip: open lawn with few trees (0.037)</div><div class='feat'><b>ground_openness</b><br/>seg: fraction=0.383<br/>siglip: wide open paved plaza (0.051)</div><div class='feat'><b>brightness_level</b><br/>metric[mean_luminance]=0.357</div><div class='feat'><b>luminance_contrast</b><br/>metric[luminance_std]=0.222</div><div class='feat'><b>edge_complexity</b><br/>metric[gradient_edge_density]=0.078</div><div class='feat'><b>lit_area_soft</b><br/>siglip: well-lit area (0.037)</div><div class='feat'><b>gathering_cluster_soft</b><br/>siglip: empty plaza with no people (0.036)</div><div class='feat'><b>focal_dominance_soft</b><br/>siglip: single dominant object in the scene (0.018)<br/>metric[gradient_edge_density]=0.078</div></div>
+            </section>
+            
+            <section class="card">
+              <h2>Image 02 — ChIJM3icQVN344kRZsmgAwN0zc8/00.jpg</h2>
+              <div class="pair">
+                <figure>
+                  <img src="02_dino.jpg" alt="dino"/>
+                  <figcaption>DINO boxes (selected families)</figcaption>
+                </figure>
+                <figure>
+                  <img src="02_seg.jpg" alt="seg"/>
+                  <figcaption>Segmentation overlay (ADE20K colors)</figcaption>
+                </figure>
+              </div>
+              <div class="feats"><div class='feat'><b>seating</b><br/>dino: hits=3 best=0.64 labels=[&#x27;seat wall&#x27;, &#x27;chair park bench picnic table&#x27;, &#x27;park&#x27;]</div><div class='feat'><b>tree</b><br/>dino: hits=1 best=0.33 labels=[&#x27;large tree mature tree&#x27;]<br/>seg: fraction=0.390</div><div class='feat'><b>path_walkway</b><br/>dino: hits=1 best=0.27 labels=[&#x27;walkway footpath&#x27;]<br/>seg: fraction=0.035</div><div class='feat'><b>people</b><br/>dino: hits=2 best=0.31 labels=[&#x27;person&#x27;, &#x27;people&#x27;]</div><div class='feat'><b>building_mass</b><br/>dino: hits=2 best=0.34 labels=[&#x27;building large building front&#x27;, &#x27;building&#x27;]<br/>seg: fraction=0.048</div><div class='feat'><b>sign</b><br/>dino: hits=1 best=0.30 labels=[&#x27;sign park sign&#x27;]</div><div class='feat'><b>fence</b><br/>dino: hits=2 best=0.36 labels=[&#x27;metal fence chain link fence gate&#x27;, &#x27;fence metal fence woo</div><div class='feat'><b>bicycle</b><br/>dino: hits=1 best=0.31 labels=[&#x27;bicycle bike parked bicycle&#x27;]</div><div class='feat'><b>sky_openness</b><br/>seg: fraction=0.000<br/>siglip: open sky (-0.030)</div><div class='feat'><b>building_enclosure</b><br/>seg: fraction=0.201<br/>siglip: open area with few buildings (0.029)</div><div class='feat'><b>vegetation_enclosure</b><br/>seg: fraction=0.750<br/>siglip: tree-lined path (0.040)</div><div class='feat'><b>ground_openness</b><br/>seg: fraction=0.035<br/>siglip: wide open paved plaza (0.044)</div><div class='feat'><b>brightness_level</b><br/>metric[mean_luminance]=0.397</div><div class='feat'><b>luminance_contrast</b><br/>metric[luminance_std]=0.220</div><div class='feat'><b>edge_complexity</b><br/>metric[gradient_edge_density]=0.088</div><div class='feat'><b>lit_area_soft</b><br/>siglip: brightly lit plaza (0.036)</div><div class='feat'><b>gathering_cluster_soft</b><br/>siglip: empty plaza with no people (0.040)</div><div class='feat'><b>focal_dominance_soft</b><br/>siglip: single dominant object in the scene (0.020)<br/>metric[gradient_edge_density]=0.088</div></div>
+            </section>
+            
+            <section class="card">
+              <h2>Image 03 — ChIJsU8r3bFw44kRsWnYyHOKfkk/00.jpg</h2>
+              <div class="pair">
+                <figure>
+                  <img src="03_dino.jpg" alt="dino"/>
+                  <figcaption>DINO boxes (selected families)</figcaption>
+                </figure>
+                <figure>
+                  <img src="03_seg.jpg" alt="seg"/>
+                  <figcaption>Segmentation overlay (ADE20K colors)</figcaption>
+                </figure>
+              </div>
+              <div class="feats"><div class='feat'><b>seating</b><br/>dino: hits=15 best=0.54 labels=[&#x27;chair&#x27;, &#x27;chair&#x27;, &#x27;bench park bench&#x27;, &#x27;chair&#x27;, &#x27;chair&#x27;]</div><div class='feat'><b>tree</b><br/>dino: hits=0 best=0.00 labels=[]<br/>seg: fraction=0.000</div><div class='feat'><b>path_walkway</b><br/>dino: hits=1 best=0.27 labels=[&#x27;##path&#x27;]<br/>seg: fraction=0.113</div><div class='feat'><b>people</b><br/>dino: hits=6 best=0.36 labels=[&#x27;person pedestrian&#x27;, &#x27;person&#x27;, &#x27;person&#x27;, &#x27;person&#x27;, &#x27;person&#x27;</div><div class='feat'><b>building_mass</b><br/>dino: hits=1 best=0.40 labels=[&#x27;building large building storefront&#x27;]<br/>seg: fraction=0.000</div><div class='feat'><b>sign</b><br/>dino: hits=3 best=0.35 labels=[&#x27;sign park sign&#x27;, &#x27;street sign&#x27;, &#x27;park sign&#x27;]</div><div class='feat'><b>fence</b><br/>dino: hits=0 best=0.00 labels=[]</div><div class='feat'><b>bicycle</b><br/>dino: hits=0 best=0.00 labels=[]</div><div class='feat'><b>sky_openness</b><br/>seg: fraction=0.000<br/>siglip: enclosed space with little sky (0.011)</div><div class='feat'><b>building_enclosure</b><br/>seg: fraction=0.451<br/>siglip: open area with few buildings (-0.018)</div><div class='feat'><b>vegetation_enclosure</b><br/>seg: fraction=0.000<br/>siglip: tree-lined path (-0.041)</div><div class='feat'><b>ground_openness</b><br/>seg: fraction=0.113<br/>siglip: narrow enclosed walkway (-0.001)</div><div class='feat'><b>brightness_level</b><br/>metric[mean_luminance]=0.192</div><div class='feat'><b>luminance_contrast</b><br/>metric[luminance_std]=0.184</div><div class='feat'><b>edge_complexity</b><br/>metric[gradient_edge_density]=0.028</div><div class='feat'><b>lit_area_soft</b><br/>siglip: well-lit area (0.034)</div><div class='feat'><b>gathering_cluster_soft</b><br/>siglip: group of people gathering (-0.014)</div><div class='feat'><b>focal_dominance_soft</b><br/>siglip: single dominant object in the scene (0.002)<br/>metric[gradient_edge_density]=0.028</div></div>
+            </section>
+            
+            <section class="card">
+              <h2>Image 04 — ChIJB6Xitahw44kR9i_MAEut2RE/00.jpg</h2>
+              <div class="pair">
+                <figure>
+                  <img src="04_dino.jpg" alt="dino"/>
+                  <figcaption>DINO boxes (selected families)</figcaption>
+                </figure>
+                <figure>
+                  <img src="04_seg.jpg" alt="seg"/>
+                  <figcaption>Segmentation overlay (ADE20K colors)</figcaption>
+                </figure>
+              </div>
+              <div class="feats"><div class='feat'><b>seating</b><br/>dino: hits=3 best=0.64 labels=[&#x27;seat wall&#x27;, &#x27;park bench trash can&#x27;, &#x27;park bench trash picn</div><div class='feat'><b>tree</b><br/>dino: hits=7 best=0.54 labels=[&#x27;tree&#x27;, &#x27;tree canopy leafy canopy&#x27;, &#x27;large tree mature tree<br/>seg: fraction=0.077</div><div class='feat'><b>path_walkway</b><br/>dino: hits=1 best=0.27 labels=[&#x27;path walkway&#x27;]<br/>seg: fraction=0.104</div><div class='feat'><b>people</b><br/>dino: hits=0 best=0.00 labels=[]</div><div class='feat'><b>building_mass</b><br/>dino: hits=1 best=0.43 labels=[&#x27;building large building&#x27;]<br/>seg: fraction=0.628</div><div class='feat'><b>sign</b><br/>dino: hits=0 best=0.00 labels=[]</div><div class='feat'><b>fence</b><br/>dino: hits=2 best=0.33 labels=[&#x27;fence metal fence wooden fence chain link fence&#x27;, &#x27;fence m</div><div class='feat'><b>bicycle</b><br/>dino: hits=1 best=0.27 labels=[&#x27;parked bicycle&#x27;]</div><div class='feat'><b>sky_openness</b><br/>seg: fraction=0.059<br/>siglip: enclosed space with little sky (0.041)</div><div class='feat'><b>building_enclosure</b><br/>seg: fraction=0.690<br/>siglip: tall buildings enclosing the street (0.087)</div><div class='feat'><b>vegetation_enclosure</b><br/>seg: fraction=0.130<br/>siglip: open lawn with few trees (0.022)</div><div class='feat'><b>ground_openness</b><br/>seg: fraction=0.104<br/>siglip: narrow enclosed walkway (0.055)</div><div class='feat'><b>brightness_level</b><br/>metric[mean_luminance]=0.263</div><div class='feat'><b>luminance_contrast</b><br/>metric[luminance_std]=0.234</div><div class='feat'><b>edge_complexity</b><br/>metric[gradient_edge_density]=0.028</div><div class='feat'><b>lit_area_soft</b><br/>siglip: dark poorly lit path (0.049)</div><div class='feat'><b>gathering_cluster_soft</b><br/>siglip: empty plaza with no people (0.028)</div><div class='feat'><b>focal_dominance_soft</b><br/>siglip: single dominant object in the scene (0.040)<br/>metric[gradient_edge_density]=0.028</div></div>
+            </section>
+            
+            <section class="card">
+              <h2>Image 05 — ChIJgaT0OeR544kRDWVr7eYaS-g/01.jpg</h2>
+              <div class="pair">
+                <figure>
+                  <img src="05_dino.jpg" alt="dino"/>
+                  <figcaption>DINO boxes (selected families)</figcaption>
+                </figure>
+                <figure>
+                  <img src="05_seg.jpg" alt="seg"/>
+                  <figcaption>Segmentation overlay (ADE20K colors)</figcaption>
+                </figure>
+              </div>
+              <div class="feats"><div class='feat'><b>seating</b><br/>dino: hits=5 best=0.48 labels=[&#x27;bench park bench&#x27;, &#x27;seat wall&#x27;, &#x27;park bench&#x27;, &#x27;park bench </div><div class='feat'><b>tree</b><br/>dino: hits=10 best=0.52 labels=[&#x27;tree&#x27;, &#x27;tree&#x27;, &#x27;tree&#x27;, &#x27;large tree mature tree tree&#x27;, &#x27;lar<br/>seg: fraction=0.223</div><div class='feat'><b>path_walkway</b><br/>dino: hits=3 best=0.29 labels=[&#x27;path walkway sidewalk footpath&#x27;, &#x27;footpath&#x27;, &#x27;path paved w<br/>seg: fraction=0.000</div><div class='feat'><b>people</b><br/>dino: hits=6 best=0.55 labels=[&#x27;pedestrian&#x27;, &#x27;pedestrian&#x27;, &#x27;person&#x27;, &#x27;person&#x27;, &#x27;person&#x27;]</div><div class='feat'><b>building_mass</b><br/>dino: hits=2 best=0.39 labels=[&#x27;building large building building facade building front&#x27;, &#x27;<br/>seg: fraction=0.029</div><div class='feat'><b>sign</b><br/>dino: hits=0 best=0.00 labels=[]</div><div class='feat'><b>fence</b><br/>dino: hits=0 best=0.00 labels=[]</div><div class='feat'><b>bicycle</b><br/>dino: hits=3 best=0.29 labels=[&#x27;bicycle&#x27;, &#x27;cyclist&#x27;, &#x27;cyclist&#x27;]</div><div class='feat'><b>sky_openness</b><br/>seg: fraction=0.335<br/>siglip: open sky (0.043)</div><div class='feat'><b>building_enclosure</b><br/>seg: fraction=0.029<br/>siglip: open area with few buildings (0.064)</div><div class='feat'><b>vegetation_enclosure</b><br/>seg: fraction=0.223<br/>siglip: tree-lined path (0.061)</div><div class='feat'><b>ground_openness</b><br/>seg: fraction=0.392<br/>siglip: wide open paved plaza (0.069)</div><div class='feat'><b>brightness_level</b><br/>metric[mean_luminance]=0.393</div><div class='feat'><b>luminance_contrast</b><br/>metric[luminance_std]=0.249</div><div class='feat'><b>edge_complexity</b><br/>metric[gradient_edge_density]=0.088</div><div class='feat'><b>lit_area_soft</b><br/>siglip: well-lit area (0.050)</div><div class='feat'><b>gathering_cluster_soft</b><br/>siglip: empty plaza with no people (0.057)</div><div class='feat'><b>focal_dominance_soft</b><br/>siglip: single dominant object in the scene (0.031)<br/>metric[gradient_edge_density]=0.088</div></div>
+            </section>
+            
+</body>
+</html>

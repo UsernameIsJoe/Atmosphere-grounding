@@ -20,7 +20,7 @@ from atmosphere_grounding.graph import (
     inspect_atmosphere,
     load_graphml,
 )
-from atmosphere_grounding.ground import detect_objects, run_ground
+from atmosphere_grounding.ground import detect_objects, run_ground, run_visual_categories
 
 app = typer.Typer(
     name="atmosphere",
@@ -123,6 +123,26 @@ def detect_cmd(config: Optional[str] = typer.Option(None)) -> None:
     cfg = _cfg(config)
     rows = detect_objects(cfg)
     rprint({"n_detections": len(rows)})
+
+
+@app.command("visual-categories")
+def visual_categories_cmd(
+    config: Optional[str] = typer.Option(None),
+    force: bool = typer.Option(False, help="Recompute even if visual_features.jsonl exists"),
+    max_images: Optional[int] = typer.Option(
+        None, help="Limit images (smoke tests); default = all"
+    ),
+) -> None:
+    """Extract DINO / SigLIP / seg / metric features for visual-category families."""
+    cfg = _cfg(config)
+    rows = run_visual_categories(cfg, force=force, max_images=max_images)
+    summary_path = resolve_path(cfg, "processed_dir") / "visual_features_summary.json"
+    rprint(
+        {
+            "n_images": len(rows),
+            "summary": str(summary_path),
+        }
+    )
 
 
 @app.command("fuse")

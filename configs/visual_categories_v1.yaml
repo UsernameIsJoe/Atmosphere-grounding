@@ -3,8 +3,8 @@
 # NO predefined bindings to atmosphere lexicon labels.
 # See Docs/visual_categories/phase{1,2,3}_*.txt for decisions and citations.
 #
-# Schema is designed to be extensible: add categories/families later without
-# renaming existing ids. Phrase lists (Grounding DINO words) are deferred.
+# Schema is extensible: add categories/families later without renaming existing ids.
+# Phrases / seg maps / metric formulas populated from Phase 4 extractor benchmark.
 
 version: 1
 status: locked_for_v1
@@ -26,6 +26,29 @@ tools:
   - id: metric
     name: Image metrics
     role: contrast brightness complexity entropy proxies
+
+# Runtime defaults for extractors (overridable in cambridge_pilot.yaml)
+extractor_settings:
+  dino_phrase_chunk_size: 20
+  dino_box_threshold: 0.25
+  # Lower threshold for rare/small objects that failed Phase 4 hit-rate checks
+  dino_box_threshold_by_family:
+    bicycle: 0.18
+    bike_facilities: 0.18
+    light_fixture: 0.20
+    crossing: 0.20
+    railing: 0.20
+    stairs: 0.20
+    fence: 0.20
+    gate: 0.20
+    shrub: 0.20
+    rock_landform: 0.20
+    paving_type: 0.20
+    water_surface: 0.20
+    facade_frontage: 0.20
+    wall: 0.20
+  siglip_score_min: 0.0
+  segmentation_model: facebook/mask2former-swin-small-ade-semantic
 
 categories:
   - id: objects_furnishings
@@ -134,6 +157,7 @@ categories:
         extractors: [dino]
       - id: water_body
         extractors: [dino, seg]
+      # Phase 4: DINO-style metric for slope not usable; keep SigLIP + seg-based proxy
       - id: slope_grade
         extractors: [siglip, metric]
         soft: true
@@ -148,8 +172,9 @@ categories:
         extractors: [dino]
       - id: bicycle
         extractors: [dino]
+      # Phase 4: DINO hit_rate=0 for gathering; SigLIP only
       - id: gathering_cluster_soft
-        extractors: [siglip, dino]
+        extractors: [siglip]
         soft: true
 
   - id: spatial_structure
@@ -190,12 +215,225 @@ categories:
       - id: map_board
         extractors: [dino]
 
-# Deferred (intentionally empty in v1)
-phrases: {}          # family_id -> list of Grounding DINO / SigLIP phrases
-metric_formulas: {}  # family_id -> formula id / params
-seg_class_maps: {}   # family_id -> segmentation class names
+# family_id -> probe phrases (shared by DINO and/or SigLIP as assigned)
+phrases:
+  seating:
+    - bench
+    - chair
+    - seat wall
+    - park bench
+  play:
+    - playground
+    - swing
+    - slide
+    - play structure
+  service_amenity:
+    - trash can
+    - fountain
+    - restroom
+    - water fountain
+  bike_facilities:
+    - bike rack
+    - bicycle rack
+    - bicycle parking
+    - U-rack
+  other_amenity:
+    - picnic table
+    - umbrella
+    - kiosk
+  tree:
+    - tree
+    - large tree
+    - mature tree
+  canopy_shade_plant:
+    - tree canopy
+    - shade tree
+    - leafy canopy
+  lawn_groundcover:
+    - grass
+    - lawn
+    - meadow
+  planting_bed:
+    - flower bed
+    - garden bed
+    - planted flowers
+  shrub:
+    - bush
+    - shrub
+    - hedge plant
+  path_walkway:
+    - path
+    - walkway
+    - sidewalk
+    - footpath
+  plaza_hardscape:
+    - plaza
+    - paved square
+    - courtyard
+  stairs:
+    - stairs
+    - steps
+    - stone steps
+  entrance_threshold:
+    - entrance
+    - gate entrance
+    - doorway
+  crossing:
+    - crosswalk
+    - pedestrian crossing
+    - zebra crossing
+  fence:
+    - fence
+    - metal fence
+    - wooden fence
+    - chain link fence
+  wall:
+    - wall
+    - stone wall
+    - brick wall
+  gate:
+    - gate
+    - iron gate
+    - park gate
+  railing:
+    - railing
+    - handrail
+    - metal railing
+  hedge:
+    - hedge
+    - hedgerow
+  building_mass:
+    - building
+    - large building
+  facade_frontage:
+    - building facade
+    - storefront
+    - building front
+  opening:
+    - window
+    - door
+    - glass door
+  canopy_awning:
+    - awning
+    - canopy
+    - overhang
+  light_fixture:
+    - street lamp
+    - lamp post
+    - park light
+    - light pole
+  lit_area_soft:
+    - well-lit area
+    - illuminated path at night
+    - brightly lit plaza
+    - dark poorly lit path
+  paving_type:
+    - brick pavement
+    - concrete pavement
+    - asphalt path
+    - paved walkway
+  soft_ground:
+    - dirt path
+    - mulch
+    - unpaved ground
+  hard_vertical:
+    - brick wall
+    - glass facade
+    - stone wall
+    - metal fence
+  water_surface:
+    - water surface
+    - reflecting pool
+    - pond water
+  fountain:
+    - fountain
+    - water fountain
+  water_body:
+    - pond
+    - lake
+    - river
+  slope_grade:
+    - sloped ground
+    - steep hill in park
+    - flat level ground
+  rock_landform:
+    - rock
+    - boulder
+    - rock formation
+  people:
+    - people
+    - person
+    - pedestrian
+  bicycle:
+    - bicycle
+    - bike
+    - parked bicycle
+    - cyclist
+  gathering_cluster_soft:
+    - group of people gathering
+    - crowd of people in a park
+    - people sitting together outdoors
+    - empty plaza with no people
+  sky_openness:
+    - open sky
+    - wide open sky above
+    - enclosed space with little sky
+  building_enclosure:
+    - tall buildings enclosing the street
+    - open area with few buildings
+  vegetation_enclosure:
+    - tree-lined path
+    - open lawn with few trees
+  ground_openness:
+    - wide open paved plaza
+    - narrow enclosed walkway
+  focal_dominance_soft:
+    - single dominant object in the scene
+    - busy cluttered scene with many elements
+  sign:
+    - sign
+    - street sign
+    - park sign
+  landmark_object:
+    - statue
+    - monument
+    - clock tower
+    - distinctive landmark
+  map_board:
+    - map board
+    - information board
+    - park map
+
+# ADE20K-style class names (Mask2Former semantic pipeline labels, lowercase)
+seg_class_maps:
+  sky_openness: [sky]
+  building_enclosure: [building, house, skyscraper, wall, fence, railing]
+  vegetation_enclosure: [tree, grass, plant, flower, palm, field]
+  ground_openness: [road, sidewalk, floor, path, earth, sand, runway, stairs]
+  tree: [tree, palm]
+  canopy_shade_plant: [tree, palm]
+  lawn_groundcover: [grass, field]
+  path_walkway: [road, sidewalk, path, floor]
+  plaza_hardscape: [road, sidewalk, floor, path]
+  building_mass: [building, house, skyscraper]
+  facade_frontage: [building, house, wall, window, door]
+  paving_type: [road, sidewalk, floor, path]
+  soft_ground: [earth, sand, field, grass]
+  water_surface: [water, sea, river, pool]
+  water_body: [water, river, pool, sea]
+
+# family_id -> metric formula id (implemented in ground/visual_categories.py)
+metric_formulas:
+  brightness_level: mean_luminance
+  luminance_contrast: luminance_std
+  color_variety: channel_std_mean
+  edge_complexity: gradient_edge_density
+  focal_dominance_soft: gradient_edge_density
+  # Seg-assisted: mean row of soft-ground/path pixels (higher in frame → more slope cue)
+  slope_grade: ground_height_bias
 
 documentation:
   phase1: Docs/visual_categories/phase1_top_level.txt
   phase2: Docs/visual_categories/phase2_subtype_families.txt
   phase3: Docs/visual_categories/phase3_extractors.txt
+  phase4: Docs/visual_categories/phase4_extractor_benchmark.txt

@@ -77,9 +77,14 @@ models:
   siglip_model: google/siglip-base-patch16-224
   grounding_dino_model: IDEA-Research/grounding-dino-tiny
   dinov2_model: facebook/dinov2-small
+  visual_categories_path: configs/visual_categories_v1.yaml
+  use_visual_category_vocab: true
+  segmentation_model: facebook/mask2former-swin-small-ade-semantic
+  dino_phrase_chunk_size: 20
   match_top_k_images: 3
   grounding_box_threshold: 0.25
   grounding_text_threshold: 0.25
+  # Legacy short vocab kept as fallback if ontology load fails
   detection_vocabulary:
     - tree
     - bench

@@ -195,10 +195,40 @@ class TransformersVision:
             probs = self.torch.softmax(logits.float(), dim=-1)
             return [float(v) for v in probs.detach().cpu().tolist()]
 
-    def ground_nouns(self, img: Image.Image, nouns: list[str]) -> list[dict[str, Any]]:
+    def ground_nouns(
+        self,
+        img: Image.Image,
+        nouns: list[str],
+        *,
+        chunk_size: int | None = None,
+        box_threshold: float | None = None,
+    ) -> list[dict[str, Any]]:
         if not nouns:
             return []
-        box_thr = float(self.cfg["models"].get("grounding_box_threshold", 0.25))
+        # Grounding DINO text encoder saturates ~256 tokens; chunk long vocabularies.
+        chunk = int(
+            chunk_size
+            if chunk_size is not None
+            else self.cfg["models"].get("dino_phrase_chunk_size", 20)
+        )
+        if len(nouns) > chunk:
+            merged: list[dict[str, Any]] = []
+            for i in range(0, len(nouns), chunk):
+                merged.extend(
+                    self.ground_nouns(
+                        img,
+                        nouns[i : i + chunk],
+                        chunk_size=chunk,
+                        box_threshold=box_threshold,
+                    )
+                )
+            return merged
+
+        box_thr = float(
+            box_threshold
+            if box_threshold is not None
+            else self.cfg["models"].get("grounding_box_threshold", 0.25)
+        )
         text_thr = float(self.cfg["models"].get("grounding_text_threshold", 0.25))
         if not self.has_gd:
             # SigLIP soft detection over candidate nouns
@@ -306,6 +336,21 @@ def detect_objects(
             return existing
     images = read_jsonl(processed / "images.jsonl")
     vocab = list(cfg["models"].get("detection_vocabulary") or [])
+    # Prefer expanded visual-category DINO phrases when ontology is present
+    if cfg["models"].get("use_visual_category_vocab", True):
+        try:
+            from atmosphere_grounding.ground.visual_categories import (
+                all_dino_phrases,
+                load_visual_ontology,
+            )
+
+            onto = load_visual_ontology(cfg)
+            cat_vocab = all_dino_phrases(onto)
+            if cat_vocab:
+                vocab = cat_vocab
+                log.info("detect_objects: using %d visual-category phrases", len(vocab))
+        except Exception as e:
+            log.warning("visual category vocab unavailable (%s); using config vocab", e)
     backend_name = cfg["models"].get("vision_backend", "heuristic")
 
     if vision is None and backend_name == "transformers":
@@ -398,6 +443,13 @@ def run_ground(cfg: dict[str, Any]) -> list[dict[str, Any]]:
 
     # Image-first detections (always refresh when grounding)
     detect_objects(cfg, vision=vision)
+    # Visual-category feature space (seg / metrics / soft SigLIP / DINO families)
+    try:
+        from atmosphere_grounding.ground.visual_categories import run_visual_categories
+
+        run_visual_categories(cfg, vision=vision)
+    except Exception as e:
+        log.warning("visual category extraction skipped: %s", e)
     objects = read_jsonl(processed / "objects.jsonl")
     objects_by_place: dict[str, list[str]] = defaultdict(list)
     for o in objects:
@@ -591,3 +643,25 @@ def build_profiles(
             "recurring_nouns": nouns,
         }
     return profiles
+
+
+# Visual-category extractors (seg / metrics / family phrases)
+from atmosphere_grounding.ground.visual_categories import (  # noqa: E402
+    all_dino_phrases,
+    extract_image_features,
+    load_visual_ontology,
+    run_visual_categories,
+)
+
+__all__ = [
+    "TransformersVision",
+    "detect_objects",
+    "run_ground",
+    "build_profiles",
+    "heuristic_phrase_scores",
+    "heuristic_ground_nouns",
+    "load_visual_ontology",
+    "all_dino_phrases",
+    "extract_image_features",
+    "run_visual_categories",
+]

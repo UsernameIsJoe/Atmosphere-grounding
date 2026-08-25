@@ -1,0 +1,92 @@
+[
+  {
+    "index": 0,
+    "path": "/Users/tumenglun/Desktop/Extend study/data/raw/images/ChIJQXMWnUV344kRzs9-HfLoekk/00.jpg",
+    "seg_ok": true,
+    "metrics": {
+      "mean_luminance": 0.3276642858982086,
+      "luminance_std": 0.28101909160614014,
+      "channel_std_mean": 0.2848837077617645,
+      "gradient_edge_density": 0.0676175206899643,
+      "color_entropy_norm": 0.9547043708547955
+    },
+    "sky_fraction": 0.07531028806584363,
+    "tree_dino_hits": 13,
+    "people_dino_hits": 8
+  },
+  {
+    "index": 1,
+    "path": "/Users/tumenglun/Desktop/Extend study/data/raw/images/ChIJK-7ymsF344kRN70NFmyfvK8/00.jpg",
+    "seg_ok": true,
+    "metrics": {
+      "mean_luminance": 0.3572354018688202,
+      "luminance_std": 0.22248169779777527,
+      "channel_std_mean": 0.233198881149292,
+      "gradient_edge_density": 0.07753721624612808,
+      "color_entropy_norm": 0.9597354974607544
+    },
+    "sky_fraction": 0.0561679012345679,
+    "tree_dino_hits": 5,
+    "people_dino_hits": 2
+  },
+  {
+    "index": 2,
+    "path": "/Users/tumenglun/Desktop/Extend study/data/raw/images/ChIJM3icQVN344kRZsmgAwN0zc8/00.jpg",
+    "seg_ok": true,
+    "metrics": {
+      "mean_luminance": 0.3973497748374939,
+      "luminance_std": 0.21971461176872253,
+      "channel_std_mean": 0.23181253671646118,
+      "gradient_edge_density": 0.08801679313182831,
+      "color_entropy_norm": 0.9677646192189611
+    },
+    "sky_fraction": 0.0,
+    "tree_dino_hits": 1,
+    "people_dino_hits": 2
+  },
+  {
+    "index": 3,
+    "path": "/Users/tumenglun/Desktop/Extend study/data/raw/images/ChIJsU8r3bFw44kRsWnYyHOKfkk/00.jpg",
+    "seg_ok": true,
+    "metrics": {
+      "mean_luminance": 0.1916477382183075,
+      "luminance_std": 0.1838601976633072,
+      "channel_std_mean": 0.20593154430389404,
+      "gradient_edge_density": 0.02849460020661354,
+      "color_entropy_norm": 0.8757616283306862
+    },
+    "sky_fraction": 0.0,
+    "tree_dino_hits": 0,
+    "people_dino_hits": 6
+  },
+  {
+    "index": 4,
+    "path": "/Users/tumenglun/Desktop/Extend study/data/raw/images/ChIJB6Xitahw44kR9i_MAEut2RE/00.jpg",
+    "seg_ok": true,
+    "metrics": {
+      "mean_luminance": 0.26316994428634644,
+      "luminance_std": 0.23396708071231842,
+      "channel_std_mean": 0.23508809506893158,
+      "gradient_edge_density": 0.028194287791848183,
+      "color_entropy_norm": 0.8449489087726526
+    },
+    "sky_fraction": 0.059386008230452675,
+    "tree_dino_hits": 7,
+    "people_dino_hits": 0
+  },
+  {
+    "index": 5,
+    "path": "/Users/tumenglun/Desktop/Extend study/data/raw/images/ChIJgaT0OeR544kRDWVr7eYaS-g/01.jpg",
+    "seg_ok": true,
+    "metrics": {
+      "mean_luminance": 0.39263126254081726,
+      "luminance_std": 0.2494220733642578,
+      "channel_std_mean": 0.2571712136268616,
+      "gradient_edge_density": 0.08820903301239014,
+      "color_entropy_norm": 0.9719439379513661
+    },
+    "sky_fraction": 0.33486913580246913,
+    "tree_dino_hits": 10,
+    "people_dino_hits": 6
+  }
+]

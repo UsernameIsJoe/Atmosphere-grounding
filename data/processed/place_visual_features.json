@@ -1,0 +1,400 @@
+[
+  {
+    "place_id": "ChIJQXMWnUV344kRzs9-HfLoekk",
+    "n_images": 2,
+    "families": {
+      "bicycle": {
+        "dino_hit_images": 2,
+        "dino_mean_best": 0.4394037276506424,
+        "seg_mean_fraction": null,
+        "siglip_mean_best": null,
+        "metric_mean": null,
+        "n_images": 2
+      },
+      "bike_facilities": {
+        "dino_hit_images": 0,
+        "dino_mean_best": 0.0,
+        "seg_mean_fraction": null,
+        "siglip_mean_best": null,
+        "metric_mean": null,
+        "n_images": 2
+      },
+      "brightness_level": {
+        "dino_hit_images": 0,
+        "dino_mean_best": null,
+        "seg_mean_fraction": null,
+        "siglip_mean_best": null,
+        "metric_mean": 0.36711110174655914,
+        "n_images": 2
+      },
+      "building_enclosure": {
+        "dino_hit_images": 0,
+        "dino_mean_best": null,
+        "seg_mean_fraction": 0.12347638888888887,
+        "siglip_mean_best": 0.0958985686302185,
+        "metric_mean": null,
+        "n_images": 2
+      },
+      "building_mass": {
+        "dino_hit_images": 2,
+        "dino_mean_best": 0.40560382604599,
+        "seg_mean_fraction": 0.12347638888888887,
+        "siglip_mean_best": null,
+        "metric_mean": null,
+        "n_images": 2
+      },
+      "canopy_awning": {
+        "dino_hit_images": 2,
+        "dino_mean_best": 0.3036026656627655,
+        "seg_mean_fraction": null,
+        "siglip_mean_best": null,
+        "metric_mean": null,
+        "n_images": 2
+      },
+      "canopy_shade_plant": {
+        "dino_hit_images": 0,
+        "dino_mean_best": 0.0,
+        "seg_mean_fraction": 0.341583487654321,
+        "siglip_mean_best": null,
+        "metric_mean": null,
+        "n_images": 2
+      },
+      "color_variety": {
+        "dino_hit_images": 0,
+        "dino_mean_best": null,
+        "seg_mean_fraction": null,
+        "siglip_mean_best": null,
+        "metric_mean": 0.31050024926662445,
+        "n_images": 2
+      },
+      "crossing": {
+        "dino_hit_images": 2,
+        "dino_mean_best": 0.2718604952096939,
+        "seg_mean_fraction": null,
+        "siglip_mean_best": null,
+        "metric_mean": null,
+        "n_images": 2
+      },
+      "edge_complexity": {
+        "dino_hit_images": 0,
+        "dino_mean_best": null,
+        "seg_mean_fraction": null,
+        "siglip_mean_best": null,
+        "metric_mean": 0.04752316698431969,
+        "n_images": 2
+      },
+      "entrance_threshold": {
+        "dino_hit_images": 1,
+        "dino_mean_best": 0.14332562685012817,
+        "seg_mean_fraction": null,
+        "siglip_mean_best": null,
+        "metric_mean": null,
+        "n_images": 2
+      },
+      "facade_frontage": {
+        "dino_hit_images": 1,
+        "dino_mean_best": 0.15519104897975922,
+        "seg_mean_fraction": 0.12347638888888887,
+        "siglip_mean_best": null,
+        "metric_mean": null,
+        "n_images": 2
+      },
+      "fence": {
+        "dino_hit_images": 0,
+        "dino_mean_best": 0.0,
+        "seg_mean_fraction": null,
+        "siglip_mean_best": null,
+        "metric_mean": null,
+        "n_images": 2
+      },
+      "focal_dominance_soft": {
+        "dino_hit_images": 0,
+        "dino_mean_best": null,
+        "seg_mean_fraction": null,
+        "siglip_mean_best": 0.03559884615242481,
+        "metric_mean": 0.04752316698431969,
+        "n_images": 2
+      },
+      "fountain": {
+        "dino_hit_images": 0,
+        "dino_mean_best": 0.0,
+        "seg_mean_fraction": null,
+        "siglip_mean_best": null,
+        "metric_mean": null,
+        "n_images": 2
+      },
+      "gate": {
+        "dino_hit_images": 0,
+        "dino_mean_best": 0.0,
+        "seg_mean_fraction": null,
+        "siglip_mean_best": null,
+        "metric_mean": null,
+        "n_images": 2
+      },
+      "gathering_cluster_soft": {
+        "dino_hit_images": 0,
+        "dino_mean_best": null,
+        "seg_mean_fraction": null,
+        "siglip_mean_best": 0.061881428584456444,
+        "metric_mean": null,
+        "n_images": 2
+      },
+      "ground_openness": {
+        "dino_hit_images": 0,
+        "dino_mean_best": null,
+        "seg_mean_fraction": 0.018865123456790124,
+        "siglip_mean_best": 0.0785907655954361,
+        "metric_mean": null,
+        "n_images": 2
+      },
+      "hard_vertical": {
+        "dino_hit_images": 1,
+        "dino_mean_best": 0.15755458176136017,
+        "seg_mean_fraction": null,
+        "siglip_mean_best": null,
+        "metric_mean": null,
+        "n_images": 2
+      },
+      "hedge": {
+        "dino_hit_images": 1,
+        "dino_mean_best": 0.15619243681430817,
+        "seg_mean_fraction": null,
+        "siglip_mean_best": null,
+        "metric_mean": null,
+        "n_images": 2
+      },
+      "landmark_object": {
+        "dino_hit_images": 1,
+        "dino_mean_best": 0.13516907393932343,
+        "seg_mean_fraction": null,
+        "siglip_mean_best": 0.055005693808197975,
+        "metric_mean": null,
+        "n_images": 2
+      },
+      "lawn_groundcover": {
+        "dino_hit_images": 2,
+        "dino_mean_best": 0.3667108714580536,
+        "seg_mean_fraction": 0.3057020061728395,
+        "siglip_mean_best": null,
+        "metric_mean": null,
+        "n_images": 2
+      },
+      "light_fixture": {
+        "dino_hit_images": 2,
+        "dino_mean_best": 0.3015529215335846,
+        "seg_mean_fraction": null,
+        "siglip_mean_best": null,
+        "metric_mean": null,
+        "n_images": 2
+      },
+      "lit_area_soft": {
+        "dino_hit_images": 0,
+        "dino_mean_best": null,
+        "seg_mean_fraction": null,
+        "siglip_mean_best": 0.05366404540836811,
+        "metric_mean": null,
+        "n_images": 2
+      },
+      "luminance_contrast": {
+        "dino_hit_images": 0,
+        "dino_mean_best": null,
+        "seg_mean_fraction": null,
+        "siglip_mean_best": null,
+        "metric_mean": 0.3078102022409439,
+        "n_images": 2
+      },
+      "map_board": {
+        "dino_hit_images": 0,
+        "dino_mean_best": 0.0,
+        "seg_mean_fraction": null,
+        "siglip_mean_best": null,
+        "metric_mean": null,
+        "n_images": 2
+      },
+      "opening": {
+        "dino_hit_images": 1,
+        "dino_mean_best": 0.15081122517585754,
+        "seg_mean_fraction": null,
+        "siglip_mean_best": null,
+        "metric_mean": null,
+        "n_images": 2
+      },
+      "other_amenity": {
+        "dino_hit_images": 1,
+        "dino_mean_best": 0.15669485926628113,
+        "seg_mean_fraction": null,
+        "siglip_mean_best": null,
+        "metric_mean": null,
+        "n_images": 2
+      },
+      "path_walkway": {
+        "dino_hit_images": 2,
+        "dino_mean_best": 0.31086112558841705,
+        "seg_mean_fraction": 0.018865123456790124,
+        "siglip_mean_best": null,
+        "metric_mean": null,
+        "n_images": 2
+      },
+      "paving_type": {
+        "dino_hit_images": 0,
+        "dino_mean_best": 0.0,
+        "seg_mean_fraction": 0.018865123456790124,
+        "siglip_mean_best": null,
+        "metric_mean": null,
+        "n_images": 2
+      },
+      "people": {
+        "dino_hit_images": 2,
+        "dino_mean_best": 0.5681098103523254,
+        "seg_mean_fraction": null,
+        "siglip_mean_best": null,
+        "metric_mean": null,
+        "n_images": 2
+      },
+      "planting_bed": {
+        "dino_hit_images": 2,
+        "dino_mean_best": 0.27746693789958954,
+        "seg_mean_fraction": null,
+        "siglip_mean_best": null,
+        "metric_mean": null,
+        "n_images": 2
+      },
+      "play": {
+        "dino_hit_images": 2,
+        "dino_mean_best": 0.38939210772514343,
+        "seg_mean_fraction": null,
+        "siglip_mean_best": null,
+        "metric_mean": null,
+        "n_images": 2
+      },
+      "plaza_hardscape": {
+        "dino_hit_images": 2,
+        "dino_mean_best": 0.35181501507759094,
+        "seg_mean_fraction": 0.018865123456790124,
+        "siglip_mean_best": null,
+        "metric_mean": null,
+        "n_images": 2
+      },
+      "railing": {
+        "dino_hit_images": 1,
+        "dino_mean_best": 0.1583826243877411,
+        "seg_mean_fraction": null,
+        "siglip_mean_best": null,
+        "metric_mean": null,
+        "n_images": 2
+      },
+      "rock_landform": {
+        "dino_hit_images": 0,
+        "dino_mean_best": 0.0,
+        "seg_mean_fraction": null,
+        "siglip_mean_best": null,
+        "metric_mean": null,
+        "n_images": 2
+      },
+      "seating": {
+        "dino_hit_images": 2,
+        "dino_mean_best": 0.38010692596435547,
+        "seg_mean_fraction": null,
+        "siglip_mean_best": null,
+        "metric_mean": null,
+        "n_images": 2
+      },
+      "service_amenity": {
+        "dino_hit_images": 2,
+        "dino_mean_best": 0.5471128523349762,
+        "seg_mean_fraction": null,
+        "siglip_mean_best": null,
+        "metric_mean": null,
+        "n_images": 2
+      },
+      "shrub": {
+        "dino_hit_images": 2,
+        "dino_mean_best": 0.2850305438041687,
+        "seg_mean_fraction": null,
+        "siglip_mean_best": null,
+        "metric_mean": null,
+        "n_images": 2
+      },
+      "sign": {
+        "dino_hit_images": 2,
+        "dino_mean_best": 0.35212579369544983,
+        "seg_mean_fraction": null,
+        "siglip_mean_best": null,
+        "metric_mean": null,
+        "n_images": 2
+      },
+      "sky_openness": {
+        "dino_hit_images": 0,
+        "dino_mean_best": null,
+        "seg_mean_fraction": 0.20941311728395062,
+        "siglip_mean_best": 0.027392512187361717,
+        "metric_mean": null,
+        "n_images": 2
+      },
+      "slope_grade": {
+        "dino_hit_images": 0,
+        "dino_mean_best": null,
+        "seg_mean_fraction": null,
+        "siglip_mean_best": 0.047544531524181366,
+        "metric_mean": 0.8339801132678986,
+        "n_images": 2
+      },
+      "soft_ground": {
+        "dino_hit_images": 2,
+        "dino_mean_best": 0.3479914963245392,
+        "seg_mean_fraction": 0.3057020061728395,
+        "siglip_mean_best": null,
+        "metric_mean": null,
+        "n_images": 2
+      },
+      "stairs": {
+        "dino_hit_images": 1,
+        "dino_mean_best": 0.14876073598861694,
+        "seg_mean_fraction": null,
+        "siglip_mean_best": null,
+        "metric_mean": null,
+        "n_images": 2
+      },
+      "tree": {
+        "dino_hit_images": 2,
+        "dino_mean_best": 0.39347369968891144,
+        "seg_mean_fraction": 0.341583487654321,
+        "siglip_mean_best": null,
+        "metric_mean": null,
+        "n_images": 2
+      },
+      "vegetation_enclosure": {
+        "dino_hit_images": 0,
+        "dino_mean_best": null,
+        "seg_mean_fraction": 0.6472854938271605,
+        "siglip_mean_best": 0.08167871832847595,
+        "metric_mean": null,
+        "n_images": 2
+      },
+      "wall": {
+        "dino_hit_images": 2,
+        "dino_mean_best": 0.3052927255630493,
+        "seg_mean_fraction": null,
+        "siglip_mean_best": null,
+        "metric_mean": null,
+        "n_images": 2
+      },
+      "water_body": {
+        "dino_hit_images": 0,
+        "dino_mean_best": 0.0,
+        "seg_mean_fraction": 0.0,
+        "siglip_mean_best": null,
+        "metric_mean": null,
+        "n_images": 2
+      },
+      "water_surface": {
+        "dino_hit_images": 0,
+        "dino_mean_best": 0.0,
+        "seg_mean_fraction": 0.0,
+        "siglip_mean_best": null,
+        "metric_mean": null,
+        "n_images": 2
+      }
+    }
+  }
+]

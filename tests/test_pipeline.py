@@ -56,6 +56,44 @@ def test_heuristic_extract_lexicon_only():
     assert all(a in {"inviting", "safe", "calm"} for a in atms)
 
 
+def test_visual_ontology_and_metrics(cfg):
+    from PIL import Image
+
+    from atmosphere_grounding.ground.visual_categories import (
+        compute_image_metrics,
+        extract_image_features,
+        iter_families,
+        load_visual_ontology,
+        run_visual_categories,
+    )
+
+    onto = load_visual_ontology(cfg)
+    families = iter_families(onto)
+    assert len(families) >= 40
+    assert onto.get("phrases", {}).get("seating")
+    assert onto.get("seg_class_maps", {}).get("sky_openness") == ["sky"]
+    assert onto["metric_formulas"]["brightness_level"] == "mean_luminance"
+
+    # gathering_cluster_soft should be SigLIP-only after Phase 4
+    g = next(f for f in families if f["family_id"] == "gathering_cluster_soft")
+    assert g["extractors"] == ["siglip"]
+
+    run_collect(cfg, use_fixtures=True)
+    rows = run_visual_categories(cfg, force=True)
+    assert rows
+    fams = rows[0]["families"]
+    assert "brightness_level" in fams
+    assert fams["brightness_level"]["metric"]["value"] is not None
+    assert "seating" in fams
+    assert "dino" in fams["seating"]
+
+    img = Image.new("RGB", (64, 64), color=(120, 140, 100))
+    m = compute_image_metrics(img)
+    assert 0.0 < m["mean_luminance"] < 1.0
+    feats = extract_image_features(img, onto, vision=None, seg=None, cfg=cfg)
+    assert "luminance_contrast" in feats["families"]
+
+
 def test_pipeline_fixtures(cfg):
     collect = run_collect(cfg, use_fixtures=True)
     assert collect["places"]
