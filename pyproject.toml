@@ -30,6 +30,7 @@ vision = [
   "sentencepiece>=0.2.0",
   "protobuf>=4.0.0",
   "open-clip-torch>=2.24.0",
+  "scipy>=1.11.0",
 ]
 dev = [
   "pytest>=8.0.0",

@@ -1,0 +1,136 @@
+==============================================================================
+PHASE 4 — Visual category extractor benchmark
+==============================================================================
+Images tested: 20
+DINO model: IDEA-Research/grounding-dino-tiny
+SigLIP model: google/siglip-base-patch16-224
+Segmentation: mask2former-swin-small-ade-semantic
+
+Verdict legend: OK = usable; WEAK = noisy/low recall; FAIL = not reliable
+
+--- OK (47) ---
+  bike_facilities [dino]
+  brightness_level [metric]
+  building_enclosure [siglip]
+  building_mass [dino]
+  canopy_awning [dino]
+  canopy_shade_plant [dino]
+  color_variety [metric]
+  crossing [dino]
+  edge_complexity [metric]
+  entrance_threshold [dino]
+  facade_frontage [dino]
+  fence [dino]
+  focal_dominance_soft [metric]
+  fountain [dino]
+  gate [dino]
+  gathering_cluster_soft [dino]
+  gathering_cluster_soft [siglip]
+  ground_openness [siglip]
+  hard_vertical [dino]
+  hedge [dino]
+  landmark_object [dino]
+  landmark_object [siglip]
+  lawn_groundcover [dino]
+  light_fixture [dino]
+  luminance_contrast [metric]
+  map_board [dino]
+  opening [dino]
+  other_amenity [dino]
+  path_walkway [dino]
+  paving_type [dino]
+  people [dino]
+  planting_bed [dino]
+  play [dino]
+  plaza_hardscape [dino]
+  railing [dino]
+  rock_landform [dino]
+  seating [dino]
+  service_amenity [dino]
+  shrub [dino]
+  sign [dino]
+  soft_ground [dino]
+  stairs [dino]
+  tree [dino]
+  vegetation_enclosure [siglip]
+  wall [dino]
+  water_body [dino]
+  water_surface [dino]
+
+--- WEAK (4) ---
+  focal_dominance_soft [siglip]
+  lit_area_soft [siglip]
+  sky_openness [siglip]
+  slope_grade [siglip]
+
+--- FAIL (2) ---
+  bicycle [dino]
+  slope_grade [metric]
+
+--- FAIL_BACKEND (15) ---
+  building_enclosure [seg]
+  building_mass [seg]
+  canopy_shade_plant [seg]
+  facade_frontage [seg]
+  ground_openness [seg]
+  lawn_groundcover [seg]
+  path_walkway [seg]
+  paving_type [seg]
+  plaza_hardscape [seg]
+  sky_openness [seg]
+  soft_ground [seg]
+  tree [seg]
+  vegetation_enclosure [seg]
+  water_body [seg]
+  water_surface [seg]
+
+Per-family detail (primary extractor verdict):
+  bicycle: primary=dino -> FAIL | all={'dino': 'FAIL'}
+  bike_facilities: primary=dino -> OK | all={'dino': 'OK'}
+  brightness_level: primary=metric -> OK | all={'metric': 'OK'}
+  building_enclosure: primary=seg -> FAIL_BACKEND | all={'seg': 'FAIL_BACKEND', 'siglip': 'OK'}
+  building_mass: primary=seg -> FAIL_BACKEND | all={'seg': 'FAIL_BACKEND', 'dino': 'OK'}
+  canopy_awning: primary=dino -> OK | all={'dino': 'OK'}
+  canopy_shade_plant: primary=dino -> OK | all={'dino': 'OK', 'seg': 'FAIL_BACKEND'}
+  color_variety: primary=metric -> OK | all={'metric': 'OK'}
+  crossing: primary=dino -> OK | all={'dino': 'OK'}
+  edge_complexity: primary=metric -> OK | all={'metric': 'OK'}
+  entrance_threshold: primary=dino -> OK | all={'dino': 'OK'}
+  facade_frontage: primary=dino -> OK | all={'dino': 'OK', 'seg': 'FAIL_BACKEND'}
+  fence: primary=dino -> OK | all={'dino': 'OK'}
+  focal_dominance_soft: primary=siglip -> WEAK | all={'siglip': 'WEAK', 'metric': 'OK'}
+  fountain: primary=dino -> OK | all={'dino': 'OK'}
+  gate: primary=dino -> OK | all={'dino': 'OK'}
+  gathering_cluster_soft: primary=siglip -> OK | all={'siglip': 'OK', 'dino': 'OK'}
+  ground_openness: primary=seg -> FAIL_BACKEND | all={'seg': 'FAIL_BACKEND', 'siglip': 'OK'}
+  hard_vertical: primary=dino -> OK | all={'dino': 'OK'}
+  hedge: primary=dino -> OK | all={'dino': 'OK'}
+  landmark_object: primary=dino -> OK | all={'dino': 'OK', 'siglip': 'OK'}
+  lawn_groundcover: primary=dino -> OK | all={'dino': 'OK', 'seg': 'FAIL_BACKEND'}
+  light_fixture: primary=dino -> OK | all={'dino': 'OK'}
+  lit_area_soft: primary=siglip -> WEAK | all={'siglip': 'WEAK'}
+  luminance_contrast: primary=metric -> OK | all={'metric': 'OK'}
+  map_board: primary=dino -> OK | all={'dino': 'OK'}
+  opening: primary=dino -> OK | all={'dino': 'OK'}
+  other_amenity: primary=dino -> OK | all={'dino': 'OK'}
+  path_walkway: primary=dino -> OK | all={'dino': 'OK', 'seg': 'FAIL_BACKEND'}
+  paving_type: primary=dino -> OK | all={'dino': 'OK', 'seg': 'FAIL_BACKEND'}
+  people: primary=dino -> OK | all={'dino': 'OK'}
+  planting_bed: primary=dino -> OK | all={'dino': 'OK'}
+  play: primary=dino -> OK | all={'dino': 'OK'}
+  plaza_hardscape: primary=dino -> OK | all={'dino': 'OK', 'seg': 'FAIL_BACKEND'}
+  railing: primary=dino -> OK | all={'dino': 'OK'}
+  rock_landform: primary=dino -> OK | all={'dino': 'OK'}
+  seating: primary=dino -> OK | all={'dino': 'OK'}
+  service_amenity: primary=dino -> OK | all={'dino': 'OK'}
+  shrub: primary=dino -> OK | all={'dino': 'OK'}
+  sign: primary=dino -> OK | all={'dino': 'OK'}
+  sky_openness: primary=seg -> FAIL_BACKEND | all={'seg': 'FAIL_BACKEND', 'siglip': 'WEAK'}
+  slope_grade: primary=siglip -> WEAK | all={'siglip': 'WEAK', 'metric': 'FAIL'}
+  soft_ground: primary=dino -> OK | all={'dino': 'OK', 'seg': 'FAIL_BACKEND'}
+  stairs: primary=dino -> OK | all={'dino': 'OK'}
+  tree: primary=dino -> OK | all={'dino': 'OK', 'seg': 'FAIL_BACKEND'}
+  vegetation_enclosure: primary=seg -> FAIL_BACKEND | all={'seg': 'FAIL_BACKEND', 'siglip': 'OK'}
+  wall: primary=dino -> OK | all={'dino': 'OK'}
+  water_body: primary=dino -> OK | all={'dino': 'OK', 'seg': 'FAIL_BACKEND'}
+  water_surface: primary=seg -> FAIL_BACKEND | all={'seg': 'FAIL_BACKEND', 'dino': 'OK'}

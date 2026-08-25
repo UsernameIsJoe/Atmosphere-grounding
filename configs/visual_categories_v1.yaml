@@ -1,0 +1,201 @@
+# Visual category ontology v1
+# Descriptive image-reading structure for atmosphere grounding.
+# NO predefined bindings to atmosphere lexicon labels.
+# See Docs/visual_categories/phase{1,2,3}_*.txt for decisions and citations.
+#
+# Schema is designed to be extensible: add categories/families later without
+# renaming existing ids. Phrase lists (Grounding DINO words) are deferred.
+
+version: 1
+status: locked_for_v1
+extensible: true
+unit_primary: image
+unit_aggregate: place
+
+# Locked analysis tools (Phase 3)
+tools:
+  - id: dino
+    name: Grounding DINO
+    role: open-vocab localized boxes/phrases
+  - id: seg
+    name: Semantic segmentation
+    role: pixel or view-factor fractions
+  - id: siglip
+    name: SigLIP
+    role: soft image-phrase similarity
+  - id: metric
+    name: Image metrics
+    role: contrast brightness complexity entropy proxies
+
+categories:
+  - id: objects_furnishings
+    name: Objects & furnishings
+    extensible: true
+    families:
+      - id: seating
+        extractors: [dino]
+      - id: play
+        extractors: [dino]
+      - id: service_amenity
+        extractors: [dino]
+      - id: bike_facilities
+        extractors: [dino]
+      - id: other_amenity
+        extractors: [dino]
+
+  - id: vegetation
+    name: Vegetation
+    extensible: true
+    families:
+      - id: tree
+        extractors: [dino, seg]
+      - id: canopy_shade_plant
+        extractors: [dino, seg]
+      - id: lawn_groundcover
+        extractors: [dino, seg]
+      - id: planting_bed
+        extractors: [dino]
+      - id: shrub
+        extractors: [dino]
+
+  - id: circulation_access
+    name: Circulation & access
+    extensible: true
+    families:
+      - id: path_walkway
+        extractors: [dino, seg]
+      - id: plaza_hardscape
+        extractors: [dino, seg]
+      - id: stairs
+        extractors: [dino]
+      - id: entrance_threshold
+        extractors: [dino]
+      - id: crossing
+        extractors: [dino]
+
+  - id: boundaries_edges
+    name: Boundaries & edges
+    extensible: true
+    families:
+      - id: fence
+        extractors: [dino]
+      - id: wall
+        extractors: [dino]
+      - id: gate
+        extractors: [dino]
+      - id: railing
+        extractors: [dino]
+      - id: hedge
+        extractors: [dino]
+
+  - id: facade_built_form
+    name: Facade & built form
+    extensible: true
+    families:
+      - id: building_mass
+        extractors: [seg, dino]
+      - id: facade_frontage
+        extractors: [dino, seg]
+      - id: opening
+        extractors: [dino]
+      - id: canopy_awning
+        extractors: [dino]
+
+  - id: light
+    name: Light
+    extensible: true
+    families:
+      - id: light_fixture
+        extractors: [dino]
+      - id: lit_area_soft
+        extractors: [siglip]
+        soft: true
+      - id: brightness_level
+        extractors: [metric]
+
+  - id: materiality_surface
+    name: Materiality & surface
+    extensible: true
+    families:
+      - id: paving_type
+        extractors: [dino, seg]
+      - id: soft_ground
+        extractors: [dino, seg]
+      - id: hard_vertical
+        extractors: [dino]
+      - id: water_surface
+        extractors: [seg, dino]
+
+  - id: water_terrain
+    name: Water & terrain
+    extensible: true
+    families:
+      - id: fountain
+        extractors: [dino]
+      - id: water_body
+        extractors: [dino, seg]
+      - id: slope_grade
+        extractors: [siglip, metric]
+        soft: true
+      - id: rock_landform
+        extractors: [dino]
+
+  - id: social_presence
+    name: Social presence
+    extensible: true
+    families:
+      - id: people
+        extractors: [dino]
+      - id: bicycle
+        extractors: [dino]
+      - id: gathering_cluster_soft
+        extractors: [siglip, dino]
+        soft: true
+
+  - id: spatial_structure
+    name: Spatial structure
+    extensible: true
+    families:
+      - id: sky_openness
+        extractors: [seg, siglip]
+      - id: building_enclosure
+        extractors: [seg, siglip]
+      - id: vegetation_enclosure
+        extractors: [seg, siglip]
+      - id: ground_openness
+        extractors: [seg, siglip]
+
+  - id: composition_contrast
+    name: Composition & contrast
+    extensible: true
+    families:
+      - id: luminance_contrast
+        extractors: [metric]
+      - id: color_variety
+        extractors: [metric]
+      - id: edge_complexity
+        extractors: [metric]
+      - id: focal_dominance_soft
+        extractors: [siglip, metric]
+        soft: true
+
+  - id: wayfinding_information
+    name: Wayfinding & information
+    extensible: true
+    families:
+      - id: sign
+        extractors: [dino]
+      - id: landmark_object
+        extractors: [dino, siglip]
+      - id: map_board
+        extractors: [dino]
+
+# Deferred (intentionally empty in v1)
+phrases: {}          # family_id -> list of Grounding DINO / SigLIP phrases
+metric_formulas: {}  # family_id -> formula id / params
+seg_class_maps: {}   # family_id -> segmentation class names
+
+documentation:
+  phase1: Docs/visual_categories/phase1_top_level.txt
+  phase2: Docs/visual_categories/phase2_subtype_families.txt
+  phase3: Docs/visual_categories/phase3_extractors.txt

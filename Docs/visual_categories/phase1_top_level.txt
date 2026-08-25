@@ -1,0 +1,311 @@
+================================================================================
+PHASE 1 — Top-level visual categories (v1)
+Atmosphere Grounding project — image descriptive ontology
+Date: 2026-08-11
+Status: LOCKED for v1 (schema designed to allow later category additions)
+================================================================================
+
+PURPOSE
+-------
+Define a fixed set of top-level categories that describe HOW we read an image.
+Categories are a descriptive ontology for visual features. They are NOT bound
+to atmosphere lexicon labels (inviting / safe / calm / …). Atmosphere links
+are left for the grounding pipeline to discover from data.
+
+Unit of description: primarily IMAGE; PLACE = aggregation of its images.
+Flexibility: categories fixed for v1; schema marks extensible=true for v2+.
+
+
+CURATION METHOD (this phase)
+----------------------------
+Pass 1 of three:
+  1) Top-level categories (this file)
+  2) Subtype families under each category
+  3) Extractor tags per subtype family
+
+Selection criteria for a top-level category:
+  - Supported by urban / ambiance / environmental-psychology / visual theory
+  - Visually decidable from place photos (parks, plazas, open spaces)
+  - Useful as a dimension in a multi-feature space for later verification
+  - No predefined mapping to atmosphere lexicon terms
+
+
+DECISION SUMMARY (v1 top-level list)
+------------------------------------
+KEEP (12 categories):
+
+  id                        name
+  ------------------------- ----------------------------
+  objects_furnishings       Objects & furnishings
+  vegetation                Vegetation
+  circulation_access        Circulation & access
+  boundaries_edges          Boundaries & edges
+  facade_built_form         Facade & built form
+  light                     Light
+  materiality_surface       Materiality & surface
+  water_terrain             Water & terrain
+  social_presence           Social presence
+  spatial_structure         Spatial structure
+  composition_contrast      Composition & contrast
+  wayfinding_information    Wayfinding & information
+
+REJECTED / DEFERRED merges for v1 (kept separate for theory clarity):
+  - Did NOT fold water_terrain into vegetation/materiality (distinct restorative
+    and landscape-design literature; common in park/plaza photos).
+  - Did NOT fold wayfinding into circulation (Lynch separates landmarks/signs
+    from paths; useful for legibility without assuming atmosphere).
+  - Sound / smell / climate comfort: theoretically important to ambiance
+    (Böhme, Thibaud, Gehl) but not reliably available from still photos →
+    OUT OF SCOPE for v1 image ontology (document for multimodal v2).
+
+
+--------------------------------------------------------------------------------
+CATEGORY RATIONALES + LITERATURE SUPPORT
+--------------------------------------------------------------------------------
+
+1) objects_furnishings — Objects & furnishings
+   Decision: KEEP as core discrete equipment layer (seating, play, amenities).
+   Why: Public-life and comfort literature treat furnishings as primary stay
+   affordances, independent of overall enclosure or material.
+   Support:
+   - Gehl, J. (2010). Cities for People. Island Press. Twelve Quality Criteria
+     under Comfort: opportunities to sit, stand, see, talk, play/exercise.
+     Tool overview: https://civitas.eu/tool-inventory/twelve-quality-criteria
+     Gehl Architects worksheet: https://gehlpeople.com/tools/twelve-quality-criteria/
+   - Whyte, W. H. (1980). The Social Life of Small Urban Spaces. Conservation
+     Foundation. (seating, ledges, stay features in plazas)
+   CV note: Strong fit for open-vocab object detection (Grounding DINO).
+
+
+2) vegetation — Vegetation
+   Decision: KEEP as living plant structure (trees, lawn, plantings).
+   Why: Greenery is a major human-centric streetscape/park dimension and is
+   measured separately from built mass in CV streetscape work.
+   Support:
+   - Kaplan, R., & Kaplan, S. (1989). The Experience of Nature. Cambridge UP.
+     (restorative / preference role of natural content)
+   - Wang, R., et al. (2019). Urban greenery and mental wellbeing… arXiv:1905.04488
+     https://arxiv.org/abs/1905.04488
+   - Middel, A., et al. (2019). Urban form and composition of street canyons…
+     Landscape and Urban Planning. DOI: 10.1016/j.landurbplan.2018.12.001
+     (trees as a primary spherical fraction class)
+   CV note: Instance phrases via DINO; cover via semantic segmentation.
+
+
+3) circulation_access — Circulation & access
+   Decision: KEEP for how movement and thresholds are structured.
+   Why: Paths and access structure orientation and exploration; Lynch’s
+   “paths” are primary imageability elements.
+   Support:
+   - Lynch, K. (1960). The Image of the City. MIT Press. (paths as dominant
+     element of city image)
+   - Gehl (2010), Comfort: opportunities to walk / accessibility.
+   CV note: path, walkway, stairs, entrance — DINO; hardscape area — seg.
+
+
+4) boundaries_edges — Boundaries & edges
+   Decision: KEEP for what closes, frames, or excludes space.
+   Why: Edges are a Lynch element; barriers are central to safety/exclusion
+   discussions (CPTED, hostile design) without forcing an atmosphere label.
+   Support:
+   - Lynch (1960). Edges as linear boundaries / breaks in continuity.
+   - Appleton, J. (1975). The Experience of Landscape. Wiley.
+     (refuge / enclosure-related preference; barriers as spatial cover)
+   - CPTED literature on territorial definition / access control (e.g. Newman,
+     O. (1972). Defensible Space; later CPTED guides on fencing, gates).
+   CV note: fence, wall, gate, railing, hedge — strong DINO targets.
+
+
+5) facade_built_form — Facade & built form
+   Decision: KEEP buildings/frontage as visual-spatial mass and edge condition.
+   Why: Building walls define enclosure and “soft/hard” edges of public space;
+   distinct from freestanding park objects.
+   Support:
+   - Gehl (2010). Scale; edges of space; building frontage at human scale.
+   - Middel et al. (2019). Buildings as a primary composition class in
+     pedestrian-centric street imagery.
+   CV note: building/facade/door/window phrases (DINO) + building pixel share (seg).
+
+
+6) light — Light
+   Decision: KEEP as illumination cues (fixtures + brightness properties).
+   Why: Böhme treats light as a primary atmosphere *generator*; CPTED/Gehl
+   treat lighting as protection/comfort — still without binding to “safe”.
+   Support:
+   - Böhme, G. (1993). Atmosphere as the Fundamental Concept of a New
+     Aesthetics. Thesis Eleven, 36, 113–126.
+   - Böhme, G.; Thibaud, J.-P. (ed.) (2017). The Aesthetics of Atmospheres.
+     Routledge. (sections on seeing light / phenomenology of light)
+   - Böhme on generators (light & sound as key producers of atmospheres):
+     “The theory of atmospheres and its applications,” IJARA translation.
+     https://doi.org/10.24135/ijara.v0i0.480
+   - Gehl (2010). Protection against crime/violence — lighting as environmental
+     factor in public-life quality criteria practice.
+   CV note: fixtures via DINO; brightness via image metrics; “well-lit” soft
+   phrases via SigLIP. Do not rely on DINO alone for “quality of light.”
+
+
+7) materiality_surface — Materiality & surface
+   Decision: KEEP materials/surfaces as their own dimension.
+   Why: Atmosphere theory emphasizes material ecstasies (how materials radiate
+   into space), not only object identity (a wooden vs metal bench differs).
+   Support:
+   - Böhme (1993; 2017). Things/materials as generators; ecstasies of objects
+     into space (production aesthetics of atmospheres).
+   - Zumthor, P. (2006). Atmospheres. Birkhäuser. (materials, surfaces, and
+     presence in architectural atmosphere — design literature companion)
+   CV note: phrase-level DINO (“brick wall”, “wooden bench”, “glass facade”)
+   plus segmentation for paving vs soft ground where available.
+
+
+8) water_terrain — Water & terrain
+   Decision: KEEP as landscape anchors beyond vegetation cover.
+   Why: Water features and landform are common park/plaza cues and often
+   treated separately from trees/lawn in design and restoration literature.
+   Support:
+   - Kaplan & Kaplan (1989). Water as preferred / restorative landscape content
+     in environmental preference research (general finding across preference
+     studies).
+   - Gehl (2010). Enjoyment / sensory quality; water often used as stay/look
+     attractor in public-space design practice.
+   CV note: fountain, pond, etc. via DINO; water pixels via seg when present.
+
+
+9) social_presence — Social presence
+   Decision: KEEP people/activity traces as a visual dimension.
+   Why: Classic urban social science: presence of others shapes perceived
+   public life; still descriptive (counts/presence), not an atmosphere label.
+   Support:
+   - Jacobs, J. (1961). The Death and Life of Great American Cities.
+     (“eyes on the street”)
+   - Whyte (1980). People as the primary measure of successful plazas.
+   - Gehl (2010). Public life; optional activities; play/exercise.
+   - Middel et al. (2019). “Non-permanent objects” class includes people/
+     vehicles as transient scene content.
+   CV note: people, bicycle via DINO; optional counting.
+
+
+10) spatial_structure — Spatial structure (enclosure / prospect amounts)
+    Decision: KEEP as scene-level spatial amounts (sky/building/veg/ground).
+    Why: Prospect–refuge and enclosure/openness are geometric/perceptual
+    properties measured as extents, not single object boxes.
+    Support:
+    - Appleton, J. (1975). The Experience of Landscape. (prospect & refuge)
+    - Dosen, A. S., & Ostwald, M. J. (2016). Evidence for prospect-refuge
+      theory: a meta-analysis… City, Territory and Architecture.
+      https://doi.org/10.1186/s40410-016-0033-1
+    - Middel et al. (2019). Spherical fractions: sky, trees, buildings,
+      impervious, pervious.
+    - Gong et al. / Li et al. street-view SVF–TVF–BVF line of work, e.g.
+      mapping sky/tree/building view factors from GSV + deep learning.
+    CV note: PRIMARY = semantic segmentation ratios; SigLIP soft phrases
+    optional. NOT a DINO-only category.
+
+
+11) composition_contrast — Composition & contrast
+    Decision: KEEP Gestalt / information properties of the frame.
+    Why: Kaplan preference matrix separates coherence/complexity (immediate
+    2D informational properties) from deeper spatial inference.
+    Support:
+    - Kaplan, S. (1979). Perception and landscape: conceptions and
+      misconceptions. In Proceedings of Our National Landscape (USDA).
+      https://research.fs.usda.gov/treesearch/27585
+      (coherence, complexity, legibility, mystery)
+    - Kaplan, R., & Kaplan, S. (1989). The Experience of Nature.
+    - Recent operationalization of Kaplan visual attributes in urban parks:
+      e.g. discrete-choice studies on coherence/complexity attributes
+      (Sustainability 2022, 14(12), 7357). https://doi.org/10.3390/su14127357
+    CV note: PRIMARY = image metrics (contrast, color variance, edge density);
+    SigLIP soft phrases optional. NOT a DINO-only category.
+
+
+12) wayfinding_information — Wayfinding & information
+    Decision: KEEP signs/landmarks as orientation aids.
+    Why: Lynch landmarks and Kaplan legibility concern finding one’s way;
+    visually localizable without presupposing “legible” atmosphere.
+    Support:
+    - Lynch (1960). Landmarks as point references in the city image.
+    - Kaplan preference matrix: legibility as inferred 3D wayfinding ease
+      (Kaplan 1979; Kaplan & Kaplan 1989).
+    CV note: sign, map board, distinctive landmark objects — DINO.
+
+
+--------------------------------------------------------------------------------
+EXPLICIT NON-GOALS OF PHASE 1
+--------------------------------------------------------------------------------
+- No atmosphere lexicon bindings (inviting/safe/calm/…).
+- No full Grounding DINO word lists (Phase 2 = families; later = phrases).
+- No extractor implementation details beyond high-level CV feasibility notes
+  (Phase 3 assigns extractors formally).
+- No audio/olfactory/thermal categories in v1 (photo constraint).
+
+
+LOCKED TOOL STACK (from prior project decision; referenced here)
+----------------------------------------------------------------
+- Grounding DINO — localizable noun phrases / boxes
+- Semantic segmentation — sky/building/vegetation/ground(/water) fractions
+- SigLIP — soft scene phrases + atmosphere weights at test time
+- Image metrics — contrast, brightness, complexity proxies
+
+
+NEXT PHASE
+----------
+Phase 2: define subtype families under each of the 12 categories, with
+literature or operational support per family, still without atmosphere links
+and without exhaustive phrase lists.
+
+Output file: Docs/visual_categories/phase2_subtype_families.txt
+
+
+CITATION LIST (Phase 1)
+-----------------------
+Appleton, J. (1975). The Experience of Landscape. John Wiley & Sons.
+
+Böhme, G. (1993). Atmosphere as the Fundamental Concept of a New Aesthetics.
+  Thesis Eleven, 36(1), 113–126.
+
+Böhme, G. (2017). The Aesthetics of Atmospheres (J.-P. Thibaud, Ed.).
+  Routledge.
+
+Böhme, G. (trans. Engels-Schwarzpaul). The theory of atmospheres and its
+  applications. Interstices / IJARA.
+  https://doi.org/10.24135/ijara.v0i0.480
+
+Dosen, A. S., & Ostwald, M. J. (2016). Evidence for prospect-refuge theory:
+  A meta-analysis of the findings of environmental preference research.
+  City, Territory and Architecture, 3(4).
+  https://doi.org/10.1186/s40410-016-0033-1
+
+Gehl, J. (2010). Cities for People. Island Press.
+Gehl Architects. Twelve Quality Criteria.
+  https://gehlpeople.com/tools/twelve-quality-criteria/
+
+Jacobs, J. (1961). The Death and Life of Great American Cities. Random House.
+
+Kaplan, R., & Kaplan, S. (1989). The Experience of Nature: A Psychological
+  Perspective. Cambridge University Press.
+
+Kaplan, S. (1979). Perception and landscape: conceptions and misconceptions.
+  USDA Gen. Tech. Rep. PSW-35.
+  https://research.fs.usda.gov/treesearch/27585
+
+Lynch, K. (1960). The Image of the City. MIT Press.
+
+Middel, A., Lukasczyk, J., Zakrzewski, S., Arnold, M., & Maciejewski, R.
+  (2019). Urban form and composition of street canyons: A human-centric big
+  data and deep learning approach. Landscape and Urban Planning, 183, 122–132.
+  https://doi.org/10.1016/j.landurbplan.2018.12.001
+
+Newman, O. (1972). Defensible Space. Macmillan.
+
+Wang, R., Helbich, M., Yao, Y., Zhang, J., Liu, P., Yuan, Y., & Liu, Y.
+  (2019). Urban greenery and mental wellbeing in adults… arXiv:1905.04488.
+
+Whyte, W. H. (1980). The Social Life of Small Urban Spaces. Conservation
+  Foundation.
+
+Zumthor, P. (2006). Atmospheres. Birkhäuser.
+
+================================================================================
+END OF PHASE 1
+================================================================================

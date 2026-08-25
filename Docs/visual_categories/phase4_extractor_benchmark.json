@@ -1,0 +1,1211 @@
+{
+  "n_images": 20,
+  "image_paths": [
+    "/Users/tumenglun/Desktop/Extend study/data/raw/images/ChIJQXMWnUV344kRzs9-HfLoekk/00.jpg",
+    "/Users/tumenglun/Desktop/Extend study/data/raw/images/ChIJC5eyB0J344kRIgcXIHRzdK4/00.jpg",
+    "/Users/tumenglun/Desktop/Extend study/data/raw/images/ChIJqawa215344kROpcUJbbE0Vg/00.jpg",
+    "/Users/tumenglun/Desktop/Extend study/data/raw/images/ChIJE12gBq1w44kR_N0FJNiKAcg/00.jpg",
+    "/Users/tumenglun/Desktop/Extend study/data/raw/images/ChIJ0zpihlJ344kRCAOlne5GEoc/00.jpg",
+    "/Users/tumenglun/Desktop/Extend study/data/raw/images/ChIJlegDpmd344kRZ8VMOsqJ5xM/00.jpg",
+    "/Users/tumenglun/Desktop/Extend study/data/raw/images/ChIJibK7VF9344kRqxrHJkNsISk/00.jpg",
+    "/Users/tumenglun/Desktop/Extend study/data/raw/images/ChIJM3icQVN344kRZsmgAwN0zc8/00.jpg",
+    "/Users/tumenglun/Desktop/Extend study/data/raw/images/ChIJOdNat01344kRr8NyNS4Is-8/00.jpg",
+    "/Users/tumenglun/Desktop/Extend study/data/raw/images/ChIJ25L83fx544kRiuWNvWYdSLA/00.jpg",
+    "/Users/tumenglun/Desktop/Extend study/data/raw/images/ChIJb8XYuVV344kRcoLcVhEuE1A/00.jpg",
+    "/Users/tumenglun/Desktop/Extend study/data/raw/images/ChIJ6ZPQHapw44kR0GWA414vJOI/00.jpg",
+    "/Users/tumenglun/Desktop/Extend study/data/raw/images/ChIJ_Qt69Px544kR9sYP5zl1kw4/00.jpg",
+    "/Users/tumenglun/Desktop/Extend study/data/raw/images/ChIJhaThd61w44kRKvSIN6DksY8/00.jpg",
+    "/Users/tumenglun/Desktop/Extend study/data/raw/images/ChIJB6Xitahw44kR9i_MAEut2RE/00.jpg",
+    "/Users/tumenglun/Desktop/Extend study/data/raw/images/ChIJecplvEJ344kRdjumhjIYylk/00.jpg",
+    "/Users/tumenglun/Desktop/Extend study/data/raw/images/ChIJqbhAWkJ344kR8qCzVUUg3Z8/01.jpg",
+    "/Users/tumenglun/Desktop/Extend study/data/raw/images/ChIJgbyV0EJ344kRTzLd70y72lA/01.jpg",
+    "/Users/tumenglun/Desktop/Extend study/data/raw/images/ChIJL9hFHWh344kR4u0Ypc7ug18/01.jpg",
+    "/Users/tumenglun/Desktop/Extend study/data/raw/images/ChIJbaeXiER344kRR_f4e89EQuM/01.jpg"
+  ],
+  "models": {
+    "grounding_dino": "IDEA-Research/grounding-dino-tiny",
+    "siglip": "google/siglip-base-patch16-224",
+    "segmentation": "facebook/mask2former-swin-small-ade-semantic"
+  },
+  "families": {
+    "seating": {
+      "meta": {
+        "category_id": "objects_furnishings",
+        "category_name": "Objects & furnishings",
+        "family_id": "seating",
+        "extractors": [
+          "dino"
+        ],
+        "soft": false
+      },
+      "extractors": {
+        "dino": {
+          "extractor": "dino",
+          "images_with_detection": 20,
+          "hit_rate": 1.0,
+          "mean_best_score": 0.46632860153913497,
+          "max_best_score": 0.730828046798706,
+          "verdict": "OK"
+        }
+      }
+    },
+    "play": {
+      "meta": {
+        "category_id": "objects_furnishings",
+        "category_name": "Objects & furnishings",
+        "family_id": "play",
+        "extractors": [
+          "dino"
+        ],
+        "soft": false
+      },
+      "extractors": {
+        "dino": {
+          "extractor": "dino",
+          "images_with_detection": 20,
+          "hit_rate": 1.0,
+          "mean_best_score": 0.4752633646130562,
+          "max_best_score": 0.6754212975502014,
+          "verdict": "OK"
+        }
+      }
+    },
+    "service_amenity": {
+      "meta": {
+        "category_id": "objects_furnishings",
+        "category_name": "Objects & furnishings",
+        "family_id": "service_amenity",
+        "extractors": [
+          "dino"
+        ],
+        "soft": false
+      },
+      "extractors": {
+        "dino": {
+          "extractor": "dino",
+          "images_with_detection": 20,
+          "hit_rate": 1.0,
+          "mean_best_score": 0.5524682179093361,
+          "max_best_score": 0.6881414651870728,
+          "verdict": "OK"
+        }
+      }
+    },
+    "bike_facilities": {
+      "meta": {
+        "category_id": "objects_furnishings",
+        "category_name": "Objects & furnishings",
+        "family_id": "bike_facilities",
+        "extractors": [
+          "dino"
+        ],
+        "soft": false
+      },
+      "extractors": {
+        "dino": {
+          "extractor": "dino",
+          "images_with_detection": 15,
+          "hit_rate": 0.75,
+          "mean_best_score": 0.28438369929790497,
+          "max_best_score": 0.5430915951728821,
+          "verdict": "OK"
+        }
+      }
+    },
+    "other_amenity": {
+      "meta": {
+        "category_id": "objects_furnishings",
+        "category_name": "Objects & furnishings",
+        "family_id": "other_amenity",
+        "extractors": [
+          "dino"
+        ],
+        "soft": false
+      },
+      "extractors": {
+        "dino": {
+          "extractor": "dino",
+          "images_with_detection": 18,
+          "hit_rate": 0.9,
+          "mean_best_score": 0.39373600482940674,
+          "max_best_score": 0.7028336524963379,
+          "verdict": "OK"
+        }
+      }
+    },
+    "tree": {
+      "meta": {
+        "category_id": "vegetation",
+        "category_name": "Vegetation",
+        "family_id": "tree",
+        "extractors": [
+          "dino",
+          "seg"
+        ],
+        "soft": false
+      },
+      "extractors": {
+        "dino": {
+          "extractor": "dino",
+          "images_with_detection": 20,
+          "hit_rate": 1.0,
+          "mean_best_score": 0.4508869513869286,
+          "max_best_score": 0.6081266403198242,
+          "verdict": "OK"
+        },
+        "seg": {
+          "extractor": "seg",
+          "mean_fraction": 0.0,
+          "std_fraction": 0.0,
+          "seg_backend_ok": false,
+          "verdict": "FAIL_BACKEND"
+        }
+      }
+    },
+    "canopy_shade_plant": {
+      "meta": {
+        "category_id": "vegetation",
+        "category_name": "Vegetation",
+        "family_id": "canopy_shade_plant",
+        "extractors": [
+          "dino",
+          "seg"
+        ],
+        "soft": false
+      },
+      "extractors": {
+        "dino": {
+          "extractor": "dino",
+          "images_with_detection": 20,
+          "hit_rate": 1.0,
+          "mean_best_score": 0.4384646326303482,
+          "max_best_score": 0.5593568682670593,
+          "verdict": "OK"
+        },
+        "seg": {
+          "extractor": "seg",
+          "mean_fraction": 0.0,
+          "std_fraction": 0.0,
+          "seg_backend_ok": false,
+          "verdict": "FAIL_BACKEND"
+        }
+      }
+    },
+    "lawn_groundcover": {
+      "meta": {
+        "category_id": "vegetation",
+        "category_name": "Vegetation",
+        "family_id": "lawn_groundcover",
+        "extractors": [
+          "dino",
+          "seg"
+        ],
+        "soft": false
+      },
+      "extractors": {
+        "dino": {
+          "extractor": "dino",
+          "images_with_detection": 20,
+          "hit_rate": 1.0,
+          "mean_best_score": 0.44314021021127703,
+          "max_best_score": 0.5467496514320374,
+          "verdict": "OK"
+        },
+        "seg": {
+          "extractor": "seg",
+          "mean_fraction": 0.0,
+          "std_fraction": 0.0,
+          "seg_backend_ok": false,
+          "verdict": "FAIL_BACKEND"
+        }
+      }
+    },
+    "planting_bed": {
+      "meta": {
+        "category_id": "vegetation",
+        "category_name": "Vegetation",
+        "family_id": "planting_bed",
+        "extractors": [
+          "dino"
+        ],
+        "soft": false
+      },
+      "extractors": {
+        "dino": {
+          "extractor": "dino",
+          "images_with_detection": 18,
+          "hit_rate": 0.9,
+          "mean_best_score": 0.36211386024951936,
+          "max_best_score": 0.6038504242897034,
+          "verdict": "OK"
+        }
+      }
+    },
+    "shrub": {
+      "meta": {
+        "category_id": "vegetation",
+        "category_name": "Vegetation",
+        "family_id": "shrub",
+        "extractors": [
+          "dino"
+        ],
+        "soft": false
+      },
+      "extractors": {
+        "dino": {
+          "extractor": "dino",
+          "images_with_detection": 20,
+          "hit_rate": 1.0,
+          "mean_best_score": 0.40065744072198867,
+          "max_best_score": 0.5297871828079224,
+          "verdict": "OK"
+        }
+      }
+    },
+    "path_walkway": {
+      "meta": {
+        "category_id": "circulation_access",
+        "category_name": "Circulation & access",
+        "family_id": "path_walkway",
+        "extractors": [
+          "dino",
+          "seg"
+        ],
+        "soft": false
+      },
+      "extractors": {
+        "dino": {
+          "extractor": "dino",
+          "images_with_detection": 20,
+          "hit_rate": 1.0,
+          "mean_best_score": 0.4182182773947716,
+          "max_best_score": 0.5458940863609314,
+          "verdict": "OK"
+        },
+        "seg": {
+          "extractor": "seg",
+          "mean_fraction": 0.0,
+          "std_fraction": 0.0,
+          "seg_backend_ok": false,
+          "verdict": "FAIL_BACKEND"
+        }
+      }
+    },
+    "plaza_hardscape": {
+      "meta": {
+        "category_id": "circulation_access",
+        "category_name": "Circulation & access",
+        "family_id": "plaza_hardscape",
+        "extractors": [
+          "dino",
+          "seg"
+        ],
+        "soft": false
+      },
+      "extractors": {
+        "dino": {
+          "extractor": "dino",
+          "images_with_detection": 20,
+          "hit_rate": 1.0,
+          "mean_best_score": 0.47940315008163453,
+          "max_best_score": 0.5816677808761597,
+          "verdict": "OK"
+        },
+        "seg": {
+          "extractor": "seg",
+          "mean_fraction": 0.0,
+          "std_fraction": 0.0,
+          "seg_backend_ok": false,
+          "verdict": "FAIL_BACKEND"
+        }
+      }
+    },
+    "stairs": {
+      "meta": {
+        "category_id": "circulation_access",
+        "category_name": "Circulation & access",
+        "family_id": "stairs",
+        "extractors": [
+          "dino"
+        ],
+        "soft": false
+      },
+      "extractors": {
+        "dino": {
+          "extractor": "dino",
+          "images_with_detection": 17,
+          "hit_rate": 0.85,
+          "mean_best_score": 0.3058351218700409,
+          "max_best_score": 0.4439444839954376,
+          "verdict": "OK"
+        }
+      }
+    },
+    "entrance_threshold": {
+      "meta": {
+        "category_id": "circulation_access",
+        "category_name": "Circulation & access",
+        "family_id": "entrance_threshold",
+        "extractors": [
+          "dino"
+        ],
+        "soft": false
+      },
+      "extractors": {
+        "dino": {
+          "extractor": "dino",
+          "images_with_detection": 20,
+          "hit_rate": 1.0,
+          "mean_best_score": 0.39551578015089034,
+          "max_best_score": 0.5604766607284546,
+          "verdict": "OK"
+        }
+      }
+    },
+    "crossing": {
+      "meta": {
+        "category_id": "circulation_access",
+        "category_name": "Circulation & access",
+        "family_id": "crossing",
+        "extractors": [
+          "dino"
+        ],
+        "soft": false
+      },
+      "extractors": {
+        "dino": {
+          "extractor": "dino",
+          "images_with_detection": 20,
+          "hit_rate": 1.0,
+          "mean_best_score": 0.42416354864835737,
+          "max_best_score": 0.6535258293151855,
+          "verdict": "OK"
+        }
+      }
+    },
+    "fence": {
+      "meta": {
+        "category_id": "boundaries_edges",
+        "category_name": "Boundaries & edges",
+        "family_id": "fence",
+        "extractors": [
+          "dino"
+        ],
+        "soft": false
+      },
+      "extractors": {
+        "dino": {
+          "extractor": "dino",
+          "images_with_detection": 19,
+          "hit_rate": 0.95,
+          "mean_best_score": 0.3623853802680969,
+          "max_best_score": 0.5370886921882629,
+          "verdict": "OK"
+        }
+      }
+    },
+    "wall": {
+      "meta": {
+        "category_id": "boundaries_edges",
+        "category_name": "Boundaries & edges",
+        "family_id": "wall",
+        "extractors": [
+          "dino"
+        ],
+        "soft": false
+      },
+      "extractors": {
+        "dino": {
+          "extractor": "dino",
+          "images_with_detection": 20,
+          "hit_rate": 1.0,
+          "mean_best_score": 0.4161769405007362,
+          "max_best_score": 0.6439017653465271,
+          "verdict": "OK"
+        }
+      }
+    },
+    "gate": {
+      "meta": {
+        "category_id": "boundaries_edges",
+        "category_name": "Boundaries & edges",
+        "family_id": "gate",
+        "extractors": [
+          "dino"
+        ],
+        "soft": false
+      },
+      "extractors": {
+        "dino": {
+          "extractor": "dino",
+          "images_with_detection": 19,
+          "hit_rate": 0.95,
+          "mean_best_score": 0.40033384412527084,
+          "max_best_score": 0.5837504863739014,
+          "verdict": "OK"
+        }
+      }
+    },
+    "railing": {
+      "meta": {
+        "category_id": "boundaries_edges",
+        "category_name": "Boundaries & edges",
+        "family_id": "railing",
+        "extractors": [
+          "dino"
+        ],
+        "soft": false
+      },
+      "extractors": {
+        "dino": {
+          "extractor": "dino",
+          "images_with_detection": 18,
+          "hit_rate": 0.9,
+          "mean_best_score": 0.34755494743585585,
+          "max_best_score": 0.5939869284629822,
+          "verdict": "OK"
+        }
+      }
+    },
+    "hedge": {
+      "meta": {
+        "category_id": "boundaries_edges",
+        "category_name": "Boundaries & edges",
+        "family_id": "hedge",
+        "extractors": [
+          "dino"
+        ],
+        "soft": false
+      },
+      "extractors": {
+        "dino": {
+          "extractor": "dino",
+          "images_with_detection": 19,
+          "hit_rate": 0.95,
+          "mean_best_score": 0.412241593003273,
+          "max_best_score": 0.6173092722892761,
+          "verdict": "OK"
+        }
+      }
+    },
+    "building_mass": {
+      "meta": {
+        "category_id": "facade_built_form",
+        "category_name": "Facade & built form",
+        "family_id": "building_mass",
+        "extractors": [
+          "seg",
+          "dino"
+        ],
+        "soft": false
+      },
+      "extractors": {
+        "seg": {
+          "extractor": "seg",
+          "mean_fraction": 0.0,
+          "std_fraction": 0.0,
+          "seg_backend_ok": false,
+          "verdict": "FAIL_BACKEND"
+        },
+        "dino": {
+          "extractor": "dino",
+          "images_with_detection": 20,
+          "hit_rate": 1.0,
+          "mean_best_score": 0.47848377376794815,
+          "max_best_score": 0.6458262801170349,
+          "verdict": "OK"
+        }
+      }
+    },
+    "facade_frontage": {
+      "meta": {
+        "category_id": "facade_built_form",
+        "category_name": "Facade & built form",
+        "family_id": "facade_frontage",
+        "extractors": [
+          "dino",
+          "seg"
+        ],
+        "soft": false
+      },
+      "extractors": {
+        "dino": {
+          "extractor": "dino",
+          "images_with_detection": 20,
+          "hit_rate": 1.0,
+          "mean_best_score": 0.4141696035861969,
+          "max_best_score": 0.5394057631492615,
+          "verdict": "OK"
+        },
+        "seg": {
+          "extractor": "seg",
+          "mean_fraction": 0.0,
+          "std_fraction": 0.0,
+          "seg_backend_ok": false,
+          "verdict": "FAIL_BACKEND"
+        }
+      }
+    },
+    "opening": {
+      "meta": {
+        "category_id": "facade_built_form",
+        "category_name": "Facade & built form",
+        "family_id": "opening",
+        "extractors": [
+          "dino"
+        ],
+        "soft": false
+      },
+      "extractors": {
+        "dino": {
+          "extractor": "dino",
+          "images_with_detection": 20,
+          "hit_rate": 1.0,
+          "mean_best_score": 0.3946469396352768,
+          "max_best_score": 0.5357686281204224,
+          "verdict": "OK"
+        }
+      }
+    },
+    "canopy_awning": {
+      "meta": {
+        "category_id": "facade_built_form",
+        "category_name": "Facade & built form",
+        "family_id": "canopy_awning",
+        "extractors": [
+          "dino"
+        ],
+        "soft": false
+      },
+      "extractors": {
+        "dino": {
+          "extractor": "dino",
+          "images_with_detection": 18,
+          "hit_rate": 0.9,
+          "mean_best_score": 0.35328384637832644,
+          "max_best_score": 0.49946996569633484,
+          "verdict": "OK"
+        }
+      }
+    },
+    "light_fixture": {
+      "meta": {
+        "category_id": "light",
+        "category_name": "Light",
+        "family_id": "light_fixture",
+        "extractors": [
+          "dino"
+        ],
+        "soft": false
+      },
+      "extractors": {
+        "dino": {
+          "extractor": "dino",
+          "images_with_detection": 18,
+          "hit_rate": 0.9,
+          "mean_best_score": 0.3761328861117363,
+          "max_best_score": 0.6630250215530396,
+          "verdict": "OK"
+        }
+      }
+    },
+    "lit_area_soft": {
+      "meta": {
+        "category_id": "light",
+        "category_name": "Light",
+        "family_id": "lit_area_soft",
+        "extractors": [
+          "siglip"
+        ],
+        "soft": true
+      },
+      "extractors": {
+        "siglip": {
+          "extractor": "siglip",
+          "mean_best_score": 0.04931038785725832,
+          "std_best_score": 0.01790866784381298,
+          "min_best": 0.019939837977290154,
+          "max_best": 0.07945552468299866,
+          "verdict": "WEAK"
+        }
+      }
+    },
+    "brightness_level": {
+      "meta": {
+        "category_id": "light",
+        "category_name": "Light",
+        "family_id": "brightness_level",
+        "extractors": [
+          "metric"
+        ],
+        "soft": false
+      },
+      "extractors": {
+        "metric": {
+          "extractor": "metric",
+          "mean": 0.41307451128959655,
+          "std": 0.06736086311139178,
+          "always_numeric": true,
+          "verdict": "OK"
+        }
+      }
+    },
+    "paving_type": {
+      "meta": {
+        "category_id": "materiality_surface",
+        "category_name": "Materiality & surface",
+        "family_id": "paving_type",
+        "extractors": [
+          "dino",
+          "seg"
+        ],
+        "soft": false
+      },
+      "extractors": {
+        "dino": {
+          "extractor": "dino",
+          "images_with_detection": 20,
+          "hit_rate": 1.0,
+          "mean_best_score": 0.44625853896141054,
+          "max_best_score": 0.570033073425293,
+          "verdict": "OK"
+        },
+        "seg": {
+          "extractor": "seg",
+          "mean_fraction": 0.0,
+          "std_fraction": 0.0,
+          "seg_backend_ok": false,
+          "verdict": "FAIL_BACKEND"
+        }
+      }
+    },
+    "soft_ground": {
+      "meta": {
+        "category_id": "materiality_surface",
+        "category_name": "Materiality & surface",
+        "family_id": "soft_ground",
+        "extractors": [
+          "dino",
+          "seg"
+        ],
+        "soft": false
+      },
+      "extractors": {
+        "dino": {
+          "extractor": "dino",
+          "images_with_detection": 20,
+          "hit_rate": 1.0,
+          "mean_best_score": 0.4958954453468323,
+          "max_best_score": 0.6458171010017395,
+          "verdict": "OK"
+        },
+        "seg": {
+          "extractor": "seg",
+          "mean_fraction": 0.0,
+          "std_fraction": 0.0,
+          "seg_backend_ok": false,
+          "verdict": "FAIL_BACKEND"
+        }
+      }
+    },
+    "hard_vertical": {
+      "meta": {
+        "category_id": "materiality_surface",
+        "category_name": "Materiality & surface",
+        "family_id": "hard_vertical",
+        "extractors": [
+          "dino"
+        ],
+        "soft": false
+      },
+      "extractors": {
+        "dino": {
+          "extractor": "dino",
+          "images_with_detection": 20,
+          "hit_rate": 1.0,
+          "mean_best_score": 0.4786999821662903,
+          "max_best_score": 0.7841556072235107,
+          "verdict": "OK"
+        }
+      }
+    },
+    "water_surface": {
+      "meta": {
+        "category_id": "materiality_surface",
+        "category_name": "Materiality & surface",
+        "family_id": "water_surface",
+        "extractors": [
+          "seg",
+          "dino"
+        ],
+        "soft": false
+      },
+      "extractors": {
+        "seg": {
+          "extractor": "seg",
+          "mean_fraction": 0.0,
+          "std_fraction": 0.0,
+          "seg_backend_ok": false,
+          "verdict": "FAIL_BACKEND"
+        },
+        "dino": {
+          "extractor": "dino",
+          "images_with_detection": 18,
+          "hit_rate": 0.9,
+          "mean_best_score": 0.3162887990474701,
+          "max_best_score": 0.5065497159957886,
+          "verdict": "OK"
+        }
+      }
+    },
+    "fountain": {
+      "meta": {
+        "category_id": "water_terrain",
+        "category_name": "Water & terrain",
+        "family_id": "fountain",
+        "extractors": [
+          "dino"
+        ],
+        "soft": false
+      },
+      "extractors": {
+        "dino": {
+          "extractor": "dino",
+          "images_with_detection": 19,
+          "hit_rate": 0.95,
+          "mean_best_score": 0.39094818830490113,
+          "max_best_score": 0.5826919674873352,
+          "verdict": "OK"
+        }
+      }
+    },
+    "water_body": {
+      "meta": {
+        "category_id": "water_terrain",
+        "category_name": "Water & terrain",
+        "family_id": "water_body",
+        "extractors": [
+          "dino",
+          "seg"
+        ],
+        "soft": false
+      },
+      "extractors": {
+        "dino": {
+          "extractor": "dino",
+          "images_with_detection": 18,
+          "hit_rate": 0.9,
+          "mean_best_score": 0.3426477923989296,
+          "max_best_score": 0.5826765894889832,
+          "verdict": "OK"
+        },
+        "seg": {
+          "extractor": "seg",
+          "mean_fraction": 0.0,
+          "std_fraction": 0.0,
+          "seg_backend_ok": false,
+          "verdict": "FAIL_BACKEND"
+        }
+      }
+    },
+    "slope_grade": {
+      "meta": {
+        "category_id": "water_terrain",
+        "category_name": "Water & terrain",
+        "family_id": "slope_grade",
+        "extractors": [
+          "siglip",
+          "metric"
+        ],
+        "soft": true
+      },
+      "extractors": {
+        "siglip": {
+          "extractor": "siglip",
+          "mean_best_score": 0.030379021540284157,
+          "std_best_score": 0.015527991767620663,
+          "min_best": -0.008583216927945614,
+          "max_best": 0.05921371653676033,
+          "verdict": "WEAK"
+        },
+        "metric": {
+          "extractor": "metric",
+          "mean": null,
+          "std": null,
+          "always_numeric": false,
+          "verdict": "FAIL"
+        }
+      }
+    },
+    "rock_landform": {
+      "meta": {
+        "category_id": "water_terrain",
+        "category_name": "Water & terrain",
+        "family_id": "rock_landform",
+        "extractors": [
+          "dino"
+        ],
+        "soft": false
+      },
+      "extractors": {
+        "dino": {
+          "extractor": "dino",
+          "images_with_detection": 19,
+          "hit_rate": 0.95,
+          "mean_best_score": 0.3758762255311012,
+          "max_best_score": 0.6446425318717957,
+          "verdict": "OK"
+        }
+      }
+    },
+    "people": {
+      "meta": {
+        "category_id": "social_presence",
+        "category_name": "Social presence",
+        "family_id": "people",
+        "extractors": [
+          "dino"
+        ],
+        "soft": false
+      },
+      "extractors": {
+        "dino": {
+          "extractor": "dino",
+          "images_with_detection": 15,
+          "hit_rate": 0.75,
+          "mean_best_score": 0.42709899991750716,
+          "max_best_score": 0.7532494068145752,
+          "verdict": "OK"
+        }
+      }
+    },
+    "bicycle": {
+      "meta": {
+        "category_id": "social_presence",
+        "category_name": "Social presence",
+        "family_id": "bicycle",
+        "extractors": [
+          "dino"
+        ],
+        "soft": false
+      },
+      "extractors": {
+        "dino": {
+          "extractor": "dino",
+          "images_with_detection": 2,
+          "hit_rate": 0.1,
+          "mean_best_score": 0.041535313427448275,
+          "max_best_score": 0.5311455726623535,
+          "verdict": "FAIL"
+        }
+      }
+    },
+    "gathering_cluster_soft": {
+      "meta": {
+        "category_id": "social_presence",
+        "category_name": "Social presence",
+        "family_id": "gathering_cluster_soft",
+        "extractors": [
+          "siglip",
+          "dino"
+        ],
+        "soft": true
+      },
+      "extractors": {
+        "siglip": {
+          "extractor": "siglip",
+          "mean_best_score": 0.015514886332675814,
+          "std_best_score": 0.03148494246732686,
+          "min_best": -0.03981051966547966,
+          "max_best": 0.08848756551742554,
+          "verdict": "OK"
+        },
+        "dino": {
+          "extractor": "dino",
+          "images_with_detection": 16,
+          "hit_rate": 0.8,
+          "mean_best_score": 0.2513119652867317,
+          "max_best_score": 0.37146157026290894,
+          "verdict": "OK"
+        }
+      }
+    },
+    "sky_openness": {
+      "meta": {
+        "category_id": "spatial_structure",
+        "category_name": "Spatial structure",
+        "family_id": "sky_openness",
+        "extractors": [
+          "seg",
+          "siglip"
+        ],
+        "soft": false
+      },
+      "extractors": {
+        "seg": {
+          "extractor": "seg",
+          "mean_fraction": 0.0,
+          "std_fraction": 0.0,
+          "seg_backend_ok": false,
+          "verdict": "FAIL_BACKEND"
+        },
+        "siglip": {
+          "extractor": "siglip",
+          "mean_best_score": 0.0227932324167341,
+          "std_best_score": 0.01644632047155413,
+          "min_best": -0.029708441346883774,
+          "max_best": 0.04708919674158096,
+          "verdict": "WEAK"
+        }
+      }
+    },
+    "building_enclosure": {
+      "meta": {
+        "category_id": "spatial_structure",
+        "category_name": "Spatial structure",
+        "family_id": "building_enclosure",
+        "extractors": [
+          "seg",
+          "siglip"
+        ],
+        "soft": false
+      },
+      "extractors": {
+        "seg": {
+          "extractor": "seg",
+          "mean_fraction": 0.0,
+          "std_fraction": 0.0,
+          "seg_backend_ok": false,
+          "verdict": "FAIL_BACKEND"
+        },
+        "siglip": {
+          "extractor": "siglip",
+          "mean_best_score": 0.05189293227158487,
+          "std_best_score": 0.030445952145411487,
+          "min_best": -0.037352848798036575,
+          "max_best": 0.0915370061993599,
+          "verdict": "OK"
+        }
+      }
+    },
+    "vegetation_enclosure": {
+      "meta": {
+        "category_id": "spatial_structure",
+        "category_name": "Spatial structure",
+        "family_id": "vegetation_enclosure",
+        "extractors": [
+          "seg",
+          "siglip"
+        ],
+        "soft": false
+      },
+      "extractors": {
+        "seg": {
+          "extractor": "seg",
+          "mean_fraction": 0.0,
+          "std_fraction": 0.0,
+          "seg_backend_ok": false,
+          "verdict": "FAIL_BACKEND"
+        },
+        "siglip": {
+          "extractor": "siglip",
+          "mean_best_score": 0.03230863129720092,
+          "std_best_score": 0.03398259969934499,
+          "min_best": -0.031606387346982956,
+          "max_best": 0.09267224371433258,
+          "verdict": "OK"
+        }
+      }
+    },
+    "ground_openness": {
+      "meta": {
+        "category_id": "spatial_structure",
+        "category_name": "Spatial structure",
+        "family_id": "ground_openness",
+        "extractors": [
+          "seg",
+          "siglip"
+        ],
+        "soft": false
+      },
+      "extractors": {
+        "seg": {
+          "extractor": "seg",
+          "mean_fraction": 0.0,
+          "std_fraction": 0.0,
+          "seg_backend_ok": false,
+          "verdict": "FAIL_BACKEND"
+        },
+        "siglip": {
+          "extractor": "siglip",
+          "mean_best_score": 0.05565301328897476,
+          "std_best_score": 0.023569170003426843,
+          "min_best": 0.004555759951472282,
+          "max_best": 0.1020490825176239,
+          "verdict": "OK"
+        }
+      }
+    },
+    "luminance_contrast": {
+      "meta": {
+        "category_id": "composition_contrast",
+        "category_name": "Composition & contrast",
+        "family_id": "luminance_contrast",
+        "extractors": [
+          "metric"
+        ],
+        "soft": false
+      },
+      "extractors": {
+        "metric": {
+          "extractor": "metric",
+          "mean": 0.2355809688568115,
+          "std": 0.040636326844286495,
+          "always_numeric": true,
+          "verdict": "OK"
+        }
+      }
+    },
+    "color_variety": {
+      "meta": {
+        "category_id": "composition_contrast",
+        "category_name": "Composition & contrast",
+        "family_id": "color_variety",
+        "extractors": [
+          "metric"
+        ],
+        "soft": false
+      },
+      "extractors": {
+        "metric": {
+          "extractor": "metric",
+          "mean": 0.24393253587186337,
+          "std": 0.042177703996215975,
+          "always_numeric": true,
+          "verdict": "OK"
+        }
+      }
+    },
+    "edge_complexity": {
+      "meta": {
+        "category_id": "composition_contrast",
+        "category_name": "Composition & contrast",
+        "family_id": "edge_complexity",
+        "extractors": [
+          "metric"
+        ],
+        "soft": false
+      },
+      "extractors": {
+        "metric": {
+          "extractor": "metric",
+          "mean": 0.05689668678678572,
+          "std": 0.03513822520907246,
+          "always_numeric": true,
+          "verdict": "OK"
+        }
+      }
+    },
+    "focal_dominance_soft": {
+      "meta": {
+        "category_id": "composition_contrast",
+        "category_name": "Composition & contrast",
+        "family_id": "focal_dominance_soft",
+        "extractors": [
+          "siglip",
+          "metric"
+        ],
+        "soft": true
+      },
+      "extractors": {
+        "siglip": {
+          "extractor": "siglip",
+          "mean_best_score": 0.019921474857255816,
+          "std_best_score": 0.011169121352781728,
+          "min_best": -0.0020069293677806854,
+          "max_best": 0.040263354778289795,
+          "verdict": "WEAK"
+        },
+        "metric": {
+          "extractor": "metric",
+          "mean": 0.05689668678678572,
+          "std": 0.03513822520907246,
+          "always_numeric": true,
+          "verdict": "OK"
+        }
+      }
+    },
+    "sign": {
+      "meta": {
+        "category_id": "wayfinding_information",
+        "category_name": "Wayfinding & information",
+        "family_id": "sign",
+        "extractors": [
+          "dino"
+        ],
+        "soft": false
+      },
+      "extractors": {
+        "dino": {
+          "extractor": "dino",
+          "images_with_detection": 18,
+          "hit_rate": 0.9,
+          "mean_best_score": 0.3496673688292503,
+          "max_best_score": 0.5524228811264038,
+          "verdict": "OK"
+        }
+      }
+    },
+    "landmark_object": {
+      "meta": {
+        "category_id": "wayfinding_information",
+        "category_name": "Wayfinding & information",
+        "family_id": "landmark_object",
+        "extractors": [
+          "dino",
+          "siglip"
+        ],
+        "soft": false
+      },
+      "extractors": {
+        "dino": {
+          "extractor": "dino",
+          "images_with_detection": 20,
+          "hit_rate": 1.0,
+          "mean_best_score": 0.4436734467744827,
+          "max_best_score": 0.5902491807937622,
+          "verdict": "OK"
+        },
+        "siglip": {
+          "extractor": "siglip",
+          "mean_best_score": 0.046946457540616396,
+          "std_best_score": 0.023010522930240775,
+          "min_best": 0.00955229438841343,
+          "max_best": 0.1041450947523117,
+          "verdict": "OK"
+        }
+      }
+    },
+    "map_board": {
+      "meta": {
+        "category_id": "wayfinding_information",
+        "category_name": "Wayfinding & information",
+        "family_id": "map_board",
+        "extractors": [
+          "dino"
+        ],
+        "soft": false
+      },
+      "extractors": {
+        "dino": {
+          "extractor": "dino",
+          "images_with_detection": 20,
+          "hit_rate": 1.0,
+          "mean_best_score": 0.40415358543395996,
+          "max_best_score": 0.5840874314308167,
+          "verdict": "OK"
+        }
+      }
+    }
+  }
+}

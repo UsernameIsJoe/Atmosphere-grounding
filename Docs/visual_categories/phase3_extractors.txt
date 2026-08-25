@@ -1,0 +1,195 @@
+================================================================================
+PHASE 3 — Extractor assignment per subtype family (v1)
+Atmosphere Grounding project — image descriptive ontology
+Date: 2026-08-11
+Status: LOCKED for v1 (tool stack frozen; implementations can refine)
+Depends on: phase1_top_level.txt, phase2_subtype_families.txt
+================================================================================
+
+PURPOSE
+-------
+Assign how each subtype family is measured from an image. One ontology;
+multiple tools. Still NO atmosphere lexicon bindings.
+
+LOCKED TOOL STACK
+-----------------
+  dino     Grounding DINO — open-vocab localized boxes/phrases
+  seg      Semantic segmentation — pixel / view-factor fractions
+  siglip   SigLIP — soft image–phrase similarity
+  metric   Classical image statistics — contrast, brightness, entropy, edges
+
+Hybrid allowed. Primary extractor is listed first.
+
+
+WHY MULTI-TOOL (decision reminder)
+----------------------------------
+Grounding DINO answers “is this nouny thing present, and where?”
+It does NOT reliably answer “how open is the space?” or “how high is
+visual contrast?” Those are global properties → seg / metric / soft
+SigLIP phrases. Streetscape literature already splits object-like content
+from sky/building/tree fractions (Middel et al. 2019).
+
+
+ASSIGNMENT RULES
+----------------
+1. If a human can point to an instance → prefer dino.
+2. If the meaning is “how much of the view” → prefer seg.
+3. If the meaning is a global photometric/structural property → metric.
+4. If the cue is abstract/linguistic but useful → siglip (soft).
+5. Fixtures vs qualities stay split (e.g. light_fixture vs brightness_level).
+
+
+--------------------------------------------------------------------------------
+EXTRACTOR TABLE
+--------------------------------------------------------------------------------
+
+CATEGORY                 FAMILY                    PRIMARY     SECONDARY
+-----------------------  ------------------------  ----------  ----------
+objects_furnishings      seating                   dino
+objects_furnishings      play                      dino
+objects_furnishings      service_amenity           dino
+objects_furnishings      bike_facilities           dino
+objects_furnishings      other_amenity             dino
+
+vegetation               tree                      dino        seg
+vegetation               canopy_shade_plant        dino        seg
+vegetation               lawn_groundcover          dino        seg
+vegetation               planting_bed              dino
+vegetation               shrub                     dino
+
+circulation_access       path_walkway              dino        seg
+circulation_access       plaza_hardscape           dino        seg
+circulation_access       stairs                    dino
+circulation_access       entrance_threshold        dino
+circulation_access       crossing                  dino
+
+boundaries_edges         fence                     dino
+boundaries_edges         wall                      dino
+boundaries_edges         gate                      dino
+boundaries_edges         railing                   dino
+boundaries_edges         hedge                     dino
+
+facade_built_form        building_mass             seg         dino
+facade_built_form        facade_frontage           dino        seg
+facade_built_form        opening                   dino
+facade_built_form        canopy_awning             dino
+
+light                    light_fixture             dino
+light                    lit_area_soft             siglip
+light                    brightness_level          metric
+
+materiality_surface      paving_type               dino        seg
+materiality_surface      soft_ground               dino        seg
+materiality_surface      hard_vertical             dino
+materiality_surface      water_surface             seg         dino
+
+water_terrain            fountain                  dino
+water_terrain            water_body                dino        seg
+water_terrain            slope_grade               siglip      metric
+water_terrain            rock_landform             dino
+
+social_presence          people                    dino
+social_presence          bicycle                   dino
+social_presence          gathering_cluster_soft    siglip      dino
+
+spatial_structure        sky_openness              seg         siglip
+spatial_structure        building_enclosure        seg         siglip
+spatial_structure        vegetation_enclosure      seg         siglip
+spatial_structure        ground_openness           seg         siglip
+
+composition_contrast     luminance_contrast        metric
+composition_contrast     color_variety             metric
+composition_contrast     edge_complexity           metric
+composition_contrast     focal_dominance_soft      siglip      metric
+
+wayfinding_information   sign                      dino
+wayfinding_information   landmark_object           dino        siglip
+wayfinding_information   map_board                 dino
+
+
+SUPPORT FOR EXTRACTOR CHOICES
+-----------------------------
+DINO for discrete nouns:
+  Matches open-vocabulary grounded detection practice; aligns with this
+  project’s existing grounding_dino_model usage for object vocabularies.
+
+SEG for spatial amounts:
+  Middel et al. (2019) Landscape & Urban Planning — sky/trees/buildings/
+  impervious/pervious spherical fractions from street imagery.
+  SVF/TVF/BVF GSV+deep learning literature for openness/enclosure proxies.
+
+METRIC for composition:
+  Edge density / complexity: Machado et al., computerized visual complexity.
+  Color entropy / lightness statistics: aesthetics image-property toolboxes
+  (Behavior Research Methods 2025 Aesthetics Toolbox);
+  HortTechnology 2015 color information entropy & preference.
+
+SIGLIP for soft/abstract cues:
+  Already in pipeline for phrase–image matching; appropriate when the cue
+  is linguistic/scene-level (“well-lit path”, “group of people gathering”,
+  “open plaza”) rather than a tight boxable noun.
+
+Böhme (1993; 2017): light as generator → motivates BOTH fixture detection
+and photometric brightness, not fixtures alone.
+
+
+FEATURE-SPACE NOTE (for later verification design)
+--------------------------------------------------
+An image vector can concatenate:
+  - DINO: presence/count/confidence/box stats per family phrases
+  - SEG: fractions per spatial_structure (+ related covers)
+  - METRIC: scalar contrast/brightness/complexity
+  - SIGLIP: soft scores for designated soft families
+Atmosphere weights (multi-label per image) remain a SEPARATE head/output
+discovered/scored from data — not encoded in this ontology.
+
+
+IMPLEMENTATION HINTS (non-binding)
+----------------------------------
+- Segmentation model: Cityscapes/ADE20K-class model (e.g. Mask2Former /
+  DeepLab-style) — exact checkpoint chosen at implementation time.
+- Metrics: luminance std / Michelson contrast; palette entropy; Canny edge
+  density — exact formulas in a later metrics note.
+- Soft SigLIP phrases: curated per soft family when phrase lists are built.
+- DINO phrase lists: next documentation/config step after this phase.
+
+
+EXPLICIT NON-GOALS OF PHASE 3
+-----------------------------
+- No model training code.
+- No concrete phrase strings (except as examples in prose).
+- No atmosphere bindings.
+- No normalize-vs-independent decision for atmosphere weights (deferred).
+
+
+NEXT STEP AFTER PHASE 3
+-----------------------
+1) Freeze machine-readable schema: configs/visual_categories_v1.yaml
+2) Later: expand dino families into phrase lists (detection_vocabulary v2)
+3) Later: define metric formulas + seg class mappings
+4) Later: verification protocol using image feature space vs comments
+
+
+CITATIONS (Phase 3 focus)
+-------------------------
+Middel, A., et al. (2019). Urban form and composition of street canyons…
+  Landscape and Urban Planning, 183, 122–132.
+  https://doi.org/10.1016/j.landurbplan.2018.12.001
+
+Böhme, G. (1993). Atmosphere as the Fundamental Concept of a New Aesthetics.
+  Thesis Eleven, 36, 113–126.
+
+Machado et al. Computerized measures of visual complexity.
+  https://cdv.dei.uc.pt/wp-content/uploads/publications-cdv/mrnscc2015.pdf
+
+Aesthetics Toolbox (2025). Behavior Research Methods.
+  https://doi.org/10.3758/s13428-025-02632-3
+
+Project-internal: existing SigLIP + Grounding DINO stack in
+  configs/cambridge_pilot.yaml and src/atmosphere_grounding/ground/
+
+Plus Phase 1–2 citation bases.
+
+================================================================================
+END OF PHASE 3
+================================================================================

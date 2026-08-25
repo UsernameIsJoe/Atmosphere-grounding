@@ -1,0 +1,266 @@
+================================================================================
+PHASE 2 — Subtype families under each top-level category (v1)
+Atmosphere Grounding project — image descriptive ontology
+Date: 2026-08-11
+Status: LOCKED for v1 (families fixed; concrete phrase lists deferred)
+Depends on: Docs/visual_categories/phase1_top_level.txt
+================================================================================
+
+PURPOSE
+-------
+Under each Phase-1 category, define SUBTYPE FAMILIES — mid-level slots that
+group related visual cues. Families are NOT full Grounding DINO word lists.
+Concrete phrases come later. Still NO atmosphere lexicon bindings.
+
+A subtype family should be:
+  - Visually coherent (same kind of thing)
+  - Expandable into multiple detection phrases or one metric later
+  - Supported by theory and/or established streetscape/public-space practice
+
+
+DECISION RULES
+--------------
+- Prefer park/plaza relevance for this Cambridge-style open-space corpus.
+- Prefer families that are photographable in still place photos.
+- Soft / scene-level families allowed when theory requires them
+  (tagged soft; extractors assigned in Phase 3).
+- Do not invent atmosphere meanings for families.
+
+
+--------------------------------------------------------------------------------
+CATEGORY → SUBTYPE FAMILIES
+--------------------------------------------------------------------------------
+
+1) objects_furnishings
+   Families:
+     seating              — benches, chairs, seat walls, ledges
+     play                 — playground equipment, play structures
+     service_amenity      — trash bins, restrooms, drinking fountains, kiosks
+     bike_facilities      — bike racks, bike parking
+     other_amenity        — catch-all for miscellaneous stay equipment
+   Support:
+     - Gehl (2010) Cities for People — Comfort: sit, stand, play/exercise.
+     - Whyte (1980) Social Life of Small Urban Spaces — sittable space,
+       ledges, secondary seating.
+   Notes: "other_amenity" is an extensibility bucket for v1; refine later.
+
+
+2) vegetation
+   Families:
+     tree                 — individual / countable trees
+     canopy_shade_plant   — canopy/shade vegetation as cover cue
+     lawn_groundcover     — grass, lawn, groundcover
+     planting_bed         — flower beds, planted borders
+     shrub                — shrubs / bushes
+   Support:
+     - Kaplan & Kaplan (1989) Experience of Nature — natural content.
+     - Middel et al. (2019) Landscape & Urban Planning — trees as primary
+       spherical fraction; pervious surfaces related to soft ground/plant.
+     - Wang et al. (2019) arXiv:1905.04488 — streetscape vs remotely sensed
+       greenery as distinct measures.
+   Notes: Cover vs instance distinction reserved for Phase 3 extractors.
+
+
+3) circulation_access
+   Families:
+     path_walkway         — paths, walkways, sidewalks
+     plaza_hardscape      — open paved gathering surfaces
+     stairs               — stairs, steps
+     entrance_threshold   — gates as entry, entrances, thresholds
+     crossing             — crosswalks / marked crossings (when present)
+   Support:
+     - Lynch (1960) Image of the City — paths.
+     - Gehl (2010) — opportunities to walk; accessibility.
+   Notes: Keep entrance_threshold here (movement) even if "gate" also appears
+   under boundaries (barrier role); dual listing is OK at family level;
+   phrase lists will disambiguate later.
+
+
+4) boundaries_edges
+   Families:
+     fence
+     wall
+     gate
+     railing
+     hedge
+   Support:
+     - Lynch (1960) — edges.
+     - Appleton (1975) — refuge / cover; spatial enclosure devices.
+     - CPTED / Newman (1972) Defensible Space — territorial boundaries,
+       access control (fences, gates) as environmental design elements.
+   Notes: Descriptive only; no “excluding” or “safe” binding.
+
+
+5) facade_built_form
+   Families:
+     building_mass        — building as volumetric mass in view
+     facade_frontage      — facade / frontage plane
+     opening              — window, door
+     canopy_awning        — canopies, awnings, overhangs
+   Support:
+     - Gehl (1986) “Soft edges” in residential streets; Gehl et al. on
+       ground-floor facades, edge effect, support effect
+       (Close encounters with buildings).
+     - Gehl (2010) — human scale; building edges of public space.
+     - Middel et al. (2019) — buildings as composition class.
+   Notes: Soft-edge theory motivates openings/canopies as frontage detail,
+   not atmosphere labels.
+
+
+6) light
+   Families:
+     light_fixture        — lamps, street lights, park lights, bollard lights
+     lit_area_soft        — soft cue: lit path / illuminated area (phrase-level)
+     brightness_level     — global brightness / luminance statistic
+   Support:
+     - Böhme (1993; 2017) — light as atmosphere generator.
+     - Gehl public-life quality practice — lighting under protection/comfort.
+   Notes: Separate fixtures (objects) from illumination quality (properties).
+
+
+7) materiality_surface
+   Families:
+     paving_type          — asphalt, concrete, brick paving, stone paving, gravel
+     soft_ground          — dirt, mulch, sand (non-lawn soft surfaces)
+     hard_vertical        — brick / stone / glass / metal / wood as wall-like
+                            surface materials
+     water_surface        — water as surface material (when not a “feature object”)
+   Support:
+     - Böhme — material ecstasies / generators.
+     - Zumthor (2006) Atmospheres — materials and surfaces.
+     - Middel et al. (2019) — impervious vs pervious surface fractions.
+   Notes: water_surface overlaps water_terrain; keep both: materiality =
+   surface property; water_terrain = landscape feature identity.
+
+
+8) water_terrain
+   Families:
+     fountain
+     water_body           — pond, lake, river, pool (natural/constructed body)
+     slope_grade          — visible slope / grade change
+     rock_landform        — rocks, ledges as landform (not seating ledge)
+   Support:
+     - Preference / restorative literature: water content (Kaplan & Kaplan 1989
+       and related preference studies).
+     - Whyte (1980) — fountains as plaza attractors / sittable edges around
+       water features.
+   Notes: slope_grade is harder photographically; keep as optional family.
+
+
+9) social_presence
+   Families:
+     people
+     bicycle
+     gathering_cluster_soft — soft cue for groups / gathering (phrase/count)
+   Support:
+     - Jacobs (1961) eyes on the street.
+     - Whyte (1980); Gehl (2010) public life.
+     - Middel et al. (2019) non-permanent objects (people/vehicles).
+   Notes: No demographic recognition goals; presence/activity traces only.
+
+
+10) spatial_structure
+    Families:
+      sky_openness         — sky fraction / view factor
+      building_enclosure   — building fraction / view factor
+      vegetation_enclosure — tree/vegetation fraction as spatial cover
+      ground_openness      — visible ground / open floor fraction
+    Support:
+      - Appleton (1975); Dosen & Ostwald (2016) prospect–refuge meta-analysis.
+      - Middel et al. (2019) spherical fractions: sky, trees, buildings,
+        impervious, pervious.
+      - GSV SVF/TVF/BVF literature (e.g. sky/tree/building view factors).
+    Notes: These are AMOUNT dimensions, not object inventories.
+
+
+11) composition_contrast
+    Families:
+      luminance_contrast   — contrast / dynamic range proxies
+      color_variety        — color entropy / palette diversity
+      edge_complexity      — edge density / structural complexity
+      focal_dominance_soft — soft: whether a strong focal object dominates
+    Support:
+      - Kaplan (1979); Kaplan & Kaplan (1989) — coherence & complexity.
+      - Machado et al. / computerized visual complexity — edge density as
+        predictor of perceived complexity
+        (https://cdv.dei.uc.pt/wp-content/uploads/publications-cdv/mrnscc2015.pdf).
+      - Color information entropy linked to landscape preference ratings
+        (HortTechnology 2015, 25(5):625).
+      - Aesthetics Toolbox (Behavior Research Methods, 2025) — standardized
+        lightness/color/complexity/entropy image properties.
+        https://doi.org/10.3758/s13428-025-02632-3
+    Notes: Families are metric-oriented; phrase lists optional via SigLIP.
+
+
+12) wayfinding_information
+    Families:
+      sign
+      landmark_object      — distinctive landmark-like object in scene
+      map_board            — map boards / information boards
+    Support:
+      - Lynch (1960) landmarks.
+      - Kaplan legibility (1979; 1989).
+    Notes: Small family set by design; expand phrases later if needed.
+
+
+--------------------------------------------------------------------------------
+COUNTS (v1)
+--------------------------------------------------------------------------------
+Top-level categories: 12
+Subtype families: 48
+
+  objects_furnishings: 5
+  vegetation: 5
+  circulation_access: 5
+  boundaries_edges: 5
+  facade_built_form: 4
+  light: 3
+  materiality_surface: 4
+  water_terrain: 4
+  social_presence: 3
+  spatial_structure: 4
+  composition_contrast: 4
+  wayfinding_information: 3
+
+
+EXPLICIT NON-GOALS OF PHASE 2
+-----------------------------
+- No exhaustive DINO phrase vocabulary yet.
+- No atmosphere bindings.
+- No final metric formulas (Phase 3 + later implementation).
+- No audio/smell/thermal families.
+
+
+NEXT PHASE
+----------
+Phase 3: assign extractor tag(s) to each subtype family
+(dino | seg | siglip | metric | hybrid).
+
+Output: Docs/visual_categories/phase3_extractors.txt
+
+
+CITATION LIST (Phase 2 additions beyond Phase 1)
+------------------------------------------------
+Gehl, J. (1986). “Soft edges” in residential streets. Scandinavian Housing
+  and Planning Research, 3(2), 89–102.
+  https://doi.org/10.1080/02815738608730092
+
+Gehl, J., Kaefer, L. J., & Reigstad, S. Close encounters with buildings.
+  (ground-floor facades; edge effect; support effect).
+
+Machado, P., et al. Computerized measures of visual complexity.
+  https://cdv.dei.uc.pt/wp-content/uploads/publications-cdv/mrnscc2015.pdf
+
+Bartholomew / Aesthetics Toolbox authors (2025). A toolbox for calculating
+  quantitative image properties in aesthetics research. Behavior Research
+  Methods. https://doi.org/10.3758/s13428-025-02632-3
+
+Preference, complexity, and color information entropy… HortTechnology
+  25(5):625 (2015). https://doi.org/10.21273/horttech.25.5.625
+
+Plus all Phase 1 citations (Appleton, Böhme, Gehl 2010, Jacobs, Kaplan,
+Lynch, Middel, Whyte, Zumthor, CPTED/Newman, Dosen & Ostwald).
+
+================================================================================
+END OF PHASE 2
+================================================================================
