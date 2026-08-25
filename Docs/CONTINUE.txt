@@ -1,0 +1,69 @@
+================================================================================
+CONTINUE HERE — handoff note for the next session / other device
+================================================================================
+Repo: https://github.com/UsernameIsJoe/atmosphere-grounding
+Branch: master
+Last handoff commit (approx): 6f28665 — visual-category extractors + HTML preview
+
+Say in chat: "read the continue note" (this file: Docs/CONTINUE.txt)
+
+
+WHERE WE LEFT OFF
+-----------------
+Visual category ontology v1 is locked and wired into the pipeline:
+
+  - Grounding DINO (chunked phrases, per-family thresholds)
+  - SigLIP (soft families + within-family softmax)
+  - Mask2Former ADE20K segmentation (view fractions)
+  - Image metrics (brightness, contrast, edge complexity, slope proxy)
+
+Phase 4 extractor benchmark is done. A 6-image HTML preview gallery exists.
+
+Do NOT redesign categories unless clearly needed — focus on analysis / pipeline.
+
+
+OPEN THE PREVIEW
+----------------
+  visuals of steps/visual_categories/index.html
+
+Also useful:
+  Docs/visual_categories/phase4_extractor_benchmark.txt
+  Docs/visual_categories/README.txt
+  configs/visual_categories_v1.yaml
+  src/atmosphere_grounding/ground/visual_categories.py
+  data/processed/visual_features.jsonl   (small sample from smoke/preview runs)
+
+
+STILL TO DO (pick up in order)
+------------------------------
+1. Review the HTML preview (noisy DINO overlaps / false bicycle boxes) and
+   decide NMS / threshold / phrase tweaks.
+2. Optional: full-corpus feature run for all pilot images:
+     PYTHONPATH=src atmosphere visual-categories --force
+3. Place-holdout verification: image category feature space vs held-out
+   comments / atmosphere labels (next research step).
+
+
+OTHER-DEVICE SETUP
+------------------
+  git pull
+  # or first time: git clone https://github.com/UsernameIsJoe/atmosphere-grounding.git
+
+  cp .env.example .env   # then fill GOOGLE_MAPS_API_KEY etc. (.env is not in git)
+  # data/raw/ images are gitignored — re-collect or copy if you need live photos
+  # Preview JPGs + HTML are in git and do not need raw images to view.
+
+  python -m venv .venv && source .venv/bin/activate
+  pip install -e ".[vision,dev]"   # vision extras include scipy for segmentation
+
+
+TWO-DEVICE SYNC HABIT
+---------------------
+  Start of session:  git pull
+  End of session:    git add … && git commit && git push
+  Do not edit the same branch on both devices without pulling first.
+
+
+================================================================================
+END OF CONTINUE NOTE
+================================================================================
