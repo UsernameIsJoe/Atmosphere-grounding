@@ -47,24 +47,22 @@ learner. Validate on held-out places (+ shuffle nulls); human checks optional la
 --------------------------------------------------------------------------------
 
 LAYER A — Text extraction (LLM extract-only)
-  Pre-gates: image/comment usable; review↔photo match → soft weight per pair
-  Pass A: comment-only → lexicon atmosphere + adj/phrase + nouns (mentions.jsonl)
-  Pass B: comment + Layer B image feature profile + comment visual add-ons
-          → refined mentions (mentions_fused.jsonl); Pass A kept intact
-  Pass B uses measured ontology families/metrics from photos — not object lists only
+  Pre-gates: image/comment usable; review↔photo match → soft weight (z within place)
+  Pass A: comment-only → lexicon + adj/phrase + nouns (text-only; mentions.jsonl)
+          Nouns: map to ontology add-ons; audit trail; feed Pass B
+  Pass B: comment + Layer B top families + add-ons → refined mentions (mentions_fused.jsonl)
+          Nouns: confirm/drop/add vs Layer B; image-informed ontology add-ons
+  Pass B LLM input: top 1–2 families per ontology category at place (~12–24)
 
 LAYER B — Visual category ontology (primary image feature data)
-  Fixed descriptive feature space (~12 categories / ~49 families)
-  Extractors: Grounding DINO, Mask2Former seg, SigLIP soft scores, image metrics
-  Config: configs/visual_categories_v1.yaml
-  Output: per-image feature vectors → place/pair aggregates for association
-  Atmosphere labels are NOT baked into this ontology
+  Per-image family + metric vectors → place-level weighted aggregate for learner
+  See configs/visual_categories_v1.yaml; atmosphere-agnostic
 
-IMAGE FEATURE DATA (association input)
-  Primary: Layer B measurements from photos
-  Add-on: visual nouns/features mentioned in comments + comment-aligned detections
-  Text side (lexicon/adj from Pass A or B) co-occurs with this feature data
-  Ranking: place-normalized scores under each lexicon (for now)
+IMAGE FEATURE DATA + LEARNER
+  Primary: Layer B place profiles
+  Add-ons: ontology-mapped nouns from Pass A/B
+  Co-occurrence: equal weight per place in corpus tables; within-place family rank
+  for single-place explanations; soft match weights on review–photo pairs
 
 
 --------------------------------------------------------------------------------

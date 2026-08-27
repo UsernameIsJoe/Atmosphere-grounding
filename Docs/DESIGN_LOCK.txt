@@ -96,26 +96,57 @@ LLM does NOT invent adj ↔ feature links.
   └─────────────────────────┘
 
 --------------------------------------------------------------------------------
-4. PASS A vs PASS B (updated)
+4. PASS A vs PASS B — text passes and NOUNS
 --------------------------------------------------------------------------------
-  Pass A — LLM reads COMMENT ONLY
-           → lexicon atmosphere + phrase + nouns (adj mapped to lexicon)
-           Output: mentions.jsonl
-           Feeds: TEXT SIDE of co-occurrence only
 
-  Pass B — LLM reads COMMENT + IMAGE FEATURE DATA for that place/pair:
-           • Layer B family/metric profile (measured from photos)
-           • plus comment-mentioned / comment-aligned visual features (add-on)
-           → may refine lexicon assignment, nouns, confidence
-           Output: mentions_fused.jsonl (Pass A kept intact)
-           Feeds: richer TEXT SIDE; does not replace Layer B as image signal
+  Both passes produce: lexicon atmosphere + phrase + nouns (adj mapped to lexicon).
+  Nouns are NOT the primary scientific link (lexicon ↔ Layer B features is).
+  Nouns are comment-side visual tokens, mapped to ontology families as add-ons.
+
+  PASS A — comment only (mentions.jsonl)
+  ─────────────────────────────────────
+  What nouns are:
+    Words in the review that name visible things tied to an atmosphere mention
+    (e.g. calm → "trees", "shade"; safe → "lighting", "paths").
+  How they differ from Pass B:
+    Text-only guess — no check against photos or Layer B.
+  What they are for:
+    1) Map comment language → ontology families (text-side add-on for learner)
+    2) Audit trail: which concrete words supported the lexicon call
+    3) Input to Pass B (Pass B starts from Pass A, then refines)
+  What they are NOT for:
+    Proving a feature is in the image; replacing Layer B measurements.
+
+  PASS B — comment + Layer B profile + add-ons (mentions_fused.jsonl)
+  ───────────────────────────────────────────────────────────────────
+  What nouns are:
+    Same role, but revised using measured image features:
+    • CONFIRM nouns that match active Layer B families
+    • DROP or down-weight nouns with no image support
+    • ADD families visible in Layer B but not named in the comment (image-informed)
+  How they differ from Pass A:
+    Image-checked and ontology-aligned; higher confidence when text and Layer B agree.
+  What they are for:
+    1) Richer text-side add-ons (mapped families) for co-occurrence
+    2) Resolve ambiguity when comment is vague but photos are clear
+    3) Feed learner when text–image match score favors Pass B over Pass A
+  What they are NOT for:
+    Substituting for Layer B vector; inventing features not measured in photos.
+
+  Example (same review):
+    Pass A:  calm + nouns ["trees", "bench"]     ← from wording only
+    Pass B:  calm + nouns ["trees"]              ← "bench" dropped (no Layer B seating)
+             + add-on family shrub (high in Layer B, not in comment)
+
+  All nouns → map to ontology families where possible; unmapped nouns logged, low weight.
+
+  Pass B LLM input uses top families from Layer B (see §8), not legacy DINO object lists.
 
   Co-occurrence learner uses:
-    TEXT: Pass A or Pass B mentions (prefer better text–image match when both exist)
-    IMAGE FEATURES: always Layer B (+ add-ons merged into feature data table)
+    TEXT: Pass A or Pass B (prefer pass with better text–image match per review)
+    IMAGE FEATURES: always Layer B primary + merged ontology-mapped add-ons
 
-  Legacy note: older pilot code fused DINO object *lists* only; target architecture
-  fuses full Layer B ontology profiles. Implementation catch-up TBD.
+  Legacy note: pilot code still fuses DINO object lists only; align to this spec TBD.
 
 --------------------------------------------------------------------------------
 5. MODEL ROLES (do not conflate)
@@ -134,11 +165,38 @@ LLM does NOT invent adj ↔ feature links.
   Location pairing remains imperfect (same place_id); weights mitigate noise.
 
 --------------------------------------------------------------------------------
-7. SCORING (locked for now)
+7. SCORING & AGGREGATION (locked)
 --------------------------------------------------------------------------------
-  Match: soft weight per review–photo pair (e.g. from review↔image cosine).
-  Feature rank under lexicon: place-normalized score (compare features within place
-  before aggregating co-occurrence across corpus).
+
+  Match weight (review ↔ photo):
+    Cosine z-scored WITHIN PLACE → soft weight w ∈ (0,1] (sigmoid or scaled clamp).
+    Never hard-zero weak pairs by default.
+
+  Place aggregation (Layer B):
+    Primary: weighted mean of family scores across photos at each place
+    (weights = review–photo match when pairing; else equal across photos).
+    Pass B / pair-level refinement keeps review–photo pairs; learner uses
+    place-level profile for co-occurrence stability.
+
+  Top-k for Pass B prompts (Layer B summary to LLM):
+    Top 1–2 active families per top-level category (~12–24 total), where
+    "active" = highest score within that category at the place profile.
+    Not a fixed global k — bounded by ontology structure.
+
+  Place-normalized ranking (given sparse pilot data: ~5 reviews, ~3 photos/place):
+
+    PRIMARY for corpus co-occurrence tables (recommended for our data):
+      Equal weight per PLACE when pooling associations across the corpus.
+      Story: each public space contributes one fair vote; avoids a few
+      mention-heavy places dominating with only 43–N pilot sites.
+
+    SECONDARY for per-place output (rank features under a lexicon):
+      Rank families WITHIN each place's aggregated profile (percentile / rank
+      across the 49 families at that place — not z-score across 3 photos).
+      Story: "at this park, which features stand out relative to its own profile?"
+      Avoid aggressive photo-level normalization (too few images per place).
+
+    Use both: (B) to learn global adj↔feature maps; (light A) to explain one place.
 
 --------------------------------------------------------------------------------
 8. VALIDATION
@@ -165,8 +223,8 @@ LLM does NOT invent adj ↔ feature links.
 11. OPEN (deferred — opportunities discussion next)
 --------------------------------------------------------------------------------
   - Location pairing improvements beyond soft cosine weights
-  - Pass A vs Pass B rule for which text rows enter learner
-  - How to merge comment visual add-ons into feature data schema
+  - Exact Pass A vs Pass B selection rule per review (match score threshold)
+  - Unmapped noun handling in ontology mapper
   - Landmark vs park stratification when scaling places
 
 ================================================================================
