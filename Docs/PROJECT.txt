@@ -4,15 +4,16 @@ PROJECT DESCRIPTION — Atmosphere Grounding
 Repo: atmosphere-grounding (Cambridge pilot → larger corpus)
 Status: Pilot running; visual-category ontology v1 locked
 Last goals sync: 2026-08-27
+Design lock: Docs/DESIGN_LOCK.txt (adj/lexicon ↔ feature co-occurrence; LLM extract-only)
 
 
 --------------------------------------------------------------------------------
 1. ONE-SENTENCE GOAL
 --------------------------------------------------------------------------------
-Ground curated urban atmosphere language (place reviews / lexicon terms) in
-constructed visual features from place photos, so we can measure which visual
-structures co-occur with which words — and later, from a text passage, report
-which of *our* visual features would be more prominent (and the reverse).
+From place-linked reviews + photos, learn which visual features co-occur with
+atmosphere language mapped to our lexicons (inviting / safe / calm). Output:
+strength per lexicon term + ranked supporting image features under each — from
+co-occurrence in *our* data, not LLM-invented links.
 
 
 --------------------------------------------------------------------------------
@@ -20,12 +21,14 @@ which of *our* visual features would be more prominent (and the reverse).
 --------------------------------------------------------------------------------
 People describe places with words like “calm”, “safe”, “inviting”. Photos of
 those places contain measurable structure (vegetation, seating, enclosure,
-light, …). This project does not treat vision–language models as the answer;
-it builds an explicit visual ontology, pairs it with weakly supervised review
-text (LLM-assisted extraction), and studies the relationship in *our* data.
+light, …). LLM extracts adjectives/atmosphere language from comments and maps them to
+lexicon umbrellas. Vision models measure image features (Layer B ontology).
+The learner aggregates place-level co-occurrence between lexicons and features.
 
-The scientific claim is local and corpus-grounded: associations should reflect
-Cambridge (then multi-city) place evidence, not only a generic CLIP/SigLIP prior.
+The scientific claim: adj/lexicon ↔ feature associations come from corpus
+co-occurrence. LLM grounds/extracts text only; it does not invent associations.
+SigLIP/DINO are feature and match tools, not substitutes for the co-occurrence
+learner. Validate on held-out places (+ shuffle nulls); human checks optional later.
 
 
 --------------------------------------------------------------------------------
@@ -35,18 +38,20 @@ Cambridge (then multi-city) place evidence, not only a generic CLIP/SigLIP prior
 - Not replacing measured features with free-form LLM guesses about visuals.
 - Not pre-binding ontology families to atmosphere labels (no hand-coded
   “calm = trees”). Atmosphere ↔ visual links are discovered from data.
-- Street View is out of scope for the pilot (weaker pairing with place reviews).
+- Street View deferred until place-photo path is solid; Google-data constraint,
+  not a permanent rejection of pedestrian viewpoint imagery.
 
 
 --------------------------------------------------------------------------------
 4. TWO LAYERS OF THE SYSTEM
 --------------------------------------------------------------------------------
 
-LAYER A — LLM text grounding (already in the Cambridge pilot)
-  Reviews → Ollama Pass A (comment-only) → atmosphere + phrase + nouns
-  Image object lists → Ollama Pass B (fusion) → refined mentions
-  Vision (SigLIP + Grounding DINO + ablation) localizes phrases/nouns in photos
-  Outputs: mentions.jsonl, mentions_fused.jsonl, evidence.jsonl, graph
+LAYER A — Text extraction (LLM extract-only; Cambridge pilot)
+  Pre-gates: image/comment usable; review↔photo match (weight or drop)
+  Pass A: comment-only → lexicon atmosphere + phrase + nouns (mentions.jsonl)
+  Pass B (optional): comment + DINO object list → refined mentions (mentions_fused.jsonl)
+  Vision localizes nouns when useful; primary link is lexicon ↔ Layer B features
+  via co-occurrence, not phrase-in-box caption grounding
 
 LAYER B — Visual category ontology (locked v1; refining extractors / analysis)
   Fixed descriptive feature space for images (~12 categories / ~49 families)
@@ -117,6 +122,7 @@ Vision: SigLIP, Grounding DINO, DINOv2, Mask2Former (see cambridge_pilot.yaml)
 --------------------------------------------------------------------------------
 8. KEY DOCUMENTS
 --------------------------------------------------------------------------------
+  Docs/DESIGN_LOCK.txt             ← agreed flow, roles, validation (2026-08-27)
   Docs/PROJECT.txt                 ← this file (goals & stages)
   Docs/CONTINUE.txt                ← handoff / next actions
   Docs/visual_categories/README.txt
@@ -136,10 +142,9 @@ Near-term:
   - Holdout: visual category space predicts / correlates with held-out text
 
 Longer-term:
-  - Corpus-grounded answer to: “for this atmosphere word, which of our features
-    are more prominent?”
-  - Reverse: “for this image/place feature profile, which keywords fit our data?”
-  - Optional: LoRA that narrates Stage-1 profiles without inventing unmeasured cues
+  - For input text/place: strength per lexicon + ranked features under each
+  - Reverse: feature profile → which lexicons fit our co-occurrence tables
+  - Optional LoRA in ontology feature language; targets from measured profiles
 
 ================================================================================
 END PROJECT DESCRIPTION
