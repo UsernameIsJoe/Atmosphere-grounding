@@ -103,6 +103,12 @@ LLM does NOT invent adj ↔ feature links.
   Nouns are NOT the primary scientific link (lexicon ↔ Layer B features is).
   Nouns are comment-side visual tokens, mapped to ontology families as add-ons.
 
+  Why nouns exist at all:
+    Photos may not show everything reviewers experienced (time of day, season,
+    events, non-visible comfort). Text-side nouns → ontology add-ons capture
+    language about features images missed. Layer B remains primary; text add-ons
+    supplement — never replace measured image features.
+
   PASS A — comment only (mentions.jsonl)
   ─────────────────────────────────────
   What nouns are:
@@ -120,23 +126,27 @@ LLM does NOT invent adj ↔ feature links.
   PASS B — comment + Layer B profile + add-ons (mentions_fused.jsonl)
   ───────────────────────────────────────────────────────────────────
   What nouns are:
-    Same role, but revised using measured image features:
-    • CONFIRM nouns that match active Layer B families
-    • DROP or down-weight nouns with no image support
-    • ADD families visible in Layer B but not named in the comment (image-informed)
+    Pass B REVISES Pass A nouns — it does not discard unconfirmed ones.
+    • CONFIRMED: noun matches active Layer B family → full add-on weight
+    • UNCONFIRMED: noun from Pass A only (image did not show it) → KEEP as
+      text-only add-on at REDUCED weight (images may not capture everything)
+    • ADD: Layer B family high in photos but not named in comment
   How they differ from Pass A:
-    Image-checked and ontology-aligned; higher confidence when text and Layer B agree.
+    Image-checked where possible; Pass A-only tokens survive at lower weight.
   What they are for:
-    1) Richer text-side add-ons (mapped families) for co-occurrence
-    2) Resolve ambiguity when comment is vague but photos are clear
-    3) Feed learner when text–image match score favors Pass B over Pass A
+    1) Merge text + image add-ons into one feature-data table for co-occurrence
+    2) Resolve ambiguity when comment and Layer B agree (boost weight)
+    3) Preserve comment-only features the photo pass missed (lower weight)
   What they are NOT for:
-    Substituting for Layer B vector; inventing features not measured in photos.
+    Substituting for Layer B vector; deleting Pass A language because one photo
+    lacks a feature.
 
   Example (same review):
-    Pass A:  calm + nouns ["trees", "bench"]     ← from wording only
-    Pass B:  calm + nouns ["trees"]              ← "bench" dropped (no Layer B seating)
-             + add-on family shrub (high in Layer B, not in comment)
+    Pass A:  calm + nouns ["trees", "playground"]   ← both from wording
+    Layer B at place: strong tree, no play signal in these photos
+    Pass B:  calm + ["trees"] (confirmed, full weight)
+             + ["playground"] (Pass A carry-over, reduced weight — not killed)
+             + optional add-on shrub from Layer B only
 
   All nouns → map to ontology families where possible; unmapped nouns logged, low weight.
 
@@ -183,20 +193,27 @@ LLM does NOT invent adj ↔ feature links.
     "active" = highest score within that category at the place profile.
     Not a fixed global k — bounded by ontology structure.
 
-  Place-normalized ranking (given sparse pilot data: ~5 reviews, ~3 photos/place):
+  Place-normalized ranking — compute BOTH tracks (lightweight; decide use later):
 
-    PRIMARY for corpus co-occurrence tables (recommended for our data):
-      Equal weight per PLACE when pooling associations across the corpus.
-      Story: each public space contributes one fair vote; avoids a few
-      mention-heavy places dominating with only 43–N pilot sites.
+    TRACK 1 — corpus co-occurrence (place-equal):
+      Equal weight per PLACE when pooling adj ↔ feature associations globally.
+      Store: corpus_assoc[lexicon, family] (and counts / lift).
 
-    SECONDARY for per-place output (rank features under a lexicon):
-      Rank families WITHIN each place's aggregated profile (percentile / rank
-      across the 49 families at that place — not z-score across 3 photos).
-      Story: "at this park, which features stand out relative to its own profile?"
-      Avoid aggressive photo-level normalization (too few images per place).
+    TRACK 2 — within-place profile rank:
+      Rank families within each place's aggregated Layer B profile (percentile
+      across 49 families at that place — not z-score across 3 photos).
+      Store: place_rank[place, family] and lexicon-conditioned variants.
 
-    Use both: (B) to learn global adj↔feature maps; (light A) to explain one place.
+    Both are cheap: derived columns on existing place profiles and mention
+    tables — no extra model runs, no second vision pass. Typical cost: one
+    aggregate + rank pass over ~49 families × N places.
+
+    Usage (decide when analyzing / at output time):
+      • Global maps / learner / held-out prediction → lean on TRACK 1
+      • Per-place explanation ("what supports calm HERE?") → lean on TRACK 2
+      • Output C can expose both with labels so consumers pick or blend
+
+    Avoid aggressive photo-level normalization (too few images per place).
 
 --------------------------------------------------------------------------------
 8. VALIDATION

@@ -50,8 +50,9 @@ LAYER A — Text extraction (LLM extract-only)
   Pre-gates: image/comment usable; review↔photo match → soft weight (z within place)
   Pass A: comment-only → lexicon + adj/phrase + nouns (text-only; mentions.jsonl)
           Nouns: map to ontology add-ons; audit trail; feed Pass B
-  Pass B: comment + Layer B top families + add-ons → refined mentions (mentions_fused.jsonl)
-          Nouns: confirm/drop/add vs Layer B; image-informed ontology add-ons
+  Pass B: comment + Layer B top families + add-ons → mentions_fused.jsonl
+          Nouns: confirm (full weight) / Pass A carry-over (reduced weight) /
+          Layer B-only add; never kill Pass A-only nouns because photo missed them
   Pass B LLM input: top 1–2 families per ontology category at place (~12–24)
 
 LAYER B — Visual category ontology (primary image feature data)
@@ -61,8 +62,8 @@ LAYER B — Visual category ontology (primary image feature data)
 IMAGE FEATURE DATA + LEARNER
   Primary: Layer B place profiles
   Add-ons: ontology-mapped nouns from Pass A/B
-  Co-occurrence: equal weight per place in corpus tables; within-place family rank
-  for single-place explanations; soft match weights on review–photo pairs
+  Co-occurrence: compute BOTH score tracks (corpus place-equal + within-place rank);
+  lightweight aggregates only — choose/blend at analysis or output time
 
 
 --------------------------------------------------------------------------------
