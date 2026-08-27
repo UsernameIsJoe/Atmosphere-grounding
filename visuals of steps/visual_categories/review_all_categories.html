@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<title>Full visual-category review — 12 categories × example images</title>
+<style>
+  :root {
+    --bg: #14171b; --card: #1c2128; --text: #e8eaed; --muted: #9aa0a6;
+    --line: #2a3038; --dino: #ff9f43; --seg: #54a0ff; --siglip: #5f27cd; --metric: #10ac84;
+  }
+  body { margin:0; font-family: "IBM Plex Sans", "Source Sans 3", system-ui, sans-serif;
+         background: var(--bg); color: var(--text); line-height: 1.4; }
+  header, .tax, .card { padding: 1.25rem 1.75rem; border-bottom: 1px solid var(--line); }
+  header h1 { margin: 0 0 .35rem; font-size: 1.35rem; }
+  .muted { color: var(--muted); }
+  .nav { margin-top: .75rem; font-size: .9rem; }
+  .nav a { color: #8ab4f8; margin-right: .25rem; }
+  .tax-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: .75rem; }
+  .tax-card { background: var(--card); border-radius: 6px; padding: .85rem 1rem; }
+  .tax-card h3 { margin: 0 0 .25rem; font-size: .98rem; }
+  .tax-card ul { margin: .4rem 0 0; padding-left: 1.1rem; font-size: .82rem; }
+  .pair { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0; }
+  .quad { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; margin: 1rem 0; }
+  img { width: 100%; border-radius: 4px; background: #0d0f12; }
+  figure { margin: 0; }
+  figcaption { color: var(--muted); font-size: .82rem; margin-top: .3rem; }
+  table { width: 100%; border-collapse: collapse; font-size: .82rem; margin: .5rem 0 1rem; }
+  th, td { text-align: left; vertical-align: top; padding: .4rem .5rem; border-bottom: 1px solid var(--line); }
+  th { color: var(--muted); font-weight: 600; }
+  code { font-size: .9em; }
+  details.cat-block { background: var(--card); border-radius: 6px; padding: .55rem .75rem; margin: .55rem 0; }
+  summary { cursor: pointer; }
+  .tag { display: inline-block; font-size: .68rem; font-weight: 700; padding: .05rem .35rem;
+          border-radius: 3px; margin-right: .25rem; color: #111; }
+  .tag.dino { background: var(--dino); }
+  .tag.seg { background: var(--seg); }
+  .tag.siglip { background: var(--siglip); color: #fff; }
+  .tag.metric { background: var(--metric); }
+  .warn { color: #ff6b6b; }
+  @media (max-width: 900px) { .pair, .quad { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+<header>
+  <h1>Full review — 12 visual categories × example images</h1>
+  <p class="muted">
+    Ontology from <code>configs/visual_categories_v1.yaml</code>.
+    Visuals for all four extractors: DINO boxes, SEG masks, SigLIP phrase bars, metric maps (luminance / edges / contrast).
+    6 pilot example images.
+  </p>
+  <div class="nav"><a href="#img-00">Image 00</a> · <a href="#img-01">Image 01</a> · <a href="#img-02">Image 02</a> · <a href="#img-03">Image 03</a> · <a href="#img-04">Image 04</a> · <a href="#img-05">Image 05</a> · <a href="index.html">Overlay gallery</a> ·
+    <a href="full_category_scores.json">JSON scores</a></div>
+</header>
+
+<section class="tax">
+  <h2>The 12 top-level categories</h2>
+  <div class="tax-grid">
+            <div class="tax-card">
+              <h3>1. Objects &amp; furnishings</h3>
+              <p class="muted"><code>objects_furnishings</code> · 5 families</p>
+              <ul><li><code>seating</code> <span class='muted'>dino</span></li><li><code>play</code> <span class='muted'>dino</span></li><li><code>service_amenity</code> <span class='muted'>dino</span></li><li><code>bike_facilities</code> <span class='muted'>dino</span></li><li><code>other_amenity</code> <span class='muted'>dino</span></li></ul>
+            </div>
+            
+            <div class="tax-card">
+              <h3>2. Vegetation</h3>
+              <p class="muted"><code>vegetation</code> · 5 families</p>
+              <ul><li><code>tree</code> <span class='muted'>dino, seg</span></li><li><code>canopy_shade_plant</code> <span class='muted'>dino, seg</span></li><li><code>lawn_groundcover</code> <span class='muted'>dino, seg</span></li><li><code>planting_bed</code> <span class='muted'>dino</span></li><li><code>shrub</code> <span class='muted'>dino</span></li></ul>
+            </div>
+            
+            <div class="tax-card">
+              <h3>3. Circulation &amp; access</h3>
+              <p class="muted"><code>circulation_access</code> · 5 families</p>
+              <ul><li><code>path_walkway</code> <span class='muted'>dino, seg</span></li><li><code>plaza_hardscape</code> <span class='muted'>dino, seg</span></li><li><code>stairs</code> <span class='muted'>dino</span></li><li><code>entrance_threshold</code> <span class='muted'>dino</span></li><li><code>crossing</code> <span class='muted'>dino</span></li></ul>
+            </div>
+            
+            <div class="tax-card">
+              <h3>4. Boundaries &amp; edges</h3>
+              <p class="muted"><code>boundaries_edges</code> · 5 families</p>
+              <ul><li><code>fence</code> <span class='muted'>dino</span></li><li><code>wall</code> <span class='muted'>dino</span></li><li><code>gate</code> <span class='muted'>dino</span></li><li><code>railing</code> <span class='muted'>dino</span></li><li><code>hedge</code> <span class='muted'>dino</span></li></ul>
+            </div>
+            
+            <div class="tax-card">
+              <h3>5. Facade &amp; built form</h3>
+              <p class="muted"><code>facade_built_form</code> · 4 families</p>
+              <ul><li><code>building_mass</code> <span class='muted'>seg, dino</span></li><li><code>facade_frontage</code> <span class='muted'>dino, seg</span></li><li><code>opening</code> <span class='muted'>dino</span></li><li><code>canopy_awning</code> <span class='muted'>dino</span></li></ul>
+            </div>
+            
+            <div class="tax-card">
+              <h3>6. Light</h3>
+              <p class="muted"><code>light</code> · 3 families</p>
+              <ul><li><code>light_fixture</code> <span class='muted'>dino</span></li><li><code>lit_area_soft</code> <span class='muted'>siglip</span></li><li><code>brightness_level</code> <span class='muted'>metric</span></li></ul>
+            </div>
+            
+            <div class="tax-card">
+              <h3>7. Materiality &amp; surface</h3>
+              <p class="muted"><code>materiality_surface</code> · 4 families</p>
+              <ul><li><code>paving_type</code> <span class='muted'>dino, seg</span></li><li><code>soft_ground</code> <span class='muted'>dino, seg</span></li><li><code>hard_vertical</code> <span class='muted'>dino</span></li><li><code>water_surface</code> <span class='muted'>seg, dino</span></li></ul>
+            </div>
+            
+            <div class="tax-card">
+              <h3>8. Water &amp; terrain</h3>
+              <p class="muted"><code>water_terrain</code> · 4 families</p>
+              <ul><li><code>fountain</code> <span class='muted'>dino</span></li><li><code>water_body</code> <span class='muted'>dino, seg</span></li><li><code>slope_grade</code> <span class='muted'>siglip, metric</span></li><li><code>rock_landform</code> <span class='muted'>dino</span></li></ul>
+            </div>
+            
+            <div class="tax-card">
+              <h3>9. Social presence</h3>
+              <p class="muted"><code>social_presence</code> · 3 families</p>
+              <ul><li><code>people</code> <span class='muted'>dino</span></li><li><code>bicycle</code> <span class='muted'>dino</span></li><li><code>gathering_cluster_soft</code> <span class='muted'>siglip</span></li></ul>
+            </div>
+            
+            <div class="tax-card">
+              <h3>10. Spatial structure</h3>
+              <p class="muted"><code>spatial_structure</code> · 4 families</p>
+              <ul><li><code>sky_openness</code> <span class='muted'>seg, siglip</span></li><li><code>building_enclosure</code> <span class='muted'>seg, siglip</span></li><li><code>vegetation_enclosure</code> <span class='muted'>seg, siglip</span></li><li><code>ground_openness</code> <span class='muted'>seg, siglip</span></li></ul>
+            </div>
+            
+            <div class="tax-card">
+              <h3>11. Composition &amp; contrast</h3>
+              <p class="muted"><code>composition_contrast</code> · 4 families</p>
+              <ul><li><code>luminance_contrast</code> <span class='muted'>metric</span></li><li><code>color_variety</code> <span class='muted'>metric</span></li><li><code>edge_complexity</code> <span class='muted'>metric</span></li><li><code>focal_dominance_soft</code> <span class='muted'>siglip, metric</span></li></ul>
+            </div>
+            
+            <div class="tax-card">
+              <h3>12. Wayfinding &amp; information</h3>
+              <p class="muted"><code>wayfinding_information</code> · 3 families</p>
+              <ul><li><code>sign</code> <span class='muted'>dino</span></li><li><code>landmark_object</code> <span class='muted'>dino, siglip</span></li><li><code>map_board</code> <span class='muted'>dino</span></li></ul>
+            </div>
+            </div>
+</section>
+
+
+            <section class="card" id="img-00">
+              <h2>Example image 00 — ChIJQXMWnUV344kRzs9-HfLoekk / 00.jpg</h2>
+              <p class="muted">seg_ok=True ·
+                brightness=0.328 ·
+                contrast=0.281 ·
+                edge=0.068</p>
+              
+              <div class="quad">
+                <figure>
+                  <img src="00_dino.jpg" alt="dino"/>
+                  <figcaption>DINO — localized object boxes</figcaption>
+                </figure>
+                <figure>
+                  <img src="00_seg.jpg" alt="seg"/>
+                  <figcaption>SEG — semantic view fractions</figcaption>
+                </figure>
+                <figure>
+                  <img src="00_siglip.jpg" alt="siglip"/>
+                  <figcaption>SigLIP — soft phrase score bars</figcaption>
+                </figure>
+                <figure>
+                  <img src="00_metric.jpg" alt="metric"/>
+                  <figcaption>METRIC — luminance / edges / contrast</figcaption>
+                </figure>
+              </div>
+            
+              <h3>All category family scores</h3>
+              
+                <details open class="cat-block">
+                  <summary><strong>Objects &amp; furnishings</strong>
+                    <span class="muted">(objects_furnishings)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>seating</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=2 best=0.31<br/><span class='muted'>park bench picnic, bench bench</span></td></tr><tr><td><code>play</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=2 best=0.42<br/><span class='muted'>playground restroom, structure</span></td></tr><tr><td><code>service_amenity</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=2 best=0.53<br/><span class='muted'>trash can, trash</span></td></tr><tr><td><code>bike_facilities</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00</td></tr><tr><td><code>other_amenity</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00</td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Vegetation</strong>
+                    <span class="muted">(vegetation)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>tree</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=13 best=0.37<br/><span class='muted'>tree, tree, tree</span><br/><span class='tag seg'>SEG</span> frac=0.489</td></tr><tr><td><code>canopy_shade_plant</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00<br/><span class='tag seg'>SEG</span> frac=0.489</td></tr><tr><td><code>lawn_groundcover</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=1 best=0.38<br/><span class='muted'>grass lawn meadow</span><br/><span class='tag seg'>SEG</span> frac=0.336</td></tr><tr><td><code>planting_bed</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=1 best=0.25<br/><span class='muted'>flower</span></td></tr><tr><td><code>shrub</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=1 best=0.30<br/><span class='muted'>bush shrub hedge plant</span></td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Circulation &amp; access</strong>
+                    <span class="muted">(circulation_access)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>path_walkway</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=2 best=0.28<br/><span class='muted'>footpath, walkway footpath</span><br/><span class='tag seg'>SEG</span> frac=0.010</td></tr><tr><td><code>plaza_hardscape</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=4 best=0.34<br/><span class='muted'>plaza, paved square, plaza</span><br/><span class='tag seg'>SEG</span> frac=0.010</td></tr><tr><td><code>stairs</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=2 best=0.31<br/><span class='muted'>stairs steps stone steps, stairs steps stone steps</span></td></tr><tr><td><code>entrance_threshold</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00</td></tr><tr><td><code>crossing</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=1 best=0.27<br/><span class='muted'>crosswalk</span></td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Boundaries &amp; edges</strong>
+                    <span class="muted">(boundaries_edges)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>fence</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00</td></tr><tr><td><code>wall</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00</td></tr><tr><td><code>gate</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00</td></tr><tr><td><code>railing</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=2 best=0.31<br/><span class='muted'>railing metal, railing metal</span></td></tr><tr><td><code>hedge</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00</td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Facade &amp; built form</strong>
+                    <span class="muted">(facade_built_form)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>building_mass</code></td><td>seg, dino</td><td><span class='tag dino'>DINO</span> hits=2 best=0.38<br/><span class='muted'>building large building building front, building large building building facade building front</span><br/><span class='tag seg'>SEG</span> frac=0.089</td></tr><tr><td><code>facade_frontage</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00<br/><span class='tag seg'>SEG</span> frac=0.089</td></tr><tr><td><code>opening</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=1 best=0.25<br/><span class='muted'>window</span></td></tr><tr><td><code>canopy_awning</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=2 best=0.27<br/><span class='muted'>canopy, canopyhang</span></td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Light</strong>
+                    <span class="muted">(light)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>light_fixture</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=3 best=0.31<br/><span class='muted'>lamp post light pole, park light, light pole</span></td></tr><tr><td><code>lit_area_soft</code></td><td>siglip</td><td><span class='tag siglip'>SIGLIP</span> brightly lit plaza (0.036)</td></tr><tr><td><code>brightness_level</code></td><td>metric</td><td><span class='tag metric'>METRIC</span> mean_luminance=0.328</td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Materiality &amp; surface</strong>
+                    <span class="muted">(materiality_surface)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>paving_type</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=1 best=0.26<br/><span class='muted'>asphalt path</span><br/><span class='tag seg'>SEG</span> frac=0.010</td></tr><tr><td><code>soft_ground</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=1 best=0.39<br/><span class='muted'>mulch unpaved ground</span><br/><span class='tag seg'>SEG</span> frac=0.336</td></tr><tr><td><code>hard_vertical</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=4 best=0.35<br/><span class='muted'>metal fence, metal fence, metal fence</span></td></tr><tr><td><code>water_surface</code></td><td>seg, dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00<br/><span class='tag seg'>SEG</span> frac=0.000</td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Water &amp; terrain</strong>
+                    <span class="muted">(water_terrain)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>fountain</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00</td></tr><tr><td><code>water_body</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00<br/><span class='tag seg'>SEG</span> frac=0.000</td></tr><tr><td><code>slope_grade</code></td><td>siglip, metric</td><td><span class='tag siglip'>SIGLIP</span> steep hill in park (0.051)<br/><span class='tag metric'>METRIC</span> ground_height_bias=0.819</td></tr><tr><td><code>rock_landform</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00</td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Social presence</strong>
+                    <span class="muted">(social_presence)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>people</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=8 best=0.64<br/><span class='muted'>person, person, person</span></td></tr><tr><td><code>bicycle</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=4 best=0.41<br/><span class='muted'>bicycle picnic, bicycle bike parked bicycle, bicycle bike parked bicycle</span></td></tr><tr><td><code>gathering_cluster_soft</code></td><td>siglip</td><td><span class='tag siglip'>SIGLIP</span> empty plaza with no people (0.054)</td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Spatial structure</strong>
+                    <span class="muted">(spatial_structure)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>sky_openness</code></td><td>seg, siglip</td><td><span class='tag seg'>SEG</span> frac=0.075<br/><span class='tag siglip'>SIGLIP</span> enclosed space with little sky (0.023)</td></tr><tr><td><code>building_enclosure</code></td><td>seg, siglip</td><td><span class='tag seg'>SEG</span> frac=0.089<br/><span class='tag siglip'>SIGLIP</span> open area with few buildings (0.092)</td></tr><tr><td><code>vegetation_enclosure</code></td><td>seg, siglip</td><td><span class='tag seg'>SEG</span> frac=0.825<br/><span class='tag siglip'>SIGLIP</span> open lawn with few trees (0.093)</td></tr><tr><td><code>ground_openness</code></td><td>seg, siglip</td><td><span class='tag seg'>SEG</span> frac=0.010<br/><span class='tag siglip'>SIGLIP</span> wide open paved plaza (0.073)</td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Composition &amp; contrast</strong>
+                    <span class="muted">(composition_contrast)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>luminance_contrast</code></td><td>metric</td><td><span class='tag metric'>METRIC</span> luminance_std=0.281</td></tr><tr><td><code>color_variety</code></td><td>metric</td><td><span class='tag metric'>METRIC</span> channel_std_mean=0.285</td></tr><tr><td><code>edge_complexity</code></td><td>metric</td><td><span class='tag metric'>METRIC</span> gradient_edge_density=0.068</td></tr><tr><td><code>focal_dominance_soft</code></td><td>siglip, metric</td><td><span class='tag siglip'>SIGLIP</span> single dominant object in the scene (0.032)<br/><span class='tag metric'>METRIC</span> gradient_edge_density=0.068</td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Wayfinding &amp; information</strong>
+                    <span class="muted">(wayfinding_information)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>sign</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=3 best=0.37<br/><span class='muted'>street sign, street sign, street sign</span></td></tr><tr><td><code>landmark_object</code></td><td>dino, siglip</td><td><span class='tag dino'>DINO</span> hits=1 best=0.31<br/><span class='muted'>clock tower</span><br/><span class='tag siglip'>SIGLIP</span> distinctive landmark (0.053)</td></tr><tr><td><code>map_board</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=2 best=0.33<br/><span class='muted'>information board, information board</span></td></tr></tbody>
+                  </table>
+                </details>
+                
+            </section>
+            
+            <section class="card" id="img-01">
+              <h2>Example image 01 — ChIJK-7ymsF344kRN70NFmyfvK8 / 00.jpg</h2>
+              <p class="muted">seg_ok=True ·
+                brightness=0.357 ·
+                contrast=0.222 ·
+                edge=0.078</p>
+              
+              <div class="quad">
+                <figure>
+                  <img src="01_dino.jpg" alt="dino"/>
+                  <figcaption>DINO — localized object boxes</figcaption>
+                </figure>
+                <figure>
+                  <img src="01_seg.jpg" alt="seg"/>
+                  <figcaption>SEG — semantic view fractions</figcaption>
+                </figure>
+                <figure>
+                  <img src="01_siglip.jpg" alt="siglip"/>
+                  <figcaption>SigLIP — soft phrase score bars</figcaption>
+                </figure>
+                <figure>
+                  <img src="01_metric.jpg" alt="metric"/>
+                  <figcaption>METRIC — luminance / edges / contrast</figcaption>
+                </figure>
+              </div>
+            
+              <h3>All category family scores</h3>
+              
+                <details open class="cat-block">
+                  <summary><strong>Objects &amp; furnishings</strong>
+                    <span class="muted">(objects_furnishings)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>seating</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=8 best=0.50<br/><span class='muted'>bench park bench, bench park bench, bench bench</span></td></tr><tr><td><code>play</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=3 best=0.65<br/><span class='muted'>slide, playground restroom, playground restroom</span></td></tr><tr><td><code>service_amenity</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=1 best=0.37<br/><span class='muted'>trash can</span></td></tr><tr><td><code>bike_facilities</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=2 best=0.36<br/><span class='muted'>bike rack bicycle rack, parking</span></td></tr><tr><td><code>other_amenity</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=3 best=0.67<br/><span class='muted'>picnic table, kiosk, kios</span></td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Vegetation</strong>
+                    <span class="muted">(vegetation)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>tree</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=5 best=0.49<br/><span class='muted'>tree, tree canopy leafy canopy, large tree mature tree</span><br/><span class='tag seg'>SEG</span> frac=0.448</td></tr><tr><td><code>canopy_shade_plant</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00<br/><span class='tag seg'>SEG</span> frac=0.448</td></tr><tr><td><code>lawn_groundcover</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00<br/><span class='tag seg'>SEG</span> frac=0.000</td></tr><tr><td><code>planting_bed</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=1 best=0.33<br/><span class='muted'>garden bed</span></td></tr><tr><td><code>shrub</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00</td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Circulation &amp; access</strong>
+                    <span class="muted">(circulation_access)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>path_walkway</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=1 best=0.25<br/><span class='muted'>path</span><br/><span class='tag seg'>SEG</span> frac=0.383</td></tr><tr><td><code>plaza_hardscape</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=2 best=0.30<br/><span class='muted'>square, courtyard</span><br/><span class='tag seg'>SEG</span> frac=0.383</td></tr><tr><td><code>stairs</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=2 best=0.34<br/><span class='muted'>stairs steps stone steps, steps</span></td></tr><tr><td><code>entrance_threshold</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=1 best=0.26<br/><span class='muted'>doorway</span></td></tr><tr><td><code>crossing</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=1 best=0.27<br/><span class='muted'>crosswalk</span></td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Boundaries &amp; edges</strong>
+                    <span class="muted">(boundaries_edges)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>fence</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00</td></tr><tr><td><code>wall</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00</td></tr><tr><td><code>gate</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00</td></tr><tr><td><code>railing</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00</td></tr><tr><td><code>hedge</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00</td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Facade &amp; built form</strong>
+                    <span class="muted">(facade_built_form)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>building_mass</code></td><td>seg, dino</td><td><span class='tag dino'>DINO</span> hits=1 best=0.33<br/><span class='muted'>building large building building front</span><br/><span class='tag seg'>SEG</span> frac=0.097</td></tr><tr><td><code>facade_frontage</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=1 best=0.27<br/><span class='muted'>storefront</span><br/><span class='tag seg'>SEG</span> frac=0.097</td></tr><tr><td><code>opening</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=3 best=0.30<br/><span class='muted'>window, window, door</span></td></tr><tr><td><code>canopy_awning</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=2 best=0.43<br/><span class='muted'>canopy overhang, canopy overhang</span></td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Light</strong>
+                    <span class="muted">(light)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>light_fixture</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=1 best=0.26<br/><span class='muted'>light</span></td></tr><tr><td><code>lit_area_soft</code></td><td>siglip</td><td><span class='tag siglip'>SIGLIP</span> well-lit area (0.037)</td></tr><tr><td><code>brightness_level</code></td><td>metric</td><td><span class='tag metric'>METRIC</span> mean_luminance=0.357</td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Materiality &amp; surface</strong>
+                    <span class="muted">(materiality_surface)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>paving_type</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00<br/><span class='tag seg'>SEG</span> frac=0.383</td></tr><tr><td><code>soft_ground</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00<br/><span class='tag seg'>SEG</span> frac=0.000</td></tr><tr><td><code>hard_vertical</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=1 best=0.26<br/><span class='muted'>metal fence</span></td></tr><tr><td><code>water_surface</code></td><td>seg, dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00<br/><span class='tag seg'>SEG</span> frac=0.000</td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Water &amp; terrain</strong>
+                    <span class="muted">(water_terrain)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>fountain</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=5 best=0.42<br/><span class='muted'>fountain water fountain, fountain water fountain, water fountain</span></td></tr><tr><td><code>water_body</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=1 best=0.26<br/><span class='muted'>lake</span><br/><span class='tag seg'>SEG</span> frac=0.000</td></tr><tr><td><code>slope_grade</code></td><td>siglip, metric</td><td><span class='tag siglip'>SIGLIP</span> steep hill in park (0.048)<br/><span class='tag metric'>METRIC</span> ground_height_bias=0.803</td></tr><tr><td><code>rock_landform</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=2 best=0.30<br/><span class='muted'>boulder, boulder</span></td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Social presence</strong>
+                    <span class="muted">(social_presence)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>people</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=2 best=0.34<br/><span class='muted'>person, person</span></td></tr><tr><td><code>bicycle</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=1 best=0.26<br/><span class='muted'>parked bicycle</span></td></tr><tr><td><code>gathering_cluster_soft</code></td><td>siglip</td><td><span class='tag siglip'>SIGLIP</span> empty plaza with no people (0.036)</td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Spatial structure</strong>
+                    <span class="muted">(spatial_structure)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>sky_openness</code></td><td>seg, siglip</td><td><span class='tag seg'>SEG</span> frac=0.056<br/><span class='tag siglip'>SIGLIP</span> open sky (0.018)</td></tr><tr><td><code>building_enclosure</code></td><td>seg, siglip</td><td><span class='tag seg'>SEG</span> frac=0.097<br/><span class='tag siglip'>SIGLIP</span> open area with few buildings (0.064)</td></tr><tr><td><code>vegetation_enclosure</code></td><td>seg, siglip</td><td><span class='tag seg'>SEG</span> frac=0.448<br/><span class='tag siglip'>SIGLIP</span> open lawn with few trees (0.037)</td></tr><tr><td><code>ground_openness</code></td><td>seg, siglip</td><td><span class='tag seg'>SEG</span> frac=0.383<br/><span class='tag siglip'>SIGLIP</span> wide open paved plaza (0.051)</td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Composition &amp; contrast</strong>
+                    <span class="muted">(composition_contrast)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>luminance_contrast</code></td><td>metric</td><td><span class='tag metric'>METRIC</span> luminance_std=0.222</td></tr><tr><td><code>color_variety</code></td><td>metric</td><td><span class='tag metric'>METRIC</span> channel_std_mean=0.233</td></tr><tr><td><code>edge_complexity</code></td><td>metric</td><td><span class='tag metric'>METRIC</span> gradient_edge_density=0.078</td></tr><tr><td><code>focal_dominance_soft</code></td><td>siglip, metric</td><td><span class='tag siglip'>SIGLIP</span> single dominant object in the scene (0.018)<br/><span class='tag metric'>METRIC</span> gradient_edge_density=0.078</td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Wayfinding &amp; information</strong>
+                    <span class="muted">(wayfinding_information)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>sign</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=1 best=0.29<br/><span class='muted'>sign park sign information board</span></td></tr><tr><td><code>landmark_object</code></td><td>dino, siglip</td><td><span class='tag dino'>DINO</span> hits=2 best=0.28<br/><span class='muted'>statue, clock tower</span><br/><span class='tag siglip'>SIGLIP</span> distinctive landmark (0.017)</td></tr><tr><td><code>map_board</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=2 best=0.32<br/><span class='muted'>park map, information board</span></td></tr></tbody>
+                  </table>
+                </details>
+                
+            </section>
+            
+            <section class="card" id="img-02">
+              <h2>Example image 02 — ChIJM3icQVN344kRZsmgAwN0zc8 / 00.jpg</h2>
+              <p class="muted">seg_ok=True ·
+                brightness=0.397 ·
+                contrast=0.220 ·
+                edge=0.088</p>
+              
+              <div class="quad">
+                <figure>
+                  <img src="02_dino.jpg" alt="dino"/>
+                  <figcaption>DINO — localized object boxes</figcaption>
+                </figure>
+                <figure>
+                  <img src="02_seg.jpg" alt="seg"/>
+                  <figcaption>SEG — semantic view fractions</figcaption>
+                </figure>
+                <figure>
+                  <img src="02_siglip.jpg" alt="siglip"/>
+                  <figcaption>SigLIP — soft phrase score bars</figcaption>
+                </figure>
+                <figure>
+                  <img src="02_metric.jpg" alt="metric"/>
+                  <figcaption>METRIC — luminance / edges / contrast</figcaption>
+                </figure>
+              </div>
+            
+              <h3>All category family scores</h3>
+              
+                <details open class="cat-block">
+                  <summary><strong>Objects &amp; furnishings</strong>
+                    <span class="muted">(objects_furnishings)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>seating</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=3 best=0.64<br/><span class='muted'>seat wall, chair park bench picnic table, park</span></td></tr><tr><td><code>play</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=1 best=0.50<br/><span class='muted'>playground restroom</span></td></tr><tr><td><code>service_amenity</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=1 best=0.50<br/><span class='muted'>trash can</span></td></tr><tr><td><code>bike_facilities</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=1 best=0.26<br/><span class='muted'>bike rack bicycle rack</span></td></tr><tr><td><code>other_amenity</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=2 best=0.30<br/><span class='muted'>picnic table, picnic table</span></td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Vegetation</strong>
+                    <span class="muted">(vegetation)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>tree</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=1 best=0.33<br/><span class='muted'>large tree mature tree</span><br/><span class='tag seg'>SEG</span> frac=0.390</td></tr><tr><td><code>canopy_shade_plant</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=1 best=0.26<br/><span class='muted'>leafy</span><br/><span class='tag seg'>SEG</span> frac=0.390</td></tr><tr><td><code>lawn_groundcover</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=3 best=0.35<br/><span class='muted'>grass lawn meadow, grass lawn, grass lawn meadow</span><br/><span class='tag seg'>SEG</span> frac=0.056</td></tr><tr><td><code>planting_bed</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=2 best=0.36<br/><span class='muted'>flower bed garden bed, bed</span></td></tr><tr><td><code>shrub</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=1 best=0.27<br/><span class='muted'>shrub hedge plant</span></td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Circulation &amp; access</strong>
+                    <span class="muted">(circulation_access)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>path_walkway</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=1 best=0.27<br/><span class='muted'>walkway footpath</span><br/><span class='tag seg'>SEG</span> frac=0.035</td></tr><tr><td><code>plaza_hardscape</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=2 best=0.26<br/><span class='muted'>square, square</span><br/><span class='tag seg'>SEG</span> frac=0.035</td></tr><tr><td><code>stairs</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=1 best=0.26<br/><span class='muted'>stone</span></td></tr><tr><td><code>entrance_threshold</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=1 best=0.28<br/><span class='muted'>entrance doorway</span></td></tr><tr><td><code>crossing</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=1 best=0.26<br/><span class='muted'>crosswalk</span></td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Boundaries &amp; edges</strong>
+                    <span class="muted">(boundaries_edges)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>fence</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=2 best=0.36<br/><span class='muted'>metal fence chain link fence gate, fence metal fence wooden fence chain link fence</span></td></tr><tr><td><code>wall</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00</td></tr><tr><td><code>gate</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=1 best=0.26<br/><span class='muted'>gate</span></td></tr><tr><td><code>railing</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=2 best=0.37<br/><span class='muted'>railing handrail metal, railing handrail metal</span></td></tr><tr><td><code>hedge</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=1 best=0.26<br/><span class='muted'>hedge hedge</span></td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Facade &amp; built form</strong>
+                    <span class="muted">(facade_built_form)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>building_mass</code></td><td>seg, dino</td><td><span class='tag dino'>DINO</span> hits=2 best=0.34<br/><span class='muted'>building large building front, building</span><br/><span class='tag seg'>SEG</span> frac=0.048</td></tr><tr><td><code>facade_frontage</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00<br/><span class='tag seg'>SEG</span> frac=0.201</td></tr><tr><td><code>opening</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=3 best=0.39<br/><span class='muted'>window, door, window</span></td></tr><tr><td><code>canopy_awning</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=1 best=0.31<br/><span class='muted'>canopy</span></td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Light</strong>
+                    <span class="muted">(light)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>light_fixture</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=4 best=0.44<br/><span class='muted'>lamp post light pole, lamp lamp post, lamp post</span></td></tr><tr><td><code>lit_area_soft</code></td><td>siglip</td><td><span class='tag siglip'>SIGLIP</span> brightly lit plaza (0.036)</td></tr><tr><td><code>brightness_level</code></td><td>metric</td><td><span class='tag metric'>METRIC</span> mean_luminance=0.397</td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Materiality &amp; surface</strong>
+                    <span class="muted">(materiality_surface)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>paving_type</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=1 best=0.27<br/><span class='muted'>asphalt path</span><br/><span class='tag seg'>SEG</span> frac=0.035</td></tr><tr><td><code>soft_ground</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00<br/><span class='tag seg'>SEG</span> frac=0.056</td></tr><tr><td><code>hard_vertical</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=7 best=0.60<br/><span class='muted'>stone wall, brick wall, stone wall</span></td></tr><tr><td><code>water_surface</code></td><td>seg, dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00<br/><span class='tag seg'>SEG</span> frac=0.000</td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Water &amp; terrain</strong>
+                    <span class="muted">(water_terrain)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>fountain</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=1 best=0.26<br/><span class='muted'>water fountain</span></td></tr><tr><td><code>water_body</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00<br/><span class='tag seg'>SEG</span> frac=0.000</td></tr><tr><td><code>slope_grade</code></td><td>siglip, metric</td><td><span class='tag siglip'>SIGLIP</span> steep hill in park (0.048)<br/><span class='tag metric'>METRIC</span> ground_height_bias=0.505</td></tr><tr><td><code>rock_landform</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=1 best=0.40<br/><span class='muted'>boulder</span></td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Social presence</strong>
+                    <span class="muted">(social_presence)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>people</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=2 best=0.31<br/><span class='muted'>person, people</span></td></tr><tr><td><code>bicycle</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=1 best=0.31<br/><span class='muted'>bicycle bike parked bicycle</span></td></tr><tr><td><code>gathering_cluster_soft</code></td><td>siglip</td><td><span class='tag siglip'>SIGLIP</span> empty plaza with no people (0.040)</td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Spatial structure</strong>
+                    <span class="muted">(spatial_structure)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>sky_openness</code></td><td>seg, siglip</td><td><span class='tag seg'>SEG</span> frac=0.000<br/><span class='tag siglip'>SIGLIP</span> open sky (-0.030)</td></tr><tr><td><code>building_enclosure</code></td><td>seg, siglip</td><td><span class='tag seg'>SEG</span> frac=0.201<br/><span class='tag siglip'>SIGLIP</span> open area with few buildings (0.029)</td></tr><tr><td><code>vegetation_enclosure</code></td><td>seg, siglip</td><td><span class='tag seg'>SEG</span> frac=0.750<br/><span class='tag siglip'>SIGLIP</span> tree-lined path (0.040)</td></tr><tr><td><code>ground_openness</code></td><td>seg, siglip</td><td><span class='tag seg'>SEG</span> frac=0.035<br/><span class='tag siglip'>SIGLIP</span> wide open paved plaza (0.044)</td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Composition &amp; contrast</strong>
+                    <span class="muted">(composition_contrast)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>luminance_contrast</code></td><td>metric</td><td><span class='tag metric'>METRIC</span> luminance_std=0.220</td></tr><tr><td><code>color_variety</code></td><td>metric</td><td><span class='tag metric'>METRIC</span> channel_std_mean=0.232</td></tr><tr><td><code>edge_complexity</code></td><td>metric</td><td><span class='tag metric'>METRIC</span> gradient_edge_density=0.088</td></tr><tr><td><code>focal_dominance_soft</code></td><td>siglip, metric</td><td><span class='tag siglip'>SIGLIP</span> single dominant object in the scene (0.020)<br/><span class='tag metric'>METRIC</span> gradient_edge_density=0.088</td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Wayfinding &amp; information</strong>
+                    <span class="muted">(wayfinding_information)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>sign</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=1 best=0.30<br/><span class='muted'>sign park sign</span></td></tr><tr><td><code>landmark_object</code></td><td>dino, siglip</td><td><span class='tag dino'>DINO</span> hits=4 best=0.39<br/><span class='muted'>clock tower, clock tower, statue monument</span><br/><span class='tag siglip'>SIGLIP</span> monument (0.084)</td></tr><tr><td><code>map_board</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=1 best=0.44<br/><span class='muted'>map board board</span></td></tr></tbody>
+                  </table>
+                </details>
+                
+            </section>
+            
+            <section class="card" id="img-03">
+              <h2>Example image 03 — ChIJsU8r3bFw44kRsWnYyHOKfkk / 00.jpg</h2>
+              <p class="muted">seg_ok=True ·
+                brightness=0.192 ·
+                contrast=0.184 ·
+                edge=0.028</p>
+              
+              <div class="quad">
+                <figure>
+                  <img src="03_dino.jpg" alt="dino"/>
+                  <figcaption>DINO — localized object boxes</figcaption>
+                </figure>
+                <figure>
+                  <img src="03_seg.jpg" alt="seg"/>
+                  <figcaption>SEG — semantic view fractions</figcaption>
+                </figure>
+                <figure>
+                  <img src="03_siglip.jpg" alt="siglip"/>
+                  <figcaption>SigLIP — soft phrase score bars</figcaption>
+                </figure>
+                <figure>
+                  <img src="03_metric.jpg" alt="metric"/>
+                  <figcaption>METRIC — luminance / edges / contrast</figcaption>
+                </figure>
+              </div>
+            
+              <h3>All category family scores</h3>
+              
+                <details open class="cat-block">
+                  <summary><strong>Objects &amp; furnishings</strong>
+                    <span class="muted">(objects_furnishings)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>seating</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=15 best=0.54<br/><span class='muted'>chair, chair, bench park bench</span></td></tr><tr><td><code>play</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=1 best=0.56<br/><span class='muted'>playground restroom</span></td></tr><tr><td><code>service_amenity</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00</td></tr><tr><td><code>bike_facilities</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=1 best=0.30<br/><span class='muted'>bike rack bicycle rack u</span></td></tr><tr><td><code>other_amenity</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=4 best=0.47<br/><span class='muted'>picnic table, picnic table, picnic table</span></td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Vegetation</strong>
+                    <span class="muted">(vegetation)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>tree</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00<br/><span class='tag seg'>SEG</span> frac=0.000</td></tr><tr><td><code>canopy_shade_plant</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00<br/><span class='tag seg'>SEG</span> frac=0.000</td></tr><tr><td><code>lawn_groundcover</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00<br/><span class='tag seg'>SEG</span> frac=0.000</td></tr><tr><td><code>planting_bed</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=1 best=0.26<br/><span class='muted'>flowers</span></td></tr><tr><td><code>shrub</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00</td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Circulation &amp; access</strong>
+                    <span class="muted">(circulation_access)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>path_walkway</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=1 best=0.27<br/><span class='muted'>##path</span><br/><span class='tag seg'>SEG</span> frac=0.113</td></tr><tr><td><code>plaza_hardscape</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=1 best=0.32<br/><span class='muted'>plaza</span><br/><span class='tag seg'>SEG</span> frac=0.113</td></tr><tr><td><code>stairs</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00</td></tr><tr><td><code>entrance_threshold</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00</td></tr><tr><td><code>crossing</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00</td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Boundaries &amp; edges</strong>
+                    <span class="muted">(boundaries_edges)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>fence</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00</td></tr><tr><td><code>wall</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00</td></tr><tr><td><code>gate</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00</td></tr><tr><td><code>railing</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00</td></tr><tr><td><code>hedge</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00</td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Facade &amp; built form</strong>
+                    <span class="muted">(facade_built_form)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>building_mass</code></td><td>seg, dino</td><td><span class='tag dino'>DINO</span> hits=1 best=0.40<br/><span class='muted'>building large building storefront</span><br/><span class='tag seg'>SEG</span> frac=0.000</td></tr><tr><td><code>facade_frontage</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00<br/><span class='tag seg'>SEG</span> frac=0.451</td></tr><tr><td><code>opening</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00</td></tr><tr><td><code>canopy_awning</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00</td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Light</strong>
+                    <span class="muted">(light)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>light_fixture</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=2 best=0.29<br/><span class='muted'>lamp lamp park light, light</span></td></tr><tr><td><code>lit_area_soft</code></td><td>siglip</td><td><span class='tag siglip'>SIGLIP</span> well-lit area (0.034)</td></tr><tr><td><code>brightness_level</code></td><td>metric</td><td><span class='tag metric'>METRIC</span> mean_luminance=0.192</td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Materiality &amp; surface</strong>
+                    <span class="muted">(materiality_surface)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>paving_type</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00<br/><span class='tag seg'>SEG</span> frac=0.113</td></tr><tr><td><code>soft_ground</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00<br/><span class='tag seg'>SEG</span> frac=0.000</td></tr><tr><td><code>hard_vertical</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00</td></tr><tr><td><code>water_surface</code></td><td>seg, dino</td><td><span class='tag dino'>DINO</span> hits=1 best=0.26<br/><span class='muted'>pool</span><br/><span class='tag seg'>SEG</span> frac=0.000</td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Water &amp; terrain</strong>
+                    <span class="muted">(water_terrain)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>fountain</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=1 best=0.26<br/><span class='muted'>water</span></td></tr><tr><td><code>water_body</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00<br/><span class='tag seg'>SEG</span> frac=0.000</td></tr><tr><td><code>slope_grade</code></td><td>siglip, metric</td><td><span class='tag siglip'>SIGLIP</span> flat level ground (-0.008)<br/><span class='tag metric'>METRIC</span> ground_height_bias=0.913</td></tr><tr><td><code>rock_landform</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00</td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Social presence</strong>
+                    <span class="muted">(social_presence)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>people</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=6 best=0.36<br/><span class='muted'>person pedestrian, person, person</span></td></tr><tr><td><code>bicycle</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00</td></tr><tr><td><code>gathering_cluster_soft</code></td><td>siglip</td><td><span class='tag siglip'>SIGLIP</span> group of people gathering (-0.014)</td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Spatial structure</strong>
+                    <span class="muted">(spatial_structure)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>sky_openness</code></td><td>seg, siglip</td><td><span class='tag seg'>SEG</span> frac=0.000<br/><span class='tag siglip'>SIGLIP</span> enclosed space with little sky (0.011)</td></tr><tr><td><code>building_enclosure</code></td><td>seg, siglip</td><td><span class='tag seg'>SEG</span> frac=0.451<br/><span class='tag siglip'>SIGLIP</span> open area with few buildings (-0.018)</td></tr><tr><td><code>vegetation_enclosure</code></td><td>seg, siglip</td><td><span class='tag seg'>SEG</span> frac=0.000<br/><span class='tag siglip'>SIGLIP</span> tree-lined path (-0.041)</td></tr><tr><td><code>ground_openness</code></td><td>seg, siglip</td><td><span class='tag seg'>SEG</span> frac=0.113<br/><span class='tag siglip'>SIGLIP</span> narrow enclosed walkway (-0.001)</td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Composition &amp; contrast</strong>
+                    <span class="muted">(composition_contrast)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>luminance_contrast</code></td><td>metric</td><td><span class='tag metric'>METRIC</span> luminance_std=0.184</td></tr><tr><td><code>color_variety</code></td><td>metric</td><td><span class='tag metric'>METRIC</span> channel_std_mean=0.206</td></tr><tr><td><code>edge_complexity</code></td><td>metric</td><td><span class='tag metric'>METRIC</span> gradient_edge_density=0.028</td></tr><tr><td><code>focal_dominance_soft</code></td><td>siglip, metric</td><td><span class='tag siglip'>SIGLIP</span> single dominant object in the scene (0.002)<br/><span class='tag metric'>METRIC</span> gradient_edge_density=0.028</td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Wayfinding &amp; information</strong>
+                    <span class="muted">(wayfinding_information)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>sign</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=3 best=0.35<br/><span class='muted'>sign park sign, street sign, park sign</span></td></tr><tr><td><code>landmark_object</code></td><td>dino, siglip</td><td><span class='tag dino'>DINO</span> hits=1 best=0.26<br/><span class='muted'>clock tower</span><br/><span class='tag siglip'>SIGLIP</span> distinctive landmark (0.006)</td></tr><tr><td><code>map_board</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=2 best=0.29<br/><span class='muted'>park map, park map</span></td></tr></tbody>
+                  </table>
+                </details>
+                
+            </section>
+            
+            <section class="card" id="img-04">
+              <h2>Example image 04 — ChIJB6Xitahw44kR9i_MAEut2RE / 00.jpg</h2>
+              <p class="muted">seg_ok=True ·
+                brightness=0.263 ·
+                contrast=0.234 ·
+                edge=0.028</p>
+              
+              <div class="quad">
+                <figure>
+                  <img src="04_dino.jpg" alt="dino"/>
+                  <figcaption>DINO — localized object boxes</figcaption>
+                </figure>
+                <figure>
+                  <img src="04_seg.jpg" alt="seg"/>
+                  <figcaption>SEG — semantic view fractions</figcaption>
+                </figure>
+                <figure>
+                  <img src="04_siglip.jpg" alt="siglip"/>
+                  <figcaption>SigLIP — soft phrase score bars</figcaption>
+                </figure>
+                <figure>
+                  <img src="04_metric.jpg" alt="metric"/>
+                  <figcaption>METRIC — luminance / edges / contrast</figcaption>
+                </figure>
+              </div>
+            
+              <h3>All category family scores</h3>
+              
+                <details open class="cat-block">
+                  <summary><strong>Objects &amp; furnishings</strong>
+                    <span class="muted">(objects_furnishings)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>seating</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=3 best=0.64<br/><span class='muted'>seat wall, park bench trash can, park bench trash picnic table</span></td></tr><tr><td><code>play</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=2 best=0.47<br/><span class='muted'>playground restroom, structure</span></td></tr><tr><td><code>service_amenity</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00</td></tr><tr><td><code>bike_facilities</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=1 best=0.43<br/><span class='muted'>bicycle parking</span></td></tr><tr><td><code>other_amenity</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00</td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Vegetation</strong>
+                    <span class="muted">(vegetation)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>tree</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=7 best=0.54<br/><span class='muted'>tree, tree canopy leafy canopy, large tree mature tree tree</span><br/><span class='tag seg'>SEG</span> frac=0.077</td></tr><tr><td><code>canopy_shade_plant</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00<br/><span class='tag seg'>SEG</span> frac=0.077</td></tr><tr><td><code>lawn_groundcover</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=2 best=0.34<br/><span class='muted'>grass, grass lawn meadow</span><br/><span class='tag seg'>SEG</span> frac=0.030</td></tr><tr><td><code>planting_bed</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=2 best=0.34<br/><span class='muted'>flower bed garden bed, flower bed garden bed</span></td></tr><tr><td><code>shrub</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=4 best=0.36<br/><span class='muted'>bush shrub hedge plant, bush shrub, hedge plant</span></td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Circulation &amp; access</strong>
+                    <span class="muted">(circulation_access)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>path_walkway</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=1 best=0.27<br/><span class='muted'>path walkway</span><br/><span class='tag seg'>SEG</span> frac=0.104</td></tr><tr><td><code>plaza_hardscape</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=5 best=0.36<br/><span class='muted'>paved square, plaza, plaza</span><br/><span class='tag seg'>SEG</span> frac=0.104</td></tr><tr><td><code>stairs</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00</td></tr><tr><td><code>entrance_threshold</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=2 best=0.37<br/><span class='muted'>entrance doorway, doorway</span></td></tr><tr><td><code>crossing</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=2 best=0.32<br/><span class='muted'>crosswalk, crosswalk</span></td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Boundaries &amp; edges</strong>
+                    <span class="muted">(boundaries_edges)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>fence</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=2 best=0.33<br/><span class='muted'>fence metal fence wooden fence chain link fence, fence metal fence wooden fence link</span></td></tr><tr><td><code>wall</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00</td></tr><tr><td><code>gate</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00</td></tr><tr><td><code>railing</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=2 best=0.34<br/><span class='muted'>railing handrail, railing</span></td></tr><tr><td><code>hedge</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=1 best=0.59<br/><span class='muted'>hedge hedgerow</span></td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Facade &amp; built form</strong>
+                    <span class="muted">(facade_built_form)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>building_mass</code></td><td>seg, dino</td><td><span class='tag dino'>DINO</span> hits=1 best=0.43<br/><span class='muted'>building large building</span><br/><span class='tag seg'>SEG</span> frac=0.628</td></tr><tr><td><code>facade_frontage</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=1 best=0.32<br/><span class='muted'>storefront</span><br/><span class='tag seg'>SEG</span> frac=0.690</td></tr><tr><td><code>opening</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=3 best=0.55<br/><span class='muted'>door, window, window</span></td></tr><tr><td><code>canopy_awning</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=5 best=0.31<br/><span class='muted'>canopy, ##front front canopy, canopyhang</span></td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Light</strong>
+                    <span class="muted">(light)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>light_fixture</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=1 best=0.26<br/><span class='muted'>pole</span></td></tr><tr><td><code>lit_area_soft</code></td><td>siglip</td><td><span class='tag siglip'>SIGLIP</span> dark poorly lit path (0.049)</td></tr><tr><td><code>brightness_level</code></td><td>metric</td><td><span class='tag metric'>METRIC</span> mean_luminance=0.263</td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Materiality &amp; surface</strong>
+                    <span class="muted">(materiality_surface)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>paving_type</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00<br/><span class='tag seg'>SEG</span> frac=0.104</td></tr><tr><td><code>soft_ground</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00<br/><span class='tag seg'>SEG</span> frac=0.030</td></tr><tr><td><code>hard_vertical</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=6 best=0.51<br/><span class='muted'>stone wall, brick wall, metal</span></td></tr><tr><td><code>water_surface</code></td><td>seg, dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00<br/><span class='tag seg'>SEG</span> frac=0.000</td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Water &amp; terrain</strong>
+                    <span class="muted">(water_terrain)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>fountain</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=2 best=0.37<br/><span class='muted'>fountain water fountain, fountain water fountain</span></td></tr><tr><td><code>water_body</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00<br/><span class='tag seg'>SEG</span> frac=0.000</td></tr><tr><td><code>slope_grade</code></td><td>siglip, metric</td><td><span class='tag siglip'>SIGLIP</span> flat level ground (0.050)<br/><span class='tag metric'>METRIC</span> ground_height_bias=0.916</td></tr><tr><td><code>rock_landform</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00</td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Social presence</strong>
+                    <span class="muted">(social_presence)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>people</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00</td></tr><tr><td><code>bicycle</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=1 best=0.27<br/><span class='muted'>parked bicycle</span></td></tr><tr><td><code>gathering_cluster_soft</code></td><td>siglip</td><td><span class='tag siglip'>SIGLIP</span> empty plaza with no people (0.028)</td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Spatial structure</strong>
+                    <span class="muted">(spatial_structure)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>sky_openness</code></td><td>seg, siglip</td><td><span class='tag seg'>SEG</span> frac=0.059<br/><span class='tag siglip'>SIGLIP</span> enclosed space with little sky (0.041)</td></tr><tr><td><code>building_enclosure</code></td><td>seg, siglip</td><td><span class='tag seg'>SEG</span> frac=0.690<br/><span class='tag siglip'>SIGLIP</span> tall buildings enclosing the street (0.087)</td></tr><tr><td><code>vegetation_enclosure</code></td><td>seg, siglip</td><td><span class='tag seg'>SEG</span> frac=0.130<br/><span class='tag siglip'>SIGLIP</span> open lawn with few trees (0.022)</td></tr><tr><td><code>ground_openness</code></td><td>seg, siglip</td><td><span class='tag seg'>SEG</span> frac=0.104<br/><span class='tag siglip'>SIGLIP</span> narrow enclosed walkway (0.055)</td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Composition &amp; contrast</strong>
+                    <span class="muted">(composition_contrast)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>luminance_contrast</code></td><td>metric</td><td><span class='tag metric'>METRIC</span> luminance_std=0.234</td></tr><tr><td><code>color_variety</code></td><td>metric</td><td><span class='tag metric'>METRIC</span> channel_std_mean=0.235</td></tr><tr><td><code>edge_complexity</code></td><td>metric</td><td><span class='tag metric'>METRIC</span> gradient_edge_density=0.028</td></tr><tr><td><code>focal_dominance_soft</code></td><td>siglip, metric</td><td><span class='tag siglip'>SIGLIP</span> single dominant object in the scene (0.040)<br/><span class='tag metric'>METRIC</span> gradient_edge_density=0.028</td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Wayfinding &amp; information</strong>
+                    <span class="muted">(wayfinding_information)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>sign</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00</td></tr><tr><td><code>landmark_object</code></td><td>dino, siglip</td><td><span class='tag dino'>DINO</span> hits=1 best=0.27<br/><span class='muted'>clock tower</span><br/><span class='tag siglip'>SIGLIP</span> distinctive landmark (0.051)</td></tr><tr><td><code>map_board</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00</td></tr></tbody>
+                  </table>
+                </details>
+                
+            </section>
+            
+            <section class="card" id="img-05">
+              <h2>Example image 05 — ChIJgaT0OeR544kRDWVr7eYaS-g / 01.jpg</h2>
+              <p class="muted">seg_ok=True ·
+                brightness=0.393 ·
+                contrast=0.249 ·
+                edge=0.088</p>
+              
+              <div class="quad">
+                <figure>
+                  <img src="05_dino.jpg" alt="dino"/>
+                  <figcaption>DINO — localized object boxes</figcaption>
+                </figure>
+                <figure>
+                  <img src="05_seg.jpg" alt="seg"/>
+                  <figcaption>SEG — semantic view fractions</figcaption>
+                </figure>
+                <figure>
+                  <img src="05_siglip.jpg" alt="siglip"/>
+                  <figcaption>SigLIP — soft phrase score bars</figcaption>
+                </figure>
+                <figure>
+                  <img src="05_metric.jpg" alt="metric"/>
+                  <figcaption>METRIC — luminance / edges / contrast</figcaption>
+                </figure>
+              </div>
+            
+              <h3>All category family scores</h3>
+              
+                <details open class="cat-block">
+                  <summary><strong>Objects &amp; furnishings</strong>
+                    <span class="muted">(objects_furnishings)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>seating</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=5 best=0.48<br/><span class='muted'>bench park bench, seat wall, park bench</span></td></tr><tr><td><code>play</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=4 best=0.53<br/><span class='muted'>playground restroom, play structure kiosk, playground</span></td></tr><tr><td><code>service_amenity</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00</td></tr><tr><td><code>bike_facilities</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=1 best=0.38<br/><span class='muted'>parking</span></td></tr><tr><td><code>other_amenity</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=1 best=0.32<br/><span class='muted'>kiosk</span></td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Vegetation</strong>
+                    <span class="muted">(vegetation)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>tree</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=10 best=0.52<br/><span class='muted'>tree, tree, tree</span><br/><span class='tag seg'>SEG</span> frac=0.223</td></tr><tr><td><code>canopy_shade_plant</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00<br/><span class='tag seg'>SEG</span> frac=0.223</td></tr><tr><td><code>lawn_groundcover</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00<br/><span class='tag seg'>SEG</span> frac=0.000</td></tr><tr><td><code>planting_bed</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=2 best=0.35<br/><span class='muted'>flower bed garden, bed</span></td></tr><tr><td><code>shrub</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=1 best=0.27<br/><span class='muted'>bush shrub</span></td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Circulation &amp; access</strong>
+                    <span class="muted">(circulation_access)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>path_walkway</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=3 best=0.29<br/><span class='muted'>path walkway sidewalk footpath, footpath, path paved walkway path</span><br/><span class='tag seg'>SEG</span> frac=0.000</td></tr><tr><td><code>plaza_hardscape</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=3 best=0.30<br/><span class='muted'>plaza, courtyard, courtyard</span><br/><span class='tag seg'>SEG</span> frac=0.000</td></tr><tr><td><code>stairs</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00</td></tr><tr><td><code>entrance_threshold</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00</td></tr><tr><td><code>crossing</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=1 best=0.27<br/><span class='muted'>crosswalk crossing</span></td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Boundaries &amp; edges</strong>
+                    <span class="muted">(boundaries_edges)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>fence</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00</td></tr><tr><td><code>wall</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=4 best=0.37<br/><span class='muted'>wall wall, stone wall brick wall, brick wall stone wall</span></td></tr><tr><td><code>gate</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00</td></tr><tr><td><code>railing</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=1 best=0.29<br/><span class='muted'>handrail metal</span></td></tr><tr><td><code>hedge</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=1 best=0.29<br/><span class='muted'>hedgerow</span></td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Facade &amp; built form</strong>
+                    <span class="muted">(facade_built_form)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>building_mass</code></td><td>seg, dino</td><td><span class='tag dino'>DINO</span> hits=2 best=0.39<br/><span class='muted'>building large building building facade building front, building large building</span><br/><span class='tag seg'>SEG</span> frac=0.029</td></tr><tr><td><code>facade_frontage</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=3 best=0.26<br/><span class='muted'>facade, facade, facade</span><br/><span class='tag seg'>SEG</span> frac=0.029</td></tr><tr><td><code>opening</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00</td></tr><tr><td><code>canopy_awning</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=1 best=0.28<br/><span class='muted'>canopy</span></td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Light</strong>
+                    <span class="muted">(light)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>light_fixture</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=2 best=0.29<br/><span class='muted'>park light, park light</span></td></tr><tr><td><code>lit_area_soft</code></td><td>siglip</td><td><span class='tag siglip'>SIGLIP</span> well-lit area (0.050)</td></tr><tr><td><code>brightness_level</code></td><td>metric</td><td><span class='tag metric'>METRIC</span> mean_luminance=0.393</td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Materiality &amp; surface</strong>
+                    <span class="muted">(materiality_surface)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>paving_type</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00<br/><span class='tag seg'>SEG</span> frac=0.000</td></tr><tr><td><code>soft_ground</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=1 best=0.31<br/><span class='muted'>unpaved ground</span><br/><span class='tag seg'>SEG</span> frac=0.392</td></tr><tr><td><code>hard_vertical</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=1 best=0.31<br/><span class='muted'>glass facade</span></td></tr><tr><td><code>water_surface</code></td><td>seg, dino</td><td><span class='tag dino'>DINO</span> hits=1 best=0.27<br/><span class='muted'>water surface</span><br/><span class='tag seg'>SEG</span> frac=0.020</td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Water &amp; terrain</strong>
+                    <span class="muted">(water_terrain)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>fountain</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=6 best=0.33<br/><span class='muted'>fountain, fountain water fountain, fountain water fountain</span></td></tr><tr><td><code>water_body</code></td><td>dino, seg</td><td><span class='tag dino'>DINO</span> hits=1 best=0.28<br/><span class='muted'>lake river</span><br/><span class='tag seg'>SEG</span> frac=0.020</td></tr><tr><td><code>slope_grade</code></td><td>siglip, metric</td><td><span class='tag siglip'>SIGLIP</span> steep hill in park (0.079)<br/><span class='tag metric'>METRIC</span> ground_height_bias=0.804</td></tr><tr><td><code>rock_landform</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=1 best=0.35<br/><span class='muted'>boulder rock formation park</span></td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Social presence</strong>
+                    <span class="muted">(social_presence)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>people</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=6 best=0.55<br/><span class='muted'>pedestrian, pedestrian, person</span></td></tr><tr><td><code>bicycle</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=3 best=0.29<br/><span class='muted'>bicycle, cyclist, cyclist</span></td></tr><tr><td><code>gathering_cluster_soft</code></td><td>siglip</td><td><span class='tag siglip'>SIGLIP</span> empty plaza with no people (0.057)</td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Spatial structure</strong>
+                    <span class="muted">(spatial_structure)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>sky_openness</code></td><td>seg, siglip</td><td><span class='tag seg'>SEG</span> frac=0.335<br/><span class='tag siglip'>SIGLIP</span> open sky (0.043)</td></tr><tr><td><code>building_enclosure</code></td><td>seg, siglip</td><td><span class='tag seg'>SEG</span> frac=0.029<br/><span class='tag siglip'>SIGLIP</span> open area with few buildings (0.064)</td></tr><tr><td><code>vegetation_enclosure</code></td><td>seg, siglip</td><td><span class='tag seg'>SEG</span> frac=0.223<br/><span class='tag siglip'>SIGLIP</span> tree-lined path (0.061)</td></tr><tr><td><code>ground_openness</code></td><td>seg, siglip</td><td><span class='tag seg'>SEG</span> frac=0.392<br/><span class='tag siglip'>SIGLIP</span> wide open paved plaza (0.069)</td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Composition &amp; contrast</strong>
+                    <span class="muted">(composition_contrast)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>luminance_contrast</code></td><td>metric</td><td><span class='tag metric'>METRIC</span> luminance_std=0.249</td></tr><tr><td><code>color_variety</code></td><td>metric</td><td><span class='tag metric'>METRIC</span> channel_std_mean=0.257</td></tr><tr><td><code>edge_complexity</code></td><td>metric</td><td><span class='tag metric'>METRIC</span> gradient_edge_density=0.088</td></tr><tr><td><code>focal_dominance_soft</code></td><td>siglip, metric</td><td><span class='tag siglip'>SIGLIP</span> single dominant object in the scene (0.031)<br/><span class='tag metric'>METRIC</span> gradient_edge_density=0.088</td></tr></tbody>
+                  </table>
+                </details>
+                
+                <details open class="cat-block">
+                  <summary><strong>Wayfinding &amp; information</strong>
+                    <span class="muted">(wayfinding_information)</span></summary>
+                  <table>
+                    <thead><tr><th>Family</th><th>Extractors</th><th>Scores</th></tr></thead>
+                    <tbody><tr><td><code>sign</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=0 best=0.00</td></tr><tr><td><code>landmark_object</code></td><td>dino, siglip</td><td><span class='tag dino'>DINO</span> hits=3 best=0.38<br/><span class='muted'>clock tower, clock tower, distinctive landmark</span><br/><span class='tag siglip'>SIGLIP</span> distinctive landmark (0.049)</td></tr><tr><td><code>map_board</code></td><td>dino</td><td><span class='tag dino'>DINO</span> hits=3 best=0.29<br/><span class='muted'>information board, information board, information board</span></td></tr></tbody>
+                  </table>
+                </details>
+                
+            </section>
+            
+</body>
+</html>
