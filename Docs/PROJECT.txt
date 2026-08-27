@@ -1,0 +1,146 @@
+================================================================================
+PROJECT DESCRIPTION — Atmosphere Grounding
+================================================================================
+Repo: atmosphere-grounding (Cambridge pilot → larger corpus)
+Status: Pilot running; visual-category ontology v1 locked
+Last goals sync: 2026-08-27
+
+
+--------------------------------------------------------------------------------
+1. ONE-SENTENCE GOAL
+--------------------------------------------------------------------------------
+Ground curated urban atmosphere language (place reviews / lexicon terms) in
+constructed visual features from place photos, so we can measure which visual
+structures co-occur with which words — and later, from a text passage, report
+which of *our* visual features would be more prominent (and the reverse).
+
+
+--------------------------------------------------------------------------------
+2. MOTIVATION
+--------------------------------------------------------------------------------
+People describe places with words like “calm”, “safe”, “inviting”. Photos of
+those places contain measurable structure (vegetation, seating, enclosure,
+light, …). This project does not treat vision–language models as the answer;
+it builds an explicit visual ontology, pairs it with weakly supervised review
+text (LLM-assisted extraction), and studies the relationship in *our* data.
+
+The scientific claim is local and corpus-grounded: associations should reflect
+Cambridge (then multi-city) place evidence, not only a generic CLIP/SigLIP prior.
+
+
+--------------------------------------------------------------------------------
+3. WHAT WE ARE NOT DOING
+--------------------------------------------------------------------------------
+- Not training a text-to-image generator (“paint a park from a review”).
+- Not replacing measured features with free-form LLM guesses about visuals.
+- Not pre-binding ontology families to atmosphere labels (no hand-coded
+  “calm = trees”). Atmosphere ↔ visual links are discovered from data.
+- Street View is out of scope for the pilot (weaker pairing with place reviews).
+
+
+--------------------------------------------------------------------------------
+4. TWO LAYERS OF THE SYSTEM
+--------------------------------------------------------------------------------
+
+LAYER A — LLM text grounding (already in the Cambridge pilot)
+  Reviews → Ollama Pass A (comment-only) → atmosphere + phrase + nouns
+  Image object lists → Ollama Pass B (fusion) → refined mentions
+  Vision (SigLIP + Grounding DINO + ablation) localizes phrases/nouns in photos
+  Outputs: mentions.jsonl, mentions_fused.jsonl, evidence.jsonl, graph
+
+LAYER B — Visual category ontology (locked v1; refining extractors / analysis)
+  Fixed descriptive feature space for images (~12 categories / ~49 families)
+  Extractors: Grounding DINO, Mask2Former seg, SigLIP soft scores, image metrics
+  Config: configs/visual_categories_v1.yaml
+  Purpose: stable, interpretable visual vectors for place-holdout analysis
+  Atmosphere labels are NOT baked into this ontology
+
+
+--------------------------------------------------------------------------------
+5. RESEARCH STAGES
+--------------------------------------------------------------------------------
+
+STAGE 0 — Cambridge pilot (current / near-term)
+  Collect parks/plazas (Places API), extract, fuse, ground, correlate, graph.
+  Lock visual-category extractors; full-corpus visual_features run; place-holdout
+  verification: category feature space vs held-out comments / atmospheres.
+  Success bar: human-plausible atmosphere → visual chains, not generic VL prior.
+
+STAGE 1 — Corpus association maps (after more places)
+  From accumulated grounded pairs, estimate which ontology features are more
+  prominent for a given atmosphere / phrase (lifts, multi-output regression /
+  concept-bottleneck style maps). Same data also supports image → keywords
+  from *our* feature space (probes / retrieval), not only zero-shot CLIP.
+
+STAGE 2 — Optional LLM narrator (after Stage 1 tables exist)
+  Fine-tune (e.g. LoRA) a small instruct LLM so that, given a text passage, it
+  *describes* expected visual features in the vocabulary of our ontology.
+  Targets must be derived from measured feature profiles (JSON / templated
+  text), not from another LLM looking at the photo. Structured predictor
+  remains the scientific backbone; LoRA is the fluent interface / distillation.
+
+Data scale (order of magnitude, places):
+  Pilot validation: tens–low hundreds
+  Solid associations: hundreds–few thousand
+  Stronger maps / narrator: few thousand+ with multi-city diversity
+
+
+--------------------------------------------------------------------------------
+6. ARCHITECTURE (LOGICAL)
+--------------------------------------------------------------------------------
+
+  [Places API] → places, reviews, photos
+        │
+        ├─► [LLM Pass A / Pass B] ─► atmosphere, phrase, nouns
+        │
+        ├─► [Detect / Ground] ─► boxes, SigLIP match, ablation evidence
+        │
+        └─► [Visual categories] ─► structured feature vectors per image/place
+                    │
+                    ▼
+           correlate · atmosphere profiles · knowledge graph
+                    │
+                    ▼
+           (later) text ↔ feature prominence maps · optional LoRA narrator
+
+
+--------------------------------------------------------------------------------
+7. ACTIVE PILOT SCOPE
+--------------------------------------------------------------------------------
+Region: Harvard–MIT corridor, Cambridge, MA public/open spaces
+Active atmospheres: inviting, safe, calm
+Lexicon (full list in configs/lexicon.yaml) expands after pilot looks right
+LLM: Ollama llama3.2 (heuristic fallback)
+Vision: SigLIP, Grounding DINO, DINOv2, Mask2Former (see cambridge_pilot.yaml)
+
+
+--------------------------------------------------------------------------------
+8. KEY DOCUMENTS
+--------------------------------------------------------------------------------
+  Docs/PROJECT.txt                 ← this file (goals & stages)
+  Docs/CONTINUE.txt                ← handoff / next actions
+  Docs/visual_categories/README.txt
+  Docs/visual_categories/phase{1,2,3,4}_*.txt
+  README.md                        ← setup, commands, outputs
+  configs/cambridge_pilot.yaml
+  configs/visual_categories_v1.yaml
+  configs/lexicon.yaml
+
+
+--------------------------------------------------------------------------------
+9. SUCCESS CRITERIA (PROJECT-LEVEL)
+--------------------------------------------------------------------------------
+Near-term:
+  - Inspectable atmosphere → visual evidence that is locally plausible
+  - Ontology extractors stable enough for full pilot feature tables
+  - Holdout: visual category space predicts / correlates with held-out text
+
+Longer-term:
+  - Corpus-grounded answer to: “for this atmosphere word, which of our features
+    are more prominent?”
+  - Reverse: “for this image/place feature profile, which keywords fit our data?”
+  - Optional: LoRA that narrates Stage-1 profiles without inventing unmeasured cues
+
+================================================================================
+END PROJECT DESCRIPTION
+================================================================================

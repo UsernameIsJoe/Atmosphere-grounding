@@ -3,6 +3,12 @@ INDEX — Visual category ontology documentation
 Atmosphere Grounding project
 ================================================================================
 
+Role in the overall project (see Docs/PROJECT.txt):
+  This ontology is LAYER B — a locked descriptive feature space for images.
+  It does NOT replace LLM Pass A/B text grounding (LAYER A). It upgrades the
+  visual side so atmosphere↔visual links can be studied as structured features
+  (Stage 0 holdout → Stage 1 corpus prominence maps).
+
 Read in order:
 
   1. Docs/visual_categories/phase1_top_level.txt
@@ -31,6 +37,8 @@ Design invariants:
   - Categories describe images; they do NOT pre-bind to atmosphere lexicon.
   - Image is primary unit; place aggregates images.
   - v1 taxonomy fixed; schema extensible for later versions.
+  - Atmosphere links are discovered via the grounding pipeline + later
+    association maps — not hand-coded into this ontology.
 
 Next work:
   - Full-corpus visual-features run (all pilot images)

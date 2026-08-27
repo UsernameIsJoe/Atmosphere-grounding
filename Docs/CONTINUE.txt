@@ -3,9 +3,11 @@ CONTINUE HERE — handoff note for the next session / other device
 ================================================================================
 Repo: https://github.com/UsernameIsJoe/atmosphere-grounding
 Branch: master
-Last handoff commit (approx): 6f28665 — visual-category extractors + HTML preview
 
 Say in chat: "read the continue note" (this file: Docs/CONTINUE.txt)
+
+Read first for goals / architecture:
+  Docs/PROJECT.txt
 
 
 WHERE WE LEFT OFF
@@ -19,7 +21,17 @@ Visual category ontology v1 is locked and wired into the pipeline:
 
 Phase 4 extractor benchmark is done. A 6-image HTML preview gallery exists.
 
-Do NOT redesign categories unless clearly needed — focus on analysis / pipeline.
+LLM grounding (Pass A extract + Pass B fuse + vision ground) is already part of
+the Cambridge pilot — see Docs/PROJECT.txt Layer A. Do NOT redesign categories
+unless clearly needed — focus on analysis / pipeline / holdout.
+
+
+PROJECT GOAL (reminder)
+-----------------------
+Ground atmosphere text with constructed visual features; later answer from our
+data which features are more prominent for a text passage (and reverse). Not
+image generation. Optional LoRA narrator only after measured prominence tables
+exist (Stage 2 in Docs/PROJECT.txt).
 
 
 OPEN THE PREVIEW
@@ -27,6 +39,7 @@ OPEN THE PREVIEW
   visuals of steps/visual_categories/index.html
 
 Also useful:
+  Docs/PROJECT.txt
   Docs/visual_categories/phase4_extractor_benchmark.txt
   Docs/visual_categories/README.txt
   configs/visual_categories_v1.yaml
@@ -41,7 +54,7 @@ STILL TO DO (pick up in order)
 2. Optional: full-corpus feature run for all pilot images:
      PYTHONPATH=src atmosphere visual-categories --force
 3. Place-holdout verification: image category feature space vs held-out
-   comments / atmosphere labels (next research step).
+   comments / atmosphere labels (next research step — Stage 0 → Stage 1).
 
 
 OTHER-DEVICE SETUP
