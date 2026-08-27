@@ -4,7 +4,9 @@ Weakly supervised pipeline that **grounds urban atmosphere language** (place rev
 
 **Project goal (short):** measure which visual structures co-occur with which words in *our* corpus — not rely on a generic vision–language prior alone. Longer term: from a text passage, report which of our ontology features are more prominent (and the reverse: image/features → keywords grounded in the same data). This is **not** text-to-image generation.
 
-Full goals, stages, and non-goals: [`Docs/PROJECT.txt`](Docs/PROJECT.txt). Handoff / next steps: [`Docs/CONTINUE.txt`](Docs/CONTINUE.txt).
+Full goals, stages, and non-goals: [`Docs/PROJECT.txt`](Docs/PROJECT.txt).  
+**Architecture & design guide (flow + all decisions):** [`Docs/ARCHITECTURE.txt`](Docs/ARCHITECTURE.txt).  
+Handoff / next steps: [`Docs/CONTINUE.txt`](Docs/CONTINUE.txt).
 
 ## What this does
 
@@ -17,7 +19,7 @@ Full goals, stages, and non-goals: [`Docs/PROJECT.txt`](Docs/PROJECT.txt). Hando
 7. **Output** strength per lexicon + ranked supporting features; validate on held-out places  
 8. **Graph / inspect** (pilot tooling) — NetworkX graph, browser `view`, CLI `inspect`  
 
-Design lock: [`Docs/DESIGN_LOCK.txt`](Docs/DESIGN_LOCK.txt). Street View deferred until place-photo path is solid. Ontology families are **not** pre-bound to atmosphere labels; links come from co-occurrence in data.
+Design lock: [`Docs/DESIGN_LOCK.txt`](Docs/DESIGN_LOCK.txt). Full guide: [`Docs/ARCHITECTURE.txt`](Docs/ARCHITECTURE.txt).
 
 ## Two layers + association
 

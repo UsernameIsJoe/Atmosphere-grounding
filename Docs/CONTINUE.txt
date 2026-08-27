@@ -7,7 +7,8 @@ Branch: master
 Say in chat: "read the continue note" (this file: Docs/CONTINUE.txt)
 
 Read first for goals / architecture:
-  Docs/PROJECT.txt
+  Docs/ARCHITECTURE.txt   (full flow + decisions)
+  Docs/PROJECT.txt        (goals & stages)
 
 
 WHERE WE LEFT OFF
@@ -22,9 +23,12 @@ Visual category ontology v1 is locked and wired into the pipeline:
 Phase 4 extractor benchmark is done. A 6-image HTML preview gallery exists.
 
 Design lock (2026-08-27): Docs/DESIGN_LOCK.txt
+Full architecture guide: Docs/ARCHITECTURE.txt  ← read this to understand flow + decisions
+
   - Image feature data = Layer B families/metrics (primary) + comment visual add-ons
   - Pass A: comment-only lexicon/adj extract; Pass B: comment + Layer B profile
-  - Association: co-occurrence; soft match weights; place-normalized feature ranks
+  - Pass B keeps Pass A-only nouns at reduced weight (photos may miss features)
+  - Association: co-occurrence; soft match weights; dual score tracks (both computed)
   - LLM extract-only; learner does not use LLM-invented adj↔feature links
 
 Pilot code still has legacy Pass B (DINO object list only) — align to DESIGN_LOCK when implementing.

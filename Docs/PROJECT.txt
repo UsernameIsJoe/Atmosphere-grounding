@@ -4,7 +4,7 @@ PROJECT DESCRIPTION — Atmosphere Grounding
 Repo: atmosphere-grounding (Cambridge pilot → larger corpus)
 Status: Pilot running; visual-category ontology v1 locked
 Last goals sync: 2026-08-27
-Design lock: Docs/DESIGN_LOCK.txt (adj/lexicon ↔ feature co-occurrence; LLM extract-only)
+Design lock: Docs/DESIGN_LOCK.txt · Full guide: Docs/ARCHITECTURE.txt
 
 
 --------------------------------------------------------------------------------
@@ -138,7 +138,8 @@ Vision: SigLIP, Grounding DINO, DINOv2, Mask2Former (see cambridge_pilot.yaml)
 --------------------------------------------------------------------------------
 8. KEY DOCUMENTS
 --------------------------------------------------------------------------------
-  Docs/DESIGN_LOCK.txt             ← agreed flow, roles, validation (2026-08-27)
+  Docs/ARCHITECTURE.txt            ← FULL guide: flow, decisions, all layers (start here)
+  Docs/DESIGN_LOCK.txt             ← compact summary + key locks
   Docs/PROJECT.txt                 ← this file (goals & stages)
   Docs/CONTINUE.txt                ← handoff / next actions
   Docs/visual_categories/README.txt
