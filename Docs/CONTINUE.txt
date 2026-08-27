@@ -21,9 +21,15 @@ Visual category ontology v1 is locked and wired into the pipeline:
 
 Phase 4 extractor benchmark is done. A 6-image HTML preview gallery exists.
 
-LLM grounding (Pass A extract + Pass B fuse + vision ground) is already part of
-the Cambridge pilot — see Docs/PROJECT.txt Layer A. Do NOT redesign categories
-unless clearly needed — focus on analysis / pipeline / holdout.
+Design lock (2026-08-27): Docs/DESIGN_LOCK.txt
+  - Image feature data = Layer B families/metrics (primary) + comment visual add-ons
+  - Pass A: comment-only lexicon/adj extract; Pass B: comment + Layer B profile
+  - Association: co-occurrence; soft match weights; place-normalized feature ranks
+  - LLM extract-only; learner does not use LLM-invented adj↔feature links
+
+Pilot code still has legacy Pass B (DINO object list only) — align to DESIGN_LOCK when implementing.
+
+Do NOT redesign ontology categories unless clearly needed — focus on association / holdout.
 
 
 PROJECT GOAL (reminder)

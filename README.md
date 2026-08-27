@@ -9,21 +9,23 @@ Full goals, stages, and non-goals: [`Docs/PROJECT.txt`](Docs/PROJECT.txt). Hando
 ## What this does
 
 1. **Collect** parks/plazas via Places API (New), cache details + photos under free-tier caps  
-2. **Extract (LLM Pass A)** lexicon atmospheres + visual nouns from reviews (Ollama, heuristic fallback)  
-3. **Detect + Fuse (LLM Pass B)** image objects (Grounding DINO) fused with comments → refined mentions  
-4. **Ground** phrases in images (SigLIP), noun boxes, scene vs object vs context ablation  
-5. **Visual categories** locked ontology v1 (DINO / seg / SigLIP / metrics) → structured image feature vectors  
-6. **Profile / correlate** cross-place recurrence and review↔photo alignment  
-7. **Graph** NetworkX multimodal logic graph → GraphML + browser `view` / `inspect` CLI  
+2. **Pre-gate** images and comments; **soft-weight** review↔photo match (same place, not same caption)  
+3. **Layer B — Visual categories** ontology v1 (DINO / seg / SigLIP / metrics) → **primary image feature data**  
+4. **Pass A (LLM)** comment-only → map adj/atmosphere language to lexicons + nouns  
+5. **Pass B (LLM)** comment + Layer B feature profile + comment visual add-ons → refined mentions  
+6. **Co-occurrence learner** lexicon/adj ↔ image feature data (place-normalized ranks; not LLM-invented links)  
+7. **Output** strength per lexicon + ranked supporting features; validate on held-out places  
+8. **Graph / inspect** (pilot tooling) — NetworkX graph, browser `view`, CLI `inspect`  
 
-Street View is out of scope for this pilot (weaker pairing with place reviews). Ontology families are **not** pre-bound to atmosphere labels; links are discovered from data.
+Design lock: [`Docs/DESIGN_LOCK.txt`](Docs/DESIGN_LOCK.txt). Street View deferred until place-photo path is solid. Ontology families are **not** pre-bound to atmosphere labels; links come from co-occurrence in data.
 
-## Two layers
+## Two layers + association
 
-| Layer | Role |
-|-------|------|
-| **A — LLM text grounding** | Pass A/B turn reviews (+ optional object lists) into atmosphere / phrase / nouns for vision to localize |
-| **B — Visual category ontology** | Stable descriptive feature space for images; used for analysis and (later) corpus prominence maps |
+| Part | Role |
+|------|------|
+| **A — Text (Pass A/B)** | LLM extract-only: adj → lexicon umbrellas + nouns; Pass B adds Layer B context |
+| **B — Visual ontology** | Measured feature vectors from photos (families + metrics) — primary image side |
+| **Learner** | Weighted co-occurrence between text lexicons and image feature data |
 
 See `Docs/PROJECT.txt` for Stage 0 (pilot) → Stage 1 (association maps) → Stage 2 (optional LoRA narrator on *measured* profiles).
 

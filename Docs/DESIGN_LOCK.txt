@@ -1,7 +1,7 @@
 ================================================================================
-DESIGN LOCK — Atmosphere Grounding (2026-08-27)
+DESIGN LOCK — Atmosphere Grounding (2026-08-27, rev 2)
 ================================================================================
-Status: Agreed in design discussion. Update PROJECT.txt to match.
+Status: Agreed in design discussion. PROJECT.txt and README should match.
 
 --------------------------------------------------------------------------------
 1. END GOAL (C)
@@ -14,85 +14,159 @@ Scientific backbone: associations learned SOLELY from co-occurrence in our corpu
 LLM does NOT invent adj ↔ feature links.
 
 --------------------------------------------------------------------------------
-2. CORE LEARNING STORY (user-confirmed)
+2. CORE LEARNING STORY
 --------------------------------------------------------------------------------
-  Comments contain adjectives / atmosphere language (not always exact lexicon words).
-  LLM role: extract that language and map it to lexicon umbrellas (inviting / safe / calm).
-  Images → Layer B produces measured visual feature vectors (not “atmosphere labels”).
-  Learning: observe which adjs (under lexicons) CO-OCCUR with which image features
-  at the place level (same location pairing).
-  Eventually: learn how lexicons and their comment-derived adjs relate to features —
-  only from co-occurrence statistics, not from model priors as the answer.
+  TEXT SIDE
+    Comments contain adjectives / atmosphere language (not always exact lexicon words).
+    LLM extracts that language and maps it to lexicon umbrellas (inviting / safe / calm).
+    Optional nouns / visually named things in the comment are add-ons on the text side.
 
-  Nouns: extracted under atmosphere mentions; support interpretation and optional
-  localization — but the primary scientific link is adj/lexicon ↔ image features.
+  IMAGE FEATURE SIDE (primary signal)
+    Layer B measures each photo → ontology family scores + metrics
+    (DINO / seg / SigLIP / image metrics per configs/visual_categories_v1.yaml).
+    Aggregated per place (and per review–photo pair with soft match weights).
 
---------------------------------------------------------------------------------
-3. MODEL ROLES (do not conflate)
---------------------------------------------------------------------------------
-  LLM        → text extraction + map comment adj → lexicon term (Layer A input only)
-  DINO/seg/  → measure image content → ontology feature vectors (Layer B)
-  SigLip/etc → feature scores, review↔image match signals, optional localization
-  LEARNER    → co-occurrence / association from paired place data (the scientific claim)
+  ADD-ON (comment ↔ image bridge, not a substitute for Layer B)
+    Visual nouns or features mentioned in a comment, and features detected in
+    photos that align with that comment, supplement the measured feature vector.
+    They do NOT replace Layer B measurements.
 
-  “Prior dominating” concern (clarified):
-  - NOT worried about LLM inventing links if LLM is extractor-only.
-  - Risk is only if we treat a single model’s similarity score AS the association
-    without aggregating co-occurrence across places.
-  - Holdout + shuffle-null checks validate that patterns are corpus-specific.
+  LEARNING
+    Observe co-occurrence: lexicon / comment adj  ↔  image feature data
+    at place level (location pairing), with SOFT WEIGHTS when review↔photo match is weak.
+    Feature ranking under a lexicon: PLACE-NORMALIZED scores for now.
 
 --------------------------------------------------------------------------------
-4. PRE-GATES (before grounding / learning)
+3. HIGH ARCHITECTURE (LOGICAL FLOW)
+--------------------------------------------------------------------------------
+
+  [Google Places: reviews + photos, same place_id]
+        │
+        ▼
+  ┌─────────────────────────┐
+  │ 0. PRE-GATES            │
+  │  • image doable         │
+  │  • comment doable       │
+  │  • review↔photo match   │──► soft weight w ∈ (0,1] per review–photo pair
+  └───────────┬─────────────┘
+              │
+    ┌─────────┴─────────┐
+    ▼                   ▼
+┌───────────────┐  ┌────────────────────────────┐
+│ LAYER A       │  │ LAYER B (from images)      │
+│ Text extract  │  │ Ontology feature vectors   │
+│               │  │ per image → place aggregate│
+│ Pass A:       │  │ families + metrics         │
+│  comment only │  │ (primary image feature     │
+│  → lexicon,   │  │  data for association)     │
+│    adj, nouns │  └─────────────┬──────────────┘
+│               │                │
+│ Pass B:       │                │
+│  comment +    │◄───────────────┘  image feature profile for place/pair
+│  Layer B feat │                   (not DINO object list only)
+│  + comment    │
+│  visual add-on│
+└───────┬───────┘
+        │
+        ▼
+  ┌─────────────────────────┐
+  │ IMAGE FEATURE DATA      │
+  │ = Layer B measurements  │
+  │   + comment-mentioned   │
+  │     visual features     │
+  │   (add-on)              │
+  └───────────┬─────────────┘
+              │
+              ▼
+  ┌─────────────────────────┐
+  │ CO-OCCURRENCE LEARNER   │
+  │ lexicon/adj (text)  ↔   │
+  │ image feature data      │
+  │ • soft match weights    │
+  │ • place-normalized rank │
+  └───────────┬─────────────┘
+              │
+              ▼
+  ┌─────────────────────────┐
+  │ OUTPUT + VALIDATION     │
+  │ strengths per lexicon + │
+  │ ranked features each    │
+  │ held-out places; shuffle│
+  │ nulls later             │
+  └─────────────────────────┘
+
+--------------------------------------------------------------------------------
+4. PASS A vs PASS B (updated)
+--------------------------------------------------------------------------------
+  Pass A — LLM reads COMMENT ONLY
+           → lexicon atmosphere + phrase + nouns (adj mapped to lexicon)
+           Output: mentions.jsonl
+           Feeds: TEXT SIDE of co-occurrence only
+
+  Pass B — LLM reads COMMENT + IMAGE FEATURE DATA for that place/pair:
+           • Layer B family/metric profile (measured from photos)
+           • plus comment-mentioned / comment-aligned visual features (add-on)
+           → may refine lexicon assignment, nouns, confidence
+           Output: mentions_fused.jsonl (Pass A kept intact)
+           Feeds: richer TEXT SIDE; does not replace Layer B as image signal
+
+  Co-occurrence learner uses:
+    TEXT: Pass A or Pass B mentions (prefer better text–image match when both exist)
+    IMAGE FEATURES: always Layer B (+ add-ons merged into feature data table)
+
+  Legacy note: older pilot code fused DINO object *lists* only; target architecture
+  fuses full Layer B ontology profiles. Implementation catch-up TBD.
+
+--------------------------------------------------------------------------------
+5. MODEL ROLES (do not conflate)
+--------------------------------------------------------------------------------
+  LLM        → extract adj → lexicon; optional Pass B refinement using feature context
+  Layer B    → primary image feature measurements (families + metrics)
+  SigLIP/etc → match weighting, optional localization — not the association answer
+  LEARNER    → weighted co-occurrence; place-normalized feature ranks under lexicons
+
+--------------------------------------------------------------------------------
+6. PRE-GATES & PAIRING
 --------------------------------------------------------------------------------
   1) Image doable (exists, usable public-space photo)
   2) Comment doable (non-empty, about place experience)
-  3) Review ↔ photo match (same-place experience; weight or drop weak pairs)
-  Location pairing is a known flaw — methods TBD (later work).
+  3) Review ↔ photo match → SOFT WEIGHT (not hard drop by default)
+  Location pairing remains imperfect (same place_id); weights mitigate noise.
 
 --------------------------------------------------------------------------------
-5. VALIDATION
+7. SCORING (locked for now)
 --------------------------------------------------------------------------------
-  Now: held-out places — run pipeline, check predicted lexicon strengths + feature
-  rankings against held-out place data (internal consistency + co-occurrence fit).
-  Later: optional human validation.
-  Null tests (shuffle place / shuffle pairs) to show patterns are data-driven.
+  Match: soft weight per review–photo pair (e.g. from review↔image cosine).
+  Feature rank under lexicon: place-normalized score (compare features within place
+  before aggregating co-occurrence across corpus).
 
 --------------------------------------------------------------------------------
-6. DATA (Google / pilot)
+8. VALIDATION
 --------------------------------------------------------------------------------
-  Pairing: same place_id (location-level); reviews do not describe specific photos.
-  Places API: ≤5 review texts and ≤10 photo refs per place (API hard limit).
-  Pilot: 43 places, photo/review/place caps = free-credit budget only — NOT design ceiling.
-  Street View: Google data source option when place-photo path is solid; adapt design
-  around Google constraints rather than treating as optional preference.
+  Now: held-out places — lexicon strengths + feature rankings vs held-out data.
+  Later: optional human validation; shuffle-null tests for corpus specificity.
 
 --------------------------------------------------------------------------------
-7. PASS A vs PASS B (repo terminology — revisit later)
+9. DATA (Google / pilot)
 --------------------------------------------------------------------------------
-  Pass A — LLM reads COMMENT ONLY → atmosphere/lexicon + phrase + nouns
-           Output: mentions.jsonl
-
-  Pass B — LLM reads COMMENT + list of objects detected in place photos (DINO)
-           → may refine nouns / confidence; keeps Pass A file intact
-           Output: mentions_fused.jsonl
-
-  User design centers on comment adj → lexicon → co-occur with Layer B features.
-  Pass B is optional enrichment (objects in photos), not the co-occurrence engine.
-  Rule for which pass feeds the learner: TBD (prefer better text–image match if both used).
+  Pairing: same place_id; reviews do not describe specific photos.
+  Places API: ≤5 review texts, ≤10 photo refs per place (API hard limit).
+  Pilot caps (43 places, 3 photos, etc.) = credit budget only — NOT design ceiling.
+  Street View: Google data path when place-photo pipeline is solid.
 
 --------------------------------------------------------------------------------
-8. LAYER B
+10. LAYER B & LORA
 --------------------------------------------------------------------------------
   Ontology v1 fixed; atmosphere-agnostic.
-  “Which families work better” = which features help predict lexicon strength on holdout.
-  LoRA (later): speak in ontology feature language; targets from measured profiles.
+  “Which families work better” = holdout predictive value for lexicon strength.
+  LoRA (later): ontology feature language; targets from measured profiles.
 
 --------------------------------------------------------------------------------
-9. OPEN (explicitly deferred)
+11. OPEN (deferred — opportunities discussion next)
 --------------------------------------------------------------------------------
-  - Location pairing improvements (match threshold vs weight)
-  - Pass A vs Pass B for learner input
-  - Formal definition of feature rank under a lexicon (lift vs raw co-occur)
+  - Location pairing improvements beyond soft cosine weights
+  - Pass A vs Pass B rule for which text rows enter learner
+  - How to merge comment visual add-ons into feature data schema
   - Landmark vs park stratification when scaling places
 
 ================================================================================
