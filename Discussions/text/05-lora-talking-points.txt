@@ -1,0 +1,11 @@
+Why LoRA — Cheap adapter on a small LLM; learns our mapping
+
+Trains on — Measured Layer B features + co-occurrence tables
+
+Predicts — Lexicon strengths + ranked ontology features (text → features; later features → atmospheres)
+
+Not — Text-to-image; LLM inventing visuals from photos
+
+When — After Stage 0–1 maps generalize on held-out places
+
+Caveat — LoRA quality tracks co-occurrence robustness—weak associations → fluent but unreliable narrator.

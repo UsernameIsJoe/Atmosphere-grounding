@@ -1,0 +1,4 @@
+- Not text-to-image generation
+- Not LLM-invented adj ↔ feature links
+- Not hand-coded "calm = trees"
+- Not caption-level phrase→box grounding (reviews and photos are place-paired, not sentence-paired)

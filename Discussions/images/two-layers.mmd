@@ -1,0 +1,10 @@
+flowchart TB
+    subgraph TEXT["Layer A — Text"]
+        T[Reviews → LLM → lexicon + adj + nouns]
+    end
+    subgraph VIS["Layer B — Vision"]
+        V[Photos → DINO / Seg / SigLIP / metrics → 49 families]
+    end
+    T --> L[Co-occurrence learner]
+    V --> L
+    L --> OUT[Strength per lexicon + ranked features]
