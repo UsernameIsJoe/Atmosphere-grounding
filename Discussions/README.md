@@ -8,17 +8,19 @@ This folder is **standalone documentation** for presentations and design history
 
 | File | Description |
 |------|-------------|
-| [`presentation-slides.md`](presentation-slides.md) | Slide-ready copy: intro, goal, final LoRA goal, talking points |
-| [`flowcharts.md`](flowcharts.md) | High-architecture Mermaid flowcharts (render on GitHub) |
-| [`design-decisions-summary.md`](design-decisions-summary.md) | Condensed decisions from design sessions (2026-08-27) |
-| [`images/`](images/) | PNG flowcharts for slides + `.mmd` sources |
+| [`presentation-slides.md`](presentation-slides.md) | All slide text + embedded images (Markdown) |
+| [`text/`](text/) | **Exact plain-text** slide copy (`.txt`, one file per slide) |
+| [`flowcharts.md`](flowcharts.md) | Mermaid source diagrams |
+| [`design-decisions-summary.md`](design-decisions-summary.md) | Condensed design decisions |
+| [`images/`](images/) | **PNG flowcharts** for PowerPoint/Keynote + `.mmd` sources |
 
-## Slide images (PNG)
+## Slide images (PNG — exact files for upload to slides)
 
 | File | Use |
 |------|-----|
 | [`images/architecture-full.png`](images/architecture-full.png) | Detailed pipeline (Steps 0–6) |
 | [`images/architecture-compact.png`](images/architecture-compact.png) | One-slide overview |
+| [`images/two-layers.png`](images/two-layers.png) | Layer A + Layer B conceptual |
 | [`images/research-stages.png`](images/research-stages.png) | Stage 0 → 1 → 2 (LoRA) |
 | [`images/lora-final-goal.png`](images/lora-final-goal.png) | Final goal: distillation → LoRA |
 
