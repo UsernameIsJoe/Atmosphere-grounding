@@ -1,0 +1,10 @@
+flowchart LR
+    A[Google reviews + photos<br/>same place] --> B[Pre-gates<br/>soft match weights]
+    B --> C[Layer B<br/>DINO · Seg · SigLIP · metrics]
+    B --> D[Pass A / B<br/>Ollama llama3.2]
+    C --> E[Image feature data]
+    D --> F[Lexicon + adj mentions]
+    E --> G[Co-occurrence learner]
+    F --> G
+    G --> H[Lexicon strengths +<br/>ranked features]
+    H --> I[Held-out validation]

@@ -1,0 +1,6 @@
+flowchart LR
+    A[Stages 0–1<br/>Places + Layer A/B] --> B[Co-occurrence tables<br/>lexicon ↔ features]
+    B --> C[Structured targets<br/>profiles + ranks]
+    C --> D[LoRA fine-tune<br/>small instruct LLM]
+    D --> E[New text in →<br/>lexicon strengths +<br/>ranked features out]
+    D --> F[Feature profile in →<br/>matching atmospheres out]

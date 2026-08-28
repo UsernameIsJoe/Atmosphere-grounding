@@ -1,0 +1,43 @@
+flowchart TB
+    subgraph DATA["0 · Data (Google Places API)"]
+        P[Places · reviews ≤5 · photos ≤10<br/>paired by place_id]
+    end
+
+    subgraph GATE["1 · Pre-gates"]
+        G[Image OK · Comment OK<br/>Review↔photo match → soft weight w]
+    end
+
+    subgraph LB["2 · Layer B — Image features (primary)"]
+        VC[Visual ontology v1<br/>Grounding DINO · Mask2Former · SigLIP · metrics]
+        PP[Per-image vectors → place profile]
+        VC --> PP
+    end
+
+    subgraph LA["3 · Layer A — Text (LLM extract only)"]
+        PA[Pass A: comment → lexicon + adj + nouns]
+        PB[Pass B: comment + Layer B top-k<br/>confirm / carry-over / add features]
+        PA --> PB
+    end
+
+    subgraph FEAT["4 · Image feature data"]
+        IFD[Layer B place profile<br/>+ ontology-mapped text add-ons]
+    end
+
+    subgraph LEARN["5 · Co-occurrence learner"]
+        CO[Lexicon/adj ↔ features<br/>soft weights · dual score tracks]
+    end
+
+    subgraph OUT["6 · Output & validation"]
+        O[Strength per lexicon + ranked features<br/>Held-out places]
+    end
+
+    P --> G
+    G --> VC
+    G --> PA
+    PP --> PB
+    PP --> IFD
+    PB --> IFD
+    PA --> CO
+    PB --> CO
+    IFD --> CO
+    CO --> O
