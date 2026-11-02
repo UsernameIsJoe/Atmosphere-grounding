@@ -1,0 +1,45 @@
+name: Stage 1A pretrained text pilot
+
+on:
+  push:
+    paths:
+      - '.github/workflows/stage1a-text-pilot.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  stage1a:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install CPU inference dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install "transformers>=4.41,<5" "sentence-transformers>=3,<6"
+      - name: Run baseline
+        run: python scripts/stage1a_text_pilot.py --mode baseline --output reports/stage1a_pilot_baseline
+      - name: Run real pretrained models
+        run: python scripts/stage1a_text_pilot.py --mode full --output reports/stage1a_pilot_full
+      - name: Print summary
+        if: always()
+        run: |
+          echo 'Baseline:'
+          cat reports/stage1a_pilot_baseline/summary.json || true
+          echo 'Pretrained models:'
+          cat reports/stage1a_pilot_full/summary.json || true
+      - name: Upload experiment outputs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: stage1a-text-pilot-results
+          path: reports/stage1a_pilot_*/
+          if-no-files-found: warn
