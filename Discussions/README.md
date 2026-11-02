@@ -2,7 +2,7 @@
 
 Research brief materials and design-session outputs for **Atmosphere Grounding**.
 
-This folder is **standalone documentation** for presentations and design history. The canonical technical architecture lives in [`Docs/ARCHITECTURE.txt`](../Docs/ARCHITECTURE.txt).
+This folder is **standalone documentation** for presentations and design history. The existing implemented/earlier technical architecture is described in [`Docs/ARCHITECTURE.txt`](../Docs/ARCHITECTURE.txt). **The latest research direction, not yet implemented or locked, is recorded in [`current-research-baseline-2026-11.md`](current-research-baseline-2026-11.md).**
 
 ## Contents
 
@@ -11,7 +11,9 @@ This folder is **standalone documentation** for presentations and design history
 | [`presentation-slides.md`](presentation-slides.md) | All slide text + embedded images (Markdown) |
 | [`text/`](text/) | **Exact plain-text** slide copy (`.txt`, one file per slide) |
 | [`flowcharts.md`](flowcharts.md) | Mermaid source diagrams |
-| [`design-decisions-summary.md`](design-decisions-summary.md) | Condensed design decisions |
+| [`design-decisions-summary.md`](design-decisions-summary.md) | Condensed design decisions | 
+| [`current-research-baseline-2026-11.md`](current-research-baseline-2026-11.md) | **Current research baseline**: two parallel branches, shared-location learning, visual predictor and open methods |
+| [`location-sentiment-five-research-questions.md`](location-sentiment-five-research-questions.md) | Five conceptual research topics (exploratory learning agenda) |
 | [`images/`](images/) | **PNG flowcharts** for PowerPoint/Keynote + `.mmd` sources |
 
 ## Slide images (PNG — exact files for upload to slides)
