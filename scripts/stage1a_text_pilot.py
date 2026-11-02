@@ -29,11 +29,11 @@ GOLD = {
 }
 # Not an ABSA model: transparent keyword baseline to sanity-check direction.
 ASPECTS = {
- 'noise':(r'\\b(noisy|noise|loud|sirens|quiet|peaceful|calming|calm)\\b',),
- 'crowding':(r'\\b(crowded|crowd|busy|packed)\\b',),
- 'comfort':(r'\\b(shade|shaded|benches|seating|rest|relax|unwind|comfy)\\b',),
- 'risk':(r'\\b(dangerous|slippery|burned|safe|secure|protected|locked gate|far enough from the street)\\b',),
- 'access':(r'\\b(welcoming|inviting|parking|playground|entrance|accessible)\\b',),
+ 'noise':(r'\b(noisy|noise|loud|sirens|quiet|peaceful|calming|calm)\b',),
+ 'crowding':(r'\b(crowded|crowd|busy|packed)\b',),
+ 'comfort':(r'\b(shade|shaded|benches|seating|rest|relax|unwind|comfy)\b',),
+ 'risk':(r'\b(dangerous|slippery|burned|safe|secure|protected|locked gate|far enough from the street)\b',),
+ 'access':(r'\b(welcoming|inviting|parking|playground|entrance|accessible)\b',),
 }
 def read_jsonl(path):
  with open(path,encoding='utf-8') as f:
