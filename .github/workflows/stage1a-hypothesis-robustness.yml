@@ -1,0 +1,43 @@
+name: Stage 1A hypothesis robustness
+
+on:
+  push:
+    paths:
+      - '.github/workflows/stage1a-hypothesis-robustness.yml'
+      - 'scripts/stage1a_hypothesis_robustness.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  hypothesis-robustness:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install CPU NLI dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install "transformers>=4.41,<5"
+      - name: Python syntax validation
+        run: python -m py_compile scripts/stage1a_hypothesis_robustness.py scripts/stage1a_compare_abc.py scripts/stage1a_text_pilot.py
+      - name: Run hypothesis robustness on 30 real reviews
+        run: python scripts/stage1a_hypothesis_robustness.py --output reports/stage1a_hypotheses --limit 30
+      - name: Print findings
+        if: always()
+        run: |
+          if test -f reports/stage1a_hypotheses/summary.json; then cat reports/stage1a_hypotheses/summary.json; fi
+      - name: Upload review-level probabilities and summary
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: stage1a-hypothesis-robustness
+          path: reports/stage1a_hypotheses/
+          if-no-files-found: warn
