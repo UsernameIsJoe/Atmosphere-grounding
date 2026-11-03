@@ -25,7 +25,7 @@ def test_exact_substring_verification():
 
 def test_unmatched_sentence_remains_visible():
     def fake_extract(text):
-        return [{"aspect":"benches","start":0,"end":7,"polarity":"positive"}]
+        return [{"aspect":"Benches","start":0,"end":7,"polarity":"positive"}]
     text="Benches are nice. But the sirens are very loud."
     x=annotate(text,fake_extract,None)
     assert x["sentences_with_aspects"]==1
