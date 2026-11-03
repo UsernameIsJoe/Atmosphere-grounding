@@ -4,6 +4,7 @@ on:
   push:
     paths:
       - '.github/workflows/stage1a-compare-abc.yml'
+      - 'scripts/stage1a_compare_abc.py'
   workflow_dispatch:
 
 permissions:
@@ -25,6 +26,15 @@ jobs:
           python -m pip install --upgrade pip
           python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
           python -m pip install "transformers>=4.41,<5" sentencepiece protobuf
+      - name: Preflight ABSA tokenizer
+        run: |
+          python - <<'PY'
+          from transformers import AutoTokenizer
+          name = "yangheng/deberta-v3-base-end2end-absa"
+          tokenizer = AutoTokenizer.from_pretrained(name, use_fast=True)
+          print("ABSA tokenizer:", type(tokenizer).__name__, "fast:", tokenizer.is_fast)
+          assert tokenizer.is_fast, "ABSA extraction needs fast tokenizer offsets"
+          PY
       - name: Validate Python syntax
         run: python -m py_compile scripts/stage1a_compare_abc.py scripts/stage1a_text_pilot.py
       - name: Run all three real pretrained approaches
