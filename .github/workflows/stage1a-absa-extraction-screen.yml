@@ -1,0 +1,78 @@
+name: Stage 1A ABSA extraction screening
+
+on:
+  push:
+    paths:
+      - '.github/workflows/stage1a-absa-extraction-screen.yml'
+      - 'scripts/stage1a_absa_extractor_screen.py'
+      - 'tests/test_stage1a_absa_extractor_screen.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  aspect-screen:
+    name: Extract with ${{ matrix.method }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    strategy:
+      fail-fast: false
+      matrix:
+        method: [deberta_absa, setfit_absa, spacy_noun]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install inference dependencies
+        env:
+          METHOD: ${{ matrix.method }}
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install 'pytest>=8,<10' 'spacy>=3.7,<4' 'numpy<2.4'
+          if [ "$METHOD" = deberta_absa ]; then
+            python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+            python -m pip install 'transformers>=4.46,<5' sentencepiece protobuf
+          elif [ "$METHOD" = setfit_absa ]; then
+            python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+            python -m pip install 'setfit[absa]>=1.1,<2' 'transformers>=4.46,<5' sentencepiece protobuf
+          fi
+          python -m spacy download en_core_web_sm
+      - name: Validate syntax and source-span tests
+        run: |
+          python -m py_compile scripts/stage1a_absa_extractor_screen.py
+          python -m pytest -q tests/test_stage1a_absa_extractor_screen.py
+      - name: Run complete 50-review aspect screen
+        env:
+          METHOD: ${{ matrix.method }}
+        run: |
+          python -u scripts/stage1a_absa_extractor_screen.py --method "$METHOD" --limit 50 --output "reports/stage1a_absa_screen_$METHOD"
+      - name: Validate sample completeness and source offsets
+        env:
+          METHOD: ${{ matrix.method }}
+        run: |
+          python - <<'PY'
+          import json,os
+          from pathlib import Path
+          d=Path('reports/stage1a_absa_screen_'+os.environ['METHOD'])
+          rows=[json.loads(line) for line in (d/'review_cases.jsonl').read_text().splitlines() if line.strip()]
+          summary=json.loads((d/'summary.json').read_text())
+          m=json.loads((d/'sample_manifest.json').read_text())
+          assert len(rows)==summary['reviews']==len(m['review_rows'])==50
+          assert len({r['place_id'] for r in rows})==summary['locations']==43
+          assert [r['row'] for r in rows]==m['review_rows']
+          for r in rows:
+              for a in r['extraction']['aspects']:
+                  assert r['review'][a['start']:a['end']]==a['aspect']
+          print('Verified',summary['method'],summary['reviews'],'reviews')
+          PY
+      - name: Always upload review data and partial outputs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: stage1a-absa-screen-${{ matrix.method }}
+          path: reports/stage1a_absa_screen_${{ matrix.method }}/
+          if-no-files-found: warn
