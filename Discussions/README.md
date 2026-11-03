@@ -20,6 +20,7 @@ This folder is **standalone documentation** for presentations and design history
 | [`stage1a-next-research-sequence-2026-11-03.md`](stage1a-next-research-sequence-2026-11-03.md) | **Agreed next steps**: label-free hypothesis robustness, NLI model comparison, ABSA model comparison, then integration |
 | [`stage1a-hypothesis-robustness-results-2026-11-03.md`](stage1a-hypothesis-robustness-results-2026-11-03.md) | **214-review hypothesis robustness results**: consistency, full run provenance, probability variation and illustrative failures |
 | [`stage1a-hypothesis-vocabulary-literature-and-plan-2026-11-03.md`](stage1a-hypothesis-vocabulary-literature-and-plan-2026-11-03.md) | **Literature review & implemented next test**: synonyms vs facets, 60-candidate vocabulary, label-free ensemble checks and experimental limitations |
+| [`stage1a-expanded-vocabulary-results-2026-11-03.md`](stage1a-expanded-vocabulary-results-2026-11-03.md) | **Executed 60-candidate, 214-review experiment**: ensemble stability, variation, outliers, run artifacts, and limitations |
 | [`images/`](images/) | **PNG flowcharts** for PowerPoint/Keynote + `.mmd` sources |
 
 ## Slide images (PNG — exact files for upload to slides)
