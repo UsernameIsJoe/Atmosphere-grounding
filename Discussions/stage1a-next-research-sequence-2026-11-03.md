@@ -15,7 +15,7 @@
 
 **Script:** [stage1a_hypothesis_robustness.py](../scripts/stage1a_hypothesis_robustness.py)  
 **Workflow:** [stage1a-hypothesis-robustness.yml](../.github/workflows/stage1a-hypothesis-robustness.yml)  
-**Data:** same 30 deliberately selected real reviews from 7 locations, pilot calm/inviting/safe.  
+**Data:** all 214 currently available real reviews across 43 locations, pilot calm/inviting/safe. The original diagnostic 30-review subset remains separately summarized for comparison.  
 **Model:** pretrained BART-large-MNLI, no training.  
 **Hypothesis groups:** three paraphrases of each overall atmosphere; three different supporting facets per atmosphere; one opposing atmospheric claim. Entire review remains the premise.
 
@@ -27,7 +27,7 @@
 - Different supporting facets are not synonymous. Divergent predictions can be valid, not model failures.
 - Opposing claims may not be logical negations; dual entailment is a **review flag**, not definitive inconsistency.
 - Neutral means NLI finds insufficient support or contradiction for that hypothesis, not a negative sentiment score.
-- No percent from this experiment should be marketed as predictive accuracy, because **independent human reference labels do not exist**.
+- No percent from this experiment should be marketed as predictive accuracy, because **independent human reference labels do not exist**. The script evaluates the full review corpus in batched CPU inference and checks sample coverage, while retaining the original 30-case subset. The corpus is still mostly Cambridge-area public places; 214 reviews are not 214 independent places.
 
 ## Next discussion after reviewing artifact
 
