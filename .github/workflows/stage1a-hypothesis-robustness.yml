@@ -13,7 +13,7 @@ permissions:
 jobs:
   hypothesis-robustness:
     runs-on: ubuntu-latest
-    timeout-minutes: 45
+    timeout-minutes: 120
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -28,8 +28,19 @@ jobs:
           python -m pip install "transformers>=4.41,<5"
       - name: Python syntax validation
         run: python -m py_compile scripts/stage1a_hypothesis_robustness.py scripts/stage1a_compare_abc.py scripts/stage1a_text_pilot.py
-      - name: Run hypothesis robustness on 30 real reviews
-        run: python scripts/stage1a_hypothesis_robustness.py --output reports/stage1a_hypotheses --limit 30
+      - name: Run hypothesis robustness on all available reviews
+        run: python scripts/stage1a_hypothesis_robustness.py --output reports/stage1a_hypotheses --limit 0
+      - name: Validate complete corpus coverage
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          full = [json.loads(line) for line in Path('data/processed/reviews.jsonl').read_text().splitlines() if line.strip()]
+          summary = json.loads(Path('reports/stage1a_hypotheses/summary.json').read_text())
+          assert summary['sample']['reviews'] == len(full), 'Not all reviews were evaluated'
+          assert summary['sample']['locations'] == len({r['place_id'] for r in full}), 'Location coverage mismatch'
+          print('Verified', len(full), 'reviews across', summary['sample']['locations'], 'locations')
+          PY
       - name: Print findings
         if: always()
         run: |
