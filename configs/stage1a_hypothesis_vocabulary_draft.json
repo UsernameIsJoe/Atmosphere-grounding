@@ -1,0 +1,228 @@
+{
+  "schema_version": "0.1-proposed-not-validated",
+  "scope": "Stage 1A pilot; intentionally limited to calm, inviting, safe pending theory-driven nine-emotion taxonomy",
+  "notes": [
+    "These are manually authored exploratory candidates, not human-validated synonyms or empirical findings.",
+    "family=core denotes prospective close paraphrases, pending semantic counterexample screening.",
+    "family=facet denotes semantically related but non-equivalent attributes; do not aggregate into paraphrase score.",
+    "opposition contains distinct control types; do not equate antonym and logical negation."
+  ],
+  "candidates": [
+    {
+      "id": "calm_core_01",
+      "emotion": "calm",
+      "role": "core",
+      "family": "calm-core",
+      "text": "The atmosphere of this location is calm.",
+      "source": "researcher-authored exploratory",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "calm_core_02",
+      "emotion": "calm",
+      "role": "core",
+      "family": "calm-core",
+      "text": "This place has a calm atmosphere.",
+      "source": "researcher-authored exploratory",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "calm_core_03",
+      "emotion": "calm",
+      "role": "core",
+      "family": "calm-core",
+      "text": "Visitors experience the atmosphere here as calm.",
+      "source": "researcher-authored exploratory",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "calm_peace_01",
+      "emotion": "calm",
+      "role": "facet",
+      "family": "peacefulness",
+      "text": "The location has a peaceful atmosphere.",
+      "source": "researcher-authored exploratory",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "calm_quiet_01",
+      "emotion": "calm",
+      "role": "facet",
+      "family": "quietness",
+      "text": "The location is generally quiet.",
+      "source": "researcher-authored exploratory",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "calm_relax_01",
+      "emotion": "calm",
+      "role": "facet",
+      "family": "relaxation",
+      "text": "The atmosphere at this location is relaxing.",
+      "source": "researcher-authored exploratory",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "calm_neg_01",
+      "emotion": "calm",
+      "role": "opposition",
+      "family": "strict-negation",
+      "text": "The atmosphere of this location is not calm.",
+      "source": "researcher-authored exploratory",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "calm_opp_01",
+      "emotion": "calm",
+      "role": "opposition",
+      "family": "loose-antonym",
+      "text": "The location has a stressful atmosphere.",
+      "source": "researcher-authored exploratory",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "inv_core_01",
+      "emotion": "inviting",
+      "role": "core",
+      "family": "inviting-core",
+      "text": "This location has an inviting atmosphere.",
+      "source": "researcher-authored exploratory",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "inv_core_02",
+      "emotion": "inviting",
+      "role": "core",
+      "family": "inviting-core",
+      "text": "The atmosphere of this place is inviting.",
+      "source": "researcher-authored exploratory",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "inv_core_03",
+      "emotion": "inviting",
+      "role": "core",
+      "family": "inviting-core",
+      "text": "Visitors experience this place as inviting.",
+      "source": "researcher-authored exploratory",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "inv_welcome_01",
+      "emotion": "inviting",
+      "role": "facet",
+      "family": "welcoming",
+      "text": "This location feels welcoming to visitors.",
+      "source": "researcher-authored exploratory",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "inv_enter_01",
+      "emotion": "inviting",
+      "role": "facet",
+      "family": "entry",
+      "text": "The location encourages visitors to enter.",
+      "source": "researcher-authored exploratory",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "inv_stay_01",
+      "emotion": "inviting",
+      "role": "facet",
+      "family": "linger",
+      "text": "The location encourages visitors to stay and spend time.",
+      "source": "researcher-authored exploratory",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "inv_neg_01",
+      "emotion": "inviting",
+      "role": "opposition",
+      "family": "strict-negation",
+      "text": "This location does not have an inviting atmosphere.",
+      "source": "researcher-authored exploratory",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "inv_opp_01",
+      "emotion": "inviting",
+      "role": "opposition",
+      "family": "loose-antonym",
+      "text": "This location feels unwelcoming to visitors.",
+      "source": "researcher-authored exploratory",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "safe_core_01",
+      "emotion": "safe",
+      "role": "core",
+      "family": "safe-core",
+      "text": "This location feels physically safe for visitors.",
+      "source": "researcher-authored exploratory",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "safe_core_02",
+      "emotion": "safe",
+      "role": "core",
+      "family": "safe-core",
+      "text": "Visitors perceive this place as physically safe.",
+      "source": "researcher-authored exploratory",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "safe_core_03",
+      "emotion": "safe",
+      "role": "core",
+      "family": "safe-core",
+      "text": "The physical environment here feels safe to visitors.",
+      "source": "researcher-authored exploratory",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "safe_hazard_01",
+      "emotion": "safe",
+      "role": "facet",
+      "family": "hazards",
+      "text": "The location has few physical hazards.",
+      "source": "researcher-authored exploratory",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "safe_traffic_01",
+      "emotion": "safe",
+      "role": "facet",
+      "family": "traffic",
+      "text": "Visitors are protected from nearby traffic.",
+      "source": "researcher-authored exploratory",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "safe_secure_01",
+      "emotion": "safe",
+      "role": "facet",
+      "family": "security",
+      "text": "Visitors feel secure at this location.",
+      "source": "researcher-authored exploratory",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "safe_neg_01",
+      "emotion": "safe",
+      "role": "opposition",
+      "family": "strict-negation",
+      "text": "This location does not feel physically safe for visitors.",
+      "source": "researcher-authored exploratory",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "safe_opp_01",
+      "emotion": "safe",
+      "role": "opposition",
+      "family": "loose-antonym",
+      "text": "This location poses serious physical safety risks.",
+      "source": "researcher-authored exploratory",
+      "review_status": "pending semantic review"
+    }
+  ]
+}
