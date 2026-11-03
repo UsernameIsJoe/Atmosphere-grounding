@@ -14,7 +14,7 @@ import math
 from pathlib import Path
 
 from stage1a_text_pilot import CATS, GOLD, read_jsonl
-from stage1a_compare_abc import pair_nli, decide
+from stage1a_compare_abc import decide
 
 ROOT = Path(__file__).resolve().parents[1]
 MODEL = "facebook/bart-large-mnli"
@@ -104,13 +104,38 @@ def summarize(items):
         }
     return output
 
+def batch_nli(tokenizer, model, premise, hypotheses, torch, batch_size=8):
+    """Batch same-review hypothesis pairs, returning complete NLI probabilities."""
+    found = []
+    for offset in range(0, len(hypotheses), batch_size):
+        group = hypotheses[offset:offset + batch_size]
+        encoded = tokenizer(
+            [premise] * len(group), group,
+            padding=True, truncation=True, max_length=512, return_tensors="pt"
+        )
+        with torch.inference_mode():
+            logits = model(**encoded).logits
+        for scores in torch.softmax(logits, dim=-1).tolist():
+            probs = {
+                model.config.id2label[i].upper(): float(score)
+                for i, score in enumerate(scores)
+            }
+            mapped = {
+                {"ENTAILMENT": "S", "CONTRADICTION": "C", "NEUTRAL": "U"}.get(k, k): v
+                for k, v in probs.items()
+            }
+            if set(mapped) != {"S", "C", "U"}:
+                raise ValueError(f"Unexpected NLI labels: {mapped}")
+            found.append(mapped)
+    return found
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--output", default="reports/stage1a_hypotheses")
-    ap.add_argument("--limit", type=int, default=30)
+    ap.add_argument("--limit", type=int, default=0, help="0 means all available reviews; positive N means first N rows")
     args = ap.parse_args()
-    if not 1 <= args.limit <= len(GOLD):
-        raise ValueError("limit must be 1..30")
+    if args.limit < 0:
+        raise ValueError("limit must be zero or positive")
 
     from transformers import AutoModelForSequenceClassification, AutoTokenizer
     import torch
@@ -118,7 +143,9 @@ def main():
     tokenizer = AutoTokenizer.from_pretrained(MODEL)
     model = AutoModelForSequenceClassification.from_pretrained(MODEL).eval()
     reviews = read_jsonl(ROOT / "data/processed/reviews.jsonl")
-    selected = list(GOLD)[:args.limit]
+    selected = list(range(len(reviews)))[:args.limit or None]
+    if not selected:
+        raise RuntimeError("No review records found")
     results = []
     for i, row in enumerate(selected):
         review = reviews[row]
@@ -132,10 +159,13 @@ def main():
         for emotion in CATS:
             config = HYPOTHESES[emotion]
             groups = {}
-            for kind in ("paraphrases", "facets", "opposing"):
+            kinds = ("paraphrases", "facets", "opposing")
+            all_hypotheses = [h for kind in kinds for h in config[kind]]
+            predictions = iter(batch_nli(tokenizer, model, review["text"], all_hypotheses, torch))
+            for kind in kinds:
                 pairs = []
                 for hypothesis in config[kind]:
-                    probs = pair_nli(tokenizer, model, review["text"], hypothesis, torch)
+                    probs = next(predictions)
                     pairs.append({"hypothesis": hypothesis, "label": decide(probs),
                                   "probs": probs, "predictive_entropy": entropy(probs)})
                 groups[kind] = {"cases": pairs, "labels": [x["label"] for x in pairs]}
@@ -160,7 +190,12 @@ def main():
         "model": MODEL,
         "sample": {"reviews": len(results),
                    "locations": len({r["place_id"] for r in results}),
-                   "selection": "same 30 previously sampled diagnostic reviews"},
+                   "selection": "all available repo reviews (or first N if --limit set)",
+                   "historical_30_review_rows": len(set(selected) & set(GOLD))},
+        "historical_30_review_subset": summarize([r for r in results if r["row"] in GOLD]) if set(selected) >= set(GOLD) else None,
+        "review_length_words": {"min": min(len(r["review"].split()) for r in results),
+                                "max": max(len(r["review"].split()) for r in results),
+                                "mean": round(sum(len(r["review"].split()) for r in results)/len(results), 1)},
         "hypotheses": HYPOTHESES,
         "by_emotion": summarize(results),
         "limitations": [
@@ -169,7 +204,8 @@ def main():
             "Facets are distinct supporting qualities; their disagreement is descriptive.",
             "Opposite atmosphere claims are not strict logical complements.",
             "NLI softmax probabilities are not calibrated confidence or emotional strength.",
-            "Reviews grouped within seven locations are not independent samples.",
+            "Reviews grouped by locations are not independent samples; counts refer to observed corpus only.",
+            "Review truncation is limited to the model token window (512); longer reviews could lose content.",
         ],
     }
     (dest / "summary.json").write_text(json.dumps(summary, indent=2), encoding="utf-8")
