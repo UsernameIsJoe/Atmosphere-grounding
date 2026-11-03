@@ -17,6 +17,7 @@ This folder is **standalone documentation** for presentations and design history
 | [`stage1a-three-approach-comparison-2026-11-03.md`](stage1a-three-approach-comparison-2026-11-03.md) | **Current three-way text experiment**: direct NLI, multi-hypothesis NLI, pretrained ABSA → NLI |
 | [`stage1a-executed-results-evaluation-audit-2026-11-03.md`](stage1a-executed-results-evaluation-audit-2026-11-03.md) | **Executed results**: both successful A/B/C runs, full confusion counts, metrics, artifacts and provisional-label limitations |
 | [`stage1a-next-research-sequence-2026-11-03.md`](stage1a-next-research-sequence-2026-11-03.md) | **Agreed next steps**: label-free hypothesis robustness, NLI model comparison, ABSA model comparison, then integration |
+| [`stage1a-hypothesis-robustness-results-2026-11-03.md`](stage1a-hypothesis-robustness-results-2026-11-03.md) | **214-review hypothesis robustness results**: consistency, full run provenance, probability variation and illustrative failures |
 | [`images/`](images/) | **PNG flowcharts** for PowerPoint/Keynote + `.mmd` sources |
 
 ## Slide images (PNG — exact files for upload to slides)
