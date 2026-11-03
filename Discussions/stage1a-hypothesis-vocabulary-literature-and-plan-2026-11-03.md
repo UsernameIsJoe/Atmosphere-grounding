@@ -1,6 +1,6 @@
 # Stage 1A — Hypothesis Vocabulary Research, Literature, and Experimental Roadmap
 
-**Date:** November 3, 2026 · **Status:** Research proposal and completed-pilot synthesis; the expanded-vocabulary experiment has **not yet run**.
+**Date:** November 3, 2026 · **Status:** Research proposal and completed-pilot synthesis. **Expanded-vocabulary implementation committed and GitHub Actions workflow configured; no successful full-run results verified yet.**
 
 ## Motivation from executed Stage 1A test
 
@@ -83,3 +83,18 @@ D. **Opposing/negative and irrelevant controls:** explicit negation of the same 
 ## Research position
 
 The goal is **not** to prove a single sentence is perfect. It is to design an **auditable, semantically structured hypothesis vocabulary**, and test whether a robust core-hypothesis ensemble plus separately evaluated facets offers better stability and evidence coverage. Without independent labels, these are proposed measurement properties, not an established accuracy gain or physical-world causal claim.
+
+
+## Implementation update — expanded vocabulary experiment (November 3, 2026)
+
+- **Candidate registry:** [`configs/stage1a_hypothesis_vocabulary_draft.json`](../configs/stage1a_hypothesis_vocabulary_draft.json), now **60 exploratory statements (20 per pilot emotion)**: 6 candidate core paraphrases, 10 non-equivalent facet statements and 4 opposing controls per emotion. The registry records IDs, semantic roles/families and candidate provenance; it is not a vetted theory lexicon.
+- **Experiment:** [`scripts/stage1a_vocabulary_ensemble.py`](../scripts/stage1a_vocabulary_ensemble.py) performs 60 three-way NLI evaluations per review using BART-large-MNLI on the full 214-review corpus, retaining each review/hypothesis probability vector and predicted S/C/U class. Total scheduled comparisons: **12,840**.
+- **Automation:** [`.github/workflows/stage1a-vocabulary-ensemble.yml`](../.github/workflows/stage1a-vocabulary-ensemble.yml) runs syntax checks, registry/ensemble unit tests, full-corpus inference, coverage assertions and uploads a reusable artifact.
+- **Within-core robustness:** report unanimity, pairwise label agreement, mean absolute entailment differences, support-score range and leave-one-out effect on mean-probability ensemble.
+- **Ensemble comparisons:** unweighted probability mean, median, per-class trimmed mean (renormalized), label-majority vote (ties abstain). Report cross-method agreement only, **not** classification quality or optimal weights.
+- **Facet summaries:** report each facet separately; do not pool facet hypotheses with semantically similar core descriptions.
+- **Outlier audit:** top 10 reviews per emotion with highest spread in core entailment scores, retained with exact IDs and full per-review outputs. No automatic deletion of divergent vocabulary.
+- **Outputs:** `review_cases.jsonl`, `summary.json`, `registry_snapshot.json` in the run artifact. Corpus and registry are version-captured.
+- **Critical next step after execution:** inspect specific discrepancies and separate semantic drift from model sensitivity; introduce explicit controlled minimal-pair inputs before filtering hypotheses. Test NLI checkpoint variation after candidate vocabulary revision.
+
+**Methodological correction to proposal:** This first implementation does *not* conduct held-out-location predictive validation, since no human labels exist; it computes internal label-free stability descriptives. Nor does it automatically infer synonymy or optimize candidate selection.
