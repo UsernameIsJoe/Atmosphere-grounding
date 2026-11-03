@@ -87,7 +87,10 @@ def evaluate(rows,key):
 
 def extract_absa(extractor,text):
  """Pretrained joint aspect+polarity token model; returns spans and original sentences."""
- raw=extractor(text,truncation=True,max_length=512)
+ # TokenClassificationPipeline.__call__ does not accept truncation/max_length.
+ # The reviews in this diagnostic sample are short; tokenization limits are
+ # handled by the underlying pipeline. Longer reviews need chunking later.
+ raw=extractor(text)
  spans=segments(text)
  found=[]
  seen=set()
