@@ -117,8 +117,10 @@ def main():
  absa_name="yangheng/deberta-v3-base-end2end-absa"
  nli_tok=AutoTokenizer.from_pretrained(nli_name)
  nli_model=AutoModelForSequenceClassification.from_pretrained(nli_name).eval()
- aspect_tok=AutoTokenizer.from_pretrained("yangheng/deberta-v3-base-absa-v1.1",use_fast=True)
+ print("NLI checkpoint loaded successfully",flush=True)
+ aspect_tok=AutoTokenizer.from_pretrained(absa_name,use_fast=True)
  aspect_model=AutoModelForTokenClassification.from_pretrained(absa_name).eval()
+ print("ABSA checkpoint and matching tokenizer loaded successfully",flush=True)
  extractor=pipeline(task="token-classification",model=aspect_model,tokenizer=aspect_tok,
                     aggregation_strategy="simple",device=-1)
  reviews=read_jsonl(ROOT/"data/processed/reviews.jsonl")
@@ -161,7 +163,7 @@ def main():
   "scope":{"rows":len(output),"locations":len(set(r["place_id"] for r in output)),
            "emotions":list(CATS),"provisional_labels":True},
   "model_ids":{"nli":nli_name,"absa_extractor":absa_name,
-               "absa_tokenizer":"yangheng/deberta-v3-base-absa-v1.1"},
+               "absa_tokenizer":absa_name},
   "hypotheses":{"A":HYPOTHESES,"B":HYPOTHESES_MULTI,"C":HYPOTHESES},
   "aggregation":"A argmax; B mean probability across hypotheses; C mean probability across aspect-bearing sentences; C no aspects -> U",
   "coverage":{"C_reviews_without_aspects":sum(r["approach_c_no_aspects"] for r in output),
