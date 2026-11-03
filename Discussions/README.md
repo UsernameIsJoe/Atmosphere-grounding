@@ -15,6 +15,7 @@ This folder is **standalone documentation** for presentations and design history
 | [`current-research-baseline-2026-11.md`](current-research-baseline-2026-11.md) | **Current research baseline**: two parallel branches, shared-location learning, visual predictor and open methods |
 | [`location-sentiment-five-research-questions.md`](location-sentiment-five-research-questions.md) | Five conceptual research topics (exploratory learning agenda) |
 | [`stage1a-three-approach-comparison-2026-11-03.md`](stage1a-three-approach-comparison-2026-11-03.md) | **Current three-way text experiment**: direct NLI, multi-hypothesis NLI, pretrained ABSA → NLI |
+| [`stage1a-executed-results-evaluation-audit-2026-11-03.md`](stage1a-executed-results-evaluation-audit-2026-11-03.md) | **Executed results**: both successful A/B/C runs, full confusion counts, metrics, artifacts and provisional-label limitations |
 | [`images/`](images/) | **PNG flowcharts** for PowerPoint/Keynote + `.mmd` sources |
 
 ## Slide images (PNG — exact files for upload to slides)
