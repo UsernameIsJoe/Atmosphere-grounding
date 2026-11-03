@@ -1,0 +1,72 @@
+name: Stage 1A expanded hypothesis vocabulary and ensembles
+
+on:
+  push:
+    paths:
+      - '.github/workflows/stage1a-vocabulary-ensemble.yml'
+      - 'scripts/stage1a_vocabulary_ensemble.py'
+      - 'configs/stage1a_hypothesis_vocabulary_draft.json'
+      - 'tests/test_stage1a_vocabulary_ensemble.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  vocabulary-ensemble:
+    runs-on: ubuntu-latest
+    timeout-minutes: 180
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install CPU dependencies
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install "transformers>=4.41,<5" pytest
+      - name: Validate syntax, registry and ensemble logic
+        run: |
+          python -m py_compile scripts/stage1a_vocabulary_ensemble.py
+          python -m pytest -q tests/test_stage1a_vocabulary_ensemble.py
+      - name: Execute on all reviews
+        run: python scripts/stage1a_vocabulary_ensemble.py --limit 0 --batch-size 8 --output reports/stage1a_vocabulary
+      - name: Validate data and inference coverage
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          src = [json.loads(x) for x in Path('data/processed/reviews.jsonl').read_text().splitlines() if x.strip()]
+          summary = json.loads(Path('reports/stage1a_vocabulary/summary.json').read_text())
+          rows = [json.loads(x) for x in Path('reports/stage1a_vocabulary/review_cases.jsonl').read_text().splitlines() if x.strip()]
+          assert summary['corpus_size'] == len(src)
+          assert summary['evaluated_reviews'] == len(src) == len(rows)
+          assert summary['locations'] == len({x['place_id'] for x in src})
+          assert summary['candidate_count'] == 60
+          assert summary['total_pairs'] == len(src) * 60
+          for row in rows:
+              assert sum(len(e['predictions']) for e in row['emotions'].values()) == 60
+          print('Verified', summary['total_pairs'], 'pairs across', summary['locations'], 'places')
+          PY
+      - name: Print high-level summary
+        if: always()
+        run: |
+          if test -f reports/stage1a_vocabulary/summary.json; then
+            python - <<'PY'
+          import json
+          x=json.load(open('reports/stage1a_vocabulary/summary.json'))
+          print('Reviews:',x['evaluated_reviews'],'Hypotheses:',x['candidate_count'],'Pairs:',x['total_pairs'])
+          for k,v in x['metrics'].items():
+              print(k,'unanimity',v['core_unanimity_rate'],'LOO-stable',v['leave_one_out_mean_stability'],'ensemble-method-agreement',v['ensemble_strategy_agreement'])
+          PY
+          fi
+      - name: Upload auditable results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: stage1a-expanded-vocabulary-ensemble
+          path: reports/stage1a_vocabulary/
+          if-no-files-found: warn
