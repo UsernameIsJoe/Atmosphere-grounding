@@ -1,11 +1,13 @@
 {
-  "schema_version": "0.1-proposed-not-validated",
+  "schema_version": "0.2-expanded-proposed-not-validated",
   "scope": "Stage 1A pilot; intentionally limited to calm, inviting, safe pending theory-driven nine-emotion taxonomy",
   "notes": [
     "These are manually authored exploratory candidates, not human-validated synonyms or empirical findings.",
     "family=core denotes prospective close paraphrases, pending semantic counterexample screening.",
     "family=facet denotes semantically related but non-equivalent attributes; do not aggregate into paraphrase score.",
-    "opposition contains distinct control types; do not equate antonym and logical negation."
+    "opposition contains distinct control types; do not equate antonym and logical negation.",
+    "Expanded to 20 hypotheses per pilot emotion; core families are candidate near-paraphrases rather than verified equivalent expressions.",
+    "Testing is not automatic hypothesis selection; do not rank candidate hypotheses by mean confidence or coverage alone."
   ],
   "candidates": [
     {
@@ -222,6 +224,330 @@
       "family": "loose-antonym",
       "text": "This location poses serious physical safety risks.",
       "source": "researcher-authored exploratory",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "calm_core_04",
+      "emotion": "calm",
+      "role": "core",
+      "family": "calm-core",
+      "text": "The atmosphere here feels calm.",
+      "source": "assistant-authored exploratory hypothesis; motivated by vocabulary-method literature, not literature-validated wording",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "calm_core_05",
+      "emotion": "calm",
+      "role": "core",
+      "family": "calm-core",
+      "text": "This location feels calm in its atmosphere.",
+      "source": "assistant-authored exploratory hypothesis; motivated by vocabulary-method literature, not literature-validated wording",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "calm_core_06",
+      "emotion": "calm",
+      "role": "core",
+      "family": "calm-core",
+      "text": "There is a calm atmosphere at this place.",
+      "source": "assistant-authored exploratory hypothesis; motivated by vocabulary-method literature, not literature-validated wording",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "calm_peace_02",
+      "emotion": "calm",
+      "role": "facet",
+      "family": "peacefulness",
+      "text": "This place feels peaceful to visitors.",
+      "source": "assistant-authored exploratory hypothesis; motivated by vocabulary-method literature, not literature-validated wording",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "calm_quiet_02",
+      "emotion": "calm",
+      "role": "facet",
+      "family": "quietness",
+      "text": "Visitors experience little disruptive noise here.",
+      "source": "assistant-authored exploratory hypothesis; motivated by vocabulary-method literature, not literature-validated wording",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "calm_relax_02",
+      "emotion": "calm",
+      "role": "facet",
+      "family": "relaxation",
+      "text": "Visitors can unwind in the atmosphere of this place.",
+      "source": "assistant-authored exploratory hypothesis; motivated by vocabulary-method literature, not literature-validated wording",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "calm_lowstim_01",
+      "emotion": "calm",
+      "role": "facet",
+      "family": "low-stimulation",
+      "text": "This location has a low-stimulation atmosphere.",
+      "source": "assistant-authored exploratory hypothesis; motivated by vocabulary-method literature, not literature-validated wording",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "calm_uncrowd_01",
+      "emotion": "calm",
+      "role": "facet",
+      "family": "crowding",
+      "text": "This location does not feel crowded.",
+      "source": "assistant-authored exploratory hypothesis; motivated by vocabulary-method literature, not literature-validated wording",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "calm_rest_01",
+      "emotion": "calm",
+      "role": "facet",
+      "family": "restfulness",
+      "text": "This location provides a restful setting.",
+      "source": "assistant-authored exploratory hypothesis; motivated by vocabulary-method literature, not literature-validated wording",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "calm_reflect_01",
+      "emotion": "calm",
+      "role": "facet",
+      "family": "contemplation",
+      "text": "The atmosphere is conducive to quiet reflection.",
+      "source": "assistant-authored exploratory hypothesis; motivated by vocabulary-method literature, not literature-validated wording",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "calm_neg_02",
+      "emotion": "calm",
+      "role": "opposition",
+      "family": "strict-negation",
+      "text": "It is not the case that this place has a calm atmosphere.",
+      "source": "assistant-authored exploratory hypothesis; motivated by vocabulary-method literature, not literature-validated wording",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "calm_opp_02",
+      "emotion": "calm",
+      "role": "opposition",
+      "family": "loose-antonym",
+      "text": "This location has an agitating atmosphere.",
+      "source": "assistant-authored exploratory hypothesis; motivated by vocabulary-method literature, not literature-validated wording",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "inv_core_04",
+      "emotion": "inviting",
+      "role": "core",
+      "family": "inviting-core",
+      "text": "This place has an inviting atmosphere.",
+      "source": "assistant-authored exploratory hypothesis; motivated by vocabulary-method literature, not literature-validated wording",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "inv_core_05",
+      "emotion": "inviting",
+      "role": "core",
+      "family": "inviting-core",
+      "text": "The atmosphere here feels inviting.",
+      "source": "assistant-authored exploratory hypothesis; motivated by vocabulary-method literature, not literature-validated wording",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "inv_core_06",
+      "emotion": "inviting",
+      "role": "core",
+      "family": "inviting-core",
+      "text": "There is an inviting atmosphere at this location.",
+      "source": "assistant-authored exploratory hypothesis; motivated by vocabulary-method literature, not literature-validated wording",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "inv_welcome_02",
+      "emotion": "inviting",
+      "role": "facet",
+      "family": "welcoming",
+      "text": "Visitors feel welcomed by this location.",
+      "source": "assistant-authored exploratory hypothesis; motivated by vocabulary-method literature, not literature-validated wording",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "inv_enter_02",
+      "emotion": "inviting",
+      "role": "facet",
+      "family": "entry",
+      "text": "The setting makes entering the space appealing.",
+      "source": "assistant-authored exploratory hypothesis; motivated by vocabulary-method literature, not literature-validated wording",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "inv_stay_02",
+      "emotion": "inviting",
+      "role": "facet",
+      "family": "linger",
+      "text": "The atmosphere encourages visitors to linger.",
+      "source": "assistant-authored exploratory hypothesis; motivated by vocabulary-method literature, not literature-validated wording",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "inv_access_01",
+      "emotion": "inviting",
+      "role": "facet",
+      "family": "accessibility",
+      "text": "This place feels approachable to visitors.",
+      "source": "assistant-authored exploratory hypothesis; motivated by vocabulary-method literature, not literature-validated wording",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "inv_comfort_01",
+      "emotion": "inviting",
+      "role": "facet",
+      "family": "comfort",
+      "text": "The place provides a comfortable setting for spending time.",
+      "source": "assistant-authored exploratory hypothesis; motivated by vocabulary-method literature, not literature-validated wording",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "inv_social_01",
+      "emotion": "inviting",
+      "role": "facet",
+      "family": "sociability",
+      "text": "The atmosphere supports casual social interaction.",
+      "source": "assistant-authored exploratory hypothesis; motivated by vocabulary-method literature, not literature-validated wording",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "inv_open_01",
+      "emotion": "inviting",
+      "role": "facet",
+      "family": "openness",
+      "text": "The setting feels open rather than forbidding.",
+      "source": "assistant-authored exploratory hypothesis; motivated by vocabulary-method literature, not literature-validated wording",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "inv_neg_02",
+      "emotion": "inviting",
+      "role": "opposition",
+      "family": "strict-negation",
+      "text": "It is not the case that this place has an inviting atmosphere.",
+      "source": "assistant-authored exploratory hypothesis; motivated by vocabulary-method literature, not literature-validated wording",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "inv_opp_02",
+      "emotion": "inviting",
+      "role": "opposition",
+      "family": "loose-antonym",
+      "text": "This place has a forbidding atmosphere.",
+      "source": "assistant-authored exploratory hypothesis; motivated by vocabulary-method literature, not literature-validated wording",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "safe_core_04",
+      "emotion": "safe",
+      "role": "core",
+      "family": "safe-core",
+      "text": "This place feels physically safe for visitors.",
+      "source": "assistant-authored exploratory hypothesis; motivated by vocabulary-method literature, not literature-validated wording",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "safe_core_05",
+      "emotion": "safe",
+      "role": "core",
+      "family": "safe-core",
+      "text": "Visitors feel physically safe at this location.",
+      "source": "assistant-authored exploratory hypothesis; motivated by vocabulary-method literature, not literature-validated wording",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "safe_core_06",
+      "emotion": "safe",
+      "role": "core",
+      "family": "safe-core",
+      "text": "The atmosphere here feels physically safe.",
+      "source": "assistant-authored exploratory hypothesis; motivated by vocabulary-method literature, not literature-validated wording",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "safe_hazard_02",
+      "emotion": "safe",
+      "role": "facet",
+      "family": "hazards",
+      "text": "There are no obvious physical hazards for visitors here.",
+      "source": "assistant-authored exploratory hypothesis; motivated by vocabulary-method literature, not literature-validated wording",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "safe_traffic_02",
+      "emotion": "safe",
+      "role": "facet",
+      "family": "traffic",
+      "text": "Visitors can move here without worrying about traffic.",
+      "source": "assistant-authored exploratory hypothesis; motivated by vocabulary-method literature, not literature-validated wording",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "safe_secure_02",
+      "emotion": "safe",
+      "role": "facet",
+      "family": "security",
+      "text": "Visitors feel personally secure in this setting.",
+      "source": "assistant-authored exploratory hypothesis; motivated by vocabulary-method literature, not literature-validated wording",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "safe_maint_01",
+      "emotion": "safe",
+      "role": "facet",
+      "family": "maintenance",
+      "text": "This location appears well maintained and free of dangerous damage.",
+      "source": "assistant-authored exploratory hypothesis; motivated by vocabulary-method literature, not literature-validated wording",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "safe_visibility_01",
+      "emotion": "safe",
+      "role": "facet",
+      "family": "visibility",
+      "text": "The setting allows visitors to see their surroundings clearly.",
+      "source": "assistant-authored exploratory hypothesis; motivated by vocabulary-method literature, not literature-validated wording",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "safe_light_01",
+      "emotion": "safe",
+      "role": "facet",
+      "family": "lighting",
+      "text": "The area is sufficiently lit for visitors to navigate safely.",
+      "source": "assistant-authored exploratory hypothesis; motivated by vocabulary-method literature, not literature-validated wording",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "safe_order_01",
+      "emotion": "safe",
+      "role": "facet",
+      "family": "orderliness",
+      "text": "The setting feels orderly and predictable to visitors.",
+      "source": "assistant-authored exploratory hypothesis; motivated by vocabulary-method literature, not literature-validated wording",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "safe_neg_02",
+      "emotion": "safe",
+      "role": "opposition",
+      "family": "strict-negation",
+      "text": "It is not the case that this location feels physically safe.",
+      "source": "assistant-authored exploratory hypothesis; motivated by vocabulary-method literature, not literature-validated wording",
+      "review_status": "pending semantic review"
+    },
+    {
+      "id": "safe_opp_02",
+      "emotion": "safe",
+      "role": "opposition",
+      "family": "loose-antonym",
+      "text": "This place feels dangerous to visitors.",
+      "source": "assistant-authored exploratory hypothesis; motivated by vocabulary-method literature, not literature-validated wording",
       "review_status": "pending semantic review"
     }
   ]
