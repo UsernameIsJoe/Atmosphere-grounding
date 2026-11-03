@@ -1,6 +1,6 @@
 # Stage 1A — ABSA / Aspect Extraction: Next Research and Experimental Plan
 
-**Date:** 2026-11-03. **Status:** Planned next independent Stage 1A experiment; no new ABSA model run claimed in this document.
+**Date:** 2026-11-03. **Status:** Phase A/B extraction comparison and controlled examples implemented in GitHub Actions; execution success and results are not yet verified. NLI integration remains future work.
 
 ## Why pivot now
 
@@ -43,3 +43,20 @@ Sources: end-to-end model card (https://huggingface.co/yangheng/deberta-v3-base-
 ## Project-level constraints
 
 Keep parallel Stage 1B visual-quality feature research, Stage 2 location-level association, and Stage 3 visual prediction intact. Emotion taxonomy (nine final categories), text aggregation/scoring meaning, data usage rights and independent labels remain unresolved.
+
+
+## Implemented experiment — Phase A/B and synthetic probes
+
+- Script: [`scripts/stage1a_absa_extractor_screen.py`](../scripts/stage1a_absa_extractor_screen.py).
+- Workflow: [`.github/workflows/stage1a-absa-extraction-screen.yml`](../.github/workflows/stage1a-absa-extraction-screen.yml). Three parallel jobs, one each for:
+  1. `yangheng/deberta-v3-base-end2end-absa`, original joint aspect + polarity model;
+  2. pretrained `tomaarsen/setfit-absa-bge-small-en-v1.5-restaurants` **two-model restaurant-domain** SetFitABSA aspect/polarity pipeline. This is a reproducible but **domain-mismatched transfer baseline**, not a spatial-atmosphere model;
+  3. `en_core_web_sm` spaCy noun chunks, **a candidate-extraction reference, NOT ABSA**.
+- Inputs: exactly the **50 deterministic reviews spanning 43 locations** from prior NLI screening (same row selector). Review-level outputs explicitly retain full original review, verified text offsets for aspect spans, polarity metadata when available, source sentences containing aspects, and all sentences that an aspect-only filter would have discarded. SetFit's text-only spans are aligned to original reviews, marking ambiguous repeated matches instead of silently pretending offsets are precise.
+- Label-free outputs: count of aspect spans per review, no-aspect count, counterfactual fraction of sentences retained by an aspect-only filter, unaligned-span count, 7 synthetic challenge inputs and extraction runtime. **These are not precision, recall or atmosphere accuracy**.
+- Synthetic challenge cases include explicit negation, non-nominal atmosphere language, positive-negative mixed claims, a reviewer-only event, welcoming entry, a safety issue and an adjective-only observation. Diagnostic phrases are declared ahead of time; their detection is not a human-rated benchmark. A model's failure to produce a noun aspect for an adjective-only case is not automatically a model defect if its advertised task is noun-target extraction.
+- Workflow checks sample and source-offset integrity, runs unit tests, and uploads whatever outputs are present even on failure. Each model has its own artifact.
+- `Phase D` (NLI integration) is deliberately **not** included in this run; we first need to inspect whether aspect models capture relevant observations independently. No vocabulary or NLI model selection is implied.
+- Verified methodology: [Hugging Face SetFitABSA documentation](https://huggingface.co/docs/setfit/how_to/absa) describes spaCy candidate extraction followed by separately trained aspect and polarity classifiers, and lists the pretrained restaurant checkpoints.
+
+**Known limitations:** Automatic review sentence segmentation differs by parser. The source-offset reconstruction for SetFit is tentative when repeated identical terms appear; ambiguous examples are flagged. Current ABSA checkpoints were trained on domains unlike public-space atmospheric descriptions. Count-based metrics cannot rank model correctness without externally defined evidence spans.
