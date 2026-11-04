@@ -22,7 +22,7 @@ jobs:
           mkdir -p reports/component1_reconcile_inputs
           gh run download 41920533478 -R "$GH_REPO" -n stage1a-component1-matched-audit -D reports/component1_reconcile_inputs/matched
           gh run download 41908682135 -R "$GH_REPO" -n absa-real-sentences-gts_joint_aste -D reports/component1_reconcile_inputs/gts
-          gh run download --latest -R "$GH_REPO" -n stage1a-component1-joint-gliner -D reports/component1_reconcile_inputs/joint
+          gh run download 41923414224 -R "$GH_REPO" -n stage1a-component1-joint-gliner -D reports/component1_reconcile_inputs/joint
       - name: Reconcile independent candidate relationships without generating claims
         run: python scripts/stage1a_component1_reconcile.py
       - uses: actions/upload-artifact@v4
