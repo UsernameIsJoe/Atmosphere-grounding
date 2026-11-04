@@ -1,0 +1,79 @@
+name: Stage 1A integrated source-grounded ABSA NLI
+
+on:
+  push:
+    paths:
+      - '.github/workflows/stage1a-integrated-absa-nli.yml'
+      - 'scripts/stage1a_integrated_absa_nli.py'
+      - 'tests/test_stage1a_integrated_absa_nli.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  integrated-pilot:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Preflight syntax and logic tests
+        run: |
+          python -m py_compile scripts/stage1a_integrated_absa_nli.py tests/test_stage1a_integrated_absa_nli.py
+          python -m pip install 'pytest>=8,<10'
+          python -m pytest -q tests/test_stage1a_integrated_absa_nli.py
+      - name: Reuse matched previously tested extractor artifacts
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          mkdir -p reports/stage1a_integrated_inputs/{deberta_absa,setfit_absa,aos_t5}
+          gh run download 41728835398 -R "$GH_REPO" -n stage1a-absa-screen-deberta_absa -D reports/stage1a_integrated_inputs/deberta_absa
+          gh run download 41728835398 -R "$GH_REPO" -n stage1a-absa-screen-setfit_absa -D reports/stage1a_integrated_inputs/setfit_absa
+          gh run download 41861834607 -R "$GH_REPO" -n stage1a-relation-pilot-aos_t5 -D reports/stage1a_integrated_inputs/aos_t5
+          python - <<'PY'
+          import sys
+          sys.path.insert(0,'scripts')
+          from stage1a_integrated_absa_nli import load_artifacts, sentences_from_source
+          tables, rows=load_artifacts('reports/stage1a_integrated_inputs')
+          assert len(rows)==20
+          for row in rows:
+              sentences_from_source(tables['deberta_absa'][row])
+          print('Verified',len(rows),'aligned source records and non-dropping sentence segmentation')
+          PY
+      - name: Install frozen BART NLI checkpoint dependencies
+        run: |
+          python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install 'transformers>=4.46,<5'
+      - name: Run source-preserving integrated pipeline
+        run: |
+          python -u scripts/stage1a_integrated_absa_nli.py --inputs reports/stage1a_integrated_inputs --output reports/stage1a_integrated
+      - name: Assert artifact completeness and evidence retention
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          folder=Path('reports/stage1a_integrated')
+          summary=json.loads((folder/'summary.json').read_text())
+          rows=[json.loads(x) for x in (folder/'review_evidence.jsonl').read_text().splitlines() if x.strip()]
+          assert summary['n_reviews']==20
+          assert summary['n_review_emotions']==60==len(rows)
+          assert len({(r['row'],r['emotion']) for r in rows})==60
+          assert summary['n_nli_inferences']==sum(1+2*len(r['claims']) for r in rows)
+          assert all(all(r['review'][c['start']:c['end']]==c['text'] for c in r['claims']) for r in rows)
+          assert all(all('direct_nli' in c and 'relevance_nli' in c for c in r['claims']) for r in rows)
+          print('Verified',summary['n_nli_inferences'],'source-preserving NLI calls')
+          PY
+      - name: Upload integrated evidence and diagnostics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: stage1a-integrated-absa-nli
+          path: reports/stage1a_integrated/
+          if-no-files-found: warn
