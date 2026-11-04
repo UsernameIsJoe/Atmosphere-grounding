@@ -72,7 +72,8 @@ def standardize(text, raw):
 
 def main():
     parser=argparse.ArgumentParser()
-    parser.add_argument("--input",required=True)\n    parser.add_argument("--real-reviews",action="store_true",help="Use previously frozen 20 real-review JSONL cases")
+    parser.add_argument("--input",required=True)
+    parser.add_argument("--real-reviews",action="store_true",help="Use previously frozen 20 real-review JSONL cases")
     parser.add_argument("--output",required=True)
     args=parser.parse_args()
     if args.real_reviews:
