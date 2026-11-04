@@ -1,0 +1,80 @@
+name: Stage 1A aspect opinion relation extraction pilot
+
+on:
+  push:
+    paths:
+      - '.github/workflows/stage1a-relation-pilot.yml'
+      - 'scripts/stage1a_relation_pilot.py'
+      - 'tests/test_stage1a_relation_pilot.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  relation-extraction:
+    name: Relation pilot ${{ matrix.method }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    strategy:
+      fail-fast: false
+      matrix:
+        method: [dependency, aos_t5]
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        env:
+          METHOD: ${{ matrix.method }}
+        run: |
+          python -m pip install --upgrade pip
+          python -m pip install 'pytest>=8,<10' 'spacy>=3.7,<4'
+          if [ "$METHOD" = aos_t5 ]; then
+            python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+            python -m pip install 'transformers>=4.46,<5' sentencepiece protobuf
+          else
+            python -m spacy download en_core_web_sm
+          fi
+      - name: Run tests and compile
+        run: |
+          python -m py_compile scripts/stage1a_relation_pilot.py
+          python -m pytest -q tests/test_stage1a_relation_pilot.py
+      - name: Extract relations
+        env:
+          METHOD: ${{ matrix.method }}
+        run: |
+          python -u scripts/stage1a_relation_pilot.py --method "$METHOD" --n 20 --output "reports/stage1a_relation_pilot_$METHOD"
+      - name: Validate source verification and coverage
+        env:
+          METHOD: ${{ matrix.method }}
+        run: |
+          python - <<'PY'
+          import json,os
+          from pathlib import Path
+          d=Path("reports/stage1a_relation_pilot_"+os.environ["METHOD"])
+          cases=[json.loads(x) for x in (d/"review_cases.jsonl").read_text().splitlines() if x.strip()]
+          manifest=json.loads((d/"manifest.json").read_text())
+          summary=json.loads((d/"summary.json").read_text())
+          assert len(cases)==20==summary["n_reviews"]
+          assert [x["row"] for x in cases]==manifest["rows"]
+          assert len({x["row"] for x in cases})==20
+          assert len(json.loads((d/"controlled_cases.json").read_text()))==8
+          for row in cases:
+              for r in row["extraction"]["relations"]:
+                  if r["grounded"]:
+                      for part in ("aspect","opinion"):
+                          x=r[part]
+                          assert row["review"][x["start"]:x["end"]]==x["text"]
+          print("Validated",os.environ["METHOD"],summary["n_relations"],"relations")
+          PY
+      - name: Upload even if extraction fails
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: stage1a-relation-pilot-${{ matrix.method }}
+          path: reports/stage1a_relation_pilot_${{ matrix.method }}/
+          if-no-files-found: warn
