@@ -1,0 +1,29 @@
+name: Stage 1A Component 1 GLiNER2.5 typed joint extraction
+on:
+  push:
+    paths:
+      - scripts/stage1a_component1_joint_gliner.py
+      - .github/workflows/stage1a-component1-joint-gliner.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  joint:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install official GLiNER2.5 API and tokenizer
+        run: |
+          python -m pip install 'gliner2[local]' spacy
+          python -m spacy download en_core_web_sm
+      - name: Run typed JointIE on all frozen original sentences
+        run: python -u scripts/stage1a_component1_joint_gliner.py --output reports/component1_joint_gliner
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: stage1a-component1-joint-gliner
+          path: reports/component1_joint_gliner/
