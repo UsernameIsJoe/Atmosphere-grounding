@@ -62,13 +62,12 @@ def reconcile(original,joint,ind,gts):
     s=gts["sentence"]
     assert s["text"]==text
     entities,links=make_joint(text,joint)
-    indep=ind.get("relations",{}).get("relation_extraction",{})
+    # Prior matched audit stores each independent relation as a flat list.
     independents=[]
-    for kind,rs in indep.items():
-        for r in rs:
-            a,b=r["head"],r["tail"]
-            if not exact(text,a) or not exact(text,b):raise ValueError("Independent relation ungrounded")
-            independents.append({"kind":kind,"head":a,"tail":b})
+    for r in ind.get("relations",[]):
+        a,b=anchored(text,r["aspect"]),anchored(text,r["opinion"])
+        independents.append({"kind":r.get("type"),"head":a,"tail":b,
+                             "source_exact":r.get("source_exact",False)})
     used_gts=set()
     gts_pairs=[]
     for i,r in enumerate(s["extraction"]["relations"]):
