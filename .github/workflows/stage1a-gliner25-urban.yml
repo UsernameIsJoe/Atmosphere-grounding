@@ -1,0 +1,29 @@
+name: Stage 1A GLiNER2.5 urban relation extraction
+on:
+  push:
+    paths:
+      - scripts/stage1a_gliner25_urban.py
+      - .github/workflows/stage1a-gliner25-urban.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  gliner25:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install authors' GLiNER2.5 API and review tokenizer
+        run: |
+          python -m pip install 'gliner2[local]' spacy
+          python -m spacy download en_core_web_sm
+      - name: Run official local GLiNER2.5 checkpoint on original reviews
+        run: python -u scripts/stage1a_gliner25_urban.py --output reports/gliner25_urban
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: stage1a-gliner25-urban-results
+          path: reports/gliner25_urban/
