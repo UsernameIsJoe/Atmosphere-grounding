@@ -1,0 +1,34 @@
+name: Stage 1A Component 1 matched extractor decision audit
+on:
+  push:
+    paths:
+      - scripts/stage1a_component1_lock_audit.py
+      - .github/workflows/stage1a-component1-lock-audit.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download frozen matched original model outputs
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          mkdir -p reports/component1_lock_inputs
+          gh run download 41908682135 -R "$GH_REPO" -n absa-real-sentences-gts_joint_aste -D reports/component1_lock_inputs/gts
+          gh run download 41908682135 -R "$GH_REPO" -n absa-real-sentences-aos_t5 -D reports/component1_lock_inputs/aos
+          gh run download 41913712642 -R "$GH_REPO" -n stage1a-pyabsa-official-probe -D reports/component1_lock_inputs/pyabsa
+          gh run download 41916389316 -R "$GH_REPO" -n stage1a-gliner25-urban-results -D reports/component1_lock_inputs/gliner
+          gh run download 41916932170 -R "$GH_REPO" -n stage1a-nuextract20-urban-results -D reports/component1_lock_inputs/nuextract
+      - name: Validate identical source and summarize evidence
+        run: python scripts/stage1a_component1_lock_audit.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: stage1a-component1-matched-audit
+          path: reports/component1_lock_audit/
