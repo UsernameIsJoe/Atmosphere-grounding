@@ -154,7 +154,7 @@ def main():
         row=old_by[k];j=joint_by[k];t=gts_by[k]
         if not (row["sentence"]==j["text"]==t["sentence"]["text"]):
             raise ValueError("Input sentence mismatch")
-        src={**row,"review":t["case"]["review"]}
+        src={**row,"start":row["source_start"],"end":row["source_end"],"review":t["case"]["review"]}
         result=reconcile(src,j,row["models"]["gliner"],t)
         outputs.append(result)
         cs=result["component1"]
