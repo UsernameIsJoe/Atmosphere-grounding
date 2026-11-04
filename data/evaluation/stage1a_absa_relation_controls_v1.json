@@ -1,0 +1,14 @@
+{
+  "version": "absa_relation_reference_v1",
+  "status": "researcher-authored controlled diagnostics; NOT independent human ground truth",
+  "cases": [
+    {"id":"two_targets","pairs":[["gardens","beautiful"],["traffic","deafening"]],"negated":[]},
+    {"id":"negation","pairs":[["park","quiet"],["atmosphere","stressful"]],"negated":[["park","quiet"]]},
+    {"id":"safety","pairs":[["path","dangerous"]],"negated":[]},
+    {"id":"welcoming","pairs":[["entrance","welcoming"],["plaza","inviting"]],"negated":[]},
+    {"id":"mixed","pairs":[["benches","comfortable"],["lighting","harsh"]],"negated":[]},
+    {"id":"subjective","pairs":[],"negated":[],"note":"Reviewer happiness from finding a phone is not place-attributed praise"},
+    {"id":"implicit","pairs":[],"negated":[],"implicit":true,"note":"Adjective-only atmospheric description; not measurable as explicit aspect pair"},
+    {"id":"scope","pairs":[["trees","beautiful"],["park","noisy"]],"negated":[]}
+  ]
+}
