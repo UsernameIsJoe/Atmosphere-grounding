@@ -99,7 +99,7 @@ def main():
     target=Path(args.output)
     target.parent.mkdir(parents=True,exist_ok=True)
     if args.real_reviews:
-        target.write_text("".join(json.dumps(r,ensure_ascii=False)+"\\n" for r in out),encoding="utf-8")
+        target.write_text("".join(json.dumps(r,ensure_ascii=False)+"\n" for r in out),encoding="utf-8")
     else:
         target.write_text(json.dumps(out,ensure_ascii=False,indent=2),encoding="utf-8")
 
