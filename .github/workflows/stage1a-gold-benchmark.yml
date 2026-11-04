@@ -1,0 +1,34 @@
+name: Stage 1A benchmark packet and scoring validation
+on:
+  push:
+    paths:
+      - scripts/stage1a_gold_benchmark.py
+      - .github/workflows/stage1a-gold-benchmark.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  benchmark-pack:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: |
+          python -m pip install spacy pytest
+          python -m spacy download en_core_web_sm
+          python scripts/stage1a_gold_benchmark.py --packet reports/stage1a_gold/annotation_template.jsonl
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          rows=[json.loads(x) for x in Path('reports/stage1a_gold/annotation_template.jsonl').read_text().splitlines()]
+          assert len(rows)==56
+          assert len(set((r['row'],r['sentence_index']) for r in rows))==56
+          assert all(r['triplets'] is None and r['atmosphere_evidence'] is None for r in rows)
+          print("56 original sentence identities checked; no invented gold labels")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: stage1a-real-review-gold-annotation-template
+          path: reports/stage1a_gold/
