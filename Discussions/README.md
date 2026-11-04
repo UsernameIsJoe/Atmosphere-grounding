@@ -68,3 +68,5 @@ GitHub renders Mermaid diagrams inside `.md` files. Open [`flowcharts.md`](flowc
 | [`stage1a-absa-relevance-nli-ledger-2026-11-04.md`](stage1a-absa-relevance-nli-ledger-2026-11-04.md) | **Operational ABSA→relevance→NLI evidence ledger**: real-review source provenance, component comparison, non-destructive safeguards and execution caveats |
 
 | [`stage1a-real-review-evidence-audit-2026-11-04.md`](stage1a-real-review-evidence-audit-2026-11-04.md) | **First semantic audit**: 30 real passage–emotion judgments, relevance vs NLI error analysis, and review of all 11 grounded AOS relations |
+
+| [`stage1a-absa-relation-benchmark-v1-2026-11-04.md`](stage1a-absa-relation-benchmark-v1-2026-11-04.md) | **ABSA-focused model selection**: existing DeBERTa/SetFit vs AOS/dependency roles, 11 annotated controlled relation references, strict relation/negation benchmark and CI workflow |
