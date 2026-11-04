@@ -58,3 +58,5 @@ GitHub renders Mermaid diagrams inside `.md` files. Open [`flowcharts.md`](flowc
 | [`stage1a-m2c-relevance-results-and-closeout-2026-11-04.md`](stage1a-m2c-relevance-results-and-closeout-2026-11-04.md) | **M2c executed and closed**: passes overall predefined relevance screen (13/16 retained, 8/44 false positives); proceed only to bounded real-review check and refocus on Stage 1B |
 
 | [`stage1a-integrated-absa-nli-baseline-2026-11-04.md`](stage1a-integrated-absa-nli-baseline-2026-11-04.md) | **Consolidated Stage 1A baseline**: one source-preserving ABSA→NLI implementation, fixed integration architecture, tests and CI |
+
+| [`stage1a-integrated-absa-nli-executed-audit-2026-11-04.md`](stage1a-integrated-absa-nli-executed-audit-2026-11-04.md) | **Integrated run verified**: 20 reviews, 408 NLI calls, source evidence retention and key remaining ABSA→NLI mechanism gap |
