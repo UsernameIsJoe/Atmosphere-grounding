@@ -1,0 +1,32 @@
+name: Stage 1A Component 1 formulation evidence audit
+on:
+  push:
+    paths:
+      - scripts/stage1a_component1_formulation_audit.py
+      - .github/workflows/stage1a-component1-formulation-audit.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download frozen outputs from matching real review runs
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          mkdir -p reports/component1_formulation_inputs
+          gh run download 41923414224 -R "$GH_REPO" -n stage1a-component1-joint-gliner -D reports/component1_formulation_inputs/A
+          gh run download 41925913206 -R "$GH_REPO" -n stage1a-component1-formulation -D reports/component1_formulation_inputs/BC
+          gh run download 41908682135 -R "$GH_REPO" -n absa-real-sentences-gts_joint_aste -D reports/component1_formulation_inputs/GTS
+      - name: Evaluate matched source integrity and A/B/C/D outputs
+        run: python scripts/stage1a_component1_formulation_audit.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: stage1a-component1-formulation-audit
+          path: reports/component1_formulation_audit/
