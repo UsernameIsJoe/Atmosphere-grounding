@@ -14,6 +14,17 @@ def norm(value):
     return re.sub(r"\s+", " ", value.strip().lower())
 
 
+def opinion_core(value):
+    """Compare opinion lexical cores; test negation scope separately.
+
+    Removes an explicit leading negator and ending punctuation ONLY for
+    reference relation matching. Original source spans remain untouched.
+    """
+    value = norm(value)
+    value = re.sub(r"^(?:not|never|no)\\s+", "", value)
+    return value.rstrip(" ,;:.!?").strip()
+
+
 def records(path):
     return {x["id"]: x for x in json.loads(Path(path).read_text(encoding="utf-8"))}
 
@@ -42,8 +53,8 @@ def score(refs, predictions):
         relations = obj["extraction"]["relations"]
         good = [r for r in relations if verified(obj["text"], r)]
         unverified += len(relations) - len(good)
-        expected = {tuple(norm(x) for x in pair) for pair in case["pairs"]}
-        predicted = {(norm(r["aspect"]["text"]), norm(r["opinion"]["text"])) for r in good}
+        expected = {(norm(a), opinion_core(o)) for a, o in case["pairs"]}
+        predicted = {(norm(r["aspect"]["text"]), opinion_core(r["opinion"]["text"])) for r in good}
         right = expected & predicted
         extras = predicted - expected
         missing = expected - predicted
@@ -52,8 +63,8 @@ def score(refs, predictions):
         fn += len(missing)
         for aspect, opinion in case.get("negated", []):
             negated_hits += int(any(
-                (norm(r["aspect"]["text"]), norm(r["opinion"]["text"])) ==
-                (norm(aspect), norm(opinion))
+                (norm(r["aspect"]["text"]), opinion_core(r["opinion"]["text"])) ==
+                (norm(aspect), opinion_core(opinion))
                 and re.search(r"\b(?:not|never|no)\b", r["opinion"]["text"], re.I)
                 for r in good
             ))
