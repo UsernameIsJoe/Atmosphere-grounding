@@ -1,0 +1,66 @@
+name: Stage 1A ABSA relation quality benchmark
+
+on:
+  push:
+    paths:
+      - '.github/workflows/stage1a-absa-relation-quality.yml'
+      - 'scripts/stage1a_absa_relation_benchmark.py'
+      - 'tests/test_stage1a_absa_relation_benchmark.py'
+      - 'data/evaluation/stage1a_absa_relation_controls_v1.json'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  compare-existing-models:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Compile and test metric implementation
+        run: |
+          python -m py_compile scripts/stage1a_absa_relation_benchmark.py tests/test_stage1a_absa_relation_benchmark.py
+          python -m pip install 'pytest>=8,<10'
+          python -m pytest -q tests/test_stage1a_absa_relation_benchmark.py
+      - name: Retrieve existing fixed AOS and dependency extraction outputs
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          mkdir -p reports/stage1a_absa_relation_inputs/{aos_t5,dependency}
+          gh run download 41861834607 -R "$GH_REPO" -n stage1a-relation-pilot-aos_t5 -D reports/stage1a_absa_relation_inputs/aos_t5
+          gh run download 41861834607 -R "$GH_REPO" -n stage1a-relation-pilot-dependency -D reports/stage1a_absa_relation_inputs/dependency
+      - name: Score relation correctness and negation handling
+        run: |
+          python scripts/stage1a_absa_relation_benchmark.py \
+            --references data/evaluation/stage1a_absa_relation_controls_v1.json \
+            --aos reports/stage1a_absa_relation_inputs/aos_t5/controlled_cases.json \
+            --dependency reports/stage1a_absa_relation_inputs/dependency/controlled_cases.json \
+            --output reports/stage1a_absa_relation_quality
+      - name: Verify comparison and emit visible summary
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          r=json.loads(Path('reports/stage1a_absa_relation_quality/score.json').read_text())
+          for name, x in r['models'].items():
+              assert len(x['cases']) == 8
+              assert x['correct']+x['missed'] == 11
+              assert x['negated_opinion_cases'] == 1
+              print(name, 'correct',x['correct'],'false',x['false_relations'],
+                    'missed',x['missed'],'negation',x['negated_opinion_preserved'])
+          PY
+      - name: Upload exact per-case errors and scores
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: stage1a-absa-relation-quality-v1
+          path: reports/stage1a_absa_relation_quality/
+          if-no-files-found: warn
