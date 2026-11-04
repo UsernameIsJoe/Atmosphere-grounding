@@ -72,24 +72,36 @@ def standardize(text, raw):
 
 def main():
     parser=argparse.ArgumentParser()
-    parser.add_argument("--input",required=True)
+    parser.add_argument("--input",required=True)\n    parser.add_argument("--real-reviews",action="store_true",help="Use previously frozen 20 real-review JSONL cases")
     parser.add_argument("--output",required=True)
     args=parser.parse_args()
-    cases=json.loads(Path(args.input).read_text(encoding="utf-8"))
-    assert len(cases)==8
+    if args.real_reviews:
+        cases=[json.loads(s) for s in Path(args.input).read_text(encoding="utf-8").splitlines() if s]
+        assert len(cases)==20
+    else:
+        cases=json.loads(Path(args.input).read_text(encoding="utf-8"))
+        assert len(cases)==8
     predict=make_predictor()
     out=[]
     for c in cases:
-        raw=predict(c["text"])
-        relations=standardize(c["text"],raw)
-        out.append({"id":c["id"],"text":c["text"],
-                    "extraction":{"relations":relations,"raw":raw,
-                                  "parse_status":"gts_checkpoint_decoder"}})
-        print(c["id"],"generated",len(relations),"grounded",
+        source=c["review"] if args.real_reviews else c["text"]
+        raw=predict(source)
+        relations=standardize(source,raw)
+        entry={"extraction":{"relations":relations,"raw":raw,
+                             "parse_status":"gts_checkpoint_decoder"}}
+        if args.real_reviews:
+            entry.update({"row":c["row"],"place_id":c["place_id"],"review":source})
+        else:
+            entry.update({"id":c["id"],"text":source})
+        out.append(entry)
+        print(c["row"] if args.real_reviews else c["id"],"generated",len(relations),"grounded",
               sum(r["grounded"] for r in relations),flush=True)
     target=Path(args.output)
     target.parent.mkdir(parents=True,exist_ok=True)
-    target.write_text(json.dumps(out,ensure_ascii=False,indent=2),encoding="utf-8")
+    if args.real_reviews:
+        target.write_text("".join(json.dumps(r,ensure_ascii=False)+"\\n" for r in out),encoding="utf-8")
+    else:
+        target.write_text(json.dumps(out,ensure_ascii=False,indent=2),encoding="utf-8")
 
 
 if __name__=="__main__":
