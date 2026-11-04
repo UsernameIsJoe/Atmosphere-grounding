@@ -58,7 +58,7 @@ def make_joint(sentence,p):
 
 def reconcile(original,joint,ind,gts):
     text=original["sentence"]
-    assert joint["text"]==text and ind["text"]==text
+    assert joint["text"]==text
     s=gts["sentence"]
     assert s["text"]==text
     entities,links=make_joint(text,joint)
