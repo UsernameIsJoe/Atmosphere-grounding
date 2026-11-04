@@ -168,7 +168,7 @@ def main():
         totals["independent_gliner_links"]+=len(cs["independent_gliner_relations_comparator"])
         totals["joint_links_matching_independent"]+=cs["independent_match_count"]
         totals["sentences_no_model_claim"]+=not bool(cs["claims"])
-        assert result["source"]["review"][row["start"]:row["end"]]==row["sentence"]
+        assert result["source"]["review"][row["source_start"]:row["source_end"]]==row["sentence"]
         assert result["handoff"]["verbatim_source_sentence"]==row["sentence"]
     OUT.mkdir(parents=True,exist_ok=True)
     (OUT/"reconciled.jsonl").write_text("".join(json.dumps(x,ensure_ascii=False)+"\n" for x in outputs))
