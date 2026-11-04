@@ -46,6 +46,25 @@ def build(data,reviews):
        "aspect":a,"opinion":o,"polarity":item.get("polarity"),
        "candidate_only":True,
        "unambiguous_source_spans":a["status"]=="unique" and o["status"]=="unique"})
+  # Candidate units are explicit inputs for Component 2. They are NOT emotion labels.
+  units=[]
+  for i,a in enumerate(annotations):
+   units.append({"id":f"span_{i}","kind":"description_or_entity",
+     "source_model":a["source"],"type":a["label"],
+     "evidence_spans":[a["span"]],"claim_context":r["sentence"],
+     "candidate_only":True,"evaluate_relevance_per_emotion":True})
+  for i,l in enumerate(links):
+   units.append({"id":f"link_{i}","kind":"candidate_relationship",
+     "source_model":l["source"],"type":l["kind"],
+     "evidence_spans":[l["aspect"],l["opinion"]],"claim_context":r["sentence"],
+     "candidate_only":True,"evaluate_relevance_per_emotion":True,
+     "span_ambiguity":not l["unambiguous_source_spans"]})
+  if not units:
+   units.append({"id":"fallback_source","kind":"unannotated_source",
+     "source_model":"original_review","type":"unmatched",
+     "evidence_spans":[{"text":r["sentence"],"start":r["source_start"],"end":r["source_end"],"status":"source_exact"}],
+     "claim_context":r["sentence"],"candidate_only":False,
+     "evaluate_relevance_per_emotion":True})
   record={"row":r["row"],"place_id":r["place_id"],
       "sentence_index":r["sentence_index"],
       "original_review":original,
@@ -53,8 +72,10 @@ def build(data,reviews):
       "component1":{"spans":annotations,"links":links,
       "no_annotations":not bool(annotations or links),
       "candidate_only":True,
-      "no_automatic_filter":True},
+      "no_automatic_filter":True,
+      "evidence_units":units},
       "handoff":{"relevance_input":r["sentence"],
+        "relevance_candidates":units,
         "relevance_emotion_dependent":True,
         "nli_original_text_fallback":r["sentence"]}}
   for a in annotations:
@@ -73,12 +94,16 @@ def build(data,reviews):
   audit["gts_adds_to_gliner_coverage"]+=bool(t["relations"]) and not bool(g["entities"] or g["relations"])
   audit["gts_adds_to_gliner_relation_coverage"]+=bool(t["relations"]) and not bool(g["relations"])
   audit["sentences_with_no_annotations"]+=not bool(annotations or links)
+  audit["candidate_evidence_units"]+=len(units)
+  audit["fallback_units"]+=any(u["kind"]=="unannotated_source" for u in units)
   audit["unresolved_spans"]+=sum(a["span"]["status"]!="unique" for a in annotations)
   audit["unresolved_links"]+=sum(not l["unambiguous_source_spans"] for l in links)
   records.append(record)
  assert audit["sentences"]==56
  assert audit["sentences_with_no_annotations"]+audit["union_annotated"]==56
  assert all(x["handoff"]["relevance_input"]==x["sentence"]["text"] for x in records)
+ assert all(x["handoff"]["relevance_candidates"] for x in records)
+ assert all(u["claim_context"]==x["sentence"]["text"] for x in records for u in x["handoff"]["relevance_candidates"])
  assert all(x["handoff"]["nli_original_text_fallback"]==x["sentence"]["text"] for x in records)
  return records,dict(audit)
 def main():
