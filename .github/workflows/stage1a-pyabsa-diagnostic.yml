@@ -1,0 +1,28 @@
+name: Stage 1A PyABSA diagnostic scoring
+on:
+  push:
+    paths:
+      - scripts/stage1a_pyabsa_diagnostic.py
+      - .github/workflows/stage1a-pyabsa-diagnostic.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  score:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download original official PyABSA predictions
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          mkdir -p reports/pyabsa
+          gh run download 41913712642 -R "$GH_REPO" -n stage1a-pyabsa-official-probe -D reports/pyabsa
+      - name: Score source-supported diagnostics only
+        run: python scripts/stage1a_pyabsa_diagnostic.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: stage1a-pyabsa-diagnostic
+          path: reports/pyabsa/diagnostic.json
