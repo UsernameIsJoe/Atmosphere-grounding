@@ -24,3 +24,13 @@ def test_parser_rejects_malformed_predictions():
         raise AssertionError("Did not reject malformed prediction")
     except ValueError:
         pass
+
+def test_tokenizer_punctuation_alignment_retains_original_text():
+    from stage1a_gts_joint_aste_probe import unique_span
+    text="The park is not quiet; sirens make the atmosphere stressful."
+    aligned=unique_span(text,"not quiet ;")
+    assert aligned["text"]=="not quiet;"
+    assert aligned["status"]=="normalized_punctuation"
+    assert text[aligned["start"]:aligned["end"]]=="not quiet;"
+    result=standardize(text,[["park","not quiet ;","positive"]])
+    assert result[0]["grounded"]
