@@ -1,4 +1,4 @@
-# Stage 1A / Component 1 — EXTRACTOR ENGINEERING LOCK (2026-11-04)
+> **November 4 refinement:** Parallel GLiNER+GTS inference was retained, but naive unmerged evidence-unit handling was replaced by a tested source-span reconciliation experiment. The official GLiNER JointIE constrained decoder was tested, but is **not** proven more semantically accurate than independent extraction. See [STAGE1A_COMPONENT1_RECONCILIATION_2026-11-04.md](STAGE1A_COMPONENT1_RECONCILIATION_2026-11-04.md). The original operational lock remains a historical implementation baseline, not a proof of extraction quality.\n\n# Stage 1A / Component 1 — EXTRACTOR ENGINEERING LOCK (2026-11-04)
 
 **Decision status:** Operational implementation selected and executed on frozen real data. **NOT** a scientific conclusion that the model has best independently measured precision, recall, or F1. This document supersedes any informal recommendation to use GLiNER + NuExtract as the first-component default.
 
