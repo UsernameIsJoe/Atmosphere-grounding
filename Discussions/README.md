@@ -62,3 +62,5 @@ GitHub renders Mermaid diagrams inside `.md` files. Open [`flowcharts.md`](flowc
 | [`stage1a-integrated-absa-nli-executed-audit-2026-11-04.md`](stage1a-integrated-absa-nli-executed-audit-2026-11-04.md) | **Integrated run verified**: 20 reviews, 408 NLI calls, source evidence retention and key remaining ABSA→NLI mechanism gap |
 
 | [`stage1a-absa-guided-source-nli-2026-11-04.md`](stage1a-absa-guided-source-nli-2026-11-04.md) | **ABSA-indexed source-clause NLI**: original offsets, contrastive decomposition, unmatched evidence fallback and whole-sentence comparison |
+
+| [`stage1a-absa-guided-nli-executed-results-2026-11-04.md`](stage1a-absa-guided-nli-executed-results-2026-11-04.md) | **Executed ABSA-indexed NLI audit**: 62 evidence units/emotion, only two label changes (one formatting artifact), and segmentation regression fix |
