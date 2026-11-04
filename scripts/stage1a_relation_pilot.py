@@ -80,7 +80,14 @@ def parse_triplets(raw):
     try:
         obj = json.loads(raw)
     except (ValueError, TypeError):
-        return [], "not_json"
+        # Model-card prompt also uses the aspect:opinion:sentiment format.
+        # Parse complete and polarity-labeled lines only.
+        triples=[]
+        for line in raw.splitlines():
+            parts=[x.strip() for x in line.strip().split(":")]
+            if len(parts)==3 and all(parts) and parts[2].lower() in ("positive","negative","neutral"):
+                triples.append(tuple(parts))
+        return triples, "parsed_colon_triplets" if triples else "unparsed_generation"
     if isinstance(obj, dict):
         obj = obj.get("triplets", obj.get("results"))
     if not isinstance(obj, list):
