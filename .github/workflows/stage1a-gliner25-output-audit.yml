@@ -1,0 +1,24 @@
+name: Stage 1A GLiNER2.5 qualitative output audit
+on:
+  push:
+    paths:
+      - scripts/stage1a_gliner25_output_audit.py
+      - .github/workflows/stage1a-gliner25-output-audit.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Get frozen GLiNER2.5 predictions
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          mkdir -p reports/gliner_audit
+          gh run download 41916389316 -R "$GH_REPO" -n stage1a-gliner25-urban-results -D reports/gliner_audit
+      - name: Print actual urban text extractions
+        run: python scripts/stage1a_gliner25_output_audit.py
