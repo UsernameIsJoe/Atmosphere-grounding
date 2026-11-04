@@ -168,6 +168,23 @@ def main():
         totals["independent_gliner_links"]+=len(cs["independent_gliner_relations_comparator"])
         totals["joint_links_matching_independent"]+=cs["independent_match_count"]
         totals["sentences_no_model_claim"]+=not bool(cs["claims"])
+        totals["unlinked_reported_experiences"]+=sum(x["type"]=="reported_experience" for x in cs["unlinked_observations"])
+        totals["linked_reported_experiences"]+=sum(x["kind"]=="evokes_experience" for x in cs["claims"])
+        n_j=sum("gliner_joint" in x["sources"] for x in cs["claims"])
+        # Conservation: every successful graph relation and extracted GTS pair
+        # is retained either as joint, GTS corroboration or unmatched candidate.
+        assert n_j==len(j["graph"].get("relations",[]))
+        n_gts=len(t["sentence"]["extraction"]["relations"])
+        n_overlap=sum(len(x["gts_corrob"]) for x in cs["claims"])
+        n_solo=sum(x["sources"]==["gts_aste"] for x in cs["claims"])
+        assert n_gts==n_overlap+n_solo+len(cs["unresolved_gts"])
+        assert cs["graph_feasible"] or cs["joint_error"] is not None
+        for relation in cs["claims"]:
+            for p in ("head","tail"):
+                v=relation[p]
+                if v.get("status")=="unresolved_source":continue
+                if isinstance(v.get("start"),int):
+                    assert row["sentence"][v["start"]:v["end"]]==v["text"]
         assert result["source"]["review"][row["source_start"]:row["source_end"]]==row["sentence"]
         assert result["handoff"]["verbatim_source_sentence"]==row["sentence"]
     OUT.mkdir(parents=True,exist_ok=True)
@@ -186,9 +203,10 @@ def main():
     }
     (OUT/"summary.json").write_text(json.dumps(report,indent=2))
     for r in outputs:
-        if r["source"]["row"]==55:
+        if r["source"]["row"] in (55,74,97,113,123,139,181,187):
             print("FOCUS",json.dumps({"text":r["source"]["sentence"],
                 "claims":r["component1"]["claims"],
-                "unlinked":r["component1"]["unlinked_observations"]},ensure_ascii=False))
+                "unlinked":r["component1"]["unlinked_observations"],
+                "prior_independent_links":r["component1"]["independent_gliner_relations_comparator"]},ensure_ascii=False))
     print("SUMMARY",json.dumps(report,indent=2))
 if __name__=="__main__":main()
