@@ -97,3 +97,19 @@ A full 50-review × all-60-hypothesis × multiple prompt-formats sweep is **not*
 Then do a small M2 *pair-level NLI* experiment using the same frozen NLI model/hypotheses. Finally design M3 fusion using source-faithful evidence and explicit controls. This isolates mechanism and avoids reproducing old ABSA-filter experiment with a new label.
 
 **Not in scope yet:** final nine-category ontology selection, definitive atmosphere scores, LoRA/fine tuning, text-to-visual co-training. These remain unchanged project stages.
+
+
+## Implementation checkpoint — M1 aspect–opinion pilot (November 4, 2026)
+
+**Code and GitHub Actions configured; model outcomes not yet inspected or confirmed.**
+
+- [`scripts/stage1a_relation_pilot.py`](../scripts/stage1a_relation_pilot.py): two deliberately **different task-appropriate relation extractors** on the same fixed 20 real reviews, including eight already-known challenging BART/ABSA rows, plus eight prespecified controlled cases.
+- [`.github/workflows/stage1a-relation-pilot.yml`](../.github/workflows/stage1a-relation-pilot.yml): parallel CPU jobs `dependency` and `aos_t5`; automatic push/dispatch trigger, unit tests, sample and offset integrity checks, incremental JSONL output and artifact upload even after failure.
+- **Pretrained model:** [`tafseer-nayeem/aspect-opinion-sentiment_AOS-triplet`](https://huggingface.co/tafseer-nayeem/aspect-opinion-sentiment_AOS-triplet), openly published model for generative aspect–opinion–sentiment triples (OpinioRAG, COLM 2025), **not** a validated atmosphere model. Inference uses the checkpoint model card's explicit task instructions, with deterministic decoding; parser accepts documented JSON arrays and strictly formed `aspect:opinion:sentiment` lines.
+- **Transparent baseline:** spaCy English dependency rules link adjectival and verbal opinions to noun subjects or modified heads. This is neither a learned ASTE checkpoint nor a validated syntactic parser for complex clauses, and lacks sentiment polarity by design.
+- **Source grounding:** exact aspect and opinion strings are matched to source text; generated text missing from the review, or ambiguous repeated occurrences, is **flagged as ungrounded** instead of treated as verified evidence. The rule baseline retains exact token offsets. Matching words is not proof of correct aspect–opinion attachment.
+- **Artifacts:** `manifest.json`, `review_cases.jsonl`, `controlled_cases.json`, `summary.json` for each method.
+- **Interpretation:** compare extracted relation structure, groundedness, empty-output cases, and failures on negation/sensory/implicit descriptions. Counts and literal match rates are **not precision or accuracy** against independent judgments. **No NLI or atmosphere labels** are computed in M1.
+- **Next gate:** inspect actual triplets, especially whether noise/safety modifiers are linked to the right attribute. Only after source-fidelity review design M2 with fixed NLI checkpoint and hypotheses.
+
+This pilot adds a **new representation** beyond the previously tested ABSA aspect-token/filter pathway; it does not reproduce the old 30-review ABSA-filtered NLI experiment.
