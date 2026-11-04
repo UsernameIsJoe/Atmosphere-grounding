@@ -37,3 +37,13 @@ These scores are intentionally strict about exact source spans and exact referen
 4. Success means verified **target/opinion relations and negation/scope** on the same examples, not more extracted spans. Only then integrate replacement ABSA into existing evidence ledger.
 
 Keep task scope fixed: **ABSA improvement only.** Relevance and emotion NLI remain unchanged.
+
+## Joint ASTE challenger prepared
+
+A **new checkpoint**, [`gauneg/bert-gts-absa-triple`](https://huggingface.co/gauneg/bert-gts-absa-triple), has now been wired to the SAME controlled eight-case benchmark. This is a joint Grid Tagging Scheme aspect/opinion/polarity model, unlike aspect-only DeBERTa and SetFit screens. It is pretrained on restaurant+laptop reviews; this is a transfer test, **not a pre-established architecture improvement**.
+
+- [Challenger script](../scripts/stage1a_gts_joint_aste_probe.py) uses the exact author-provided inference interface from the model card, outputs raw decoder predictions plus verified source spans.
+- [Unit tests](../tests/test_stage1a_gts_joint_aste_probe.py) verify interpretation, ambiguity handling, and malformed output.
+- [GitHub Actions workflow](../.github/workflows/stage1a-gts-joint-aste-challenger.yml) executes the checkpoint on frozen source sentences and scores **AOS vs dependency vs GTS** against the same references.
+- The checkpoint requires **author-provided custom Python modules** (`bert_opinion.py` and `post.py` downloaded from Hugging Face). This runs only in the isolated CI runner with read-only GitHub permissions. The external code/model version is **not pinned to a full immutable commit** in this first feasibility probe; review and pin it before any permanent production adoption.
+- **Challenger results not yet verified:** initial Actions run and model package compatibility need to pass before reporting performance. This is a test of capability; no emotional NLI or relevance changes have been made.
