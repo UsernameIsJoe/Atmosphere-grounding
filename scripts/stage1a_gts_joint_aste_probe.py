@@ -40,7 +40,7 @@ def unique_span(text, phrase):
     # GTS tokenizer sometimes inserts whitespace before source punctuation,
     # e.g. "not quiet ;" vs. "not quiet;". Canonicalize only that artifact.
     # The returned text and offsets ALWAYS refer to the literal original review.
-    canonical = re.sub(r"\\s+([,;:.!?])", r"\\1", phrase.strip())
+    canonical = re.sub(r"\s+([,;:.!?])", r"\1", phrase.strip())
     matches = [(m.start(), m.end()) for m in re.finditer(re.escape(canonical), text, re.I)]
     if len(matches) != 1:
         return {"text":phrase, "start":None, "end":None,
