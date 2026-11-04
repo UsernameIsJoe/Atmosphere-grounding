@@ -18,7 +18,7 @@ jobs:
           python-version: '3.11'
       - name: Install official inference dependencies
         run: |
-          python -m pip install 'torch>=2.6,<3' --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install 'torch>=2.6,<3' torchvision --index-url https://download.pytorch.org/whl/cpu
           python -m pip install 'transformers>=4.47,<5' accelerate sentencepiece protobuf qwen-vl-utils spacy
           python -m spacy download en_core_web_sm
       - name: Run predeclared real sentence pilot
