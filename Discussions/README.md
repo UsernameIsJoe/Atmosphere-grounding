@@ -29,6 +29,7 @@ This folder is **standalone documentation** for presentations and design history
 | [`stage1a-relation-pilot-results-2026-11-04.md`](stage1a-relation-pilot-results-2026-11-04.md) | **Executed M1 relation pilot**: two run audits, AOS-versus-dependency results, controlled failures and next integration gate |
 | [`stage1a-m2-structured-evidence-experiment-2026-11-04.md`](stage1a-m2-structured-evidence-experiment-2026-11-04.md) | **M2 experiment configured**: four ABSA/extraction sources, BART evidence-augmentation controls, matched 20-review pilot |
 | [`stage1a-m2-structured-evidence-results-2026-11-04.md`](stage1a-m2-structured-evidence-results-2026-11-04.md) | **Executed M2 study**: 480 NLI predictions, all extractor annotations, repeated-text control, structure-ablation limits and M2b recommendation |
+| [`stage1a-m2b-claim-level-nli-plan-2026-11-04.md`](stage1a-m2b-claim-level-nli-plan-2026-11-04.md) | **M2b controlled NLI experiment**: 18 logical cases, effective swaps, independent claim evidence, aggregation and repetition controls |
 | [`images/`](images/) | **PNG flowcharts** for PowerPoint/Keynote + `.mmd` sources |
 
 ## Slide images (PNG — exact files for upload to slides)
