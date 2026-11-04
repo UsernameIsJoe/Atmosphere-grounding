@@ -21,7 +21,7 @@ def opinion_core(value):
     reference relation matching. Original source spans remain untouched.
     """
     value = norm(value)
-    value = re.sub(r"^(?:not|never|no)\\s+", "", value)
+    value = re.sub(r"^(?:not|never|no)\s+", "", value)
     return value.rstrip(" ,;:.!?").strip()
 
 
