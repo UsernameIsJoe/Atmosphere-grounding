@@ -12,7 +12,7 @@
 ## Evidence and matched assessment
 - Frozen original text: **20 actual reviews, 56 identical source sentence spans**, reconciled by review row, sentence index, full sentence text and original offset.
 - Comparison completed: https://github.com/UsernameIsJoe/Atmosphere-grounding/actions/runs/41920533478
-- Operational contract and ablation: https://github.com/UsernameIsJoe/Atmosphere-grounding/actions/runs/41920839095
+- Operational contract and ablation: https://github.com/UsernameIsJoe/Atmosphere-grounding/actions/runs/41921120203
 
 | Candidate | Sentence with any annotations | Relationship candidates | Mechanically source-exact links | Known major limitation |
 |---|---:|---:|---:|---|
@@ -46,10 +46,10 @@ This **engineering lock** is the specific model-role choice for subsequent Stage
 ## Executable contract
 - Implementation: `scripts/stage1a_component1_contract.py`.
 - Workflow: `.github/workflows/stage1a-component1-contract.yml`.
-- Verified artifact `stage1a-component1-contract`, with `component1_evidence.jsonl` and `summary.json`.
+- Verified artifact `stage1a-component1-contract`, with `component1_evidence.jsonl` and `summary.json`. The final handoff explicitly includes candidate evidence units (`handoff.relevance_candidates`): observed entity/quality spans and directed relationship candidates retain their source text and offsets; unannotated sentences receive a full-source fallback unit. No relevance result is invented.
 - Source integrity asserts all 56 sentence offsets against the original `data/processed/reviews.jsonl`; re-resolved spans require unique original-source occurrence; unresolved multiple-occurrence cases stay recorded rather than silently bound.
 - Relevance input and NLI fallback are both **verbatim original sentence text**; no emotion label, relevance flag or NLI prediction is generated here.
-- Observed audit: GLiNER annotated 46/56; GTS has links in 22/56; union annotated 48/56; GTS adds 2 sentences to annotated coverage and 11 sentences to **relation-candidate coverage**; 8 remain unannotated but preserved. Two entity spans and two links cannot be uniquely positioned by this replay's phrase resolver; all are kept explicitly unresolved, not treated as validated spans.
+- Observed audit: GLiNER annotated 46/56; GTS has links in 22/56; union annotated 48/56; GTS adds 2 sentences to annotated coverage and 11 sentences to **relation-candidate coverage**; 8 remain unannotated but preserved. The final successful handoff created 181 candidate or fallback evidence units (112 entity/quality span records + 34 GLiNER relation candidates + 27 GTS relation candidates + 8 unannotated source fallbacks). These are **not 181 correct or unique claims**. Two entity spans and two links cannot be uniquely positioned by this replay's phrase resolver; all are kept explicitly unresolved, not treated as validated spans.
 
 ## Hard limits and next verification
 - This run does not prove the extracted links are semantically correct, nor that passing these annotations to relevance and NLI improves the emotion judgments. The existing Stage 1A integrated evidence ledger (run 41899410822) replayed NLI results over unchanged source sentences, so it **cannot** serve as a test of ABSA causal impact.
