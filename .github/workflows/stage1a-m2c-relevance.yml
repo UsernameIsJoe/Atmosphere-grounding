@@ -1,0 +1,59 @@
+name: Stage 1A M2c relevance direction gate
+
+on:
+  push:
+    paths:
+      - '.github/workflows/stage1a-m2c-relevance.yml'
+      - 'scripts/stage1a_m2c_relevance_gate.py'
+      - 'tests/test_stage1a_m2c_relevance_gate.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  relevance-check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Compile and test BEFORE installing BART
+        run: |
+          python -m py_compile scripts/stage1a_m2c_relevance_gate.py tests/test_stage1a_m2c_relevance_gate.py
+          python -m pip install 'pytest>=8,<10'
+          python -m pytest -q tests/test_stage1a_m2c_relevance_gate.py
+      - name: Install BART NLI
+        run: |
+          python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install 'transformers>=4.46,<5'
+      - name: Run bounded relevance screening
+        run: |
+          python -u scripts/stage1a_m2c_relevance_gate.py --output reports/stage1a_m2c_relevance
+      - name: Check outputs and threshold integrity
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=Path('reports/stage1a_m2c_relevance')
+          s=json.loads((d/'summary.json').read_text())
+          rows=[json.loads(x) for x in (d/'results.jsonl').read_text().splitlines() if x.strip()]
+          assert s['n_cases']==20
+          assert s['n_emotion_pairs']==len(rows)==60
+          assert s['n_nli_inferences']==120
+          assert s['analysis']['threshold']==.5
+          assert len({r['id'] for r in rows})==20
+          assert set(r['expected'] for r in rows)=={'D','R','N'}
+          print('Verified 120 inferences over 60 authored case-emotion pairs')
+          PY
+      - name: Upload artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: stage1a-m2c-relevance
+          path: reports/stage1a_m2c_relevance/
+          if-no-files-found: warn
