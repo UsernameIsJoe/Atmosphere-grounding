@@ -25,6 +25,7 @@ This folder is **standalone documentation** for presentations and design history
 | [`stage1a-nli-checkpoint-screening-results-2026-11-03.md`](stage1a-nli-checkpoint-screening-results-2026-11-03.md) | **Executed matched-model screening**: BART, DeBERTa, ModernBERT; 50 reviews, consistency, speed, agreements, and binary-output caveats |
 | [`stage1a-absa-next-experiment-plan-2026-11-03.md`](stage1a-absa-next-experiment-plan-2026-11-03.md) | **Next ABSA research**: compare location evidence extraction independently, controlled cases, then context-preserving NLI integration |
 | [`stage1a-absa-extraction-screening-results-2026-11-03.md`](stage1a-absa-extraction-screening-results-2026-11-03.md) | **Completed ABSA extraction screening**: three models/baselines, 50 reviews, evidence coverage, controlled probes and tomorrow's integration handoff |
+| [`stage1a-absa-nli-integration-literature-and-design-2026-11-04.md`](stage1a-absa-nli-integration-literature-and-design-2026-11-04.md) | **Next-phase research**: ASTE aspect–opinion relations, aspect-conditioned inference, evidence-set fusion, experimental controls and staged implementation plan |
 | [`images/`](images/) | **PNG flowcharts** for PowerPoint/Keynote + `.mmd` sources |
 
 ## Slide images (PNG — exact files for upload to slides)
