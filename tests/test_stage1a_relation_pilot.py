@@ -37,3 +37,8 @@ def test_prespecified_pilot_consistency():
 
 def test_fixed_control_suite():
     assert len(SYNTHETIC)==8
+
+def test_model_card_colon_output():
+    triples,status=parse_triplets('garden:beautiful:positive\ntraffic:loud:negative')
+    assert status=='parsed_colon_triplets'
+    assert triples==[('garden','beautiful','positive'),('traffic','loud','negative')]
