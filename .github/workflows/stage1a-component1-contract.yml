@@ -1,0 +1,30 @@
+name: Stage 1A Component 1 operational ablation and contract
+on:
+  push:
+    paths:
+      - scripts/stage1a_component1_contract.py
+      - .github/workflows/stage1a-component1-contract.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch matched frozen predictions
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          mkdir -p reports/component1_lock_audit
+          gh run download 41920533478 -R "$GH_REPO" -n stage1a-component1-matched-audit -D reports/component1_lock_audit
+      - name: Produce fully source-verifiable GLiNER and GTS handoff records
+        run: python scripts/stage1a_component1_contract.py
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: stage1a-component1-contract
+          path: reports/component1_contract/
