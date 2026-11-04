@@ -1,0 +1,28 @@
+name: Stage 1A PyABSA raw prediction audit
+on:
+  push:
+    paths:
+      - scripts/stage1a_pyabsa_raw_audit.py
+      - .github/workflows/stage1a-pyabsa-raw-audit.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download frozen official PyABSA outputs
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          mkdir -p reports/pyabsa
+          gh run download 41913712642 -R "$GH_REPO" -n stage1a-pyabsa-official-probe -D reports/pyabsa
+      - name: Inspect raw outcomes and errors
+        run: python scripts/stage1a_pyabsa_raw_audit.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: stage1a-pyabsa-raw-audit
+          path: reports/pyabsa/raw_audit.json
