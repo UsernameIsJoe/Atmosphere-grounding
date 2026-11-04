@@ -1,4 +1,4 @@
-# Stage 1A Component 1 — Parallel Extraction + Reconciliation, 2026-11-04
+> **Follow-up formulation test (2026-11-04):** Same checkpoint tested on 56 original sentences with claim-oriented schema and whole-review context. Neither improved the key environment→experience linkage; the new schema lost some useful descriptions. **Retain the existing typed-graph + GTS reconciled baseline provisionally**, not as a validated semantic winner. Results: [STAGE1A_COMPONENT1_FORMULATION_TEST_2026-11-04.md](STAGE1A_COMPONENT1_FORMULATION_TEST_2026-11-04.md).\n\n# Stage 1A Component 1 — Parallel Extraction + Reconciliation, 2026-11-04
 
 **Research architecture:** Component 1 = evidence extraction; Component 2 = emotion-specific relevance; Component 3 = NLI direction. **Only Component 1 is changed here.** Component 1 does not map text onto the nine emotion categories or assert emotion support, contradiction, or intensity.
 
