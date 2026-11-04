@@ -40,3 +40,7 @@ The actual GTS raw decoder output on the controlled example “The park is not q
 GTS demonstrates **some model capability and a useful improvement in selectivity** over the existing dependency baseline. But its **extremely low coverage** on these diagnostic observations means it cannot replace existing extraction as the sole component. Neither AOS nor GTS is validated as the best place-review ASTE model. The model and matcher must be judged separately.
 
 **Next bounded step:** Fix GTS source-alignment punctuation handling, then run the same frozen controls plus a held-out subset of real reviews with independently reviewed aspect–opinion relationships. Keep relevance and emotion NLI unchanged. Do not declare a winner or aggregate with NLI based on these eight controls alone.
+
+## Post-audit correction (not yet reflected in run 41903249222)
+
+The strict benchmark has now been corrected to distinguish (a) **opinion-core relation correctness** from (b) **explicit negation preservation**. In the challenger adapter, only tokenizer-inserted spacing before punctuation is normalized **for alignment**; original source text and offsets remain authoritative. These code and regression test changes were pushed **after** the completed run. Therefore **all numeric results above remain historical pre-correction scores**, and an updated GitHub Actions run must be examined before citing corrected GTS scores. We are not quietly replacing previously reported numbers or claiming new performance without a rerun.
