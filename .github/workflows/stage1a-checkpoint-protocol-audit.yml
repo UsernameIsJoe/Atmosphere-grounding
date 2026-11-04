@@ -5,6 +5,9 @@ on:
       - scripts/stage1a_checkpoint_protocol_audit.py
       - .github/workflows/stage1a-checkpoint-protocol-audit.yml
   workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
 jobs:
   checkpoint-card:
     runs-on: ubuntu-latest
