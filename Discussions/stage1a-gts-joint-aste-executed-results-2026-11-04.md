@@ -62,3 +62,26 @@ The strict benchmark has now been corrected to distinguish (a) **opinion-core re
 - `scripts/stage1a_absa_relation_benchmark.py`: use `r"^(?:not|never|no)\\s+"` to compare opinion core separately from negation-scope preservation.
 
 The corrected regular-expression behavior was locally checked with the actual `not quiet ;` and `not quiet;` strings. **Full GitHub Actions rerun has not yet been verified** as of this note. Do not attribute the two preflight failures to model quality or claim changed model metrics until a new successful workflow produces corrected artifacts.
+
+## Verified final corrected runs — 2026-11-04
+
+Both user-supplied corrected runs **completed successfully** on commit `698af77049dc5145656661b9737b25b4f95cf73d`:
+- [41904582935 — ABSA relation quality benchmark](https://github.com/UsernameIsJoe/Atmosphere-grounding/actions/runs/41904582935), artifact `13360137118`.
+- [41904582932 — joint ASTE challenger](https://github.com/UsernameIsJoe/Atmosphere-grounding/actions/runs/41904582932), artifact `13359982871`.
+
+**Final post-correction frozen controlled diagnostic results** (these supersede historical GTS scores **above**):
+
+| Indicator | AOS | spaCy dependency rules | GTS-BERT joint ASTE |
+|---|---:|---:|---:|
+| Correct exact opinion-core pairs | 4/11 | 7/11 | 4/11 |
+| Extra incorrect pairs | 2 | 5 | 0 |
+| Missed pairs | 7 | 4 | 7 |
+| Diagnostic pair precision | 66.7% | 58.3% | 100% |
+| Diagnostic pair recall | 36.4% | 63.6% | 36.4% |
+| Diagnostic pair F1 | 47.1% | 60.9% | 53.3% |
+| Explicit negation captured in source opinion span | 0/1 | 0/1 | 1/1 |
+| Unverified source spans | 0 | 0 | 0 |
+
+The updated GTS source-alignment correctly maps raw `["park","not quiet ;","positive"]` to original source `park → not quiet;`, with the *original* span preserved (`12:22`). This earns **one correct opinion-core target pair** and **one explicit negation-phrase preservation**, but the model's **positive sentiment polarity** remains an unresolved interpretation issue; merely including `not` does not establish a semantically correct polarity tag. GTS still misses `atmosphere → stressful` from the same controlled sentence.
+
+No new real-review evaluation has occurred in these two runs: both use the same eight researcher-authored controlled cases (11 explicit pairs). **Scientific model selection remains open.** The sensible next test is *actual-source relation fidelity on a fixed independently annotated sample of place reviews*, with all three models compared against the same reference and ABSA kept isolated from relevance/NLI.
