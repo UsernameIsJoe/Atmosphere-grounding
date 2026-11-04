@@ -41,3 +41,17 @@ def test_incomplete_case_sets_fail():
         raise AssertionError("Expected failure")
     except ValueError:
         pass
+
+def test_negation_core_and_scope_are_separate_metrics():
+    from stage1a_absa_relation_benchmark import opinion_core
+    assert opinion_core("not quiet;")=="quiet"
+    refs={"cases":[{"id":"neg","pairs":[["park","quiet"]],
+                    "negated":[["park","quiet"]]}]}
+    text="The park is not quiet;"
+    example={"id":"neg","text":text,"extraction":{"relations":[{
+        "grounded":True,"aspect":{"text":"park","start":4,"end":8},
+        "opinion":{"text":"not quiet;","start":12,"end":22}
+    }]}}
+    x=score(refs,{"neg":example})
+    assert x["correct"]==1
+    assert x["negated_opinion_preserved"]==1
