@@ -1,0 +1,223 @@
+{
+  "version": "real_review_target_v1",
+  "status": "assistant-authored partial reference targets; not independent or exhaustive; target recall only, do not calculate precision",
+  "cases": [
+    {
+      "row": 55,
+      "pairs": [
+        [
+          "park",
+          "charming"
+        ],
+        [
+          "park",
+          "cozy"
+        ]
+      ]
+    },
+    {
+      "row": 74,
+      "pairs": [
+        [
+          "parks",
+          "best"
+        ]
+      ]
+    },
+    {
+      "row": 97,
+      "pairs": [
+        [
+          "spot",
+          "neat"
+        ]
+      ]
+    },
+    {
+      "row": 113,
+      "pairs": [
+        [
+          "place",
+          "Inspiring"
+        ],
+        [
+          "location",
+          "great"
+        ]
+      ]
+    },
+    {
+      "row": 123,
+      "pairs": [
+        [
+          "park",
+          "Cute little"
+        ]
+      ]
+    },
+    {
+      "row": 139,
+      "pairs": [
+        [
+          "colage",
+          "gooooooooood"
+        ]
+      ]
+    },
+    {
+      "row": 181,
+      "pairs": [
+        [
+          "place",
+          "Best"
+        ]
+      ]
+    },
+    {
+      "row": 187,
+      "pairs": [
+        [
+          "reception",
+          "informative"
+        ]
+      ]
+    },
+    {
+      "row": 2,
+      "pairs": [
+        [
+          "park",
+          "nice"
+        ]
+      ]
+    },
+    {
+      "row": 7,
+      "pairs": [
+        [
+          "spot",
+          "Great"
+        ],
+        [
+          "hoops",
+          "good"
+        ]
+      ]
+    },
+    {
+      "row": 12,
+      "pairs": [
+        [
+          "park",
+          "beautiful"
+        ],
+        [
+          "playground",
+          "nice"
+        ]
+      ]
+    },
+    {
+      "row": 19,
+      "pairs": [
+        [
+          "parking",
+          "nightmare"
+        ]
+      ]
+    },
+    {
+      "row": 21,
+      "pairs": [
+        [
+          "place",
+          "Great"
+        ]
+      ]
+    },
+    {
+      "row": 26,
+      "pairs": [
+        [
+          "bike parking",
+          "adequate"
+        ]
+      ],
+      "note": "Expected negative quantity context ('0 adequate'); lexical pair hit does NOT establish correct semantic polarity"
+    },
+    {
+      "row": 33,
+      "pairs": [
+        [
+          "fixtures",
+          "pointless"
+        ],
+        [
+          "fixtures",
+          "dangerous"
+        ],
+        [
+          "field",
+          "great"
+        ]
+      ]
+    },
+    {
+      "row": 38,
+      "pairs": [
+        [
+          "place",
+          "Great"
+        ]
+      ]
+    },
+    {
+      "row": 42,
+      "pairs": [
+        [
+          "park",
+          "special"
+        ]
+      ]
+    },
+    {
+      "row": 45,
+      "pairs": [
+        [
+          "spot",
+          "favorite"
+        ]
+      ]
+    },
+    {
+      "row": 53,
+      "pairs": [
+        [
+          "exhibit",
+          "beautiful"
+        ],
+        [
+          "staff",
+          "friendly"
+        ],
+        [
+          "staff",
+          "helpful"
+        ]
+      ]
+    },
+    {
+      "row": 57,
+      "pairs": [
+        [
+          "spot",
+          "cute"
+        ],
+        [
+          "plants",
+          "beautiful"
+        ]
+      ]
+    }
+  ]
+}
