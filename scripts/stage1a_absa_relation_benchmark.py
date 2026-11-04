@@ -85,6 +85,7 @@ def main():
     parser.add_argument("--references", required=True)
     parser.add_argument("--aos", required=True)
     parser.add_argument("--dependency", required=True)
+    parser.add_argument("--gts", default=None, help="Optional joint GTS ASTE challenger controlled output")
     parser.add_argument("--output", required=True)
     args = parser.parse_args()
     refs = json.loads(Path(args.references).read_text(encoding="utf-8"))
@@ -92,6 +93,8 @@ def main():
         "aos_t5": score(refs, records(args.aos)),
         "dependency_rules": score(refs, records(args.dependency)),
     }
+    if args.gts:
+        scored["gts_bert_joint_aste"] = score(refs, records(args.gts))
     out = Path(args.output)
     out.mkdir(parents=True, exist_ok=True)
     report = {
