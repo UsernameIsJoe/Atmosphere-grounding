@@ -60,3 +60,13 @@ def test_nli_scoring_compares_original_sentence_without_new_labels():
     assert out[0]["summary"]["refined_units"]==2
     assert out[0]["summary"]["absa_indexed"]==2
     assert summarize(out)["by_emotion"]["calm"]["units"]==2
+
+
+def test_no_punctuation_only_unit_after_parenthetical_split():
+    # Reproduces the real row 97 case from completed run 41893335588.
+    text="), but it is still a neat spot to visit."
+    sentence={"text":text,"start":223,"end":223+len(text)}
+    pieces=split_original(sentence)
+    assert len(pieces)==1
+    assert pieces[0]["text"]==text
+    assert all(any(ch.isalnum() for ch in p["text"]) for p in pieces)
