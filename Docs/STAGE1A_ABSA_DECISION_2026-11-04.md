@@ -31,8 +31,14 @@ Stage 1A extracts source-supported aspect/opinion/polarity evidence from real pl
 6. Use dependency rules as a transparent baseline rather than presuming neural superiority.
 7. Do not advance any model to production until an independently adjudicated complete gold sample of real reviews establishes actual precision, recall/F1, and task-relevant evidence recall. Avoid creating a circular gold set from model predictions.
 
+## Interim candidate disposition
+- GTS-BERT: keep as neural candidate; usage validated on official example but urban transfer quality remains unmeasured.
+- Dependency rules: keep as transparent high-recovery baseline, not as a validated semantic extractor.
+- AOS-T5: corrected parser in repository, but still shows low exact author-example reproduction and a polarity failure; **do not select as the sole Stage 1A extractor** without further domain validation.
+- No model should be called finalized for production on these data.
+
 ## Still open
-- Verify AOS author-card behavior on its standard examples using safe supported PyTorch checkpoint loading.
+- **Completed:** AOS author-card examples with PyTorch >=2.6: 4/10 author-listed triplets reproduced by strict normalized text/polarity match across six sentences. Predicted outputs often contain useful close variants, but include missing triplets and an incorrect positive polarity for 'slow' elevator. This is NOT independent benchmark accuracy. GTS reproduced 2/2 example triplets on its author's single model-card sentence. Successful run: https://github.com/UsernameIsJoe/Atmosphere-grounding/actions/runs/41911920001
 - Independently annotate all relevant aspects/opinions on a sufficiently sampled set of actual review sentences, including negatives and complex cases, with adjudication of span variants.
 - Calculate exact- and overlap-matched triplet precision/recall/F1 and atmosphere-relevant evidence coverage; report sample uncertainty and failure types.
 - The three-component pipeline remains a research hypothesis; current evidence is insufficient to lock the ABSA implementation as accurate enough for downstream use.
