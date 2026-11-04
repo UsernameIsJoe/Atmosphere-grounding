@@ -1,0 +1,78 @@
+name: Stage 1A joint ASTE model challenger
+
+on:
+  push:
+    paths:
+      - '.github/workflows/stage1a-gts-joint-aste-challenger.yml'
+      - 'scripts/stage1a_gts_joint_aste_probe.py'
+      - 'tests/test_stage1a_gts_joint_aste_probe.py'
+      - 'scripts/stage1a_absa_relation_benchmark.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  joint-aste-challenger:
+    runs-on: ubuntu-latest
+    timeout-minutes: 140
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Compile and test extractors and metrics BEFORE checkpoint loading
+        run: |
+          python -m py_compile scripts/stage1a_gts_joint_aste_probe.py scripts/stage1a_absa_relation_benchmark.py
+          python -m pip install 'pytest>=8,<10'
+          python -m pytest -q tests/test_stage1a_gts_joint_aste_probe.py tests/test_stage1a_absa_relation_benchmark.py
+      - name: Download frozen reference models and controlled inputs
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          mkdir -p reports/stage1a_gts_inputs/{aos_t5,dependency}
+          gh run download 41861834607 -R "$GH_REPO" -n stage1a-relation-pilot-aos_t5 -D reports/stage1a_gts_inputs/aos_t5
+          gh run download 41861834607 -R "$GH_REPO" -n stage1a-relation-pilot-dependency -D reports/stage1a_gts_inputs/dependency
+      - name: Install GTS checkpoint and author-provided decoder dependencies
+        run: |
+          python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install 'transformers>=4.41,<5' 'huggingface_hub>=0.25,<1' numpy scikit-learn sentencepiece
+      - name: Run joint GTS aspect-opinion-polarity extractor on 8 fixed cases
+        run: |
+          python -u scripts/stage1a_gts_joint_aste_probe.py \
+            --input reports/stage1a_gts_inputs/aos_t5/controlled_cases.json \
+            --output reports/stage1a_gts_joint_aste/controlled_cases.json
+      - name: Score three extractors on identical references
+        run: |
+          python scripts/stage1a_absa_relation_benchmark.py \
+            --references data/evaluation/stage1a_absa_relation_controls_v1.json \
+            --aos reports/stage1a_gts_inputs/aos_t5/controlled_cases.json \
+            --dependency reports/stage1a_gts_inputs/dependency/controlled_cases.json \
+            --gts reports/stage1a_gts_joint_aste/controlled_cases.json \
+            --output reports/stage1a_gts_joint_aste/benchmark
+      - name: Assert same eight source sentences and complete scoring
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=Path('reports/stage1a_gts_joint_aste')
+          results=json.loads((d/'controlled_cases.json').read_text())
+          scores=json.loads((d/'benchmark'/'score.json').read_text())
+          assert len(results)==8
+          assert len({r['id'] for r in results})==8
+          for m,result in scores['models'].items():
+              assert len(result['cases'])==8,(m,len(result['cases']))
+              assert result['correct']+result['missed']==11
+          print('Joint ASTE controlled benchmark validated')
+          PY
+      - name: Archive full model output and exact per-case errors
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: stage1a-gts-joint-aste-challenger
+          path: reports/stage1a_gts_joint_aste/
+          if-no-files-found: warn
