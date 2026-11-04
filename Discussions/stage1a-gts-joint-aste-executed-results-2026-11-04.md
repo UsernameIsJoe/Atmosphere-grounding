@@ -44,3 +44,21 @@ GTS demonstrates **some model capability and a useful improvement in selectivity
 ## Post-audit correction (not yet reflected in run 41903249222)
 
 The strict benchmark has now been corrected to distinguish (a) **opinion-core relation correctness** from (b) **explicit negation preservation**. In the challenger adapter, only tokenizer-inserted spacing before punctuation is normalized **for alignment**; original source text and offsets remain authoritative. These code and regression test changes were pushed **after** the completed run. Therefore **all numeric results above remain historical pre-correction scores**, and an updated GitHub Actions run must be examined before citing corrected GTS scores. We are not quietly replacing previously reported numbers or claiming new performance without a rerun.
+
+## Five-run execution audit and preflight bugfix
+
+**Checked:** 2026-11-04. All five user-linked runs are confirmed by GitHub run/job metadata and failed job logs.
+
+| Run | Workflow | Conclusion | Meaning |
+|---|---|---|---|
+| [41903964101](https://github.com/UsernameIsJoe/Atmosphere-grounding/actions/runs/41903964101) | GTS ASTE | success | Earlier checkpoint benchmark, before negation scoring correction |
+| [41904033212](https://github.com/UsernameIsJoe/Atmosphere-grounding/actions/runs/41904033212) | GTS ASTE | success | Historical numeric benchmark; GTS raw negation phrase still unaligned |
+| [41904033266](https://github.com/UsernameIsJoe/Atmosphere-grounding/actions/runs/41904033266) | AOS / dependency benchmark | success | Historical baseline unchanged |
+| [41904069381](https://github.com/UsernameIsJoe/Atmosphere-grounding/actions/runs/41904069381) | GTS ASTE | failure | Unit test failed *before checkpoint execution*: double-escaped regex failed to align `not quiet ;` to `not quiet;` |
+| [41904078694](https://github.com/UsernameIsJoe/Atmosphere-grounding/actions/runs/41904078694) | AOS / dependency benchmark | failure | Unit test failed *before benchmark*: double-escaped regex failed to remove negator in `not quiet;` |
+
+**Root cause:** Both tests exposed an erroneous literal backslash in Python raw regular expressions. The two concrete fixes are committed on master:
+- `scripts/stage1a_gts_joint_aste_probe.py`: use `r"\\s+([,;:.!?])"` and replacement `r"\\1"` to align tokenizer-added whitespace before punctuation, preserving source offsets.
+- `scripts/stage1a_absa_relation_benchmark.py`: use `r"^(?:not|never|no)\\s+"` to compare opinion core separately from negation-scope preservation.
+
+The corrected regular-expression behavior was locally checked with the actual `not quiet ;` and `not quiet;` strings. **Full GitHub Actions rerun has not yet been verified** as of this note. Do not attribute the two preflight failures to model quality or claim changed model metrics until a new successful workflow produces corrected artifacts.
