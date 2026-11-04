@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """ABSA-guided source-clause NLI, using the successful integrated pilot artifact.
 
-No paraphrase, no hard filtering. ABSA affects which ORIGINAL clause receives
-NLI, and supplies source attribution; blind segmentation is a matched control.
+No paraphrase or hard filtering. ABSA indexes which ORIGINAL clause is
+attributed to an extracted target; all other clauses remain as safeguards.
+Whole-sentence NLI is the pre-existing matched comparator.
 """
 import argparse
 import collections
@@ -12,7 +13,7 @@ from pathlib import Path
 
 MODEL = "facebook/bart-large-mnli"
 # Only contrastive clause boundaries with a distinct conjunction or semicolon.
-BOUNDARY = re.compile(r";|,?\\s+but\\s+|,?\\s+however,?\\s+|,?\\s+whereas\\s+", re.I)
+BOUNDARY = re.compile(r";|,?\s+but\s+|,?\s+however,?\s+|,?\s+whereas\s+", re.I)
 
 def jsonl(path):
     return [json.loads(x) for x in Path(path).read_text(encoding="utf-8").splitlines() if x.strip()]
