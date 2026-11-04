@@ -1,0 +1,77 @@
+name: Stage 1A M2 structured ABSA NLI screening
+
+on:
+  push:
+    paths:
+      - '.github/workflows/stage1a-m2-structured-nli.yml'
+      - 'scripts/stage1a_m2_structured_nli.py'
+      - 'tests/test_stage1a_m2_structured_nli.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  structured-nli:
+    runs-on: ubuntu-latest
+    timeout-minutes: 160
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Syntax and deterministic unit tests
+        run: |
+          python -m py_compile scripts/stage1a_m2_structured_nli.py
+          python -m pip install 'pytest>=8,<10'
+          python -m pytest -q tests/test_stage1a_m2_structured_nli.py
+      - name: Retrieve previous unchanged extraction outputs
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          mkdir -p reports/m2_inputs/{aos_t5,dependency,deberta_absa,setfit_absa}
+          gh run download 41861834607 -R "$GH_REPO" -n stage1a-relation-pilot-aos_t5 -D reports/m2_inputs/aos_t5
+          gh run download 41861834607 -R "$GH_REPO" -n stage1a-relation-pilot-dependency -D reports/m2_inputs/dependency
+          gh run download 41728835398 -R "$GH_REPO" -n stage1a-absa-screen-deberta_absa -D reports/m2_inputs/deberta_absa
+          gh run download 41728835398 -R "$GH_REPO" -n stage1a-absa-screen-setfit_absa -D reports/m2_inputs/setfit_absa
+          python - <<'PY'
+          import sys
+          sys.path.insert(0,'scripts')
+          from stage1a_m2_structured_nli import read_sources
+          records=read_sources('reports/m2_inputs')
+          assert len(records['aos_t5'])==20
+          print('Loaded 20 exactly aligned reviews across 4 extraction methods.')
+          PY
+      - name: Install BART-MNLI dependencies
+        run: |
+          python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install 'transformers>=4.46,<5'
+      - name: Execute controlled multi-source M2 inference
+        run: |
+          python -u scripts/stage1a_m2_structured_nli.py --inputs reports/m2_inputs --output reports/stage1a_m2_structured
+      - name: Verify inference completeness
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          folder=Path('reports/stage1a_m2_structured')
+          summary=json.loads((folder/'summary.json').read_text())
+          rows=[json.loads(x) for x in (folder/'review_cases.jsonl').read_text().splitlines() if x.strip()]
+          assert summary['n_reviews']==20
+          assert summary['n_review_emotion_pairs']==60==len(rows)
+          assert summary['n_inferences']==480
+          assert len({r['row'] for r in rows})==20
+          assert all(len(r['outputs'])==8 for r in rows)
+          print('Verified',summary['n_inferences'],'NLI inferences')
+          PY
+      - name: Upload results even on failure
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: stage1a-m2-structured-nli
+          path: reports/stage1a_m2_structured/
+          if-no-files-found: warn
