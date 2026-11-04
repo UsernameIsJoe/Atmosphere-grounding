@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 """Stage 1A checkpoint protocol audit. Model-card examples are NOT an independent benchmark."""
-import argparse, collections, json, pathlib, sys
+import argparse, collections, copy, json, pathlib, re, sys
 ROOT=pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0,str(ROOT/"scripts"))
 from stage1a_absa_official_sentence_inference import build_extractor
-from stage1a_relation_pilot import parse_triplets
+from stage1a_relation_pilot import parse_triplets, make_relation
 from stage1a_absa_real_review_comparison import load_jsonl, compare
 
 AOS_CASES=[
@@ -38,6 +38,18 @@ def run_card(method):
  return dict(method=method,source="examples from the checkpoint's own model card; not a held-out benchmark",cases=out,
              reference_recovered=sum(x["reference_triplets_recovered"] for x in out),
              reference_total=sum(x["n_reference_triplets"] for x in out))
+def recover_comma_triplets(raw):
+ """Diagnostic second pass on author-format comma-separated triplets, without inventing spans."""
+ if not isinstance(raw,str):return []
+ chunks=re.split(r"(?<=positive),\\s*|(?<=negative),\\s*|(?<=neutral),\\s*",raw,flags=re.I)
+ triples=[]
+ for chunk in chunks:
+  fields=[v.strip() for v in chunk.split(":")]
+  if len(fields)!=3 or fields[2].lower() not in ("positive","negative","neutral") or not all(fields):
+   return []
+  triples.append(fields)
+ return triples
+
 def analyze_existing(root):
  reference=json.loads((ROOT/"data/evaluation/stage1a_absa_real_review_targets_v1.json").read_text())
  rows={name:load_jsonl(root/name/"review_cases.jsonl") for name in ("aos_t5","gts_joint_aste","dependency")}
@@ -49,6 +61,33 @@ def analyze_existing(root):
   raw_unparsed=[dict(row=c["row"],sentence=s["text"],raw=s["extraction"].get("raw_generation")) for c in cases for s in c["sentences"] if s["extraction"]["parse_status"]=="unparsed_generation"]
   rels=[r for c in cases for r in c["extraction"]["relations"]]
   implicit=sum(not r.get("grounded",False) for r in rels)
+  rescued_sentence_count=0
+  rescued_relations=[]
+  if name=="aos_t5":
+   corrected=copy.deepcopy(cases)
+   for c in corrected:
+    c["extraction"]["relations"]=[]
+    for sent in c["sentences"]:
+     pred=sent["extraction"]
+     if pred["parse_status"]=="unparsed_generation":
+      triples=recover_comma_triplets(pred.get("raw_generation"))
+      if triples:
+       rescued_sentence_count+=1
+       for a,o,p in triples:
+        r=make_relation(sent["text"],a,o,p,"aos_t5_comma_rescue",raw={"generation":pred["raw_generation"]})
+        for part in ("aspect","opinion"):
+         if isinstance(r[part].get("start"),int):
+          r[part]["start"]+=sent["start"];r[part]["end"]+=sent["start"]
+        rescued_relations.append(r)
+        pred["relations"].append(r)
+       pred["parse_status"]="comma_triplets_recovered"
+     c["extraction"]["relations"].extend(pred["relations"])
+   amended=compare(reference,{"aos_t5":corrected})["aos_t5"]
+   report["aos_parser_rescue"]={"rescued_sentences":rescued_sentence_count,"rescued_triplets":len(rescued_relations),
+    "rescued_source_grounded_triplets":sum(r.get("grounded",False) for r in rescued_relations),
+    "partial_reference_before":scored[name]["targets_recovered"],"partial_reference_after":amended["targets_recovered"],
+    "note":"Post-hoc parser rescue is not a fresh model run or semantic correctness assessment."}
+   (root/"aos_parser_rescued.jsonl").write_text("".join(json.dumps(c,ensure_ascii=False)+"\\n" for c in corrected))
   report["models"][name]=dict(status_counts=dict(status),unparsed_examples=raw_unparsed,unverified_relations=implicit,
    source_grounded_relations=sum(r.get("grounded",False) for r in rels),
    partial_reference_recovered=scored[name]["targets_recovered"],partial_reference_total=scored[name]["reference_targets"])
