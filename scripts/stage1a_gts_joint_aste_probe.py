@@ -7,6 +7,7 @@ All raw predictions and source-alignment ambiguities are retained.
 """
 import argparse
 import json
+import re
 import sys
 from pathlib import Path
 
@@ -36,13 +37,17 @@ def make_predictor():
 
 
 def unique_span(text, phrase):
-    import re
-    matches = [(m.start(), m.end()) for m in re.finditer(re.escape(phrase), text, re.I)]
+    # GTS tokenizer sometimes inserts whitespace before source punctuation,
+    # e.g. "not quiet ;" vs. "not quiet;". Canonicalize only that artifact.
+    # The returned text and offsets ALWAYS refer to the literal original review.
+    canonical = re.sub(r"\\s+([,;:.!?])", r"\\1", phrase.strip())
+    matches = [(m.start(), m.end()) for m in re.finditer(re.escape(canonical), text, re.I)]
     if len(matches) != 1:
-        return {"text":phrase,"start":None,"end":None,
+        return {"text":phrase, "start":None, "end":None,
                 "status":"missing" if not matches else "ambiguous"}
     a,b=matches[0]
-    return {"text":text[a:b],"start":a,"end":b,"status":"unique"}
+    return {"text":text[a:b], "start":a, "end":b,
+            "status":"normalized_punctuation" if canonical != phrase.strip() else "unique"}
 
 
 def standardize(text, raw):
@@ -59,7 +64,7 @@ def standardize(text, raw):
         output.append({
             "aspect":a,"opinion":o,"polarity":polarity,
             "method":"gts_bert_joint_aste",
-            "grounded":a["status"]=="unique" and o["status"]=="unique",
+            "grounded":a["status"] in ("unique", "normalized_punctuation") and o["status"] in ("unique", "normalized_punctuation"),
             "raw":triple,
         })
     return output
