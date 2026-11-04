@@ -26,3 +26,10 @@ Compare non-ABSA, pretrained, general information extraction approaches on the *
 
 ## Next valid comparison
 Develop complete independently annotated gold on the same original source, recording spatial features, descriptions, feelings, evidence spans, and directed links; then compare precision, recall, semantic fidelity, and downstream atmosphere-evidence coverage. Only then decide whether to replace ABSA.
+
+## NuExtract completed pilot — verified results
+- Corrected workflow https://github.com/UsernameIsJoe/Atmosphere-grounding/actions/runs/41916932170 completed successfully; all eight predeclared original sentence inputs generated valid JSON.
+- Raw-output audit https://github.com/UsernameIsJoe/Atmosphere-grounding/actions/runs/41918017484 verified the actual outputs: five nonempty extraction records, three empty `observations` arrays.
+- On the original park / trees / paths sentence, output: `physical_feature: trees`, `description: circulous paths that make you feel like you are being protected and comforted`, `felt_experience: protected and comforted`. This captures the visitor's described feeling, but fails to distinguish all environmental elements and their roles, so it is not a complete correct relation graph.
+- Empty on `A charming and cozy park...` and `Inspiring place with great location.` Some other outputs have full-sentence descriptions or null physical features. No human-gold accuracy has been measured.
+- Eight-sentence sample is a computational feasibility probe, not a fair 56-sentence quantitative comparison. Do not declare NuExtract better than GLiNER or ABSA without consistent evaluation.
