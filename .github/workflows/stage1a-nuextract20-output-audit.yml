@@ -1,0 +1,24 @@
+name: Stage 1A NuExtract actual output audit
+on:
+  push:
+    paths:
+      - scripts/stage1a_nuextract20_output_audit.py
+      - .github/workflows/stage1a-nuextract20-output-audit.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+  actions: read
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fetch completed NuExtract predictions
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          mkdir -p reports/nuextract_audit
+          gh run download 41916932170 -R "$GH_REPO" -n stage1a-nuextract20-urban-results -D reports/nuextract_audit
+      - name: Inspect each actual extraction
+        run: python scripts/stage1a_nuextract20_output_audit.py
