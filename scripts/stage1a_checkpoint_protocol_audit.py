@@ -41,7 +41,7 @@ def run_card(method):
 def recover_comma_triplets(raw):
  """Diagnostic second pass on author-format comma-separated triplets, without inventing spans."""
  if not isinstance(raw,str):return []
- chunks=re.split(r"(?<=positive),\\s*|(?<=negative),\\s*|(?<=neutral),\\s*",raw,flags=re.I)
+ chunks=re.split(r"(?<=positive),\s*|(?<=negative),\s*|(?<=neutral),\s*",raw,flags=re.I)
  triples=[]
  for chunk in chunks:
   fields=[v.strip() for v in chunk.split(":")]
@@ -87,7 +87,7 @@ def analyze_existing(root):
     "rescued_source_grounded_triplets":sum(r.get("grounded",False) for r in rescued_relations),
     "partial_reference_before":scored[name]["targets_recovered"],"partial_reference_after":amended["targets_recovered"],
     "note":"Post-hoc parser rescue is not a fresh model run or semantic correctness assessment."}
-   (root/"aos_parser_rescued.jsonl").write_text("".join(json.dumps(c,ensure_ascii=False)+"\\n" for c in corrected))
+   (root/"aos_parser_rescued.jsonl").write_text("".join(json.dumps(c,ensure_ascii=False)+"\n" for c in corrected))
   report["models"][name]=dict(status_counts=dict(status),unparsed_examples=raw_unparsed,unverified_relations=implicit,
    source_grounded_relations=sum(r.get("grounded",False) for r in rels),
    partial_reference_recovered=scored[name]["targets_recovered"],partial_reference_total=scored[name]["reference_targets"])
