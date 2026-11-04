@@ -52,3 +52,5 @@ This folder is **standalone documentation** for presentations and design history
 ## Viewing flowcharts
 
 GitHub renders Mermaid diagrams inside `.md` files. Open [`flowcharts.md`](flowcharts.md) in the browser on github.com for automatic diagrams.
+
+| [`stage1a-m2c-relevance-direction-check-2026-11-04.md`](stage1a-m2c-relevance-direction-check-2026-11-04.md) | **Bounded M2c direction check**: 20 fixed claims, relevance vs direct NLI, prespecified stop gate, return to Stage 1B |
