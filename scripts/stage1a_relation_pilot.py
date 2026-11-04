@@ -19,7 +19,15 @@ ROOT = pathlib.Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT / "scripts"))
 from stage1a_nli_checkpoint_screen import read_jsonl, select_rows
 
-MODEL = "tafseer-nayeem/aspect-opinion-sentiment_AOS-triplet"\nINSTRUCTION = (\n    "Definition: The output will be the aspects (both implicit and explicit), "\n    "the corresponding opinion/describing terms, and the sentiment polarity (positive, negative, neutral). "\n    "Use the format aspect:opinion:sentiment.\\n\\n"\n    "Example 1-\\ninput: Free Wi-Fi throughout the hotel\\n"\n    "output: wi-fi:free:positive\\n\\n"\n    "Now complete the following example-\\ninput: "\n)
+MODEL = "tafseer-nayeem/aspect-opinion-sentiment_AOS-triplet"
+INSTRUCTION = (
+    "Definition: The output will be the aspects (both implicit and explicit), "
+    "the corresponding opinion/describing terms, and the sentiment polarity (positive, negative, neutral). "
+    "Use the format aspect:opinion:sentiment.\n\n"
+    "Example 1-\ninput: Free Wi-Fi throughout the hotel\n"
+    "output: wi-fi:free:positive\n\n"
+    "Now complete the following example-\ninput: "
+)
 # Registered before M1 model output is seen; prioritize prior known failure cases.
 DIAGNOSTIC_ROWS = (55, 74, 97, 113, 123, 139, 181, 187)
 SYNTHETIC = (
@@ -163,7 +171,7 @@ def generative_extractor():
     tok=AutoTokenizer.from_pretrained(MODEL)
     model=AutoModelForSeq2SeqLM.from_pretrained(MODEL).eval()
     def extract(text):
-        encoded=tok(INSTRUCTION + text + " \\noutput:",return_tensors="pt",truncation=True,max_length=512)
+        encoded=tok(INSTRUCTION + text + " \noutput:",return_tensors="pt",truncation=True,max_length=512)
         with torch.inference_mode():
             ids=model.generate(**encoded,max_new_tokens=180,num_beams=1,do_sample=False)
         raw=tok.decode(ids[0],skip_special_tokens=True)
