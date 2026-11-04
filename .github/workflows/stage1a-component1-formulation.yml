@@ -1,0 +1,29 @@
+name: Stage 1A Component 1 schema and context controlled test
+on:
+  push:
+    paths:
+      - scripts/stage1a_component1_formulation_test.py
+      - .github/workflows/stage1a-component1-formulation.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  inference:
+    runs-on: ubuntu-latest
+    timeout-minutes: 50
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install official GLiNER checkpoint interface
+        run: |
+          python -m pip install 'gliner2[local]' spacy
+          python -m spacy download en_core_web_sm
+      - name: Run two controlled conditions on frozen original reviews
+        run: python -u scripts/stage1a_component1_formulation_test.py --output reports/component1_formulation
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: stage1a-component1-formulation
+          path: reports/component1_formulation/
