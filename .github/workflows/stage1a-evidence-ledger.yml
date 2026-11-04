@@ -1,0 +1,65 @@
+name: Stage 1A ABSA relevance NLI evidence ledger
+
+on:
+  push:
+    paths:
+      - '.github/workflows/stage1a-evidence-ledger.yml'
+      - 'scripts/stage1a_evidence_pipeline.py'
+      - 'tests/test_stage1a_evidence_pipeline.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  evidence-ledger:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Compile and run unit tests
+        run: |
+          python -m py_compile scripts/stage1a_evidence_pipeline.py tests/test_stage1a_evidence_pipeline.py
+          python -m pip install 'pytest>=8,<10'
+          python -m pytest -q tests/test_stage1a_evidence_pipeline.py
+      - name: Download verified original-source integrated artifact
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          mkdir -p reports/stage1a_integrated
+          gh run download 41891532716 -R "$GH_REPO" -n stage1a-integrated-absa-nli -D reports/stage1a_integrated
+      - name: Produce ABSA, relevance and NLI evidence comparisons
+        run: |
+          python scripts/stage1a_evidence_pipeline.py --input reports/stage1a_integrated/review_evidence.jsonl --output reports/stage1a_evidence_ledger
+      - name: Check all source evidence retained
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=Path('reports/stage1a_evidence_ledger')
+          s=json.loads((d/'summary.json').read_text())
+          rows=[json.loads(x) for x in (d/'evidence_ledger.jsonl').read_text().splitlines() if x.strip()]
+          assert len(rows)==60 and s['n_unique_source_sentences']==58
+          assert all(r['review'][c['start']:c['end']]==c['text'] for r in rows for c in r['evidence'])
+          assert all(x['all_sentences']['total'] == x['absa_only']['total'] + 
+                     (x['all_sentences']['total']-x['absa_only']['total']) 
+                     for x in s['by_emotion'].values())
+          assert all(x['relevance_only']['total']==
+                     x['absa_and_relevance']['total']+x['rescued_unmatched']['total']
+                     for x in s['by_emotion'].values())
+          print('Verified 60 complete review-emotion evidence ledgers')
+          PY
+      - name: Upload evidence ledger
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: stage1a-evidence-ledger
+          path: reports/stage1a_evidence_ledger/
+          if-no-files-found: warn
