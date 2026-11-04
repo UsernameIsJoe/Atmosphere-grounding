@@ -28,6 +28,12 @@ def split_original(sentence):
     boundaries = [0]
     for match in BOUNDARY.finditer(text):
         # Split before the contrast marker, but keep marker in the next span.
+        # An upstream segmenter can split a parenthetical at '?' and leave
+        # a dangling ')' before ', but'. Never create punctuation-only evidence.
+        left = text[boundaries[-1]:match.start()].strip()
+        right = text[match.start():].strip()
+        if not any(ch.isalnum() for ch in left) or not any(ch.isalnum() for ch in right):
+            continue
         boundaries.append(match.start())
     boundaries.append(len(text))
     result = []
