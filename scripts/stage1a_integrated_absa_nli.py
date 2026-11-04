@@ -50,23 +50,37 @@ def verify_span(text, span):
 def sentences_from_source(record):
     text = record["review"]
     source = record["extraction"]["all_sentences"]
-    chunks = []
+    original = []
     for item in source:
         if not verify_span(text, item):
             raise ValueError("Invalid sentence source offsets")
-        chunks.append({"start": item["start"], "end": item["end"], "text": item["text"],
-                       "aspects": [], "relations": []})
-    chunks.sort(key=lambda s: s["start"])
-    if not chunks:
-        raise ValueError("No source sentences")
-    # Require sentence segmentation to retain every non-whitespace character.
+        original.append({"start": item["start"], "end": item["end"], "text": item["text"],
+                         "aspects": [], "relations": [], "segmentation": "model_sentence"})
+    original.sort(key=lambda s: s["start"])
+    if not original:
+        return [{"start": 0, "end": len(text), "text": text, "aspects": [],
+                 "relations": [], "segmentation": "fallback_whole_review"}]
+    # An earlier ABSA sentence splitter can omit hashtags or line fragments.
+    # Keep every source character, instead of silently dropping evidence.
+    chunks = []
     cursor = 0
-    for chunk in chunks:
-        if text[cursor:chunk["start"]].strip():
-            raise ValueError("Uncovered review text before source sentence")
-        cursor = chunk["end"]
-    if text[cursor:].strip():
-        raise ValueError("Uncovered review text after final sentence")
+    for item in original:
+        if item["start"] < cursor:
+            raise ValueError("Overlapping source sentence spans")
+        gap = text[cursor:item["start"]]
+        if gap.strip():
+            start = cursor + len(gap) - len(gap.lstrip())
+            end = cursor + len(gap.rstrip())
+            chunks.append({"start": start, "end": end, "text": text[start:end],
+                           "aspects": [], "relations": [], "segmentation": "unsegmented_gap"})
+        chunks.append(item)
+        cursor = item["end"]
+    tail = text[cursor:]
+    if tail.strip():
+        start = cursor + len(tail) - len(tail.lstrip())
+        end = cursor + len(tail.rstrip())
+        chunks.append({"start": start, "end": end, "text": text[start:end],
+                       "aspects": [], "relations": [], "segmentation": "unsegmented_gap"})
     return chunks
 
 
