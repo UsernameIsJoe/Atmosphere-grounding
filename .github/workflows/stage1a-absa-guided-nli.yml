@@ -1,0 +1,76 @@
+name: Stage 1A ABSA-guided original-clause NLI
+
+on:
+  push:
+    paths:
+      - '.github/workflows/stage1a-absa-guided-nli.yml'
+      - 'scripts/stage1a_absa_guided_nli.py'
+      - 'tests/test_stage1a_absa_guided_nli.py'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  actions: read
+
+jobs:
+  absa-guided-nli:
+    runs-on: ubuntu-latest
+    timeout-minutes: 110
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Static compile and deterministic source-fidelity tests
+        run: |
+          python -m py_compile scripts/stage1a_absa_guided_nli.py tests/test_stage1a_absa_guided_nli.py
+          python -m pip install 'pytest>=8,<10'
+          python -m pytest -q tests/test_stage1a_absa_guided_nli.py
+      - name: Download completed integrated real-review outputs
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          mkdir -p reports/stage1a_integrated
+          gh run download 41891532716 -R "$GH_REPO" -n stage1a-integrated-absa-nli -D reports/stage1a_integrated
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          file=Path('reports/stage1a_integrated/review_evidence.jsonl')
+          rows=[json.loads(x) for x in file.read_text().splitlines() if x.strip()]
+          assert len(rows)==60
+          assert len({(r['row'],r['emotion']) for r in rows})==60
+          print('Aligned source records loaded:',len(rows))
+          PY
+      - name: Install frozen BART-large-MNLI checkpoint
+        run: |
+          python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install 'transformers>=4.46,<5'
+      - name: Execute ABSA-guided clause NLI and unchanged sentence comparator
+        run: |
+          python -u scripts/stage1a_absa_guided_nli.py --input reports/stage1a_integrated/review_evidence.jsonl --output reports/stage1a_absa_guided
+      - name: Assert source integrity and original text retention
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=Path('reports/stage1a_absa_guided')
+          s=json.loads((d/'summary.json').read_text())
+          rows=[json.loads(x) for x in (d/'review_evidence.jsonl').read_text().splitlines() if x.strip()]
+          assert len(rows)==60
+          assert sum(x['summary']['units'] for x in rows)==sum(
+              v['units'] for v in s['by_emotion'].values())
+          assert all(all(r['review'][u['start']:u['end']]==u['text'] for u in r['units']) for r in rows)
+          assert all(all(u['absa_evidence_lane'] in ('indexed','unmatched') for u in r['units']) for r in rows)
+          assert all(r['summary']['absa_indexed']+r['summary']['unmatched_kept']==r['summary']['units'] for r in rows)
+          print('Source offsets, source evidence, and indexed/unmatched coverage validated')
+          PY
+      - name: Upload source-grounded comparison and summary
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: stage1a-absa-guided-nli
+          path: reports/stage1a_absa_guided/
+          if-no-files-found: warn
