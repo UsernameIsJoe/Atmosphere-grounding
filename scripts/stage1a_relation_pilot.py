@@ -91,10 +91,15 @@ def parse_triplets(raw):
         # Model-card prompt also uses the aspect:opinion:sentiment format.
         # Parse complete and polarity-labeled lines only.
         triples=[]
-        for line in raw.splitlines():
-            parts=[x.strip() for x in line.strip().split(":")]
-            if len(parts)==3 and all(parts) and parts[2].lower() in ("positive","negative","neutral"):
-                triples.append(tuple(parts))
+        # The checkpoint sometimes emits several colon-triplets separated by
+        # commas on one line. Preserve the author-format triplets without
+        # synthesizing missing fields or accepting malformed fragments.
+        segments=re.split(r"(?<=positive),\s*|(?<=negative),\s*|(?<=neutral),\s*",raw,flags=re.I)
+        for segment in segments:
+            for line in segment.splitlines():
+                parts=[x.strip() for x in line.strip().split(":")]
+                if len(parts)==3 and all(parts) and parts[2].lower() in ("positive","negative","neutral"):
+                    triples.append(tuple(parts))
         return triples, "parsed_colon_triplets" if triples else "unparsed_generation"
     if isinstance(obj, dict):
         obj = obj.get("triplets", obj.get("results"))
