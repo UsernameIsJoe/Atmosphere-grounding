@@ -1,0 +1,53 @@
+name: Stage 1A checkpoint model-card and real-review audit
+on:
+  push:
+    paths:
+      - scripts/stage1a_checkpoint_protocol_audit.py
+      - .github/workflows/stage1a-checkpoint-protocol-audit.yml
+  workflow_dispatch:
+jobs:
+  checkpoint-card:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        method: [aos_t5, gts_joint_aste]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install dependencies
+        run: |
+          python -m pip install 'torch==2.5.1' --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install 'transformers>=4.41,<5' 'huggingface_hub>=0.25,<1' sentencepiece protobuf numpy scikit-learn spacy
+      - name: Run published checkpoint model card cases
+        run: python scripts/stage1a_checkpoint_protocol_audit.py --card "${{ matrix.method }}" --output reports/stage1a_checkpoint_audit
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: checkpoint-card-${{ matrix.method }}
+          path: reports/stage1a_checkpoint_audit/
+  real-review-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Download immutable real review outputs from the successful run
+        env:
+          GH_TOKEN: ${{ github.token }}
+          GH_REPO: ${{ github.repository }}
+        run: |
+          mkdir -p reports/inputs
+          for method in aos_t5 gts_joint_aste dependency; do
+            gh run download 41908682135 -R "$GH_REPO" -n "absa-real-sentences-$method" -D "reports/inputs/$method"
+          done
+      - name: Inspect all raw outputs and counts without claiming gold accuracy
+        run: python scripts/stage1a_checkpoint_protocol_audit.py --existing reports/inputs --output reports/stage1a_checkpoint_audit
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: stage1a-real-review-model-audit
+          path: reports/stage1a_checkpoint_audit/
