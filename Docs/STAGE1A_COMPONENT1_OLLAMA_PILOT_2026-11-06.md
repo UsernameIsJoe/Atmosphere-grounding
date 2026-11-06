@@ -47,3 +47,15 @@ Files written: `predictions.jsonl`, `summary.json`. Each row has (i) the exact f
 These rows are preselected in the 20-review pilot: `55, 74, 97, 113, 123, 139, 181, 187`. Compare the actual source-derived cases especially for (a) trees/paths/protection attribution, (b) park→charming/cozy, (c) loss of sunlight, (d) typo `Ckean`, (e) personal versus environmental feelings. The source grounding checks do not themselves prove that an extracted relationship is meaningful.
 
 The runner deliberately halts on a transport or malformed response instead of treating missing predictions as empty observations, and supports a source-checked `--resume`. See the separate review-level audit after user runs this on their Ollama instance.
+
+## Human-quality evaluation packet
+
+After running Ollama, build an **unlabeled** review packet (requires no model downloads):
+
+```bash
+python scripts/stage1a_component1_ollama_audit.py --ollama reports/component1_ollama_qwen3_8b/predictions.jsonl --output reports/component1_ollama_qwen3_8b/human_audit.csv
+```
+
+Optional: download prior A artifact `stage1a-component1-reconciled` from [run 41924151396](https://github.com/UsernameIsJoe/Atmosphere-grounding/actions/runs/41924151396) and add `--baseline path/to/reconciled.jsonl`.
+
+The CSV deliberately leaves correctness labels blank. For each original source sentence, independently identify **all** meaningful physical, descriptive and experiential assertions and their explicit/negated/hedged connections (the `SOURCE_OMISSIONS` row). Judge each model candidate's factual/semantic fidelity and relation correctness, including the qualifier preservation column. Compute precision/recall only after this independent adjudication. Do not mistake exact quotation or same-model verification for human correctness.
