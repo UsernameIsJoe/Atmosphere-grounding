@@ -4,6 +4,7 @@ on:
     paths:
       - scripts/stage1a_component1_ollama.py
       - tests/test_stage1a_component1_ollama.py
+      - scripts/stage1a_component1_ollama_audit.py
       - .github/workflows/stage1a-component1-ollama-checks.yml
   workflow_dispatch:
 permissions:
@@ -18,7 +19,7 @@ jobs:
         with:
           python-version: '3.11'
       - name: Compile local Ollama runner and contract tests
-        run: python -m py_compile scripts/stage1a_component1_ollama.py tests/test_stage1a_component1_ollama.py
+        run: python -m py_compile scripts/stage1a_component1_ollama.py scripts/stage1a_component1_ollama_audit.py tests/test_stage1a_component1_ollama.py
       - name: Run strict provenance/verification contract tests
         run: python -m unittest discover -s tests -p test_stage1a_component1_ollama.py -v
       - name: Install corpus segmentation dependencies
