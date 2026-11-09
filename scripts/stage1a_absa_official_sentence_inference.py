@@ -64,11 +64,18 @@ def build_extractor(method,nlp):
         predict=make_predictor()
         def extract(text):
             tokens=tokenizer(text,add_special_tokens=True,truncation=False)["input_ids"]
+            # The checkpoint decoder allocates a 128-token grid. Never invoke
+            # it on longer input: the old post-inference flag could not protect
+            # the call and the decoder raised instead of reporting a skip.
+            if len(tokens)>128:
+                return {"relations":[],"parse_status":"skipped_input_too_long",
+                        "raw_generation":None,"token_count":len(tokens),
+                        "input_truncated":True}
             raw=predict(text)
             return {"relations":standardize(text,raw),
                     "parse_status":"gts_checkpoint_decoder",
                     "raw_generation":raw,"token_count":len(tokens),
-                    "input_truncated":len(tokens)>128}
+                    "input_truncated":False}
         return extract
     if method=="aos_t5":
         import torch
