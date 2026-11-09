@@ -68,11 +68,15 @@ overgeneralized, lost negation or wrong relation, and 'uncertain' for ambiguity.
 DO NOT rewrite or fix claims. Return exactly one decision per input index.
 Respond with schema-conforming JSON only."""
 
-def call_ollama(base,model,system,user,schema,timeout,num_ctx):
+def call_ollama(base,model,system,user,schema,timeout,num_ctx,think=None,num_predict=None):
     url=base.rstrip("/")+"/api/chat"
     request={"model":model,"messages":[{"role":"system","content":system},
                         {"role":"user","content":user}],
              "format":schema,"stream":False,"options":{"temperature":0,"num_ctx":num_ctx}}
+    if think is not None:
+        request["think"]=think
+    if num_predict is not None:
+        request["options"]["num_predict"]=num_predict
     req=urllib.request.Request(url,data=json.dumps(request,ensure_ascii=False).encode("utf-8"),
         headers={"Content-Type":"application/json"},method="POST")
     with urllib.request.urlopen(req,timeout=timeout) as rsp:
