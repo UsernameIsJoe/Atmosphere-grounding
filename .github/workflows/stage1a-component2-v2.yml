@@ -1,0 +1,24 @@
+name: Stage 1A Component 2 v2 contract checks
+on:
+  push:
+    paths:
+      - scripts/stage1a_component2_v2.py
+      - tests/test_stage1a_component2_v2.py
+      - .github/workflows/stage1a-component2-v2.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Syntax and structural tests
+        run: |
+          python -m py_compile scripts/stage1a_component2_v2.py tests/test_stage1a_component2_v2.py
+          python -m unittest discover -s tests -p test_stage1a_component2_v2.py -v
+          python scripts/stage1a_component2_v2.py --help
