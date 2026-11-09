@@ -235,8 +235,9 @@ def main():
                 print("ERROR",key,repr(exc),file=sys.stderr,flush=True)
                 break
     candidates=[c for r in completed.values() for c in r["candidates"]]
-    byemo={e:dict(collections.Counter(c["raw_component2_v2"]["applicability"][j]["status"]
-                for c in candidates)) for j,e in enumerate(PILOT_EMOTIONS)}
+    byemo={e:dict(collections.Counter(next(a["status"]
+                for a in c["raw_component2_v2"]["applicability"] if a["emotion"]==e)
+                for c in candidates)) for e in PILOT_EMOTIONS}
     summary={"selected_sentences":len(selected),"sentences_completed":len(completed),
         "candidates":len(candidates),
         "place_related":dict(collections.Counter(c["raw_component2_v2"]["place_related"] for c in candidates)),
