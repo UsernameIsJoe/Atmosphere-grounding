@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "dataset": "20 frozen real reviews / 56 spaCy source sentences from data/processed/reviews.jsonl; fixed select_pilot",
+  "raw_text_policy": "Do not commit raw real-review prediction artifacts by default; download locally or attach explicitly after review.",
+  "experiments": [
+    {
+      "id": "absa_official_gts",
+      "name": "Official source-sentence GTS triplets",
+      "run_id": 41908682135,
+      "artifact": "absa-real-sentences-gts_joint_aste",
+      "files": [
+        "scripts/stage1a_absa_official_sentence_inference.py",
+        "scripts/stage1a_gts_joint_aste_probe.py"
+      ],
+      "workflow": ".github/workflows/stage1a-absa-real-sentences.yml"
+    },
+    {
+      "id": "absa_official_aos",
+      "name": "Official source-sentence AOS triplets",
+      "run_id": 41908682135,
+      "artifact": "absa-real-sentences-aos_t5",
+      "files": [
+        "scripts/stage1a_absa_official_sentence_inference.py"
+      ],
+      "workflow": ".github/workflows/stage1a-absa-real-sentences.yml"
+    },
+    {
+      "id": "absa_pyabsa",
+      "name": "Official PyABSA checkpoint",
+      "run_id": 41913712642,
+      "artifact": "stage1a-pyabsa-official-probe",
+      "files": [
+        "scripts/stage1a_pyabsa_official_probe.py"
+      ],
+      "workflow": ".github/workflows/stage1a-pyabsa-official.yml"
+    },
+    {
+      "id": "absa_gliner_independent",
+      "name": "Independent GLiNER2.5 entity + relationship extraction",
+      "run_id": 41916389316,
+      "artifact": "stage1a-gliner25-urban-results",
+      "files": [
+        "scripts/stage1a_gliner25_urban.py"
+      ],
+      "workflow": ".github/workflows/stage1a-gliner25-urban.yml"
+    },
+    {
+      "id": "absa_nuextract",
+      "name": "NuExtract2.0 real review probe (8 sentences; NOT matched full 56)",
+      "run_id": 41916932170,
+      "artifact": "stage1a-nuextract20-urban-results",
+      "files": [
+        "scripts/stage1a_nuextract20_urban.py"
+      ],
+      "workflow": ".github/workflows/stage1a-nuextract20-urban.yml"
+    },
+    {
+      "id": "absa_matched_audit",
+      "name": "Five-extractor matched review/sentence audit",
+      "run_id": 41920533478,
+      "artifact": "stage1a-component1-matched-audit",
+      "files": [
+        "scripts/stage1a_component1_lock_audit.py"
+      ],
+      "workflow": ".github/workflows/stage1a-component1-lock-audit.yml"
+    },
+    {
+      "id": "component1_contract",
+      "name": "Original operational contract and source-preserved evidence-unit handoff",
+      "run_id": 41921120203,
+      "artifact": "stage1a-component1-contract",
+      "files": [
+        "scripts/stage1a_component1_contract.py"
+      ],
+      "workflow": ".github/workflows/stage1a-component1-contract.yml"
+    },
+    {
+      "id": "component1_gliner_joint",
+      "name": "GLiNER2.5 typed JointIE real review run",
+      "run_id": 41923414224,
+      "artifact": "stage1a-component1-joint-gliner",
+      "files": [
+        "scripts/stage1a_component1_joint_gliner.py"
+      ],
+      "workflow": ".github/workflows/stage1a-component1-joint-gliner.yml"
+    },
+    {
+      "id": "component1_reconcile",
+      "name": "GLiNER+GTS independent extraction reconciliation",
+      "run_id": 41924151396,
+      "artifact": "stage1a-component1-reconciled",
+      "files": [
+        "scripts/stage1a_component1_reconcile.py"
+      ],
+      "workflow": ".github/workflows/stage1a-component1-reconcile.yml"
+    },
+    {
+      "id": "component1_formulation",
+      "name": "Claim schema vs full-review context inference",
+      "run_id": 41925913206,
+      "artifact": "stage1a-component1-formulation",
+      "files": [
+        "scripts/stage1a_component1_formulation_test.py"
+      ],
+      "workflow": ".github/workflows/stage1a-component1-formulation.yml"
+    },
+    {
+      "id": "component1_formulation_audit",
+      "name": "Matched A/B/C/D formulation audit",
+      "run_id": 41926049772,
+      "artifact": "stage1a-component1-formulation-audit",
+      "files": [
+        "scripts/stage1a_component1_formulation_audit.py"
+      ],
+      "workflow": ".github/workflows/stage1a-component1-formulation-audit.yml"
+    },
+    {
+      "id": "component1_ollama_runner_tests",
+      "name": "Local Ollama B/C runner, correctness contracts and source check",
+      "run_id": 42249984897,
+      "artifact": null,
+      "files": [
+        "scripts/stage1a_component1_ollama.py",
+        "scripts/stage1a_component1_ollama_audit.py",
+        "tests/test_stage1a_component1_ollama.py"
+      ],
+      "workflow": ".github/workflows/stage1a-component1-ollama-checks.yml"
+    },
+    {
+      "id": "component1_ollama_qwen3_8b",
+      "name": "Qwen3 8B Ollama run on laptop; user supplied results not Actions",
+      "run_id": null,
+      "artifact": null,
+      "files": [
+        "scripts/stage1a_component1_ollama.py",
+        "scripts/stage1a_component1_ollama_audit.py"
+      ],
+      "workflow": null,
+      "summary": "qwen3_8b_summary.json"
+    }
+  ]
+}
