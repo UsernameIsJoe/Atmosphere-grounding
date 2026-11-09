@@ -23,7 +23,7 @@ MODEL = "tafseer-nayeem/aspect-opinion-sentiment_AOS-triplet"
 INSTRUCTION = (
     "Definition: The output will be the aspects (both implicit and explicit), "
     "the corresponding opinion/describing terms, and the sentiment polarity (positive, negative, neutral). "
-    "Use the format aspect:opinion:sentiment.\n\n"
+    "Use the format aspect:opinion:sentiment. \n\n"
     "Example 1-\ninput: Free Wi-Fi throughout the hotel\n"
     "output: wi-fi:free:positive\n\n"
     "Now complete the following example-\ninput: "
