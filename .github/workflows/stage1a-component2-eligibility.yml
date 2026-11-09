@@ -1,0 +1,28 @@
+name: Stage 1A Component 2 eligibility pilot checks
+on:
+  push:
+    paths:
+      - scripts/stage1a_component2_eligibility_pilot.py
+      - .github/workflows/stage1a-component2-eligibility.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Compile
+        run: python -m py_compile scripts/stage1a_component2_eligibility_pilot.py
+      - name: Install dependencies
+        run: |
+          python -m pip install spacy
+          python -m spacy download en_core_web_sm
+      - name: Check CLI and structural contract without local Ollama
+        run: |
+          python scripts/stage1a_component2_eligibility_pilot.py --help
+          python -c "import sys;sys.path.insert(0,'scripts');import stage1a_component2_eligibility_pilot as m;m.validate([{'index':0,'location_eligibility':'yes','attribution_type':'place_experience','location_reason':'attributed to place','applicability':[{'emotion':x,'status':'indirect','reason':'possible evidence'} for x in m.PILOT_EMOTIONS]}],[{'claim':'input'}]);assert len(m.PILOT_EMOTIONS)==3"
