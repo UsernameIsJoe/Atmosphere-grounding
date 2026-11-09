@@ -149,10 +149,11 @@ def main():
     p=argparse.ArgumentParser()
     p.add_argument("--input",default="reports/component1_ollama_qwen3_8b/predictions.jsonl")
     p.add_argument("--previous",default="reports/stage1a_component2_eligibility_pilot/diagnostic/decisions.jsonl")
-    p.add_argument("--output",default="reports/stage1a_component2_v2")
+    p.add_argument("--output",default="reports/stage1a_component2_v2_no_think")
     p.add_argument("--model",default="qwen3:8b")
     p.add_argument("--url",default="http://127.0.0.1:11434")
-    p.add_argument("--timeout",type=int,default=900)
+    p.add_argument("--timeout",type=int,default=180)
+    p.add_argument("--num-predict",type=int,default=2048,help="Maximum structured response tokens")
     p.add_argument("--num-ctx",type=int,default=8192)
     p.add_argument("--all",action="store_true")
     p.add_argument("--check-only",action="store_true")
@@ -175,7 +176,8 @@ def main():
                 prior[k]=r
     output=pathlib.Path(a.output)/("all56" if a.all else "diagnostic")
     path=output/"decisions.jsonl"
-    config_sha=hashlib.sha256((SYSTEM+json.dumps(PILOT_EMOTIONS,sort_keys=True)).encode("utf8")).hexdigest()
+    config_sha=hashlib.sha256((SYSTEM+json.dumps(PILOT_EMOTIONS,sort_keys=True)+
+        "|think=false|num_predict="+str(a.num_predict)).encode("utf8")).hexdigest()
     if a.check_only:
         print(json.dumps({"selected_sentences":len(selected),
           "candidate_claims":sum(len(r["C"]["observations"]) for r in selected),
@@ -204,12 +206,14 @@ def main():
                for i,c in enumerate(claims)]
             try:
                 if claims:
+                    print("REQUEST row",key[0],"sentence",key[1],
+                          "candidates",len(claims),"(thinking disabled)",flush=True)
                     obj,_=call_ollama(a.url,a.model,SYSTEM,
                         "REVIEW CONTEXT FOR ATTRIBUTION ONLY:\n"+s["original_review"]+
                         "\nORIGINAL SOURCE SENTENCE (AUTHORITY):\n"+s["original_sentence"]+
                         "\nEMOTIONS:\n"+json.dumps(PILOT_EMOTIONS,ensure_ascii=False)+
                         "\nCANDIDATE OBSERVATIONS:\n"+json.dumps(numbered,ensure_ascii=False),
-                        SCHEMA,a.timeout,a.num_ctx)
+                        SCHEMA,a.timeout,a.num_ctx,think=False,num_predict=a.num_predict)
                     decisions=validate_response(obj,claims,s["original_sentence"])
                 else:decisions={}
                 rows=[]
