@@ -1,0 +1,15 @@
+{
+  "model": "qwen3:8b",
+  "reviews_requested": 20,
+  "sentences_requested": 56,
+  "sentences_completed": 56,
+  "source_sha256": "144aee54fd70fdd2b440bc1e0f05fc71b63e79e26bf525b995a6260c0936d00e",
+  "B_claim_candidates": 88,
+  "B_exact_unique_quote_candidates": 81,
+  "C_passed_checks_candidates": 72,
+  "C_flagged_candidates": 16,
+  "C_verification_errors": 0,
+  "errors": [],
+  "source": "User-supplied local Ollama summary.json and predictions.jsonl, reviewed 2026-11-08; raw user review text not re-published here.",
+  "caution": "Not model accuracy or independently human-adjudicated quality; 72 passed automated source/LLM checks, which have false acceptances and false rejections."
+}
