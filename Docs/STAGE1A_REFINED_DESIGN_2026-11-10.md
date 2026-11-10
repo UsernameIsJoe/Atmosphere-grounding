@@ -6,15 +6,15 @@
 
 ## Research objective and evaluation stance
 
-Use local LLM annotators to extract **source-grounded evidence of location-attributed atmosphere** from original real reviews for nine target categories, construct **silver** labels by agreement, fine-tune an **NLI-pretrained student**, and aggregate review evidence at the place level for later cross-modal association learning.
+Use local LLM annotators to extract **source-grounded evidence of location-attributed atmosphere** from original real reviews for the active three-category pilot (calm, inviting, safe), before scaling to the full eleven-category taxonomy, construct **silver** labels by agreement, fine-tune an **NLI-pretrained student**, and aggregate review evidence at the place level for later cross-modal association learning.
 
 **No human labeling is planned for Stage 1A.** Consistency, inter-model agreement, repeatability, source-offset integrity, model-to-panel fidelity, prompt sensitivity and downstream annotator robustness can be measured. They **cannot establish human-judged accuracy or model correctness**. Report Stage 2 outcomes as associations with *LLM-annotated reported perception*, not the objective atmosphere of places.
 
-The existing repo has a **three-category pilot (calm, inviting, safe)**, a historical lexicon file with 11 terms, and a current research goal of **nine categories whose exact membership is not frozen**. Do not invent/select the final nine.
+The existing repo has a **three-category pilot (calm, inviting, safe)**, the authoritative 11-category list in `configs/lexicon.yaml`, and a **three-category pilot** selected in `configs/cambridge_pilot.yaml`. The user confirmed the full taxonomy is **11**, superseding every previous nine-category description.
 
 ## 4.1 Rubric / construct definition
 
-- Version one authoritative taxonomy with nine names, definitions, inclusion/exclusion criteria, legitimate bipolar relationships (otherwise unipolar), and 2–3 **real development-review** examples per category when available.
+- Version one authoritative taxonomy with eleven names, definitions, inclusion/exclusion criteria, legitimate bipolar relationships (otherwise unipolar), and 2–3 **real development-review** examples per category when available.
 - Distinguish **explicit reported atmosphere**, **source-grounded direct indicators** and **indirect inferred evidence**. E.g. police patrol may be a direct safety *indicator*, not evidence of felt safety. Visual indicators such as lighting do not automatically entail a feeling.
 - Document overlapping categories, negation, temporal qualifiers, attribution, and not-relevant examples.
 - Any substantive rubric change requires re-annotation; preserve versions and provenance. Do not use held-out data as rubric examples.
@@ -152,7 +152,7 @@ Archived reference: `research_audit/stage1a_final_2026-11-10/README.md`. Preserv
 
 ## Next research tasks (not implementation claimed)
 
-1. Freeze the versioned nine-category rubric and clause-segmentation specification.
+1. Version the existing 11-category taxonomy; complete the rubric for the active calm/inviting/safe pilot and the clause-segmentation specification.
 2. Pilot the three-model/two-prompt panel on eligible source data with mechanical provenance checks.
 3. Quantify disagreement and evidence-type stability **before** selecting silver training targets.
 4. Define valid NLI hypotheses and type-specific supervision masks before student adaptation.
@@ -167,3 +167,10 @@ Archived reference: `research_audit/stage1a_final_2026-11-10/README.md`. Preserv
 - Laurer et al., `Political Analysis`, NLI text-classification transfer: https://doi.org/10.1017/pan.2023.20
 - Kulmizev et al. (2026), LLM-based NLI annotation variation: https://aclanthology.org/2026.acl-long.752/
 - scikit-learn classifier calibration documentation: https://scikit-learn.org/stable/modules/calibration.html
+
+## Implementation milestone (2026-11-10)
+
+- Initial code: `scripts/stage1a_panel_pilot.py`; offline checks: `tests/test_stage1a_panel_pilot.py`.
+- Pilot-only rubric descriptions in code are **provisional operational prompts**, not a completed theory-grounded rubric for all 11 categories.
+- `--prepare-only` extracts clauses from `data/processed/reviews.jsonl` without calling a model. Full panel mode requires three locally installed Ollama models and records each raw model/prompt vote plus consensus diagnostics.
+- The first implementation is **not** yet an NLI fine-tuning trainer, calibrated scorer or Stage 2 association test. Do not infer results from implementation alone.
