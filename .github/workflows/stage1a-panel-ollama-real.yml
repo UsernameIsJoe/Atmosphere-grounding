@@ -1,0 +1,76 @@
+name: Stage 1A real-review Ollama panel (3 emotions)
+
+on:
+  push:
+    paths:
+      - ".github/workflows/stage1a-panel-ollama-real.yml"
+  workflow_dispatch:
+
+jobs:
+  real-panel:
+    runs-on: ubuntu-latest
+    timeout-minutes: 150
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Verify real source and Python mechanics
+        run: |
+          python -m py_compile scripts/stage1a_panel_pilot.py
+          python scripts/stage1a_panel_pilot.py --prepare-only --sample-mode diverse --max-reviews 4 --output reports/stage1a_panel_real_4
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          items=[json.loads(x) for x in Path("reports/stage1a_panel_real_4/clauses.jsonl").read_text().splitlines()]
+          assert len(items)==len({x["place_id"] for x in items})==4
+          assert all(x["place_id"].startswith("ChIJ") for x in items)
+          print("Source validation:", len(items), "reviews, 4 distinct Google-style place IDs")
+          PY
+      - name: Install Ollama CPU service
+        run: |
+          curl -fsSL https://ollama.com/install.sh | sh
+          ollama serve > /tmp/ollama-server.log 2>&1 &
+          for i in $(seq 1 60); do
+            if curl -fsS http://127.0.0.1:11434/api/tags >/dev/null; then
+              echo "Ollama ready"; break
+            fi
+            sleep 2
+          done
+          curl -fsS http://127.0.0.1:11434/api/tags
+      - name: Pull three independent small model families
+        run: |
+          ollama pull qwen3:1.7b
+          ollama pull gemma3:1b
+          ollama pull llama3.2:3b
+          ollama list
+      - name: Annotate four real reviews and compare prompt A/B
+        run: |
+          python scripts/stage1a_panel_pilot.py \
+            --sample-mode diverse --max-reviews 4 \
+            --models qwen3:1.7b gemma3:1b llama3.2:3b \
+            --timeout 480 --output reports/stage1a_panel_real_4
+      - name: Check outputs
+        if: success()
+        run: |
+          test -s reports/stage1a_panel_real_4/annotations.jsonl
+          test -s reports/stage1a_panel_real_4/consensus.jsonl
+          test -s reports/stage1a_panel_real_4/diagnostics.json
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          d=json.loads(Path("reports/stage1a_panel_real_4/diagnostics.json").read_text())
+          print("Number of clause × category cases:",d["n_items"])
+          print("Panel pairwise agreement:",d["pairwise_agreement"])
+          PY
+      - name: Upload real-review annotations, consensus, failures and metadata
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: stage1a-three-llm-real-four-reviews
+          path: reports/stage1a_panel_real_4/
+          if-no-files-found: error
+          retention-days: 30
+      - name: Show Ollama failure log if necessary
+        if: failure()
+        run: tail -n 100 /tmp/ollama-server.log || true
