@@ -21,16 +21,18 @@ Two separately evaluated evidence-production branches, 1A text and 1B images, co
 
 **Boundary:** Do not pass image-derived atmosphere suggestions to the text labeling branch, and do not assign atmosphere labels to visual features during extraction.
 
-## Section 4 — Stage 1A: text grounding (retain purpose, refine methods)
+## Section 4 — Stage 1A: text grounding (refined design, 2026-11-10)
 
-1. **Construct definitions first.** Freeze a single versioned nine-category rubric with definitions, evidence types, explicit non-examples and any genuine bipolar relationships. Do not assume all categories are true emotions or all opposites are logical negations.
-2. **Annotation proposal:** three independent local LLM families annotate original source text and cite verbatim spans. Distinguish explicit first-person or place-attributed experience from direct factual indicators and indirect interpretive inferences; retain negative, mixed and absent evidence. Record model/tag/prompt versions and each raw vote.
-3. **Silver supervision, not truth:** inter-model agreement can measure consistency but cannot certify correctness. Majority 2/3 is a candidate label-aggregation rule; a 2/3 vote is **not** a calibrated 0.67 probability. Assess correlated model biases, category prevalence and disagreement cases. Do not impose kappa < 0.4 as an automatic proof of an unstable construct.
-4. **Independent benchmark prerequisite:** create genuine independently annotated, adjudicated *real-source* examples for development and a place-disjoint untouched holdout before claiming precision/recall. Evaluate span integrity **and** semantic completeness, attribution, negation, omissions and unsupported inference. The earlier archived audit expressly lacked independent semantic correctness checks; do not repeat that failure.
-5. **Student models are candidates:** compare (A) NLI fine-tuning restricted to logically appropriate entailment/contradiction/neutral judgments and (B) a multi-label/multi-class evidence classifier that can directly represent indicators, uncertainty and mixed evidence. "Police patrol" can be a source-supported **safety indicator** without logically entailing "visitors feel safe." Select on independent reference evaluations, not teacher agreement.
-6. **Place-level output:** retain mention/evidence coverage separately from support/opposition direction. Missing mention is *not* a zero atmospheric rating. Report counts, disagreement and interval/uncertainty estimates before downstream association.
+**Current detailed decision record:** [STAGE1A_REFINED_DESIGN_2026-11-10.md](STAGE1A_REFINED_DESIGN_2026-11-10.md). This replaces the earlier provisional Section 4 discussion below; the historical archived audits remain unchanged.
 
-The proposed fixed positive/negative example counts, recall/direction thresholds, and isotonic calibration are **provisional planning hypotheses**, to be justified by prevalence, evaluation-set size, error costs and learning curves. Test calibration against independent reference labels, not a panel's silver outputs.
+- **No human labeling in Stage 1A.** Model disagreement, prompt sensitivity, reproducibility, source checks and student-to-panel fidelity are measurable; none establishes independent accuracy or correspondence to human perception.
+- **Clause-first deterministic segmentation**, shared by the three independent annotating LLMs, with full-review context retained. Allow arrays of evidence records only when necessary within an already segmented clause.
+- Two prompts per model: A supplies candidate labels; B tests wording sensitivity. Keep every individual vote; use majority as a baseline and full categorical vote distributions as soft targets, not probabilities of correctness.
+- Trust checks include pairwise agreement and 3–0/2–1/three-way split diagnostics, literal source provenance, per-type and hard-case breakdowns; no spurious two-model leave-one-out majority.
+- **NLI-first adaptation:** prioritize fine-tuning an NLI-pretrained DeBERTa model and compare with separate evidence heads initialized from the **same NLI checkpoint**. A base classifier from scratch is not mandatory. Direct/indirect indicators are not automatically logical entailments.
+- Aggregate place profiles as **coverage, direction and uncertainty**, rather than a single unsupported emotion score. Missing evidence is not negative evidence.
+- **Mandatory Stage 2 sensitivity:** rerun associations using majority and each individual panel model; compare sign, magnitude and spatial/statistical stability. In addition, contrast **explicit-only** atmosphere evidence against tracks adding direct indicators and indirect evidence to expose possible shared-LLM-prior effects. These are robustness diagnostics, not proof of semantic correctness.
+- All methods, gates and actual performance remain to be tested; no Stage 1A implementation is claimed here.
 
 ## Section 5 — Stage 1B: visual grounding (retain purpose, revise weighting)
 
@@ -53,20 +55,10 @@ The proposed fixed positive/negative example counts, recall/direction thresholds
 
 ## Section 7 — Stage 3: validation and application (retain with explicit gates)
 
-- Evaluate each upstream measurement instrument independently (text reference labels, image feature quality). End-to-end success against silver review targets alone is **not** independent perceptual validation.
+- Evaluate each upstream measurement instrument independently (LLM-panel consistency and source integrity, image feature quality). End-to-end success against silver review targets alone is **not** independent perceptual validation.
 - Use spatial/neighborhood blocks for held-out testing; avoid geography leakage through tuning. Compare shuffled/place-level null models and appropriately simple baselines; report uncertainty and when models should abstain.
-- Separate three outcomes: **association stability**, **prediction of review-derived labels**, and **agreement with independent human atmosphere judgments**. These are not equivalent claims.
+- Separate three outcomes: **association stability**, **prediction of LLM-derived review labels**, and **external human correspondence if ever independently assessed**. These are not equivalent claims.
 - If the evidence supports it, develop a visual-input predictor with uncertain, feature-grounded outputs and an interpretation layer limited to structured measured results. Review text is training evidence, not mandatory at prediction time.
-
-## Blocking prerequisite: data rights
-
-The proposal's Google Places section correctly raises storage restrictions, but the *standard* Maps Platform terms may restrict using Maps Content to **train, test, validate or fine-tune** AI/ML models, in addition to caching/derivative-content limitations. Do not treat the existing committed Google-derived review corpus as automatically licensed for new annotation-model training or public release. **Confirm the applicable agreement/permissions or select explicitly licensed alternative data before new ML training or corpus expansion.** This memo is not legal advice.
-
-Sources to check with the actual account agreement:
-- https://cloud.google.com/maps-platform/terms
-- https://developers.google.com/maps/documentation/places/web-service/policies
-- https://developers.google.com/maps/documentation/places/web-service/place-details
-- https://www.yelp.com/dataset (alternative has its own usage and geographic limits)
 
 ## Repo reconciliation / sources of truth
 
@@ -75,7 +67,7 @@ Sources to check with the actual account agreement:
 - `Docs/PROJECT.txt`, `Docs/ARCHITECTURE.txt`, `Docs/DESIGN_LOCK.txt` and the root README describe the earlier pilot implementation; they are **historical / operational documentation**, not evidence that the present proposal has been implemented.
 - `configs/lexicon.yaml` currently lists **11** atmosphere terms; the modern research goal specifies **nine** but has not frozen the exact taxonomy. The pilot evaluates **calm, inviting, safe**. Do not silently select nine of the eleven. Resolve into one future versioned taxonomy before labeling.
 - Current corpus reported by the archived audit: **214 reviews across 43 places**. These numbers are development provenance, not a validation claim.
-- The attached Project Design v2 proposed a detailed Section-4 panel, NLI training, and thresholds; these are **candidate methods** and are not committed implementation requirements.
+- The attached Project Design v2 proposed Stage 1A panel annotation and NLI adaptation. The [2026-11-10 Stage 1A refinement](STAGE1A_REFINED_DESIGN_2026-11-10.md) records the current **agreed research-design decisions**, not completed experiments.
 
 ## Research precedents / evidence boundaries
 
@@ -90,11 +82,11 @@ These references support the *plausibility of components*, not the empirical val
 ## Next design questions (not yet decided)
 
 1. Final nine category names and rubric; whether any axes are genuinely bipolar.
-2. Research-appropriate, permitted source data for review text and images.
-3. Human-adjudicated reference sampling protocol and what constitutes acceptable errors.
-4. Role of indirect/environmental indicators in the primary text target.
+2. Clause segmentation edge cases and multi-evidence alignment across models.
+3. Panel prompt stability, silver-label construction and NLI-specific supervision masks.
+4. Evidence-type separation (explicit versus direct indicators versus indirect) and Stage 2 shared-bias diagnostics.
 5. Stage 1B feature-quality gates and treatment of uneven photo coverage.
 6. Stage 2 estimand, spatial controls, and target sample sizes after pilot prevalence checks.
 7. Stage 3 criteria for transitioning from association research to visual prediction.
 
-**Record of decision:** Keep Sections **3–7** as the project backbone. Do **not** prematurely lock the model choices or interpret prior pilot counts/LLM agreement as accuracy. This is a design update only; no pipeline implementation or new experiments were performed in this change.
+**Record of decision:** Keep Sections **3–7** as the project backbone. Use the agreed Stage 1A NLI-first candidate comparison without assuming a winner; do **not** prematurely lock other model choices or interpret prior pilot counts/LLM agreement as accuracy. This is a design update only; no pipeline implementation or new experiments were performed in this change.
