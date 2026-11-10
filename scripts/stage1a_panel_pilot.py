@@ -24,8 +24,8 @@ STRENGTHS = ("weak", "strong")
 ATTRIBUTIONS = ("first_person", "secondhand", "hedged", "general")
 VERSION = "stage1a_clauses_panel_v1"
 # Only split coordinating conjunctions at an explicit pause; no semantic rewrite.
-BOUNDARY = re.compile(r"[.!?;]+(?=\\s|$)|,(?=\\s+(?:but|however|although|yet|while)\\b)", re.I)
-CLAUSE_SPLIT = re.compile(r"\\s+(?:but|however|yet|whereas|while)\\s+", re.I)
+BOUNDARY = re.compile(r"[.!?;]+(?=\s|$)|,(?=\s+(?:but|however|although|yet|while)\b)", re.I)
+CLAUSE_SPLIT = re.compile(r"\s+(?:but|however|yet|whereas|while)\s+", re.I)
 
 RUBRIC = {
     "calm": {
@@ -44,7 +44,7 @@ RUBRIC = {
         "hypothesis": "People experience this place as safe.",
     },
 }
-RUBRIC_TEXT = "\\n".join(
+RUBRIC_TEXT = "\n".join(
     f"{e}: {RUBRIC[e]['definition']} EXCLUDE: {RUBRIC[e]['exclude']}"
     for e in PILOT
 )
@@ -238,10 +238,10 @@ def validate_response(result: dict, units: list[dict]) -> list[dict]:
 
 
 def ollama_call(base: str, model: str, prompt_id: str, review: dict, timeout: int) -> dict:
-    user = ("RUBRIC:\\n" + RUBRIC_TEXT + "\\nFULL ORIGINAL REVIEW:\\n"
-            + review["text"] + "\\nNUMBERED CLAUSES (quotes must come from these):\\n"
+    user = ("RUBRIC:\n" + RUBRIC_TEXT + "\nFULL ORIGINAL REVIEW:\n"
+            + review["text"] + "\nNUMBERED CLAUSES (quotes must come from these):\n"
             + json.dumps(review["units"], ensure_ascii=False)
-            + "\\nReturn one label for each clause x " + ", ".join(PILOT) + ".")
+            + "\nReturn one label for each clause x " + ", ".join(PILOT) + ".")
     payload = {
         "model": model,
         "messages": [{"role": "system", "content": PROMPTS[prompt_id]},
@@ -317,7 +317,7 @@ def summarize(annotations: list[dict]) -> dict:
 def write_jsonl(path: Path, rows: list[dict]) -> None:
     with path.open("w", encoding="utf-8") as handle:
         for row in rows:
-            handle.write(json.dumps(row, ensure_ascii=False) + "\\n")
+            handle.write(json.dumps(row, ensure_ascii=False) + "\n")
 
 
 def main() -> None:
@@ -346,7 +346,7 @@ def main() -> None:
                 "rubric_sha256": sha256(RUBRIC_TEXT),
                 "validation": "LLM agreement/fidelity only; no human labels",
                 "run_mode": "prepare_only" if args.prepare_only else "ollama_panel"}
-    (args.output / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\\n", encoding="utf-8")
+    (args.output / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
     write_jsonl(args.output / "clauses.jsonl", reviews)
     print("Prepared", len(reviews), "real reviews, with", manifest["n_clauses"], "clauses")
     if args.prepare_only:
@@ -368,7 +368,7 @@ def main() -> None:
     diagnostic = summarize(outputs)
     write_jsonl(args.output / "annotations.jsonl", outputs)
     write_jsonl(args.output / "consensus.jsonl", diagnostic.pop("consensus"))
-    (args.output / "diagnostics.json").write_text(json.dumps(diagnostic, indent=2) + "\\n", encoding="utf-8")
+    (args.output / "diagnostics.json").write_text(json.dumps(diagnostic, indent=2) + "\n", encoding="utf-8")
     print("Completed. Agreement is not semantic accuracy.")
 
 
