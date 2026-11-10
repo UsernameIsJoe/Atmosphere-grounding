@@ -246,8 +246,10 @@ def ollama_call(base: str, model: str, prompt_id: str, review: dict, timeout: in
         "model": model,
         "messages": [{"role": "system", "content": PROMPTS[prompt_id]},
                      {"role": "user", "content": user}],
-        "stream": False, "format": SCHEMA, "options": {"temperature": 0}
+        "stream": False, "format": SCHEMA, "options": {"temperature": 0, "num_ctx": 8192, "num_predict": 3072}
     }
+    if model.lower().startswith("qwen3:"):
+        payload["think"] = False  # constrain Qwen3 to direct JSON, not hidden reasoning text
     req = urllib.request.Request(base.rstrip("/") + "/api/chat",
         data=json.dumps(payload, ensure_ascii=False).encode("utf-8"),
         headers={"Content-Type": "application/json"}, method="POST")
@@ -325,6 +327,8 @@ def main() -> None:
     p.add_argument("--input", type=Path, default=ROOT / "data/processed/reviews.jsonl")
     p.add_argument("--output", type=Path, default=ROOT / "reports/stage1a_panel_pilot")
     p.add_argument("--max-reviews", type=int, default=12, help="0 means all reviews")
+    p.add_argument("--sample-mode", choices=["first", "diverse"], default="first",
+                   help="diverse samples at most one review per place before cycling")
     p.add_argument("--prepare-only", action="store_true")
     p.add_argument("--models", nargs=3, default=["qwen3:8b", "gemma3:4b", "llama3.1:8b"],
                    metavar=("QWEN", "GEMMA", "LLAMA"))
@@ -335,7 +339,20 @@ def main() -> None:
         p.error("--max-reviews must be >= 0")
     if len(set(args.models)) != 3:
         p.error("Three distinct model tags are required")
-    rows = load_real_reviews(args.input, args.max_reviews)
+    rows = load_real_reviews(args.input, 0 if args.sample_mode == "diverse" else args.max_reviews)
+    if args.sample_mode == "diverse":
+        by_place = collections.defaultdict(list)
+        for row in rows:
+            by_place[row["place_id"]].append(row)
+        chosen = []
+        while by_place and (not args.max_reviews or len(chosen) < args.max_reviews):
+            for place_id in list(by_place):
+                chosen.append(by_place[place_id].pop(0))
+                if not by_place[place_id]:
+                    del by_place[place_id]
+                if args.max_reviews and len(chosen) >= args.max_reviews:
+                    break
+        rows = chosen
     reviews = prepare(rows)
     args.output.mkdir(parents=True, exist_ok=True)
     manifest = {"version": VERSION, "pilot_categories": list(PILOT),
@@ -345,7 +362,8 @@ def main() -> None:
                 "models": args.models, "prompts_sha256": {k: sha256(v) for k, v in PROMPTS.items()},
                 "rubric_sha256": sha256(RUBRIC_TEXT),
                 "validation": "LLM agreement/fidelity only; no human labels",
-                "run_mode": "prepare_only" if args.prepare_only else "ollama_panel"}
+                "run_mode": "prepare_only" if args.prepare_only else "ollama_panel",
+                "sample_mode": args.sample_mode}
     (args.output / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
     write_jsonl(args.output / "clauses.jsonl", reviews)
     print("Prepared", len(reviews), "real reviews, with", manifest["n_clauses"], "clauses")
@@ -353,18 +371,30 @@ def main() -> None:
         print("Inspect", args.output / "clauses.jsonl")
         return
     outputs = []
+    errors = []
     for review in reviews:
         for model in args.models:
             for prompt in ("A", "B"):
-                resp = ollama_call(args.ollama_url, model, prompt, review, args.timeout)
-                for item in resp["labels"]:
-                    outputs.append({**item, "place_id": review["place_id"],
-                                    "review_index": review["review_index"],
-                                    "source_sha256": review["source_sha256"],
-                                    "model": model, "prompt": prompt,
-                                    "model_response": resp["model_response"]})
-                print(review["place_id"], review["review_index"], model, prompt, "OK", flush=True)
-    # Publish only after complete success; never silently accept missing panel votes.
+                try:
+                    resp = ollama_call(args.ollama_url, model, prompt, review, args.timeout)
+                    for item in resp["labels"]:
+                        outputs.append({**item, "place_id": review["place_id"],
+                                        "review_index": review["review_index"],
+                                        "source_sha256": review["source_sha256"],
+                                        "model": model, "prompt": prompt,
+                                        "model_response": resp["model_response"]})
+                    print(review["place_id"], review["review_index"], model, prompt, "OK", flush=True)
+                except (ValueError, OSError, KeyError, TypeError) as exc:
+                    errors.append({"place_id": review["place_id"], "review_index": review["review_index"],
+                                   "model": model, "prompt": prompt, "error": str(exc)})
+                    print(review["place_id"], review["review_index"], model, prompt,
+                          "ERROR:", str(exc), flush=True)
+                # Save incremental results so a failed or interrupted panel remains inspectable.
+                write_jsonl(args.output / "annotations.jsonl", outputs)
+                write_jsonl(args.output / "errors.jsonl", errors)
+    if errors:
+        raise SystemExit(f"Panel incomplete: {len(errors)} request(s) failed; see errors.jsonl")
+    # Publish majority results only for a complete panel; no silent missing votes.
     diagnostic = summarize(outputs)
     write_jsonl(args.output / "annotations.jsonl", outputs)
     write_jsonl(args.output / "consensus.jsonl", diagnostic.pop("consensus"))
