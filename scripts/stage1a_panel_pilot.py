@@ -237,29 +237,67 @@ def validate_response(result: dict, units: list[dict]) -> list[dict]:
     return validated
 
 
-def ollama_call(base: str, model: str, prompt_id: str, review: dict, timeout: int) -> dict:
-    user = ("RUBRIC:\n" + RUBRIC_TEXT + "\nFULL ORIGINAL REVIEW:\n"
-            + review["text"] + "\nNUMBERED CLAUSES (quotes must come from these):\n"
-            + json.dumps(review["units"], ensure_ascii=False)
-            + "\nReturn one label for each clause x " + ", ".join(PILOT) + ".")
-    payload = {
-        "model": model,
-        "messages": [{"role": "system", "content": PROMPTS[prompt_id]},
-                     {"role": "user", "content": user}],
-        "stream": False, "format": SCHEMA, "options": {"temperature": 0, "num_ctx": 8192, "num_predict": 3072}
-    }
-    if model.lower().startswith("qwen3:"):
-        payload["think"] = False  # constrain Qwen3 to direct JSON, not hidden reasoning text
-    req = urllib.request.Request(base.rstrip("/") + "/api/chat",
-        data=json.dumps(payload, ensure_ascii=False).encode("utf-8"),
-        headers={"Content-Type": "application/json"}, method="POST")
-    with urllib.request.urlopen(req, timeout=timeout) as response:
-        body = json.load(response)
-    text = body.get("message", {}).get("content", "")
-    labels = validate_response(json.loads(text), review["units"])
-    return {"labels": labels, "model_response": {
-        "model": body.get("model"), "done_reason": body.get("done_reason"),
-        "prompt_eval_count": body.get("prompt_eval_count"), "eval_count": body.get("eval_count")}}
+def ollama_call(base: str, model: str, prompt_id: str, review: dict, timeout: int,
+                max_units_per_call: int = 2) -> dict:
+    """Batch clause IDs in small requests while retaining the FULL review as context.
+
+    Fail closed: never accept a truncated JSON response, missing labels or invented spans.
+    """
+    if max_units_per_call < 1:
+        raise ValueError("max_units_per_call must be positive")
+    all_labels = []
+    call_metadata = []
+    units = review["units"]
+    for start in range(0, len(units), max_units_per_call):
+        batch = units[start:start + max_units_per_call]
+        user = ("RUBRIC:\n" + RUBRIC_TEXT + "\nFULL ORIGINAL REVIEW:\n"
+                + review["text"] + "\nTARGET CLAUSES (only label these IDs):\n"
+                + json.dumps(batch, ensure_ascii=False)
+                + "\nReturn exactly one label for each target clause x " + ", ".join(PILOT) + ".")
+        payload = {
+            "model": model,
+            "messages": [{"role": "system", "content": PROMPTS[prompt_id]},
+                         {"role": "user", "content": user}],
+            "stream": False, "format": SCHEMA,
+            "options": {"temperature": 0, "num_ctx": 8192, "num_predict": 3072}
+        }
+        if model.lower().startswith("qwen3:"):
+            payload["think"] = False
+        req = urllib.request.Request(base.rstrip("/") + "/api/chat",
+            data=json.dumps(payload, ensure_ascii=False).encode("utf-8"),
+            headers={"Content-Type": "application/json"}, method="POST")
+        # At most two tries: first full JSON schema, then same small batch with larger output cap.
+        for attempt in range(2):
+            if attempt:
+                payload["options"]["num_predict"] = 6144
+                req = urllib.request.Request(base.rstrip("/") + "/api/chat",
+                    data=json.dumps(payload, ensure_ascii=False).encode("utf-8"),
+                    headers={"Content-Type": "application/json"}, method="POST")
+            with urllib.request.urlopen(req, timeout=timeout) as response:
+                body = json.load(response)
+            raw = body.get("message", {}).get("content", "")
+            try:
+                labels = validate_response(json.loads(raw), batch)
+            except (json.JSONDecodeError, ValueError, TypeError) as exc:
+                if attempt == 0:
+                    print(f"{model} {prompt_id} units {start}:{start + len(batch)} "
+                          f"JSON/schema invalid ({exc}); retrying batch", flush=True)
+                    continue
+                raise ValueError(
+                    f"{model} {prompt_id} units {start}:{start + len(batch)} "
+                    f"invalid JSON/schema after retry; done_reason={body.get('done_reason')}, "
+                    f"content_length={len(raw)}; error={exc}") from exc
+            all_labels.extend(labels)
+            call_metadata.append({
+                "model": body.get("model"), "done_reason": body.get("done_reason"),
+                "prompt_eval_count": body.get("prompt_eval_count"),
+                "eval_count": body.get("eval_count"),
+                "batch_unit_ids": [u["unit_id"] for u in batch], "attempts": attempt + 1
+            })
+            break
+    if len(all_labels) != len(units) * len(PILOT):
+        raise ValueError("Incomplete batched annotation; no partial labels accepted")
+    return {"labels": all_labels, "model_response": {"calls": call_metadata}}
 
 
 def aggregate(votes: list[dict]) -> dict:
