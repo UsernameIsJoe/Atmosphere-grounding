@@ -26,7 +26,6 @@ from stage1a_component1_ollama import (EXTRACT_SYSTEM,EXTRACTION_SCHEMA,
 from stage1a_component2_v3 import (SYSTEM as C2_SYSTEM,SCHEMA as C2_SCHEMA,
  validate_response as validate_c2,mechanical_audit,EMOTIONS)
 from stage1a_component2_eligibility_pilot import PILOT_EMOTIONS
-from stage1a_component3_abc import HYPOTHESES as DIRECTIONAL
 from stage1a_component3_real_google_diagnostic import HYPOTHESES as NLI_HYPOTHESES
 from stage1a_relation_pilot import select_pilot
 from stage1a_component3_real_google_diagnostic import select as earlier_nli_select
@@ -37,10 +36,23 @@ OUTPUT=ROOT/"reports/stage1a_final_three_tests"
 MODEL="qwen3:8b"
 NLI_MODEL="facebook/bart-large-mnli"
 VERSION="final-three-stage-2026-11-10-v1"
-# The natural text itself NEVER comes from these patterns. They are sample
+DIRECTIONAL={
+ "calm":"This place feels calm.",
+ "inviting":"This place feels inviting.",
+ "safe":"This place feels safe.",
+}
+# The natural text itself NEVER comes from these sets. They are sample
 # strata only, and NOT a gold or ground-truth evidence classification.
-REPORTED=re.compile(r"\b(feel|feels|felt|peaceful|calm|safe|unsafe|protected|comforted|welcoming|welcome|inviting|relaxing|quiet)\b",re.I)
-INDICATOR=re.compile(r"\b(police|patrol|siren|traffic|gate|light|shade|bench|tree|elevator|public|fence|crowd|path|stair|noisy|loud|busy|closed|playground)\b",re.I)
+REPORTED_LEMMAS={"feel","peaceful","calm","safe","unsafe","protect","comfort","welcome","invite","relax","quiet"}
+INDICATOR_LEMMAS={"police","patrol","siren","traffic","gate","light","shade","bench","tree","elevator","public","fence","crowd","path","stair","noisy","loud","busy","close","playground"}
+_SAMPLING_NLP=None
+
+def sampling_lemmas(text):
+ global _SAMPLING_NLP
+ if _SAMPLING_NLP is None:
+  import spacy
+  _SAMPLING_NLP=spacy.load("en_core_web_sm",disable=["parser","ner"])
+ return {t.lemma_.lower() for t in _SAMPLING_NLP(text) if not t.is_space}
 CATEGORIES=("reported_word_candidate","environmental_word_candidate","other_control_candidate")
 QUOTA_PER_CATEGORY=6
 
@@ -85,8 +97,9 @@ def source_manifest():
    if a<0:raise ValueError("Cannot reconstruct source offsets")
    b=a+len(part);loc=b
    if len(part.split())<5 or len(part.split())>65:continue
-   if REPORTED.search(part):cat=CATEGORIES[0]
-   elif INDICATOR.search(part):cat=CATEGORIES[1]
+   lemmas=sampling_lemmas(part)
+   if REPORTED_LEMMAS & lemmas:cat=CATEGORIES[0]
+   elif INDICATOR_LEMMAS & lemmas:cat=CATEGORIES[1]
    else:cat=CATEGORIES[2]
    pool[cat].append({"row":row,"review_index":rev["review_index"],
     "place_id":rev["place_id"],"publish_time":rev["publish_time"],
@@ -210,12 +223,14 @@ def extraction(case,i,args):
 def relevance(case,i,args,previous):
  src=previous["records"][i]["output"]
  claims=src["observations"];sentence=case["text"]
+ review=read_lines(REVIEWS)[case["row"]]["text"]
+ if review[case["start"]:case["end"]]!=sentence:raise ValueError("Full review/source span mismatch")
  numbered=[{"index":j,"claim":c["claim"],"qualifiers":c["qualifiers"],
    "evidence_quote":c["evidence_quote"],"component1_status":c["status"]}
     for j,c in enumerate(claims)]
  if not claims:return {"decisions":[],"n_claims":0}
  pred,_=call_ollama(args.url,MODEL,C2_SYSTEM,
-  "REVIEW CONTEXT (for reference only):\n"+sentence+
+  "REVIEW CONTEXT (for reference only):\n"+review+
   "\nORIGINAL SENTENCE (authority):\n"+sentence+
   "\nEMOTION DEFINITIONS:\n"+json.dumps(PILOT_EMOTIONS,ensure_ascii=False)+
   "\nFROZEN COMPONENT 1 CANDIDATES:\n"+json.dumps(numbered,ensure_ascii=False),
@@ -243,6 +258,7 @@ def nli(case,i,args,extraction_package,relevance_package,score):
   metarelevance=score(sentence,relevance_hyp)
   evidence=[]
   unresolved=[]
+  seen_quotes=set()
   for c in data:
    d=c["decision"]
    a=next(x for x in d["applicability"] if x["emotion"]==emotion)
@@ -255,7 +271,8 @@ def nli(case,i,args,extraction_package,relevance_package,score):
       (route=="needs_review" and flags==["direct_without_explicit_experience_or_atmosphere"]
        and d["place_related"]=="yes" and a["status"]=="direct"
        and c["component1_status"]=="candidate_passed_checks"))
-   if permitted and quote and quote in sentence:
+   if permitted and quote and quote in sentence and quote not in seen_quotes:
+    seen_quotes.add(quote)
     evidence.append({"candidate_index":c["index"],"source_quote":quote,
      "route":route,"advisory_flags":flags,"nli":score(quote,hypothesis)})
    elif route=="needs_review":
