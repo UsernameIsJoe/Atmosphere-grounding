@@ -238,66 +238,104 @@ def validate_response(result: dict, units: list[dict]) -> list[dict]:
 
 
 def ollama_call(base: str, model: str, prompt_id: str, review: dict, timeout: int,
-                max_units_per_call: int = 2) -> dict:
-    """Batch clause IDs in small requests while retaining the FULL review as context.
+                trace_path: Path | None = None) -> dict:
+    """Annotate one clause at a time, retrying category-by-category if needed.
 
-    Fail closed: never accept a truncated JSON response, missing labels or invented spans.
+    Full review always stays in context. Every original raw model response
+    (including malformed ones) is preserved in a JSONL trace for audit.
+    No repairs or fake labels are added to model predictions.
     """
-    if max_units_per_call < 1:
-        raise ValueError("max_units_per_call must be positive")
     all_labels = []
-    call_metadata = []
-    units = review["units"]
-    for start in range(0, len(units), max_units_per_call):
-        batch = units[start:start + max_units_per_call]
-        user = ("RUBRIC:\n" + RUBRIC_TEXT + "\nFULL ORIGINAL REVIEW:\n"
-                + review["text"] + "\nTARGET CLAUSES (only label these IDs):\n"
-                + json.dumps(batch, ensure_ascii=False)
-                + "\nReturn exactly one label for each target clause x " + ", ".join(PILOT) + ".")
-        payload = {
-            "model": model,
-            "messages": [{"role": "system", "content": PROMPTS[prompt_id]},
-                         {"role": "user", "content": user}],
-            "stream": False, "format": SCHEMA,
-            "options": {"temperature": 0, "num_ctx": 8192, "num_predict": 3072}
-        }
-        if model.lower().startswith("qwen3:"):
-            payload["think"] = False
-        req = urllib.request.Request(base.rstrip("/") + "/api/chat",
-            data=json.dumps(payload, ensure_ascii=False).encode("utf-8"),
-            headers={"Content-Type": "application/json"}, method="POST")
-        # At most two tries: first full JSON schema, then same small batch with larger output cap.
-        for attempt in range(2):
-            if attempt:
-                payload["options"]["num_predict"] = 6144
-                req = urllib.request.Request(base.rstrip("/") + "/api/chat",
-                    data=json.dumps(payload, ensure_ascii=False).encode("utf-8"),
-                    headers={"Content-Type": "application/json"}, method="POST")
-            with urllib.request.urlopen(req, timeout=timeout) as response:
-                body = json.load(response)
-            raw = body.get("message", {}).get("content", "")
-            try:
-                labels = validate_response(json.loads(raw), batch)
-            except (json.JSONDecodeError, ValueError, TypeError) as exc:
-                if attempt == 0:
-                    print(f"{model} {prompt_id} units {start}:{start + len(batch)} "
-                          f"JSON/schema invalid ({exc}); retrying batch", flush=True)
-                    continue
+    calls = []
+    for unit in review["units"]:
+        pending = list(PILOT)
+        # First attempt: three labels for one clause. Fallback: one category per call.
+        for categories in (list(PILOT),):
+            labels = _request_labels(base, model, prompt_id, review, unit,
+                                     categories, timeout, trace_path)
+            if labels is not None:
+                all_labels.extend(labels)
+                pending = []
+                break
+        for category in pending:
+            labels = _request_labels(base, model, prompt_id, review, unit,
+                                     [category], timeout, trace_path)
+            if labels is None:
                 raise ValueError(
-                    f"{model} {prompt_id} units {start}:{start + len(batch)} "
-                    f"invalid JSON/schema after retry; done_reason={body.get('done_reason')}, "
-                    f"content_length={len(raw)}; error={exc}") from exc
+                    f"{model} {prompt_id} unit {unit['unit_id']} category {category} "
+                    "failed even after single-category fallback; inspect raw_responses.jsonl")
             all_labels.extend(labels)
-            call_metadata.append({
-                "model": body.get("model"), "done_reason": body.get("done_reason"),
-                "prompt_eval_count": body.get("prompt_eval_count"),
-                "eval_count": body.get("eval_count"),
-                "batch_unit_ids": [u["unit_id"] for u in batch], "attempts": attempt + 1
-            })
-            break
-    if len(all_labels) != len(units) * len(PILOT):
-        raise ValueError("Incomplete batched annotation; no partial labels accepted")
-    return {"labels": all_labels, "model_response": {"calls": call_metadata}}
+        calls.append({"unit_id": unit["unit_id"], "categories": list(PILOT)})
+    if len(all_labels) != len(review["units"]) * len(PILOT):
+        raise ValueError("Incomplete clause-level model response")
+    return {"labels": all_labels, "model_response": {"model": model, "calls": calls}}
+
+
+def _request_labels(base: str, model: str, prompt_id: str, review: dict,
+                    unit: dict, categories: list[str], timeout: int,
+                    trace_path: Path | None) -> list[dict] | None:
+    # Narrow schema explicitly to the requested category set.
+    item_schema = json.loads(json.dumps(ITEM_SCHEMA))
+    item_schema["properties"]["emotion"]["enum"] = categories
+    schema = {"type": "object", "additionalProperties": False,
+              "properties": {"labels": {"type": "array", "items": item_schema}},
+              "required": ["labels"]}
+    user = ("RUBRIC:\n"
+            + "\n".join(f"{e}: {RUBRIC[e]['definition']} EXCLUDE: {RUBRIC[e]['exclude']}"
+                        for e in categories)
+            + "\nFULL ORIGINAL REVIEW:\n" + review["text"]
+            + "\nSINGLE TARGET CLAUSE:\n" + json.dumps(unit, ensure_ascii=False)
+            + "\nOUTPUT EXACTLY " + str(len(categories))
+            + " labels in labels array, one for each of: " + ", ".join(categories)
+            + ". Every label MUST have unit_id=" + str(unit["unit_id"])
+            + ". For not_relevant or uncertain use empty evidence_span and condition, "
+              "null strength/type/attribution, and [] evidence_records. "
+              "Keep rationale short (under 12 words).")
+    payload = {"model": model,
+               "messages": [{"role": "system", "content": PROMPTS[prompt_id]},
+                            {"role": "user", "content": user}],
+               "stream": False, "format": schema,
+               "options": {"temperature": 0, "num_ctx": 8192, "num_predict": 2048}}
+    if model.lower().startswith("qwen3:"):
+        payload["think"] = False
+    request = urllib.request.Request(
+        base.rstrip("/") + "/api/chat",
+        data=json.dumps(payload, ensure_ascii=False).encode("utf-8"),
+        headers={"Content-Type": "application/json"}, method="POST")
+    with urllib.request.urlopen(request, timeout=timeout) as response:
+        body = json.load(response)
+    raw = body.get("message", {}).get("content", "")
+    record = {"place_id": review["place_id"], "review_index": review["review_index"],
+              "source_sha256": review["source_sha256"], "unit_id": unit["unit_id"],
+              "model": model, "prompt": prompt_id, "categories": categories,
+              "raw_content": raw, "done_reason": body.get("done_reason"),
+              "prompt_eval_count": body.get("prompt_eval_count"),
+              "eval_count": body.get("eval_count")}
+    try:
+        # A single-unit validated response must include every requested category
+        # exactly once, and must preserve exact source evidence quotes.
+        parsed = json.loads(raw)
+        if not isinstance(parsed, dict) or set(parsed) != {"labels"} or not isinstance(parsed["labels"], list):
+            raise ValueError("Invalid response envelope")
+        if len(parsed["labels"]) != len(categories):
+            raise ValueError(f"Expected {len(categories)} labels, got {len(parsed['labels'])}")
+        expected = {(unit["unit_id"], e) for e in categories}
+        actual = [(v.get("unit_id"), v.get("emotion")) for v in parsed["labels"]]
+        if set(actual) != expected or len(actual) != len(expected):
+            raise ValueError("Missing or duplicate target unit/emotion")
+        labels = [validate_label(v, unit) for v in parsed["labels"]]
+        record["validation"] = "valid"
+    except (json.JSONDecodeError, ValueError, TypeError, KeyError, AttributeError) as exc:
+        record["validation"] = "invalid"
+        record["error"] = str(exc)
+        labels = None
+        print(f"{model} {prompt_id} unit {unit['unit_id']} {','.join(categories)} "
+              f"invalid ({exc})", flush=True)
+    finally:
+        if trace_path is not None:
+            with trace_path.open("a", encoding="utf-8") as file:
+                file.write(json.dumps(record, ensure_ascii=False) + "\n")
+    return labels
 
 
 def aggregate(votes: list[dict]) -> dict:
@@ -410,11 +448,12 @@ def main() -> None:
         return
     outputs = []
     errors = []
+    trace = args.output / "raw_responses.jsonl"
     for review in reviews:
         for model in args.models:
             for prompt in ("A", "B"):
                 try:
-                    resp = ollama_call(args.ollama_url, model, prompt, review, args.timeout)
+                    resp = ollama_call(args.ollama_url, model, prompt, review, args.timeout, trace)
                     for item in resp["labels"]:
                         outputs.append({**item, "place_id": review["place_id"],
                                         "review_index": review["review_index"],
