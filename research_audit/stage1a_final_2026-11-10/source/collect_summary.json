@@ -1,0 +1,26 @@
+{
+  "n_places": 43,
+  "n_reviews": 214,
+  "n_images": 128,
+  "quota": {
+    "text_search": {
+      "used": 8,
+      "soft_cap": 20,
+      "hard_cap": 20,
+      "remaining_soft": 12
+    },
+    "place_details_enterprise": {
+      "used": 43,
+      "soft_cap": 60,
+      "hard_cap": 60,
+      "remaining_soft": 17
+    },
+    "place_photos": {
+      "used": 128,
+      "soft_cap": 180,
+      "hard_cap": 180,
+      "remaining_soft": 52
+    }
+  },
+  "dry_run": false
+}
