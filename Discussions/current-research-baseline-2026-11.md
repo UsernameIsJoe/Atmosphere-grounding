@@ -1,15 +1,21 @@
 # Atmosphere Grounding — Current Research Baseline and Open Methodology
 
-**Status:** Current discussion baseline (2026-11-01), **research in progress, not a design lock**.  
+**Status:** Research discussion baseline (2026-11-01), amended 2026-11-10 for the **11-category taxonomy and 3-category pilot**; Stage 1A method decisions are governed by [the refined design](../Docs/STAGE1A_REFINED_DESIGN_2026-11-10.md).  
 **Authority:** The researcher's latest description in the November discussion takes precedence when interpreting goals. Prior repo architecture, code, and discussion notes remain historical references until intentionally revised. This file documents decisions and candidate methods; it does **not** claim they are implemented or validated.
 
 ## 1. Research objective
 
-Learn **how observable image qualities relate to nine theory-supported atmosphere/emotion categories**, using descriptions/reviews of the *same physical locations* as a source of emotional evidence. The ultimate aim is an **emotion-aware visual predictor**, not simply a multimodal classifier that always needs text.
+Learn **how observable image qualities relate to eleven theory-supported atmosphere/emotion categories**, using descriptions/reviews of the *same physical locations* as a source of emotional evidence. The ultimate aim is an **emotion-aware visual predictor**, not simply a multimodal classifier that always needs text.
 
 Earlier CLIPSeg-based evaluation struggled because atmosphere terms are often adjectives, experiential attributes, or intangible concepts, whereas visual segmentation is more naturally suited to objects and regions. The project therefore separates **visual observations** from **textual emotional evidence**, then learns their relationship.
 
-The exact nine categories and supporting attributes are part of the conceptual framework but are not fully enumerated in this discussion. Do not invent or lock a taxonomy.
+The authoritative **eleven-category taxonomy is enumerated in `configs/lexicon.yaml`**: calm, energetic, inviting, excluding, legible, disorienting, open, compressed, exploratory, safe, vibrant. The active **three-category Stage 1A pilot** is calm, inviting and safe; see `configs/cambridge_pilot.yaml`. The researcher's 2026-11-10 decision supersedes all earlier claims of nine.
+
+## Update — 2026-11-10: Stage 1A implementation
+
+The original November 1 method survey below is retained as historical research discussion. **Current Stage 1A decisions supersede its older NLI/ABSA/extraction proposals**: deterministic clause-first segmentation, a three-family local Ollama panel (two prompt versions), full source spans, majority silver labels plus vote distributions, source/check diagnostics, NLI-first student adaptation later, and Stage 2 annotator / explicit-vs-indirect sensitivity. **No human labels** in Stage 1A. See [the detailed refined design](../Docs/STAGE1A_REFINED_DESIGN_2026-11-10.md).
+
+Initial pilot code: `scripts/stage1a_panel_pilot.py`, validated offline by `tests/test_stage1a_panel_pilot.py`. Pilot labels are model-consensus-derived, not verified human perception. The full taxonomy is **11**, active pilot **3**.
 
 ## 2. Dataset and correspondence
 
@@ -21,7 +27,7 @@ The exact nine categories and supporting attributes are part of the conceptual f
 
 ## 3. Research structure — three substantive stages
 
-### Stage 1A. Text → evidence concerning nine emotions (OPEN METHOD)
+### Stage 1A. Text → evidence concerning eleven categories (current method: LLM panel + NLI-first)
 
 **Input:** Human-written comments/reviews grouped by location.  
 **Question:** How can text be consistently and fairly evaluated *for evidence about a place's atmosphere*, rather than merely for the writer's own emotions or lexical similarity to adjectives?  
@@ -103,7 +109,7 @@ Example distinction:
 
 ## 6. Immediate next research focus
 
-**Text Stage 1A:** research how to construct consistent, theory-grounded NLI hypotheses for all nine emotions; compare direct review-to-NLI with aspect extraction followed by NLI, and an embeddings baseline. Test on a small annotated set before fixing a scoring formula. Do not conflate the sentiment of a review with emotional qualities attributable to the location.
+**Text Stage 1A:** research how to construct consistent, theory-grounded NLI hypotheses for all eleven categories; compare direct review-to-NLI with aspect extraction followed by NLI, and an embeddings baseline. Test on a small annotated set before fixing a scoring formula. Do not conflate the sentiment of a review with emotional qualities attributable to the location.
 
 ## 7. Relationship to earlier repository materials
 
