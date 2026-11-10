@@ -21,7 +21,7 @@ Use a *set of claim-level NLI labels* per condition. Report any support, any con
 
 ### Police patrol interpretation
 
-The researcher explicitly agrees with the previous model's labeling of the police patrol example. **Do not silently downgrade the annotation or force a universal indirect-safety rule.** The v3 model's original `direct` label is preserved, and the v3 mechanical checker flag remains visible as an alternative rubric—not an authoritative semantic error. As currently routed by v3, this enters C as original-source review fallback, not B. That sensitivity of a hand-authored rubric is itself a finding to examine when interpreting the A/B/C outcome. If a future experiment adopts the researcher's preferred policy, it must version the change explicitly and rerun the same paired comparisons.
+The researcher explicitly agrees with the previous model's labeling of the police patrol example. **Do not silently downgrade the annotation or force a universal indirect-safety rule.** The v3 model's original `direct` label and original flag remain visible. For this A/B/C integration, a claim **with this one sole advisory flag** (`direct_without_explicit_experience_or_atmosphere`) is routed into B as an NLI candidate when its place eligibility is yes, the original source quote is literal, and Component 1 passed its checks. No override applies when another fidelity, quote or eligibility error exists. Both the raw route and effective route are recorded. This makes the researcher's accepted police-patrol interpretation testable without silently changing model outputs.
 
 ### Run locally, after Component 2 v3
 
