@@ -261,6 +261,10 @@ def ollama_call(base: str, model: str, prompt_id: str, review: dict, timeout: in
             labels = _request_labels(base, model, prompt_id, review, unit,
                                      [category], timeout, trace_path)
             if labels is None:
+                labels = _request_labels(base, model, prompt_id, review, unit,
+                                         [category], timeout, trace_path,
+                                         strict_retry=True)
+            if labels is None:
                 raise ValueError(
                     f"{model} {prompt_id} unit {unit['unit_id']} category {category} "
                     "failed even after single-category fallback; inspect raw_responses.jsonl")
@@ -273,7 +277,7 @@ def ollama_call(base: str, model: str, prompt_id: str, review: dict, timeout: in
 
 def _request_labels(base: str, model: str, prompt_id: str, review: dict,
                     unit: dict, categories: list[str], timeout: int,
-                    trace_path: Path | None) -> list[dict] | None:
+                    trace_path: Path | None, strict_retry: bool = False) -> list[dict] | None:
     # Narrow schema explicitly to the requested category set.
     item_schema = json.loads(json.dumps(ITEM_SCHEMA))
     item_schema["properties"]["emotion"]["enum"] = categories
@@ -288,9 +292,10 @@ def _request_labels(base: str, model: str, prompt_id: str, review: dict,
             + "\nOUTPUT EXACTLY " + str(len(categories))
             + " labels in labels array, one for each of: " + ", ".join(categories)
             + ". Every label MUST have unit_id=" + str(unit["unit_id"])
-            + ". For not_relevant or uncertain use empty evidence_span and condition, "
-              "null strength/type/attribution, and [] evidence_records. "
-              "Keep rationale short (under 12 words).")
+            + '. For not_relevant or uncertain: evidence_span must be the empty STRING "" '
+              '(never "[]", "null", or a quoted placeholder); condition must be ""; '
+              'strength, type and attribution must be JSON null; evidence_records must be JSON []. '
+              'Do not invent any evidence phrase. Rationale must be one short sentence.')
     payload = {"model": model,
                "messages": [{"role": "system", "content": PROMPTS[prompt_id]},
                             {"role": "user", "content": user}],
@@ -298,6 +303,13 @@ def _request_labels(base: str, model: str, prompt_id: str, review: dict,
                "options": {"temperature": 0, "num_ctx": 8192, "num_predict": 2048}}
     if model.lower().startswith("qwen3:"):
         payload["think"] = False
+    if strict_retry:
+        # Changed prompt, not changed evidence: ask for the EXACT allowed JSON types.
+        payload["messages"][0]["content"] += (
+            ' STRICT OUTPUT RETRY: "evidence_span" MUST be an actual empty string '
+            'for not_relevant/uncertain, not the literal characters [] or null. '
+            'Use concise rationales. Do not repeat phrases or generate filler.')
+        payload["options"]["num_predict"] = 1024
     request = urllib.request.Request(
         base.rstrip("/") + "/api/chat",
         data=json.dumps(payload, ensure_ascii=False).encode("utf-8"),
@@ -308,6 +320,7 @@ def _request_labels(base: str, model: str, prompt_id: str, review: dict,
     record = {"place_id": review["place_id"], "review_index": review["review_index"],
               "source_sha256": review["source_sha256"], "unit_id": unit["unit_id"],
               "model": model, "prompt": prompt_id, "categories": categories,
+              "strict_retry": strict_retry,
               "raw_content": raw, "done_reason": body.get("done_reason"),
               "prompt_eval_count": body.get("prompt_eval_count"),
               "eval_count": body.get("eval_count")}
