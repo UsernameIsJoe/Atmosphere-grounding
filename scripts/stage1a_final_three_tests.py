@@ -25,6 +25,7 @@ from stage1a_component1_ollama import (EXTRACT_SYSTEM,EXTRACTION_SCHEMA,
  VERIFY_SYSTEM,VERIFICATION_SCHEMA,call_ollama,validate_extraction,verify_decisions)
 from stage1a_component2_v3 import (SYSTEM as C2_SYSTEM,SCHEMA as C2_SCHEMA,
  validate_response as validate_c2,mechanical_audit,EMOTIONS)
+from stage1a_component2_eligibility_pilot import PILOT_EMOTIONS
 from stage1a_component3_abc import HYPOTHESES as DIRECTIONAL
 from stage1a_component3_real_google_diagnostic import HYPOTHESES as NLI_HYPOTHESES
 from stage1a_relation_pilot import select_pilot
@@ -216,7 +217,7 @@ def relevance(case,i,args,previous):
  pred,_=call_ollama(args.url,MODEL,C2_SYSTEM,
   "REVIEW CONTEXT (for reference only):\n"+sentence+
   "\nORIGINAL SENTENCE (authority):\n"+sentence+
-  "\nEMOTION DEFINITIONS:\n"+json.dumps({e:DIRECTIONAL[e] for e in EMOTIONS},ensure_ascii=False)+
+  "\nEMOTION DEFINITIONS:\n"+json.dumps(PILOT_EMOTIONS,ensure_ascii=False)+
   "\nFROZEN COMPONENT 1 CANDIDATES:\n"+json.dumps(numbered,ensure_ascii=False),
   C2_SCHEMA,args.timeout,8192,think=False,num_predict=2048)
  decisions=validate_c2(pred,claims)
