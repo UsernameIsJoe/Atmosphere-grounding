@@ -42,6 +42,6 @@
 
 ## Taxonomy note
 
-The request states that the nine target emotions are already defined. The currently checked tracked configuration does **not yet expose one authoritative nine-entry rubric**: `configs/lexicon.yaml` lists **11** terms, and `configs/cambridge_pilot.yaml` activates **three** (`inviting`, `safe`, `calm`). Recent design documents refer to nine but do not enumerate them. **Locate/import the researcher's established nine-category definitions before coding annotation prompts**; don't arbitrarily cut two entries or mistake the 11-entry historical pilot lexicon for the nine-category rubric.
+The request states that the nine target emotions are already defined. The currently checked tracked configuration does **not yet expose one authoritative nine-entry rubric**: `configs/lexicon.yaml` lists **11** terms, and `configs/cambridge_pilot.yaml` activates **three** (`inviting`, `safe`, `calm`). Recent design documents refer to nine but do not enumerate them. **11 is the authoritative taxonomy**, with **calm/inviting/safe** as the initial pilot. This supersedes the previous nine-category claim.
 
 No datasets were deleted, rewritten, or moved. Archived synthetic test fixtures are explicitly identified in `data/fixtures/README.md`, retained in place to preserve older reproduction scripts.
