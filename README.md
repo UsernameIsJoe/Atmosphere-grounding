@@ -10,6 +10,27 @@ Full goals, stages, and non-goals: [`Docs/PROJECT.txt`](Docs/PROJECT.txt).
 **Architecture & design guide (flow + all decisions):** [`Docs/ARCHITECTURE.txt`](Docs/ARCHITECTURE.txt).  
 Handoff / next steps: [`Docs/CONTINUE.txt`](Docs/CONTINUE.txt).
 
+## Stage 1A (2026-11-10) — real-review, three-category pilot
+
+The current taxonomy contains **11 categories** (`configs/lexicon.yaml`), with **calm, inviting, safe** active for the initial Stage 1A pilot. See [the refined research method](Docs/STAGE1A_REFINED_DESIGN_2026-11-10.md), [real-data provenance audit](data/PROVENANCE_STAGE1A_2026-11-10.md), and [archived synthetic fixtures](data/fixtures/README.md).
+
+This runner uses only `data/processed/reviews.jsonl` (214 internally traced Google API-derived reviews / 43 places). The first offline step checks clause offsets without invoking models:
+
+```bash
+python scripts/stage1a_panel_pilot.py --prepare-only --max-reviews 12
+```
+
+After installing and starting Ollama, pull three distinct families:
+
+```bash
+ollama pull qwen3:8b
+ollama pull gemma3:4b
+ollama pull llama3.1:8b
+python scripts/stage1a_panel_pilot.py --max-reviews 12
+```
+
+Outputs in `reports/stage1a_panel_pilot/`: source clauses, per-model A/B annotations, full-vote consensus and basic agreement diagnostics. A model run requires local Ollama and may be memory/time intensive. The model tags are initial defaults, not confirmed available on every machine; override with `--models` when needed. This is **not** NLI student fine-tuning and produces **no human-validated accuracy**. See [offline CI tests](.github/workflows/stage1a-panel-pilot-tests.yml).
+
 ## What this does
 
 1. **Collect** parks/plazas via Places API (New), cache details + photos under free-tier caps  
