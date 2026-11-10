@@ -20,8 +20,10 @@
 | [`results/test2.json`](results/test2.json) | **Original byte-for-byte** uploaded relevance results, including per-emotion annotations, source quotes and flags |
 | [`results/test3.json`](results/test3.json) | **Original byte-for-byte** uploaded NLI results, including original/selected premises, native three-way probabilities and labels |
 | [`SHA256SUMS.txt`](SHA256SUMS.txt) | Independent checksums of the three uploaded result files |
+| [`source/reviews.jsonl`](source/reviews.jsonl) | Exact snapshot of the **214-record input corpus** at the time of testing |
+| [`source/collect_summary.json`](source/collect_summary.json) | Exact snapshot of the Google Places collector's non-dry-run source summary |
 
-The five scripts are **snapshots of existing repo files**; they remain separate from the active implementations in the repository's root `scripts/`. The snapshots refer to supporting modules and data that remain at repository root. **This folder is an audit bundle, not a self-contained Python application.** No experiments have been rerun or altered while archiving.
+The five scripts and two source files are **exact snapshots of existing repo files**; they remain separate from the active implementations in the repository's root `scripts/`. The snapshots refer to supporting modules and data that remain at repository root. **This folder is an audit bundle, not a self-contained Python application.** No experiments have been rerun or altered while archiving.
 
 ### Provenance and reproducibility
 
