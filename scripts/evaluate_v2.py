@@ -274,7 +274,8 @@ def main():
         systems[f"S3 {m}"] = {k: {e: step_b_prediction(a_idx[k], b_by_model[m][k], e, taus[m]) for e in EMOTIONS}
                                 for k in a_idx}
 
-    results = {name: {e: metrics_for(e, pred, silver) for e in EMOTIONS} for name, pred in systems.items()}
+    raw_results = {name: {e: metrics_for(e, pred, silver) for e in EMOTIONS} for name, pred in systems.items()}
+    results = {name: {e: (per[e] if e in stable else None) for e in EMOTIONS} for name, per in raw_results.items()}
     contested = judge_summary["contested_count"]
     report = table_markdown(results, stable, contested)
     (outdir / "evaluation.md").write_text(report, encoding="utf8")
