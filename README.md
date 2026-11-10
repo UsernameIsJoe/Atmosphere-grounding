@@ -1,5 +1,7 @@
 # Atmosphere Grounding — Cambridge Pilot
 
+> **Research design update (2026-11-10):** [Reviewed Sections 3–7: text grounding, visual grounding, association, validation/prediction](Docs/PROJECT_DESIGN_V2_REVIEWED_2026-11-10.md). This is the **current research-stage structure**, not an implemented or validated pipeline. The older pilot workflow described below is retained for historical/operational context. Before new model training, resolve data-use permissions and independent reference evaluation.
+
 Weakly supervised pipeline that **grounds urban atmosphere language** (place reviews + lexicon terms such as `inviting`, `safe`, `calm`) in **constructed visual features** from Google Place photos, then stores multimodal evidence as an inspectable knowledge graph.
 
 **Project goal (short):** measure which visual structures co-occur with which words in *our* corpus — not rely on a generic vision–language prior alone. Longer term: from a text passage, report which of our ontology features are more prominent (and the reverse: image/features → keywords grounded in the same data). This is **not** text-to-image generation.
