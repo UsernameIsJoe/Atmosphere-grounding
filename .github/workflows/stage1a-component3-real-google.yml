@@ -1,0 +1,71 @@
+name: Stage 1A real Google review NLI evidence-type diagnostic
+on:
+  push:
+    paths:
+      - scripts/stage1a_component3_real_google_diagnostic.py
+      - .github/workflows/stage1a-component3-real-google.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  real-review-nli:
+    runs-on: ubuntu-latest
+    timeout-minutes: 65
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Source provenance and fixed real-sentence sample audit
+        run: |
+          python -m py_compile scripts/stage1a_component3_real_google_diagnostic.py
+          python -u scripts/stage1a_component3_real_google_diagnostic.py --check-only > source_audit.json
+          python - <<'PY'
+          import json
+          x=json.load(open('source_audit.json'))
+          assert x['reviews']==214 and x['dry_run'] is False
+          assert x['sample_sentences']>=25, x['sample_sentences']
+          assert len(set(c['place_id'] for c in x['sample_source_indices']))>=10
+          for c in x['sample_source_indices']:
+              assert c['place_id'].startswith('ChIJ')
+          print('SOURCE AUDIT: ',x['reviews'],'Google API-derived reviews; ',
+                x['sample_sentences'],'unaltered source sentences; ',
+                len(set(c['place_id'] for c in x['sample_source_indices'])),'unique places')
+          print('CATEGORY COUNTS:', x['categories'])
+          PY
+      - name: Install NLI checkpoint runtime
+        run: |
+          python -m pip install torch --index-url https://download.pytorch.org/whl/cpu
+          python -m pip install 'transformers>=4.46,<5'
+      - name: Run frozen BART NLI direct vs relevance diagnostic
+        run: |
+          python -u scripts/stage1a_component3_real_google_diagnostic.py
+      - name: Validate results and print summary
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          root=Path('reports/stage1a_component3_real_google_diagnostic')
+          summary=json.loads((root/'summary.json').read_text())
+          rows=[json.loads(x) for x in (root/'results.jsonl').read_text().splitlines() if x.strip()]
+          assert len(rows)==summary['selected_sentences']
+          assert summary['n_nli_pairs']==len(rows)*6
+          assert summary['google_api_collection_dry_run'] is False
+          assert not any(z['truncated'] for x in rows for v in x['scores'].values() for z in v.values())
+          for x in rows:
+              c=x['case']
+              assert c['place_id'].startswith('ChIJ')
+              for emo in ('calm','inviting','safe'):
+                  for mode in ('direct','relevance'):
+                      assert x['scores'][emo][mode]['label'] in ('entailment','neutral','contradiction')
+          print('SUCCESS:',len(rows),'real Google Places review sentences; ',summary['n_nli_pairs'],'native 3-way NLI pairs')
+          print('DIVERGENCES:',len(summary['direct_vs_relevance_label_disagreements']))
+          PY
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: stage1a-component3-real-google-diagnostic
+          path: |
+            reports/stage1a_component3_real_google_diagnostic/
+            source_audit.json
+          if-no-files-found: warn
