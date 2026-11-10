@@ -1,0 +1,1579 @@
+{
+  "test": 1,
+  "protocol": "final-three-stage-2026-11-10-v1",
+  "status": "complete",
+  "manifest_sha256": "04df89e7d2fa7a4018eeca8f2188c15ab8b69be3286f0ededb71cdcb8d15a791",
+  "manifest": {
+    "protocol": "final-three-stage-2026-11-10-v1",
+    "source_file": "data/processed/reviews.jsonl",
+    "source_sha256": "f08422c068b8e52a40a93d14a4a3d12955d7f52997409f974a481c77748c7328",
+    "collection_provenance": "Google Places API-derived processed reviews",
+    "source_review_count": 214,
+    "source_place_count": 43,
+    "collector_dry_run": false,
+    "heldout_from_previous_20_review_extraction_pilot": true,
+    "heldout_from_previous_40_sentence_nli_sample": true,
+    "excluded_development_review_count": 45,
+    "cases": [
+      {
+        "row": 6,
+        "review_index": 1,
+        "place_id": "ChIJFapjVFl344kRXcKedI8Cuc0",
+        "publish_time": "2020-09-02T00:04:28.142522Z",
+        "sentence_index": 0,
+        "start": 0,
+        "end": 123,
+        "text": "A peaceful park right by the river with lovely, nature themed granite bollards and ground plates by artist William Reimann.",
+        "category": "reported_word_candidate",
+        "review_sha256": "e31bb041e210a71673ca6d0bbe017710782ff6a4425d01b14fb8008319f27a09"
+      },
+      {
+        "row": 52,
+        "review_index": 2,
+        "place_id": "ChIJlegDpmd344kRZ8VMOsqJ5xM",
+        "publish_time": "2025-12-28T15:34:02.566303150Z",
+        "sentence_index": 4,
+        "start": 742,
+        "end": 973,
+        "text": "I've learned from their narratives that the atmosphere is one of peaceful contemplation and serene civic pride, making it an exceptional spot for runners, casual walkers, or anyone needing a quiet moment to read or watch the boats.",
+        "category": "reported_word_candidate",
+        "review_sha256": "4e5d5d1444b5e0309e0d2ac88e43a4d325a6834484b0674430ce06f2d912d075"
+      },
+      {
+        "row": 56,
+        "review_index": 1,
+        "place_id": "ChIJK89zW1R344kRz7jYZfKShKA",
+        "publish_time": "2025-09-05T22:37:11.785076498Z",
+        "sentence_index": 0,
+        "start": 0,
+        "end": 120,
+        "text": "One of those small, quiet spaces that you don't expect to see but help give the surrounding neighborhood some character.",
+        "category": "reported_word_candidate",
+        "review_sha256": "aa7db13fc48a32eed5a9de0d44b5d584574e339ba5751613c8a0c92d03df5122"
+      },
+      {
+        "row": 75,
+        "review_index": 0,
+        "place_id": "ChIJw9Pt_EN344kRkOjxvQDgKbo",
+        "publish_time": "2026-06-17T09:17:45.761735624Z",
+        "sentence_index": 3,
+        "start": 526,
+        "end": 653,
+        "text": "It manages to feel like a working, living community despite being one of the most famous tourist destinations in Massachusetts.",
+        "category": "reported_word_candidate",
+        "review_sha256": "5d0542a161b786e2c09f97b2becf925cd0a12d89801500485c33c5704f721917"
+      },
+      {
+        "row": 86,
+        "review_index": 1,
+        "place_id": "ChIJaeBhK1d344kRma9tUbssEBo",
+        "publish_time": "2022-02-24T05:54:28.170372Z",
+        "sentence_index": 0,
+        "start": 0,
+        "end": 112,
+        "text": "Always great safe place 👍 to meet friends and neighbors 😉 I recommend to sit and enjoy the sun 😎☀️ 7days a week!",
+        "category": "reported_word_candidate",
+        "review_sha256": "04abe10c69c2ddfcf1386eb793b08a5e1ac01ba7c7f49d588bbc342b3e990a48"
+      },
+      {
+        "row": 92,
+        "review_index": 3,
+        "place_id": "ChIJ25L83fx544kRiuWNvWYdSLA",
+        "publish_time": "2021-09-14T23:08:08.786948Z",
+        "sentence_index": 0,
+        "start": 0,
+        "end": 32,
+        "text": "Peaceful cute bit of green space",
+        "category": "reported_word_candidate",
+        "review_sha256": "71011ed06998b829c785d3b3059a967e6aedda5fb874ef2e8ef1f925cf946a0d"
+      },
+      {
+        "row": 1,
+        "review_index": 1,
+        "place_id": "ChIJQXMWnUV344kRzs9-HfLoekk",
+        "publish_time": "2025-07-19T18:27:23.796000336Z",
+        "sentence_index": 0,
+        "start": 0,
+        "end": 102,
+        "text": "It's a beautiful space with plenty of shade in the hot days to sit under and dog hours in the morning.",
+        "category": "environmental_word_candidate",
+        "review_sha256": "f243ab6d96c5936cc7d88dcb49f3be99102b6e6b726c6a74b588cf964533468b"
+      },
+      {
+        "row": 18,
+        "review_index": 3,
+        "place_id": "ChIJdelVAGp344kRnbhJtYxqBuo",
+        "publish_time": "2023-01-08T21:24:58.491197Z",
+        "sentence_index": 0,
+        "start": 0,
+        "end": 47,
+        "text": "A great playground with lots of street parking.",
+        "category": "environmental_word_candidate",
+        "review_sha256": "aa61526c7a396e6a3ce7c0592e53c1037c9e1a3f67156004bbb3e95bc82181ca"
+      },
+      {
+        "row": 24,
+        "review_index": 4,
+        "place_id": "ChIJqawa215344kROpcUJbbE0Vg",
+        "publish_time": "2025-06-22T17:46:41.013934917Z",
+        "sentence_index": 2,
+        "start": 112,
+        "end": 245,
+        "text": "The road is closed to auto traffic from the last Sunday in April through the second Sunday in November and during Saturday festivals.",
+        "category": "environmental_word_candidate",
+        "review_sha256": "1d0090e6467fc4c3e5ecfaae1c562ed1708520f1840d8a19b3f2a602dffc15ef"
+      },
+      {
+        "row": 39,
+        "review_index": 4,
+        "place_id": "ChIJK-7ymsF344kRN70NFmyfvK8",
+        "publish_time": "2021-08-31T23:24:44.493950Z",
+        "sentence_index": 0,
+        "start": 0,
+        "end": 74,
+        "text": "Nice gated park with lots of toys for public use, such as walkers and cars",
+        "category": "environmental_word_candidate",
+        "review_sha256": "c994d57b8e281a470bc6d69ba88d933e6e8f4b58c5c14f154b9439d875f069f3"
+      },
+      {
+        "row": 41,
+        "review_index": 1,
+        "place_id": "ChIJ0zpihlJ344kRCAOlne5GEoc",
+        "publish_time": "2025-07-25T12:49:34.614843803Z",
+        "sentence_index": 2,
+        "start": 47,
+        "end": 116,
+        "text": "This one is close to Central Square but a little off the beaten path.",
+        "category": "environmental_word_candidate",
+        "review_sha256": "a537f1476f5f6ab622452882dbcf13aaef67ba64f851ab302594cdf524b0c728"
+      },
+      {
+        "row": 65,
+        "review_index": 0,
+        "place_id": "ChIJ70NXYP1544kRXnfSiB1r4as",
+        "publish_time": "2025-02-24T01:05:07.851008Z",
+        "sentence_index": 1,
+        "start": 33,
+        "end": 93,
+        "text": "There is a playground that I'm sure is lovely in the summer.",
+        "category": "environmental_word_candidate",
+        "review_sha256": "ae1cfb576fa391644fa2e436ea05c5755c7a6a80f523d48b0d258404c4699174"
+      },
+      {
+        "row": 13,
+        "review_index": 3,
+        "place_id": "ChIJC5eyB0J344kRIgcXIHRzdK4",
+        "publish_time": "2025-12-16T23:19:46.970697600Z",
+        "sentence_index": 0,
+        "start": 0,
+        "end": 55,
+        "text": "I just ate there and, it was a very disappointing meal.",
+        "category": "other_control_candidate",
+        "review_sha256": "bc35beb66bbb65be7ae9abd2ea880f67def655e23d2659d011eb9b4221171f34"
+      },
+      {
+        "row": 27,
+        "review_index": 2,
+        "place_id": "ChIJ8_RCvWp344kRCTRS1Lks6KU",
+        "publish_time": "2023-05-27T23:48:32.466215Z",
+        "sentence_index": 0,
+        "start": 0,
+        "end": 39,
+        "text": "The lights are so beautiful and calming",
+        "category": "other_control_candidate",
+        "review_sha256": "93888e4633c0b29dc7e6aeefc77c5fa5bb5d7cc5e8c51f813749e60a6088df7f"
+      },
+      {
+        "row": 31,
+        "review_index": 1,
+        "place_id": "ChIJE12gBq1w44kR_N0FJNiKAcg",
+        "publish_time": "2021-08-30T01:02:31.039310Z",
+        "sentence_index": 1,
+        "start": 16,
+        "end": 60,
+        "text": "We were there for the \"everyone eats\" event.",
+        "category": "other_control_candidate",
+        "review_sha256": "fe4eb564632ff7737c871328dc4b056e2c160eb3a6e1f764426d06b554a4c6b2"
+      },
+      {
+        "row": 46,
+        "review_index": 1,
+        "place_id": "ChIJeR3K0F5344kRjtZYF7-MPlw",
+        "publish_time": "2021-12-05T00:14:09.647253Z",
+        "sentence_index": 0,
+        "start": 0,
+        "end": 39,
+        "text": "Nice spot for a bike break and a snack.",
+        "category": "other_control_candidate",
+        "review_sha256": "38ae0c742e81a1626c342dc0855f3f680d1ce4f6f751d40277e3161caaf7aa1e"
+      },
+      {
+        "row": 60,
+        "review_index": 0,
+        "place_id": "ChIJibK7VF9344kRqxrHJkNsISk",
+        "publish_time": "2026-06-30T11:54:00.813585619Z",
+        "sentence_index": 0,
+        "start": 0,
+        "end": 38,
+        "text": "Very nice park, very clean facilities.",
+        "category": "other_control_candidate",
+        "review_sha256": "8b8e6bda0139d5ddc94eb0b68c3f2b347be68045e00986663419c6af729371c3"
+      },
+      {
+        "row": 70,
+        "review_index": 0,
+        "place_id": "ChIJM3icQVN344kRZsmgAwN0zc8",
+        "publish_time": "2026-03-26T17:35:11.989705404Z",
+        "sentence_index": 0,
+        "start": 0,
+        "end": 39,
+        "text": "Cute park, but it does need a cleaning.",
+        "category": "other_control_candidate",
+        "review_sha256": "3ca46a4055e385f7513b4b7d20fd679e98c884488502465b06a24350bfdbcb6f"
+      }
+    ],
+    "categories_are_heuristic_not_gold": true,
+    "external_raw_api_payload_independently_verified": false,
+    "manifest_sha256": "04df89e7d2fa7a4018eeca8f2188c15ab8b69be3286f0ededb71cdcb8d15a791"
+  },
+  "model": "qwen3:8b",
+  "summary": {
+    "real_source_sentences": 18,
+    "distinct_places": 18,
+    "claims": 35,
+    "exact_unique_quotes": 34,
+    "flagged_claims": 2,
+    "zero_claim_sentences": 0,
+    "warning": "Quote exactness and same-model verifier agreement are NOT semantic accuracy or recall."
+  },
+  "records": [
+    {
+      "case_index": 0,
+      "source_sha256": "e31bb041e210a71673ca6d0bbe017710782ff6a4425d01b14fb8008319f27a09",
+      "manifest_sha256": "04df89e7d2fa7a4018eeca8f2188c15ab8b69be3286f0ededb71cdcb8d15a791",
+      "case": {
+        "row": 6,
+        "review_index": 1,
+        "place_id": "ChIJFapjVFl344kRXcKedI8Cuc0",
+        "publish_time": "2020-09-02T00:04:28.142522Z",
+        "sentence_index": 0,
+        "start": 0,
+        "end": 123,
+        "text": "A peaceful park right by the river with lovely, nature themed granite bollards and ground plates by artist William Reimann.",
+        "category": "reported_word_candidate",
+        "review_sha256": "e31bb041e210a71673ca6d0bbe017710782ff6a4425d01b14fb8008319f27a09"
+      },
+      "output": {
+        "model_meta": {
+          "model": "qwen3:8b",
+          "done_reason": "stop",
+          "prompt_eval_count": 274,
+          "eval_count": 289
+        },
+        "observations": [
+          {
+            "claim": "A peaceful park right by the river",
+            "evidence_quote": "A peaceful park right by the river with lovely, nature themed granite bollards and ground plates by artist William Reimann",
+            "subject": "A peaceful park",
+            "predicate": "is",
+            "object": "right by the river",
+            "qualifiers": "",
+            "index": 0,
+            "quote_match_status": "exact_unique",
+            "sentence_offsets": [
+              {
+                "start": 0,
+                "end": 122
+              }
+            ],
+            "source_support_verified": false,
+            "verifier": {
+              "verdict": "supported",
+              "reason": "The original sentence explicitly states that the park is right by the river."
+            },
+            "status": "candidate_passed_checks",
+            "same_model_verification_not_gold": true
+          },
+          {
+            "claim": "The park has lovely, nature themed granite bollards and ground plates",
+            "evidence_quote": "A peaceful park right by the river with lovely, nature themed granite bollards and ground plates by artist William Reimann",
+            "subject": "The park",
+            "predicate": "has",
+            "object": "lovely, nature themed granite bollards and ground plates",
+            "qualifiers": "",
+            "index": 1,
+            "quote_match_status": "exact_unique",
+            "sentence_offsets": [
+              {
+                "start": 0,
+                "end": 122
+              }
+            ],
+            "source_support_verified": false,
+            "verifier": {
+              "verdict": "supported",
+              "reason": "The original sentence explicitly mentions that the park has lovely, nature themed granite bollards and ground plates."
+            },
+            "status": "candidate_passed_checks",
+            "same_model_verification_not_gold": true
+          },
+          {
+            "claim": "The granite bollards and ground plates were created by artist William Reimann",
+            "evidence_quote": "A peaceful park right by the river with lovely, nature themed granite bollards and ground plates by artist William Reimann",
+            "subject": "granite bollards and ground plates",
+            "predicate": "were created by",
+            "object": "artist William Reimann",
+            "qualifiers": "",
+            "index": 2,
+            "quote_match_status": "exact_unique",
+            "sentence_offsets": [
+              {
+                "start": 0,
+                "end": 122
+              }
+            ],
+            "source_support_verified": false,
+            "verifier": {
+              "verdict": "supported",
+              "reason": "The original sentence explicitly attributes the creation of the granite bollards and ground plates to artist William Reimann."
+            },
+            "status": "candidate_passed_checks",
+            "same_model_verification_not_gold": true
+          }
+        ],
+        "original_sentence": "A peaceful park right by the river with lovely, nature themed granite bollards and ground plates by artist William Reimann.",
+        "n_claims": 3
+      }
+    },
+    {
+      "case_index": 1,
+      "source_sha256": "8deec1b140583d8465d173e099c220332f0ab535ee4e0d6d4ed9245699c86abd",
+      "manifest_sha256": "04df89e7d2fa7a4018eeca8f2188c15ab8b69be3286f0ededb71cdcb8d15a791",
+      "case": {
+        "row": 52,
+        "review_index": 2,
+        "place_id": "ChIJlegDpmd344kRZ8VMOsqJ5xM",
+        "publish_time": "2025-12-28T15:34:02.566303150Z",
+        "sentence_index": 4,
+        "start": 742,
+        "end": 973,
+        "text": "I've learned from their narratives that the atmosphere is one of peaceful contemplation and serene civic pride, making it an exceptional spot for runners, casual walkers, or anyone needing a quiet moment to read or watch the boats.",
+        "category": "reported_word_candidate",
+        "review_sha256": "4e5d5d1444b5e0309e0d2ac88e43a4d325a6834484b0674430ce06f2d912d075"
+      },
+      "output": {
+        "model_meta": {
+          "model": "qwen3:8b",
+          "done_reason": "stop",
+          "prompt_eval_count": 292,
+          "eval_count": 262
+        },
+        "observations": [
+          {
+            "claim": "The atmosphere is one of peaceful contemplation and serene civic pride",
+            "evidence_quote": "I've learned from their narratives that the atmosphere is one of peaceful contemplation and serene civic pride, making it an exceptional spot for runners, casual walkers, or anyone needing a quiet moment to read or watch the boats.",
+            "subject": "their narratives",
+            "predicate": "have learned",
+            "object": "that the atmosphere is one of peaceful contemplation and serene civic pride",
+            "qualifiers": "from their narratives",
+            "index": 0,
+            "quote_match_status": "exact_unique",
+            "sentence_offsets": [
+              {
+                "start": 0,
+                "end": 231
+              }
+            ],
+            "source_support_verified": false,
+            "verifier": {
+              "verdict": "supported",
+              "reason": "The original source sentence explicitly states that the speaker has learned from their narratives that the atmosphere is one of peaceful contemplation and serene civic pride."
+            },
+            "status": "candidate_passed_checks",
+            "same_model_verification_not_gold": true
+          },
+          {
+            "claim": "It is an exceptional spot for runners, casual walkers, or anyone needing a quiet moment to read or watch the boats",
+            "evidence_quote": "I've learned from their narratives that the atmosphere is one of peaceful contemplation and serene civic pride, making it an exceptional spot for runners, casual walkers, or anyone needing a quiet moment to read or watch the boats.",
+            "subject": "it",
+            "predicate": "is",
+            "object": "an exceptional spot for runners, casual walkers, or anyone needing a quiet moment to read or watch the boats",
+            "qualifiers": "making it",
+            "index": 1,
+            "quote_match_status": "exact_unique",
+            "sentence_offsets": [
+              {
+                "start": 0,
+                "end": 231
+              }
+            ],
+            "source_support_verified": false,
+            "verifier": {
+              "verdict": "supported",
+              "reason": "The original source sentence explicitly states that the atmosphere makes it an exceptional spot for runners, casual walkers, or anyone needing a quiet moment to read or watch the boats."
+            },
+            "status": "candidate_passed_checks",
+            "same_model_verification_not_gold": true
+          }
+        ],
+        "original_sentence": "I've learned from their narratives that the atmosphere is one of peaceful contemplation and serene civic pride, making it an exceptional spot for runners, casual walkers, or anyone needing a quiet moment to read or watch the boats.",
+        "n_claims": 2
+      }
+    },
+    {
+      "case_index": 2,
+      "source_sha256": "14613cc9eb7e3356255de94bc68cfbe461265b3ff9dc37336652aaedbec90096",
+      "manifest_sha256": "04df89e7d2fa7a4018eeca8f2188c15ab8b69be3286f0ededb71cdcb8d15a791",
+      "case": {
+        "row": 56,
+        "review_index": 1,
+        "place_id": "ChIJK89zW1R344kRz7jYZfKShKA",
+        "publish_time": "2025-09-05T22:37:11.785076498Z",
+        "sentence_index": 0,
+        "start": 0,
+        "end": 120,
+        "text": "One of those small, quiet spaces that you don't expect to see but help give the surrounding neighborhood some character.",
+        "category": "reported_word_candidate",
+        "review_sha256": "aa7db13fc48a32eed5a9de0d44b5d584574e339ba5751613c8a0c92d03df5122"
+      },
+      "output": {
+        "model_meta": {
+          "model": "qwen3:8b",
+          "done_reason": "stop",
+          "prompt_eval_count": 271,
+          "eval_count": 256
+        },
+        "observations": [
+          {
+            "claim": "The space is small and quiet.",
+            "evidence_quote": "One of those small, quiet spaces that you don't expect to see but help give the surrounding neighborhood some character.",
+            "subject": "The space",
+            "predicate": "is",
+            "object": "small and quiet",
+            "qualifiers": "None",
+            "index": 0,
+            "quote_match_status": "exact_unique",
+            "sentence_offsets": [
+              {
+                "start": 0,
+                "end": 120
+              }
+            ],
+            "source_support_verified": false,
+            "verifier": {
+              "verdict": "supported",
+              "reason": "The original sentence explicitly states that the space is small and quiet."
+            },
+            "status": "candidate_passed_checks",
+            "same_model_verification_not_gold": true
+          },
+          {
+            "claim": "The space is not expected to be seen.",
+            "evidence_quote": "One of those small, quiet spaces that you don't expect to see but help give the surrounding neighborhood some character.",
+            "subject": "The space",
+            "predicate": "is not expected to be seen",
+            "object": "None",
+            "qualifiers": "None",
+            "index": 1,
+            "quote_match_status": "exact_unique",
+            "sentence_offsets": [
+              {
+                "start": 0,
+                "end": 120
+              }
+            ],
+            "source_support_verified": false,
+            "verifier": {
+              "verdict": "supported",
+              "reason": "The original sentence explicitly states that the space is not expected to be seen."
+            },
+            "status": "candidate_passed_checks",
+            "same_model_verification_not_gold": true
+          },
+          {
+            "claim": "The space contributes to the character of the surrounding neighborhood.",
+            "evidence_quote": "One of those small, quiet spaces that you don't expect to see but help give the surrounding neighborhood some character.",
+            "subject": "The space",
+            "predicate": "help give",
+            "object": "the surrounding neighborhood some character",
+            "qualifiers": "None",
+            "index": 2,
+            "quote_match_status": "exact_unique",
+            "sentence_offsets": [
+              {
+                "start": 0,
+                "end": 120
+              }
+            ],
+            "source_support_verified": false,
+            "verifier": {
+              "verdict": "supported",
+              "reason": "The original sentence explicitly states that the space helps give the surrounding neighborhood some character."
+            },
+            "status": "candidate_passed_checks",
+            "same_model_verification_not_gold": true
+          }
+        ],
+        "original_sentence": "One of those small, quiet spaces that you don't expect to see but help give the surrounding neighborhood some character.",
+        "n_claims": 3
+      }
+    },
+    {
+      "case_index": 3,
+      "source_sha256": "42c756c130fddaf9832267aa0675d91e1b834694a304f946d2dfa4329158750d",
+      "manifest_sha256": "04df89e7d2fa7a4018eeca8f2188c15ab8b69be3286f0ededb71cdcb8d15a791",
+      "case": {
+        "row": 75,
+        "review_index": 0,
+        "place_id": "ChIJw9Pt_EN344kRkOjxvQDgKbo",
+        "publish_time": "2026-06-17T09:17:45.761735624Z",
+        "sentence_index": 3,
+        "start": 526,
+        "end": 653,
+        "text": "It manages to feel like a working, living community despite being one of the most famous tourist destinations in Massachusetts.",
+        "category": "reported_word_candidate",
+        "review_sha256": "5d0542a161b786e2c09f97b2becf925cd0a12d89801500485c33c5704f721917"
+      },
+      "output": {
+        "model_meta": {
+          "model": "qwen3:8b",
+          "done_reason": "stop",
+          "prompt_eval_count": 270,
+          "eval_count": 106
+        },
+        "observations": [
+          {
+            "claim": "It manages to feel like a working, living community",
+            "evidence_quote": "It manages to feel like a working, living community despite being one of the most famous tourist destinations in Massachusetts.",
+            "subject": "It",
+            "predicate": "manages to feel",
+            "object": "a working, living community",
+            "qualifiers": "despite being one of the most famous tourist destinations in Massachusetts",
+            "index": 0,
+            "quote_match_status": "exact_unique",
+            "sentence_offsets": [
+              {
+                "start": 0,
+                "end": 127
+              }
+            ],
+            "source_support_verified": false,
+            "verifier": {
+              "verdict": "supported",
+              "reason": "The claim is explicitly grounded in the original source sentence."
+            },
+            "status": "candidate_passed_checks",
+            "same_model_verification_not_gold": true
+          }
+        ],
+        "original_sentence": "It manages to feel like a working, living community despite being one of the most famous tourist destinations in Massachusetts.",
+        "n_claims": 1
+      }
+    },
+    {
+      "case_index": 4,
+      "source_sha256": "04abe10c69c2ddfcf1386eb793b08a5e1ac01ba7c7f49d588bbc342b3e990a48",
+      "manifest_sha256": "04df89e7d2fa7a4018eeca8f2188c15ab8b69be3286f0ededb71cdcb8d15a791",
+      "case": {
+        "row": 86,
+        "review_index": 1,
+        "place_id": "ChIJaeBhK1d344kRma9tUbssEBo",
+        "publish_time": "2022-02-24T05:54:28.170372Z",
+        "sentence_index": 0,
+        "start": 0,
+        "end": 112,
+        "text": "Always great safe place 👍 to meet friends and neighbors 😉 I recommend to sit and enjoy the sun 😎☀️ 7days a week!",
+        "category": "reported_word_candidate",
+        "review_sha256": "04abe10c69c2ddfcf1386eb793b08a5e1ac01ba7c7f49d588bbc342b3e990a48"
+      },
+      "output": {
+        "model_meta": {
+          "model": "qwen3:8b",
+          "done_reason": "stop",
+          "prompt_eval_count": 278,
+          "eval_count": 225
+        },
+        "observations": [
+          {
+            "claim": "The place is always great for meeting friends and neighbors.",
+            "evidence_quote": "Always great safe place 👍 to meet friends and neighbors 😉",
+            "subject": "The place",
+            "predicate": "is",
+            "object": "great for meeting friends and neighbors",
+            "qualifiers": "always",
+            "index": 0,
+            "quote_match_status": "exact_unique",
+            "sentence_offsets": [
+              {
+                "start": 0,
+                "end": 57
+              }
+            ],
+            "source_support_verified": false,
+            "verifier": {
+              "verdict": "supported",
+              "reason": "The original sentence explicitly states 'Always great safe place 👍 to meet friends and neighbors 😉', which supports the claim that 'The place is always great for meeting friends and neighbors.'"
+            },
+            "status": "candidate_passed_checks",
+            "same_model_verification_not_gold": true
+          },
+          {
+            "claim": "The place is recommended for sitting and enjoying the sun.",
+            "evidence_quote": "I recommend to sit and enjoy the sun 😎☀️",
+            "subject": "The reviewer",
+            "predicate": "recommend",
+            "object": "to sit and enjoy the sun",
+            "qualifiers": "I",
+            "index": 1,
+            "quote_match_status": "exact_unique",
+            "sentence_offsets": [
+              {
+                "start": 58,
+                "end": 98
+              }
+            ],
+            "source_support_verified": false,
+            "verifier": {
+              "verdict": "supported",
+              "reason": "The original sentence explicitly states 'I recommend to sit and enjoy the sun 😎☀️', which supports the claim that 'The reviewer recommends to sit and enjoy the sun.'"
+            },
+            "status": "candidate_passed_checks",
+            "same_model_verification_not_gold": true
+          },
+          {
+            "claim": "The place is available for enjoyment 7 days a week.",
+            "evidence_quote": "7days a week!",
+            "subject": "The place",
+            "predicate": "is available",
+            "object": "7 days a week",
+            "qualifiers": "",
+            "index": 2,
+            "quote_match_status": "exact_unique",
+            "sentence_offsets": [
+              {
+                "start": 99,
+                "end": 112
+              }
+            ],
+            "source_support_verified": false,
+            "verifier": {
+              "verdict": "unsupported",
+              "reason": "The original sentence states '7days a week!', but it does not explicitly state that the place is available for enjoyment 7 days a week. The claim overgeneralizes the availability of the place for enjoyment."
+            },
+            "status": "flagged_not_accepted",
+            "same_model_verification_not_gold": true
+          }
+        ],
+        "original_sentence": "Always great safe place 👍 to meet friends and neighbors 😉 I recommend to sit and enjoy the sun 😎☀️ 7days a week!",
+        "n_claims": 3
+      }
+    },
+    {
+      "case_index": 5,
+      "source_sha256": "71011ed06998b829c785d3b3059a967e6aedda5fb874ef2e8ef1f925cf946a0d",
+      "manifest_sha256": "04df89e7d2fa7a4018eeca8f2188c15ab8b69be3286f0ededb71cdcb8d15a791",
+      "case": {
+        "row": 92,
+        "review_index": 3,
+        "place_id": "ChIJ25L83fx544kRiuWNvWYdSLA",
+        "publish_time": "2021-09-14T23:08:08.786948Z",
+        "sentence_index": 0,
+        "start": 0,
+        "end": 32,
+        "text": "Peaceful cute bit of green space",
+        "category": "reported_word_candidate",
+        "review_sha256": "71011ed06998b829c785d3b3059a967e6aedda5fb874ef2e8ef1f925cf946a0d"
+      },
+      "output": {
+        "model_meta": {
+          "model": "qwen3:8b",
+          "done_reason": "stop",
+          "prompt_eval_count": 255,
+          "eval_count": 72
+        },
+        "observations": [
+          {
+            "claim": "The space is peaceful and cute.",
+            "evidence_quote": "Peaceful cute bit of green space",
+            "subject": "The space",
+            "predicate": "is",
+            "object": "peaceful and cute",
+            "qualifiers": "",
+            "index": 0,
+            "quote_match_status": "exact_unique",
+            "sentence_offsets": [
+              {
+                "start": 0,
+                "end": 32
+              }
+            ],
+            "source_support_verified": false,
+            "verifier": {
+              "verdict": "supported",
+              "reason": "The original source sentence directly supports the claim that the space is peaceful and cute."
+            },
+            "status": "candidate_passed_checks",
+            "same_model_verification_not_gold": true
+          }
+        ],
+        "original_sentence": "Peaceful cute bit of green space",
+        "n_claims": 1
+      }
+    },
+    {
+      "case_index": 6,
+      "source_sha256": "f243ab6d96c5936cc7d88dcb49f3be99102b6e6b726c6a74b588cf964533468b",
+      "manifest_sha256": "04df89e7d2fa7a4018eeca8f2188c15ab8b69be3286f0ededb71cdcb8d15a791",
+      "case": {
+        "row": 1,
+        "review_index": 1,
+        "place_id": "ChIJQXMWnUV344kRzs9-HfLoekk",
+        "publish_time": "2025-07-19T18:27:23.796000336Z",
+        "sentence_index": 0,
+        "start": 0,
+        "end": 102,
+        "text": "It's a beautiful space with plenty of shade in the hot days to sit under and dog hours in the morning.",
+        "category": "environmental_word_candidate",
+        "review_sha256": "f243ab6d96c5936cc7d88dcb49f3be99102b6e6b726c6a74b588cf964533468b"
+      },
+      "output": {
+        "model_meta": {
+          "model": "qwen3:8b",
+          "done_reason": "stop",
+          "prompt_eval_count": 271,
+          "eval_count": 250
+        },
+        "observations": [
+          {
+            "claim": "The space is beautiful.",
+            "evidence_quote": "It's a beautiful space with plenty of shade in the hot days to sit under and dog hours in the morning.",
+            "subject": "It",
+            "predicate": "is",
+            "object": "beautiful space",
+            "qualifiers": "",
+            "index": 0,
+            "quote_match_status": "exact_unique",
+            "sentence_offsets": [
+              {
+                "start": 0,
+                "end": 102
+              }
+            ],
+            "source_support_verified": false,
+            "verifier": {
+              "verdict": "supported",
+              "reason": "The original sentence explicitly states 'It's a beautiful space', which directly supports the claim that 'The space is beautiful.'"
+            },
+            "status": "candidate_passed_checks",
+            "same_model_verification_not_gold": true
+          },
+          {
+            "claim": "There is plenty of shade in the hot days to sit under.",
+            "evidence_quote": "It's a beautiful space with plenty of shade in the hot days to sit under and dog hours in the morning.",
+            "subject": "It",
+            "predicate": "has",
+            "object": "plenty of shade in the hot days to sit under",
+            "qualifiers": "",
+            "index": 1,
+            "quote_match_status": "exact_unique",
+            "sentence_offsets": [
+              {
+                "start": 0,
+                "end": 102
+              }
+            ],
+            "source_support_verified": false,
+            "verifier": {
+              "verdict": "supported",
+              "reason": "The original sentence explicitly states 'plenty of shade in the hot days to sit under', which directly supports the claim that 'There is plenty of shade in the hot days to sit under.'"
+            },
+            "status": "candidate_passed_checks",
+            "same_model_verification_not_gold": true
+          },
+          {
+            "claim": "Dog hours are available in the morning.",
+            "evidence_quote": "It's a beautiful space with plenty of shade in the hot days to sit under and dog hours in the morning.",
+            "subject": "It",
+            "predicate": "has",
+            "object": "dog hours in the morning",
+            "qualifiers": "",
+            "index": 2,
+            "quote_match_status": "exact_unique",
+            "sentence_offsets": [
+              {
+                "start": 0,
+                "end": 102
+              }
+            ],
+            "source_support_verified": false,
+            "verifier": {
+              "verdict": "supported",
+              "reason": "The original sentence explicitly states 'dog hours in the morning', which directly supports the claim that 'Dog hours are available in the morning.'"
+            },
+            "status": "candidate_passed_checks",
+            "same_model_verification_not_gold": true
+          }
+        ],
+        "original_sentence": "It's a beautiful space with plenty of shade in the hot days to sit under and dog hours in the morning.",
+        "n_claims": 3
+      }
+    },
+    {
+      "case_index": 7,
+      "source_sha256": "440626ca067198a604b134b603cd03c72456b4b948c7338be248406d2d47c1f6",
+      "manifest_sha256": "04df89e7d2fa7a4018eeca8f2188c15ab8b69be3286f0ededb71cdcb8d15a791",
+      "case": {
+        "row": 18,
+        "review_index": 3,
+        "place_id": "ChIJdelVAGp344kRnbhJtYxqBuo",
+        "publish_time": "2023-01-08T21:24:58.491197Z",
+        "sentence_index": 0,
+        "start": 0,
+        "end": 47,
+        "text": "A great playground with lots of street parking.",
+        "category": "environmental_word_candidate",
+        "review_sha256": "aa61526c7a396e6a3ce7c0592e53c1037c9e1a3f67156004bbb3e95bc82181ca"
+      },
+      "output": {
+        "model_meta": {
+          "model": "qwen3:8b",
+          "done_reason": "stop",
+          "prompt_eval_count": 257,
+          "eval_count": 77
+        },
+        "observations": [
+          {
+            "claim": "A great playground with lots of street parking.",
+            "evidence_quote": "A great playground with lots of street parking.",
+            "subject": "A playground",
+            "predicate": "is",
+            "object": "great with lots of street parking",
+            "qualifiers": "",
+            "index": 0,
+            "quote_match_status": "exact_unique",
+            "sentence_offsets": [
+              {
+                "start": 0,
+                "end": 47
+              }
+            ],
+            "source_support_verified": false,
+            "verifier": {
+              "verdict": "supported",
+              "reason": "The claim exactly matches the original source sentence."
+            },
+            "status": "candidate_passed_checks",
+            "same_model_verification_not_gold": true
+          }
+        ],
+        "original_sentence": "A great playground with lots of street parking.",
+        "n_claims": 1
+      }
+    },
+    {
+      "case_index": 8,
+      "source_sha256": "c91a2fed3db0c79a304d5ab150ddaa818517b1a404f5477c09469cce8bf3be74",
+      "manifest_sha256": "04df89e7d2fa7a4018eeca8f2188c15ab8b69be3286f0ededb71cdcb8d15a791",
+      "case": {
+        "row": 24,
+        "review_index": 4,
+        "place_id": "ChIJqawa215344kROpcUJbbE0Vg",
+        "publish_time": "2025-06-22T17:46:41.013934917Z",
+        "sentence_index": 2,
+        "start": 112,
+        "end": 245,
+        "text": "The road is closed to auto traffic from the last Sunday in April through the second Sunday in November and during Saturday festivals.",
+        "category": "environmental_word_candidate",
+        "review_sha256": "1d0090e6467fc4c3e5ecfaae1c562ed1708520f1840d8a19b3f2a602dffc15ef"
+      },
+      "output": {
+        "model_meta": {
+          "model": "qwen3:8b",
+          "done_reason": "stop",
+          "prompt_eval_count": 272,
+          "eval_count": 200
+        },
+        "observations": [
+          {
+            "claim": "The road is closed to auto traffic from the last Sunday in April through the second Sunday in November",
+            "evidence_quote": "The road is closed to auto traffic from the last Sunday in April through the second Sunday in November and during Saturday festivals.",
+            "subject": "The road",
+            "predicate": "is closed",
+            "object": "to auto traffic",
+            "qualifiers": "from the last Sunday in April through the second Sunday in November",
+            "index": 0,
+            "quote_match_status": "exact_unique",
+            "sentence_offsets": [
+              {
+                "start": 0,
+                "end": 133
+              }
+            ],
+            "source_support_verified": false,
+            "verifier": {
+              "verdict": "supported",
+              "reason": "The original source sentence explicitly supports the claim that the road is closed to auto traffic from the last Sunday in April through the second Sunday in November."
+            },
+            "status": "candidate_passed_checks",
+            "same_model_verification_not_gold": true
+          },
+          {
+            "claim": "The road is closed to auto traffic during Saturday festivals",
+            "evidence_quote": "The road is closed to auto traffic from the last Sunday in April through the second Sunday in November and during Saturday festivals.",
+            "subject": "The road",
+            "predicate": "is closed",
+            "object": "to auto traffic",
+            "qualifiers": "during Saturday festivals",
+            "index": 1,
+            "quote_match_status": "exact_unique",
+            "sentence_offsets": [
+              {
+                "start": 0,
+                "end": 133
+              }
+            ],
+            "source_support_verified": false,
+            "verifier": {
+              "verdict": "supported",
+              "reason": "The original source sentence explicitly supports the claim that the road is closed to auto traffic during Saturday festivals."
+            },
+            "status": "candidate_passed_checks",
+            "same_model_verification_not_gold": true
+          }
+        ],
+        "original_sentence": "The road is closed to auto traffic from the last Sunday in April through the second Sunday in November and during Saturday festivals.",
+        "n_claims": 2
+      }
+    },
+    {
+      "case_index": 9,
+      "source_sha256": "c994d57b8e281a470bc6d69ba88d933e6e8f4b58c5c14f154b9439d875f069f3",
+      "manifest_sha256": "04df89e7d2fa7a4018eeca8f2188c15ab8b69be3286f0ededb71cdcb8d15a791",
+      "case": {
+        "row": 39,
+        "review_index": 4,
+        "place_id": "ChIJK-7ymsF344kRN70NFmyfvK8",
+        "publish_time": "2021-08-31T23:24:44.493950Z",
+        "sentence_index": 0,
+        "start": 0,
+        "end": 74,
+        "text": "Nice gated park with lots of toys for public use, such as walkers and cars",
+        "category": "environmental_word_candidate",
+        "review_sha256": "c994d57b8e281a470bc6d69ba88d933e6e8f4b58c5c14f154b9439d875f069f3"
+      },
+      "output": {
+        "model_meta": {
+          "model": "qwen3:8b",
+          "done_reason": "stop",
+          "prompt_eval_count": 264,
+          "eval_count": 222
+        },
+        "observations": [
+          {
+            "claim": "The park is gated.",
+            "evidence_quote": "Nice gated park with lots of toys for public use, such as walkers and cars",
+            "subject": "park",
+            "predicate": "is gated",
+            "object": "park",
+            "qualifiers": "",
+            "index": 0,
+            "quote_match_status": "exact_unique",
+            "sentence_offsets": [
+              {
+                "start": 0,
+                "end": 74
+              }
+            ],
+            "source_support_verified": false,
+            "verifier": {
+              "verdict": "supported",
+              "reason": "The original sentence explicitly states 'gated park', which directly supports the claim that 'The park is gated'."
+            },
+            "status": "candidate_passed_checks",
+            "same_model_verification_not_gold": true
+          },
+          {
+            "claim": "The park has lots of toys for public use.",
+            "evidence_quote": "Nice gated park with lots of toys for public use, such as walkers and cars",
+            "subject": "park",
+            "predicate": "has",
+            "object": "lots of toys for public use",
+            "qualifiers": "",
+            "index": 1,
+            "quote_match_status": "exact_unique",
+            "sentence_offsets": [
+              {
+                "start": 0,
+                "end": 74
+              }
+            ],
+            "source_support_verified": false,
+            "verifier": {
+              "verdict": "supported",
+              "reason": "The original sentence explicitly states 'lots of toys for public use', which directly supports the claim that 'The park has lots of toys for public use'."
+            },
+            "status": "candidate_passed_checks",
+            "same_model_verification_not_gold": true
+          },
+          {
+            "claim": "The toys include walkers and cars.",
+            "evidence_quote": "Nice gated park with lots of toys for public use, such as walkers and cars",
+            "subject": "toys",
+            "predicate": "include",
+            "object": "walkers and cars",
+            "qualifiers": "",
+            "index": 2,
+            "quote_match_status": "exact_unique",
+            "sentence_offsets": [
+              {
+                "start": 0,
+                "end": 74
+              }
+            ],
+            "source_support_verified": false,
+            "verifier": {
+              "verdict": "supported",
+              "reason": "The original sentence explicitly states 'such as walkers and cars', which directly supports the claim that 'The toys include walkers and cars'."
+            },
+            "status": "candidate_passed_checks",
+            "same_model_verification_not_gold": true
+          }
+        ],
+        "original_sentence": "Nice gated park with lots of toys for public use, such as walkers and cars",
+        "n_claims": 3
+      }
+    },
+    {
+      "case_index": 10,
+      "source_sha256": "b738067838ad133af0e740e22e3f6336f48d0d1b578554834d424cf8de1c6260",
+      "manifest_sha256": "04df89e7d2fa7a4018eeca8f2188c15ab8b69be3286f0ededb71cdcb8d15a791",
+      "case": {
+        "row": 41,
+        "review_index": 1,
+        "place_id": "ChIJ0zpihlJ344kRCAOlne5GEoc",
+        "publish_time": "2025-07-25T12:49:34.614843803Z",
+        "sentence_index": 2,
+        "start": 47,
+        "end": 116,
+        "text": "This one is close to Central Square but a little off the beaten path.",
+        "category": "environmental_word_candidate",
+        "review_sha256": "a537f1476f5f6ab622452882dbcf13aaef67ba64f851ab302594cdf524b0c728"
+      },
+      "output": {
+        "model_meta": {
+          "model": "qwen3:8b",
+          "done_reason": "stop",
+          "prompt_eval_count": 263,
+          "eval_count": 156
+        },
+        "observations": [
+          {
+            "claim": "This one is close to Central Square",
+            "evidence_quote": "This one is close to Central Square but a little off the beaten path.",
+            "subject": "This one",
+            "predicate": "is close to",
+            "object": "Central Square",
+            "qualifiers": "",
+            "index": 0,
+            "quote_match_status": "exact_unique",
+            "sentence_offsets": [
+              {
+                "start": 0,
+                "end": 69
+              }
+            ],
+            "source_support_verified": false,
+            "verifier": {
+              "verdict": "supported",
+              "reason": "The original sentence explicitly states that 'This one is close to Central Square'."
+            },
+            "status": "candidate_passed_checks",
+            "same_model_verification_not_gold": true
+          },
+          {
+            "claim": "It is a little off the beaten path",
+            "evidence_quote": "This one is close to Central Square but a little off the beaten path.",
+            "subject": "This one",
+            "predicate": "is",
+            "object": "a little off the beaten path",
+            "qualifiers": "a little",
+            "index": 1,
+            "quote_match_status": "exact_unique",
+            "sentence_offsets": [
+              {
+                "start": 0,
+                "end": 69
+              }
+            ],
+            "source_support_verified": false,
+            "verifier": {
+              "verdict": "supported",
+              "reason": "The original sentence explicitly states that 'This one is a little off the beaten path'."
+            },
+            "status": "candidate_passed_checks",
+            "same_model_verification_not_gold": true
+          }
+        ],
+        "original_sentence": "This one is close to Central Square but a little off the beaten path.",
+        "n_claims": 2
+      }
+    },
+    {
+      "case_index": 11,
+      "source_sha256": "29b84ed2fab110a103a3bcc82ebbad84f0f8a39d7a523c681f5757ef65a34f1e",
+      "manifest_sha256": "04df89e7d2fa7a4018eeca8f2188c15ab8b69be3286f0ededb71cdcb8d15a791",
+      "case": {
+        "row": 65,
+        "review_index": 0,
+        "place_id": "ChIJ70NXYP1544kRXnfSiB1r4as",
+        "publish_time": "2025-02-24T01:05:07.851008Z",
+        "sentence_index": 1,
+        "start": 33,
+        "end": 93,
+        "text": "There is a playground that I'm sure is lovely in the summer.",
+        "category": "environmental_word_candidate",
+        "review_sha256": "ae1cfb576fa391644fa2e436ea05c5755c7a6a80f523d48b0d258404c4699174"
+      },
+      "output": {
+        "model_meta": {
+          "model": "qwen3:8b",
+          "done_reason": "stop",
+          "prompt_eval_count": 262,
+          "eval_count": 91
+        },
+        "observations": [
+          {
+            "claim": "There is a playground that I'm sure is lovely in the summer.",
+            "evidence_quote": "There is a playground that I'm sure is lovely in the summer.",
+            "subject": "I",
+            "predicate": "sure",
+            "object": "a playground is lovely in the summer",
+            "qualifiers": "I'm sure",
+            "index": 0,
+            "quote_match_status": "exact_unique",
+            "sentence_offsets": [
+              {
+                "start": 0,
+                "end": 60
+              }
+            ],
+            "source_support_verified": false,
+            "verifier": {
+              "verdict": "supported",
+              "reason": "The claim is explicitly grounded in the original source sentence."
+            },
+            "status": "candidate_passed_checks",
+            "same_model_verification_not_gold": true
+          }
+        ],
+        "original_sentence": "There is a playground that I'm sure is lovely in the summer.",
+        "n_claims": 1
+      }
+    },
+    {
+      "case_index": 12,
+      "source_sha256": "cfe22a45b1fea890af9b3724650d6c7f3cd5ab9326ab34dcd78e9c302eae98f8",
+      "manifest_sha256": "04df89e7d2fa7a4018eeca8f2188c15ab8b69be3286f0ededb71cdcb8d15a791",
+      "case": {
+        "row": 13,
+        "review_index": 3,
+        "place_id": "ChIJC5eyB0J344kRIgcXIHRzdK4",
+        "publish_time": "2025-12-16T23:19:46.970697600Z",
+        "sentence_index": 0,
+        "start": 0,
+        "end": 55,
+        "text": "I just ate there and, it was a very disappointing meal.",
+        "category": "other_control_candidate",
+        "review_sha256": "bc35beb66bbb65be7ae9abd2ea880f67def655e23d2659d011eb9b4221171f34"
+      },
+      "output": {
+        "model_meta": {
+          "model": "qwen3:8b",
+          "done_reason": "stop",
+          "prompt_eval_count": 261,
+          "eval_count": 126
+        },
+        "observations": [
+          {
+            "claim": "I just ate there",
+            "evidence_quote": "I just ate there",
+            "subject": "I",
+            "predicate": "ate",
+            "object": "there",
+            "qualifiers": "just",
+            "index": 0,
+            "quote_match_status": "exact_unique",
+            "sentence_offsets": [
+              {
+                "start": 0,
+                "end": 16
+              }
+            ],
+            "source_support_verified": false,
+            "verifier": {
+              "verdict": "supported",
+              "reason": "The original sentence explicitly states 'I just ate there', which directly supports the claim."
+            },
+            "status": "candidate_passed_checks",
+            "same_model_verification_not_gold": true
+          },
+          {
+            "claim": "The meal was very disappointing",
+            "evidence_quote": "it was a very disappointing meal",
+            "subject": "it",
+            "predicate": "was",
+            "object": "a very disappointing meal",
+            "qualifiers": "very",
+            "index": 1,
+            "quote_match_status": "exact_unique",
+            "sentence_offsets": [
+              {
+                "start": 22,
+                "end": 54
+              }
+            ],
+            "source_support_verified": false,
+            "verifier": {
+              "verdict": "supported",
+              "reason": "The original sentence explicitly states 'it was a very disappointing meal', which directly supports the claim."
+            },
+            "status": "candidate_passed_checks",
+            "same_model_verification_not_gold": true
+          }
+        ],
+        "original_sentence": "I just ate there and, it was a very disappointing meal.",
+        "n_claims": 2
+      }
+    },
+    {
+      "case_index": 13,
+      "source_sha256": "93888e4633c0b29dc7e6aeefc77c5fa5bb5d7cc5e8c51f813749e60a6088df7f",
+      "manifest_sha256": "04df89e7d2fa7a4018eeca8f2188c15ab8b69be3286f0ededb71cdcb8d15a791",
+      "case": {
+        "row": 27,
+        "review_index": 2,
+        "place_id": "ChIJ8_RCvWp344kRCTRS1Lks6KU",
+        "publish_time": "2023-05-27T23:48:32.466215Z",
+        "sentence_index": 0,
+        "start": 0,
+        "end": 39,
+        "text": "The lights are so beautiful and calming",
+        "category": "other_control_candidate",
+        "review_sha256": "93888e4633c0b29dc7e6aeefc77c5fa5bb5d7cc5e8c51f813749e60a6088df7f"
+      },
+      "output": {
+        "model_meta": {
+          "model": "qwen3:8b",
+          "done_reason": "stop",
+          "prompt_eval_count": 255,
+          "eval_count": 74
+        },
+        "observations": [
+          {
+            "claim": "The lights are so beautiful and calming",
+            "evidence_quote": "The lights are so beautiful and calming",
+            "subject": "The lights",
+            "predicate": "are",
+            "object": "beautiful and calming",
+            "qualifiers": "so",
+            "index": 0,
+            "quote_match_status": "exact_unique",
+            "sentence_offsets": [
+              {
+                "start": 0,
+                "end": 39
+              }
+            ],
+            "source_support_verified": false,
+            "verifier": {
+              "verdict": "supported",
+              "reason": "The claim is identical to the original source sentence, thus fully supported."
+            },
+            "status": "candidate_passed_checks",
+            "same_model_verification_not_gold": true
+          }
+        ],
+        "original_sentence": "The lights are so beautiful and calming",
+        "n_claims": 1
+      }
+    },
+    {
+      "case_index": 14,
+      "source_sha256": "2e56320ddf320fbeec7724cbc7e57d7507c7fde2a49a0c2930a0b18b8abba477",
+      "manifest_sha256": "04df89e7d2fa7a4018eeca8f2188c15ab8b69be3286f0ededb71cdcb8d15a791",
+      "case": {
+        "row": 31,
+        "review_index": 1,
+        "place_id": "ChIJE12gBq1w44kR_N0FJNiKAcg",
+        "publish_time": "2021-08-30T01:02:31.039310Z",
+        "sentence_index": 1,
+        "start": 16,
+        "end": 60,
+        "text": "We were there for the \"everyone eats\" event.",
+        "category": "other_control_candidate",
+        "review_sha256": "fe4eb564632ff7737c871328dc4b056e2c160eb3a6e1f764426d06b554a4c6b2"
+      },
+      "output": {
+        "model_meta": {
+          "model": "qwen3:8b",
+          "done_reason": "stop",
+          "prompt_eval_count": 259,
+          "eval_count": 80
+        },
+        "observations": [
+          {
+            "claim": "We were there for the 'everyone eats' event.",
+            "evidence_quote": "We were there for the 'everyone eats' event.",
+            "subject": "We",
+            "predicate": "were there for",
+            "object": "'everyone eats' event",
+            "qualifiers": "",
+            "index": 0,
+            "quote_match_status": "not_in_source",
+            "sentence_offsets": [],
+            "source_support_verified": false,
+            "verifier": {
+              "verdict": "supported",
+              "reason": "The claim exactly matches the original source sentence."
+            },
+            "status": "flagged_not_accepted",
+            "same_model_verification_not_gold": true
+          }
+        ],
+        "original_sentence": "We were there for the \"everyone eats\" event.",
+        "n_claims": 1
+      }
+    },
+    {
+      "case_index": 15,
+      "source_sha256": "38ae0c742e81a1626c342dc0855f3f680d1ce4f6f751d40277e3161caaf7aa1e",
+      "manifest_sha256": "04df89e7d2fa7a4018eeca8f2188c15ab8b69be3286f0ededb71cdcb8d15a791",
+      "case": {
+        "row": 46,
+        "review_index": 1,
+        "place_id": "ChIJeR3K0F5344kRjtZYF7-MPlw",
+        "publish_time": "2021-12-05T00:14:09.647253Z",
+        "sentence_index": 0,
+        "start": 0,
+        "end": 39,
+        "text": "Nice spot for a bike break and a snack.",
+        "category": "other_control_candidate",
+        "review_sha256": "38ae0c742e81a1626c342dc0855f3f680d1ce4f6f751d40277e3161caaf7aa1e"
+      },
+      "output": {
+        "model_meta": {
+          "model": "qwen3:8b",
+          "done_reason": "stop",
+          "prompt_eval_count": 258,
+          "eval_count": 154
+        },
+        "observations": [
+          {
+            "claim": "The location is suitable for taking a break after cycling.",
+            "evidence_quote": "Nice spot for a bike break and a snack.",
+            "subject": "The location",
+            "predicate": "is suitable for",
+            "object": "taking a break after cycling",
+            "qualifiers": "Nice",
+            "index": 0,
+            "quote_match_status": "exact_unique",
+            "sentence_offsets": [
+              {
+                "start": 0,
+                "end": 39
+              }
+            ],
+            "source_support_verified": false,
+            "verifier": {
+              "verdict": "supported",
+              "reason": "The original sentence explicitly supports the claim that the location is suitable for taking a break after cycling, with 'Nice spot for a bike break' directly aligning with the claim."
+            },
+            "status": "candidate_passed_checks",
+            "same_model_verification_not_gold": true
+          },
+          {
+            "claim": "The location offers the opportunity to have a snack.",
+            "evidence_quote": "Nice spot for a bike break and a snack.",
+            "subject": "The location",
+            "predicate": "offers",
+            "object": "the opportunity to have a snack",
+            "qualifiers": "Nice",
+            "index": 1,
+            "quote_match_status": "exact_unique",
+            "sentence_offsets": [
+              {
+                "start": 0,
+                "end": 39
+              }
+            ],
+            "source_support_verified": false,
+            "verifier": {
+              "verdict": "supported",
+              "reason": "The original sentence explicitly supports the claim that the location offers the opportunity to have a snack, with 'a snack' directly aligning with the claim."
+            },
+            "status": "candidate_passed_checks",
+            "same_model_verification_not_gold": true
+          }
+        ],
+        "original_sentence": "Nice spot for a bike break and a snack.",
+        "n_claims": 2
+      }
+    },
+    {
+      "case_index": 16,
+      "source_sha256": "e2c59b76c4403e2de7c28d0753dc83e87a546d0054bfedc285add6dbf639d52a",
+      "manifest_sha256": "04df89e7d2fa7a4018eeca8f2188c15ab8b69be3286f0ededb71cdcb8d15a791",
+      "case": {
+        "row": 60,
+        "review_index": 0,
+        "place_id": "ChIJibK7VF9344kRqxrHJkNsISk",
+        "publish_time": "2026-06-30T11:54:00.813585619Z",
+        "sentence_index": 0,
+        "start": 0,
+        "end": 38,
+        "text": "Very nice park, very clean facilities.",
+        "category": "other_control_candidate",
+        "review_sha256": "8b8e6bda0139d5ddc94eb0b68c3f2b347be68045e00986663419c6af729371c3"
+      },
+      "output": {
+        "model_meta": {
+          "model": "qwen3:8b",
+          "done_reason": "stop",
+          "prompt_eval_count": 256,
+          "eval_count": 127
+        },
+        "observations": [
+          {
+            "claim": "The park is very nice.",
+            "evidence_quote": "Very nice park, very clean facilities.",
+            "subject": "park",
+            "predicate": "is",
+            "object": "very nice",
+            "qualifiers": "",
+            "index": 0,
+            "quote_match_status": "exact_unique",
+            "sentence_offsets": [
+              {
+                "start": 0,
+                "end": 38
+              }
+            ],
+            "source_support_verified": false,
+            "verifier": {
+              "verdict": "supported",
+              "reason": "The original source sentence explicitly states 'Very nice park', which directly supports the claim that 'The park is very nice.'"
+            },
+            "status": "candidate_passed_checks",
+            "same_model_verification_not_gold": true
+          },
+          {
+            "claim": "The facilities are very clean.",
+            "evidence_quote": "Very nice park, very clean facilities.",
+            "subject": "facilities",
+            "predicate": "are",
+            "object": "very clean",
+            "qualifiers": "",
+            "index": 1,
+            "quote_match_status": "exact_unique",
+            "sentence_offsets": [
+              {
+                "start": 0,
+                "end": 38
+              }
+            ],
+            "source_support_verified": false,
+            "verifier": {
+              "verdict": "supported",
+              "reason": "The original source sentence explicitly states 'very clean facilities', which directly supports the claim that 'The facilities are very clean.'"
+            },
+            "status": "candidate_passed_checks",
+            "same_model_verification_not_gold": true
+          }
+        ],
+        "original_sentence": "Very nice park, very clean facilities.",
+        "n_claims": 2
+      }
+    },
+    {
+      "case_index": 17,
+      "source_sha256": "4b55a95d3b9ee6e03fc8d7553ae5714d4f3da0282d68f169228edb38cbaca2a8",
+      "manifest_sha256": "04df89e7d2fa7a4018eeca8f2188c15ab8b69be3286f0ededb71cdcb8d15a791",
+      "case": {
+        "row": 70,
+        "review_index": 0,
+        "place_id": "ChIJM3icQVN344kRZsmgAwN0zc8",
+        "publish_time": "2026-03-26T17:35:11.989705404Z",
+        "sentence_index": 0,
+        "start": 0,
+        "end": 39,
+        "text": "Cute park, but it does need a cleaning.",
+        "category": "other_control_candidate",
+        "review_sha256": "3ca46a4055e385f7513b4b7d20fd679e98c884488502465b06a24350bfdbcb6f"
+      },
+      "output": {
+        "model_meta": {
+          "model": "qwen3:8b",
+          "done_reason": "stop",
+          "prompt_eval_count": 259,
+          "eval_count": 122
+        },
+        "observations": [
+          {
+            "claim": "The park is cute.",
+            "evidence_quote": "Cute park",
+            "subject": "park",
+            "predicate": "is",
+            "object": "cute",
+            "qualifiers": "",
+            "index": 0,
+            "quote_match_status": "exact_unique",
+            "sentence_offsets": [
+              {
+                "start": 0,
+                "end": 9
+              }
+            ],
+            "source_support_verified": false,
+            "verifier": {
+              "verdict": "supported",
+              "reason": "The original source sentence explicitly states 'Cute park', which directly supports the claim that 'The park is cute.'"
+            },
+            "status": "candidate_passed_checks",
+            "same_model_verification_not_gold": true
+          },
+          {
+            "claim": "The park needs a cleaning.",
+            "evidence_quote": "but it does need a cleaning",
+            "subject": "it",
+            "predicate": "needs",
+            "object": "a cleaning",
+            "qualifiers": "does",
+            "index": 1,
+            "quote_match_status": "exact_unique",
+            "sentence_offsets": [
+              {
+                "start": 11,
+                "end": 38
+              }
+            ],
+            "source_support_verified": false,
+            "verifier": {
+              "verdict": "supported",
+              "reason": "The original source sentence explicitly states 'but it does need a cleaning', which directly supports the claim that 'The park needs a cleaning.'"
+            },
+            "status": "candidate_passed_checks",
+            "same_model_verification_not_gold": true
+          }
+        ],
+        "original_sentence": "Cute park, but it does need a cleaning.",
+        "n_claims": 2
+      }
+    }
+  ],
+  "limitations": [
+    "Only source authenticity and mechanical integrity are machine-tested, not semantic accuracy.",
+    "Real Google Places API-derived reviews; raw API response unavailable for independent source verification.",
+    "Heuristic sample strata are not reference labels.",
+    "No independent human annotated ground truth; manual semantic adjudication needed before performance claims."
+  ]
+}
