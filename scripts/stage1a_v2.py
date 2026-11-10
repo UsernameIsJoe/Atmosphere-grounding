@@ -224,6 +224,8 @@ def run_step_a(args, items: list[dict], outdir: pathlib.Path):
     done = {}
     if path.exists() and args.resume:
         for r in read_jsonl(path):
+            if r.get("model") != args.model:
+                raise ValueError("cannot resume Step A output from a different model tag")
             key = (r["source"]["row"], r["source"]["start"], r["source"]["end"])
             done[key] = r
     elif path.exists():
@@ -303,6 +305,8 @@ def run_step_b(args, step_a: list[dict], outdir: pathlib.Path, model_name: str):
     done = {}
     if path.exists() and args.resume:
         for r in read_jsonl(path):
+            if r.get("checkpoint") != model_name:
+                raise ValueError("cannot resume Step B output from a different checkpoint")
             key = (r["source"]["row"], r["source"]["start"], r["source"]["end"])
             done[key] = r
     elif path.exists():
