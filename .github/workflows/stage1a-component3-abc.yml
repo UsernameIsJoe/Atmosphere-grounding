@@ -1,0 +1,24 @@
+name: Stage 1A Component 3 paired A-B-C NLI contract checks
+on:
+  push:
+    paths:
+      - scripts/stage1a_component3_abc.py
+      - tests/test_stage1a_component3_abc.py
+      - .github/workflows/stage1a-component3-abc.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Syntax and source-free contract tests
+        run: |
+          python -m py_compile scripts/stage1a_component3_abc.py tests/test_stage1a_component3_abc.py
+          python -m unittest discover -s tests -p test_stage1a_component3_abc.py -v
+          python scripts/stage1a_component3_abc.py --help
