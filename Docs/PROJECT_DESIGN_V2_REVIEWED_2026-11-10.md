@@ -65,7 +65,7 @@ Two separately evaluated evidence-production branches, 1A text and 1B images, co
 - `Discussions/current-research-baseline-2026-11.md` establishes the contemporary research goal (nine categories, text evidence + independent visual library, eventual visual prediction). Preserve its distinction from older co-occurrence-first documents.
 - `research_audit/stage1a_final_2026-11-10/README.md` records **unvalidated** component tests and the need for independent semantic evaluation. Keep this archive intact.
 - `Docs/PROJECT.txt`, `Docs/ARCHITECTURE.txt`, `Docs/DESIGN_LOCK.txt` and the root README describe the earlier pilot implementation; they are **historical / operational documentation**, not evidence that the present proposal has been implemented.
-- `configs/lexicon.yaml` currently lists **11** atmosphere terms; the modern research goal specifies **nine** but has not frozen the exact taxonomy. The pilot evaluates **calm, inviting, safe**. Do not silently select nine of the eleven. Resolve into one future versioned taxonomy before labeling.
+- `configs/lexicon.yaml` currently lists **11** atmosphere terms; the **confirmed authoritative taxonomy is all 11 terms**. The active pilot evaluates **calm, inviting, safe**. This supersedes previous claims that the project has nine categories.
 - Current corpus reported by the archived audit: **214 reviews across 43 places**. These numbers are development provenance, not a validation claim.
 - The attached Project Design v2 proposed Stage 1A panel annotation and NLI adaptation. The [2026-11-10 Stage 1A refinement](STAGE1A_REFINED_DESIGN_2026-11-10.md) records the current **agreed research-design decisions**, not completed experiments.
 
@@ -81,7 +81,7 @@ These references support the *plausibility of components*, not the empirical val
 
 ## Next design questions (not yet decided)
 
-1. Final nine category names and rubric; whether any axes are genuinely bipolar.
+1. Complete theory-grounded definitions for the 11 confirmed categories, starting with the calm/inviting/safe pilot; whether any axes are genuinely bipolar.
 2. Clause segmentation edge cases and multi-evidence alignment across models.
 3. Panel prompt stability, silver-label construction and NLI-specific supervision masks.
 4. Evidence-type separation (explicit versus direct indicators versus indirect) and Stage 2 shared-bias diagnostics.
@@ -90,3 +90,5 @@ These references support the *plausibility of components*, not the empirical val
 7. Stage 3 criteria for transitioning from association research to visual prediction.
 
 **Record of decision:** Keep Sections **3–7** as the project backbone. Use the agreed Stage 1A NLI-first candidate comparison without assuming a winner; do **not** prematurely lock other model choices or interpret prior pilot counts/LLM agreement as accuracy. This is a design update only; no pipeline implementation or new experiments were performed in this change.
+
+**Implementation update (2026-11-10):** `scripts/stage1a_panel_pilot.py` now provides an initial local three-emotion clause/LLM-panel runner, subject to testing and refinement. The official taxonomy is **11**, with **3 active for the pilot**. See `Docs/STAGE1A_REFINED_DESIGN_2026-11-10.md`.
