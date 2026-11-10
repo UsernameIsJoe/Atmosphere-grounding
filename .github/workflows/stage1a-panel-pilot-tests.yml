@@ -33,3 +33,12 @@ jobs:
           python scripts/stage1a_panel_pilot.py --prepare-only --max-reviews 12 --output /tmp/stage1a-panel-ci
           test -s /tmp/stage1a-panel-ci/clauses.jsonl
           test -s /tmp/stage1a-panel-ci/manifest.json
+
+      - name: Upload prepared real-review clauses
+        uses: actions/upload-artifact@v4
+        with:
+          name: stage1a-real-review-clauses-12
+          path: |
+            /tmp/stage1a-panel-ci/clauses.jsonl
+            /tmp/stage1a-panel-ci/manifest.json
+          if-no-files-found: error
