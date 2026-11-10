@@ -1,0 +1,7 @@
+# SHA-256 checksums of the exact user-uploaded final test results.
+# All files are preserved byte-for-byte, including Windows CRLF line endings.
+# Run from research_audit/stage1a_final_2026-11-10:
+#   python -c "import hashlib,pathlib; [(print(hashlib.sha256(p.read_bytes()).hexdigest(),str(p))) for p in sorted(pathlib.Path('results').glob('test*.json'))]"
+aa792724237d4dbcdf2e589f572f84a1547a94ed8a4390288908b87b290451f9  results/test1.json
+567e50e7ca019671144a1b58769b4f09b13d79826951ec6794e0bab7441d1c3e  results/test2.json
+1c4017639e5d3676f4da253e4b9bcb438b5038254ac997b01bcb3dd2b0634dad  results/test3.json
