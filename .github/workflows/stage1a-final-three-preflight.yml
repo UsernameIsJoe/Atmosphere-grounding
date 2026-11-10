@@ -1,0 +1,43 @@
+name: Stage 1A final three-test protocol preflight
+on:
+  push:
+    paths:
+      - scripts/stage1a_final_three_tests.py
+      - .github/workflows/stage1a-final-three-preflight.yml
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  validate-protocol:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Syntax and exact-source holdout audit without ML inference
+        run: |
+          python -m py_compile scripts/stage1a_final_three_tests.py
+          python -u scripts/stage1a_final_three_tests.py --test 1 --show-manifest > /tmp/stage1a-final-manifest.json
+          python - <<'PY'
+          import json
+          from collections import Counter
+          from pathlib import Path
+          m=json.loads(Path('/tmp/stage1a-final-manifest.json').read_text())
+          cases=m['cases']
+          assert len(cases)==18
+          assert len({c['row'] for c in cases})==18
+          assert len({c['place_id'] for c in cases})>=10
+          assert Counter(c['category'] for c in cases)=={
+            'reported_word_candidate':6,
+            'environmental_word_candidate':6,
+            'other_control_candidate':6}
+          assert m['collector_dry_run'] is False
+          assert m['heldout_from_previous_20_review_extraction_pilot']
+          assert m['heldout_from_previous_40_sentence_nli_sample']
+          print('PREFLIGHT OK')
+          print('distinct places:',len({c['place_id'] for c in cases}))
+          print('sample rows:',[c['row'] for c in cases])
+          print('source manifest SHA:',m['manifest_sha256'])
+          PY
