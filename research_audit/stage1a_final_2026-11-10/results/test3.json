@@ -1,0 +1,2367 @@
+{
+  "test": 3,
+  "protocol": "final-three-stage-2026-11-10-v1",
+  "status": "complete",
+  "manifest_sha256": "04df89e7d2fa7a4018eeca8f2188c15ab8b69be3286f0ededb71cdcb8d15a791",
+  "manifest": {
+    "protocol": "final-three-stage-2026-11-10-v1",
+    "source_file": "data/processed/reviews.jsonl",
+    "source_sha256": "f08422c068b8e52a40a93d14a4a3d12955d7f52997409f974a481c77748c7328",
+    "collection_provenance": "Google Places API-derived processed reviews",
+    "source_review_count": 214,
+    "source_place_count": 43,
+    "collector_dry_run": false,
+    "heldout_from_previous_20_review_extraction_pilot": true,
+    "heldout_from_previous_40_sentence_nli_sample": true,
+    "excluded_development_review_count": 45,
+    "cases": [
+      {
+        "row": 6,
+        "review_index": 1,
+        "place_id": "ChIJFapjVFl344kRXcKedI8Cuc0",
+        "publish_time": "2020-09-02T00:04:28.142522Z",
+        "sentence_index": 0,
+        "start": 0,
+        "end": 123,
+        "text": "A peaceful park right by the river with lovely, nature themed granite bollards and ground plates by artist William Reimann.",
+        "category": "reported_word_candidate",
+        "review_sha256": "e31bb041e210a71673ca6d0bbe017710782ff6a4425d01b14fb8008319f27a09"
+      },
+      {
+        "row": 52,
+        "review_index": 2,
+        "place_id": "ChIJlegDpmd344kRZ8VMOsqJ5xM",
+        "publish_time": "2025-12-28T15:34:02.566303150Z",
+        "sentence_index": 4,
+        "start": 742,
+        "end": 973,
+        "text": "I've learned from their narratives that the atmosphere is one of peaceful contemplation and serene civic pride, making it an exceptional spot for runners, casual walkers, or anyone needing a quiet moment to read or watch the boats.",
+        "category": "reported_word_candidate",
+        "review_sha256": "4e5d5d1444b5e0309e0d2ac88e43a4d325a6834484b0674430ce06f2d912d075"
+      },
+      {
+        "row": 56,
+        "review_index": 1,
+        "place_id": "ChIJK89zW1R344kRz7jYZfKShKA",
+        "publish_time": "2025-09-05T22:37:11.785076498Z",
+        "sentence_index": 0,
+        "start": 0,
+        "end": 120,
+        "text": "One of those small, quiet spaces that you don't expect to see but help give the surrounding neighborhood some character.",
+        "category": "reported_word_candidate",
+        "review_sha256": "aa7db13fc48a32eed5a9de0d44b5d584574e339ba5751613c8a0c92d03df5122"
+      },
+      {
+        "row": 75,
+        "review_index": 0,
+        "place_id": "ChIJw9Pt_EN344kRkOjxvQDgKbo",
+        "publish_time": "2026-06-17T09:17:45.761735624Z",
+        "sentence_index": 3,
+        "start": 526,
+        "end": 653,
+        "text": "It manages to feel like a working, living community despite being one of the most famous tourist destinations in Massachusetts.",
+        "category": "reported_word_candidate",
+        "review_sha256": "5d0542a161b786e2c09f97b2becf925cd0a12d89801500485c33c5704f721917"
+      },
+      {
+        "row": 86,
+        "review_index": 1,
+        "place_id": "ChIJaeBhK1d344kRma9tUbssEBo",
+        "publish_time": "2022-02-24T05:54:28.170372Z",
+        "sentence_index": 0,
+        "start": 0,
+        "end": 112,
+        "text": "Always great safe place 👍 to meet friends and neighbors 😉 I recommend to sit and enjoy the sun 😎☀️ 7days a week!",
+        "category": "reported_word_candidate",
+        "review_sha256": "04abe10c69c2ddfcf1386eb793b08a5e1ac01ba7c7f49d588bbc342b3e990a48"
+      },
+      {
+        "row": 92,
+        "review_index": 3,
+        "place_id": "ChIJ25L83fx544kRiuWNvWYdSLA",
+        "publish_time": "2021-09-14T23:08:08.786948Z",
+        "sentence_index": 0,
+        "start": 0,
+        "end": 32,
+        "text": "Peaceful cute bit of green space",
+        "category": "reported_word_candidate",
+        "review_sha256": "71011ed06998b829c785d3b3059a967e6aedda5fb874ef2e8ef1f925cf946a0d"
+      },
+      {
+        "row": 1,
+        "review_index": 1,
+        "place_id": "ChIJQXMWnUV344kRzs9-HfLoekk",
+        "publish_time": "2025-07-19T18:27:23.796000336Z",
+        "sentence_index": 0,
+        "start": 0,
+        "end": 102,
+        "text": "It's a beautiful space with plenty of shade in the hot days to sit under and dog hours in the morning.",
+        "category": "environmental_word_candidate",
+        "review_sha256": "f243ab6d96c5936cc7d88dcb49f3be99102b6e6b726c6a74b588cf964533468b"
+      },
+      {
+        "row": 18,
+        "review_index": 3,
+        "place_id": "ChIJdelVAGp344kRnbhJtYxqBuo",
+        "publish_time": "2023-01-08T21:24:58.491197Z",
+        "sentence_index": 0,
+        "start": 0,
+        "end": 47,
+        "text": "A great playground with lots of street parking.",
+        "category": "environmental_word_candidate",
+        "review_sha256": "aa61526c7a396e6a3ce7c0592e53c1037c9e1a3f67156004bbb3e95bc82181ca"
+      },
+      {
+        "row": 24,
+        "review_index": 4,
+        "place_id": "ChIJqawa215344kROpcUJbbE0Vg",
+        "publish_time": "2025-06-22T17:46:41.013934917Z",
+        "sentence_index": 2,
+        "start": 112,
+        "end": 245,
+        "text": "The road is closed to auto traffic from the last Sunday in April through the second Sunday in November and during Saturday festivals.",
+        "category": "environmental_word_candidate",
+        "review_sha256": "1d0090e6467fc4c3e5ecfaae1c562ed1708520f1840d8a19b3f2a602dffc15ef"
+      },
+      {
+        "row": 39,
+        "review_index": 4,
+        "place_id": "ChIJK-7ymsF344kRN70NFmyfvK8",
+        "publish_time": "2021-08-31T23:24:44.493950Z",
+        "sentence_index": 0,
+        "start": 0,
+        "end": 74,
+        "text": "Nice gated park with lots of toys for public use, such as walkers and cars",
+        "category": "environmental_word_candidate",
+        "review_sha256": "c994d57b8e281a470bc6d69ba88d933e6e8f4b58c5c14f154b9439d875f069f3"
+      },
+      {
+        "row": 41,
+        "review_index": 1,
+        "place_id": "ChIJ0zpihlJ344kRCAOlne5GEoc",
+        "publish_time": "2025-07-25T12:49:34.614843803Z",
+        "sentence_index": 2,
+        "start": 47,
+        "end": 116,
+        "text": "This one is close to Central Square but a little off the beaten path.",
+        "category": "environmental_word_candidate",
+        "review_sha256": "a537f1476f5f6ab622452882dbcf13aaef67ba64f851ab302594cdf524b0c728"
+      },
+      {
+        "row": 65,
+        "review_index": 0,
+        "place_id": "ChIJ70NXYP1544kRXnfSiB1r4as",
+        "publish_time": "2025-02-24T01:05:07.851008Z",
+        "sentence_index": 1,
+        "start": 33,
+        "end": 93,
+        "text": "There is a playground that I'm sure is lovely in the summer.",
+        "category": "environmental_word_candidate",
+        "review_sha256": "ae1cfb576fa391644fa2e436ea05c5755c7a6a80f523d48b0d258404c4699174"
+      },
+      {
+        "row": 13,
+        "review_index": 3,
+        "place_id": "ChIJC5eyB0J344kRIgcXIHRzdK4",
+        "publish_time": "2025-12-16T23:19:46.970697600Z",
+        "sentence_index": 0,
+        "start": 0,
+        "end": 55,
+        "text": "I just ate there and, it was a very disappointing meal.",
+        "category": "other_control_candidate",
+        "review_sha256": "bc35beb66bbb65be7ae9abd2ea880f67def655e23d2659d011eb9b4221171f34"
+      },
+      {
+        "row": 27,
+        "review_index": 2,
+        "place_id": "ChIJ8_RCvWp344kRCTRS1Lks6KU",
+        "publish_time": "2023-05-27T23:48:32.466215Z",
+        "sentence_index": 0,
+        "start": 0,
+        "end": 39,
+        "text": "The lights are so beautiful and calming",
+        "category": "other_control_candidate",
+        "review_sha256": "93888e4633c0b29dc7e6aeefc77c5fa5bb5d7cc5e8c51f813749e60a6088df7f"
+      },
+      {
+        "row": 31,
+        "review_index": 1,
+        "place_id": "ChIJE12gBq1w44kR_N0FJNiKAcg",
+        "publish_time": "2021-08-30T01:02:31.039310Z",
+        "sentence_index": 1,
+        "start": 16,
+        "end": 60,
+        "text": "We were there for the \"everyone eats\" event.",
+        "category": "other_control_candidate",
+        "review_sha256": "fe4eb564632ff7737c871328dc4b056e2c160eb3a6e1f764426d06b554a4c6b2"
+      },
+      {
+        "row": 46,
+        "review_index": 1,
+        "place_id": "ChIJeR3K0F5344kRjtZYF7-MPlw",
+        "publish_time": "2021-12-05T00:14:09.647253Z",
+        "sentence_index": 0,
+        "start": 0,
+        "end": 39,
+        "text": "Nice spot for a bike break and a snack.",
+        "category": "other_control_candidate",
+        "review_sha256": "38ae0c742e81a1626c342dc0855f3f680d1ce4f6f751d40277e3161caaf7aa1e"
+      },
+      {
+        "row": 60,
+        "review_index": 0,
+        "place_id": "ChIJibK7VF9344kRqxrHJkNsISk",
+        "publish_time": "2026-06-30T11:54:00.813585619Z",
+        "sentence_index": 0,
+        "start": 0,
+        "end": 38,
+        "text": "Very nice park, very clean facilities.",
+        "category": "other_control_candidate",
+        "review_sha256": "8b8e6bda0139d5ddc94eb0b68c3f2b347be68045e00986663419c6af729371c3"
+      },
+      {
+        "row": 70,
+        "review_index": 0,
+        "place_id": "ChIJM3icQVN344kRZsmgAwN0zc8",
+        "publish_time": "2026-03-26T17:35:11.989705404Z",
+        "sentence_index": 0,
+        "start": 0,
+        "end": 39,
+        "text": "Cute park, but it does need a cleaning.",
+        "category": "other_control_candidate",
+        "review_sha256": "3ca46a4055e385f7513b4b7d20fd679e98c884488502465b06a24350bfdbcb6f"
+      }
+    ],
+    "categories_are_heuristic_not_gold": true,
+    "external_raw_api_payload_independently_verified": false,
+    "manifest_sha256": "04df89e7d2fa7a4018eeca8f2188c15ab8b69be3286f0ededb71cdcb8d15a791"
+  },
+  "model": "facebook/bart-large-mnli",
+  "summary": {
+    "real_source_sentences": 18,
+    "NLI_source_emotion_pairs": 54,
+    "original_NLI_label_counts": {
+      "calm": {
+        "entailment": 6,
+        "neutral": 11,
+        "contradiction": 1
+      },
+      "inviting": {
+        "neutral": 13,
+        "entailment": 4,
+        "contradiction": 1
+      },
+      "safe": {
+        "neutral": 15,
+        "entailment": 1,
+        "contradiction": 2
+      }
+    },
+    "original_relevance_label_counts": {
+      "calm": {
+        "entailment": 7,
+        "neutral": 11
+      },
+      "inviting": {
+        "entailment": 14,
+        "neutral": 4
+      },
+      "safe": {
+        "neutral": 17,
+        "entailment": 1
+      }
+    },
+    "no_selected_evidence": {
+      "calm": 10,
+      "inviting": 9,
+      "safe": 14
+    },
+    "source_vs_relevance_label_disagreement": {
+      "calm": 2,
+      "inviting": 11,
+      "safe": 2
+    },
+    "selected_evidence_count": 25,
+    "warning": "No reference truth; differences between hypotheses are not correctness; absence is not neutral."
+  },
+  "records": [
+    {
+      "case_index": 0,
+      "source_sha256": "e31bb041e210a71673ca6d0bbe017710782ff6a4425d01b14fb8008319f27a09",
+      "manifest_sha256": "04df89e7d2fa7a4018eeca8f2188c15ab8b69be3286f0ededb71cdcb8d15a791",
+      "case": {
+        "row": 6,
+        "review_index": 1,
+        "place_id": "ChIJFapjVFl344kRXcKedI8Cuc0",
+        "publish_time": "2020-09-02T00:04:28.142522Z",
+        "sentence_index": 0,
+        "start": 0,
+        "end": 123,
+        "text": "A peaceful park right by the river with lovely, nature themed granite bollards and ground plates by artist William Reimann.",
+        "category": "reported_word_candidate",
+        "review_sha256": "e31bb041e210a71673ca6d0bbe017710782ff6a4425d01b14fb8008319f27a09"
+      },
+      "output": {
+        "calm": {
+          "hypothesis": "The atmosphere of this location is calm.",
+          "original_nli": {
+            "label": "entailment",
+            "probs": {
+              "contradiction": 6.41094520688057e-05,
+              "neutral": 0.09152106940746307,
+              "entailment": 0.9084148406982422
+            }
+          },
+          "original_relevance_nli": {
+            "label": "entailment",
+            "probs": {
+              "contradiction": 0.0017153184162452817,
+              "neutral": 0.16201774775981903,
+              "entailment": 0.8362669348716736
+            }
+          },
+          "selected_evidence": [
+            {
+              "candidate_index": 0,
+              "source_quote": "A peaceful park right by the river",
+              "route": "nli_candidate",
+              "advisory_flags": [],
+              "nli": {
+                "label": "entailment",
+                "probs": {
+                  "contradiction": 6.411165668396279e-05,
+                  "neutral": 0.13412170112133026,
+                  "entailment": 0.865814208984375
+                }
+              }
+            }
+          ],
+          "unresolved_candidates": [
+            {
+              "candidate_index": 1,
+              "reason": [
+                "no_literal_basis_in_source"
+              ]
+            },
+            {
+              "candidate_index": 2,
+              "reason": [
+                "unrelated_type_but_place_related"
+              ]
+            }
+          ],
+          "no_evidence_is_not_neutral": false,
+          "no_hard_source_deletion": true
+        },
+        "inviting": {
+          "hypothesis": "The atmosphere of this location is inviting.",
+          "original_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 9.465569746680558e-05,
+              "neutral": 0.5146287679672241,
+              "entailment": 0.48527657985687256
+            }
+          },
+          "original_relevance_nli": {
+            "label": "entailment",
+            "probs": {
+              "contradiction": 0.0018441657302901149,
+              "neutral": 0.4132511615753174,
+              "entailment": 0.584904670715332
+            }
+          },
+          "selected_evidence": [],
+          "unresolved_candidates": [
+            {
+              "candidate_index": 0,
+              "reason": [
+                "no_literal_basis_in_source"
+              ]
+            },
+            {
+              "candidate_index": 1,
+              "reason": [
+                "no_literal_basis_in_source"
+              ]
+            },
+            {
+              "candidate_index": 2,
+              "reason": [
+                "unrelated_type_but_place_related"
+              ]
+            }
+          ],
+          "no_evidence_is_not_neutral": true,
+          "no_hard_source_deletion": true
+        },
+        "safe": {
+          "hypothesis": "This location feels physically safe to visitors.",
+          "original_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.0008145282627083361,
+              "neutral": 0.9273533821105957,
+              "entailment": 0.07183205336332321
+            }
+          },
+          "original_relevance_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.004695790819823742,
+              "neutral": 0.8892738223075867,
+              "entailment": 0.10603033751249313
+            }
+          },
+          "selected_evidence": [],
+          "unresolved_candidates": [
+            {
+              "candidate_index": 0,
+              "reason": [
+                "no_literal_basis_in_source"
+              ]
+            },
+            {
+              "candidate_index": 2,
+              "reason": [
+                "unrelated_type_but_place_related"
+              ]
+            }
+          ],
+          "no_evidence_is_not_neutral": true,
+          "no_hard_source_deletion": true
+        }
+      }
+    },
+    {
+      "case_index": 1,
+      "source_sha256": "8deec1b140583d8465d173e099c220332f0ab535ee4e0d6d4ed9245699c86abd",
+      "manifest_sha256": "04df89e7d2fa7a4018eeca8f2188c15ab8b69be3286f0ededb71cdcb8d15a791",
+      "case": {
+        "row": 52,
+        "review_index": 2,
+        "place_id": "ChIJlegDpmd344kRZ8VMOsqJ5xM",
+        "publish_time": "2025-12-28T15:34:02.566303150Z",
+        "sentence_index": 4,
+        "start": 742,
+        "end": 973,
+        "text": "I've learned from their narratives that the atmosphere is one of peaceful contemplation and serene civic pride, making it an exceptional spot for runners, casual walkers, or anyone needing a quiet moment to read or watch the boats.",
+        "category": "reported_word_candidate",
+        "review_sha256": "4e5d5d1444b5e0309e0d2ac88e43a4d325a6834484b0674430ce06f2d912d075"
+      },
+      "output": {
+        "calm": {
+          "hypothesis": "The atmosphere of this location is calm.",
+          "original_nli": {
+            "label": "entailment",
+            "probs": {
+              "contradiction": 0.000224668750888668,
+              "neutral": 0.02325212024152279,
+              "entailment": 0.976523220539093
+            }
+          },
+          "original_relevance_nli": {
+            "label": "entailment",
+            "probs": {
+              "contradiction": 0.0006908050272613764,
+              "neutral": 0.06475549191236496,
+              "entailment": 0.9345536828041077
+            }
+          },
+          "selected_evidence": [
+            {
+              "candidate_index": 0,
+              "source_quote": "peaceful contemplation",
+              "route": "nli_candidate",
+              "advisory_flags": [],
+              "nli": {
+                "label": "neutral",
+                "probs": {
+                  "contradiction": 0.00046676589408889413,
+                  "neutral": 0.5435512661933899,
+                  "entailment": 0.45598194003105164
+                }
+              }
+            }
+          ],
+          "unresolved_candidates": [
+            {
+              "candidate_index": 1,
+              "reason": [
+                "no_literal_basis_in_source"
+              ]
+            }
+          ],
+          "no_evidence_is_not_neutral": false,
+          "no_hard_source_deletion": true
+        },
+        "inviting": {
+          "hypothesis": "The atmosphere of this location is inviting.",
+          "original_nli": {
+            "label": "entailment",
+            "probs": {
+              "contradiction": 0.00026850681751966476,
+              "neutral": 0.10257690399885178,
+              "entailment": 0.8971545696258545
+            }
+          },
+          "original_relevance_nli": {
+            "label": "entailment",
+            "probs": {
+              "contradiction": 0.0007013651775196195,
+              "neutral": 0.14488525688648224,
+              "entailment": 0.8544133305549622
+            }
+          },
+          "selected_evidence": [
+            {
+              "candidate_index": 1,
+              "source_quote": "exceptional spot for runners, casual walkers, or anyone needing a quiet moment to read or watch the boats",
+              "route": "needs_review",
+              "advisory_flags": [
+                "direct_without_explicit_experience_or_atmosphere"
+              ],
+              "nli": {
+                "label": "neutral",
+                "probs": {
+                  "contradiction": 0.00021467807528097183,
+                  "neutral": 0.9081794023513794,
+                  "entailment": 0.09160587936639786
+                }
+              }
+            }
+          ],
+          "unresolved_candidates": [
+            {
+              "candidate_index": 0,
+              "reason": [
+                "no_literal_basis_in_source"
+              ]
+            }
+          ],
+          "no_evidence_is_not_neutral": false,
+          "no_hard_source_deletion": true
+        },
+        "safe": {
+          "hypothesis": "This location feels physically safe to visitors.",
+          "original_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.0030957660637795925,
+              "neutral": 0.9868818521499634,
+              "entailment": 0.010022460483014584
+            }
+          },
+          "original_relevance_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.004220515955239534,
+              "neutral": 0.9414909482002258,
+              "entailment": 0.05428861826658249
+            }
+          },
+          "selected_evidence": [],
+          "unresolved_candidates": [],
+          "no_evidence_is_not_neutral": true,
+          "no_hard_source_deletion": true
+        }
+      }
+    },
+    {
+      "case_index": 2,
+      "source_sha256": "14613cc9eb7e3356255de94bc68cfbe461265b3ff9dc37336652aaedbec90096",
+      "manifest_sha256": "04df89e7d2fa7a4018eeca8f2188c15ab8b69be3286f0ededb71cdcb8d15a791",
+      "case": {
+        "row": 56,
+        "review_index": 1,
+        "place_id": "ChIJK89zW1R344kRz7jYZfKShKA",
+        "publish_time": "2025-09-05T22:37:11.785076498Z",
+        "sentence_index": 0,
+        "start": 0,
+        "end": 120,
+        "text": "One of those small, quiet spaces that you don't expect to see but help give the surrounding neighborhood some character.",
+        "category": "reported_word_candidate",
+        "review_sha256": "aa7db13fc48a32eed5a9de0d44b5d584574e339ba5751613c8a0c92d03df5122"
+      },
+      "output": {
+        "calm": {
+          "hypothesis": "The atmosphere of this location is calm.",
+          "original_nli": {
+            "label": "entailment",
+            "probs": {
+              "contradiction": 0.00037960559711791575,
+              "neutral": 0.17863748967647552,
+              "entailment": 0.8209829330444336
+            }
+          },
+          "original_relevance_nli": {
+            "label": "entailment",
+            "probs": {
+              "contradiction": 0.0017453957116231322,
+              "neutral": 0.11189991235733032,
+              "entailment": 0.8863546848297119
+            }
+          },
+          "selected_evidence": [
+            {
+              "candidate_index": 0,
+              "source_quote": "small, quiet spaces",
+              "route": "nli_candidate",
+              "advisory_flags": [],
+              "nli": {
+                "label": "entailment",
+                "probs": {
+                  "contradiction": 0.0010091891745105386,
+                  "neutral": 0.24480445683002472,
+                  "entailment": 0.7541863322257996
+                }
+              }
+            }
+          ],
+          "unresolved_candidates": [],
+          "no_evidence_is_not_neutral": false,
+          "no_hard_source_deletion": true
+        },
+        "inviting": {
+          "hypothesis": "The atmosphere of this location is inviting.",
+          "original_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.00042143400060012937,
+              "neutral": 0.9013059139251709,
+              "entailment": 0.09827273339033127
+            }
+          },
+          "original_relevance_nli": {
+            "label": "entailment",
+            "probs": {
+              "contradiction": 0.001683359849266708,
+              "neutral": 0.3311241567134857,
+              "entailment": 0.6671925187110901
+            }
+          },
+          "selected_evidence": [],
+          "unresolved_candidates": [
+            {
+              "candidate_index": 0,
+              "reason": [
+                "no_literal_basis_in_source"
+              ]
+            }
+          ],
+          "no_evidence_is_not_neutral": true,
+          "no_hard_source_deletion": true
+        },
+        "safe": {
+          "hypothesis": "This location feels physically safe to visitors.",
+          "original_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.0027012722566723824,
+              "neutral": 0.9915364980697632,
+              "entailment": 0.005762313026934862
+            }
+          },
+          "original_relevance_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.005218902137130499,
+              "neutral": 0.9595375061035156,
+              "entailment": 0.03524364158511162
+            }
+          },
+          "selected_evidence": [],
+          "unresolved_candidates": [
+            {
+              "candidate_index": 0,
+              "reason": [
+                "no_literal_basis_in_source"
+              ]
+            }
+          ],
+          "no_evidence_is_not_neutral": true,
+          "no_hard_source_deletion": true
+        }
+      }
+    },
+    {
+      "case_index": 3,
+      "source_sha256": "42c756c130fddaf9832267aa0675d91e1b834694a304f946d2dfa4329158750d",
+      "manifest_sha256": "04df89e7d2fa7a4018eeca8f2188c15ab8b69be3286f0ededb71cdcb8d15a791",
+      "case": {
+        "row": 75,
+        "review_index": 0,
+        "place_id": "ChIJw9Pt_EN344kRkOjxvQDgKbo",
+        "publish_time": "2026-06-17T09:17:45.761735624Z",
+        "sentence_index": 3,
+        "start": 526,
+        "end": 653,
+        "text": "It manages to feel like a working, living community despite being one of the most famous tourist destinations in Massachusetts.",
+        "category": "reported_word_candidate",
+        "review_sha256": "5d0542a161b786e2c09f97b2becf925cd0a12d89801500485c33c5704f721917"
+      },
+      "output": {
+        "calm": {
+          "hypothesis": "The atmosphere of this location is calm.",
+          "original_nli": {
+            "label": "entailment",
+            "probs": {
+              "contradiction": 0.0023230956867337227,
+              "neutral": 0.17618034780025482,
+              "entailment": 0.8214964866638184
+            }
+          },
+          "original_relevance_nli": {
+            "label": "entailment",
+            "probs": {
+              "contradiction": 0.019000736996531487,
+              "neutral": 0.45583653450012207,
+              "entailment": 0.5251628160476685
+            }
+          },
+          "selected_evidence": [],
+          "unresolved_candidates": [],
+          "no_evidence_is_not_neutral": true,
+          "no_hard_source_deletion": true
+        },
+        "inviting": {
+          "hypothesis": "The atmosphere of this location is inviting.",
+          "original_nli": {
+            "label": "entailment",
+            "probs": {
+              "contradiction": 0.0004069082497153431,
+              "neutral": 0.14986655116081238,
+              "entailment": 0.8497264981269836
+            }
+          },
+          "original_relevance_nli": {
+            "label": "entailment",
+            "probs": {
+              "contradiction": 0.0011118409456685185,
+              "neutral": 0.1662157028913498,
+              "entailment": 0.8326724767684937
+            }
+          },
+          "selected_evidence": [
+            {
+              "candidate_index": 0,
+              "source_quote": "It manages to feel like a working, living community",
+              "route": "nli_candidate",
+              "advisory_flags": [],
+              "nli": {
+                "label": "entailment",
+                "probs": {
+                  "contradiction": 0.0003017698763869703,
+                  "neutral": 0.14400039613246918,
+                  "entailment": 0.8556978702545166
+                }
+              }
+            }
+          ],
+          "unresolved_candidates": [],
+          "no_evidence_is_not_neutral": false,
+          "no_hard_source_deletion": true
+        },
+        "safe": {
+          "hypothesis": "This location feels physically safe to visitors.",
+          "original_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.003775425720959902,
+              "neutral": 0.8678591251373291,
+              "entailment": 0.12836550176143646
+            }
+          },
+          "original_relevance_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.0016861752374097705,
+              "neutral": 0.9632436633110046,
+              "entailment": 0.03507021814584732
+            }
+          },
+          "selected_evidence": [],
+          "unresolved_candidates": [],
+          "no_evidence_is_not_neutral": true,
+          "no_hard_source_deletion": true
+        }
+      }
+    },
+    {
+      "case_index": 4,
+      "source_sha256": "04abe10c69c2ddfcf1386eb793b08a5e1ac01ba7c7f49d588bbc342b3e990a48",
+      "manifest_sha256": "04df89e7d2fa7a4018eeca8f2188c15ab8b69be3286f0ededb71cdcb8d15a791",
+      "case": {
+        "row": 86,
+        "review_index": 1,
+        "place_id": "ChIJaeBhK1d344kRma9tUbssEBo",
+        "publish_time": "2022-02-24T05:54:28.170372Z",
+        "sentence_index": 0,
+        "start": 0,
+        "end": 112,
+        "text": "Always great safe place 👍 to meet friends and neighbors 😉 I recommend to sit and enjoy the sun 😎☀️ 7days a week!",
+        "category": "reported_word_candidate",
+        "review_sha256": "04abe10c69c2ddfcf1386eb793b08a5e1ac01ba7c7f49d588bbc342b3e990a48"
+      },
+      "output": {
+        "calm": {
+          "hypothesis": "The atmosphere of this location is calm.",
+          "original_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.0014215018600225449,
+              "neutral": 0.8083496689796448,
+              "entailment": 0.19022884964942932
+            }
+          },
+          "original_relevance_nli": {
+            "label": "entailment",
+            "probs": {
+              "contradiction": 0.0012070446973666549,
+              "neutral": 0.24550527334213257,
+              "entailment": 0.7532876133918762
+            }
+          },
+          "selected_evidence": [
+            {
+              "candidate_index": 1,
+              "source_quote": "sit and enjoy the sun 😎☀️",
+              "route": "nli_candidate",
+              "advisory_flags": [],
+              "nli": {
+                "label": "neutral",
+                "probs": {
+                  "contradiction": 0.007686815690249205,
+                  "neutral": 0.9394859671592712,
+                  "entailment": 0.05282730236649513
+                }
+              }
+            }
+          ],
+          "unresolved_candidates": [
+            {
+              "candidate_index": 2,
+              "reason": [
+                "component1_claim_flagged"
+              ]
+            }
+          ],
+          "no_evidence_is_not_neutral": false,
+          "no_hard_source_deletion": true
+        },
+        "inviting": {
+          "hypothesis": "The atmosphere of this location is inviting.",
+          "original_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.00043497796286828816,
+              "neutral": 0.7904438376426697,
+              "entailment": 0.2091212421655655
+            }
+          },
+          "original_relevance_nli": {
+            "label": "entailment",
+            "probs": {
+              "contradiction": 0.0008905456052161753,
+              "neutral": 0.2061721384525299,
+              "entailment": 0.7929372787475586
+            }
+          },
+          "selected_evidence": [
+            {
+              "candidate_index": 0,
+              "source_quote": "to meet friends and neighbors 😉",
+              "route": "nli_candidate",
+              "advisory_flags": [],
+              "nli": {
+                "label": "neutral",
+                "probs": {
+                  "contradiction": 0.0005458779633045197,
+                  "neutral": 0.9746559262275696,
+                  "entailment": 0.024798192083835602
+                }
+              }
+            },
+            {
+              "candidate_index": 1,
+              "source_quote": "I recommend to sit and enjoy the sun 😎☀️",
+              "route": "nli_candidate",
+              "advisory_flags": [],
+              "nli": {
+                "label": "neutral",
+                "probs": {
+                  "contradiction": 0.000610371760558337,
+                  "neutral": 0.8808032274246216,
+                  "entailment": 0.11858633905649185
+                }
+              }
+            }
+          ],
+          "unresolved_candidates": [
+            {
+              "candidate_index": 2,
+              "reason": [
+                "component1_claim_flagged"
+              ]
+            }
+          ],
+          "no_evidence_is_not_neutral": false,
+          "no_hard_source_deletion": true
+        },
+        "safe": {
+          "hypothesis": "This location feels physically safe to visitors.",
+          "original_nli": {
+            "label": "entailment",
+            "probs": {
+              "contradiction": 0.000804224400781095,
+              "neutral": 0.07614698261022568,
+              "entailment": 0.923048734664917
+            }
+          },
+          "original_relevance_nli": {
+            "label": "entailment",
+            "probs": {
+              "contradiction": 0.0007620989927090704,
+              "neutral": 0.18018004298210144,
+              "entailment": 0.8190578818321228
+            }
+          },
+          "selected_evidence": [
+            {
+              "candidate_index": 0,
+              "source_quote": "great safe place 👍",
+              "route": "nli_candidate",
+              "advisory_flags": [],
+              "nli": {
+                "label": "entailment",
+                "probs": {
+                  "contradiction": 0.00044792506378144026,
+                  "neutral": 0.15288864076137543,
+                  "entailment": 0.8466634750366211
+                }
+              }
+            }
+          ],
+          "unresolved_candidates": [
+            {
+              "candidate_index": 2,
+              "reason": [
+                "component1_claim_flagged"
+              ]
+            }
+          ],
+          "no_evidence_is_not_neutral": false,
+          "no_hard_source_deletion": true
+        }
+      }
+    },
+    {
+      "case_index": 5,
+      "source_sha256": "71011ed06998b829c785d3b3059a967e6aedda5fb874ef2e8ef1f925cf946a0d",
+      "manifest_sha256": "04df89e7d2fa7a4018eeca8f2188c15ab8b69be3286f0ededb71cdcb8d15a791",
+      "case": {
+        "row": 92,
+        "review_index": 3,
+        "place_id": "ChIJ25L83fx544kRiuWNvWYdSLA",
+        "publish_time": "2021-09-14T23:08:08.786948Z",
+        "sentence_index": 0,
+        "start": 0,
+        "end": 32,
+        "text": "Peaceful cute bit of green space",
+        "category": "reported_word_candidate",
+        "review_sha256": "71011ed06998b829c785d3b3059a967e6aedda5fb874ef2e8ef1f925cf946a0d"
+      },
+      "output": {
+        "calm": {
+          "hypothesis": "The atmosphere of this location is calm.",
+          "original_nli": {
+            "label": "entailment",
+            "probs": {
+              "contradiction": 0.00012089128722436726,
+              "neutral": 0.13374237716197968,
+              "entailment": 0.8661367297172546
+            }
+          },
+          "original_relevance_nli": {
+            "label": "entailment",
+            "probs": {
+              "contradiction": 0.0008890021708793938,
+              "neutral": 0.13981392979621887,
+              "entailment": 0.8592970371246338
+            }
+          },
+          "selected_evidence": [
+            {
+              "candidate_index": 0,
+              "source_quote": "Peaceful",
+              "route": "nli_candidate",
+              "advisory_flags": [],
+              "nli": {
+                "label": "neutral",
+                "probs": {
+                  "contradiction": 0.000369926739949733,
+                  "neutral": 0.7282029390335083,
+                  "entailment": 0.27142712473869324
+                }
+              }
+            }
+          ],
+          "unresolved_candidates": [],
+          "no_evidence_is_not_neutral": false,
+          "no_hard_source_deletion": true
+        },
+        "inviting": {
+          "hypothesis": "The atmosphere of this location is inviting.",
+          "original_nli": {
+            "label": "entailment",
+            "probs": {
+              "contradiction": 0.00011608509521465749,
+              "neutral": 0.36576998233795166,
+              "entailment": 0.6341139674186707
+            }
+          },
+          "original_relevance_nli": {
+            "label": "entailment",
+            "probs": {
+              "contradiction": 0.0008481155382469296,
+              "neutral": 0.3676666021347046,
+              "entailment": 0.6314852237701416
+            }
+          },
+          "selected_evidence": [
+            {
+              "candidate_index": 0,
+              "source_quote": "cute",
+              "route": "nli_candidate",
+              "advisory_flags": [],
+              "nli": {
+                "label": "neutral",
+                "probs": {
+                  "contradiction": 0.0003986372903455049,
+                  "neutral": 0.9807393550872803,
+                  "entailment": 0.018861928954720497
+                }
+              }
+            }
+          ],
+          "unresolved_candidates": [],
+          "no_evidence_is_not_neutral": false,
+          "no_hard_source_deletion": true
+        },
+        "safe": {
+          "hypothesis": "This location feels physically safe to visitors.",
+          "original_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.00048408456495963037,
+              "neutral": 0.9659779071807861,
+              "entailment": 0.03353797271847725
+            }
+          },
+          "original_relevance_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.0033110652584582567,
+              "neutral": 0.9382774829864502,
+              "entailment": 0.05841149017214775
+            }
+          },
+          "selected_evidence": [],
+          "unresolved_candidates": [],
+          "no_evidence_is_not_neutral": true,
+          "no_hard_source_deletion": true
+        }
+      }
+    },
+    {
+      "case_index": 6,
+      "source_sha256": "f243ab6d96c5936cc7d88dcb49f3be99102b6e6b726c6a74b588cf964533468b",
+      "manifest_sha256": "04df89e7d2fa7a4018eeca8f2188c15ab8b69be3286f0ededb71cdcb8d15a791",
+      "case": {
+        "row": 1,
+        "review_index": 1,
+        "place_id": "ChIJQXMWnUV344kRzs9-HfLoekk",
+        "publish_time": "2025-07-19T18:27:23.796000336Z",
+        "sentence_index": 0,
+        "start": 0,
+        "end": 102,
+        "text": "It's a beautiful space with plenty of shade in the hot days to sit under and dog hours in the morning.",
+        "category": "environmental_word_candidate",
+        "review_sha256": "f243ab6d96c5936cc7d88dcb49f3be99102b6e6b726c6a74b588cf964533468b"
+      },
+      "output": {
+        "calm": {
+          "hypothesis": "The atmosphere of this location is calm.",
+          "original_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.0024706998374313116,
+              "neutral": 0.9536591172218323,
+              "entailment": 0.04387017711997032
+            }
+          },
+          "original_relevance_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.0017294164281338453,
+              "neutral": 0.5023701190948486,
+              "entailment": 0.49590054154396057
+            }
+          },
+          "selected_evidence": [
+            {
+              "candidate_index": 1,
+              "source_quote": "plenty of shade in the hot days to sit under",
+              "route": "nli_candidate",
+              "advisory_flags": [],
+              "nli": {
+                "label": "neutral",
+                "probs": {
+                  "contradiction": 0.005204150918871164,
+                  "neutral": 0.9844759106636047,
+                  "entailment": 0.010319973342120647
+                }
+              }
+            }
+          ],
+          "unresolved_candidates": [],
+          "no_evidence_is_not_neutral": false,
+          "no_hard_source_deletion": true
+        },
+        "inviting": {
+          "hypothesis": "The atmosphere of this location is inviting.",
+          "original_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.0003472401003818959,
+              "neutral": 0.5584200024604797,
+              "entailment": 0.44123268127441406
+            }
+          },
+          "original_relevance_nli": {
+            "label": "entailment",
+            "probs": {
+              "contradiction": 0.0016335530672222376,
+              "neutral": 0.39441415667533875,
+              "entailment": 0.6039523482322693
+            }
+          },
+          "selected_evidence": [
+            {
+              "candidate_index": 1,
+              "source_quote": "plenty of shade in the hot days to sit under",
+              "route": "nli_candidate",
+              "advisory_flags": [],
+              "nli": {
+                "label": "neutral",
+                "probs": {
+                  "contradiction": 0.000616434495896101,
+                  "neutral": 0.9686734080314636,
+                  "entailment": 0.030710216611623764
+                }
+              }
+            },
+            {
+              "candidate_index": 2,
+              "source_quote": "dog hours in the morning",
+              "route": "nli_candidate",
+              "advisory_flags": [],
+              "nli": {
+                "label": "neutral",
+                "probs": {
+                  "contradiction": 0.023929951712489128,
+                  "neutral": 0.9659112691879272,
+                  "entailment": 0.010158841498196125
+                }
+              }
+            }
+          ],
+          "unresolved_candidates": [],
+          "no_evidence_is_not_neutral": false,
+          "no_hard_source_deletion": true
+        },
+        "safe": {
+          "hypothesis": "This location feels physically safe to visitors.",
+          "original_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.002295960672199726,
+              "neutral": 0.9632945656776428,
+              "entailment": 0.03440943732857704
+            }
+          },
+          "original_relevance_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.002726700622588396,
+              "neutral": 0.8087504506111145,
+              "entailment": 0.1885228455066681
+            }
+          },
+          "selected_evidence": [],
+          "unresolved_candidates": [],
+          "no_evidence_is_not_neutral": true,
+          "no_hard_source_deletion": true
+        }
+      }
+    },
+    {
+      "case_index": 7,
+      "source_sha256": "440626ca067198a604b134b603cd03c72456b4b948c7338be248406d2d47c1f6",
+      "manifest_sha256": "04df89e7d2fa7a4018eeca8f2188c15ab8b69be3286f0ededb71cdcb8d15a791",
+      "case": {
+        "row": 18,
+        "review_index": 3,
+        "place_id": "ChIJdelVAGp344kRnbhJtYxqBuo",
+        "publish_time": "2023-01-08T21:24:58.491197Z",
+        "sentence_index": 0,
+        "start": 0,
+        "end": 47,
+        "text": "A great playground with lots of street parking.",
+        "category": "environmental_word_candidate",
+        "review_sha256": "aa61526c7a396e6a3ce7c0592e53c1037c9e1a3f67156004bbb3e95bc82181ca"
+      },
+      "output": {
+        "calm": {
+          "hypothesis": "The atmosphere of this location is calm.",
+          "original_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.02262064628303051,
+              "neutral": 0.9628826975822449,
+              "entailment": 0.014496741816401482
+            }
+          },
+          "original_relevance_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.0034357497934252024,
+              "neutral": 0.8631709814071655,
+              "entailment": 0.13339324295520782
+            }
+          },
+          "selected_evidence": [],
+          "unresolved_candidates": [],
+          "no_evidence_is_not_neutral": true,
+          "no_hard_source_deletion": true
+        },
+        "inviting": {
+          "hypothesis": "The atmosphere of this location is inviting.",
+          "original_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.000324428197927773,
+              "neutral": 0.9459050893783569,
+              "entailment": 0.053770482540130615
+            }
+          },
+          "original_relevance_nli": {
+            "label": "entailment",
+            "probs": {
+              "contradiction": 0.0018476006807759404,
+              "neutral": 0.46671077609062195,
+              "entailment": 0.5314416289329529
+            }
+          },
+          "selected_evidence": [],
+          "unresolved_candidates": [],
+          "no_evidence_is_not_neutral": true,
+          "no_hard_source_deletion": true
+        },
+        "safe": {
+          "hypothesis": "This location feels physically safe to visitors.",
+          "original_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.003460522508248687,
+              "neutral": 0.9296366572380066,
+              "entailment": 0.06690278649330139
+            }
+          },
+          "original_relevance_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.009549787268042564,
+              "neutral": 0.8733925819396973,
+              "entailment": 0.11705764383077621
+            }
+          },
+          "selected_evidence": [],
+          "unresolved_candidates": [],
+          "no_evidence_is_not_neutral": true,
+          "no_hard_source_deletion": true
+        }
+      }
+    },
+    {
+      "case_index": 8,
+      "source_sha256": "c91a2fed3db0c79a304d5ab150ddaa818517b1a404f5477c09469cce8bf3be74",
+      "manifest_sha256": "04df89e7d2fa7a4018eeca8f2188c15ab8b69be3286f0ededb71cdcb8d15a791",
+      "case": {
+        "row": 24,
+        "review_index": 4,
+        "place_id": "ChIJqawa215344kROpcUJbbE0Vg",
+        "publish_time": "2025-06-22T17:46:41.013934917Z",
+        "sentence_index": 2,
+        "start": 112,
+        "end": 245,
+        "text": "The road is closed to auto traffic from the last Sunday in April through the second Sunday in November and during Saturday festivals.",
+        "category": "environmental_word_candidate",
+        "review_sha256": "1d0090e6467fc4c3e5ecfaae1c562ed1708520f1840d8a19b3f2a602dffc15ef"
+      },
+      "output": {
+        "calm": {
+          "hypothesis": "The atmosphere of this location is calm.",
+          "original_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.01413582731038332,
+              "neutral": 0.9767632484436035,
+              "entailment": 0.009100847877562046
+            }
+          },
+          "original_relevance_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.0028275377117097378,
+              "neutral": 0.840521514415741,
+              "entailment": 0.15665094554424286
+            }
+          },
+          "selected_evidence": [],
+          "unresolved_candidates": [],
+          "no_evidence_is_not_neutral": true,
+          "no_hard_source_deletion": true
+        },
+        "inviting": {
+          "hypothesis": "The atmosphere of this location is inviting.",
+          "original_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.0054360562935471535,
+              "neutral": 0.9884422421455383,
+              "entailment": 0.006121751852333546
+            }
+          },
+          "original_relevance_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.0027805299032479525,
+              "neutral": 0.7553461790084839,
+              "entailment": 0.24187327921390533
+            }
+          },
+          "selected_evidence": [],
+          "unresolved_candidates": [],
+          "no_evidence_is_not_neutral": true,
+          "no_hard_source_deletion": true
+        },
+        "safe": {
+          "hypothesis": "This location feels physically safe to visitors.",
+          "original_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.029509443789720535,
+              "neutral": 0.9538071751594543,
+              "entailment": 0.016683418303728104
+            }
+          },
+          "original_relevance_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.0018053201492875814,
+              "neutral": 0.6165383458137512,
+              "entailment": 0.3816564381122589
+            }
+          },
+          "selected_evidence": [],
+          "unresolved_candidates": [],
+          "no_evidence_is_not_neutral": true,
+          "no_hard_source_deletion": true
+        }
+      }
+    },
+    {
+      "case_index": 9,
+      "source_sha256": "c994d57b8e281a470bc6d69ba88d933e6e8f4b58c5c14f154b9439d875f069f3",
+      "manifest_sha256": "04df89e7d2fa7a4018eeca8f2188c15ab8b69be3286f0ededb71cdcb8d15a791",
+      "case": {
+        "row": 39,
+        "review_index": 4,
+        "place_id": "ChIJK-7ymsF344kRN70NFmyfvK8",
+        "publish_time": "2021-08-31T23:24:44.493950Z",
+        "sentence_index": 0,
+        "start": 0,
+        "end": 74,
+        "text": "Nice gated park with lots of toys for public use, such as walkers and cars",
+        "category": "environmental_word_candidate",
+        "review_sha256": "c994d57b8e281a470bc6d69ba88d933e6e8f4b58c5c14f154b9439d875f069f3"
+      },
+      "output": {
+        "calm": {
+          "hypothesis": "The atmosphere of this location is calm.",
+          "original_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.0063309152610599995,
+              "neutral": 0.9879705309867859,
+              "entailment": 0.0056985304690897465
+            }
+          },
+          "original_relevance_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.000886723049916327,
+              "neutral": 0.7710070013999939,
+              "entailment": 0.22810624539852142
+            }
+          },
+          "selected_evidence": [],
+          "unresolved_candidates": [],
+          "no_evidence_is_not_neutral": true,
+          "no_hard_source_deletion": true
+        },
+        "inviting": {
+          "hypothesis": "The atmosphere of this location is inviting.",
+          "original_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.0002787610865198076,
+              "neutral": 0.9836015105247498,
+              "entailment": 0.01611984334886074
+            }
+          },
+          "original_relevance_nli": {
+            "label": "entailment",
+            "probs": {
+              "contradiction": 0.0007813942502252758,
+              "neutral": 0.37234896421432495,
+              "entailment": 0.6268696784973145
+            }
+          },
+          "selected_evidence": [
+            {
+              "candidate_index": 1,
+              "source_quote": "lots of toys for public use",
+              "route": "nli_candidate",
+              "advisory_flags": [],
+              "nli": {
+                "label": "neutral",
+                "probs": {
+                  "contradiction": 0.0006969917449168861,
+                  "neutral": 0.9871292114257812,
+                  "entailment": 0.01217377558350563
+                }
+              }
+            },
+            {
+              "candidate_index": 2,
+              "source_quote": "such as walkers and cars",
+              "route": "nli_candidate",
+              "advisory_flags": [],
+              "nli": {
+                "label": "neutral",
+                "probs": {
+                  "contradiction": 0.0020493303891271353,
+                  "neutral": 0.9926122426986694,
+                  "entailment": 0.005338358227163553
+                }
+              }
+            }
+          ],
+          "unresolved_candidates": [],
+          "no_evidence_is_not_neutral": false,
+          "no_hard_source_deletion": true
+        },
+        "safe": {
+          "hypothesis": "This location feels physically safe to visitors.",
+          "original_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.014682585373520851,
+              "neutral": 0.9448201060295105,
+              "entailment": 0.04049732908606529
+            }
+          },
+          "original_relevance_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.001274674548767507,
+              "neutral": 0.6372103095054626,
+              "entailment": 0.36151498556137085
+            }
+          },
+          "selected_evidence": [
+            {
+              "candidate_index": 0,
+              "source_quote": "Nice gated park",
+              "route": "nli_candidate",
+              "advisory_flags": [],
+              "nli": {
+                "label": "neutral",
+                "probs": {
+                  "contradiction": 0.001068503363057971,
+                  "neutral": 0.7903985977172852,
+                  "entailment": 0.20853294432163239
+                }
+              }
+            }
+          ],
+          "unresolved_candidates": [],
+          "no_evidence_is_not_neutral": false,
+          "no_hard_source_deletion": true
+        }
+      }
+    },
+    {
+      "case_index": 10,
+      "source_sha256": "b738067838ad133af0e740e22e3f6336f48d0d1b578554834d424cf8de1c6260",
+      "manifest_sha256": "04df89e7d2fa7a4018eeca8f2188c15ab8b69be3286f0ededb71cdcb8d15a791",
+      "case": {
+        "row": 41,
+        "review_index": 1,
+        "place_id": "ChIJ0zpihlJ344kRCAOlne5GEoc",
+        "publish_time": "2025-07-25T12:49:34.614843803Z",
+        "sentence_index": 2,
+        "start": 47,
+        "end": 116,
+        "text": "This one is close to Central Square but a little off the beaten path.",
+        "category": "environmental_word_candidate",
+        "review_sha256": "a537f1476f5f6ab622452882dbcf13aaef67ba64f851ab302594cdf524b0c728"
+      },
+      "output": {
+        "calm": {
+          "hypothesis": "The atmosphere of this location is calm.",
+          "original_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.0002539588895160705,
+              "neutral": 0.999272882938385,
+              "entailment": 0.0004731825029011816
+            }
+          },
+          "original_relevance_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.0006498816655948758,
+              "neutral": 0.9529553055763245,
+              "entailment": 0.046394798904657364
+            }
+          },
+          "selected_evidence": [
+            {
+              "candidate_index": 1,
+              "source_quote": "a little off the beaten path",
+              "route": "nli_candidate",
+              "advisory_flags": [],
+              "nli": {
+                "label": "neutral",
+                "probs": {
+                  "contradiction": 0.001326431636698544,
+                  "neutral": 0.9971790313720703,
+                  "entailment": 0.0014945942675694823
+                }
+              }
+            }
+          ],
+          "unresolved_candidates": [],
+          "no_evidence_is_not_neutral": false,
+          "no_hard_source_deletion": true
+        },
+        "inviting": {
+          "hypothesis": "The atmosphere of this location is inviting.",
+          "original_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.00020574458176270127,
+              "neutral": 0.9992176294326782,
+              "entailment": 0.0005766431568190455
+            }
+          },
+          "original_relevance_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.0011872566537931561,
+              "neutral": 0.8267597556114197,
+              "entailment": 0.1720530241727829
+            }
+          },
+          "selected_evidence": [
+            {
+              "candidate_index": 1,
+              "source_quote": "a little off the beaten path",
+              "route": "nli_candidate",
+              "advisory_flags": [],
+              "nli": {
+                "label": "neutral",
+                "probs": {
+                  "contradiction": 0.0007467457326129079,
+                  "neutral": 0.998336136341095,
+                  "entailment": 0.0009171496494673193
+                }
+              }
+            }
+          ],
+          "unresolved_candidates": [],
+          "no_evidence_is_not_neutral": false,
+          "no_hard_source_deletion": true
+        },
+        "safe": {
+          "hypothesis": "This location feels physically safe to visitors.",
+          "original_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.005759531632065773,
+              "neutral": 0.9923507571220398,
+              "entailment": 0.0018896459368988872
+            }
+          },
+          "original_relevance_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.0007379134767688811,
+              "neutral": 0.9524281620979309,
+              "entailment": 0.04683400318026543
+            }
+          },
+          "selected_evidence": [
+            {
+              "candidate_index": 1,
+              "source_quote": "a little off the beaten path",
+              "route": "nli_candidate",
+              "advisory_flags": [],
+              "nli": {
+                "label": "neutral",
+                "probs": {
+                  "contradiction": 0.05321921408176422,
+                  "neutral": 0.9441391229629517,
+                  "entailment": 0.0026416797190904617
+                }
+              }
+            }
+          ],
+          "unresolved_candidates": [],
+          "no_evidence_is_not_neutral": false,
+          "no_hard_source_deletion": true
+        }
+      }
+    },
+    {
+      "case_index": 11,
+      "source_sha256": "29b84ed2fab110a103a3bcc82ebbad84f0f8a39d7a523c681f5757ef65a34f1e",
+      "manifest_sha256": "04df89e7d2fa7a4018eeca8f2188c15ab8b69be3286f0ededb71cdcb8d15a791",
+      "case": {
+        "row": 65,
+        "review_index": 0,
+        "place_id": "ChIJ70NXYP1544kRXnfSiB1r4as",
+        "publish_time": "2025-02-24T01:05:07.851008Z",
+        "sentence_index": 1,
+        "start": 33,
+        "end": 93,
+        "text": "There is a playground that I'm sure is lovely in the summer.",
+        "category": "environmental_word_candidate",
+        "review_sha256": "ae1cfb576fa391644fa2e436ea05c5755c7a6a80f523d48b0d258404c4699174"
+      },
+      "output": {
+        "calm": {
+          "hypothesis": "The atmosphere of this location is calm.",
+          "original_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.017068250104784966,
+              "neutral": 0.9710896015167236,
+              "entailment": 0.011842194944620132
+            }
+          },
+          "original_relevance_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.0014135261299088597,
+              "neutral": 0.7592602372169495,
+              "entailment": 0.23932617902755737
+            }
+          },
+          "selected_evidence": [],
+          "unresolved_candidates": [],
+          "no_evidence_is_not_neutral": true,
+          "no_hard_source_deletion": true
+        },
+        "inviting": {
+          "hypothesis": "The atmosphere of this location is inviting.",
+          "original_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.0004148884618189186,
+              "neutral": 0.9561675190925598,
+              "entailment": 0.04341750964522362
+            }
+          },
+          "original_relevance_nli": {
+            "label": "entailment",
+            "probs": {
+              "contradiction": 0.000899520528037101,
+              "neutral": 0.34664982557296753,
+              "entailment": 0.652450680732727
+            }
+          },
+          "selected_evidence": [],
+          "unresolved_candidates": [],
+          "no_evidence_is_not_neutral": true,
+          "no_hard_source_deletion": true
+        },
+        "safe": {
+          "hypothesis": "This location feels physically safe to visitors.",
+          "original_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.02731076069176197,
+              "neutral": 0.9540120363235474,
+              "entailment": 0.01867716573178768
+            }
+          },
+          "original_relevance_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.00405981857329607,
+              "neutral": 0.8020836710929871,
+              "entailment": 0.19385652244091034
+            }
+          },
+          "selected_evidence": [],
+          "unresolved_candidates": [],
+          "no_evidence_is_not_neutral": true,
+          "no_hard_source_deletion": true
+        }
+      }
+    },
+    {
+      "case_index": 12,
+      "source_sha256": "cfe22a45b1fea890af9b3724650d6c7f3cd5ab9326ab34dcd78e9c302eae98f8",
+      "manifest_sha256": "04df89e7d2fa7a4018eeca8f2188c15ab8b69be3286f0ededb71cdcb8d15a791",
+      "case": {
+        "row": 13,
+        "review_index": 3,
+        "place_id": "ChIJC5eyB0J344kRIgcXIHRzdK4",
+        "publish_time": "2025-12-16T23:19:46.970697600Z",
+        "sentence_index": 0,
+        "start": 0,
+        "end": 55,
+        "text": "I just ate there and, it was a very disappointing meal.",
+        "category": "other_control_candidate",
+        "review_sha256": "bc35beb66bbb65be7ae9abd2ea880f67def655e23d2659d011eb9b4221171f34"
+      },
+      "output": {
+        "calm": {
+          "hypothesis": "The atmosphere of this location is calm.",
+          "original_nli": {
+            "label": "contradiction",
+            "probs": {
+              "contradiction": 0.9503570795059204,
+              "neutral": 0.04834857955574989,
+              "entailment": 0.0012943769106641412
+            }
+          },
+          "original_relevance_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.005442565772682428,
+              "neutral": 0.7636289596557617,
+              "entailment": 0.23092840611934662
+            }
+          },
+          "selected_evidence": [],
+          "unresolved_candidates": [],
+          "no_evidence_is_not_neutral": true,
+          "no_hard_source_deletion": true
+        },
+        "inviting": {
+          "hypothesis": "The atmosphere of this location is inviting.",
+          "original_nli": {
+            "label": "contradiction",
+            "probs": {
+              "contradiction": 0.9912204146385193,
+              "neutral": 0.008528506383299828,
+              "entailment": 0.00025111751165241003
+            }
+          },
+          "original_relevance_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.007734567858278751,
+              "neutral": 0.681425929069519,
+              "entailment": 0.31083953380584717
+            }
+          },
+          "selected_evidence": [],
+          "unresolved_candidates": [],
+          "no_evidence_is_not_neutral": true,
+          "no_hard_source_deletion": true
+        },
+        "safe": {
+          "hypothesis": "This location feels physically safe to visitors.",
+          "original_nli": {
+            "label": "contradiction",
+            "probs": {
+              "contradiction": 0.9690228700637817,
+              "neutral": 0.030133860185742378,
+              "entailment": 0.0008433178882114589
+            }
+          },
+          "original_relevance_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.002672650385648012,
+              "neutral": 0.898622989654541,
+              "entailment": 0.09870440512895584
+            }
+          },
+          "selected_evidence": [],
+          "unresolved_candidates": [],
+          "no_evidence_is_not_neutral": true,
+          "no_hard_source_deletion": true
+        }
+      }
+    },
+    {
+      "case_index": 13,
+      "source_sha256": "93888e4633c0b29dc7e6aeefc77c5fa5bb5d7cc5e8c51f813749e60a6088df7f",
+      "manifest_sha256": "04df89e7d2fa7a4018eeca8f2188c15ab8b69be3286f0ededb71cdcb8d15a791",
+      "case": {
+        "row": 27,
+        "review_index": 2,
+        "place_id": "ChIJ8_RCvWp344kRCTRS1Lks6KU",
+        "publish_time": "2023-05-27T23:48:32.466215Z",
+        "sentence_index": 0,
+        "start": 0,
+        "end": 39,
+        "text": "The lights are so beautiful and calming",
+        "category": "other_control_candidate",
+        "review_sha256": "93888e4633c0b29dc7e6aeefc77c5fa5bb5d7cc5e8c51f813749e60a6088df7f"
+      },
+      "output": {
+        "calm": {
+          "hypothesis": "The atmosphere of this location is calm.",
+          "original_nli": {
+            "label": "entailment",
+            "probs": {
+              "contradiction": 0.000599097809754312,
+              "neutral": 0.35890495777130127,
+              "entailment": 0.6404958963394165
+            }
+          },
+          "original_relevance_nli": {
+            "label": "entailment",
+            "probs": {
+              "contradiction": 0.0012078777654096484,
+              "neutral": 0.13174770772457123,
+              "entailment": 0.8670444488525391
+            }
+          },
+          "selected_evidence": [
+            {
+              "candidate_index": 0,
+              "source_quote": "The lights are so beautiful and calming",
+              "route": "nli_candidate",
+              "advisory_flags": [],
+              "nli": {
+                "label": "entailment",
+                "probs": {
+                  "contradiction": 0.000599097809754312,
+                  "neutral": 0.35890495777130127,
+                  "entailment": 0.6404958963394165
+                }
+              }
+            }
+          ],
+          "unresolved_candidates": [],
+          "no_evidence_is_not_neutral": false,
+          "no_hard_source_deletion": true
+        },
+        "inviting": {
+          "hypothesis": "The atmosphere of this location is inviting.",
+          "original_nli": {
+            "label": "entailment",
+            "probs": {
+              "contradiction": 0.0004496483597904444,
+              "neutral": 0.4631597399711609,
+              "entailment": 0.5363906621932983
+            }
+          },
+          "original_relevance_nli": {
+            "label": "entailment",
+            "probs": {
+              "contradiction": 0.0008253222913481295,
+              "neutral": 0.24600867927074432,
+              "entailment": 0.7531660199165344
+            }
+          },
+          "selected_evidence": [],
+          "unresolved_candidates": [],
+          "no_evidence_is_not_neutral": true,
+          "no_hard_source_deletion": true
+        },
+        "safe": {
+          "hypothesis": "This location feels physically safe to visitors.",
+          "original_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.002983483951538801,
+              "neutral": 0.9725334644317627,
+              "entailment": 0.024483026936650276
+            }
+          },
+          "original_relevance_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.0017052709590643644,
+              "neutral": 0.8238264322280884,
+              "entailment": 0.1744682639837265
+            }
+          },
+          "selected_evidence": [],
+          "unresolved_candidates": [],
+          "no_evidence_is_not_neutral": true,
+          "no_hard_source_deletion": true
+        }
+      }
+    },
+    {
+      "case_index": 14,
+      "source_sha256": "2e56320ddf320fbeec7724cbc7e57d7507c7fde2a49a0c2930a0b18b8abba477",
+      "manifest_sha256": "04df89e7d2fa7a4018eeca8f2188c15ab8b69be3286f0ededb71cdcb8d15a791",
+      "case": {
+        "row": 31,
+        "review_index": 1,
+        "place_id": "ChIJE12gBq1w44kR_N0FJNiKAcg",
+        "publish_time": "2021-08-30T01:02:31.039310Z",
+        "sentence_index": 1,
+        "start": 16,
+        "end": 60,
+        "text": "We were there for the \"everyone eats\" event.",
+        "category": "other_control_candidate",
+        "review_sha256": "fe4eb564632ff7737c871328dc4b056e2c160eb3a6e1f764426d06b554a4c6b2"
+      },
+      "output": {
+        "calm": {
+          "hypothesis": "The atmosphere of this location is calm.",
+          "original_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.018334057182073593,
+              "neutral": 0.9655132293701172,
+              "entailment": 0.01615259423851967
+            }
+          },
+          "original_relevance_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.003296217182651162,
+              "neutral": 0.8649376034736633,
+              "entailment": 0.1317661553621292
+            }
+          },
+          "selected_evidence": [],
+          "unresolved_candidates": [
+            {
+              "candidate_index": 0,
+              "reason": [
+                "component1_claim_flagged"
+              ]
+            }
+          ],
+          "no_evidence_is_not_neutral": true,
+          "no_hard_source_deletion": true
+        },
+        "inviting": {
+          "hypothesis": "The atmosphere of this location is inviting.",
+          "original_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.0007340597803704441,
+              "neutral": 0.9920474290847778,
+              "entailment": 0.0072185988537967205
+            }
+          },
+          "original_relevance_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.003916795365512371,
+              "neutral": 0.7185567617416382,
+              "entailment": 0.2775263488292694
+            }
+          },
+          "selected_evidence": [],
+          "unresolved_candidates": [
+            {
+              "candidate_index": 0,
+              "reason": [
+                "component1_claim_flagged"
+              ]
+            }
+          ],
+          "no_evidence_is_not_neutral": true,
+          "no_hard_source_deletion": true
+        },
+        "safe": {
+          "hypothesis": "This location feels physically safe to visitors.",
+          "original_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.017924701794981956,
+              "neutral": 0.9638274908065796,
+              "entailment": 0.018247876316308975
+            }
+          },
+          "original_relevance_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.002986007370054722,
+              "neutral": 0.8770373463630676,
+              "entailment": 0.11997666209936142
+            }
+          },
+          "selected_evidence": [],
+          "unresolved_candidates": [
+            {
+              "candidate_index": 0,
+              "reason": [
+                "component1_claim_flagged"
+              ]
+            }
+          ],
+          "no_evidence_is_not_neutral": true,
+          "no_hard_source_deletion": true
+        }
+      }
+    },
+    {
+      "case_index": 15,
+      "source_sha256": "38ae0c742e81a1626c342dc0855f3f680d1ce4f6f751d40277e3161caaf7aa1e",
+      "manifest_sha256": "04df89e7d2fa7a4018eeca8f2188c15ab8b69be3286f0ededb71cdcb8d15a791",
+      "case": {
+        "row": 46,
+        "review_index": 1,
+        "place_id": "ChIJeR3K0F5344kRjtZYF7-MPlw",
+        "publish_time": "2021-12-05T00:14:09.647253Z",
+        "sentence_index": 0,
+        "start": 0,
+        "end": 39,
+        "text": "Nice spot for a bike break and a snack.",
+        "category": "other_control_candidate",
+        "review_sha256": "38ae0c742e81a1626c342dc0855f3f680d1ce4f6f751d40277e3161caaf7aa1e"
+      },
+      "output": {
+        "calm": {
+          "hypothesis": "The atmosphere of this location is calm.",
+          "original_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.0003039842995349318,
+              "neutral": 0.988955020904541,
+              "entailment": 0.010741036385297775
+            }
+          },
+          "original_relevance_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.0014856480993330479,
+              "neutral": 0.7355645895004272,
+              "entailment": 0.26294970512390137
+            }
+          },
+          "selected_evidence": [],
+          "unresolved_candidates": [],
+          "no_evidence_is_not_neutral": true,
+          "no_hard_source_deletion": true
+        },
+        "inviting": {
+          "hypothesis": "The atmosphere of this location is inviting.",
+          "original_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.00013429141836240888,
+              "neutral": 0.9000840783119202,
+              "entailment": 0.09978162497282028
+            }
+          },
+          "original_relevance_nli": {
+            "label": "entailment",
+            "probs": {
+              "contradiction": 0.0013301122235134244,
+              "neutral": 0.23866356909275055,
+              "entailment": 0.7600063681602478
+            }
+          },
+          "selected_evidence": [
+            {
+              "candidate_index": 0,
+              "source_quote": "Nice spot for a bike break and a snack.",
+              "route": "nli_candidate",
+              "advisory_flags": [],
+              "nli": {
+                "label": "neutral",
+                "probs": {
+                  "contradiction": 0.00013429141836240888,
+                  "neutral": 0.9000840783119202,
+                  "entailment": 0.09978162497282028
+                }
+              }
+            },
+            {
+              "candidate_index": 1,
+              "source_quote": "Nice spot for a bike break and a snack.",
+              "route": "nli_candidate",
+              "advisory_flags": [],
+              "nli": {
+                "label": "neutral",
+                "probs": {
+                  "contradiction": 0.00013429141836240888,
+                  "neutral": 0.9000840783119202,
+                  "entailment": 0.09978162497282028
+                }
+              }
+            }
+          ],
+          "unresolved_candidates": [],
+          "no_evidence_is_not_neutral": false,
+          "no_hard_source_deletion": true
+        },
+        "safe": {
+          "hypothesis": "This location feels physically safe to visitors.",
+          "original_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.0009382658754475415,
+              "neutral": 0.9952940344810486,
+              "entailment": 0.003767650108784437
+            }
+          },
+          "original_relevance_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.0035546834114938974,
+              "neutral": 0.9412549138069153,
+              "entailment": 0.05519034340977669
+            }
+          },
+          "selected_evidence": [],
+          "unresolved_candidates": [],
+          "no_evidence_is_not_neutral": true,
+          "no_hard_source_deletion": true
+        }
+      }
+    },
+    {
+      "case_index": 16,
+      "source_sha256": "e2c59b76c4403e2de7c28d0753dc83e87a546d0054bfedc285add6dbf639d52a",
+      "manifest_sha256": "04df89e7d2fa7a4018eeca8f2188c15ab8b69be3286f0ededb71cdcb8d15a791",
+      "case": {
+        "row": 60,
+        "review_index": 0,
+        "place_id": "ChIJibK7VF9344kRqxrHJkNsISk",
+        "publish_time": "2026-06-30T11:54:00.813585619Z",
+        "sentence_index": 0,
+        "start": 0,
+        "end": 38,
+        "text": "Very nice park, very clean facilities.",
+        "category": "other_control_candidate",
+        "review_sha256": "8b8e6bda0139d5ddc94eb0b68c3f2b347be68045e00986663419c6af729371c3"
+      },
+      "output": {
+        "calm": {
+          "hypothesis": "The atmosphere of this location is calm.",
+          "original_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.0007415710715577006,
+              "neutral": 0.9733365774154663,
+              "entailment": 0.02592182345688343
+            }
+          },
+          "original_relevance_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.000771455408539623,
+              "neutral": 0.9229006171226501,
+              "entailment": 0.07632794231176376
+            }
+          },
+          "selected_evidence": [],
+          "unresolved_candidates": [],
+          "no_evidence_is_not_neutral": true,
+          "no_hard_source_deletion": true
+        },
+        "inviting": {
+          "hypothesis": "The atmosphere of this location is inviting.",
+          "original_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.00020581186981871724,
+              "neutral": 0.8500856757164001,
+              "entailment": 0.14970852434635162
+            }
+          },
+          "original_relevance_nli": {
+            "label": "entailment",
+            "probs": {
+              "contradiction": 0.0013897515600547194,
+              "neutral": 0.4029809832572937,
+              "entailment": 0.5956292748451233
+            }
+          },
+          "selected_evidence": [],
+          "unresolved_candidates": [],
+          "no_evidence_is_not_neutral": true,
+          "no_hard_source_deletion": true
+        },
+        "safe": {
+          "hypothesis": "This location feels physically safe to visitors.",
+          "original_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.00041609074105508626,
+              "neutral": 0.9848393797874451,
+              "entailment": 0.014744517393410206
+            }
+          },
+          "original_relevance_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.002376951277256012,
+              "neutral": 0.9584386944770813,
+              "entailment": 0.03918436914682388
+            }
+          },
+          "selected_evidence": [],
+          "unresolved_candidates": [],
+          "no_evidence_is_not_neutral": true,
+          "no_hard_source_deletion": true
+        }
+      }
+    },
+    {
+      "case_index": 17,
+      "source_sha256": "4b55a95d3b9ee6e03fc8d7553ae5714d4f3da0282d68f169228edb38cbaca2a8",
+      "manifest_sha256": "04df89e7d2fa7a4018eeca8f2188c15ab8b69be3286f0ededb71cdcb8d15a791",
+      "case": {
+        "row": 70,
+        "review_index": 0,
+        "place_id": "ChIJM3icQVN344kRZsmgAwN0zc8",
+        "publish_time": "2026-03-26T17:35:11.989705404Z",
+        "sentence_index": 0,
+        "start": 0,
+        "end": 39,
+        "text": "Cute park, but it does need a cleaning.",
+        "category": "other_control_candidate",
+        "review_sha256": "3ca46a4055e385f7513b4b7d20fd679e98c884488502465b06a24350bfdbcb6f"
+      },
+      "output": {
+        "calm": {
+          "hypothesis": "The atmosphere of this location is calm.",
+          "original_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.3252555727958679,
+              "neutral": 0.6598238348960876,
+              "entailment": 0.014920574612915516
+            }
+          },
+          "original_relevance_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.0036162794567644596,
+              "neutral": 0.6759509444236755,
+              "entailment": 0.32043275237083435
+            }
+          },
+          "selected_evidence": [],
+          "unresolved_candidates": [],
+          "no_evidence_is_not_neutral": true,
+          "no_hard_source_deletion": true
+        },
+        "inviting": {
+          "hypothesis": "The atmosphere of this location is inviting.",
+          "original_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.19520172476768494,
+              "neutral": 0.7369063496589661,
+              "entailment": 0.06789194047451019
+            }
+          },
+          "original_relevance_nli": {
+            "label": "entailment",
+            "probs": {
+              "contradiction": 0.0012986891670152545,
+              "neutral": 0.17768606543540955,
+              "entailment": 0.8210152387619019
+            }
+          },
+          "selected_evidence": [
+            {
+              "candidate_index": 1,
+              "source_quote": "but it does need a cleaning",
+              "route": "nli_candidate",
+              "advisory_flags": [],
+              "nli": {
+                "label": "contradiction",
+                "probs": {
+                  "contradiction": 0.672630786895752,
+                  "neutral": 0.32388535141944885,
+                  "entailment": 0.0034838179126381874
+                }
+              }
+            }
+          ],
+          "unresolved_candidates": [],
+          "no_evidence_is_not_neutral": false,
+          "no_hard_source_deletion": true
+        },
+        "safe": {
+          "hypothesis": "This location feels physically safe to visitors.",
+          "original_nli": {
+            "label": "contradiction",
+            "probs": {
+              "contradiction": 0.9497156143188477,
+              "neutral": 0.048647210001945496,
+              "entailment": 0.0016372355166822672
+            }
+          },
+          "original_relevance_nli": {
+            "label": "neutral",
+            "probs": {
+              "contradiction": 0.004674419295042753,
+              "neutral": 0.8206021785736084,
+              "entailment": 0.17472346127033234
+            }
+          },
+          "selected_evidence": [
+            {
+              "candidate_index": 1,
+              "source_quote": "but it does need a cleaning",
+              "route": "nli_candidate",
+              "advisory_flags": [],
+              "nli": {
+                "label": "contradiction",
+                "probs": {
+                  "contradiction": 0.9600551724433899,
+                  "neutral": 0.03885214403271675,
+                  "entailment": 0.0010926818940788507
+                }
+              }
+            }
+          ],
+          "unresolved_candidates": [],
+          "no_evidence_is_not_neutral": false,
+          "no_hard_source_deletion": true
+        }
+      }
+    }
+  ],
+  "limitations": [
+    "Only source authenticity and mechanical integrity are machine-tested, not semantic accuracy.",
+    "Real Google Places API-derived reviews; raw API response unavailable for independent source verification.",
+    "Heuristic sample strata are not reference labels.",
+    "No independent human annotated ground truth; manual semantic adjudication needed before performance claims."
+  ]
+}
