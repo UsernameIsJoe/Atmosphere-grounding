@@ -83,7 +83,7 @@ def kappa(pairs):
     ca, cb = collections.Counter(a for a, _ in pairs), collections.Counter(b for _, b in pairs)
     expected = sum((ca[x] / n) * (cb[x] / n) for x in labels)
     if expected >= 1.0:
-        return 1.0 if observed == 1.0 else None
+        return None
     return (observed - expected) / (1.0 - expected)
 
 
@@ -101,6 +101,8 @@ def run(args, items, models, outdir):
     done = {}
     if path.exists() and args.resume:
         for r in read_jsonl(path):
+            if r.get("judge_models") != models:
+                raise ValueError("cannot resume judge output from different model tags")
             key = (r["source"]["row"], r["source"]["start"], r["source"]["end"])
             done[key] = r
     elif path.exists():
