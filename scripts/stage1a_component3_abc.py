@@ -71,9 +71,20 @@ def validate_and_plan(v3,baseline):
     if len(apps)!=1:raise ValueError("Missing/duplicate emotion-specific judgment")
     route=c["routing_by_emotion"][e]["route"]
     if route not in ROUTES:raise ValueError("Unknown route")
-    # Route state belongs to a research experiment, NOT to an irreversible filter.
+    # Preserve the researcher's accepted reading: a source-grounded observation
+    # such as police patrol may be 'direct' safety evidence even when it is an
+    # environmental indicator, not a first-person feeling. The earlier v3
+    # type-based warning is advisory, not an absolute eligibility veto.
+    # Override ONLY this solitary taxonomy flag, never source-fidelity,
+    # literal quote, place-attribution, or other mechanical failures.
     quote=apps[0]["basis_quote"]
-    if route=="nli_candidate":
+    flags=c["routing_by_emotion"][e]["flags"]
+    taxonomy_override=(
+       route=="needs_review" and flags==["direct_without_explicit_experience_or_atmosphere"]
+       and decision["place_related"]=="yes" and apps[0]["status"]=="direct"
+       and quote and quote in sentence and orig["status"]=="candidate_passed_checks")
+    effective_route="nli_candidate" if taxonomy_override else route
+    if effective_route=="nli_candidate":
      if not quote or quote not in sentence:
       raise ValueError("Unverifiable selected premise")
      selected.append({"candidate_index":i,"premise":quote,
@@ -81,11 +92,12 @@ def validate_and_plan(v3,baseline):
                      "component1_status":orig["status"]})
     # Safeguard: include all flagged/uncertain cases as original source
     # (never promote their potentially unsupported extracted claim).
-    if route=="needs_review":
+    if effective_route=="needs_review":
      safeguarded.append({"candidate_index":i,"premise":sentence,
                          "evidence_kind":"original_source_fallback",
                          "component1_status":orig["status"]})
-    routing.append({"candidate_index":i,"route":route,
+    routing.append({"candidate_index":i,"route":route,"effective_route":effective_route,
+                    "taxonomy_override":bool(taxonomy_override),
                     "label":apps[0]["status"],
                     "component1_status":orig["status"],
                     "mechanical_flags":c["mechanical_flags"]})
