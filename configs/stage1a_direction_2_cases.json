@@ -1,0 +1,78 @@
+{
+  "description": "Two original, source-hash-verified reviews from the previous five-review run. Lock these eight evidence judgments by selecting original Qwen spans; no new extraction. Direction labels are NOT treated as truth.",
+  "source_annotations": "reports/stage1a_evidence_first_5/annotations.jsonl",
+  "cases": [
+    {
+      "place_id": "ChIJdelVAGp344kRnbhJtYxqBuo",
+      "review_index": 0,
+      "unit_id": 1,
+      "emotion": "calm",
+      "source_model": "qwen3:8b",
+      "expected_prior_label": "opposes",
+      "purpose": "negative atmosphere"
+    },
+    {
+      "place_id": "ChIJdelVAGp344kRnbhJtYxqBuo",
+      "review_index": 0,
+      "unit_id": 3,
+      "emotion": "safe",
+      "source_model": "qwen3:8b",
+      "expected_prior_label": "opposes",
+      "purpose": "slippery hazard"
+    },
+    {
+      "place_id": "ChIJdelVAGp344kRnbhJtYxqBuo",
+      "review_index": 0,
+      "unit_id": 4,
+      "emotion": "safe",
+      "source_model": "qwen3:8b",
+      "expected_prior_label": "opposes",
+      "purpose": "injury risk"
+    },
+    {
+      "place_id": "ChIJdelVAGp344kRnbhJtYxqBuo",
+      "review_index": 0,
+      "unit_id": 11,
+      "emotion": "inviting",
+      "source_model": "qwen3:8b",
+      "expected_prior_label": "opposes",
+      "purpose": "poor maintenance"
+    },
+    {
+      "place_id": "ChIJdelVAGp344kRnbhJtYxqBuo",
+      "review_index": 0,
+      "unit_id": 2,
+      "emotion": "safe",
+      "source_model": "qwen3:8b",
+      "expected_prior_label": "not_relevant",
+      "purpose": "neutral facility control"
+    },
+    {
+      "place_id": "ChIJqawa215344kROpcUJbbE0Vg",
+      "review_index": 0,
+      "unit_id": 0,
+      "emotion": "safe",
+      "source_model": "qwen3:8b",
+      "expected_prior_label": "supports",
+      "purpose": "no traffic worries"
+    },
+    {
+      "place_id": "ChIJqawa215344kROpcUJbbE0Vg",
+      "review_index": 0,
+      "unit_id": 1,
+      "emotion": "calm",
+      "source_model": "qwen3:8b",
+      "expected_prior_label": "supports",
+      "purpose": "quiet experience"
+    },
+    {
+      "place_id": "ChIJqawa215344kROpcUJbbE0Vg",
+      "review_index": 0,
+      "unit_id": 1,
+      "emotion": "inviting",
+      "source_model": "qwen3:8b",
+      "expected_prior_label": "supports",
+      "purpose": "wanting to return"
+    }
+  ]
+}
