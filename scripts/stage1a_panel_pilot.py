@@ -372,19 +372,29 @@ def aggregate(votes: list[dict]) -> dict:
                                         for v in votes)}
 
 
-def summarize(annotations: list[dict]) -> dict:
-    """Diagnostics only: pairwise agreement and split patterns, never accuracy."""
+def summarize(annotations: list[dict], *, allow_incomplete: bool = False) -> dict:
+    """Panel consensus on complete three-model prompt-A items only."""
     groups = collections.defaultdict(dict)
     for r in annotations:
-        if r["prompt"] == "A":
-            groups[(r["place_id"], r["review_index"], r["unit_id"], r["emotion"])][r["model"]] = r
+        if r["prompt"] != "A":
+            continue
+        key = (r["place_id"], r["review_index"], r["unit_id"], r["emotion"])
+        if r["model"] in groups[key]:
+            raise ValueError(f"Duplicate annotation for {key}, {r['model']}")
+        groups[key][r["model"]] = r
     splits = collections.Counter()
-    pairs = collections.Counter()
-    total = collections.Counter()
+    pairs, total = collections.Counter(), collections.Counter()
     rates = collections.defaultdict(collections.Counter)
-    outcomes = []
+    outcomes, incomplete = [], []
+    all_models = sorted({r["model"] for r in annotations})
     for key, by_model in sorted(groups.items()):
         if len(by_model) != 3:
+            incomplete.append({"place_id": key[0], "review_index": key[1],
+                               "unit_id": key[2], "emotion": key[3],
+                               "available_models": sorted(by_model),
+                               "missing_models": sorted(set(all_models) - set(by_model))})
+            if allow_incomplete:
+                continue
             raise ValueError(f"Missing one of three model votes: {key}")
         ordered = sorted(by_model)
         votes = [by_model[m] for m in ordered]
@@ -399,10 +409,47 @@ def summarize(annotations: list[dict]) -> dict:
         outcomes.append({"place_id": key[0], "review_index": key[1], "unit_id": key[2],
                          "emotion": key[3], "by_model": {m: by_model[m] for m in ordered},
                          "consensus": aggregate(votes)})
-    return {"n_items": len(outcomes), "label_diversity_counts": dict(splits),
+    return {"n_items": len(outcomes), "n_incomplete_units": len(incomplete),
+            "incomplete_units": incomplete, "label_diversity_counts": dict(splits),
             "pairwise_agreement": {k: pairs[k] / total[k] for k in sorted(total)},
             "per_model_label_counts": {m: dict(x) for m, x in rates.items()},
             "consensus": outcomes}
+
+
+def read_jsonl(path: Path) -> list[dict]:
+    if not path.exists():
+        return []
+    return [json.loads(line) for line in path.read_text(encoding="utf-8").splitlines()
+            if line.strip()]
+
+
+def completed_model_calls(annotations: list[dict], reviews: list[dict],
+                          models: list[str]) -> set[tuple]:
+    """Only skip a saved model/prompt/review if all its source-grounded labels are valid."""
+    known = {(r["place_id"], r["review_index"]): r for r in reviews}
+    by_call = collections.defaultdict(list)
+    for item in annotations:
+        key = (item["place_id"], item["review_index"])
+        if key not in known or item["model"] not in models or item["prompt"] not in ("A", "B"):
+            raise ValueError(f"Unexpected saved annotation: {key}")
+        review = known[key]
+        if item["source_sha256"] != review["source_sha256"]:
+            raise ValueError(f"Saved review hash mismatch: {key}")
+        unit = {u["unit_id"]: u for u in review["units"]}.get(item["unit_id"])
+        if unit is None:
+            raise ValueError(f"Saved annotation references unknown clause: {key}")
+        base = {k: item[k] for k in ITEM_SCHEMA["properties"]}
+        validate_label(base, unit)
+        by_call[(key[0], key[1], item["model"], item["prompt"])].append(item)
+    done = set()
+    for call, items in by_call.items():
+        review = known[(call[0], call[1])]
+        expected = {(u["unit_id"], e) for u in review["units"] for e in PILOT}
+        actual = [(v["unit_id"], v["emotion"]) for v in items]
+        if len(actual) != len(expected) or set(actual) != expected:
+            raise ValueError(f"Incomplete/duplicate saved annotations: {call}")
+        done.add(call)
+    return done
 
 
 def write_jsonl(path: Path, rows: list[dict]) -> None:
@@ -419,6 +466,8 @@ def main() -> None:
     p.add_argument("--sample-mode", choices=["first", "diverse"], default="first",
                    help="diverse samples at most one review per place before cycling")
     p.add_argument("--prepare-only", action="store_true")
+    p.add_argument("--resume", action="store_true", help="Retry only missing model/prompt/review calls")
+    p.add_argument("--finalize-only", action="store_true", help="Summarize saved annotations without Ollama")
     p.add_argument("--models", nargs=3, default=["qwen3:8b", "gemma3:4b", "llama3.1:8b"],
                    metavar=("QWEN", "GEMMA", "LLAMA"))
     p.add_argument("--ollama-url", default="http://localhost:11434")
@@ -453,43 +502,78 @@ def main() -> None:
                 "validation": "LLM agreement/fidelity only; no human labels",
                 "run_mode": "prepare_only" if args.prepare_only else "ollama_panel",
                 "sample_mode": args.sample_mode}
-    (args.output / "manifest.json").write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
-    write_jsonl(args.output / "clauses.jsonl", reviews)
+    manifest_path = args.output / "manifest.json"
+    if args.resume or args.finalize_only:
+        if not manifest_path.exists():
+            p.error("Cannot resume: existing manifest.json not found")
+        old = json.loads(manifest_path.read_text(encoding="utf-8"))
+        for field in ("pilot_categories", "models", "n_reviews", "n_clauses",
+                      "sample_mode", "prompts_sha256", "rubric_sha256"):
+            if old.get(field) != manifest.get(field):
+                p.error(f"Resume blocked: manifest field {field} differs")
+        old_clauses = read_jsonl(args.output / "clauses.jsonl")
+        if [(x["place_id"], x["review_index"], x["source_sha256"], x["units"])
+            for x in old_clauses] != [
+            (x["place_id"], x["review_index"], x["source_sha256"], x["units"])
+            for x in reviews]:
+            p.error("Resume blocked: review corpus or clause segmentation differs")
+    else:
+        if (args.output / "annotations.jsonl").exists():
+            p.error("Existing annotations detected. Use --resume or another --output")
+        manifest_path.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
+        write_jsonl(args.output / "clauses.jsonl", reviews)
     print("Prepared", len(reviews), "real reviews, with", manifest["n_clauses"], "clauses")
     if args.prepare_only:
         print("Inspect", args.output / "clauses.jsonl")
         return
-    outputs = []
+    outputs = read_jsonl(args.output / "annotations.jsonl") if (args.resume or args.finalize_only) else []
+    done = completed_model_calls(outputs, reviews, args.models)
     errors = []
     trace = args.output / "raw_responses.jsonl"
-    for review in reviews:
-        for model in args.models:
-            for prompt in ("A", "B"):
-                try:
-                    resp = ollama_call(args.ollama_url, model, prompt, review, args.timeout, trace)
-                    for item in resp["labels"]:
-                        outputs.append({**item, "place_id": review["place_id"],
-                                        "review_index": review["review_index"],
-                                        "source_sha256": review["source_sha256"],
-                                        "model": model, "prompt": prompt,
-                                        "model_response": resp["model_response"]})
-                    print(review["place_id"], review["review_index"], model, prompt, "OK", flush=True)
-                except (ValueError, OSError, KeyError, TypeError) as exc:
-                    errors.append({"place_id": review["place_id"], "review_index": review["review_index"],
-                                   "model": model, "prompt": prompt, "error": str(exc)})
-                    print(review["place_id"], review["review_index"], model, prompt,
-                          "ERROR:", str(exc), flush=True)
-                # Save incremental results so a failed or interrupted panel remains inspectable.
-                write_jsonl(args.output / "annotations.jsonl", outputs)
-                write_jsonl(args.output / "errors.jsonl", errors)
-    if errors:
-        raise SystemExit(f"Panel incomplete: {len(errors)} request(s) failed; see errors.jsonl")
-    # Publish majority results only for a complete panel; no silent missing votes.
-    diagnostic = summarize(outputs)
-    write_jsonl(args.output / "annotations.jsonl", outputs)
-    write_jsonl(args.output / "consensus.jsonl", diagnostic.pop("consensus"))
-    (args.output / "diagnostics.json").write_text(json.dumps(diagnostic, indent=2) + "\n", encoding="utf-8")
-    print("Completed. Agreement is not semantic accuracy.")
+    if not args.finalize_only:
+        for review in reviews:
+            for model in args.models:
+                for prompt in ("A", "B"):
+                    key = (review["place_id"], review["review_index"], model, prompt)
+                    if key in done:
+                        print(*key, "SKIP (already validated)", flush=True)
+                        continue
+                    try:
+                        resp = ollama_call(args.ollama_url, model, prompt, review, args.timeout, trace)
+                        for item in resp["labels"]:
+                            outputs.append({**item, "place_id": review["place_id"],
+                                            "review_index": review["review_index"],
+                                            "source_sha256": review["source_sha256"],
+                                            "model": model, "prompt": prompt,
+                                            "model_response": resp["model_response"]})
+                        done.add(key)
+                        print(*key, "OK", flush=True)
+                    except (ValueError, OSError, KeyError, TypeError) as exc:
+                        errors.append({"place_id": review["place_id"], "review_index": review["review_index"],
+                                       "model": model, "prompt": prompt, "error": str(exc)})
+                        print(*key, "ERROR:", str(exc), flush=True)
+                    write_jsonl(args.output / "annotations.jsonl", outputs)
+                    write_jsonl(args.output / "errors.jsonl", errors)
+    report = summarize(outputs, allow_incomplete=True)
+    write_jsonl(args.output / "consensus.jsonl", report.pop("consensus"))
+    expected_calls = {(r["place_id"], r["review_index"], m, q)
+                      for r in reviews for m in args.models for q in ("A", "B")}
+    missing = sorted(expected_calls - done)
+    report["completed_requests"] = len(done)
+    report["requested_requests"] = len(expected_calls)
+    report["missing_requests"] = [
+        {"place_id": x[0], "review_index": x[1], "model": x[2], "prompt": x[3]}
+        for x in missing
+    ]
+    report["complete_panel"] = not missing
+    (args.output / "diagnostics.json").write_text(json.dumps(report, indent=2) + "\n", encoding="utf-8")
+    if missing:
+        print(f"PARTIAL PANEL: {len(done)}/{len(expected_calls)} requests completed; "
+              "consensus includes only complete three-model items.", flush=True)
+        if not args.finalize_only:
+            raise SystemExit("Missing requests remain. Use --resume on the same folder")
+    else:
+        print("Completed. Agreement is not semantic accuracy.")
 
 
 if __name__ == "__main__":
