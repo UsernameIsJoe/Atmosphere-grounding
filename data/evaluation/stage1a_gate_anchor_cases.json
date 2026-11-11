@@ -1,0 +1,138 @@
+{
+  "description": "Hand-selected audit anchors from five real original Google reviews. This is a behavior/regression check, NOT an independent ground-truth evaluation. 'retain' includes review/abstain.",
+  "anchors": [
+    {
+      "place_id": "ChIJC5eyB0J344kRIgcXIHRzdK4",
+      "unit_id": 0,
+      "emotion": "calm",
+      "quote": "unwind",
+      "must": "retain"
+    },
+    {
+      "place_id": "ChIJC5eyB0J344kRIgcXIHRzdK4",
+      "unit_id": 1,
+      "emotion": "calm",
+      "quote": "seating areas",
+      "must": "reject"
+    },
+    {
+      "place_id": "ChIJC5eyB0J344kRIgcXIHRzdK4",
+      "unit_id": 1,
+      "emotion": "safe",
+      "quote": "seating areas",
+      "must": "reject"
+    },
+    {
+      "place_id": "ChIJC5eyB0J344kRIgcXIHRzdK4",
+      "unit_id": 1,
+      "emotion": "inviting",
+      "quote": "seating areas",
+      "must": "retain"
+    },
+    {
+      "place_id": "ChIJdelVAGp344kRnbhJtYxqBuo",
+      "unit_id": 1,
+      "emotion": "calm",
+      "quote": "dirty, chaotic mess",
+      "must": "retain"
+    },
+    {
+      "place_id": "ChIJdelVAGp344kRnbhJtYxqBuo",
+      "unit_id": 2,
+      "emotion": "calm",
+      "quote": "nice hill",
+      "must": "reject"
+    },
+    {
+      "place_id": "ChIJdelVAGp344kRnbhJtYxqBuo",
+      "unit_id": 2,
+      "emotion": "safe",
+      "quote": "nice hill",
+      "must": "retain"
+    },
+    {
+      "place_id": "ChIJdelVAGp344kRnbhJtYxqBuo",
+      "unit_id": 3,
+      "emotion": "safe",
+      "quote": "extremely slippery",
+      "must": "retain"
+    },
+    {
+      "place_id": "ChIJdelVAGp344kRnbhJtYxqBuo",
+      "unit_id": 4,
+      "emotion": "safe",
+      "quote": "slip and hit their head",
+      "must": "retain"
+    },
+    {
+      "place_id": "ChIJdelVAGp344kRnbhJtYxqBuo",
+      "unit_id": 6,
+      "emotion": "safe",
+      "quote": "check my picture",
+      "must": "retain"
+    },
+    {
+      "place_id": "ChIJdelVAGp344kRnbhJtYxqBuo",
+      "unit_id": 8,
+      "emotion": "safe",
+      "quote": "water would be drained",
+      "must": "retain"
+    },
+    {
+      "place_id": "ChIJdelVAGp344kRnbhJtYxqBuo",
+      "unit_id": 11,
+      "emotion": "inviting",
+      "quote": "Maintenance of the park is also quite poor",
+      "must": "retain"
+    },
+    {
+      "place_id": "ChIJqawa215344kROpcUJbbE0Vg",
+      "unit_id": 0,
+      "emotion": "safe",
+      "quote": "without worrying for the car drivers",
+      "must": "retain"
+    },
+    {
+      "place_id": "ChIJqawa215344kROpcUJbbE0Vg",
+      "unit_id": 1,
+      "emotion": "calm",
+      "quote": "quiet times",
+      "must": "retain"
+    },
+    {
+      "place_id": "ChIJqawa215344kROpcUJbbE0Vg",
+      "unit_id": 1,
+      "emotion": "safe",
+      "quote": "quiet times",
+      "must": "retain"
+    },
+    {
+      "place_id": "ChIJeR3K0F5344kRjtZYF7-MPlw",
+      "unit_id": 0,
+      "emotion": "calm",
+      "quote": "meditative walk",
+      "must": "retain"
+    },
+    {
+      "place_id": "ChIJK89zW1R344kRz7jYZfKShKA",
+      "unit_id": 1,
+      "emotion": "inviting",
+      "quote": "welcomes you",
+      "must": "retain"
+    },
+    {
+      "place_id": "ChIJK89zW1R344kRz7jYZfKShKA",
+      "unit_id": 2,
+      "emotion": "safe",
+      "quote": "protected and comforted",
+      "must": "retain"
+    },
+    {
+      "place_id": "ChIJK89zW1R344kRz7jYZfKShKA",
+      "unit_id": 2,
+      "emotion": "calm",
+      "quote": "protected and comforted",
+      "must": "retain"
+    }
+  ]
+}
