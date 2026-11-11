@@ -194,3 +194,19 @@ def test_prompt_c_is_distinct_and_summary_selectable():
     report = pilot.summarize(rows, allow_incomplete=True, prompt_id="C")
     assert report["n_items"] == 3
     assert report["n_incomplete_units"] == 0
+
+
+def test_selected_places_use_first_review_not_last():
+    """Regression: original A/B diverse mode used the first row per place."""
+    rows = [
+        {"place_id": "ChIJ_one", "review_index": 0, "text": "Original"},
+        {"place_id": "ChIJ_two", "review_index": 0, "text": "Original two"},
+        {"place_id": "ChIJ_one", "review_index": 4, "text": "Other review"},
+        {"place_id": "ChIJ_two", "review_index": 4, "text": "Other review two"},
+    ]
+    chosen = pilot.select_first_reviews_for_places(rows, ["ChIJ_two", "ChIJ_one"])
+    assert [(r["place_id"], r["review_index"], r["text"]) for r in chosen] == [
+        ("ChIJ_two", 0, "Original two"),
+        ("ChIJ_one", 0, "Original")]
+    with pytest.raises(ValueError, match="missing"):
+        pilot.select_first_reviews_for_places(rows, ["ChIJ_absent"])
