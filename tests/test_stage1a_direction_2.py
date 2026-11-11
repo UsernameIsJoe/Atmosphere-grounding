@@ -30,7 +30,7 @@ def _supply_original_annotations(tmp_path):
     for case in config["cases"]:
         original = corpus[(case["place_id"], case["review_index"])]
         unit = original["units"][case["unit_id"]]
-        span = spans[(case["unit_id"], case["emotion"])]
+        span = spans[(case["place_id"], case["unit_id"], case["emotion"])]
         assert span in unit["text"], (case, unit["text"])
         values.append({**case, "clause": unit["text"],
                        "source_sha256": original["source_sha256"],
