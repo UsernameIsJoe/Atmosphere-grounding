@@ -104,3 +104,17 @@ python scripts/stage1a_dual_channel_50.py --resume
 ```
 
 If the script again hits its 12-error per-run stop limit, **do not just raise the limit**. Inspect `raw_responses.jsonl` at the failed segment IDs to establish whether quoted spans are paraphrased, borrowed from neighboring context, or otherwise invalid. Errors cannot be read as semantic misclassification rates.
+
+
+## 2026-11-11 unattended-run update
+
+The default `--max-errors` is now **0 = unlimited**: failures of individual model/segment evaluations are saved to that task/model's `errors.jsonl`, while other segments and channels **continue**. Valid results are still saved incrementally. This is not a license to count failed responses as empty/no evidence; incomplete segments remain incomplete, visible in each `summary.json`. The runner exits with a nonzero status at the end if it encountered any failed segment evaluations. An optional `--max-errors N` still enables a safety stop if desired. Earlier `--resume` results and their manifest remain compatible.
+
+To run unattended after the update:
+
+```powershell
+git pull origin master
+python scripts/stage1a_dual_channel_50.py --resume
+```
+
+Start this new Python process after pulling; **updating code does not change an existing running Python process**. Keep laptop awake, Ollama running, and PowerShell open. No assistant-side remote control of the laptop is available.
