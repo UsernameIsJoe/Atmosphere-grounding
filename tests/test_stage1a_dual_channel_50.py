@@ -104,3 +104,69 @@ def test_prepare_only_and_isolated_model_outputs(tmp_path, monkeypatch):
     monkeypatch.setattr(sys, "argv", argv + ["--resume"])
     assert dual.run() == 0
     assert counts == {"evidence": 4, "inference": 4}
+
+
+def test_targeted_validation_retry_keeps_exact_quotes_and_tasks_separate():
+    seg = dual.prepare_segments(real_rows()[:1])[0]
+    evidence = dual.payload_for("evidence", "qwen3:8b", seg)
+    retry_e = dual.retry_payload(evidence, "evidence",
+                                 "ValueError: Quote is not exact substring of target segment", 2)
+    assert retry_e["format"] == dual.SCHEMAS["evidence"]
+    assert "ONLY from target_segment" in retry_e["messages"][-1]["content"]
+    assert retry_e["messages"][1]["content"] == dual.payload_for("evidence", "qwen3:8b", seg)["messages"][1]["content"]
+    inference = dual.payload_for("inference", "gemma3:4b", seg)
+    retry_t = dual.retry_payload(inference, "inference",
+                                 "ValueError: Inconsistent none category/direction", 2)
+    assert retry_t["format"] == dual.SCHEMAS["inference"]
+    assert "category is 'none'" in retry_t["messages"][-1]["content"]
+    assert "inference" not in retry_e["messages"][1]["content"].lower()
+    invalid_quote = {"records": [{"category": "calm", "direction": "supports",
+                                   "quote": "imagined feeling", "attribution": "general_report"}]}
+    with pytest.raises(ValueError, match="exact substring"):
+        dual.validate("evidence", invalid_quote, seg)
+
+
+def test_runner_corrects_invalid_model_format_without_cross_task_leakage(tmp_path, monkeypatch):
+    out = tmp_path / "pilot_feedback"
+    argv = [str(SCRIPT), "--output", str(out), "--max-reviews", "1",
+            "--seed", "42", "--limit-segments", "1"]
+    monkeypatch.setattr(sys, "argv", argv)
+    monkeypatch.setattr(dual, "check_models", lambda base, models, timeout: {m: m + "_digest" for m in models})
+    call_counts = {"evidence": 0, "inference": 0}
+
+    def mock_call(base, payload, timeout):
+        task = "evidence" if "records" in payload["format"]["properties"] else "inference"
+        call_counts[task] += 1
+        target = json.loads(payload["messages"][1]["content"])["target_segment"]
+        quote = target[:10]
+        if task == "evidence":
+            if len(payload["messages"]) == 2:
+                # Models often paraphrase the quote on initial response.
+                return json.dumps({"records": [{"category": "calm", "direction": "supports",
+                    "quote": "not present in source", "attribution": "general_report"}]}), {}
+            assert "ONLY from target_segment" in payload["messages"][-1]["content"]
+            return json.dumps({"records": [{"category": "calm", "direction": "supports",
+                "quote": quote, "attribution": "general_report"}]}), {}
+        if len(payload["messages"]) == 2:
+            # The Gemma failure seen in the user's local run.
+            return json.dumps({"observations": [{"quote": quote, "kind": "physical",
+                "visible_in_photo": "yes", "category": "none",
+                "direction": "supports", "reason": ""}]}), {}
+        assert "category is 'none'" in payload["messages"][-1]["content"]
+        return json.dumps({"observations": [{"quote": quote, "kind": "physical",
+            "visible_in_photo": "yes", "category": "none",
+            "direction": "none", "reason": ""}]}), {}
+
+    monkeypatch.setattr(dual, "call", mock_call)
+    assert dual.run() == 0
+    assert call_counts == {"evidence": 4, "inference": 4}  # 2 attempts per model per task
+    for task in dual.TASKS:
+        for model in dual.MODELS:
+            directory = out / task / dual.model_slug(model)
+            raw = dual.read_jsonl(directory / "raw_responses.jsonl")
+            assert len(raw) == 2
+            assert raw[0]["error"] is not None
+            assert raw[1]["error"] is None
+            assert raw[1]["retry_policy"] == dual.RETRY_POLICY
+            assert len(dual.read_jsonl(directory / "annotations.jsonl")) == 1
+            assert not (directory / "errors.jsonl").exists()
