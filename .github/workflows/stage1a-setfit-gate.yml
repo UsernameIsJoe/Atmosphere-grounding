@@ -1,0 +1,37 @@
+name: Stage 1A SetFit training and heldout real-review evaluation
+on:
+  push:
+    paths:
+      - "scripts/stage1a_setfit_gate_train.py"
+      - "scripts/stage1a_setfit_audit.py"
+      - "data/evaluation/setfit_atmosphere_gate_user_labels_batch*.jsonl"
+      - ".github/workflows/stage1a-setfit-gate.yml"
+  workflow_dispatch:
+jobs:
+  train-and-test:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    env:
+      HF_HUB_DISABLE_TELEMETRY: "1"
+      TOKENIZERS_PARALLELISM: "false"
+      WANDB_DISABLED: "true"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Pure Python source audit, no models or network
+        run: python scripts/stage1a_setfit_audit.py
+      - name: Install SetFit
+        run: python -m pip install --quiet "torch>=2.3,<3" "transformers>=4.45,<5" "setfit>=1.1,<2" "datasets>=2.18,<5" "sentence-transformers>=3,<6"
+      - name: Train using only 75 user labels; evaluate 25 untouched heldout cases
+        run: python scripts/stage1a_setfit_gate_train.py
+      - name: Publish per-case scores and diagnostic metrics
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: stage1a-setfit-75-train-25-heldout
+          path: |
+            reports/stage1a_setfit_gate/heldout_predictions.jsonl
+            reports/stage1a_setfit_gate/evaluation.json
+          if-no-files-found: warn
