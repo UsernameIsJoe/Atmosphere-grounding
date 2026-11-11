@@ -1,0 +1,38 @@
+name: Stage 1A NLI relevance gate — real reviews
+on:
+  push:
+    paths:
+      - "scripts/stage1a_nli_gate_5.py"
+      - ".github/workflows/stage1a-nli-gate-5.yml"
+  workflow_dispatch:
+jobs:
+  five-review-bart-mnli:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    strategy:
+      fail-fast: false
+      matrix:
+        method: [direct, meta]
+    env:
+      HF_HUB_DISABLE_TELEMETRY: "1"
+      TOKENIZERS_PARALLELISM: "false"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: python -m pip install --quiet "torch>=2.3,<3" "transformers>=4.45,<5" sentencepiece
+      - name: Offline source-check (no model calls)
+        run: python scripts/stage1a_nli_gate_5.py --method ${{ matrix.method }} --prepare-only
+      - name: Score real reviews using pretrained NLI model
+        run: python scripts/stage1a_nli_gate_5.py --method ${{ matrix.method }}
+      - name: Preserve all NLI judgments and audit results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: stage1a-nli-gate-5-${{ matrix.method }}
+          path: |
+            reports/stage1a_nli_gate_5/${{ matrix.method }}_scores.jsonl
+            reports/stage1a_nli_gate_5/${{ matrix.method }}_diagnostics.json
+          if-no-files-found: warn
