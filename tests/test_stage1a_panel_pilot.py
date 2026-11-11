@@ -177,3 +177,20 @@ def test_resume_accepts_saved_nested_offsets_and_rejects_tampering():
     with pytest.raises(ValueError, match="sub-evidence offsets mismatch"):
         pilot.completed_model_calls(rows, [review],
                                     ["qwen3:8b", "gemma3:4b", "llama3.2:3b"])
+
+
+def test_prompt_c_is_distinct_and_summary_selectable():
+    assert "C" in pilot.PROMPTS
+    assert pilot.PROMPTS["C"] != pilot.PROMPTS["A"]
+    assert "DIRECT INDICATOR" in pilot.PROMPTS["C"]
+    unit = pilot.segment_review("A peaceful park.")[0]
+    rows = []
+    for model in ("qwen3:8b", "gemma3:4b", "llama3.2:3b"):
+        for emotion in pilot.PILOT:
+            item = pilot.validate_label(annotation(
+                emotion=emotion, relevance="not_relevant"), unit)
+            rows.append({**item, "place_id": "ChIJ_trial", "review_index": 0,
+                         "model": model, "prompt": "C"})
+    report = pilot.summarize(rows, allow_incomplete=True, prompt_id="C")
+    assert report["n_items"] == 3
+    assert report["n_incomplete_units"] == 0
