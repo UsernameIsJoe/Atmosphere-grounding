@@ -1,0 +1,39 @@
+name: Stage 1A semantic relevance gate (real review cross-encoders)
+on:
+  push:
+    paths:
+      - "scripts/stage1a_crossencoder_gate_5.py"
+      - ".github/workflows/stage1a-crossencoder-gate-5.yml"
+  workflow_dispatch:
+
+jobs:
+  real-review-benchmark:
+    strategy:
+      fail-fast: false
+      matrix:
+        model: [bge, minilm]
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    env:
+      HF_HUB_DISABLE_TELEMETRY: "1"
+      TOKENIZERS_PARALLELISM: "false"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install model runtime
+        run: python -m pip install --quiet "torch>=2.3,<3" "transformers>=4.45,<5" sentencepiece
+      - name: Offline real-source preflight (no downloads or inference)
+        run: python scripts/stage1a_crossencoder_gate_5.py --model ${{ matrix.model }} --prepare-only
+      - name: Run semantic relevance scoring on real reviews
+        run: python scripts/stage1a_crossencoder_gate_5.py --model ${{ matrix.model }}
+      - name: Publish per-clause scores and diagnostic report
+        uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: stage1a-gate-5-${{ matrix.model }}
+          path: |
+            reports/stage1a_crossencoder_gate_5/${{ matrix.model }}_scores.jsonl
+            reports/stage1a_crossencoder_gate_5/${{ matrix.model }}_diagnostics.json
+          if-no-files-found: warn
