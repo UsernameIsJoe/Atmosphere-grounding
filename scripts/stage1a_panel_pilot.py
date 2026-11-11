@@ -438,8 +438,21 @@ def completed_model_calls(annotations: list[dict], reviews: list[dict],
         unit = {u["unit_id"]: u for u in review["units"]}.get(item["unit_id"])
         if unit is None:
             raise ValueError(f"Saved annotation references unknown clause: {key}")
+        # Stored labels have source-offset metadata added *after* the original
+        # model schema validation, including nested evidence_records[].span_offsets.
+        # Reconstruct the original schema before validating, without modifying
+        # or weakening the previously saved source-grounding checks.
         base = {k: item[k] for k in ITEM_SCHEMA["properties"]}
-        validate_label(base, unit)
+        base["evidence_records"] = [
+            {k: record[k] for k in ITEM_SCHEMA["properties"]["evidence_records"]["items"]["properties"]}
+            for record in base["evidence_records"]
+        ]
+        validated = validate_label(base, unit)
+        if item.get("span_offsets") != validated["span_offsets"]:
+            raise ValueError(f"Saved primary evidence offsets mismatch: {key}")
+        for stored, checked in zip(item["evidence_records"], validated["evidence_records"]):
+            if stored.get("span_offsets") != checked["span_offsets"]:
+                raise ValueError(f"Saved sub-evidence offsets mismatch: {key}")
         by_call[(key[0], key[1], item["model"], item["prompt"])].append(item)
     done = set()
     for call, items in by_call.items():
