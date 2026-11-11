@@ -293,9 +293,10 @@ def run() -> int:
     p.add_argument("--resume", action="store_true")
     p.add_argument("--limit-segments", type=int, default=0,
                    help="Smoke test only; resume without this flag for full run")
-    p.add_argument("--max-errors", type=int, default=12)
+    p.add_argument("--max-errors", type=int, default=0,
+                   help="Optional early-stop threshold; 0 (default) processes all segments despite errors")
     args = p.parse_args()
-    if args.max_reviews < 1 or args.max_errors < 1 or args.limit_segments < 0:
+    if args.max_reviews < 1 or args.max_errors < 0 or args.limit_segments < 0:
         p.error("Invalid count")
     if "fixtures" in args.input.parts or args.input.name != "reviews.jsonl":
         p.error("Use original processed reviews.jsonl, not synthetic fixtures or model labels")
@@ -399,8 +400,8 @@ def run() -> int:
                     append_jsonl(errors, {"review_id": seg["review_id"], "segment_id": seg["segment_id"],
                                           "source_sha256": seg["source_sha256"], "error": issue})
                 print(f"{task} {model} {index}/{len(pool)} {'OK' if good else 'ERROR'}", flush=True)
-                if failures >= args.max_errors:
-                    print("ERROR LIMIT reached; inspect raw_responses.jsonl and resume later", file=sys.stderr)
+                if args.max_errors and failures >= args.max_errors:
+                    print("Optional error limit reached; all valid annotations remain saved", file=sys.stderr)
                     return 2
             n_done = sum((s["review_id"], s["segment_id"]) in done for s in segments)
             counts = collections.Counter(rec["category"] for row in read_jsonl(annotations) for rec in row["records"])
@@ -408,8 +409,15 @@ def run() -> int:
                 "n_review_input": len(reviews), "n_segments_total": len(segments),
                 "n_segments_completed": n_done, "n_segments_remaining": len(segments) - n_done,
                 "n_records_by_category": dict(counts),
+                "n_segments_with_unresolved_errors": len({(r["review_id"], r["segment_id"])
+                    for r in read_jsonl(errors) if (r["review_id"], r["segment_id"]) not in done}),
                 "warning": "Model output, NOT independent accuracy or independent E/T corroboration"})
             print(f"SAVED {task}/{model}: {n_done}/{len(segments)} segments", flush=True)
+    if failures:
+        print(f"FINISHED processing available work with {failures} failed segment evaluations. "
+              "Errors are saved; missing labels are NOT treated as negative evidence.", flush=True)
+    else:
+        print("FINISHED all requested work without new failed segment evaluations.", flush=True)
     return 2 if failures else 0
 
 
