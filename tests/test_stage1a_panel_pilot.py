@@ -148,3 +148,32 @@ def test_partial_consensus_excludes_only_incomplete_key():
     report = pilot.summarize(rows, allow_incomplete=True)
     assert report["n_items"] == 2
     assert report["n_incomplete_units"] == 1
+
+
+def test_resume_accepts_saved_nested_offsets_and_rejects_tampering():
+    """Stored outputs include enriched offsets absent from the model's JSON schema."""
+    unit = pilot.segment_review("A peaceful park.")[0]
+    review = {"place_id": "ChIJ_testcase", "review_index": 0,
+              "text": "A peaceful park.", "source_sha256": pilot.sha256("A peaceful park."),
+              "units": [unit]}
+    rows = []
+    for model in ("qwen3:8b", "gemma3:4b", "llama3.2:3b"):
+        for prompt in ("A", "B"):
+            for emotion in pilot.PILOT:
+                base = annotation(emotion=emotion, relevance="supports")
+                base["evidence_records"] = [{
+                    "relevance": "supports", "evidence_span": "peaceful",
+                    "strength": "weak", "type": "explicit", "condition": ""
+                }]
+                saved = pilot.validate_label(base, unit)
+                rows.append({**saved, "place_id": review["place_id"],
+                             "review_index": review["review_index"],
+                             "source_sha256": review["source_sha256"],
+                             "model": model, "prompt": prompt})
+    completed = pilot.completed_model_calls(rows, [review],
+                                           ["qwen3:8b", "gemma3:4b", "llama3.2:3b"])
+    assert len(completed) == 6
+    rows[0]["evidence_records"][0]["span_offsets"] = [{"start": 0, "end": 8}]
+    with pytest.raises(ValueError, match="sub-evidence offsets mismatch"):
+        pilot.completed_model_calls(rows, [review],
+                                    ["qwen3:8b", "gemma3:4b", "llama3.2:3b"])
