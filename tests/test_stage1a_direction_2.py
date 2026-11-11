@@ -17,14 +17,14 @@ def _supply_original_annotations(tmp_path):
     corpus = {(r["place_id"], r["review_index"]): prepare([r])[0]
               for r in load_real_reviews(ROOT / "data/processed/reviews.jsonl", 0)}
     spans = {
-        (1, "calm"): "makes this place a dirty, chaotic mess",
-        (3, "safe"): "the sides extremely slippery",
-        (4, "safe"): "slip and hit their head",
-        (11, "inviting"): "Maintenance of the park is also quite poor",
-        (2, "safe"): "The spongy hardtop material forms a nice hill",
-        (0, "safe"): "without worrying for the car drivers and crowd roads",
-        (1, "calm"): "quiet times",
-        (1, "inviting"): "I loved that place and wish to visit it again",
+        ("ChIJdelVAGp344kRnbhJtYxqBuo", 1, "calm"): "makes this place a dirty, chaotic mess",
+        ("ChIJdelVAGp344kRnbhJtYxqBuo", 3, "safe"): "the sides extremely slippery",
+        ("ChIJdelVAGp344kRnbhJtYxqBuo", 4, "safe"): "slip and hit their head",
+        ("ChIJdelVAGp344kRnbhJtYxqBuo", 11, "inviting"): "Maintenance of the park is also quite poor",
+        ("ChIJdelVAGp344kRnbhJtYxqBuo", 2, "safe"): "The spongy hardtop material forms a nice hill",
+        ("ChIJqawa215344kROpcUJbbE0Vg", 0, "safe"): "without worrying for the car drivers and crowd roads",
+        ("ChIJqawa215344kROpcUJbbE0Vg", 1, "calm"): "quiet times",
+        ("ChIJqawa215344kROpcUJbbE0Vg", 1, "inviting"): "I loved that place and wish to visit it again",
     }
     values = []
     for case in config["cases"]:
