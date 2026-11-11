@@ -34,7 +34,7 @@ def test_evidence_grounding_preserves_original_text():
     clause = "It’s a really quiet   spot for reading."
     grounded, mode = trial.ground_span("IT'S A REALLY QUIET spot for reading.", clause)
     assert mode == "normalized"
-    assert grounded == clause[:-1]
+    assert grounded == clause
     assert trial.validate_answer({
         "rationale": "Describes a quiet setting",
         "evidence_span": "quiet", "relevance": "supports",
