@@ -1,3 +1,5 @@
+> **Project research direction (2026-11-11):** [Three Channels — Text Evidence, Text Inference, Image Quality](Docs/THREE_CHANNEL_RESEARCH_DIRECTION_2026-11-11.md) is the **current project-level conceptual hypothesis**, with three independent measurements and three pairwise comparisons. It is not implemented or validated. The Stage 1A plan below is a candidate for the text-evidence channel, not the entire project architecture.
+
 > **Stage 1A design decision (2026-11-11):** [Explicit-atmosphere evidence + recall-expansion research plan](Docs/STAGE1A_RESEARCH_PLAN_2026-11-11.md) is the **current Stage 1A architecture and execution plan**. The prior November 10 panel/NLI design and scripts remain historical experiments, **not the approved default workflow**. The new plan is documentation only, not implemented or validated.
 
 # Atmosphere Grounding — Cambridge Pilot
