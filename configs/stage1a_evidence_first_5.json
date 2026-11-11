@@ -1,0 +1,35 @@
+{
+  "description": "Frozen original 20-review A/B baseline review index 0; 20 clauses; do not change sampling",
+  "reviews": [
+    {
+      "place_id": "ChIJC5eyB0J344kRIgcXIHRzdK4",
+      "review_index": 0,
+      "source_sha256": "948fe9971d494746dea40260d98ab7c42f22e412964cee33a0fea88cf504839c",
+      "n_clauses": 2
+    },
+    {
+      "place_id": "ChIJdelVAGp344kRnbhJtYxqBuo",
+      "review_index": 0,
+      "source_sha256": "e34fea50ac661882941aa7dcbed34058ebd2d6306aeb373c115492e989817cb2",
+      "n_clauses": 12
+    },
+    {
+      "place_id": "ChIJqawa215344kROpcUJbbE0Vg",
+      "review_index": 0,
+      "source_sha256": "5c6148c5ea966a3da89acf8562f78b776d0f012c2ef7714ddb293ebae5f883f5",
+      "n_clauses": 2
+    },
+    {
+      "place_id": "ChIJeR3K0F5344kRjtZYF7-MPlw",
+      "review_index": 0,
+      "source_sha256": "15946bac79c275193cd13636442162fe905b16c4075d111e1ed2a87e0c0ea81a",
+      "n_clauses": 1
+    },
+    {
+      "place_id": "ChIJK89zW1R344kRz7jYZfKShKA",
+      "review_index": 0,
+      "source_sha256": "452b0dd1144c940cb5dfc53a96584a99a5314143c84720bf96d0f397115f6a7e",
+      "n_clauses": 3
+    }
+  ]
+}
