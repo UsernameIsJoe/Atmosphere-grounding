@@ -1,3 +1,5 @@
+> **Local E/T pilot (2026-11-11):** [Independent explicit-evidence and text-inference test on 50 segmented real reviews](Docs/STAGE1A_DUAL_CHANNEL_50_2026-11-11.md) uses `qwen3:8b` and `gemma3:4b` with separate prompts, calls and outputs. Run locally; no inference results are claimed yet.
+
 > **Project research direction (2026-11-11):** [Three-Channel Triangle — Text Evidence (E), Text Inference/Description (T), Image Quality (I)](Docs/THREE_CHANNEL_RESEARCH_DIRECTION_2026-11-11.md) is the **current conceptual research hypothesis**. **E–I is the direct target**; E–T and T–I are potential indirect support, to be compared with—not automatically merged into—the direct estimate. This is not implemented or validated. The Stage 1A plan below is a candidate method for E only.
 
 > **Stage 1A design decision (2026-11-11):** [Explicit-atmosphere evidence + recall-expansion research plan](Docs/STAGE1A_RESEARCH_PLAN_2026-11-11.md) is the **current Stage 1A architecture and execution plan**. The prior November 10 panel/NLI design and scripts remain historical experiments, **not the approved default workflow**. The new plan is documentation only, not implemented or validated.
