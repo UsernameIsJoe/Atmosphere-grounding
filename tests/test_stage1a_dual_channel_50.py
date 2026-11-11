@@ -170,3 +170,45 @@ def test_runner_corrects_invalid_model_format_without_cross_task_leakage(tmp_pat
             assert raw[1]["retry_policy"] == dual.RETRY_POLICY
             assert len(dual.read_jsonl(directory / "annotations.jsonl")) == 1
             assert not (directory / "errors.jsonl").exists()
+
+
+def test_continue_after_permanent_errors_to_other_segments_and_channels(tmp_path, monkeypatch):
+    """Failures are not silently converted to empty records; batch proceeds."""
+    out = tmp_path / "keep_going"
+    args = [str(SCRIPT), "--output", str(out), "--max-reviews", "2",
+            "--limit-segments", "2"]
+    monkeypatch.setattr(sys, "argv", args)
+    monkeypatch.setattr(dual, "check_models", lambda base, models, timeout: {
+        m: m + "_digest" for m in models})
+    counts = {"evidence": 0, "inference": 0}
+
+    def fake_call(base, payload, timeout):
+        task = "evidence" if "records" in payload["format"]["properties"] else "inference"
+        counts[task] += 1
+        # Fail all retries for first segment, succeed for second segment.
+        source = json.loads(payload["messages"][1]["content"])["target_segment"]
+        first = dual.prepare_segments(dual.select_reviews(real_rows(), 2, 42))[0]["text"]
+        if source == first:
+            key = "records" if task == "evidence" else "observations"
+            fields = {"category": "calm", "direction": "supports", "quote": "invented quote",
+                      "attribution": "general_report"} if task == "evidence" else {
+                      "quote": "invented quote", "kind": "physical",
+                      "visible_in_photo": "uncertain", "category": "none",
+                      "direction": "none", "reason": ""}
+            return json.dumps({key: [fields]}), {}
+        return json.dumps({"records": []} if task == "evidence" else {"observations": []}), {}
+
+    monkeypatch.setattr(dual, "call", fake_call)
+    assert dual.run() == 2
+    assert counts == {"evidence": 8, "inference": 8}  # 3 failures + 1 valid, per model
+    for task in dual.TASKS:
+        for model in dual.MODELS:
+            sub = out / task / dual.model_slug(model)
+            saved = dual.read_jsonl(sub / "annotations.jsonl")
+            assert len(saved) == 1
+            assert saved[0]["segment_id"] == 1
+            errors = dual.read_jsonl(sub / "errors.jsonl")
+            assert len(errors) == 1
+            summary = json.loads((sub / "summary.json").read_text(encoding="utf-8"))
+            assert summary["n_segments_with_unresolved_errors"] == 1
+            assert summary["n_segments_completed"] == 1
