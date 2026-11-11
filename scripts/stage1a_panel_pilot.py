@@ -185,6 +185,17 @@ def load_real_reviews(path: Path, max_reviews: int) -> list[dict]:
     return rows
 
 
+def select_first_reviews_for_places(rows: list[dict], ids: list[str]) -> list[dict]:
+    """Match diverse sampling: use the earliest corpus row per requested place."""
+    first = {}
+    wanted = set(ids)
+    for row in rows:
+        if row["place_id"] in wanted:
+            first.setdefault(row["place_id"], row)
+    if set(ids) != set(first):
+        raise ValueError("Selected places missing from original input")
+    return [first[pid] for pid in ids]
+
 def prepare(rows: list[dict]) -> list[dict]:
     return [
         {"place_id": r["place_id"], "review_index": r["review_index"],
@@ -529,16 +540,10 @@ def main() -> None:
             p.error("--place-ids-file must contain a nonempty JSON array of place IDs")
         if len(ids) != len(set(ids)):
             p.error("--place-ids-file contains duplicate IDs")
-        # Match the original diverse-mode baseline: FIRST source review per place.
-        # A dict comprehension would silently choose the LAST review (index 4),
-        # invalidating controlled prompt comparisons against baseline index 0.
-        first = {}
-        for row in rows:
-            if row["place_id"] in ids:
-                first.setdefault(row["place_id"], row)
-        if set(ids) != set(first):
-            p.error("--place-ids-file references place IDs missing from input")
-        rows = [first[pid] for pid in ids]
+        try:
+            rows = select_first_reviews_for_places(rows, ids)
+        except ValueError as exc:
+            p.error(str(exc))
         if args.max_reviews and len(rows) != args.max_reviews:
             p.error("--max-reviews must equal selected place ID count")
     if args.sample_mode == "diverse" and not args.place_ids_file:
