@@ -25,11 +25,10 @@ VERSION = "stage1a_e_t_independent_50_v1"
 CATEGORIES = ("calm", "inviting", "safe")
 MODELS = ("qwen3:8b", "gemma3:4b")
 TASKS = ("evidence", "inference")
-RUBRIC = """CALM: Explicitly described peacefulness, quietness, tranquility, relaxation, or their experienced opposites.
-INVITING: Explicitly described welcome, approachability, belonging, social comfort, or experienced exclusion.
-SAFE: Explicitly described feeling safe/unsafe, secure, threatened, or protected at the place.
-Distinguish the reviewed PLACE from other people, services or unrelated personal feelings. Generic praise is not automatically evidence.
-Descriptions of trees, benches, lighting, police, paths, crowds or activities do not alone establish an explicitly REPORTED emotion."""
+RUBRIC = """CALM: Tranquility, peacefulness, low stimulation and relaxation, versus experienced agitation or disturbance.
+INVITING: Welcome, approachability, social comfort or belonging, versus exclusion or hostility.
+SAFE: Perceived protection or security, versus danger, vulnerability or threat.
+Both tasks use these CATEGORY MEANINGS, but their evidence standards differ. A physical feature does not prove a feeling."""
 
 SYSTEM = {
     "evidence": """You are the EXPLICIT EVIDENCE annotator, NOT an inference model.
