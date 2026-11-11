@@ -1,5 +1,7 @@
 # Atmosphere Grounding — Current Research Baseline and Open Methodology
 
+> **Project-level update (2026-11-11):** [Three Channels — Text Evidence, Text Inference, Image Quality](../Docs/THREE_CHANNEL_RESEARCH_DIRECTION_2026-11-11.md) is the current exploratory framing. The existing Stage 1A plan concerns the **text-evidence** channel only; text inference is a separate research channel, not a presumed completed component. This concept has not been implemented or validated.
+
 **Status:** Research discussion baseline (2026-11-01), amended 2026-11-10 for the **11-category taxonomy and 3-category pilot**; Stage 1A planning now follows [the November 11 explicit-evidence and recall-expansion plan](../Docs/STAGE1A_RESEARCH_PLAN_2026-11-11.md), superseding the November 10 panel-first proposal as the default architecture.  
 **Authority:** The researcher's latest description in the November discussion takes precedence when interpreting goals. Prior repo architecture, code, and discussion notes remain historical references until intentionally revised. This file documents decisions and candidate methods; it does **not** claim they are implemented or validated.
 
