@@ -98,3 +98,53 @@ def test_real_corpus_format_and_no_fixture_ids():
     assert len(rows) == 214
     assert len({x["place_id"] for x in rows}) == 43
     assert all(not x["place_id"].startswith("fixture_") for x in rows)
+
+
+def test_saved_call_validation_and_partial_consensus():
+    unit = pilot.segment_review("A peaceful park.")[0]
+    review = {"place_id": "ChIJ_testcase", "review_index": 0,
+              "text": "A peaceful park.", "source_sha256": pilot.sha256("A peaceful park."),
+              "units": [unit]}
+    rows = []
+    for model in ("qwen3:8b", "gemma3:4b", "llama3.2:3b"):
+        for prompt in ("A", "B"):
+            if model == "gemma3:4b" and prompt == "A":
+                continue
+            for emotion in pilot.PILOT:
+                verdict = "supports" if emotion == "calm" else "not_relevant"
+                item = pilot.validate_label(
+                    annotation(emotion=emotion, relevance=verdict), unit)
+                rows.append({**item, "place_id": review["place_id"],
+                             "review_index": review["review_index"],
+                             "source_sha256": review["source_sha256"],
+                             "model": model, "prompt": prompt})
+    done = pilot.completed_model_calls(rows, [review],
+                                       ["qwen3:8b", "gemma3:4b", "llama3.2:3b"])
+    assert len(done) == 5
+    assert ("ChIJ_testcase", 0, "gemma3:4b", "A") not in done
+    report = pilot.summarize(rows, allow_incomplete=True)
+    assert report["n_items"] == 0
+    assert report["n_incomplete_units"] == 3
+    with pytest.raises(ValueError):
+        pilot.summarize(rows)
+    # Single bad saved original-text provenance must block unsafe reuse.
+    rows[0]["source_sha256"] = "tampered"
+    with pytest.raises(ValueError):
+        pilot.completed_model_calls(rows, [review],
+                                    ["qwen3:8b", "gemma3:4b", "llama3.2:3b"])
+
+
+def test_partial_consensus_excludes_only_incomplete_key():
+    unit = pilot.segment_review("A peaceful park.")[0]
+    rows = []
+    for emotion in pilot.PILOT:
+        for model in ("qwen", "gemma", "llama"):
+            if emotion == "safe" and model == "gemma":
+                continue
+            item = pilot.validate_label(annotation(
+                emotion=emotion, relevance="supports" if emotion == "calm" else "not_relevant"), unit)
+            rows.append({**item, "place_id": "ChIJ_testcase", "review_index": 0,
+                         "model": model, "prompt": "A"})
+    report = pilot.summarize(rows, allow_incomplete=True)
+    assert report["n_items"] == 2
+    assert report["n_incomplete_units"] == 1
