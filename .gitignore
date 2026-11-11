@@ -41,3 +41,6 @@ models/
 
 # Accidental local screenshots
 Screenshot*.png
+
+# Generated local Stage 1A E/T study output (may contain original review text)
+reports/stage1a_e_t_50_2026-11-11/
