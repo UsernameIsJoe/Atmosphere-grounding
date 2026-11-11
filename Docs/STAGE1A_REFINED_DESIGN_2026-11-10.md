@@ -1,3 +1,5 @@
+> **Superseded for current Stage 1A planning (2026-11-11):** The agreed next architecture and milestone plan is [STAGE1A_RESEARCH_PLAN_2026-11-11.md](STAGE1A_RESEARCH_PLAN_2026-11-11.md). This November 10 document remains a historical proposed method and research record. Its LLM panel/NLI student is not the current default plan.
+
 # Stage 1A — Refined text-grounding design
 
 **Decision date:** 2026-11-10  
