@@ -69,7 +69,8 @@ PROMPTS = {
         "not_relevant. Multiple distinct observations within one clause may use evidence_records. "
         "Return a complete structured JSON response only."
     ),
-}\n# Controlled intervention: threshold clarification only, not a new taxonomy.
+}
+# Controlled intervention: threshold clarification only, not a new taxonomy.
 PROMPTS["C"] = (
     "For EACH requested emotion, decide independently whether this target clause "
     "provides place-attributed evidence about that emotion. Use the entire review "
