@@ -1,6 +1,6 @@
 # Atmosphere Grounding — Current Research Baseline and Open Methodology
 
-**Status:** Research discussion baseline (2026-11-01), amended 2026-11-10 for the **11-category taxonomy and 3-category pilot**; Stage 1A method decisions are governed by [the refined design](../Docs/STAGE1A_REFINED_DESIGN_2026-11-10.md).  
+**Status:** Research discussion baseline (2026-11-01), amended 2026-11-10 for the **11-category taxonomy and 3-category pilot**; Stage 1A planning now follows [the November 11 explicit-evidence and recall-expansion plan](../Docs/STAGE1A_RESEARCH_PLAN_2026-11-11.md), superseding the November 10 panel-first proposal as the default architecture.  
 **Authority:** The researcher's latest description in the November discussion takes precedence when interpreting goals. Prior repo architecture, code, and discussion notes remain historical references until intentionally revised. This file documents decisions and candidate methods; it does **not** claim they are implemented or validated.
 
 ## 1. Research objective
