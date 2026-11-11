@@ -147,6 +147,49 @@ def payload_for(task: str, model: str, segment: dict) -> dict:
     }
 
 
+RETRY_POLICY = "targeted_validation_feedback_v2"
+
+
+def retry_payload(request: dict, task: str, issue: str, attempt: int) -> dict:
+    """Retry ONLY the same channel with its own validation feedback.
+
+    Preserve original prompts/schemas (and resume manifest), preserve hard quote
+    checks; do not auto-correct, infer, or merge E/T predictions.
+    """
+    if attempt < 2:
+        return request
+    if "Quote is not exact substring" in issue:
+        feedback = (
+            "Your previous answer was rejected because a quote was NOT an exact "
+            "character-for-character substring of target_segment. Copy quotes "
+            "ONLY from target_segment; never from previous/next context, never "
+            "paraphrase, normalize spelling, add punctuation or invent quotes. "
+            "If no appropriate quote is present, return an EMPTY records/observations array. "
+            "Every emitted quote must be searchable by literal substring matching."
+        )
+    elif "Inconsistent none category/direction" in issue:
+        feedback = (
+            "Your previous answer used incompatible inference fields. "
+            "When category is 'none', direction MUST be 'none'. "
+            "When category is calm/inviting/safe, direction MUST be supports/opposes "
+            "and reason must say why. If unsure about the emotional connection, "
+            "use category='none', direction='none'. Do not revise the source quote."
+        )
+    else:
+        feedback = (
+            "Your previous answer failed strict schema/source validation: " + issue[:200] + ". "
+            "Re-check exact keys, enum values and substring quotes; if no defensible "
+            "result can be found, return an empty array for this task."
+        )
+    if attempt >= 3:
+        feedback += (
+            " This is the final retry. Prefer omission to fabricated evidence "
+            "or speculation. Check quotes letter-by-letter against target_segment."
+        )
+    request["messages"].append({"role": "user", "content": feedback})
+    return request
+
+
 def occurrences(text: str, quote: str, start: int) -> list[dict]:
     result, at = [], 0
     while True:
@@ -326,9 +369,12 @@ def run() -> int:
                 key = (seg["review_id"], seg["segment_id"])
                 if key in done:
                     continue
-                request = payload_for(task, model, seg)
                 good = False
-                for attempt in (1, 2):
+                issue = None
+                for attempt in (1, 2, 3):
+                    request = payload_for(task, model, seg)
+                    if attempt > 1 and issue and issue.startswith("ValueError:"):
+                        request = retry_payload(request, task, issue, attempt)
                     raw, meta, issue = "", {}, None
                     try:
                         raw, meta = call(args.base, request, args.timeout)
@@ -340,7 +386,7 @@ def run() -> int:
                         issue = f"{type(error).__name__}: {error}"
                     append_jsonl(raw_path, {"review_id": seg["review_id"], "segment_id": seg["segment_id"],
                         "attempt": attempt, "raw_content": raw, "metadata": meta, "error": issue,
-                        "source_sha256": seg["source_sha256"]})
+                        "retry_policy": RETRY_POLICY, "source_sha256": seg["source_sha256"]})
                     if good:
                         append_jsonl(annotations, {"review_id": seg["review_id"], "segment_id": seg["segment_id"],
                             "place_id": seg["place_id"], "review_index": seg["review_index"],
