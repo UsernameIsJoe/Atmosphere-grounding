@@ -86,3 +86,21 @@ The runner automatically rejects malformed JSON, inconsistent fields and inexact
 - **Ethics/data:** Review source permissions before distributing raw response files or scaling training on Google Places-derived text.
 
 **Reproducibility note:** Earlier scripts (including `stage1a_panel_pilot.py`) are imported solely for their original-source loader and deterministic segmentation, not their prompts, rubrics, labels, or consensus.
+
+
+## 2026-11-11 operational fix — strict-source retries
+
+A local run exposed two *format/provenance* failures:
+- Qwen evidence sometimes supplied quotations that were **not exact substrings** of the target segment.
+- Gemma inference sometimes used `category=none` together with a non-`none` direction.
+
+The runner now provides task-specific validation feedback and allows up to three attempts per failed segment. It **does not relax source matching**, infer missing quotes, change labels automatically, or merge E with T. Both channels' original prompts, category rubric, schemas, input/selection manifest, and successful existing annotations remain unchanged, so **the same output folder can be resumed** after `git pull`. All attempts retain raw traces and a retry-policy version; earlier and later outputs may have used different retry strategies, which should be noted in any methodological audit.
+
+In the existing repository folder:
+
+```powershell
+git pull origin master
+python scripts/stage1a_dual_channel_50.py --resume
+```
+
+If the script again hits its 12-error per-run stop limit, **do not just raise the limit**. Inspect `raw_responses.jsonl` at the failed segment IDs to establish whether quoted spans are paraphrased, borrowed from neighboring context, or otherwise invalid. Errors cannot be read as semantic misclassification rates.
