@@ -1,57 +1,78 @@
-# Three Channels — Research Direction (2026-11-11)
+# Three Channels — Triangle Research Direction (2026-11-11)
 
 **Date:** November 11, 2026  
-**Status:** Agreed conceptual research direction; **not** an implemented, empirically validated, or method-locked architecture.  
-**Scope:** Project-wide reframing of Atmosphere Grounding. This document records the idea so it can be developed and challenged without forcing an immediate redesign of the existing code.
+**Status:** Current **project-level research hypothesis**, still exploratory. No chosen estimation method, validated results, or new implementation.  
+**Intent:** Preserve the idea and its evolution so future work can challenge and build on it without prematurely locking the pipeline.
 
-## Why three channels?
+## 1. Motivation and shift in thinking
 
-The original design had two branches: review-based atmosphere measurements (Stage 1A) and atmosphere-agnostic image qualities (Stage 1B), connected through location identity (Stage 2). Exploratory Stage 1A tests of ABSA, NLI, relevance filtering, and smaller local LLMs have not established stable, trustworthy atmosphere interpretation. This raises concern that model capacity, local hardware limits, and the requirement to finish text understanding before examining visual associations could dominate the project.
+The earlier project arranged two channels—review emotion and measured image qualities—into a sequence: text grounding first, visual grounding second, association third. Pilot attempts using ABSA, NLI, relevance gates and small local LLMs exposed unstable judgments and conceptual ambiguities. The project should **not** become a benchmark of LLM capacity or local hardware, nor depend on a commercial-grade emotion classifier before its central idea can be tested.
 
-The new direction is **not** to make model-capacity competition the subject of the project. The project is an exploratory, rigorous research concept—not a commercial system requiring a polished universal emotion model. Instead of betting on a single successful text measurement pipeline, separate three meaningfully different views of a place and study their relationships.
+The November 11 first three-channel sketch separated **text evidence**, **text inference** and **image quality**, initially as three pairwise comparisons. The later refinement is stronger: they form a **triangle, not a chain**. Direct E–I is the target; T may offer an indirect route through two relationships that could be easier to observe.
 
-## Three channels (kept distinct)
+## 2. Three channels, kept separate
 
-| Channel | What it measures | Typical input/output | Scientific boundary |
+| Symbol | Channel | What it contributes | Boundaries |
 |---|---|---|---|
-| **T-E: Text evidence** | Place-attributed atmosphere **explicitly reported** by people | Review source spans -> evidence for/against a category, attribution, review coverage and uncertainty -> place profile | Explicit does not mean error-free; extraction and selective reviewing still bias the measure. |
-| **T-I: Text inference** | Atmosphere **inferred** from broader descriptions and contextual cues in review text | Reviews -> category-specific inferred atmosphere estimates with uncertainty/provenance | An inference is not a reported feeling or ground truth; language-model priors and physical-feature stereotypes may dominate. |
-| **I-Q: Image quality** | Fixed, interpretable, **atmosphere-agnostic** visual properties | Photos -> objects, spatial/compositional measurements, visual density/contrast and other measured features -> place profile | Image quality is not an emotion rating; feature extractors require their own validation. |
+| **E** | **Text evidence** | Explicit, place-attributed reports of atmosphere from reviews, with source spans, support/opposition, attribution, review coverage and uncertainty | Primary *reported-perception* reference, not objective truth. Extraction errors, selection bias and missing reviews remain. |
+| **T** | **Text inference / descriptive bridge** | Place-related descriptions from reviews: activities, uses, social context, environmental conditions, spatial experiences and potentially their inferred relevance | Its **provisional primary role is descriptive**, rather than producing another unqualified emotion score. Distinguish directly stated descriptions from inferred associations; how far inference is allowed remains an open question. |
+| **I** | **Image quality** | Fixed, interpretable, atmosphere-agnostic visual measurements (objects, canopy, seating, enclosure, density, color/contrast, etc.) | Measured visual properties, not emotion labels; some text-described conditions are not visible in photographs. |
 
-The existing 11-category ontology remains a **starting taxonomy**, subject to construct review; initial pilots may use calm, inviting, safe. Not every quality is necessarily a psychological emotion (e.g., open or compressed). Preserve category definitions and measurement versions.
+All channels are joined through **place identity**. Reviews and photos share a place, not known one-to-one correspondence. Preserve raw evidence, source IDs, denominators, missingness and versions; aggregate repeated observations without pretending each sentence/photo is an independent place.
 
-**All three channels attach to `place_id`.** Reviews and photos from the same place are weakly associated; there is no assumed one-to-one photo/review match. Keep individual evidence, missingness, denominators, and provenance; aggregate appropriately at the place level.
+### Triangle / three distinct research questions
 
-## Three parallel scientific relationships
+```text
+                    E — explicit reported atmosphere
+                   / \
+   E–T: reported   /   \   E–I: DIRECT TARGET
+  experience and  /     \  observed atmosphere–visual relationship
+  description    /       \
+                T ——————— I
+                   T–I: text description ↔ measured image qualities
+```
 
-1. **T-E ↔ I-Q:** Which measured physical/visual characteristics vary with *explicitly reported* atmosphere? This is the clearest empirically grounded text/visual comparison, but not a causal test.
-2. **T-E ↔ T-I:** When does inferred atmosphere agree with, extend, or contradict explicit reports? This tests behavior and potential blind spots of inference; agreement between two readings of the same text is **not independent validation**.
-3. **T-I ↔ I-Q:** Which visual properties correlate with model-inferred atmosphere, including associations absent from explicit reports? Compare these patterns with T-E ↔ I-Q to detect potentially imported language/visual priors.
+- **E–I (direct, target):** Which image qualities are associated with explicitly *reported* atmosphere? Valuable but likely sparse and noisy because people mention only selected experiences.
+- **E–T (interpretive):** Which reported activities, circumstances, spatial experiences and environmental descriptions accompany explicit atmosphere reports?
+- **T–I (grounding):** Which *visually observable* textual concepts correspond to image measurements? These may have richer coverage than E.
 
-The third channel does **not** create a majority-vote truth metric or automatically make an emotion score more trustworthy. Disagreements are **research outputs**, not failures to be smoothed over. For example, if inferred calmness correlates with greenery but explicitly reported calmness does not, this can indicate a model prior, differences in coverage, or sampling effects; it is a question for investigation, not proof of any one explanation.
+**Hypothesis:** If some T features are both empirically associated with E and visibly measurable in I, an **E–T–I indirect route** might help estimate or investigate E–I where explicit evidence is scarce. Both the **direct E–I route** and the **indirect E–T–I route** should be compared; combining them is a *future, testable option*, not assumed to strengthen truth.
 
-## Research posture and achievable first outputs
+This makes T a possible **semantic bridge between perception reports and observable physical qualities**, rather than a second emotion-judging authority. T and I are similar in their descriptive proximity to environments, but must **remain different channels**: one is language about a place; the other is measured imagery.
 
-- **Independence in development:** Build and test T-E, T-I and I-Q in parallel. No channel must be perfect for exploratory pairwise comparisons to begin.
-- **Separate instruments:** Keep raw channel outputs and model/source versions separate. Do not train/evaluate a channel on its own supposed independent corroboration or leak image-derived emotion hints into text evidence.
-- **Evidence isn't infallible:** T-E is expected to be more defensible, but explicitly reported experiences can be misinterpreted, negated, attributed to something other than the place, or absent because reviewers did not mention them. Milestone-level human scientific audits remain useful.
-- **Inference is worth studying even if imperfect:** Whether inferred scores align with reported experience is part of the research question, not an assumption of success.
-- **Stage 2 is comparative:** Compare channel relationships on matched places and geography/place-type held-outs where feasible; measure missingness, category prevalence, feature quality, reliability, and disagreement. Do not mistake observational association for cause, or the same underlying text for independent views.
-- **Small, valuable first deliverables:** (a) independent place-level channel profiles, (b) three pairwise association/discordance analyses, and (c) concrete cases showing agreement, disagreement, and uncertainty.
-- **Long-term aspiration only:** A model that can predict atmospheric qualities from either text or images (perhaps with measurable visual features). Cross-modal prediction is **not** an immediate milestone, a guaranteed outcome, or the success criterion for early research.
+### Concrete example
 
-## Relationship to prior Stage 1A plans
+- **E:** "I feel relaxed here" (explicit calm experience).
+- **T:** "People read beneath the shaded trees" (an activity/environment description in a review).
+- **I:** Measured canopy cover, shaded area (if measurable), seating and spatial enclosure.
 
-The November 11 [explicit-evidence/recall plan](STAGE1A_RESEARCH_PLAN_2026-11-11.md) remains a **candidate implementation strategy for T-E** (cue + LLM confirmation, optional recall student, M0–M3 audits). It does not define T-I, and its previously deferred environmental-condition track `3B` must **not** be silently equated with the new T-I channel. T-I's scope and methods are open research questions.
+We can ask whether reading/shade descriptions are associated with explicit relaxation reports (**E–T**), whether shade/seating descriptions match image measurements (**T–I**), and whether those image features independently associate with relaxation reports (**E–I**). This example illustrates a *hypothesis*, **not** a proven link or causal mechanism.
 
-Prior project-wide two-branch [design](PROJECT_DESIGN_V2_REVIEWED_2026-11-10.md), archived tests and code remain intact for provenance. The project now considers **three measurements with three pairwise comparisons** at the *conceptual research* level. We have not agreed on inference algorithms, metrics/score formulas, confidence-combination rules, or implementation sequencing beyond avoiding unnecessary dependencies.
+## 3. Scientific safeguards — the indirect route is conditional
 
-## Open questions for next discussion
+1. **No guaranteed transitivity.** Two strong associations (E–T and T–I) do **not** entail a valid E–I estimate. Confounding by location type, geography, photography conditions, selective reviewing, and shared model biases can create spurious paths. The indirect route needs explicit assumptions and held-out checks.
+2. **Visual reachability matters.** T concepts about visible shade, paths or seating are candidates for the T–I bridge. Noise, smell, subjective interactions and crowd behavior may relate to E but not be inferable from static imagery; retain them in T and E–T analysis but don't force them into visual predictions.
+3. **Shared reviews aren't independent corroboration.** E and T can originate from the same writing and model family. Use source-separated/split-review or cross-fitted checks where feasible, independent source audits, and report dependence rather than treating triangle agreement as three votes for truth.
+4. **Disagreement is informative.** If T and I agree on greenery but the E–I relationship is weak, investigate label coverage, model priors, sample selection and context. Do not mechanically override E with an indirect estimate.
+5. **Separate observational association from causality.** E–I is not a causal claim, and E–T–I is not automatically a valid mediation model.
+6. **Relevant precedents are analogies, not ready-made estimators.** Network meta-analysis compares direct and indirect relationships under transitivity/consistency assumptions, but our data are observational and not exchangeable randomized treatments. Pivot-based multimodal alignment (e.g., ImageBind) illustrates bridging sparsely paired modalities; its success does not establish emotion grounding here.
 
-1. Operational definitions and outputs of **T-I**: what may be inferred from reviews, and how to distinguish textual inference from invented emotional claims.
-2. Comparability: how T-E coverage/support measures, T-I predictions, and I-Q vectors can be associated **without forcing them into the same numeric scale**.
-3. Which categories and place types offer an informative, modest proof-of-concept for each pair.
-4. Scientific evaluation of each instrument and whether any association survives place/geographical separation and shared-bias checks.
-5. What counts as a useful intermediate result if text-to-image or image-to-text atmosphere prediction never succeeds.
+## 4. Realistic initial research outputs
 
-**Decision record:** Preserve the three-channel idea as the current project-level research hypothesis. Do not merge channel scores or claim validation; refine the design through discussion and targeted experiments.
+- **Three independently inspectable place-level channel datasets**, with missingness and provenance.
+- **Three pairwise association/discordance studies** with uncertainty and appropriate place-level/spatial holdouts.
+- **A direct-versus-indirect E–I comparison**, testing whether T adds stable, held-out information *beyond* direct E–I and simpler baselines; report cases of consistency and inconsistency.
+- **A map of identifiable vs unidentifiable conditions** (which T concepts imagery can and cannot support).
+
+Success does **not** require a fully integrated model. Longer term, a model predicting reported atmospheric qualities from text or images is an aspiration, not an immediate milestone or commitment.
+
+## 5. Relationship to previous plans and open decisions
+
+- The existing [Stage 1A explicit-evidence / recall design](STAGE1A_RESEARCH_PLAN_2026-11-11.md) is a **candidate way to build E**, not the mandatory implementation for the whole triangle.
+- **T remains a distinct research problem**; do not silently relabel Stage 1A's deferred nonvisual-conditions track `3B` as T. Its precise extractive vs inferential tasks, outputs and human audit needs still require research.
+- The earlier [two-branch design](PROJECT_DESIGN_V2_REVIEWED_2026-11-10.md), scripts and failed/unfinished audits are retained as historical implementation evidence; do not mistake them for validation of the triangle.
+- The **11-category taxonomy** from `configs/lexicon.yaml` remains a starting point; a focused pilot can test only a few categories. Some (e.g., `open`, `compressed`) may be spatial perception constructs rather than psychological emotions.
+
+**Open choices:** how to operationalize T (descriptions vs inferred affect), which visual subset of T is testable, whether and how indirect associations should be estimated, how to handle review sparsity and dependency, what comparison baselines/metrics are appropriate, and how to calibrate a modest proof-of-concept.
+
+**Decision record (2026-11-11):** Keep **E, T and I as three separate channels**. Treat **E–I as the target**, **E–T and T–I as potential support**, compare direct and indirect routes **before** combining anything, and let disagreement remain an interpretable research outcome. No methods, scores, or outputs are claimed to work yet.
