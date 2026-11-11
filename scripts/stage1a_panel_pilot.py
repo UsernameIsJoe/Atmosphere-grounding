@@ -529,7 +529,13 @@ def main() -> None:
             p.error("--place-ids-file must contain a nonempty JSON array of place IDs")
         if len(ids) != len(set(ids)):
             p.error("--place-ids-file contains duplicate IDs")
-        first = {r["place_id"]: r for r in rows if r["place_id"] in ids}
+        # Match the original diverse-mode baseline: FIRST source review per place.
+        # A dict comprehension would silently choose the LAST review (index 4),
+        # invalidating controlled prompt comparisons against baseline index 0.
+        first = {}
+        for row in rows:
+            if row["place_id"] in ids:
+                first.setdefault(row["place_id"], row)
         if set(ids) != set(first):
             p.error("--place-ids-file references place IDs missing from input")
         rows = [first[pid] for pid in ids]
