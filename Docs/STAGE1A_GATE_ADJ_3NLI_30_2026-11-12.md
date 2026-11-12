@@ -87,3 +87,25 @@ python scripts/stage1a_gate_adj_nli_30.py
 ```
 
 If the script is already running, stop it with Ctrl+C **only when convenient**; the updated bars take effect when you restart the Python process. Already saved per-segment outputs remain reusable, and the prompts, data and experiment manifest are unchanged.
+
+
+## Quotation-verification diagnosis (2026-11-12 patch)
+
+The original progress output could misleadingly flag every category, including a **none** verdict that does not require any evidence quotation. The validator now distinguishes:
+
+- **none**: no supporting quote required, any unnecessary model-supplied quote is logged separately.
+- **uncertain**: quote optional; malformed optional quote does not invalidate the absence of a conclusion.
+- **supports / opposes / mixed**: source quote must exactly match the target segment to be marked **verified**; missing and inexact quotes remain flagged and are NOT silently rewritten.
+
+Existing saved model answers are **not deleted, rewritten, or assumed correct**. The report recomputes quote statuses from the original model strings rather than trusting older annotations.
+
+**Run this before continuing inference if repeated warnings appear:**
+
+```powershell
+git pull origin master
+python scripts/stage1a_gate_adj_nli_30.py --stage diagnose
+```
+
+It prints `DIAGNOSE` records for each model showing the actual distribution of verdicts, whether quotations match, and how many unnecessary quotes accompanied `none` verdicts. It also prints up to five `UNSUPPORTED_VERDICT_QUOTE` and `UNNECESSARY_NONE_QUOTE` examples with the target segment. **No NLI/Ollama model is loaded and no results are overwritten.**
+
+After inspecting diagnostic results, normal inference can resume with `--stage llm`. If there are many unsupported nonempty verdicts, pause and inspect raw model outputs before deciding to revise the prompt; changing the prompt would require versioning/re-evaluating prior verdicts, not just hiding the warnings.
