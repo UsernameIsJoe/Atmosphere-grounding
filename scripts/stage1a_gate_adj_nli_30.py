@@ -334,17 +334,19 @@ def validate_llm(obj: object, u: dict) -> list[dict]:
                 raise ValueError(f"Invalid {field}")
         categories.append(r["category"])
         quote = r["quote"]
-        if r["verdict"] in ("none", "uncertain"):
-            if quote and quote not in u["segment"]:
-                raise ValueError("Unmatched optional quote")
-        elif not quote or quote not in u["segment"]:
-            raise ValueError("Missing/inexact quote for nonempty verdict")
         offsets, pos = [], 0
         if quote:
             while (index := u["segment"].find(quote, pos)) != -1:
                 offsets.append({"start": u["start"] + index, "end": u["start"] + index + len(quote)})
                 pos = index + 1
-        clean.append({**r, "quote_offsets": offsets})
+        # A quote mismatch is a GROUNDING problem, not a JSON/schema problem.
+        # Preserve the model's verdict for later human auditing instead of
+        # discarding all three category judgments and repeatedly regenerating.
+        # Never silently turn a model paraphrase into a fabricated source span.
+        status = ("verified" if offsets else "unverified" if quote
+                  else "not_provided" if r["verdict"] not in ("none", "uncertain")
+                  else "not_required")
+        clean.append({**r, "quote_offsets": offsets, "quote_status": status})
     if set(categories) != set(CATEGORIES) or len(set(categories)) != len(categories):
         raise ValueError("Missing/duplicate category")
     return sorted(clean, key=lambda x: CATEGORIES.index(x["category"]))
@@ -413,13 +415,29 @@ def llm_score(units: list[dict], out: Path, base: str, timeout: int, limit: int 
                     success = True
                 except (ValueError, KeyError, TypeError, urllib.error.URLError, TimeoutError) as exc:
                     error = f"{type(exc).__name__}: {exc}"
+                    if isinstance(exc, urllib.error.HTTPError):
+                        try:
+                            detail = exc.read(2048).decode("utf-8", errors="replace")
+                            error += f" | Ollama response: {detail}"
+                        except OSError:
+                            pass
+                    # Show diagnostic immediately; don't force a full 123-case run
+                    # merely to discover the first failure's cause.
+                    print(f"\nLLM {model} {key(u)} attempt {attempt}/3 FAILED: "
+                          f"{error[:300]}", flush=True)
                 append_jsonl(raw_file, {"key": key(u), "attempt": attempt, "raw": raw,
                                         "metadata": info, "error": error,
                                         "duration_s": round(time.perf_counter()-started, 4)})
                 if success:
+                    questionable = [v["category"] for v in cleaned
+                                    if v["quote_status"] in ("unverified", "not_provided")]
                     append_jsonl(rows_file, {"key": key(u), "ratings": cleaned,
                                             "segment_sha256": sha(u["segment"]),
                                             "model": model})
+                    if questionable:
+                        print(f"\nLLM {model} {key(u)}: verdict saved, "
+                              f"but quotations NOT VERIFIED for: {', '.join(questionable)}",
+                              flush=True)
                     done.add(key(u))
                     break
                 prior_error = error or ""
@@ -477,6 +495,10 @@ def summarize(args, units: list[dict], limit: int = 0) -> dict:
             "gemma": " | ".join(f'{v["category"]}:{v["verdict"]}' for v in predictions[1]["ratings"])
                     if predictions[1] else "",
             "llm_disagreement": disagreement,
+            "qwen_unverified_quotes": sum(v.get("quote_status") in ("unverified", "not_provided")
+                                          for v in predictions[0]["ratings"]) if predictions[0] else None,
+            "gemma_unverified_quotes": sum(v.get("quote_status") in ("unverified", "not_provided")
+                                           for v in predictions[1]["ratings"]) if predictions[1] else None,
         })
     write_csv(args.output / "comparison/segment_gate_comparison.csv", rows)
     ready = [r for r in rows if r["adjective"] is not None and r["nli_median"] is not None]
@@ -539,6 +561,11 @@ def summarize(args, units: list[dict], limit: int = 0) -> dict:
     summary = {
         "segments_requested": len(subset), "gate_complete_segments": len(ready),
         "llm_double_rated_segments": len(with_models),
+        "unverified_quote_counts_by_model": {
+            model: sum(v.get("quote_status") in ("unverified", "not_provided")
+                       for row in llm[model].values() for v in row["ratings"])
+            for model in LLMS
+        },
         "overall_llm_disagreement_rate":
             round(sum(bool(r["llm_disagreement"]) for r in with_models)/len(with_models), 3)
             if with_models else None,
