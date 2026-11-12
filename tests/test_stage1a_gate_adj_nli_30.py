@@ -337,3 +337,58 @@ def test_case_only_recovery_never_accepts_context_leakage():
     ]
     with pytest.raises(ValueError, match="context leakage"):
         gate.validate_llm({"ratings": ratings}, sample, strict_quotes=True)
+
+
+
+def test_three_failed_reviews_do_not_block_remaining_models(tmp_path, monkeypatch, capsys):
+    """Three unresolved reviews must not abort a selected model run."""
+    reviews = gate.choose_reviews(gate.load_real_reviews(CORPUS, 0), 3, 31)
+    units = [gate.make_segments([r])[0] for r in reviews]
+    assert len({s["review_id"] for s in units}) == 3
+    monkeypatch.setattr(gate, "check_ollama",
+                        lambda base, timeout: {m: "digest" for m in gate.LLMS})
+
+    calls = []
+    def fake_call(base, payload, timeout):
+        calls.append(payload["model"])
+        # Structurally valid, but source-unfaithful nonempty verdict.
+        obj = {"ratings": [
+            {"category": c, "verdict": "supports", "quote": "not a source substring",
+             "attribution": "place", "reason": "unverified"}
+            for c in gate.CATEGORIES
+        ]}
+        return json.dumps(obj), {"done_reason": "stop"}
+
+    monkeypatch.setattr(gate, "ollama_call", fake_call)
+    out = tmp_path / "llm_v2"
+    gate.llm_score(units, out, "http://127.0.0.1:11434", 10,
+                   version="v2", models=("gemma3:4b",))
+    assert calls == ["gemma3:4b"] * 9  # 3 segments x 3 retries
+    assert len(gate.read_jsonl(out / "gemma3_4b/errors.jsonl")) == 3
+    assert not (out / "qwen3_8b").exists()
+    log = capsys.readouterr().out
+    assert "0 valid, 3 unresolved" in log
+
+
+def test_only_requested_llm_runs_preserves_existing_qwen_results(tmp_path, monkeypatch):
+    review = gate.choose_reviews(gate.load_real_reviews(CORPUS, 0), 1, 11)
+    u = gate.make_segments(review)[0]
+    out = tmp_path / "llm_v2"
+    qwen_path = out / "qwen3_8b/ratings.jsonl"
+    gate.append_jsonl(qwen_path, {"key": "existing-qwen", "ratings": []})
+    existing_bytes = qwen_path.read_bytes()
+
+    monkeypatch.setattr(gate, "check_ollama",
+                        lambda base, timeout: {m: "digest" for m in gate.LLMS})
+    def fake_call(base, payload, timeout):
+        assert payload["model"] == "gemma3:4b"
+        return json.dumps({"ratings": [
+            {"category": c, "verdict": "none", "quote": "",
+             "attribution": "place", "reason": "no evidence"}
+            for c in gate.CATEGORIES
+        ]}), {"done_reason": "stop"}
+    monkeypatch.setattr(gate, "ollama_call", fake_call)
+    gate.llm_score([u], out, "http://127.0.0.1:11434", 10,
+                   version="v2", models=("gemma3:4b",))
+    assert qwen_path.read_bytes() == existing_bytes
+    assert len(gate.read_jsonl(out / "gemma3_4b/ratings.jsonl")) == 1
