@@ -81,7 +81,7 @@ CRITICAL SOURCE BOUNDARY:
 - If the target's implication is unclear, verdict='uncertain'; quote may be ''.
 - Do not assign a category to generic praise, features, or reviewer activities
   without a defensible atmospheric connection within the target segment.
-- Do not infer emotion about a wedding, visit, or person using adjectives from
+- Do not infer emotion about a wedding, visit, or person using descriptions from
   another sentence in the full review.
 - If a target reads 'My husband and I got eloped here.' but another sentence
   says 'It was so stressful', DO NOT quote 'It was so stressful' for that target.
