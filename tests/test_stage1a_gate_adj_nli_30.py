@@ -148,3 +148,73 @@ def test_progress_bar_reports_failures_without_stopping(capsys):
     bar.update(3, failures=1)
     output = capsys.readouterr().out
     assert "3/3 (100%) | failed: 1" in output
+
+
+def test_none_verdict_with_bad_quote_is_not_failed_evidence():
+    """The historical bug: even an irrelevant 'none' quote triggered warnings."""
+    s = gate.make_segments(gate.choose_reviews(gate.load_real_reviews(CORPUS, 0), 1, 42))[0]
+    ratings = [
+        {"category": category, "verdict": "none", "quote": "no textual evidence",
+         "attribution": "place", "reason": "not present"}
+        for category in gate.CATEGORIES
+    ]
+    output = gate.validate_llm({"ratings": ratings}, s)
+    assert all(x["quote_status"] == "not_required" for x in output)
+    assert all(x["extraneous_quote_for_none"] for x in output)
+    assert all(x["quote_offsets"] == [] for x in output)
+
+
+def test_unverified_source_still_flagged_for_nonempty_verdict():
+    s = gate.make_segments(gate.choose_reviews(gate.load_real_reviews(CORPUS, 0), 1, 42))[0]
+    ratings = [
+        {"category": category, "verdict": "supports", "quote": "not from this segment",
+         "attribution": "place", "reason": "model claimed support"}
+        for category in gate.CATEGORIES
+    ]
+    output = gate.validate_llm({"ratings": ratings}, s)
+    assert all(x["quote_status"] == "unverified" for x in output)
+    assert not any(x["extraneous_quote_for_none"] for x in output)
+
+
+def test_diagnose_recomputes_legacy_status_without_editing_saved_rows(tmp_path, capsys):
+    s = gate.make_segments(gate.choose_reviews(gate.load_real_reviews(CORPUS, 0), 1, 42))[0]
+    rows = [
+        {"category": category, "verdict": "none", "quote": "an invented quote",
+         "attribution": "place", "reason": "none", "quote_status": "unverified"}
+        for category in gate.CATEGORIES
+    ]
+    path = tmp_path / "qwen3_8b/ratings.jsonl"
+    gate.append_jsonl(path, {"key": gate.key(s), "ratings": rows, "model": "qwen3:8b"})
+    raw_before = path.read_bytes()
+    result = gate.diagnose_saved([s], tmp_path, "qwen3:8b", max_examples=1)
+    assert result["saved_segments"] == 1
+    assert result["quote_status_recomputed"] == {"not_required": 3}
+    assert result["extraneous_quotes_for_none"] == 3
+    assert path.read_bytes() == raw_before
+    out = capsys.readouterr().out
+    assert "UNNECESSARY_NONE_QUOTE" in out
+
+
+def test_report_recomputes_old_quote_annotations(tmp_path):
+    out = tmp_path / "diagnostic"
+    u = gate.make_segments(gate.choose_reviews(gate.load_real_reviews(CORPUS, 0), 1, 42))[0]
+    k = gate.key(u)
+    gate.append_jsonl(out / "gates/pos.jsonl", {
+        "key": k, "adjective_present": True, "adjectives": []})
+    for alias in gate.NLI_MODELS:
+        gate.append_jsonl(out / f"gates/nli_{alias}.jsonl", {
+            "key": k, "mean_entailment": .5, "entailment_range": 0,
+            "hypotheses": [{"id": j + 1, "probabilities": {"entailment": .5}}
+                           for j in range(3)]})
+    for model in gate.LLMS:
+        ratings = [
+            {"category": category, "verdict": "none", "quote": "not in source",
+             "attribution": "place", "reason": "none",
+             "quote_offsets": [], "quote_status": "unverified"}
+            for category in gate.CATEGORIES
+        ]
+        gate.append_jsonl(out / "llm" / model.replace(":", "_") / "ratings.jsonl",
+                          {"key": k, "ratings": ratings})
+    summary = gate.summarize(SimpleNamespace(output=out, seed=42), [u])
+    assert summary["unverified_quote_counts_by_model"] == {model: 0 for model in gate.LLMS}
+    assert summary["extraneous_none_quote_counts_by_model"] == {model: 3 for model in gate.LLMS}
