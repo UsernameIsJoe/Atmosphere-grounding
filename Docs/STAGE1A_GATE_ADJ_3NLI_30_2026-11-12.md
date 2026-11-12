@@ -147,3 +147,27 @@ python scripts/stage1a_gate_adj_nli_30.py --stage diagnose --llm-version v1
 ```
 
 Please upload **both `llm_v2` and `comparison_v2`** alongside the existing gate scores when the run completes. V2 changes the task prompt and verification, so do not mix old and new LLM judgments into an apparent single 123-segment sample.
+
+
+## Gemma model errors: case-only mismatches versus context leakage
+
+In a local V2 run, Qwen completed; Gemma stopped after three segment failures belonging to the same long review (review key `39100290de48b1ca3cc9`). The reported failures had different causes:
+
+- `It was completely dark.` vs target `...it was completely dark.`: source text exists except for initial capitalization. A narrowly defined case-only matching rule can recover the **actual** target substring, preserving the model's raw quote.
+- `completely unclean, with tissues all over the place` vs target `Although the flush was operative, the hand washing station was not.`: source appears elsewhere in full review, not in target. This remains a genuine *context leakage* failure, not recovered or silently converted to a valid verdict.
+- `It was clear that it had not been cleaned...` vs target starting `It was seeming that nobody had the responsibility...`: may contain a case-only match later in the target, but this must be checked against the complete segment; if absent it remains invalid.
+
+**Post-run validator patch:** allow only case-insensitive *character-identical* quotations, with the exact source characters and offsets restored from the target and the raw model quote retained. This is labeled `case_only`, not a semantic/fuzzy rewrite. V2's model prompt and original gate scores are unchanged; this is a documented change to the output validation procedure. Reports recompute and count case-only repairs.
+
+**Execution safeguard patch:** three failed segments inside one long review no longer halt all 123 segments. The run now stops only if failures arise in **three different reviews consecutively** without any successful segment in between. Rejected responses are still logged as failures and excluded from valid LLM rows.
+
+The model verdict `calm=opposes` for a dirty or dark bathroom is **not automatically accepted as semantically correct**, even if the exact source quote is recovered. Audit whether it is genuinely related to calmness, rather than merely to negative conditions.
+
+Resume without rerunning Qwen, adjective detection, or NLI:
+
+```powershell
+git pull origin master
+python scripts/stage1a_gate_adj_nli_30.py --stage llm
+```
+
+Saved successful Gemma judgments are reused. Rejected segments are retried, and newly accepted case-only matches remain identifiable in `quote_raw`, `quote_normalization`, and `quote_offsets` fields. Only completed source-grounded judgments enter comparisons.
