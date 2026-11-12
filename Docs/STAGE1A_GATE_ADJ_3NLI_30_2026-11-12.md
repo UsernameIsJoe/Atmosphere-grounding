@@ -171,3 +171,24 @@ python scripts/stage1a_gate_adj_nli_30.py --stage llm
 ```
 
 Saved successful Gemma judgments are reused. Rejected segments are retried, and newly accepted case-only matches remain identifiable in `quote_raw`, `quote_normalization`, and `quote_offsets` fields. Only completed source-grounded judgments enter comparisons.
+
+## Resume fix: model-specific rerun without a false stop (2026-11-12)
+
+If the runner prints `LLM qwen3:8b [100%] | failed: 3` and then raises a `RuntimeError` before Gemma, this indicates **123 segments attempted, not 123 validated results**. The stop logic was wrongly triggered at the end of Qwen’s pass by unresolved segments from three reviews. No previously saved valid ratings were deleted.
+
+The corrected runner never treats individual validation failures as fatal for the other selected model. Every failed segment is recorded, with its raw attempts, in the corresponding model folder and excluded from the valid ratings file. Completion now prints **valid** and **unresolved** counts separately.
+
+To **continue only Gemma** without retrying Qwen's unresolved segments:
+
+```powershell
+git pull origin master
+python scripts/stage1a_gate_adj_nli_30.py --stage llm --llm-models gemma3:4b
+```
+
+This reuses the existing frozen V2 protocol and saved Gemma successes. It does not touch Qwen's existing ratings. To retry Qwen's unresolved segments independently later:
+
+```powershell
+python scripts/stage1a_gate_adj_nli_30.py --stage llm --llm-models qwen3:8b
+```
+
+The gate comparison reports incomplete observations as missing, not agreement or accuracy. Missing model ratings remain a limitation to quantify during the final audit.
