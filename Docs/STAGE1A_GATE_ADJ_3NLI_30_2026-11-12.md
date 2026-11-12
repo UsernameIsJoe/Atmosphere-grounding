@@ -1,10 +1,13 @@
 # Controlled gate pilot — adjective POS vs 3 NLI checkpoints × 3 hypotheses
 
 **Date:** 2026-11-12  
-**Status:** Local executable experiment, not a completed inference result.  
+**Status:** Executed on 30 real reviews / 123 segments; results and single-reviewer source audit archived in [research_audit/stage1a_gate_adj_nli_30_2026-11-12](../research_audit/stage1a_gate_adj_nli_30_2026-11-12/README.md). This file preserves the original proposed protocol and subsequent corrective-run history.  
 **Question:** Can an inexpensive gate identify segments that need only one LLM judgment, without substantially increasing error?
 
 This test deliberately **does not use or lock an E/T taxonomy**. It tests *routing difficulty*, not a final model for place emotions.
+
+
+> **Archived outcomes:** [Full analysis](../research_audit/stage1a_gate_adj_nli_30_2026-11-12/SOURCE_AUDIT.md) · [123-segment source audit](../research_audit/stage1a_gate_adj_nli_30_2026-11-12/audit_123_segments.csv) · [reproduction verifier](../research_audit/stage1a_gate_adj_nli_30_2026-11-12/verify_results.py). The original 30-review test was executed; the V2 and segment-only recovery outputs must remain analytically separate. No reliable fast-path gate was established.
 
 ## Experimental setup
 
