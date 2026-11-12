@@ -378,18 +378,35 @@ def validate_llm(obj: object, u: dict, strict_quotes: bool = False) -> list[dict
         original_quote = r["quote"]
         quote = original_quote
         quote_normalization = "none"
-        # One harmless presentation error can be repaired deterministically:
-        # the model sometimes adds literal quote wrappers not present in source.
-        # Preserve the raw string; NEVER fuzzy-match, paraphrase or search
-        # elsewhere in the full review to manufacture target evidence.
+        # Strict SOURCE-ONLY recovery. Extra quote wrappers and different
+        # capitalization do not alter semantic content, but model paraphrases
+        # and any quotation present only elsewhere in the review are invalid.
+        # Keep the raw quote alongside the exact recovered TARGET substring.
         if quote and quote not in u["segment"]:
+            candidates = [(quote, "none")]
             for left, right in (('"', '"'), ("'", "'"), ("“", "”"), ("‘", "’")):
                 if quote.startswith(left) and quote.endswith(right) and len(quote) > 2:
-                    candidate = quote[len(left):len(quote)-len(right)]
-                    if candidate in u["segment"]:
-                        quote = candidate
-                        quote_normalization = "removed_outer_quote_marks"
-                        break
+                    candidates.append((quote[len(left):len(quote)-len(right)],
+                                       "removed_outer_quote_marks"))
+            match = next(((candidate, label) for candidate, label in candidates
+                          if candidate and candidate in u["segment"]), None)
+            if match is not None:
+                quote, quote_normalization = match
+            else:
+                # Same characters, differing ONLY in case; never match a
+                # paraphrase or across source segments. Unicode lower() may
+                # expand characters, so require length-preserving conversion.
+                source_lower = u["segment"].lower()
+                if len(source_lower) == len(u["segment"]):
+                    for candidate, label in candidates:
+                        lower = candidate.lower()
+                        if candidate and len(lower) == len(candidate):
+                            at = source_lower.find(lower)
+                            if at >= 0:
+                                quote = u["segment"][at:at + len(candidate)]
+                                quote_normalization = (
+                                    "case_only" if label == "none" else label + "+case_only")
+                                break
         offsets, pos = [], 0
         if quote:
             while (index := u["segment"].find(quote, pos)) != -1:
@@ -478,7 +495,8 @@ def llm_score(units: list[dict], out: Path, base: str, timeout: int,
         completed = sum(key(u) in done for u in subset)
         progress = ProgressBar(f"LLM {model}", len(subset), completed)
         failures = 0
-        consecutive_failures = 0
+        consecutive_failed_reviews = 0
+        last_failed_review = None
         quote_warnings_shown = 0
         for u in subset:
             if key(u) in done:
@@ -530,20 +548,27 @@ def llm_score(units: list[dict], out: Path, base: str, timeout: int,
                                           f"target={u['segment'][:160]!r}", flush=True)
                             quote_warnings_shown += 1
                     done.add(key(u))
-                    consecutive_failures = 0
+                    consecutive_failed_reviews = 0
+                    last_failed_review = None
                     break
                 prior_error = error or ""
             if not success:
                 append_jsonl(failures_file, {"key": key(u), "error": prior_error})
                 failures += 1
-                consecutive_failures += 1
+                # Several hard segments of ONE review are not evidence that
+                # every subsequent review will fail. Stop only when three
+                # different reviews fail consecutively, with no successful
+                # segment between failures.
+                if u["review_id"] != last_failed_review:
+                    consecutive_failed_reviews += 1
+                    last_failed_review = u["review_id"]
             completed += 1
             progress.update(completed, failures)
-            if version == "v2" and consecutive_failures >= 3:
+            if version == "v2" and consecutive_failed_reviews >= 3:
                 raise RuntimeError(
-                    f"{model}: three consecutive segments failed even after retries. "
-                    f"Stopped to avoid wasting inference; inspect {failures_file} "
-                    f"and {raw_file}."
+                    f"{model}: failed segments from three different reviews "
+                    f"with no successful segment between them. Stopped to avoid "
+                    f"wasting inference; inspect {failures_file} and {raw_file}."
                 )
         print(f"LLM {model} FINISHED {completed}/{len(subset)} examined; "
               f"{failures} new failures logged", flush=True)
@@ -666,6 +691,10 @@ def summarize(args, units: list[dict], limit: int = 0) -> dict:
                                           for v in predictions[0]["ratings"]) if predictions[0] else None,
             "gemma_unverified_quotes": sum(v.get("quote_status") in ("unverified", "not_provided")
                                            for v in predictions[1]["ratings"]) if predictions[1] else None,
+            "qwen_case_recovered_quotes": sum("case_only" in v.get("quote_normalization", "")
+                                              for v in predictions[0]["ratings"]) if predictions[0] else None,
+            "gemma_case_recovered_quotes": sum("case_only" in v.get("quote_normalization", "")
+                                               for v in predictions[1]["ratings"]) if predictions[1] else None,
             "qwen_extraneous_none_quotes": sum(bool(v.get("extraneous_quote_for_none"))
                                                for v in predictions[0]["ratings"]) if predictions[0] else None,
             "gemma_extraneous_none_quotes": sum(bool(v.get("extraneous_quote_for_none"))
@@ -734,6 +763,11 @@ def summarize(args, units: list[dict], limit: int = 0) -> dict:
         "llm_double_rated_segments": len(with_models),
         "unverified_quote_counts_by_model": {
             model: sum(v.get("quote_status") in ("unverified", "not_provided")
+                       for row in llm[model].values() for v in row["ratings"])
+            for model in LLMS
+        },
+        "mechanically_case_recovered_quote_counts_by_model": {
+            model: sum("case_only" in v.get("quote_normalization", "")
                        for row in llm[model].values() for v in row["ratings"])
             for model in LLMS
         },
