@@ -73,3 +73,17 @@ The folder will include:
 We'll then calculate **human-audited routing errors** (especially easy candidates mistakenly sent to a single LLM), compare predictive value of POS vs NLI, and add **actual measured processing time** for gate and LLM calls. A lower model-disagreement rate alone is not sufficient evidence of correctness.
 
 All existing E/T experiments and files remain unchanged.
+
+
+## Terminal progress bars (2026-11-12 update)
+
+The runner now shows a live progress bar with percentage and completed/total segment counts for **spaCy adjective tagging**, **each of the three NLI checkpoints**, and **each Ollama model**. Bars reflect results already saved when a stage is resumed, and display the number of newly logged failures for each LLM. No new packages are required for the bars.
+
+Update your checkout before the next run:
+
+```powershell
+git pull origin master
+python scripts/stage1a_gate_adj_nli_30.py
+```
+
+If the script is already running, stop it with Ctrl+C **only when convenient**; the updated bars take effect when you restart the Python process. Already saved per-segment outputs remain reusable, and the prompts, data and experiment manifest are unchanged.
