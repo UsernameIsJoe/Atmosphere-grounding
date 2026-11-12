@@ -345,7 +345,9 @@ def llm_payload(model: str, u: dict, feedback: str = "",
                 "target_segment": u["segment"],
                 "full_original_review_for_context": u["full_review"],
                 "instruction": ("ONLY the target_segment may supply category evidence or quotes. "
-                                "The full review is for reference resolution; not classification evidence."),
+                                "The full review is for reference resolution; not classification evidence.")
+                               if version == "v2" else
+                               "Label target segment only. Full review resolves context.",
             }, ensure_ascii=False)},
         ],
         "format": LLM_SCHEMA, "stream": False,
