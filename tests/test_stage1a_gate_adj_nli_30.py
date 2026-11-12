@@ -218,3 +218,84 @@ def test_report_recomputes_old_quote_annotations(tmp_path):
     summary = gate.summarize(SimpleNamespace(output=out, seed=42), [u])
     assert summary["unverified_quote_counts_by_model"] == {model: 0 for model in gate.LLMS}
     assert summary["extraneous_none_quote_counts_by_model"] == {model: 3 for model in gate.LLMS}
+
+
+
+def test_v2_repairs_only_literal_outer_quote_marks():
+    source = "This is the place to come for making your day the best one."
+    sample = {"segment": source, "full_review": source, "start": 9}
+    ratings = [
+        {"category": "calm", "verdict": "none", "quote": "",
+         "attribution": "place", "reason": "nothing"},
+        {"category": "inviting", "verdict": "supports",
+         "quote": f'"{source}"', "attribution": "place", "reason": "positive place description"},
+        {"category": "safe", "verdict": "none", "quote": "",
+         "attribution": "place", "reason": "nothing"},
+    ]
+    out = gate.validate_llm({"ratings": ratings}, sample, strict_quotes=True)
+    inviting = out[1]
+    assert inviting["quote"] == source
+    assert inviting["quote_raw"] == f'"{source}"'
+    assert inviting["quote_normalization"] == "removed_outer_quote_marks"
+    assert inviting["quote_offsets"] == [{"start": 9, "end": 9 + len(source)}]
+    assert inviting["quote_status"] == "verified"
+
+
+def test_v2_rejects_emotional_evidence_leaking_from_full_review():
+    segment = "My husband and I got eloped here."
+    full = segment + " It was so stressful. Everyone was so nice and friendly."
+    sample = {"segment": segment, "full_review": full, "start": 0}
+    ratings = [
+        {"category": "calm", "verdict": "opposes", "quote": "It was so stressful",
+         "attribution": "place", "reason": "stressful"},
+        {"category": "inviting", "verdict": "none", "quote": "",
+         "attribution": "place", "reason": "not stated"},
+        {"category": "safe", "verdict": "none", "quote": "",
+         "attribution": "place", "reason": "not stated"},
+    ]
+    with pytest.raises(ValueError, match="context leakage"):
+        gate.validate_llm({"ratings": ratings}, sample, strict_quotes=True)
+
+
+def test_v2_rejects_non_source_paraphrase_and_missing_support_quote():
+    segment = "A peaceful place."
+    sample = {"segment": segment, "full_review": segment, "start": 0}
+    ratings = [
+        {"category": "calm", "verdict": "supports", "quote": "It feels very calm.",
+         "attribution": "place", "reason": "positive"},
+        {"category": "inviting", "verdict": "none", "quote": "",
+         "attribution": "place", "reason": "not stated"},
+        {"category": "safe", "verdict": "none", "quote": "",
+         "attribution": "place", "reason": "not stated"},
+    ]
+    with pytest.raises(ValueError, match="not source-exact"):
+        gate.validate_llm({"ratings": ratings}, sample, strict_quotes=True)
+    ratings[0]["quote"] = ""
+    with pytest.raises(ValueError, match="source quote absent from target"):
+        gate.validate_llm({"ratings": ratings}, sample, strict_quotes=True)
+
+
+def test_v2_prompt_prevents_context_becoming_target_evidence():
+    s = gate.make_segments(gate.choose_reviews(gate.load_real_reviews(CORPUS, 0), 1, 42))[0]
+    v1 = gate.llm_payload("qwen3:8b", s, version="v1")
+    v2 = gate.llm_payload("qwen3:8b", s, version="v2")
+    assert v1["messages"][0]["content"] == gate.LLM_SYSTEM
+    assert v2["messages"][0]["content"] == gate.LLM_SYSTEM_V2
+    assert v1["messages"][1]["content"] != v2["messages"][1]["content"]
+    assert "My husband and I got eloped here." in gate.LLM_SYSTEM_V2
+    assert "ONLY the target_segment" in v2["messages"][1]["content"]
+    assert v1["format"] == v2["format"]
+    assert "adjective" not in v2["messages"][0]["content"].lower()
+    assert "entailment" not in v2["messages"][0]["content"].lower()
+
+
+def test_v2_protocol_never_overwrites_v1_saved_model_outputs(tmp_path, monkeypatch):
+    out = tmp_path / "preserved"
+    v1 = out / "llm" / "qwen3_8b" / "ratings.jsonl"
+    gate.append_jsonl(v1, {"key": "prior-v1", "ratings": []})
+    old = v1.read_bytes()
+    assert gate.LLM_SYSTEM_V2 != gate.LLM_SYSTEM
+    # V2 output directory is necessarily distinct from V1.
+    v2 = out / "llm_v2" / "qwen3_8b" / "ratings.jsonl"
+    assert v1 != v2
+    assert v1.read_bytes() == old
