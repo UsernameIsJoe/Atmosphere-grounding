@@ -339,14 +339,19 @@ def validate_llm(obj: object, u: dict) -> list[dict]:
             while (index := u["segment"].find(quote, pos)) != -1:
                 offsets.append({"start": u["start"] + index, "end": u["start"] + index + len(quote)})
                 pos = index + 1
-        # A quote mismatch is a GROUNDING problem, not a JSON/schema problem.
-        # Preserve the model's verdict for later human auditing instead of
-        # discarding all three category judgments and repeatedly regenerating.
-        # Never silently turn a model paraphrase into a fabricated source span.
-        status = ("verified" if offsets else "unverified" if quote
-                  else "not_provided" if r["verdict"] not in ("none", "uncertain")
-                  else "not_required")
-        clean.append({**r, "quote_offsets": offsets, "quote_status": status})
+        # Classifications with NO evidence claim do not require a quotation.
+        # Still record extraneous quotes verbatim so the audit detects them.
+        # Do not convert a model paraphrase into a fabricated source span.
+        verdict = r["verdict"]
+        if verdict == "none":
+            status = "not_required"
+        elif verdict == "uncertain":
+            status = ("verified" if offsets else "optional_unverified" if quote
+                      else "not_required")
+        else:
+            status = "verified" if offsets else "unverified" if quote else "not_provided"
+        clean.append({**r, "quote_offsets": offsets, "quote_status": status,
+                      "extraneous_quote_for_none": bool(quote) and verdict == "none"})
     if set(categories) != set(CATEGORIES) or len(set(categories)) != len(categories):
         raise ValueError("Missing/duplicate category")
     return sorted(clean, key=lambda x: CATEGORIES.index(x["category"]))
@@ -395,6 +400,7 @@ def llm_score(units: list[dict], out: Path, base: str, timeout: int, limit: int 
         completed = sum(key(u) in done for u in subset)
         progress = ProgressBar(f"LLM {model}", len(subset), completed)
         failures = 0
+        quote_warnings_shown = 0
         for u in subset:
             if key(u) in done:
                 continue
@@ -435,9 +441,15 @@ def llm_score(units: list[dict], out: Path, base: str, timeout: int, limit: int 
                                             "segment_sha256": sha(u["segment"]),
                                             "model": model})
                     if questionable:
-                        print(f"\nLLM {model} {key(u)}: verdict saved, "
-                              f"but quotations NOT VERIFIED for: {', '.join(questionable)}",
-                              flush=True)
+                        print(f"\nLLM {model} {key(u)}: source quotations NOT VERIFIED "
+                              f"for nonempty verdicts: {', '.join(questionable)}", flush=True)
+                        if quote_warnings_shown < 3:
+                            for rating in cleaned:
+                                if rating["quote_status"] in ("unverified", "not_provided"):
+                                    print(f"  {rating['category']}={rating['verdict']}; "
+                                          f"quote={rating['quote'][:100]!r}; "
+                                          f"target={u['segment'][:160]!r}", flush=True)
+                            quote_warnings_shown += 1
                     done.add(key(u))
                     break
                 prior_error = error or ""
@@ -448,6 +460,53 @@ def llm_score(units: list[dict], out: Path, base: str, timeout: int, limit: int 
             progress.update(completed, failures)
         print(f"LLM {model} FINISHED {completed}/{len(subset)} examined; "
               f"{failures} new failures logged", flush=True)
+        # Important: records from a run before this fix may have old status
+        # annotations. Diagnose stage recomputes them without changing data.
+        diagnose_saved(units, out, model, max_examples=0)
+
+
+def diagnose_saved(units: list[dict], out: Path, model: str,
+                   max_examples: int = 5) -> dict:
+    """Read existing predictions; recompute quote status without rewriting a byte.
+
+    This also diagnoses pre-patch saved rows whose quote_status was misleading.
+    No model calls, no gate re-inference, no change to the frozen manifest.
+    """
+    path = out / model.replace(":", "_") / "ratings.jsonl"
+    rows = read_jsonl(path)
+    source = {key(u): u for u in units}
+    verdicts, status_counts = collections.Counter(), collections.Counter()
+    mismatch_examples, extra_none = [], 0
+    for row in rows:
+        if row["key"] not in source:
+            raise ValueError(f"Saved LLM result not in source manifest: {row['key']}")
+        segment = source[row["key"]]
+        clean = validate_llm(
+            {"ratings": [{field: rating[field] for field in ITEM_FIELDS}
+                         for rating in row["ratings"]]}, segment)
+        for rating in clean:
+            verdicts[rating["verdict"]] += 1
+            status_counts[rating["quote_status"]] += 1
+            extra_none += int(rating["extraneous_quote_for_none"])
+            if rating["quote_status"] in ("unverified", "not_provided") and len(mismatch_examples) < max_examples:
+                mismatch_examples.append({
+                    "key": row["key"], "category": rating["category"],
+                    "verdict": rating["verdict"],
+                    "quote": rating["quote"], "target_segment": segment["segment"],
+                    "quote_exists_elsewhere_in_full_review": (
+                        bool(rating["quote"]) and rating["quote"] in segment["full_review"]
+                    ),
+                })
+    summary = {
+        "model": model, "saved_segments": len(rows),
+        "verdicts": dict(verdicts),
+        "quote_status_recomputed": dict(status_counts),
+        "extraneous_quotes_for_none": extra_none,
+    }
+    print("DIAGNOSE", json.dumps(summary, ensure_ascii=False), flush=True)
+    for example in mismatch_examples:
+        print("EXAMPLE", json.dumps(example, ensure_ascii=False), flush=True)
+    return summary
 
 
 def as_keyed(items: list[dict]) -> dict:
@@ -499,6 +558,10 @@ def summarize(args, units: list[dict], limit: int = 0) -> dict:
                                           for v in predictions[0]["ratings"]) if predictions[0] else None,
             "gemma_unverified_quotes": sum(v.get("quote_status") in ("unverified", "not_provided")
                                            for v in predictions[1]["ratings"]) if predictions[1] else None,
+            "qwen_extraneous_none_quotes": sum(bool(v.get("extraneous_quote_for_none"))
+                                               for v in predictions[0]["ratings"]) if predictions[0] else None,
+            "gemma_extraneous_none_quotes": sum(bool(v.get("extraneous_quote_for_none"))
+                                                for v in predictions[1]["ratings"]) if predictions[1] else None,
         })
     write_csv(args.output / "comparison/segment_gate_comparison.csv", rows)
     ready = [r for r in rows if r["adjective"] is not None and r["nli_median"] is not None]
@@ -566,6 +629,11 @@ def summarize(args, units: list[dict], limit: int = 0) -> dict:
                        for row in llm[model].values() for v in row["ratings"])
             for model in LLMS
         },
+        "extraneous_none_quote_counts_by_model": {
+            model: sum(bool(v.get("extraneous_quote_for_none"))
+                       for row in llm[model].values() for v in row["ratings"])
+            for model in LLMS
+        },
         "overall_llm_disagreement_rate":
             round(sum(bool(r["llm_disagreement"]) for r in with_models)/len(with_models), 3)
             if with_models else None,
@@ -587,7 +655,7 @@ def summarize(args, units: list[dict], limit: int = 0) -> dict:
 
 def main() -> int:
     p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument("--stage", choices=["prepare", "adj", "nli", "llm", "report", "all"], default="all")
+    p.add_argument("--stage", choices=["prepare", "adj", "nli", "llm", "report", "diagnose", "all"], default="all")
     p.add_argument("--input", type=Path, default=ROOT / "data/processed/reviews.jsonl")
     p.add_argument("--output", type=Path, default=ROOT / "reports/stage1a_gate_adj_nli_30_2026-11-12")
     p.add_argument("--reviews", type=int, default=30)
@@ -609,6 +677,9 @@ def main() -> int:
                       args.limit_segments)
     if args.stage in ("llm", "all"):
         llm_score(units, args.output / "llm", args.base, args.timeout, args.limit_segments)
+    if args.stage == "diagnose":
+        for name in LLMS:
+            diagnose_saved(units, args.output / "llm", name)
     if args.stage in ("report", "all"):
         summary = summarize(args, units, args.limit_segments)
         print("REPORT", json.dumps({k: v for k, v in summary.items() if k != "routing_simulations_NOT_accuracy"},
