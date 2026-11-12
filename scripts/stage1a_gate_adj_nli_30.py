@@ -180,6 +180,34 @@ def prepare(args) -> tuple[dict, list[dict]]:
     return manifest, units
 
 
+class ProgressBar:
+    """Dependency-free terminal progress; handles already-completed resume records."""
+
+    def __init__(self, label: str, total: int, completed: int = 0) -> None:
+        self.label = label
+        self.total = total
+        self.tty = sys.stdout.isatty()
+        self.last_bucket = -1
+        self.update(completed, initial=True)
+
+    def update(self, completed: int, failures: int = 0, initial: bool = False) -> None:
+        completed = min(self.total, max(0, completed))
+        portion = completed / self.total if self.total else 1.0
+        width = 22
+        filled = round(width * portion)
+        bar = "#" * filled + "-" * (width - filled)
+        line = (f"{self.label:<18} [{bar}] {completed}/{self.total} "
+                f"({portion:.0%})" + (f" | failed: {failures}" if failures else ""))
+        if self.tty:
+            print("\r" + line.ljust(100), end="\n" if completed == self.total else "",
+                  flush=True)
+        else:
+            bucket = int(portion * 10)
+            if initial or completed == self.total or bucket > self.last_bucket:
+                print(line, flush=True)
+            self.last_bucket = bucket
+
+
 def adjective_gate(units: list[dict], out: Path, limit: int = 0) -> None:
     try:
         import spacy
@@ -190,7 +218,10 @@ def adjective_gate(units: list[dict], out: Path, limit: int = 0) -> None:
             "python -m spacy download en_core_web_sm") from exc
     rows = read_jsonl(out)
     done = {r["key"] for r in rows}
-    for i, s in enumerate(units[:limit or None], 1):
+    subset = units[:limit or None]
+    completed = sum(key(s) in done for s in subset)
+    progress = ProgressBar("POS adjectives", len(subset), completed)
+    for s in subset:
         if key(s) in done:
             continue
         doc = nlp(s["segment"])
@@ -199,8 +230,9 @@ def adjective_gate(units: list[dict], out: Path, limit: int = 0) -> None:
                       for tok in doc if tok.pos_ == "ADJ"]
         append_jsonl(out, {"key": key(s), "adjective_present": bool(adjectives),
                            "adjectives": adjectives})
-        print(f"POS {i}/{len(units)}", end="\r", flush=True)
-    print(f"\nPOS SAVED {out}", flush=True)
+        completed += 1
+        progress.update(completed)
+    print(f"POS SAVED {out}", flush=True)
 
 
 def native_labels(model) -> tuple[dict[int, str], str]:
@@ -229,8 +261,10 @@ def nli_score(units: list[dict], out: Path, alias: str, batch: int, limit: int =
     labels, label_space = native_labels(model)
     outrows = read_jsonl(out)
     done = {r["key"] for r in outrows}
-    total = len(units[:limit or None])
-    for i, u in enumerate(units[:limit or None], 1):
+    subset = units[:limit or None]
+    completed = sum(key(u) in done for u in subset)
+    progress = ProgressBar(f"NLI {alias}", len(subset), completed)
+    for u in subset:
         if key(u) in done:
             continue
         start = time.perf_counter()
@@ -255,7 +289,9 @@ def nli_score(units: list[dict], out: Path, alias: str, batch: int, limit: int =
             "entailment_range": max(values) - min(values),
             "duration_s": round(time.perf_counter() - start, 4),
         })
-        print(f"NLI {alias} {i}/{total}", flush=True)
+        completed += 1
+        progress.update(completed)
+    print(f"NLI {alias} SAVED {completed}/{len(subset)}", flush=True)
     del model
     if device == "cuda":
         torch.cuda.empty_cache()
@@ -353,8 +389,11 @@ def llm_score(units: list[dict], out: Path, base: str, timeout: int, limit: int 
         all_keys = {key(s) for s in units}
         if not done <= all_keys:
             raise ValueError("Unexpected saved LLM result")
-        total = len(units[:limit or None])
-        for i, u in enumerate(units[:limit or None], 1):
+        subset = units[:limit or None]
+        completed = sum(key(u) in done for u in subset)
+        progress = ProgressBar(f"LLM {model}", len(subset), completed)
+        failures = 0
+        for u in subset:
             if key(u) in done:
                 continue
             prior_error = ""
@@ -386,7 +425,11 @@ def llm_score(units: list[dict], out: Path, base: str, timeout: int, limit: int 
                 prior_error = error or ""
             if not success:
                 append_jsonl(failures_file, {"key": key(u), "error": prior_error})
-            print(f"LLM {model} {i}/{total} {'OK' if success else 'FAILED (logged)'}", flush=True)
+                failures += 1
+            completed += 1
+            progress.update(completed, failures)
+        print(f"LLM {model} FINISHED {completed}/{len(subset)} examined; "
+              f"{failures} new failures logged", flush=True)
 
 
 def as_keyed(items: list[dict]) -> dict:
