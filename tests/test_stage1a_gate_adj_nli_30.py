@@ -62,9 +62,16 @@ def test_source_quote_and_category_integrity():
     out = gate.validate_llm(obj, s)
     assert len(out) == 3
     assert out[0]["quote_offsets"][0]["start"] == s["start"]
+    assert out[0]["quote_status"] == "verified"
+    assert out[1]["quote_status"] == "not_required"
     obj["ratings"][0]["quote"] = "invented source quote absent from text"
-    with pytest.raises(ValueError, match="Missing/inexact quote"):
-        gate.validate_llm(obj, s)
+    unverified = gate.validate_llm(obj, s)
+    assert unverified[0]["quote_status"] == "unverified"
+    assert unverified[0]["quote_offsets"] == []
+    assert unverified[0]["verdict"] == "supports"  # Keep verdict; don't claim source grounding.
+    obj["ratings"][0]["quote"] = ""
+    missing = gate.validate_llm(obj, s)
+    assert missing[0]["quote_status"] == "not_provided"
     obj["ratings"][0]["quote"] = s["segment"][:12]
     obj["ratings"][1]["category"] = "calm"
     with pytest.raises(ValueError, match="Missing/duplicate category"):
