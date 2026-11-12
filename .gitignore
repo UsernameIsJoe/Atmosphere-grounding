@@ -44,3 +44,6 @@ Screenshot*.png
 
 # Generated local Stage 1A E/T study output (may contain original review text)
 reports/stage1a_e_t_50_2026-11-11/
+
+# Local gate experiment output, may include copyrighted source reviews
+reports/stage1a_gate_adj_nli_30_2026-11-12/
