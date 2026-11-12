@@ -55,6 +55,44 @@ Use uncertain when the link is plausible but insufficiently grounded; do not inv
 Do not assume any fixed evidence/inference partition. Judge the claim and its attribution.
 Provide one short rationale about the actual text, not a generic definition.
 Return JSON matching the schema, no commentary."""
+
+# V2 changes the LLM methodology; never mix its outputs with the saved V1 verdicts.
+LLM_SYSTEM_V2 = """Evaluate only the TARGET SEGMENT as evidence about how THIS PLACE feels
+or is perceived by visitors. The FULL REVIEW is supplied only to resolve
+references and place/person attribution. It is NOT additional evidence for the
+target segment.
+
+Independently rate each of three categories:
+calm: peaceful/quiet/relaxing versus noisy/stressful/disturbing;
+inviting: welcoming/comfortable/approachable versus excluding/unwelcoming;
+safe: safe/protected/secure versus hazardous/threatening/unsafe.
+
+Return EXACTLY ONE row for EACH category (calm, inviting, safe).
+Each row has category, verdict, quote, attribution, reason.
+Verdict must be supports, opposes, mixed, none or uncertain.
+
+CRITICAL SOURCE BOUNDARY:
+- A supports/opposes/mixed verdict MUST cite a literal, continuous substring
+  copied CHARACTER FOR CHARACTER from TARGET SEGMENT.
+- Do not take a quote or judgment about another sentence from FULL REVIEW.
+- Do not add quotation marks around the copied text unless the quotation marks
+  actually appear in TARGET SEGMENT.
+- If the target lacks category evidence, verdict='none' and quote=''.
+- If the target's implication is unclear, verdict='uncertain'; quote may be ''.
+- Do not assign a category to generic praise, features, or reviewer activities
+  without a defensible atmospheric connection within the target segment.
+- Do not infer emotion about a wedding, visit, or person using adjectives from
+  another sentence in the full review.
+- If a target reads 'My husband and I got eloped here.' but another sentence
+  says 'It was so stressful', DO NOT quote 'It was so stressful' for that target.
+- If target is 'This is the place to come for making your day the best one.',
+  a permissible copied quote is exactly
+  'This is the place to come for making your day the best one.'
+  (without the single quotes used to delimit this instruction).
+
+Use full-review context for reference resolution only. One short reason per
+category. Reply with valid schema JSON and no outside commentary."""
+
 ITEM_FIELDS = {
     "category": {"type": "string", "enum": list(CATEGORIES)},
     "verdict": {"type": "string", "enum": ["supports", "opposes", "mixed", "none", "uncertain"]},
@@ -297,15 +335,17 @@ def nli_score(units: list[dict], out: Path, alias: str, batch: int, limit: int =
         torch.cuda.empty_cache()
 
 
-def llm_payload(model: str, u: dict, feedback: str = "") -> dict:
+def llm_payload(model: str, u: dict, feedback: str = "",
+                version: str = "v1") -> dict:
     request = {
         "model": model,
         "messages": [
-            {"role": "system", "content": LLM_SYSTEM},
+            {"role": "system", "content": LLM_SYSTEM_V2 if version == "v2" else LLM_SYSTEM},
             {"role": "user", "content": json.dumps({
                 "target_segment": u["segment"],
                 "full_original_review_for_context": u["full_review"],
-                "instruction": "Label target segment only. Full review resolves context.",
+                "instruction": ("ONLY the target_segment may supply category evidence or quotes. "
+                                "The full review is for reference resolution; not classification evidence."),
             }, ensure_ascii=False)},
         ],
         "format": LLM_SCHEMA, "stream": False,
@@ -318,7 +358,7 @@ def llm_payload(model: str, u: dict, feedback: str = "") -> dict:
     return request
 
 
-def validate_llm(obj: object, u: dict) -> list[dict]:
+def validate_llm(obj: object, u: dict, strict_quotes: bool = False) -> list[dict]:
     if not isinstance(obj, dict) or set(obj) != {"ratings"} or not isinstance(obj["ratings"], list):
         raise ValueError("Wrong output envelope")
     ratings = obj["ratings"]
@@ -333,15 +373,26 @@ def validate_llm(obj: object, u: dict) -> list[dict]:
             if not isinstance(r[field], str) or ("enum" in spec and r[field] not in spec["enum"]):
                 raise ValueError(f"Invalid {field}")
         categories.append(r["category"])
-        quote = r["quote"]
+        original_quote = r["quote"]
+        quote = original_quote
+        quote_normalization = "none"
+        # One harmless presentation error can be repaired deterministically:
+        # the model sometimes adds literal quote wrappers not present in source.
+        # Preserve the raw string; NEVER fuzzy-match, paraphrase or search
+        # elsewhere in the full review to manufacture target evidence.
+        if quote and quote not in u["segment"]:
+            for left, right in (('"', '"'), ("'", "'"), ("“", "”"), ("‘", "’")):
+                if quote.startswith(left) and quote.endswith(right) and len(quote) > 2:
+                    candidate = quote[len(left):len(quote)-len(right)]
+                    if candidate in u["segment"]:
+                        quote = candidate
+                        quote_normalization = "removed_outer_quote_marks"
+                        break
         offsets, pos = [], 0
         if quote:
             while (index := u["segment"].find(quote, pos)) != -1:
                 offsets.append({"start": u["start"] + index, "end": u["start"] + index + len(quote)})
                 pos = index + 1
-        # Classifications with NO evidence claim do not require a quotation.
-        # Still record extraneous quotes verbatim so the audit detects them.
-        # Do not convert a model paraphrase into a fabricated source span.
         verdict = r["verdict"]
         if verdict == "none":
             status = "not_required"
@@ -350,8 +401,17 @@ def validate_llm(obj: object, u: dict) -> list[dict]:
                       else "not_required")
         else:
             status = "verified" if offsets else "unverified" if quote else "not_provided"
-        clean.append({**r, "quote_offsets": offsets, "quote_status": status,
-                      "extraneous_quote_for_none": bool(quote) and verdict == "none"})
+        if strict_quotes and status in ("unverified", "not_provided"):
+            leakage = bool(original_quote) and original_quote in u["full_review"]
+            raise ValueError(
+                f"{r['category']}={verdict}: source quote absent from target "
+                f"({'appears elsewhere in FULL REVIEW: context leakage' if leakage else 'not source-exact'}); "
+                f"quote={original_quote[:75]!r}; target={u['segment'][:100]!r}"
+            )
+        clean.append({**r, "quote": quote, "quote_raw": original_quote,
+                      "quote_normalization": quote_normalization,
+                      "quote_offsets": offsets, "quote_status": status,
+                      "extraneous_quote_for_none": bool(original_quote) and verdict == "none"})
     if set(categories) != set(CATEGORIES) or len(set(categories)) != len(categories):
         raise ValueError("Missing/duplicate category")
     return sorted(clean, key=lambda x: CATEGORIES.index(x["category"]))
@@ -379,8 +439,24 @@ def check_ollama(base: str, timeout: int) -> dict:
     return {m: installed[m] for m in LLMS}
 
 
-def llm_score(units: list[dict], out: Path, base: str, timeout: int, limit: int = 0) -> None:
+def llm_score(units: list[dict], out: Path, base: str, timeout: int,
+              limit: int = 0, version: str = "v1") -> None:
     digests = check_ollama(base, timeout)
+    if version == "v2":
+        # Preserve all V1 outputs. The v2 prompt/validator has separate files,
+        # an immutable protocol manifest and distinct report output.
+        protocol_path = out / "protocol_v2.json"
+        expected = {"version": "v2", "prompt_sha256": sha(LLM_SYSTEM_V2),
+                    "schema_sha256": sha(LLM_SCHEMA),
+                    "source_segments_sha256": sha(units),
+                    "validation": "literal-target-only-with-outer-quote-normalization"}
+        if protocol_path.exists():
+            if json.loads(protocol_path.read_text(encoding="utf-8")) != expected:
+                raise ValueError("LLM v2 protocol changed; choose a new output directory")
+        else:
+            if out.exists() and any(out.iterdir()):
+                raise ValueError("LLM v2 output exists without protocol; choose a fresh directory")
+            write_json(protocol_path, expected)
     digest_path = out / "llm_model_digests.json"
     if digest_path.exists():
         if json.loads(digest_path.read_text(encoding="utf-8")) != digests:
@@ -400,6 +476,7 @@ def llm_score(units: list[dict], out: Path, base: str, timeout: int, limit: int 
         completed = sum(key(u) in done for u in subset)
         progress = ProgressBar(f"LLM {model}", len(subset), completed)
         failures = 0
+        consecutive_failures = 0
         quote_warnings_shown = 0
         for u in subset:
             if key(u) in done:
@@ -416,8 +493,8 @@ def llm_score(units: list[dict], out: Path, base: str, timeout: int, limit: int 
                 raw, info, error = "", {}, None
                 started = time.perf_counter()
                 try:
-                    raw, info = ollama_call(base, llm_payload(model, u, feedback), timeout)
-                    cleaned = validate_llm(json.loads(raw), u)
+                    raw, info = ollama_call(base, llm_payload(model, u, feedback, version), timeout)
+                    cleaned = validate_llm(json.loads(raw), u, strict_quotes=(version == "v2"))
                     success = True
                 except (ValueError, KeyError, TypeError, urllib.error.URLError, TimeoutError) as exc:
                     error = f"{type(exc).__name__}: {exc}"
@@ -451,13 +528,21 @@ def llm_score(units: list[dict], out: Path, base: str, timeout: int, limit: int 
                                           f"target={u['segment'][:160]!r}", flush=True)
                             quote_warnings_shown += 1
                     done.add(key(u))
+                    consecutive_failures = 0
                     break
                 prior_error = error or ""
             if not success:
                 append_jsonl(failures_file, {"key": key(u), "error": prior_error})
                 failures += 1
+                consecutive_failures += 1
             completed += 1
             progress.update(completed, failures)
+            if version == "v2" and consecutive_failures >= 3:
+                raise RuntimeError(
+                    f"{model}: three consecutive segments failed even after retries. "
+                    f"Stopped to avoid wasting inference; inspect {failures_file} "
+                    f"and {raw_file}."
+                )
         print(f"LLM {model} FINISHED {completed}/{len(subset)} examined; "
               f"{failures} new failures logged", flush=True)
         # Important: records from a run before this fix may have old status
@@ -528,10 +613,13 @@ def as_keyed(items: list[dict]) -> dict:
 
 def summarize(args, units: list[dict], limit: int = 0) -> dict:
     subset = units[:limit or None]
+    version = getattr(args, "llm_version", "v1")
+    llm_dir = args.output / ("llm_v2" if version == "v2" else "llm")
+    report_dir = args.output / ("comparison_v2" if version == "v2" else "comparison")
     adjective = as_keyed(read_jsonl(args.output / "gates/pos.jsonl"))
     nli = {name: as_keyed(read_jsonl(args.output / f"gates/nli_{name}.jsonl"))
            for name in NLI_MODELS}
-    llm = {model: as_keyed(read_jsonl(args.output / "llm" / model.replace(":", "_") / "ratings.jsonl"))
+    llm = {model: as_keyed(read_jsonl(llm_dir / model.replace(":", "_") / "ratings.jsonl"))
            for model in LLMS}
     # Older stored rows may carry the pre-fix quote_status. Recompute
     # annotations from the immutable model strings and original segments.
@@ -581,7 +669,7 @@ def summarize(args, units: list[dict], limit: int = 0) -> dict:
             "gemma_extraneous_none_quotes": sum(bool(v.get("extraneous_quote_for_none"))
                                                 for v in predictions[1]["ratings"]) if predictions[1] else None,
         })
-    write_csv(args.output / "comparison/segment_gate_comparison.csv", rows)
+    write_csv(report_dir / "segment_gate_comparison.csv", rows)
     ready = [r for r in rows if r["adjective"] is not None and r["nli_median"] is not None]
     with_models = [r for r in ready if r["llm_disagreement"] is not None]
     proposals = {
@@ -638,7 +726,7 @@ def summarize(args, units: list[dict], limit: int = 0) -> dict:
                 "human_easy_for_one_model_yes_no": "",
                 "human_comments": "",
             } | {"sampling_reason": group})
-    write_csv(args.output / "comparison/human_audit_blind.csv", audit)
+    write_csv(report_dir / "human_audit_blind.csv", audit)
     summary = {
         "segments_requested": len(subset), "gate_complete_segments": len(ready),
         "llm_double_rated_segments": len(with_models),
@@ -667,13 +755,15 @@ def summarize(args, units: list[dict], limit: int = 0) -> dict:
             "Full-review context is supplied to both LLMs to hold LLM task constant.",
         ],
     }
-    write_json(args.output / "comparison/summary.json", summary)
+    write_json(report_dir / "summary.json", summary)
     return summary
 
 
 def main() -> int:
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--stage", choices=["prepare", "adj", "nli", "llm", "report", "diagnose", "all"], default="all")
+    p.add_argument("--llm-version", choices=["v1", "v2"], default="v2",
+                   help="v2 improves target-only grounding and saves independently of old v1 results")
     p.add_argument("--input", type=Path, default=ROOT / "data/processed/reviews.jsonl")
     p.add_argument("--output", type=Path, default=ROOT / "reports/stage1a_gate_adj_nli_30_2026-11-12")
     p.add_argument("--reviews", type=int, default=30)
@@ -694,10 +784,11 @@ def main() -> int:
             nli_score(units, args.output / f"gates/nli_{name}.jsonl", name, args.batch_size,
                       args.limit_segments)
     if args.stage in ("llm", "all"):
-        llm_score(units, args.output / "llm", args.base, args.timeout, args.limit_segments)
+        llm_score(units, args.output / ("llm_v2" if args.llm_version == "v2" else "llm"),
+                  args.base, args.timeout, args.limit_segments, version=args.llm_version)
     if args.stage == "diagnose":
         for name in LLMS:
-            diagnose_saved(units, args.output / "llm", name)
+            diagnose_saved(units, args.output / ("llm_v2" if args.llm_version == "v2" else "llm"), name)
     if args.stage in ("report", "all"):
         summary = summarize(args, units, args.limit_segments)
         print("REPORT", json.dumps({k: v for k, v in summary.items() if k != "routing_simulations_NOT_accuracy"},
