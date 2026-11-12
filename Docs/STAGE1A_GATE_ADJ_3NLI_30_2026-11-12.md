@@ -192,3 +192,34 @@ python scripts/stage1a_gate_adj_nli_30.py --stage llm --llm-models qwen3:8b
 ```
 
 The gate comparison reports incomplete observations as missing, not agreement or accuracy. Missing model ratings remain a limitation to quantify during the final audit.
+
+
+## Targeted segment-only recovery for persistently failing Gemma — November 12
+
+After many Gemma V2 failures caused by claims quoted from unrelated parts of the full review, **stop the original `--stage llm` run**. The recovery script is a deliberately separate experiment:
+
+```powershell
+git pull origin master
+python scripts/stage1a_gate_rescue_segment_only.py
+```
+
+The new script:
+
+- Reads the frozen **30 real reviews / 123 segments** and already saved V2 results.
+- **Skips every segment with a valid Gemma V2 result**, so successful work is not repeated.
+- For V2-missing segments only, calls **Gemma3:4b with the target segment alone** — no full review, adjacent segment, Qwen answer, or NLI score is sent.
+- Asks only for the three category verdicts, attribution and a reason. **No model-generated quotation** is requested or accepted. The original segment and exact source offsets are stored by the program instead, avoiding the quote-copy failure mode while preserving traceability.
+- Writes independent `llm_segment_only_rescue_gemma_v1/ratings.jsonl`, raw responses, errors, `summary.json` and `comparison_with_recovery.csv`.
+- Makes at most two calls for a failed segment and proceeds even if a segment remains unresolved. Reruns resume and **do not retry previously failed rescue cases** unless `--retry-errors` is supplied.
+- Keeps Qwen and Gemma V2 prediction files **unchanged**.
+
+For a quick check before the full missing set:
+
+```powershell
+python scripts/stage1a_gate_rescue_segment_only.py --limit 3
+python scripts/stage1a_gate_rescue_segment_only.py
+```
+
+**Scientific caveat:** V2 original ratings were obtained with full-review context and source quotation; recovered ratings are a *different segment-only protocol*. The combined CSV explicitly distinguishes them, including which Qwen–Gemma rows remain comparable under identical V2 protocols. The whole original target segment is a source trace, **not an LLM-selected supporting phrase**, and no semantic accuracy is assumed. Never interpret increased successful-row coverage as higher emotion interpretation accuracy.
+
+After the run, send the whole parent `reports/stage1a_gate_adj_nli_30_2026-11-12` folder as a ZIP to audit gate performance alongside coverage and model failures.
