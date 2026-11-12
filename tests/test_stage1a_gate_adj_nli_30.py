@@ -299,3 +299,41 @@ def test_v2_protocol_never_overwrites_v1_saved_model_outputs(tmp_path, monkeypat
     v2 = out / "llm_v2" / "qwen3_8b" / "ratings.jsonl"
     assert v1 != v2
     assert v1.read_bytes() == old
+
+
+
+def test_quote_case_only_matches_target_but_not_full_review():
+    segment = "Lights in the small box were years away- it was completely dark."
+    sample = {"segment": segment, "full_review": segment,
+              "start": 12}
+    ratings = [
+        {"category": "calm", "verdict": "opposes",
+         "quote": "It was completely dark.", "attribution": "place", "reason": "darkness"},
+        {"category": "inviting", "verdict": "none",
+         "quote": "", "attribution": "place", "reason": ""},
+        {"category": "safe", "verdict": "none",
+         "quote": "", "attribution": "place", "reason": ""},
+    ]
+    result = gate.validate_llm({"ratings": ratings}, sample, strict_quotes=True)
+    assert result[0]["quote_raw"] == "It was completely dark."
+    assert result[0]["quote"] == "it was completely dark."
+    assert result[0]["quote_normalization"] == "case_only"
+    assert result[0]["quote_status"] == "verified"
+    assert result[0]["quote_offsets"][0]["start"] == 12 + segment.index("it was completely dark.")
+
+
+def test_case_only_recovery_never_accepts_context_leakage():
+    segment = "Although the flush was operative, the hand washing station was not."
+    full = segment + " The bathroom was completely unclean, with tissues all over the place."
+    sample = {"segment": segment, "full_review": full, "start": 0}
+    ratings = [
+        {"category": "calm", "verdict": "opposes",
+         "quote": "completely unclean, with tissues all over the place",
+         "attribution": "place", "reason": "unclean"},
+        {"category": "inviting", "verdict": "none",
+         "quote": "", "attribution": "place", "reason": ""},
+        {"category": "safe", "verdict": "none",
+         "quote": "", "attribution": "place", "reason": ""},
+    ]
+    with pytest.raises(ValueError, match="context leakage"):
+        gate.validate_llm({"ratings": ratings}, sample, strict_quotes=True)
