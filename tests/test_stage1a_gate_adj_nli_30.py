@@ -374,6 +374,13 @@ def test_only_requested_llm_runs_preserves_existing_qwen_results(tmp_path, monke
     review = gate.choose_reviews(gate.load_real_reviews(CORPUS, 0), 1, 11)
     u = gate.make_segments(review)[0]
     out = tmp_path / "llm_v2"
+    # Existing V2 run always has an immutable protocol manifest.
+    gate.write_json(out / "protocol_v2.json", {
+        "version": "v2", "prompt_sha256": gate.sha(gate.LLM_SYSTEM_V2),
+        "schema_sha256": gate.sha(gate.LLM_SCHEMA),
+        "source_segments_sha256": gate.sha([u]),
+        "validation": "literal-target-only-with-outer-quote-normalization",
+    })
     qwen_path = out / "qwen3_8b/ratings.jsonl"
     gate.append_jsonl(qwen_path, {"key": "existing-qwen", "ratings": []})
     existing_bytes = qwen_path.read_bytes()
