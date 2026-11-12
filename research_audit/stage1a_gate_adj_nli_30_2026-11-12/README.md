@@ -17,7 +17,7 @@
 
 **Raw provenance:** The user supplied the unmodified local result archive as **stage1a_gate_results.zip**. It was inspected on November 12, 2026. It contains the complete NLI native probabilities, input manifests, POS predictions, both V2 LLMs' ratings/errors/raw responses, and separate Gemma rescue results. **Raw output logs are not committed in this GitHub directory**; retain the ZIP to reproduce exact model statistics. Original review source already lives in the repository at data/processed/reviews.jsonl.
 
-Manifest snapshot: random seed **42**, **30 real reviews from 30 distinct locations**, **123 original review segments**. Source reviews.jsonl SHA-256 is f08422c068b8e52a40a93d14a4a3d12955d7f52997409f974a481c77748c7328. Serialized sampled segments SHA-256 is 0dfa1e791f9f34e72e500ed79875eaf6bb5a17dc232997cc6d67d87e0966e036.
+Manifest snapshot: random seed **42**, **30 real reviews from 30 distinct locations**, **123 original review segments**. The **local Windows checkout's raw file-byte SHA-256** for reviews.jsonl was f08422c068b8e52a40a93d14a4a3d12955d7f52997409f974a481c77748c7328 (not the hash of the GitHub Actions checkout, which may have different line endings). The platform-independent **serialized selected-segments SHA-256** is 0dfa1e791f9f34e72e500ed79875eaf6bb5a17dc232997cc6d67d87e0966e036, and is checked in CI against the reviewed source rows.
 
 ## Execution process and methods
 
