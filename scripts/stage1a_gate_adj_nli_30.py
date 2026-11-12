@@ -459,7 +459,10 @@ def check_ollama(base: str, timeout: int) -> dict:
 
 
 def llm_score(units: list[dict], out: Path, base: str, timeout: int,
-              limit: int = 0, version: str = "v1") -> None:
+              limit: int = 0, version: str = "v1",
+              models: tuple[str, ...] = LLMS) -> None:
+    if not models or any(model not in LLMS for model in models):
+        raise ValueError("Choose one or more supported LLMs")
     digests = check_ollama(base, timeout)
     if version == "v2":
         # Preserve all V1 outputs. The v2 prompt/validator has separate files,
@@ -482,7 +485,7 @@ def llm_score(units: list[dict], out: Path, base: str, timeout: int,
             raise ValueError("Ollama model checkpoint changed: use new --output")
     else:
         write_json(digest_path, digests)
-    for model in LLMS:
+    for model in models:
         folder = out / model.replace(":", "_")
         rows_file = folder / "ratings.jsonl"
         raw_file = folder / "raw_responses.jsonl"
@@ -495,8 +498,6 @@ def llm_score(units: list[dict], out: Path, base: str, timeout: int,
         completed = sum(key(u) in done for u in subset)
         progress = ProgressBar(f"LLM {model}", len(subset), completed)
         failures = 0
-        consecutive_failed_reviews = 0
-        last_failed_review = None
         quote_warnings_shown = 0
         for u in subset:
             if key(u) in done:
@@ -548,30 +549,20 @@ def llm_score(units: list[dict], out: Path, base: str, timeout: int,
                                           f"target={u['segment'][:160]!r}", flush=True)
                             quote_warnings_shown += 1
                     done.add(key(u))
-                    consecutive_failed_reviews = 0
-                    last_failed_review = None
                     break
                 prior_error = error or ""
             if not success:
                 append_jsonl(failures_file, {"key": key(u), "error": prior_error})
                 failures += 1
-                # Several hard segments of ONE review are not evidence that
-                # every subsequent review will fail. Stop only when three
-                # different reviews fail consecutively, with no successful
-                # segment between failures.
-                if u["review_id"] != last_failed_review:
-                    consecutive_failed_reviews += 1
-                    last_failed_review = u["review_id"]
             completed += 1
             progress.update(completed, failures)
-            if version == "v2" and consecutive_failed_reviews >= 3:
-                raise RuntimeError(
-                    f"{model}: failed segments from three different reviews "
-                    f"with no successful segment between them. Stopped to avoid "
-                    f"wasting inference; inspect {failures_file} and {raw_file}."
-                )
-        print(f"LLM {model} FINISHED {completed}/{len(subset)} examined; "
-              f"{failures} new failures logged", flush=True)
+        # An invalid annotation is an explicit missing result, not permission
+        # to abort other models or claim that all segments have valid labels.
+        valid = sum(key(u) in done for u in subset)
+        unresolved = len(subset) - valid
+        print(f"LLM {model} FINISHED {completed}/{len(subset)} attempted; "
+              f"{valid} valid, {unresolved} unresolved; "
+              f"{failures} new failed segments in this pass", flush=True)
         # Important: records from a run before this fix may have old status
         # annotations. Diagnose stage recomputes them without changing data.
         diagnose_saved(units, out, model, max_examples=0)
@@ -798,6 +789,8 @@ def summarize(args, units: list[dict], limit: int = 0) -> dict:
 def main() -> int:
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--stage", choices=["prepare", "adj", "nli", "llm", "report", "diagnose", "all"], default="all")
+    p.add_argument("--llm-models", nargs="+", choices=LLMS, default=list(LLMS),
+                   help="Which Ollama models to run; e.g. --llm-models gemma3:4b skips Qwen")
     p.add_argument("--llm-version", choices=["v1", "v2"], default="v2",
                    help="v2 improves target-only grounding and saves independently of old v1 results")
     p.add_argument("--input", type=Path, default=ROOT / "data/processed/reviews.jsonl")
@@ -821,7 +814,8 @@ def main() -> int:
                       args.limit_segments)
     if args.stage in ("llm", "all"):
         llm_score(units, args.output / ("llm_v2" if args.llm_version == "v2" else "llm"),
-                  args.base, args.timeout, args.limit_segments, version=args.llm_version)
+                  args.base, args.timeout, args.limit_segments, version=args.llm_version,
+                  models=tuple(args.llm_models))
     if args.stage == "diagnose":
         for name in LLMS:
             diagnose_saved(units, args.output / ("llm_v2" if args.llm_version == "v2" else "llm"), name)
