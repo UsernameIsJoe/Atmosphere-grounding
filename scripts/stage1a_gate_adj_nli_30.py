@@ -476,7 +476,7 @@ def diagnose_saved(units: list[dict], out: Path, model: str,
     rows = read_jsonl(path)
     source = {key(u): u for u in units}
     verdicts, status_counts = collections.Counter(), collections.Counter()
-    mismatch_examples, extra_none = [], 0
+    mismatch_examples, extraneous_examples, extra_none = [], [], 0
     for row in rows:
         if row["key"] not in source:
             raise ValueError(f"Saved LLM result not in source manifest: {row['key']}")
@@ -488,6 +488,12 @@ def diagnose_saved(units: list[dict], out: Path, model: str,
             verdicts[rating["verdict"]] += 1
             status_counts[rating["quote_status"]] += 1
             extra_none += int(rating["extraneous_quote_for_none"])
+            if rating["extraneous_quote_for_none"] and len(extraneous_examples) < max_examples:
+                extraneous_examples.append({
+                    "key": row["key"], "category": rating["category"],
+                    "verdict": "none", "unnecessary_quote": rating["quote"],
+                    "target_segment": segment["segment"],
+                })
             if rating["quote_status"] in ("unverified", "not_provided") and len(mismatch_examples) < max_examples:
                 mismatch_examples.append({
                     "key": row["key"], "category": rating["category"],
@@ -505,7 +511,9 @@ def diagnose_saved(units: list[dict], out: Path, model: str,
     }
     print("DIAGNOSE", json.dumps(summary, ensure_ascii=False), flush=True)
     for example in mismatch_examples:
-        print("EXAMPLE", json.dumps(example, ensure_ascii=False), flush=True)
+        print("UNSUPPORTED_VERDICT_QUOTE", json.dumps(example, ensure_ascii=False), flush=True)
+    for example in extraneous_examples:
+        print("UNNECESSARY_NONE_QUOTE", json.dumps(example, ensure_ascii=False), flush=True)
     return summary
 
 
@@ -525,6 +533,16 @@ def summarize(args, units: list[dict], limit: int = 0) -> dict:
            for name in NLI_MODELS}
     llm = {model: as_keyed(read_jsonl(args.output / "llm" / model.replace(":", "_") / "ratings.jsonl"))
            for model in LLMS}
+    # Older stored rows may carry the pre-fix quote_status. Recompute
+    # annotations from the immutable model strings and original segments.
+    sources = {key(u): u for u in units}
+    for model in LLMS:
+        for k, saved in llm[model].items():
+            if k not in sources:
+                raise ValueError(f"Unknown saved LLM key: {k}")
+            saved["ratings"] = validate_llm(
+                {"ratings": [{field: rating[field] for field in ITEM_FIELDS}
+                             for rating in saved["ratings"]]}, sources[k])
     rows = []
     for u in subset:
         k = key(u)
