@@ -109,3 +109,41 @@ python scripts/stage1a_gate_adj_nli_30.py --stage diagnose
 It prints `DIAGNOSE` records for each model showing the actual distribution of verdicts, whether quotations match, and how many unnecessary quotes accompanied `none` verdicts. It also prints up to five `UNSUPPORTED_VERDICT_QUOTE` and `UNNECESSARY_NONE_QUOTE` examples with the target segment. **No NLI/Ollama model is loaded and no results are overwritten.**
 
 After inspecting diagnostic results, normal inference can resume with `--stage llm`. If there are many unsupported nonempty verdicts, pause and inspect raw model outputs before deciding to revise the prompt; changing the prompt would require versioning/re-evaluating prior verdicts, not just hiding the warnings.
+
+
+## LLM V2 corrective run — target-source leakage (2026-11-12)
+
+A local Qwen diagnostic on 39 existing segments found 117 category judgments, of which 59 were supports/opposes. Only 33 of those quotations matched the exact target; 26 did not. These included (a) extra quote delimiters around a correctly copied substring and (b) **substantive context leakage**, e.g. target "My husband and I got eloped here." receiving emotion claims quoted from later sentences. There were also unnecessary quotes on 44 of 58 \`none\` decisions. A mere warning-suppression fix would not produce scientifically usable annotations.
+
+**V2 is a new LLM run, not a patch to the prior verdicts.**
+
+- The original LLM output remains at \`reports/stage1a_gate_adj_nli_30_2026-11-12/llm/\`.
+- V2 is written separately to \`reports/stage1a_gate_adj_nli_30_2026-11-12/llm_v2/\`, with its own \`protocol_v2.json\`, raw attempts, valid judgments, and failures.
+- Already completed **POS and NLI outputs are reused** from the existing \`gates/\` directory. **Do not rerun them.**
+- V2 permits a mechanical repair for enclosing quotation marks **only if the remaining characters exactly match the target**. The raw quote is preserved. Paraphrases and text appearing only elsewhere in the review are not accepted as target evidence.
+- A positive/negative/mixed verdict without a verifiable literal target quote triggers a context-aware retry and, after at most three attempts, a logged failure. Three consecutive failed segments stop the run to avoid wasting more inference.
+- Both LLMs use the exact same V2 prompt: full original review is context for reference resolution **only**, not another source from which to extract evidence for the target.
+- \`--stage report\` defaults to V2 and writes \`comparison_v2/\`; V1 comparisons remain under \`comparison/\`. Neither is treated as human ground truth.
+- This fixes **data provenance**, but does not guarantee accurate semantics. Even an exact quote may be used to justify the wrong emotion; the audit must still assess the verdict.
+
+**On Windows PowerShell, run:**
+
+```powershell
+# Stop the old runner before changing versions
+git pull origin master
+
+# Smoke-test the first 3 source segments under new protocol:
+python scripts/stage1a_gate_adj_nli_30.py --stage llm --limit-segments 3
+
+# If these pass, continue to the full 123-segment controlled V2 LLM run:
+python scripts/stage1a_gate_adj_nli_30.py --stage llm
+
+# Review source-faithfulness diagnostics and gate comparisons:
+python scripts/stage1a_gate_adj_nli_30.py --stage diagnose
+python scripts/stage1a_gate_adj_nli_30.py --stage report
+
+# Optional: to inspect OLD, preserved V1 predictions:
+python scripts/stage1a_gate_adj_nli_30.py --stage diagnose --llm-version v1
+```
+
+Please upload **both `llm_v2` and `comparison_v2`** alongside the existing gate scores when the run completes. V2 changes the task prompt and verification, so do not mix old and new LLM judgments into an apparent single 123-segment sample.
