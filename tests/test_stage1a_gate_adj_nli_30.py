@@ -123,3 +123,21 @@ def test_report_keeps_candidate_gates_separate_from_accuracy(tmp_path):
     assert summary["routing_simulations_NOT_accuracy"]["adjective"]["estimated_two_model_calls"] == 3
     assert summary["routing_simulations_NOT_accuracy"]["nli_median_0.6"]["easy_segments"] == 1
     assert (out / "comparison/human_audit_blind.csv").exists()
+
+
+def test_progress_bar_reports_percentages_and_resumed_counts(capsys):
+    bar = gate.ProgressBar("POS adjectives", 4, completed=2)
+    bar.update(3)
+    bar.update(4)
+    output = capsys.readouterr().out
+    assert "[###########-----------] 2/4 (50%)" in output
+    assert "4/4 (100%)" in output
+
+
+def test_progress_bar_reports_failures_without_stopping(capsys):
+    bar = gate.ProgressBar("LLM qwen3:8b", 3)
+    bar.update(1)
+    bar.update(2, failures=1)
+    bar.update(3, failures=1)
+    output = capsys.readouterr().out
+    assert "3/3 (100%) | failed: 1" in output
