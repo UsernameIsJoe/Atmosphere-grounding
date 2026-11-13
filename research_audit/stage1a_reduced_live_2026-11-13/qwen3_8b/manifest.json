@@ -1,0 +1,15 @@
+{
+  "version": "runpod_12_full_reviews_firstlook_v1",
+  "model": "qwen3:8b",
+  "ollama_digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+  "cases_sha256": "971982ea50c3dd922548d775305b483f75e739fb15330f2495c4e741f60adafe",
+  "prompt_sha256": "17513edb5596cb1e1bf38704ef26a5972779fe8c8c01fa5d34a441d1b2d246d3",
+  "schema_sha256": "9156f3e3ae70c8844898b5aa61a4fefdbd4ae1a832e4342b4656b2968f5b790e",
+  "generation": {
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 8192,
+    "num_predict": 2048,
+    "think": false
+  }
+}
