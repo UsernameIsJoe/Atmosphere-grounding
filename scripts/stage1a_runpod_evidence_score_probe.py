@@ -303,7 +303,7 @@ def write_rows(path: Path, rows: list[dict], preserve_human: bool = True) -> Non
         with path.open("r", encoding="utf-8-sig", newline="") as file:
             previous = list(csv.DictReader(file))
         if len(previous) != len(rows) or any(
-            old.get("index") != new.get("index") or
+            old.get("index") != str(new.get("index")) or
             old.get("mode") != new.get("mode") or
             old.get("target_segment") != new.get("target_segment")
             for old, new in zip(previous, rows)
