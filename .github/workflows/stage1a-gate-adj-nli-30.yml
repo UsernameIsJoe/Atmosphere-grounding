@@ -8,6 +8,8 @@ on:
       - "scripts/stage1a_gate_rescue_segment_only.py"
       - "tests/test_stage1a_gate_rescue_segment_only.py"
       - "tests/test_stage1a_gate_20261112_archive.py"
+      - "scripts/stage1a_runpod_advanced_probe.py"
+      - "tests/test_stage1a_runpod_advanced_probe.py"
       - "research_audit/stage1a_gate_adj_nli_30_2026-11-12/**"
       - ".github/workflows/stage1a-gate-adj-nli-30.yml"
   workflow_dispatch:
@@ -21,5 +23,5 @@ jobs:
         with:
           python-version: "3.11"
       - run: python -m pip install pytest
-      - run: python -m pytest -q tests/test_stage1a_gate_adj_nli_30.py tests/test_stage1a_gate_rescue_segment_only.py tests/test_stage1a_gate_20261112_archive.py
+      - run: python -m pytest -q tests/test_stage1a_gate_adj_nli_30.py tests/test_stage1a_gate_rescue_segment_only.py tests/test_stage1a_gate_20261112_archive.py tests/test_stage1a_runpod_advanced_probe.py
       - run: python scripts/stage1a_gate_adj_nli_30.py --stage prepare --output "$RUNNER_TEMP/stage1a_gate_30"
