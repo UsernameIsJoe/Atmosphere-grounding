@@ -1,0 +1,26 @@
+{
+  "qwen3.6:27b-bf16/segment": {
+    "valid": 12,
+    "errors": 0
+  },
+  "qwen3.6:27b-bf16/segment_context": {
+    "valid": 12,
+    "errors": 0
+  },
+  "qwen3.6:27b-bf16/full_review": {
+    "valid": 12,
+    "errors": 0
+  },
+  "gemma4:31b-it-bf16/segment": {
+    "valid": 12,
+    "errors": 0
+  },
+  "gemma4:31b-it-bf16/segment_context": {
+    "valid": 12,
+    "errors": 0
+  },
+  "gemma4:31b-it-bf16/full_review": {
+    "valid": 12,
+    "errors": 0
+  }
+}
