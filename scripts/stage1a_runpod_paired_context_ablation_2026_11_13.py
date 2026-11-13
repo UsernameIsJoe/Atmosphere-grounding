@@ -42,7 +42,7 @@ REFERENTS = ("place", "surroundings", "person", "other", "ambiguous")
 CATEGORIES = ("calm", "inviting", "safe")
 VERDICTS = ("supports", "opposes", "mixed", "none", "uncertain")
 DEFAULT_OUT = Path(__file__).resolve().parents[1] / "reports/stage1a_paired_context_ablation_2026-11-13"
-VERSION = "stage1a_paired_context_ablation_v1_2026_11_13"
+VERSION = "stage1a_paired_context_ablation_v2_2026_11_13"
 
 def selected(rows: dict[int, dict], mode: str) -> list[dict]:
     """Select the EXACT same frozen 30 target segments in both input modes.
@@ -51,9 +51,13 @@ def selected(rows: dict[int, dict], mode: str) -> list[dict]:
     context. That was fine for a stress probe, but not a paired ablation.
     Preserve source indices, screening composition, and ordering.
     """
-    if mode not in ("segment", "context"):
+    if mode not in ("segment", "context", "repeat"):
         raise ValueError(f"Unknown input mode: {mode}")
-    return original_selected(rows, "segment")
+    samples = original_selected(rows, "segment")
+    if mode == "repeat":
+        pilot = set(CONTEXT_INDICES)
+        return [r for r in samples if int(r["index"]) in pilot]
+    return samples
 
 
 CORE_RULES = """Analyze the precise TARGET_SEGMENT of an authentic place review.
@@ -169,6 +173,9 @@ def request_payload(row: dict, model: str, mode: str, task: str) -> dict:
     data = {"target_segment": row["segment"]}
     if mode == "context":
         data["full_review_for_reference_only"] = row["full_review"]
+    elif mode == "repeat":
+        # Same segment twice, no extra review content: tests repetition effect.
+        data["target_repeated_control"] = row["segment"]
     return {
         "model": model, "messages": [
             {"role": "system", "content": SYSTEMS[task]},
@@ -366,13 +373,13 @@ def report(args) -> dict:
     rows = corpus(args.source)
     outputs = {}
     for model in MODELS:
-        for mode in ("segment", "context"):
+        for mode in ("segment", "context", "repeat"):
             for task in TASKS:
                 folder = folder_for(args.output, model, mode, task)
                 results = read_lines(folder / "results.jsonl")
                 outputs[(model, mode, task)] = {r["index"]: r for r in results}
     gold, evidence_compare, score_compare, blinding = [], [], [], []
-    for mode in ("segment", "context"):
+    for mode in ("segment", "context", "repeat"):
         for row in selected(rows, mode):
             idx = int(row["index"])
             base = {"index": idx, "mode": mode, "target_segment": row["segment"],
@@ -420,7 +427,7 @@ def report(args) -> dict:
     # The same-prompt 8B baseline is optional: do not use it as an A/B
     # competitor in the primary, two-advanced-model blind review packet.
     baseline_coverage = {}
-    for mode in ("segment", "context"):
+    for mode in ("segment", "context", "repeat"):
         for task in TASKS:
             baseline_path = folder_for(args.output, BASELINE_MODELS[0], mode, task)
             saved = read_lines(baseline_path / "results.jsonl")
@@ -463,7 +470,7 @@ def main() -> None:
     p.add_argument("--stage", choices=("check", "run", "report"), default="check")
     p.add_argument("--task", choices=TASKS, default=TASKS[0])
     p.add_argument("--model", choices=AVAILABLE_MODELS, default=MODELS[0])
-    p.add_argument("--mode", choices=("segment", "context"), default="segment")
+    p.add_argument("--mode", choices=("segment", "context", "repeat"), default="segment")
     p.add_argument("--source", type=Path, default=SOURCE)
     p.add_argument("--output", type=Path, default=DEFAULT_OUT)
     p.add_argument("--base", default="http://127.0.0.1:11434")
