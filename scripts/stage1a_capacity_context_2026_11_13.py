@@ -256,8 +256,10 @@ def folder_for(output: Path, model: str, mode: str, task: str, reasoning="native
 def run(args) -> None:
     all_rows = corpus(args.source)
     cases = selected(all_rows, args.mode)
+    thinking_meta = urlopen_json(args.base, "/api/show", {"model": args.model}, 30).get("thinking")
     expected = {
-        "protocol": VERSION, "reasoning": args.reasoning, "task": args.task, "model": args.model,
+        "thinking_metadata": thinking_meta,
+        "protocol": VERSION, "task": args.task, "model": args.model,
         "model_digest": installed_model(args.base, args.model),
         "mode": args.mode, "reasoning": args.reasoning, "source_digest": digest([
             (r["review_id"], r["segment_id"], r["segment"], r["full_review"])
@@ -442,8 +444,7 @@ def report(args) -> dict:
     else:
         private_key.write_text(
             json.dumps(blinding, ensure_ascii=False, indent=2), encoding="utf-8")
-    # The same-prompt 8B baseline is optional: do not use it as an A/B
-    # competitor in the primary, two-advanced-model blind review packet.
+    # Optional Qwen3 8B baseline is excluded from the four-model blind comparison.
     baseline_coverage = {}
     for mode in ("segment", "context", "repeat"):
         for task in TASKS:
@@ -454,7 +455,7 @@ def report(args) -> dict:
             }
     summary = {
         "optional_same_prompt_8b_baseline": baseline_coverage,
-        "protocol": VERSION,
+        "protocol": VERSION, "reasoning": args.reasoning,
         "gold_first": "01_gold_first_BLANK.csv",
         "blind_evidence": "02_blind_evidence_A_B_C_D.csv",
         "blind_emotion": "03_blind_scores_A_B_C_D.csv",
@@ -468,14 +469,19 @@ def report(args) -> dict:
     }
     for (model, mode, task), values in outputs.items():
         seconds = [v["duration_seconds"] for v in values.values()]
-        item = {"valid": len(values), "planned": len(selected(rows, mode)),
+        errors_path = folder_for(args.output, model, mode, task, args.reasoning) / "errors.jsonl"
+        item = {"valid": len(values), "failed": len(read_lines(errors_path)),
+                "planned": len(selected(rows, mode)),
                 "mean_seconds": round(sum(seconds) / len(seconds), 2) if seconds else None}
         if task == "evidence":
-            counts = Counter(
-                "source_exact" if claim["source_exact"] else "unverified_quote"
-                for row in values.values() for claim in row["prediction"]["claims"]
-            )
-            item["source_quote_counts"] = dict(counts)
+            claims = [claim for row in values.values()
+                      for claim in row["prediction"]["claims"]]
+            item["source_quote_counts"] = {
+                "source_exact": sum(bool(c["source_exact"]) for c in claims),
+                "unverified_quote": sum(not c["source_exact"] for c in claims),
+                "quoted_only_in_full_review": sum(
+                    bool(c.get("quoted_only_in_full_review")) for c in claims),
+            }
         summary["results"][f"{model}/{mode}/{task}"] = item
     (report_root / "summary.json").write_text(json.dumps(summary, indent=2, ensure_ascii=False),
                                                encoding="utf-8")
