@@ -31,7 +31,7 @@ from collections import Counter
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from stage1a_runpod_advanced_probe import (
     MODELS, SOURCE, corpus, selected as original_selected, digest,
-    urlopen_json, installed_model, read_lines, append,
+    urlopen_json, installed_model, read_lines, append, CONTEXT_INDICES,
 )
 
 TASKS = ("evidence", "score")
@@ -267,6 +267,9 @@ def run(args) -> None:
     valid = {r["index"] for r in read_lines(folder / "results.jsonl")}
     failed = {r["index"] for r in read_lines(folder / "errors.jsonl")}
     work = cases[:args.limit] if args.limit else cases
+    if args.pilot_context_10:
+        frozen_pilot = set(CONTEXT_INDICES)
+        work = [r for r in work if int(r["index"]) in frozen_pilot]
     pending = [r for r in work if int(r["index"]) not in valid
                and (args.retry_errors or int(r["index"]) not in failed)]
     print(f"{args.model} task={args.task} mode={args.mode}: "
@@ -467,6 +470,8 @@ def main() -> None:
     p.add_argument("--timeout", type=int, default=400)
     p.add_argument("--limit", type=int, default=0)
     p.add_argument("--retry-errors", action="store_true")
+    p.add_argument("--pilot-context-10", action="store_true",
+                   help="Run the 10 pre-frozen context-stress indices first; resumable as 30")
     args = p.parse_args()
     if args.limit < 0 or args.timeout < 1:
         p.error("Invalid timeout/limit")
