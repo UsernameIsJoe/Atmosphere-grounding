@@ -17,20 +17,21 @@ A secondary question is whether a model improves when emotion scoring is handled
 - Identical instructions, decoding, schemas, seeds, and target text for each input-mode pair; no prompt tuning after observing results.
 - Input condition **segment**: target text only.
 - Input condition **context**: same target text + complete original review, explicitly **for disambiguating context only**. Only the target may contribute evidence, judgments, or exact quotes. The model may misuse context; that is a measurable failure.
+- Additional **repeat** control on the SAME 10 frozen stress targets: target appears twice, with no other review text. This controls for the target being repeated when supplied in the full-review condition. It must not be interpreted as a new independent segment or review.
 - Independent task **evidence**: identify relevant claims with verbatim quotations; classify each `direct`, `inference`, or `both`, and give referent and explanation. No emotion score.
 - Independent task **score**: `calm`, `inviting`, `safe` each gets **two independently reasoned channels** (direct and inferred), verdict supports/opposes/mixed/none/uncertain, signed ordinal textual support -2..+2, and justification. This is **not** a probability or an observed ground-truth emotional intensity.
 - Both tasks operate on the *original review text*, not on another model's extraction. That avoids cascading extraction mistakes in this controlled comparison.
 
 ## Size and sequence
 
-- First perform the frozen 10-segment pilot on each of two models, two conditions and two tasks: **80 responses**. Check valid JSON, complete GPU residency, and leaks. No tuning based on model outputs.
-- Then complete the remaining 20 for exactly **240 primary responses**. The runner resumes successful pilot records without duplicate inference.
-- Optional 8B baseline: **+40 pilot** / **+120 total** under the exact same conditions. This is useful to estimate whether context effects differ by model size; don't compare it with the earlier differently prompted 12-review run as if it were a matched experiment.
+- First perform the frozen 10-segment pilot on each of two models, **three** conditions (segment/context/repeat) and two tasks: **120 responses**. Check valid JSON, complete GPU residency, and leaks. No tuning based on model outputs.
+- Then complete the remaining 20 for segment/context only, giving **280 primary responses total** (30 x 2 x 2 x 2, plus 10 x 2 x 2 repetition controls). The runner resumes successful pilot records without duplicate inference.
+- Optional 8B baseline: **+60 pilot** / **+140 total** under the exact same conditions. This is useful to estimate whether context effects differ by model size; don't compare it with the earlier differently prompted 12-review run as if it were a matched experiment.
 - Each model is processed sequentially on one A100 80GB. Verify `ollama ps` shows full GPU residency, particularly for BF16 models. Stop the Pod when inference is complete, but confirm volume charges and restart availability.
 
 ## What to evaluate
 
-1. **Paired context benefit:** whether providing the full review improves the *same segment* under the same model/task. Compare a case-by-case delta, not the two conditions' raw averages alone.
+1. **Paired context benefit:** whether providing the full review improves the *same segment* under the same model/task. Compare a case-by-case delta, not the two conditions' raw averages alone. On the 10 frozen stress cases, compare context against the **repetition-only control** to separate new context from target duplication.
 2. **Leakage:** is a model quote absent from the target but present elsewhere in the review? The runner records a `quoted_only_in_full_review` diagnostic. Narrative-based leakage needs manual audit even if no out-of-segment quote appears.
 3. **Direct-vs-inference and scope fidelity:** whether direct atmosphere assertions are distinguished from observations supporting weak hypotheses, and people/event/animal context from place-wide judgments.
 4. **False-positive restraint:** especially G and X segments, restroom darkness, traffic sound, generic praise, and unsupported physical security claims.
@@ -61,11 +62,11 @@ Prepare the blank reference **without the Pod**:
 python3 scripts/stage1a_runpod_paired_context_ablation_2026_11_13.py --stage report
 ```
 
-Run the 10 frozen context-stress cases in BOTH modes for both tasks:
+Run the 10 frozen context-stress cases in all THREE modes for both tasks:
 
 ```bash
 for model in qwen3.6:27b-bf16 gemma4:31b-it-bf16; do
-  for mode in segment context; do
+  for mode in segment context repeat; do
     for task in evidence score; do
       python3 scripts/stage1a_runpod_paired_context_ablation_2026_11_13.py \
         --stage run --base http://127.0.0.1:11435 \
@@ -75,7 +76,7 @@ for model in qwen3.6:27b-bf16 gemma4:31b-it-bf16; do
 done
 ```
 
-When pilot passes, finish the 30-case paired run (without the pilot flag):
+When pilot passes, finish the 30-case segment/context paired run (without the pilot flag); the 10 repeat controls are already complete:
 
 ```bash
 for model in qwen3.6:27b-bf16 gemma4:31b-it-bf16; do
@@ -89,7 +90,7 @@ for model in qwen3.6:27b-bf16 gemma4:31b-it-bf16; do
 done
 ```
 
-An optional 8B baseline uses the same loops replacing the model list with `qwen3:8b`. Be aware the baseline is **Q4**, while the larger models are **BF16**.
+An optional 8B baseline uses the same two loops replacing the model list with `qwen3:8b`. Be aware the baseline is **Q4**, while the larger models are **BF16**.
 
 Finally, generate blind A/B comparisons:
 
