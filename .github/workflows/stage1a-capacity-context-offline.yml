@@ -1,0 +1,26 @@
+name: Stage 1A capacity-context offline integrity
+on:
+  push:
+    paths:
+      - 'scripts/stage1a_capacity_context_2026_11_13.py'
+      - 'scripts/test_stage1a_capacity_context_offline.py'
+      - 'scripts/stage1a_runpod_paired_context_ablation_2026_11_13.py'
+      - 'scripts/stage1a_runpod_advanced_probe.py'
+      - 'research_audit/stage1a_gate_adj_nli_30_2026-11-12/audit_123_segments.csv'
+      - '.github/workflows/stage1a-capacity-context-offline.yml'
+  workflow_dispatch:
+
+jobs:
+  integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Compile runner and test
+        run: |
+          python -m py_compile scripts/stage1a_capacity_context_2026_11_13.py
+          python -m py_compile scripts/test_stage1a_capacity_context_offline.py
+      - name: Run frozen-source integrity assertions
+        run: python scripts/test_stage1a_capacity_context_offline.py
