@@ -99,6 +99,12 @@ def test_model_scoped_results_resume_and_separate_context(tmp_path, monkeypatch)
     assert all("qwen3" not in x and "gemma4" not in x
                for x in (tmp_path / "blind_human_comparison.csv").read_text(
                    encoding="utf-8-sig").splitlines())
+    private = json.loads((tmp_path / "blinding_key_KEEP_PRIVATE.json").read_text(
+        encoding="utf-8"))
+    assert len(private) == 40
+    assert all(set(x) == {"index", "mode", "model_A", "model_B"} for x in private)
+    assert all(set((x["model_A"], x["model_B"])) == set(probe.MODELS)
+               for x in private)
 
 
 def test_response_failure_is_a_logged_missing_result_not_silent_repair(tmp_path, monkeypatch):
