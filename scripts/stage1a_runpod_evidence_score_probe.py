@@ -34,6 +34,8 @@ from stage1a_runpod_advanced_probe import (
 )
 
 TASKS = ("evidence", "score")
+BASELINE_MODELS = ("qwen3:8b",)
+AVAILABLE_MODELS = MODELS + BASELINE_MODELS
 CHANNELS = ("direct", "inference", "both")
 REFERENTS = ("place", "surroundings", "person", "other", "ambiguous")
 CATEGORIES = ("calm", "inviting", "safe")
@@ -365,7 +367,18 @@ def report(args) -> dict:
     write_rows(args.output / "03_blind_scores_A_B.csv", score_compare)
     (args.output / "04_blinding_key_KEEP_PRIVATE.json").write_text(
         json.dumps(blinding, ensure_ascii=False, indent=2), encoding="utf-8")
+    # The same-prompt 8B baseline is optional: do not use it as an A/B
+    # competitor in the primary, two-advanced-model blind review packet.
+    baseline_coverage = {}
+    for mode in ("segment", "context"):
+        for task in TASKS:
+            baseline_path = folder_for(args.output, BASELINE_MODELS[0], mode, task)
+            saved = read_lines(baseline_path / "results.jsonl")
+            baseline_coverage[f"{BASELINE_MODELS[0]}/{mode}/{task}"] = {
+                "valid": len(saved), "planned": len(selected(rows, mode))
+            }
     summary = {
+        "optional_same_prompt_8b_baseline": baseline_coverage,
         "protocol": VERSION,
         "gold_first": "01_gold_first_BLANK.csv",
         "blind_evidence": "02_blind_evidence_A_B.csv",
@@ -399,7 +412,7 @@ def main() -> None:
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument("--stage", choices=("check", "run", "report"), default="check")
     p.add_argument("--task", choices=TASKS, default=TASKS[0])
-    p.add_argument("--model", choices=MODELS, default=MODELS[0])
+    p.add_argument("--model", choices=AVAILABLE_MODELS, default=MODELS[0])
     p.add_argument("--mode", choices=("segment", "context"), default="segment")
     p.add_argument("--source", type=Path, default=SOURCE)
     p.add_argument("--output", type=Path, default=DEFAULT_OUT)
