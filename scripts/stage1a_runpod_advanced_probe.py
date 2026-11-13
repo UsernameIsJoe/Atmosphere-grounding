@@ -253,12 +253,15 @@ def report(args) -> None:
             items = read_lines(folder / "results.jsonl")
             results[(model, mode)] = {row["index"]: row for row in items}
     total = []
+    private_key = []
     for mode in ("segment", "context"):
         for row in selected(rows, mode):
             idx = int(row["index"])
             models = list(MODELS)
             # Per-case label shuffle to prevent a persistent model-A bias.
             random.Random(20261113 + idx + (1000 if mode == "context" else 0)).shuffle(models)
+            private_key.append({"index": idx, "mode": mode,
+                                "model_A": models[0], "model_B": models[1]})
             a, b = (results[(m, mode)].get(idx) for m in models)
             total.append({
                 "index": idx, "mode": mode, "target_segment": row["segment"],
@@ -278,6 +281,11 @@ def report(args) -> None:
         writer = csv.DictWriter(f, fieldnames=list(total[0]))
         writer.writeheader()
         writer.writerows(total)
+    # Keep this file separate from the human-review packet. It permits
+    # deterministic unblinding only AFTER reviewers submit judgments.
+    (out / "blinding_key_KEEP_PRIVATE.json").write_text(
+        json.dumps(private_key, ensure_ascii=False, indent=2),
+        encoding="utf-8")
     summary = {}
     for (model, mode), saved in results.items():
         times = [r["duration_seconds"] for r in saved.values()]
