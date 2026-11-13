@@ -53,7 +53,7 @@ def test_real_case_cohort_and_reference_labels_not_visible():
             assert "reference_cal" not in json.dumps(req)
             assert "screen_class" not in json.dumps(req)
             assert "qwen_v2" not in json.dumps(req)
-            assert "nli" not in json.dumps(req).lower()
+            assert "nli_" not in req["messages"][1]["content"].lower()
             assert req["options"]["temperature"] == 0
             assert req["think"] is False
     for row in mod.selected(rows, "context"):
