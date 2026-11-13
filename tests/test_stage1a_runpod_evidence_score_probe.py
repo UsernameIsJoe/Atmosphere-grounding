@@ -170,3 +170,31 @@ def test_invalid_output_remains_error_and_does_not_auto_retry(tmp_path, monkeypa
     assert len(calls) == 1
     mod.run(args)
     assert len(calls) == 1
+
+
+
+def test_gold_first_and_completed_blind_human_reviews_never_overwritten(tmp_path):
+    from csv import DictReader, DictWriter
+    args = SimpleNamespace(source=mod.SOURCE, output=tmp_path)
+    mod.report(args)  # Generate gold FIRST, before any model results.
+    goldfile = tmp_path / "01_gold_first_BLANK.csv"
+    with goldfile.open(encoding="utf-8-sig", newline="") as f:
+        gold = list(DictReader(f))
+    gold[0]["human_direct_source_phrases"] = "researcher manually adjudicated"
+    with goldfile.open("w", encoding="utf-8-sig", newline="") as f:
+        writer = DictWriter(f, fieldnames=list(gold[0]))
+        writer.writeheader()
+        writer.writerows(gold)
+    original = goldfile.read_bytes()
+    evidence_file = tmp_path / "02_blind_evidence_A_B.csv"
+    with evidence_file.open(encoding="utf-8-sig", newline="") as f:
+        rows = list(DictReader(f))
+    rows[0]["human_notes"] = "independent adjudication"
+    with evidence_file.open("w", encoding="utf-8-sig", newline="") as f:
+        writer = DictWriter(f, fieldnames=list(rows[0]))
+        writer.writeheader()
+        writer.writerows(rows)
+    blind_original = evidence_file.read_bytes()
+    mod.report(args)  # Must not destroy pre-model human annotations.
+    assert goldfile.read_bytes() == original
+    assert evidence_file.read_bytes() == blind_original
