@@ -21,6 +21,12 @@ Earlier researcher rulings were important: some claims are BOTH direct and infer
 
 **Human reference, not another LLM judge:** Build a complete gold reference from the source texts BEFORE viewing either candidate's answers. The script creates a blank gold-first sheet and model-blind A/B comparison sheets, with a separate private model-key file. Record ambiguity explicitly. Score claim-level precision/recall (including independent direct/inference channel tags and both-channel cases) and per-emotion/channel category error + ordinal score error only on human-resolved labels; report how many cases remain uncertain. Model agreement and literal quote existence do not prove accuracy. The previous audit was provisional and nonblind.
 
+**Gold-first safeguard:** Before connecting to Runpod or running any model, clone the repository and execute the following on the Mac:
+
+    python3 scripts/stage1a_runpod_evidence_score_probe.py --stage report
+
+This creates the blank independent reference template without any network or GPU access. Fill/freeze 01_gold_first_BLANK.csv independently. A later report regeneration preserves that file and also preserves previously written blind-review human annotations. Do NOT share the private A/B model key until after judging predictions.
+
 ## Mac environment: no machine-learning packages required
 
 The user already has a Runpod account. Before provisioning anything, run on the new Mac in Terminal:
