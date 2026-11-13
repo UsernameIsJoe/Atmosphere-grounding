@@ -36,10 +36,10 @@ The frozen prior prompts, validation, and screen data are reused. This trial inc
 
 ## Run phases, sample counts
 1. **Offline preflight now:** pull code, run `python3 scripts/test_stage1a_capacity_context_offline.py` (no new synthetic evaluation cases) and generate blank `01_gold_first_BLANK.csv` before reading model outputs.
-2. **Capacity and correctness pilot:** 10 frozen difficult indices × 4 models × 3 inputs × 2 tasks = **240 model calls**. Verify full GPU residency for each model; capture model digests, response success, time, and context-only quote leakage. Do not change prompts after the pilot.
-3. **Complete paired data:** 30 × 4 × 2 inputs (segment/context) × 2 tasks = 480 calls, plus the 80 repeat-control calls already made in step 2. This is **560 total native calls**, *including* the pilot, not 560 additional calls.
-4. **Optional old-model reasoning ablation:** 10 × 2 models × 2 inputs × 2 tasks = **80 extra off-mode calls**. Can be run before or after native as long as protocol frozen.
-5. **Blind evaluation:** Independent reference for 30 segments; blinded A/B/C/D outputs per target per input mode; assess quotes, missed relevant claims, referents, negation, direct/inference correctness, false positive emotion inference, emotion-channel scores, ambiguity. Analyze case-level *paired deltas* context minus segment, and 10-case repeat-minus-segment control. Stratify D/I/G/X and identify failures where model capacity and context interact. Errors stay in denominator. Since multiple segments may originate from one review, avoid pretending 90 emotion rows per mode are 90 independent reviews.
+2. **One-case smoke test:** First target from the frozen 30 × four models × both tasks in segment-only mode = **8 calls**, included in the subsequent full total. Check schema validity and `ollama ps` = 100% GPU, including both large quantized models. Fix only execution/runtime problems, not the frozen task prompt.\n3. **Capacity and correctness pilot:** 10 frozen difficult indices × 4 models × 3 inputs × 2 tasks = **240 model calls**. Verify full GPU residency for each model; capture model digests, response success, time, and context-only quote leakage. Do not change prompts after the pilot.
+4. **Complete paired data:** 30 × 4 × 2 inputs (segment/context) × 2 tasks = 480 calls, plus the 80 repeat-control calls already made in step 2. This is **560 total native calls**, *including* the pilot, not 560 additional calls.
+5. **Optional old-model reasoning ablation:** 10 × 2 models × 2 inputs × 2 tasks = **80 extra off-mode calls**. Can be run before or after native as long as protocol frozen.
+6. **Blind evaluation:** Independent reference for 30 segments; blinded A/B/C/D outputs per target per input mode; assess quotes, missed relevant claims, referents, negation, direct/inference correctness, false positive emotion inference, emotion-channel scores, ambiguity. Analyze case-level *paired deltas* context minus segment, and 10-case repeat-minus-segment control. Stratify D/I/G/X and identify failures where model capacity and context interact. Errors stay in denominator. Since multiple segments may originate from one review, avoid pretending 90 emotion rows per mode are 90 independent reviews.
 
 ## Why this is preferable
 If the large models fix errors under segment-only input, the limiting factor is model selection. If those same models fail without context but pass with context, segmentation needs better referent context. If the context mode merely copies non-target sentences, full-review context hurts auditability. If all four fail the same way, target specification / evidence mapping may be the main bottleneck. The 10-case repetition control identifies whether duplicate exposure alone matters.
@@ -74,6 +74,18 @@ The report creates the independent 30-segment gold packet and blank blinded 70-c
 Once Pod + SSH tunnel are working at `http://127.0.0.1:11435`, verify names and digests:
 ```bash
 python3 scripts/stage1a_capacity_context_2026_11_13.py --stage check --base http://127.0.0.1:11435
+```
+
+Smoke-test one real segment in each model/task (these records are reused later):
+```bash
+for model in qwen3.6:27b-bf16 gemma4:31b-it-bf16 qwen3.5:122b gpt-oss:120b; do
+  for task in evidence score; do
+    python3 scripts/stage1a_capacity_context_2026_11_13.py \
+      --stage run --base http://127.0.0.1:11435 \
+      --model "$model" --mode segment --task "$task" \
+      --reasoning native --limit 1
+  done
+done
 ```
 
 Phase 1 — frozen 10 cases, all three context conditions, both tasks, all four models:
