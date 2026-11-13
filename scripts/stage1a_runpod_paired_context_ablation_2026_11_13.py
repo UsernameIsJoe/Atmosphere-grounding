@@ -286,6 +286,15 @@ def run(args) -> None:
             result_json = json.loads(raw)
             parsed = (validate_evidence(result_json, row["segment"])
                       if args.task == "evidence" else validate_score(result_json))
+            if args.task == "evidence":
+                for claim in parsed["claims"]:
+                    # Diagnostic only: quotation from OUTSIDE the target segment.
+                    # Never convert full-review-only quotes into valid evidence.
+                    claim["quoted_only_in_full_review"] = bool(
+                        claim["source_quote"]
+                        and not claim["source_exact"]
+                        and claim["source_quote"] in row["full_review"]
+                    )
         except (ValueError, TypeError, KeyError, TimeoutError, OSError) as exc:
             error = type(exc).__name__ + ": " + str(exc)
         elapsed = round(time.perf_counter() - t0, 3)
