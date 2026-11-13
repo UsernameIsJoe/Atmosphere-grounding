@@ -1,3 +1,5 @@
+> **Superseded experimental target (2026-11-13):** This page is retained for Runpod GPU/SSH hardware instructions. The current actual model benchmark tests BOTH direct/inference evidence detection and independently assessed emotion scoring. Use [STAGE1A_RUNPOD_EVIDENCE_SCORE_PROBE_2026-11-13.md](STAGE1A_RUNPOD_EVIDENCE_SCORE_PROBE_2026-11-13.md) and the corresponding V2 script. Do not execute the older single-task benchmarking commands for the new experiment.
+
 # Runpod advanced LLM first-capability probe — Nov 13, 2026
 
 **Status: experiment implemented and tested offline, but NO cloud model inference has been performed. This is a research plan, not a favorable result.**
