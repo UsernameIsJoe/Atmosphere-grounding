@@ -290,9 +290,32 @@ def run(args) -> None:
               f"({elapsed}s)", flush=True)
 
 
-def write_rows(path: Path, rows: list[dict]) -> None:
+def write_rows(path: Path, rows: list[dict], preserve_human: bool = True) -> None:
+    """Never overwrite a human-annotated artifact.
+
+    On a second report run, blank model-blind packets may be refreshed after
+    model outputs arrive, but any filled researcher annotations remain frozen.
+    The gold-first packet should ALWAYS be preserved once created.
+    """
     if not rows:
         raise ValueError("No rows to write")
+    if path.exists():
+        with path.open("r", encoding="utf-8-sig", newline="") as file:
+            previous = list(csv.DictReader(file))
+        if len(previous) != len(rows) or any(
+            old.get("index") != new.get("index") or
+            old.get("mode") != new.get("mode") or
+            old.get("target_segment") != new.get("target_segment")
+            for old, new in zip(previous, rows)
+        ):
+            raise ValueError("Cannot overwrite human packet with changed source rows")
+        if preserve_human or any(
+            str(value or "").strip()
+            for record in previous for field, value in record.items()
+            if field.startswith("human_")
+        ):
+            print(f"Preserving existing human packet: {path}", flush=True)
+            return
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8-sig", newline="") as file:
         writer = csv.DictWriter(file, fieldnames=list(rows[0]))
@@ -362,9 +385,11 @@ def report(args) -> dict:
             sc["human_preference_A_B_tie"] = ""
             sc["human_notes"] = ""
             score_compare.append(sc)
-    write_rows(args.output / "01_gold_first_BLANK.csv", gold)
-    write_rows(args.output / "02_blind_evidence_A_B.csv", evidence_compare)
-    write_rows(args.output / "03_blind_scores_A_B.csv", score_compare)
+    write_rows(args.output / "01_gold_first_BLANK.csv", gold, preserve_human=True)
+    write_rows(args.output / "02_blind_evidence_A_B.csv", evidence_compare,
+               preserve_human=False)
+    write_rows(args.output / "03_blind_scores_A_B.csv", score_compare,
+               preserve_human=False)
     (args.output / "04_blinding_key_KEEP_PRIVATE.json").write_text(
         json.dumps(blinding, ensure_ascii=False, indent=2), encoding="utf-8")
     # The same-prompt 8B baseline is optional: do not use it as an A/B
