@@ -1,0 +1,74 @@
+[
+  {
+    "case_id": "K01",
+    "A": "qwen3:8b",
+    "B": "qwen3.6:27b-bf16",
+    "C": "gemma4:31b-it-bf16"
+  },
+  {
+    "case_id": "K02",
+    "A": "qwen3:8b",
+    "B": "qwen3.6:27b-bf16",
+    "C": "gemma4:31b-it-bf16"
+  },
+  {
+    "case_id": "K03",
+    "A": "qwen3.6:27b-bf16",
+    "B": "qwen3:8b",
+    "C": "gemma4:31b-it-bf16"
+  },
+  {
+    "case_id": "K04",
+    "A": "qwen3.6:27b-bf16",
+    "B": "gemma4:31b-it-bf16",
+    "C": "qwen3:8b"
+  },
+  {
+    "case_id": "K05",
+    "A": "qwen3.6:27b-bf16",
+    "B": "gemma4:31b-it-bf16",
+    "C": "qwen3:8b"
+  },
+  {
+    "case_id": "K06",
+    "A": "qwen3.6:27b-bf16",
+    "B": "qwen3:8b",
+    "C": "gemma4:31b-it-bf16"
+  },
+  {
+    "case_id": "U01",
+    "A": "qwen3:8b",
+    "B": "gemma4:31b-it-bf16",
+    "C": "qwen3.6:27b-bf16"
+  },
+  {
+    "case_id": "U02",
+    "A": "qwen3.6:27b-bf16",
+    "B": "qwen3:8b",
+    "C": "gemma4:31b-it-bf16"
+  },
+  {
+    "case_id": "U03",
+    "A": "qwen3.6:27b-bf16",
+    "B": "qwen3:8b",
+    "C": "gemma4:31b-it-bf16"
+  },
+  {
+    "case_id": "U04",
+    "A": "qwen3:8b",
+    "B": "qwen3.6:27b-bf16",
+    "C": "gemma4:31b-it-bf16"
+  },
+  {
+    "case_id": "U05",
+    "A": "qwen3:8b",
+    "B": "qwen3.6:27b-bf16",
+    "C": "gemma4:31b-it-bf16"
+  },
+  {
+    "case_id": "U06",
+    "A": "qwen3.6:27b-bf16",
+    "B": "gemma4:31b-it-bf16",
+    "C": "qwen3:8b"
+  }
+]
