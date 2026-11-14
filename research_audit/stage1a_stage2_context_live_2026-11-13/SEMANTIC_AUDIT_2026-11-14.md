@@ -24,12 +24,22 @@ U01: empty area that will later be a dance floor is a spatial scheduling descrip
 U02: underwhelming *exhibits* is about quality, not welcome, calm or safety; all NONE. Qwen target+context inviting OPPOSES is a category spillover.
 U03: traffic sound is intrusive; calm OPPOSES/DIRECT; inviting and safe NONE. Proximity to roadway is mentioned in sound context, not an automatic safety claim.
 U04: 'fun for all ages' means age-accessible enjoyment; whether it counts as invitedness depends on adopted inclusivity vs atmosphere threshold. Conservative target inviting NONE, at most inferred welcomingness. Qwen off-target quotes in context arm were invalid. Full review broadly positive but not necessarily felt welcomed.
-U05: 'epic and famous, but not cleanest' and closed toilets in full review present ambiguity about the scope of discomfort vs place inviting. Tentatively target inviting NONE; full review inviting NONE or OPPOSES/INFERENCE depending whether amenity access counts as unwelcoming, subject to user adjudication. Avoid making clean/dirt universally imply all emotional categories.
-U06: lovely comfortable seating under lights and music explicitly supports inviting, not safety. Whether it weakly supports calm through relaxing experiential context is debatable, subject to user adjudication.
+U05: USER ADJUDICATED inviting OPPOSES/INFERENCE. Poor cleanliness and closed/inaccessible toilets count as evidence of an uninviting visitor experience, without automatically implying calmness or safety. Distinguish the target segment (cleanliness) from the full review (closed toilets), so scope boundaries remain explicit.
+U06: USER ADJUDICATED calm UNCERTAIN (inference). Lovely comfortable seating under lights and music directly supports inviting but does not establish calm; both relaxing and lively readings remain plausible. Safe NONE.
 
-## Research decisions pending
-A. Is blocked/restroom access and dirt enough to infer that U05 feels uninviting, or are these only amenity comments?
-B. Does U06's pleasant, comfortable lingering with live music count as inferred calm, or should calm remain uncertain/none?
+## User adjudication lock (2026-11-14)
+- U05 inviting: OPPOSES / INFERENCE (negative experiential contribution of cleanliness and unavailable amenities; ensure evidence stays within the evaluated scope).
+- U06 calm: UNCERTAIN / INFERENCE (relaxation possible, but not sufficiently established).
+- Prior user locks: K01 calm NONE, K02 safe OPPOSES/INFERENCE, K05 safe OPPOSES/INFERENCE.
+- These are category judgments, not a full independently annotated gold dataset.
+
+## Next experiment proposal
+1. Freeze 12 existing reviews and create full-span sentence/clause inventory for each, with source offsets and the original review context.
+2. Evaluate 2 selected models in two segment modes: target only vs target + entire review for referent disambiguation. Omit full-review-only arm from the paired accuracy test because it has a different target scope.
+3. Use explicit evidence, inferred condition, emotion verdict and basis, attribution, and quote/span validity as independently audited dimensions; enforce target-only quotation and forbid context-only rationales.
+4. Run a **small, stratified 24-segment diagnostic** first (2 models × 2 modes × 24 segments = 96 calls). Include known pitfalls K01/K02/K03/K04/K05/K06/U05/U06 and positive/negative/null cases. Assess against the locked human judgments where available and request human adjudication only on unresolved ambiguous cases.
+5. If leakage persists, compare prompt-only versus hard source-bound structured claim extraction, keeping prompts, data, and models fixed. Do not escalate model capacity yet.
+
 
 ## Method recommendations
 - Keep the entire source review for referent resolution, but hard constrain each output claim's quotation and corresponding emotion rationale to the target span. A mechanically exact target check is *necessary but not sufficient*; review-context words in reasons and category verdicts can leak without being quoted.
