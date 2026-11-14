@@ -1,0 +1,18 @@
+{
+  "qwen3.8:27b/segment": {
+    "valid": 12,
+    "errors": 0
+  },
+  "qwen3.8:27b/segment_context": {
+    "valid": 12,
+    "errors": 0
+  },
+  "gpt-oss:120b/segment": {
+    "valid": 12,
+    "errors": 0
+  },
+  "gpt-oss:120b/segment_context": {
+    "valid": 12,
+    "errors": 0
+  }
+}
