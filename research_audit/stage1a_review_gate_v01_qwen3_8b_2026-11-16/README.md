@@ -16,7 +16,7 @@
 | Quote validation failures | 2 (K04, U04) |
 
 - **K04**: a quoted clause lowercased `We` → `we`; the source phrase was otherwise substantially correct.
-- **U04**: anchor used `it's` where the original says `it's`? The first-pass strict checker rejected an inexact substring. Inspect raw fields for the precise mismatch rather than assuming exact-copy compliance.
+- **U04**: the quote normalized the original double space after `it's` to a single space; exact-substring validation correctly rejected it.
 - **K01 correctly kept**: the personal photographer delay is embedded in a review with staff hospitality and use of the space. The model anchored the qualifying use-of-space passage.
 - **U02 kept**, but **rationale is weak**: the model anchored `The three exhibits on display were quite underwhelming`, incorrectly treating exhibit appraisal itself as sufficient spatial/experiential evidence. The full review ALSO recommends exploring MIT buildings and campus public art; that later place-directed visit recommendation can justify KEEP independently. Thus this is an **anchor/rationale problem**, not a proven false keep.
 - **K05 kept** (reasonable because the review contains a visitor-facing intimidating encounter), but the model selected the **security-camera mention as its anchor**, which alone does not demonstrate eligibility as strongly as the encounter does.
