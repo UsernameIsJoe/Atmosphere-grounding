@@ -5,6 +5,8 @@
 **Scope:** Text Stage 1A only; Stage 1B and Stage 2 remain separate.  
 **Supersedes:** The November 10 Stage 1A clause-first three-LLM-panel → consensus → NLI-student approach as the *planned default architecture*. The older plan, implementations, tests, and audits remain available as historical evidence.
 
+> **2026-11-16 adopted gate addendum (supersedes only the earlier "no mandatory hard relevance gate" clause below):** The separate, full-review [eligibility gate v0.4](STAGE1A_REVIEW_GATE_LOCK_2026-11-16.md) is now the approved **pilot** filter **before sentence segmentation**. It uses one Qwen3:8B review-level verdict with the frozen prompt/codebook; only KEEP reviews proceed to the original Stage 1A segment/extraction pipeline. REJECT reviews remain preserved for scientific false-negative audit. No reason-only adjudicator is added. This decision does **not** claim that the end-to-end pipeline is integrated/validated, nor does it change the downstream emotion codebook, [2]/[3A] merge rule, or E/T/I research distinction. The original 2026-11-11 plan remains historically accurate for the date it was written.
+
 ## Goal and invariants
 
 Measure **review-reported, place-attributed atmosphere**, not atmosphere inferred from objects or environmental features. Produce source-grounded, category-specific evidence profiles that can scale beyond the Cambridge pilot to reviews from any city or number of places.
