@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 1A v0.3: per-emotion segment assessments",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "codebook_version": {
+      "type": "string",
+      "const": "0.3"
+    },
+    "assessments": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "emotion": {
+            "type": "string",
+            "enum": [
+              "calm",
+              "inviting",
+              "safe"
+            ]
+          },
+          "verdict": {
+            "type": "string",
+            "enum": [
+              "supports",
+              "opposes",
+              "none",
+              "uncertain"
+            ]
+          },
+          "reason": {
+            "type": "string"
+          },
+          "evidence": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "quote": {
+                  "type": "string"
+                },
+                "direction": {
+                  "type": "string",
+                  "enum": [
+                    "supports",
+                    "opposes"
+                  ]
+                },
+                "track": {
+                  "type": "string",
+                  "enum": [
+                    "E",
+                    "T"
+                  ]
+                },
+                "referent": {
+                  "type": "string",
+                  "enum": [
+                    "place",
+                    "surroundings",
+                    "people",
+                    "animals",
+                    "other",
+                    "ambiguous"
+                  ]
+                }
+              },
+              "required": [
+                "quote",
+                "direction",
+                "track",
+                "referent"
+              ]
+            }
+          }
+        },
+        "required": [
+          "emotion",
+          "verdict",
+          "reason",
+          "evidence"
+        ]
+      }
+    }
+  },
+  "required": [
+    "codebook_version",
+    "assessments"
+  ]
+}
