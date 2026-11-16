@@ -1,0 +1,74 @@
+{
+  "pod_id": "uyrp65806kyim8",
+  "gpu": "NVIDIA A100-SXM4-80GB",
+  "cloud": "SECURE",
+  "hourly_gpu_rate_usd": 2.19,
+  "container_disk_gb": 180,
+  "creation_timer_epoch": 1794866629.496,
+  "hard_cleanup_deadline_epoch": 1794868429.496,
+  "source_commit": "450231c4eeda04485125cd2db071bc072823cdf3",
+  "source_branch": "codex/stage1a-v05-gate-passed-followup-20261116",
+  "protocol_change": "none; exact prepared cohort and v0.5 setup",
+  "archive_status": "pending",
+  "python_version": "3.12.3",
+  "ollama": {
+    "version": "0.40.16"
+  },
+  "model_inventory": {
+    "models": [
+      {
+        "name": "gemma4:31b-it-bf16",
+        "model": "gemma4:31b-it-bf16",
+        "modified_at": "2026-11-16T22:10:28.249242949Z",
+        "size": 62613927798,
+        "digest": "df1661a2a6aaa94faf24bbaf23a691877a27d0e6052598f105a225618a079e76",
+        "details": {
+          "parent_model": "dhiltgen/gemma4:31b-it-bf16-llamacpp",
+          "format": "gguf",
+          "family": "gemma4",
+          "families": [
+            "gemma4"
+          ],
+          "parameter_size": "30.7B",
+          "quantization_level": "BF16",
+          "context_length": 262144,
+          "embedding_length": 5376,
+          "runner": "llamacpp"
+        },
+        "capabilities": [
+          "completion",
+          "vision",
+          "tools",
+          "thinking"
+        ]
+      },
+      {
+        "name": "qwen3.8:27b",
+        "model": "qwen3.8:27b",
+        "modified_at": "2026-11-16T22:09:02.373381946Z",
+        "size": 17741872154,
+        "digest": "aaee06c39dcf2437cde036998d960e1fc1494b8191be7cc9657d01e509097813",
+        "details": {
+          "parent_model": "qwen3.8:27b-q4_K_M",
+          "format": "gguf",
+          "family": "qwen35",
+          "families": [
+            "qwen35"
+          ],
+          "parameter_size": "27.3B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 262144,
+          "embedding_length": 5120,
+          "runner": "llamacpp"
+        },
+        "capabilities": [
+          "completion",
+          "vision",
+          "tools",
+          "thinking"
+        ]
+      }
+    ]
+  },
+  "nvidia_smi": "NVIDIA A100-SXM4-80GB, 81920 MiB, 595.91.07"
+}

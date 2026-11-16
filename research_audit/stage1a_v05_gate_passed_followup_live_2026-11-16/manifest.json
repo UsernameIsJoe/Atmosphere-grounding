@@ -1,0 +1,54 @@
+{
+  "protocol": "stage1a_v05_gate_passed_followup",
+  "status": "partial_time_limit",
+  "reviews": 12,
+  "segments": 71,
+  "max_inference_calls": 142,
+  "repeats": 1,
+  "case_ids": [
+    "T02",
+    "T04",
+    "T06",
+    "T10",
+    "T12",
+    "N04",
+    "N06",
+    "N07",
+    "N08",
+    "N09",
+    "N10",
+    "N11"
+  ],
+  "models": [
+    "qwen3.8:27b",
+    "gemma4:31b-it-bf16"
+  ],
+  "expected_model_digests": {
+    "qwen3.8:27b": "aaee06c39dcf2437cde036998d960e1fc1494b8191be7cc9657d01e509097813",
+    "gemma4:31b-it-bf16": "df1661a2a6aaa94faf24bbaf23a691877a27d0e6052598f105a225618a079e76"
+  },
+  "options": {
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 8192,
+    "num_predict": 2048
+  },
+  "think": false,
+  "no_retries": true,
+  "input_sha256": "dd184329bb28c72075c8a8327f4dee603ba6183bd63d8b821d4594ee3219cd28",
+  "gate_sha256": "76a33789fd045671a3706ba55532eb13d03745717d4a70de76ed195a0aafd442",
+  "previous_run_sha256": "7bb1204b0f2728549a238a8fdfe52bd3f8d11b1ecf7664605864ad61c9e7ac4e",
+  "codebook_sha256": "eaf8e1f4498087d7847bc321feaa7a224121c51b61b7ff320a0f88d749242e60",
+  "prompt_sha256": "92459110bbaf579ee1b6109a671ba260b26eddf870d1678dca0ede939ca83858",
+  "schema_sha256": "3d6bd54778868a7a176dc8c7d8af95e98fa76979ee68bf589e39e8906b88f3f7",
+  "system_sha256": "b854badb6a8578b8f55d9b490292b6afe08e9afdf2a5857d462cce8df2219288",
+  "segmentation": "source-exact sentence boundaries; parenthetical content kept together; no contrast splitting",
+  "sampling": "all 12 KEEP reviews outside prior v0.5; all source sentences",
+  "target_scope": "one original sentence; complete original review as context",
+  "order": "fixed breadth-first sentence order, identical for both models",
+  "scope_note": "new to latest extraction pilot; previously used for gate development, not independent holdout",
+  "study_started_at": 1794866629.496,
+  "inference_deadline_epoch": 1794868249.496,
+  "cleanup_deadline_epoch": 1794868429.496,
+  "inference_finished_at": 1794868233.3940995
+}

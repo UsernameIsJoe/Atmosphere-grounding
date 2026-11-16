@@ -1,0 +1,229 @@
+qwen3.8:27b T02__01 invalid
+qwen3.8:27b T04__01 valid
+qwen3.8:27b T06__01 valid
+qwen3.8:27b T10__01 valid
+qwen3.8:27b T12__01 valid
+qwen3.8:27b N04__01 valid
+qwen3.8:27b N06__01 valid
+qwen3.8:27b N07__01 valid
+qwen3.8:27b N08__01 valid
+qwen3.8:27b N09__01 valid
+qwen3.8:27b N10__01 valid
+qwen3.8:27b N11__01 valid
+qwen3.8:27b T04__02 valid
+qwen3.8:27b T06__02 valid
+qwen3.8:27b T10__02 valid
+qwen3.8:27b T12__02 valid
+qwen3.8:27b N04__02 valid
+qwen3.8:27b N06__02 valid
+qwen3.8:27b N07__02 valid
+qwen3.8:27b N08__02 valid
+qwen3.8:27b N09__02 valid
+qwen3.8:27b N10__02 valid
+qwen3.8:27b N11__02 valid
+qwen3.8:27b T06__03 valid
+qwen3.8:27b T10__03 valid
+qwen3.8:27b T12__03 valid
+qwen3.8:27b N04__03 valid
+qwen3.8:27b N06__03 valid
+qwen3.8:27b N07__03 valid
+qwen3.8:27b N08__03 valid
+qwen3.8:27b N09__03 valid
+qwen3.8:27b T06__04 valid
+qwen3.8:27b T12__04 valid
+qwen3.8:27b N04__04 valid
+qwen3.8:27b N06__04 valid
+qwen3.8:27b N07__04 valid
+qwen3.8:27b N08__04 valid
+qwen3.8:27b N09__04 valid
+qwen3.8:27b T06__05 valid
+qwen3.8:27b T12__05 valid
+qwen3.8:27b N04__05 valid
+qwen3.8:27b N06__05 valid
+qwen3.8:27b N07__05 valid
+qwen3.8:27b N09__05 valid
+qwen3.8:27b T06__06 valid
+qwen3.8:27b T12__06 valid
+qwen3.8:27b N04__06 valid
+qwen3.8:27b N06__06 valid
+qwen3.8:27b N07__06 valid
+qwen3.8:27b T06__07 valid
+qwen3.8:27b T12__07 valid
+qwen3.8:27b N04__07 valid
+qwen3.8:27b N06__07 valid
+qwen3.8:27b N07__07 valid
+qwen3.8:27b T06__08 valid
+qwen3.8:27b T12__08 valid
+qwen3.8:27b N04__08 valid
+qwen3.8:27b N06__08 valid
+qwen3.8:27b T06__09 valid
+qwen3.8:27b T12__09 valid
+qwen3.8:27b N04__09 valid
+qwen3.8:27b N06__09 valid
+qwen3.8:27b T06__10 valid
+qwen3.8:27b T12__10 valid
+qwen3.8:27b N04__10 valid
+qwen3.8:27b T06__11 valid
+qwen3.8:27b T12__11 valid
+qwen3.8:27b N04__11 valid
+qwen3.8:27b T06__12 valid
+gemma4:31b-it-bf16 T02__01 invalid
+gemma4:31b-it-bf16 T04__01 valid
+gemma4:31b-it-bf16 T06__01 valid
+gemma4:31b-it-bf16 T10__01 valid
+gemma4:31b-it-bf16 T12__01 valid
+gemma4:31b-it-bf16 N04__01 valid
+gemma4:31b-it-bf16 N06__01 valid
+gemma4:31b-it-bf16 N07__01 invalid
+gemma4:31b-it-bf16 N08__01 valid
+gemma4:31b-it-bf16 N09__01 valid
+gemma4:31b-it-bf16 N10__01 valid
+gemma4:31b-it-bf16 N11__01 valid
+gemma4:31b-it-bf16 T04__02 valid
+gemma4:31b-it-bf16 T06__02 valid
+gemma4:31b-it-bf16 T10__02 valid
+gemma4:31b-it-bf16 T12__02 valid
+gemma4:31b-it-bf16 N04__02 valid
+gemma4:31b-it-bf16 N06__02 valid
+gemma4:31b-it-bf16 N07__02 valid
+gemma4:31b-it-bf16 N08__02 valid
+gemma4:31b-it-bf16 N09__02 valid
+gemma4:31b-it-bf16 N10__02 valid
+gemma4:31b-it-bf16 N11__02 valid
+gemma4:31b-it-bf16 T06__03 valid
+gemma4:31b-it-bf16 T10__03 valid
+gemma4:31b-it-bf16 T12__03 valid
+gemma4:31b-it-bf16 N04__03 valid
+gemma4:31b-it-bf16 N06__03 valid
+gemma4:31b-it-bf16 N07__03 valid
+gemma4:31b-it-bf16 N08__03 valid
+gemma4:31b-it-bf16 N09__03 valid
+gemma4:31b-it-bf16 T06__04 valid
+gemma4:31b-it-bf16 T12__04 valid
+gemma4:31b-it-bf16 N04__04 valid
+gemma4:31b-it-bf16 N06__04 invalid
+gemma4:31b-it-bf16 N07__04 valid
+gemma4:31b-it-bf16 N08__04 valid
+gemma4:31b-it-bf16 N09__04 valid
+gemma4:31b-it-bf16 T06__05 valid
+gemma4:31b-it-bf16 T12__05 valid
+gemma4:31b-it-bf16 N04__05 valid
+{
+  "models": {
+    "qwen3.8:27b": {
+      "attempted_segments": 69,
+      "valid_segments": 68,
+      "invalid_segments": 1,
+      "unattempted_segment_ids": [
+        "N04__12",
+        "N04__13"
+      ],
+      "reviews_touched": 12,
+      "reviews_complete_valid": [
+        "T04",
+        "T06",
+        "T10",
+        "T12",
+        "N06",
+        "N07",
+        "N08",
+        "N09",
+        "N10",
+        "N11"
+      ],
+      "valid_claims": 74,
+      "valid_empty_segments": 10
+    },
+    "gemma4:31b-it-bf16": {
+      "attempted_segments": 41,
+      "valid_segments": 38,
+      "invalid_segments": 3,
+      "unattempted_segment_ids": [
+        "N06__05",
+        "N07__05",
+        "N09__05",
+        "T06__06",
+        "T12__06",
+        "N04__06",
+        "N06__06",
+        "N07__06",
+        "T06__07",
+        "T12__07",
+        "N04__07",
+        "N06__07",
+        "N07__07",
+        "T06__08",
+        "T12__08",
+        "N04__08",
+        "N06__08",
+        "T06__09",
+        "T12__09",
+        "N04__09",
+        "N06__09",
+        "T06__10",
+        "T12__10",
+        "N04__10",
+        "T06__11",
+        "T12__11",
+        "N04__11",
+        "T06__12",
+        "N04__12",
+        "N04__13"
+      ],
+      "reviews_touched": 12,
+      "reviews_complete_valid": [
+        "T04",
+        "T10",
+        "N08",
+        "N10",
+        "N11"
+      ],
+      "valid_claims": 29,
+      "valid_empty_segments": 14
+    }
+  },
+  "paired_valid_segments": [
+    "N04__01",
+    "N04__02",
+    "N04__03",
+    "N04__04",
+    "N04__05",
+    "N06__01",
+    "N06__02",
+    "N06__03",
+    "N07__02",
+    "N07__03",
+    "N07__04",
+    "N08__01",
+    "N08__02",
+    "N08__03",
+    "N08__04",
+    "N09__01",
+    "N09__02",
+    "N09__03",
+    "N09__04",
+    "N10__01",
+    "N10__02",
+    "N11__01",
+    "N11__02",
+    "T04__01",
+    "T04__02",
+    "T06__01",
+    "T06__02",
+    "T06__03",
+    "T06__04",
+    "T06__05",
+    "T10__01",
+    "T10__02",
+    "T10__03",
+    "T12__01",
+    "T12__02",
+    "T12__03",
+    "T12__04",
+    "T12__05"
+  ],
+  "planned_segments_per_model": 71,
+  "semantic_accuracy": "not computed; independent source audit required",
+  "invalid_policy": "invalid/timeout/missing are not empty or correct"
+}
+Operator must archive results and terminate compute before cleanup_deadline_epoch.
