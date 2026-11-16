@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 1A v0.5 — directional claims with E/T provenance",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "codebook_version": {
+      "type": "string",
+      "const": "0.5"
+    },
+    "assessments": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "emotion": {
+            "type": "string",
+            "enum": [
+              "calm",
+              "inviting",
+              "safe"
+            ]
+          },
+          "claims": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "properties": {
+                "quote": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "direction": {
+                  "type": "string",
+                  "enum": [
+                    "supports",
+                    "opposes"
+                  ]
+                },
+                "track": {
+                  "type": "string",
+                  "enum": [
+                    "E",
+                    "T"
+                  ]
+                },
+                "referent": {
+                  "type": "string",
+                  "enum": [
+                    "place",
+                    "surroundings",
+                    "people",
+                    "animals",
+                    "other",
+                    "ambiguous"
+                  ]
+                },
+                "reason": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "quote",
+                "direction",
+                "track",
+                "referent",
+                "reason"
+              ]
+            }
+          }
+        },
+        "required": [
+          "emotion",
+          "claims"
+        ]
+      }
+    }
+  },
+  "required": [
+    "codebook_version",
+    "assessments"
+  ]
+}
