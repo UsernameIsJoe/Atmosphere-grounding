@@ -25,7 +25,7 @@ LATEST_BLIND={
 "K03:calm":"opposes","K03:inviting":"opposes","K04:inviting":"supports","K05:safe":"opposes",
 "K06:inviting":"opposes","U01:calm":"opposes","U02:inviting":"opposes","U04:inviting":"supports",
 "U05:inviting":"mixed","U06:calm":"supports"}
-OPTIONS={"temperature":0,"seed":42,"num_ctx":16384,"num_predict":2048}
+OPTIONS={"temperature":0,"seed":42,"num_ctx":8192,"num_predict":2048}
 FENCE=chr(96)*3
 
 def h(x):
