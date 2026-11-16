@@ -12,7 +12,7 @@
 
 - 36 model decisions returned, **34 strictly validated / 2 invalid** exact anchor matches (K03 and N04). These two nevertheless have parseable KEEP decisions.
 - Model verdict totals (including the two validation failures): **23 KEEP, 13 REJECT**.
-- Compared with prior small-LLM results, decision changes were U02, T08, N05 and N12 (four cases); T11 remained REJECT. These changes are not all errors; cases require review-level human adjudication.
+- Compared with prior small-LLM results, decision changes were **U02, T08, N05, N12** (four cases), all accepted as improved rejections in the researcher's 2026-11-16 review. **T11 remained REJECT.** No identified new *eligibility-verdict* regression among these reviewed cases; this is not an independent accuracy estimate.
 
 ## Targeted outcomes and regressions
 
@@ -21,7 +21,7 @@
 | N05 shelter food-policy/kitchen | KEEP (v0.3) | **REJECT** | Correct per user’s adjudication |
 | N12 apartment/agent/generic praise | KEEP (v0.3) | **REJECT** | Correct per user’s adjudication |
 | T11 cold meal/waitress | REJECT (v0.3), KEEP (v0.2) | **REJECT** | Correct, maintained |
-| T08 “The place is so comfortable and welcoming!” | KEEP (v0.2) | **REJECT** | **Likely false-negative regression**: v0.4 incorrectly requires physical/spatial conditions and overlooks explicit place atmosphere |
+| T08 “The place is so comfortable and welcoming!” | KEEP (v0.2) | **REJECT** | **Researcher adjudicated REJECT (2026-11-16):** the full review is centered on a personal experience involving one person. This is an improvement, **not** a verdict regression. |
 | K01 private elopement and courtesy | KEEP (v0.1) | **KEEP** | **Still wrong by user’s adjudication**; anchor is incidental photo access |
 | T06 one wedding reception atmosphere | KEEP (v0.2) | **KEEP** | **Still wrong by user’s adjudication**; event-boundary not changed in v0.4 |
 | U02 exhibits-only/other-site recommendations | KEEP (v0.1) | **REJECT** | Consistent with v0.2 codebook's provisional expected judgment |
@@ -29,6 +29,10 @@
 | N04 | KEEP (v0.3) | KEEP, **invalid quote** | Nonexact verbatim quote |
 
 **Additional observation:** N07 was kept, appropriately based on explicit “Good vibe, warm atmosphere, no frills” elsewhere in the full review, **but** the model’s chosen anchor refers to kale Caesar food quality instead. The verdict may be right while the purported evidence is not independently sufficient; strict substring validation alone cannot catch such a semantic error.
+
+## Decision lock (added after researcher review)
+
+The researcher accepted **v0.4** as the pilot baseline: [decision record](../../Docs/STAGE1A_REVIEW_ELIGIBILITY_GATE_LOCK_2026-11-16.md). N07 remains an evidence-selection error despite a correct KEEP verdict; K03/N04's two capitalization quote errors are considered minor. T06 and K01 remain known preexisting private-event false positives, not regressions.
 
 ## Important caveats
 
