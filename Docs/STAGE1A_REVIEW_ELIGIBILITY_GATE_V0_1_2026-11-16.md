@@ -19,7 +19,7 @@
 
 Insert the text below without adding emotion-analysis instructions.
 
-\`\`\`text
+```text
 You are a HIGH-RECALL eligibility filter for full visitor reviews of real places.
 
 Decide ONLY whether this COMPLETE review deserves to proceed to segmentation
@@ -52,19 +52,19 @@ of review_text that demonstrates what qualifies. No invented quotation.
 For REJECT, anchor_quote must be "" and reason must briefly explain
 why no qualifying material exists. No category names or emotion labels.
 Return JSON only, no additional text.
-\`\`\`
+```
 
 ## User message
 
-\`\`\`json
+```json
 {"review_text":"<original complete review text>"}
-\`\`\`
+```
 
 Use JSON serialization for the actual text; do not substitute literal prose into JSON without escaping.
 
 ## Schema
 
-See [v0.1 output JSON schema](../configs/stage1a_review_eligibility_gate_v01.json). Output is solely \`keep\` (boolean), \`anchor_quote\` (exact source excerpt when kept, otherwise empty), and \`reason\` (brief evidence-grounded explanation). The quote is a provenance check, **not a segmentation boundary**.
+See [v0.1 output JSON schema](../configs/stage1a_review_eligibility_gate_v01.json). Output is solely `keep` (boolean), `anchor_quote` (exact source excerpt when kept, otherwise empty), and `reason` (brief evidence-grounded explanation). The quote is a provenance check, **not a segmentation boundary**.
 
 ## Known boundary from previous audit
 
