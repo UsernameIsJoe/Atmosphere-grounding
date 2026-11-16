@@ -11,8 +11,8 @@
 ## Quantitative outcomes
 
 - 36 model decisions returned, **34 strictly validated / 2 invalid** exact anchor matches (K03 and N04). These two nevertheless have parseable KEEP decisions.
-- Model verdict totals (including the two validation failures): **24 KEEP, 12 REJECT**.
-- Compared with prior small-LLM results, decision changes include U02, T08, T11, N05 and N12. These changes are not all errors; cases require review-level human adjudication.
+- Model verdict totals (including the two validation failures): **23 KEEP, 13 REJECT**.
+- Compared with prior small-LLM results, decision changes were U02, T08, N05 and N12 (four cases); T11 remained REJECT. These changes are not all errors; cases require review-level human adjudication.
 
 ## Targeted outcomes and regressions
 
