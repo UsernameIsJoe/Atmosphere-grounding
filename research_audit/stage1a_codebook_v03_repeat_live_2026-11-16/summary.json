@@ -1,0 +1,97 @@
+[
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 1,
+    "valid": 10,
+    "total": 12,
+    "none": 25,
+    "judgements": 30,
+    "errors": {
+      "K01": "ValueError('non-exact target quote')",
+      "K04": "ValueError('non-exact target quote')"
+    },
+    "tracks": {
+      "E": 4,
+      "T": 1
+    }
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 2,
+    "valid": 11,
+    "total": 12,
+    "none": 26,
+    "judgements": 33,
+    "errors": {
+      "K04": "ValueError('non-exact target quote')"
+    },
+    "tracks": {
+      "E": 6,
+      "T": 1
+    }
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 3,
+    "valid": 11,
+    "total": 12,
+    "none": 26,
+    "judgements": 33,
+    "errors": {
+      "K04": "ValueError('non-exact target quote')"
+    },
+    "tracks": {
+      "E": 6,
+      "T": 1
+    }
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeatability_valid_shared": "30/30",
+    "unstable": []
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 1,
+    "valid": 12,
+    "total": 12,
+    "none": 25,
+    "judgements": 36,
+    "errors": {},
+    "tracks": {
+      "E": 9,
+      "T": 2
+    }
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 2,
+    "valid": 12,
+    "total": 12,
+    "none": 25,
+    "judgements": 36,
+    "errors": {},
+    "tracks": {
+      "E": 9,
+      "T": 2
+    }
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 3,
+    "valid": 12,
+    "total": 12,
+    "none": 25,
+    "judgements": 36,
+    "errors": {},
+    "tracks": {
+      "E": 9,
+      "T": 2
+    }
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeatability_valid_shared": "36/36",
+    "unstable": []
+  }
+]
