@@ -49,8 +49,10 @@ Important distinctions:
 Do not classify review topics. Do not assess emotions, E/T, supports,
 opposes, or individual segments. No extra fields.
 
-Return ONLY this JSON:
-{"keep": true/false, "anchor_quote": "...", "reason": "..."}
+Return ONLY a valid JSON object with EXACTLY these fields:
+keep (JSON boolean), anchor_quote (string), reason (string).
+For example, for a KEEP decision:
+{"keep": true, "anchor_quote": "The shop is bright and easy to navigate", "reason": "Reports lighting and navigability of the reviewed shop."}
 For KEEP: anchor_quote is ONE short, verbatim, contiguous substring of
 review_text demonstrating the place-level claim; copy case, punctuation
 and spaces exactly. Give a short reason why it concerns the reviewed
