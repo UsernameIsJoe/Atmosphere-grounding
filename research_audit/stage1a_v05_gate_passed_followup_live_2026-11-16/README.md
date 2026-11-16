@@ -30,3 +30,9 @@ Qwen emitted 74 claims across valid outputs; Gemma emitted 29. These counts have
 - `SHA256SUMS.txt`: hashes of exported UTF-8 text contents.
 
 This is a development-cohort diagnostic, not independent human gold or an estimate of population accuracy. A KEEP-only test measures remaining extraction problems; it cannot establish errors prevented by the gate. T06 remains a known gate false positive for a private event and must not be silently removed or automatically counted as an emotion error.
+
+## Cleanup and cost
+Results were committed before deletion. The pod was **terminated**, and a fresh list returned **no pods**. Total time from the conservative pre-provisioning timer to confirmed termination: **28m 20s**, under 30 minutes. GPU-only estimate **$1.034**, plus disk; final billing detail had not posted. `cleanup_receipt.json` records the evidence.
+The user's spending limits were **$3/hour maximum and under $3 total**. No paid resources were retained.
+
+[Initial source checks](SOURCE_CHECKS.md) distinguish residual semantic errors from invalid outputs and unattempted targets. Audit CSVs remain the unscored original exports.
