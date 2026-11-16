@@ -1,0 +1,168 @@
+[
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 1,
+    "counts": {
+      "calls": 12,
+      "strict_valid": 12,
+      "invalid": 0,
+      "all_claims": 16,
+      "quote_exact": 16,
+      "nonexact_quote": 0,
+      "mechanically_accepted_claims": 16,
+      "track_E": 13,
+      "direction_opposes": 9,
+      "direction_supports": 7,
+      "total_emotion_slots": 36,
+      "directional_emotion_slots": 15,
+      "track_T": 3,
+      "provisional_reference_slots": 34,
+      "provisional_directional_slots": 17,
+      "provisional_recall_directional": 13,
+      "provisional_nondirectional_slots": 17,
+      "provisional_nondirectional_empty": 16
+    },
+    "invalid_cases": {}
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 2,
+    "counts": {
+      "calls": 12,
+      "strict_valid": 12,
+      "invalid": 0,
+      "all_claims": 16,
+      "quote_exact": 16,
+      "nonexact_quote": 0,
+      "mechanically_accepted_claims": 16,
+      "track_E": 13,
+      "direction_opposes": 9,
+      "direction_supports": 7,
+      "total_emotion_slots": 36,
+      "directional_emotion_slots": 15,
+      "track_T": 3,
+      "provisional_reference_slots": 34,
+      "provisional_directional_slots": 17,
+      "provisional_recall_directional": 13,
+      "provisional_nondirectional_slots": 17,
+      "provisional_nondirectional_empty": 16
+    },
+    "invalid_cases": {}
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 3,
+    "counts": {
+      "calls": 12,
+      "strict_valid": 12,
+      "invalid": 0,
+      "all_claims": 16,
+      "quote_exact": 16,
+      "nonexact_quote": 0,
+      "mechanically_accepted_claims": 16,
+      "track_E": 13,
+      "direction_opposes": 9,
+      "direction_supports": 7,
+      "total_emotion_slots": 36,
+      "directional_emotion_slots": 15,
+      "track_T": 3,
+      "provisional_reference_slots": 34,
+      "provisional_directional_slots": 17,
+      "provisional_recall_directional": 13,
+      "provisional_nondirectional_slots": 17,
+      "provisional_nondirectional_empty": 16
+    },
+    "invalid_cases": {}
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeatability": {
+      "shared_slots": 36,
+      "stable_slot_directions": 36,
+      "unstable": {}
+    }
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 1,
+    "counts": {
+      "calls": 12,
+      "strict_valid": 12,
+      "invalid": 0,
+      "all_claims": 12,
+      "quote_exact": 12,
+      "nonexact_quote": 0,
+      "mechanically_accepted_claims": 12,
+      "track_E": 9,
+      "direction_opposes": 8,
+      "total_emotion_slots": 36,
+      "directional_emotion_slots": 12,
+      "track_T": 3,
+      "direction_supports": 4,
+      "provisional_reference_slots": 34,
+      "provisional_directional_slots": 17,
+      "provisional_recall_directional": 10,
+      "provisional_nondirectional_slots": 17,
+      "provisional_nondirectional_empty": 16
+    },
+    "invalid_cases": {}
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 2,
+    "counts": {
+      "calls": 12,
+      "strict_valid": 12,
+      "invalid": 0,
+      "all_claims": 12,
+      "quote_exact": 12,
+      "nonexact_quote": 0,
+      "mechanically_accepted_claims": 12,
+      "track_E": 9,
+      "direction_opposes": 8,
+      "total_emotion_slots": 36,
+      "directional_emotion_slots": 12,
+      "track_T": 3,
+      "direction_supports": 4,
+      "provisional_reference_slots": 34,
+      "provisional_directional_slots": 17,
+      "provisional_recall_directional": 10,
+      "provisional_nondirectional_slots": 17,
+      "provisional_nondirectional_empty": 16
+    },
+    "invalid_cases": {}
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 3,
+    "counts": {
+      "calls": 12,
+      "strict_valid": 12,
+      "invalid": 0,
+      "all_claims": 12,
+      "quote_exact": 12,
+      "nonexact_quote": 0,
+      "mechanically_accepted_claims": 12,
+      "track_E": 9,
+      "direction_opposes": 8,
+      "total_emotion_slots": 36,
+      "directional_emotion_slots": 12,
+      "track_T": 3,
+      "direction_supports": 4,
+      "provisional_reference_slots": 34,
+      "provisional_directional_slots": 17,
+      "provisional_recall_directional": 10,
+      "provisional_nondirectional_slots": 17,
+      "provisional_nondirectional_empty": 16
+    },
+    "invalid_cases": {}
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeatability": {
+      "shared_slots": 36,
+      "stable_slot_directions": 36,
+      "unstable": {}
+    }
+  }
+]
