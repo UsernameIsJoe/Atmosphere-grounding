@@ -1,0 +1,135 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Stage 1A pilot segment verdict output v0.1",
+  "type": "object",
+  "additionalProperties": false,
+  "properties": {
+    "codebook_version": {
+      "type": "string",
+      "const": "0.1"
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "id": {
+            "type": "string",
+            "pattern": "^e[1-9][0-9]*$"
+          },
+          "quote": {
+            "type": "string",
+            "minLength": 1
+          },
+          "track": {
+            "type": "string",
+            "enum": [
+              "E",
+              "T"
+            ]
+          },
+          "referent": {
+            "type": "string",
+            "enum": [
+              "place",
+              "surroundings",
+              "people",
+              "animals",
+              "other",
+              "ambiguous"
+            ]
+          },
+          "emotion": {
+            "type": "string",
+            "enum": [
+              "calm",
+              "inviting",
+              "safe"
+            ]
+          },
+          "direction": {
+            "type": "string",
+            "enum": [
+              "supports",
+              "opposes"
+            ]
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "id",
+          "quote",
+          "track",
+          "referent",
+          "emotion",
+          "direction",
+          "reason"
+        ]
+      }
+    },
+    "assessments": {
+      "type": "array",
+      "minItems": 3,
+      "maxItems": 3,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "properties": {
+          "emotion": {
+            "type": "string",
+            "enum": [
+              "calm",
+              "inviting",
+              "safe"
+            ]
+          },
+          "verdict": {
+            "type": "string",
+            "enum": [
+              "supports",
+              "opposes",
+              "none",
+              "uncertain"
+            ]
+          },
+          "support_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^e[1-9][0-9]*$"
+            },
+            "uniqueItems": true
+          },
+          "oppose_ids": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "pattern": "^e[1-9][0-9]*$"
+            },
+            "uniqueItems": true
+          },
+          "reason": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "emotion",
+          "verdict",
+          "support_ids",
+          "oppose_ids",
+          "reason"
+        ]
+      }
+    }
+  },
+  "required": [
+    "codebook_version",
+    "evidence",
+    "assessments"
+  ]
+}
