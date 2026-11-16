@@ -1,0 +1,102 @@
+# Stage 1A — full-review eligibility gate codebook v0.4 (draft, 2026-11-16)
+
+**Role:** Binary full-review eligibility **before segmentation**. The question is whether the review contains meaningful **place-level evidence**, not whether anything noteworthy happened at the place. This codebook extends gate v0.3 with a whole-review evidence sufficiency test. No downstream Stage 1A emotion codebook or event-specific policy changes.
+
+## Review-level evidence sufficiency (v0.4)
+
+The gate reads the **entire review at once**; no segmentation or individual clause-by-clause eligibility classification. A source-exact `anchor_quote` is required **only after** a KEEP verdict, to document independently sufficient evidence, **not** to search for a phrase that forces a KEEP verdict.
+
+In deciding, consider the **review's subject and the role of the candidate observation** in its context. Ask whether the purported observation would actually teach us something **meaningful, intelligible, and relevant** about visiting, using, accessing, navigating, or experiencing the reviewed location. A feature merely named in a discussion about an unrelated institutional policy, private transaction, or event does not qualify solely because it is a physical object. General praise without an interpretable underlying quality also fails.
+
+The candidate observation must satisfy **all** of the following:
+
+1. **About the reviewed place:** not another location, individual staff member, unrelated institution, or just an event taking place there.
+2. **Substantive and interpretable:** an actual specific place attribute, condition, atmosphere, usability, spatial experience or visitor-facing practice, rather than an unqualified superlative (e.g. "awesome", "great") or unsupported generic convenience.
+3. **Contextually relevant:** a meaningful description of that place as a place. Do not count tangential mentions of a behind-the-scenes room or feature when used solely in an argument about food provision, staff conduct or organizational policies.
+
+**Mixed reviews:** the qualifying observation need not dominate the review; even one short statement can support KEEP if it satisfies all three tests. For example, a complaint about a meal that also describes a crowded, poorly ventilated dining room is KEEP. Do not turn this into a minimum-length requirement, a rule excluding first-person experiences, or a demand for repeat visits.
+
+**Disambiguation cases:**
+
+| Review content | Gate | Rationale |
+|---|---|---|
+| Shelter food-quality and rejected-donation complaint; incidental "they have a restaurant-grade kitchen" | REJECT | Kitchen is mentioned to criticize food administration, not as meaningful visitor-facing place experience |
+| Apartment lease and praise of a particular agent; "the property is awesome and the area is convenient" | REJECT | Neither phrase conveys a substantive, interpretable site quality; generic property praise is insufficient |
+| "The restroom is cramped and its sink does not work" | KEEP | Specific, experienced spatial/facility condition of the place under review |
+| "The park is peaceful and shaded" | KEEP | Meaningful atmospheric and environmental characteristics even in a short review |
+| "The restaurant forgot our food, but the patio is quiet and spacious" | KEEP | Independent place-directed evidence despite a service complaint |
+
+**Scope boundary deliberately unchanged:** This amendment is not designed to settle the separate T06 wedding/venue-atmosphere dispute.
+
+## Core test: place-level versus individual encounter
+
+**Place-level evidence** reports a spatial, environmental, sensory, functional, atmospheric, access, or visitor-experience **characteristic of the location being reviewed**. It need not be objectively permanent or universal; a specific visitor's experience can qualify if it meaningfully reveals the character, conditions, use, accessibility, atmosphere or establishment-level service of the place.
+
+**Isolated personal encounter** concerns a particular person, transaction, gratitude, unique private mishap or private occasion without a defensible place-level characterization. Its occurrence *at* a place does not make it evidence *about* the place.
+
+The distinction is about **what the review tells us**, not whether it uses "I", concerns people, or describes a single visit.
+
+## Binary outputs
+
+- **KEEP** when at least one **meaningful, text-grounded passage** characterizes the **reviewed location** as a place to enter, use, experience, visit, stay, navigate or avoid. Place qualities include design/layout, ambience, sound/light/crowds, access and facilities, visitor-facing conditions, attractiveness, and discernible establishment-level hospitality/service practices.
+- **REJECT** when the entire review has **no** meaningful place-level evidence. Examples: thanks to a named waitress for personal help; one particular server's friendliness absent any broader characterization; a private appointment delay; history-only narration; descriptions/ratings of individual art pieces/exhibits without appraising the visit or environment; impressions of *another* location rather than the one reviewed.
+- **MIXED:** KEEP the full review when it also contains qualifying place-level evidence, even if most sentences are about private events. The segmenter will remove irrelevant material later. But incidental mentions such as "we took photos there", "I was here", or "the staff did not complain" do **not** automatically elevate a purely personal story to place-level evidence.
+- **AMBIGUOUS:** Prefer KEEP only when the review offers a **plausible substantive** observation about the reviewed place; otherwise REJECT. Do not manufacture a place-level generalization to avoid a false negative.
+- **Scope:** The "place" is the **venue/site actually being reviewed**. The venue may be a park, station, square, store, gallery, museum, restaurant or restroom. Avoid substituting a reviewer's comments about another venue.
+
+## Narrow clarification: individual food and service outcomes (v0.3)
+
+The quality of **one dish or meal**, the outcome of **one payment or private transaction**, and **one isolated service success/failure** (including a waiter/manager's responsiveness) are **not independently place-level evidence**. Being served food or encountering staff at an establishment does not by itself characterize its atmosphere, spatial qualities, accessibility, or general hospitality.
+
+**KEEP** a mixed review when it also explicitly describes a substantive quality of the reviewed place, such as an inviting atmosphere, a comfortable patio, the organization of customer-facing space, accessibility, or an established/recurring service practice. **Do not** promote a one-time meal or complaint into a general statement about the venue's service culture. Likewise do **not** reject a true environmental observation just because a waiter, meal, or one visit also appears.
+
+| Example | Gate | Why |
+|---|---|---|
+| "Our dinner arrived cold, and the waitress never checked on us." | REJECT | Isolated food and service failure only |
+| "The cake was delicious and the portions were huge." | REJECT | Food evaluation without place-level observation |
+| "Our meal was disappointing, but the patio was spacious and peaceful." | KEEP | Explicit place-level patio condition independent of the meal |
+| "The restaurant feels warm and welcoming, and its servers are consistently attentive." | KEEP | Establishment-level atmosphere and service practice |
+
+The **private-event versus venue-atmosphere boundary is intentionally unchanged** from v0.2; this update is not intended to resolve borderline event cases.
+
+## Visitor-facing people: precise boundary
+
+| Evidence | Gate | Reason |
+|---|---|---|
+| "This store feels welcoming; staff generally make visitors feel at ease" | KEEP | General establishment-level experience |
+| "The servers here are routinely attentive even when the place is busy" | KEEP | Repeated/establishment-level service practice |
+| "Thank you to waitress Anna for helping with my birthday surprise" | REJECT | Praise of one named person/private event only |
+| "One cashier was very kind when my card failed" | REJECT | Isolated transaction |
+| "The posted entry policy prevented visitors from using the entrance" | KEEP | Repeatable access rule of place |
+| "People here are regularly confronted by a neighboring resident" | KEEP | Reported recurring place-facing condition; do not claim universality beyond text |
+
+One observed incident **can** qualify if it discloses a physical hazard, posted rule, systemic access condition or directly experienced place characteristic; count neither singularity nor interpersonal language as an automatic reject or keep.
+
+## Artwork and history
+
+- **REJECT:** An explanation of a monument's history; reviews solely rating art pieces or exhibitions, without comments on the experience of the reviewed place.
+- **KEEP:** "The gallery lighting made it difficult to see the works"; "the museum is enjoyable to explore with children"; a site/history discussion also containing substantive reports about how the place feels or works.
+- Praise for a **different** location is not evidence about the reviewed site.
+
+## Calibration using existing 12 reviews (development hypotheses; not independent gold)
+
+- **K01 — REJECT:** Wedding-specific gratitude and the photographer's delay dominate; the references to taking photos and not being stopped do not meaningfully characterize the venue. This explicitly overrides v0.1's KEEP and is the user's stated boundary.
+- **K02 — KEEP:** Here the reviewed location is a restroom; its actual darkness, cleanliness and broken washing facility are conditions of that place, not incidental "black box" trivia.
+- **K03 — KEEP:** A park's crowding, benches and usefulness for staying/visiting.
+- **K04 — KEEP:** The square's comfortable strolling and low crowds form a place-directed visitor experience.
+- **K05 — KEEP (provisional):** Conditional chicken-chasing behavior and encounters facing park users describe site-associated conditions, not just a standalone compliment to an individual.
+- **K06 — KEEP:** The park's proximity/exposure to the street.
+- **U01 — KEEP (provisional):** Spatial layout and dance-floor use describe the venue, even though review includes party details.
+- **U02 — REJECT (provisional):** A judgment of the exhibits and advice to visit *other* campus locations; no meaningful assessment of the reviewed venue's space/visitor experience.
+- **U03 — KEEP:** Courts and road noise.
+- **U04 — KEEP:** Describes the museum as a visitor experience for all ages, independent of the named exhibits.
+- **U05 — KEEP:** Station cleanliness, visit impression and restroom closure.
+- **U06 — KEEP:** Site furniture, lighting and the experience of sitting under the tree.
+
+These are **expected gate interpretations**, to check through a human review-level audit; not claims that the 12-item dataset independently establishes accuracy.
+
+## Evaluation controls
+
+Use only the full source review; no selected segment or prior emotion label. Output **binary** keep and short source-exact anchor for KEEP, otherwise empty anchor; no topic tags, emotion verdicts, E/T, or segment boundaries. Check exact quote substring mechanically. A short anchor demonstrates eligibility but is not a substitute for reading full context.
+
+**Success:** Very high recall on genuinely eligible reviews **without** automatically keeping every review that mentions a venue, employee, history or exhibit. Specifically evaluate false-kept personal encounters and false-rejected first-person place experiences. Run a balanced, independently adjudicated set with authentic negative reviews before reporting meaningful precision/recall.
