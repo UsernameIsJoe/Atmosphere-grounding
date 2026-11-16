@@ -11,8 +11,31 @@ Read first for goals / architecture:
   Docs/PROJECT.txt        (goals & stages)
 
 
-WHERE WE LEFT OFF
------------------
+CURRENT STAGE 1A DECISION (2026-11-16; supersedes older gate-status notes)
+-------------------------------------------------------------------------
+The full-review eligibility gate v0.4 is ACCEPTED for pilot operation:
+  Docs/STAGE1A_REVIEW_GATE_LOCK_2026-11-16.md
+  configs/stage1a_review_eligibility_gate_current.json
+  Docs/STAGE1A_REVIEW_ELIGIBILITY_GATE_PROMPT_V0_4_2026-11-16.md
+  Docs/STAGE1A_REVIEW_ELIGIBILITY_GATE_CODEBOOK_V0_4_2026-11-16.md
+  scripts/stage1a_review_eligibility_gate_v04_20261116.py
+
+Run on ORIGINAL full reviews BEFORE segmentation. KEEP original reviews go
+on to downstream Stage 1A extraction, and REJECT originals are retained for
+audit. One Qwen3:8B LLM per review; no second verdict/reason-only LLM.
+Freeze the versioned prompt/codebook to preserve pilot manifest hashes.
+User-adjudicated T08=REJECT, N05=REJECT, N12=REJECT, T11=REJECT.
+T06 and K01 private-event false positives are unresolved; this does not
+invalidate pilot progression. N07: KEEP verdict correct, anchor weak.
+36-review regression: 23 KEEP / 13 REJECT; 34/36 strict quote-valid.
+Future work: continue Stage 1A segmentation/extraction and audit independent
+new source reviews; do NOT claim independent gate accuracy or downstream
+integration from the gate lock alone.
+
+The older visual-pipeline handoff notes below reflect the August pilot.
+
+WHERE WE LEFT OFF (older August visual-pipeline context)
+-------------------------------------------------
 Visual category ontology v1 is locked and wired into the pipeline:
 
   - Grounding DINO (chunked phrases, per-family thresholds)
