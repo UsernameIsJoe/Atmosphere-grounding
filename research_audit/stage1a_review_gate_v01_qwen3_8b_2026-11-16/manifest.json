@@ -1,0 +1,19 @@
+{
+  "protocol": "stage1a_full_review_gate_v01",
+  "input": "/tmp/gate_repo/research_audit/stage1a_runpod_12review_firstlook_2026-11-13/cases.jsonl",
+  "input_sha256": "7dba0bdbc8b80face14ab76d1716e7dd26bde19b322d1d76cd95dd703e076071",
+  "prompt_sha256": "c787a28eccc6b7d08781f3f2ce0db3678356b5a38a4ee8092e6e33cee5b9d2a8",
+  "schema_sha256": "127a02d26eacc0c3c4897b33afdb8edb8d9e7afd2462a733534029ae53e30393",
+  "model": "qwen3:8b",
+  "host": "http://127.0.0.1:11434",
+  "options": {
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 8192,
+    "num_predict": 512
+  },
+  "limit": 12,
+  "scope": "full_review_before_segmentation",
+  "no_retry": true,
+  "gate_status": "experimental_unvalidated"
+}
