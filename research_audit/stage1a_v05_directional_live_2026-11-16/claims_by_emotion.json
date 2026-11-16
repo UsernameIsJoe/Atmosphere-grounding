@@ -1,0 +1,1946 @@
+[
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 1,
+    "case_id": "K01",
+    "emotion": "calm",
+    "reference": "none",
+    "claims_direction": "opposes",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 1,
+    "case_id": "K01",
+    "emotion": "inviting",
+    "reference": "supports",
+    "claims_direction": "supports",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 1,
+    "case_id": "K01",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 1,
+    "case_id": "K02",
+    "emotion": "calm",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 1,
+    "case_id": "K02",
+    "emotion": "inviting",
+    "reference": "uncertain",
+    "claims_direction": "opposes",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 1,
+    "case_id": "K02",
+    "emotion": "safe",
+    "reference": "uncertain",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 1,
+    "case_id": "K03",
+    "emotion": "calm",
+    "reference": "opposes",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 1,
+    "case_id": "K03",
+    "emotion": "inviting",
+    "reference": "opposes",
+    "claims_direction": "opposes",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 1,
+    "case_id": "K03",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 1,
+    "case_id": "K04",
+    "emotion": "calm",
+    "reference": "supports",
+    "claims_direction": "supports",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 1,
+    "case_id": "K04",
+    "emotion": "inviting",
+    "reference": "supports",
+    "claims_direction": "supports",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 1,
+    "case_id": "K04",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 1,
+    "case_id": "K05",
+    "emotion": "calm",
+    "reference": "opposes",
+    "claims_direction": "opposes",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 1,
+    "case_id": "K05",
+    "emotion": "inviting",
+    "reference": "opposes",
+    "claims_direction": "opposes",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 1,
+    "case_id": "K05",
+    "emotion": "safe",
+    "reference": "opposes",
+    "claims_direction": "opposes",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 1,
+    "case_id": "K06",
+    "emotion": "calm",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 1,
+    "case_id": "K06",
+    "emotion": "inviting",
+    "reference": "opposes",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 1,
+    "case_id": "K06",
+    "emotion": "safe",
+    "reference": "opposes",
+    "claims_direction": "opposes",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 1,
+    "case_id": "U01",
+    "emotion": "calm",
+    "reference": "opposes",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 1,
+    "case_id": "U01",
+    "emotion": "inviting",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 1,
+    "case_id": "U01",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 1,
+    "case_id": "U02",
+    "emotion": "calm",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 1,
+    "case_id": "U02",
+    "emotion": "inviting",
+    "reference": "opposes",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 1,
+    "case_id": "U02",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 1,
+    "case_id": "U03",
+    "emotion": "calm",
+    "reference": "opposes",
+    "claims_direction": "opposes",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 1,
+    "case_id": "U03",
+    "emotion": "inviting",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 1,
+    "case_id": "U03",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 1,
+    "case_id": "U04",
+    "emotion": "calm",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 1,
+    "case_id": "U04",
+    "emotion": "inviting",
+    "reference": "supports",
+    "claims_direction": "supports",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 1,
+    "case_id": "U04",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 1,
+    "case_id": "U05",
+    "emotion": "calm",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 1,
+    "case_id": "U05",
+    "emotion": "inviting",
+    "reference": "supports",
+    "claims_direction": "opposes/supports",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 1,
+    "case_id": "U05",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 1,
+    "case_id": "U06",
+    "emotion": "calm",
+    "reference": "supports",
+    "claims_direction": "supports",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 1,
+    "case_id": "U06",
+    "emotion": "inviting",
+    "reference": "supports",
+    "claims_direction": "supports",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 1,
+    "case_id": "U06",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 2,
+    "case_id": "K01",
+    "emotion": "calm",
+    "reference": "none",
+    "claims_direction": "opposes",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 2,
+    "case_id": "K01",
+    "emotion": "inviting",
+    "reference": "supports",
+    "claims_direction": "supports",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 2,
+    "case_id": "K01",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 2,
+    "case_id": "K02",
+    "emotion": "calm",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 2,
+    "case_id": "K02",
+    "emotion": "inviting",
+    "reference": "uncertain",
+    "claims_direction": "opposes",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 2,
+    "case_id": "K02",
+    "emotion": "safe",
+    "reference": "uncertain",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 2,
+    "case_id": "K03",
+    "emotion": "calm",
+    "reference": "opposes",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 2,
+    "case_id": "K03",
+    "emotion": "inviting",
+    "reference": "opposes",
+    "claims_direction": "opposes",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 2,
+    "case_id": "K03",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 2,
+    "case_id": "K04",
+    "emotion": "calm",
+    "reference": "supports",
+    "claims_direction": "supports",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 2,
+    "case_id": "K04",
+    "emotion": "inviting",
+    "reference": "supports",
+    "claims_direction": "supports",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 2,
+    "case_id": "K04",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 2,
+    "case_id": "K05",
+    "emotion": "calm",
+    "reference": "opposes",
+    "claims_direction": "opposes",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 2,
+    "case_id": "K05",
+    "emotion": "inviting",
+    "reference": "opposes",
+    "claims_direction": "opposes",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 2,
+    "case_id": "K05",
+    "emotion": "safe",
+    "reference": "opposes",
+    "claims_direction": "opposes",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 2,
+    "case_id": "K06",
+    "emotion": "calm",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 2,
+    "case_id": "K06",
+    "emotion": "inviting",
+    "reference": "opposes",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 2,
+    "case_id": "K06",
+    "emotion": "safe",
+    "reference": "opposes",
+    "claims_direction": "opposes",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 2,
+    "case_id": "U01",
+    "emotion": "calm",
+    "reference": "opposes",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 2,
+    "case_id": "U01",
+    "emotion": "inviting",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 2,
+    "case_id": "U01",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 2,
+    "case_id": "U02",
+    "emotion": "calm",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 2,
+    "case_id": "U02",
+    "emotion": "inviting",
+    "reference": "opposes",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 2,
+    "case_id": "U02",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 2,
+    "case_id": "U03",
+    "emotion": "calm",
+    "reference": "opposes",
+    "claims_direction": "opposes",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 2,
+    "case_id": "U03",
+    "emotion": "inviting",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 2,
+    "case_id": "U03",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 2,
+    "case_id": "U04",
+    "emotion": "calm",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 2,
+    "case_id": "U04",
+    "emotion": "inviting",
+    "reference": "supports",
+    "claims_direction": "supports",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 2,
+    "case_id": "U04",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 2,
+    "case_id": "U05",
+    "emotion": "calm",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 2,
+    "case_id": "U05",
+    "emotion": "inviting",
+    "reference": "supports",
+    "claims_direction": "opposes/supports",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 2,
+    "case_id": "U05",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 2,
+    "case_id": "U06",
+    "emotion": "calm",
+    "reference": "supports",
+    "claims_direction": "supports",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 2,
+    "case_id": "U06",
+    "emotion": "inviting",
+    "reference": "supports",
+    "claims_direction": "supports",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 2,
+    "case_id": "U06",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 3,
+    "case_id": "K01",
+    "emotion": "calm",
+    "reference": "none",
+    "claims_direction": "opposes",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 3,
+    "case_id": "K01",
+    "emotion": "inviting",
+    "reference": "supports",
+    "claims_direction": "supports",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 3,
+    "case_id": "K01",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 3,
+    "case_id": "K02",
+    "emotion": "calm",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 3,
+    "case_id": "K02",
+    "emotion": "inviting",
+    "reference": "uncertain",
+    "claims_direction": "opposes",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 3,
+    "case_id": "K02",
+    "emotion": "safe",
+    "reference": "uncertain",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 3,
+    "case_id": "K03",
+    "emotion": "calm",
+    "reference": "opposes",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 3,
+    "case_id": "K03",
+    "emotion": "inviting",
+    "reference": "opposes",
+    "claims_direction": "opposes",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 3,
+    "case_id": "K03",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 3,
+    "case_id": "K04",
+    "emotion": "calm",
+    "reference": "supports",
+    "claims_direction": "supports",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 3,
+    "case_id": "K04",
+    "emotion": "inviting",
+    "reference": "supports",
+    "claims_direction": "supports",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 3,
+    "case_id": "K04",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 3,
+    "case_id": "K05",
+    "emotion": "calm",
+    "reference": "opposes",
+    "claims_direction": "opposes",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 3,
+    "case_id": "K05",
+    "emotion": "inviting",
+    "reference": "opposes",
+    "claims_direction": "opposes",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 3,
+    "case_id": "K05",
+    "emotion": "safe",
+    "reference": "opposes",
+    "claims_direction": "opposes",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 3,
+    "case_id": "K06",
+    "emotion": "calm",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 3,
+    "case_id": "K06",
+    "emotion": "inviting",
+    "reference": "opposes",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 3,
+    "case_id": "K06",
+    "emotion": "safe",
+    "reference": "opposes",
+    "claims_direction": "opposes",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 3,
+    "case_id": "U01",
+    "emotion": "calm",
+    "reference": "opposes",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 3,
+    "case_id": "U01",
+    "emotion": "inviting",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 3,
+    "case_id": "U01",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 3,
+    "case_id": "U02",
+    "emotion": "calm",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 3,
+    "case_id": "U02",
+    "emotion": "inviting",
+    "reference": "opposes",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 3,
+    "case_id": "U02",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 3,
+    "case_id": "U03",
+    "emotion": "calm",
+    "reference": "opposes",
+    "claims_direction": "opposes",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 3,
+    "case_id": "U03",
+    "emotion": "inviting",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 3,
+    "case_id": "U03",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 3,
+    "case_id": "U04",
+    "emotion": "calm",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 3,
+    "case_id": "U04",
+    "emotion": "inviting",
+    "reference": "supports",
+    "claims_direction": "supports",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 3,
+    "case_id": "U04",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 3,
+    "case_id": "U05",
+    "emotion": "calm",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 3,
+    "case_id": "U05",
+    "emotion": "inviting",
+    "reference": "supports",
+    "claims_direction": "opposes/supports",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 3,
+    "case_id": "U05",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 3,
+    "case_id": "U06",
+    "emotion": "calm",
+    "reference": "supports",
+    "claims_direction": "supports",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 3,
+    "case_id": "U06",
+    "emotion": "inviting",
+    "reference": "supports",
+    "claims_direction": "supports",
+    "case_strict_valid": true
+  },
+  {
+    "model": "qwen3.8:27b",
+    "repeat": 3,
+    "case_id": "U06",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 1,
+    "case_id": "K01",
+    "emotion": "calm",
+    "reference": "none",
+    "claims_direction": "opposes",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 1,
+    "case_id": "K01",
+    "emotion": "inviting",
+    "reference": "supports",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 1,
+    "case_id": "K01",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 1,
+    "case_id": "K02",
+    "emotion": "calm",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 1,
+    "case_id": "K02",
+    "emotion": "inviting",
+    "reference": "uncertain",
+    "claims_direction": "opposes",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 1,
+    "case_id": "K02",
+    "emotion": "safe",
+    "reference": "uncertain",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 1,
+    "case_id": "K03",
+    "emotion": "calm",
+    "reference": "opposes",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 1,
+    "case_id": "K03",
+    "emotion": "inviting",
+    "reference": "opposes",
+    "claims_direction": "opposes",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 1,
+    "case_id": "K03",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 1,
+    "case_id": "K04",
+    "emotion": "calm",
+    "reference": "supports",
+    "claims_direction": "supports",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 1,
+    "case_id": "K04",
+    "emotion": "inviting",
+    "reference": "supports",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 1,
+    "case_id": "K04",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 1,
+    "case_id": "K05",
+    "emotion": "calm",
+    "reference": "opposes",
+    "claims_direction": "opposes",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 1,
+    "case_id": "K05",
+    "emotion": "inviting",
+    "reference": "opposes",
+    "claims_direction": "opposes",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 1,
+    "case_id": "K05",
+    "emotion": "safe",
+    "reference": "opposes",
+    "claims_direction": "opposes",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 1,
+    "case_id": "K06",
+    "emotion": "calm",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 1,
+    "case_id": "K06",
+    "emotion": "inviting",
+    "reference": "opposes",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 1,
+    "case_id": "K06",
+    "emotion": "safe",
+    "reference": "opposes",
+    "claims_direction": "opposes",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 1,
+    "case_id": "U01",
+    "emotion": "calm",
+    "reference": "opposes",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 1,
+    "case_id": "U01",
+    "emotion": "inviting",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 1,
+    "case_id": "U01",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 1,
+    "case_id": "U02",
+    "emotion": "calm",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 1,
+    "case_id": "U02",
+    "emotion": "inviting",
+    "reference": "opposes",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 1,
+    "case_id": "U02",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 1,
+    "case_id": "U03",
+    "emotion": "calm",
+    "reference": "opposes",
+    "claims_direction": "opposes",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 1,
+    "case_id": "U03",
+    "emotion": "inviting",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 1,
+    "case_id": "U03",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 1,
+    "case_id": "U04",
+    "emotion": "calm",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 1,
+    "case_id": "U04",
+    "emotion": "inviting",
+    "reference": "supports",
+    "claims_direction": "supports",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 1,
+    "case_id": "U04",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 1,
+    "case_id": "U05",
+    "emotion": "calm",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 1,
+    "case_id": "U05",
+    "emotion": "inviting",
+    "reference": "supports",
+    "claims_direction": "supports",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 1,
+    "case_id": "U05",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 1,
+    "case_id": "U06",
+    "emotion": "calm",
+    "reference": "supports",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 1,
+    "case_id": "U06",
+    "emotion": "inviting",
+    "reference": "supports",
+    "claims_direction": "supports",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 1,
+    "case_id": "U06",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 2,
+    "case_id": "K01",
+    "emotion": "calm",
+    "reference": "none",
+    "claims_direction": "opposes",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 2,
+    "case_id": "K01",
+    "emotion": "inviting",
+    "reference": "supports",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 2,
+    "case_id": "K01",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 2,
+    "case_id": "K02",
+    "emotion": "calm",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 2,
+    "case_id": "K02",
+    "emotion": "inviting",
+    "reference": "uncertain",
+    "claims_direction": "opposes",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 2,
+    "case_id": "K02",
+    "emotion": "safe",
+    "reference": "uncertain",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 2,
+    "case_id": "K03",
+    "emotion": "calm",
+    "reference": "opposes",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 2,
+    "case_id": "K03",
+    "emotion": "inviting",
+    "reference": "opposes",
+    "claims_direction": "opposes",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 2,
+    "case_id": "K03",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 2,
+    "case_id": "K04",
+    "emotion": "calm",
+    "reference": "supports",
+    "claims_direction": "supports",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 2,
+    "case_id": "K04",
+    "emotion": "inviting",
+    "reference": "supports",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 2,
+    "case_id": "K04",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 2,
+    "case_id": "K05",
+    "emotion": "calm",
+    "reference": "opposes",
+    "claims_direction": "opposes",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 2,
+    "case_id": "K05",
+    "emotion": "inviting",
+    "reference": "opposes",
+    "claims_direction": "opposes",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 2,
+    "case_id": "K05",
+    "emotion": "safe",
+    "reference": "opposes",
+    "claims_direction": "opposes",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 2,
+    "case_id": "K06",
+    "emotion": "calm",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 2,
+    "case_id": "K06",
+    "emotion": "inviting",
+    "reference": "opposes",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 2,
+    "case_id": "K06",
+    "emotion": "safe",
+    "reference": "opposes",
+    "claims_direction": "opposes",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 2,
+    "case_id": "U01",
+    "emotion": "calm",
+    "reference": "opposes",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 2,
+    "case_id": "U01",
+    "emotion": "inviting",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 2,
+    "case_id": "U01",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 2,
+    "case_id": "U02",
+    "emotion": "calm",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 2,
+    "case_id": "U02",
+    "emotion": "inviting",
+    "reference": "opposes",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 2,
+    "case_id": "U02",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 2,
+    "case_id": "U03",
+    "emotion": "calm",
+    "reference": "opposes",
+    "claims_direction": "opposes",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 2,
+    "case_id": "U03",
+    "emotion": "inviting",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 2,
+    "case_id": "U03",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 2,
+    "case_id": "U04",
+    "emotion": "calm",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 2,
+    "case_id": "U04",
+    "emotion": "inviting",
+    "reference": "supports",
+    "claims_direction": "supports",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 2,
+    "case_id": "U04",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 2,
+    "case_id": "U05",
+    "emotion": "calm",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 2,
+    "case_id": "U05",
+    "emotion": "inviting",
+    "reference": "supports",
+    "claims_direction": "supports",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 2,
+    "case_id": "U05",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 2,
+    "case_id": "U06",
+    "emotion": "calm",
+    "reference": "supports",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 2,
+    "case_id": "U06",
+    "emotion": "inviting",
+    "reference": "supports",
+    "claims_direction": "supports",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 2,
+    "case_id": "U06",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 3,
+    "case_id": "K01",
+    "emotion": "calm",
+    "reference": "none",
+    "claims_direction": "opposes",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 3,
+    "case_id": "K01",
+    "emotion": "inviting",
+    "reference": "supports",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 3,
+    "case_id": "K01",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 3,
+    "case_id": "K02",
+    "emotion": "calm",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 3,
+    "case_id": "K02",
+    "emotion": "inviting",
+    "reference": "uncertain",
+    "claims_direction": "opposes",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 3,
+    "case_id": "K02",
+    "emotion": "safe",
+    "reference": "uncertain",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 3,
+    "case_id": "K03",
+    "emotion": "calm",
+    "reference": "opposes",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 3,
+    "case_id": "K03",
+    "emotion": "inviting",
+    "reference": "opposes",
+    "claims_direction": "opposes",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 3,
+    "case_id": "K03",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 3,
+    "case_id": "K04",
+    "emotion": "calm",
+    "reference": "supports",
+    "claims_direction": "supports",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 3,
+    "case_id": "K04",
+    "emotion": "inviting",
+    "reference": "supports",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 3,
+    "case_id": "K04",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 3,
+    "case_id": "K05",
+    "emotion": "calm",
+    "reference": "opposes",
+    "claims_direction": "opposes",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 3,
+    "case_id": "K05",
+    "emotion": "inviting",
+    "reference": "opposes",
+    "claims_direction": "opposes",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 3,
+    "case_id": "K05",
+    "emotion": "safe",
+    "reference": "opposes",
+    "claims_direction": "opposes",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 3,
+    "case_id": "K06",
+    "emotion": "calm",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 3,
+    "case_id": "K06",
+    "emotion": "inviting",
+    "reference": "opposes",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 3,
+    "case_id": "K06",
+    "emotion": "safe",
+    "reference": "opposes",
+    "claims_direction": "opposes",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 3,
+    "case_id": "U01",
+    "emotion": "calm",
+    "reference": "opposes",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 3,
+    "case_id": "U01",
+    "emotion": "inviting",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 3,
+    "case_id": "U01",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 3,
+    "case_id": "U02",
+    "emotion": "calm",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 3,
+    "case_id": "U02",
+    "emotion": "inviting",
+    "reference": "opposes",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 3,
+    "case_id": "U02",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 3,
+    "case_id": "U03",
+    "emotion": "calm",
+    "reference": "opposes",
+    "claims_direction": "opposes",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 3,
+    "case_id": "U03",
+    "emotion": "inviting",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 3,
+    "case_id": "U03",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 3,
+    "case_id": "U04",
+    "emotion": "calm",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 3,
+    "case_id": "U04",
+    "emotion": "inviting",
+    "reference": "supports",
+    "claims_direction": "supports",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 3,
+    "case_id": "U04",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 3,
+    "case_id": "U05",
+    "emotion": "calm",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 3,
+    "case_id": "U05",
+    "emotion": "inviting",
+    "reference": "supports",
+    "claims_direction": "supports",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 3,
+    "case_id": "U05",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 3,
+    "case_id": "U06",
+    "emotion": "calm",
+    "reference": "supports",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 3,
+    "case_id": "U06",
+    "emotion": "inviting",
+    "reference": "supports",
+    "claims_direction": "supports",
+    "case_strict_valid": true
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "repeat": 3,
+    "case_id": "U06",
+    "emotion": "safe",
+    "reference": "none",
+    "claims_direction": "empty",
+    "case_strict_valid": true
+  }
+]
