@@ -1,0 +1,20 @@
+{
+  "protocol": "stage1a_full_review_gate_v04",
+  "input": "research_audit/stage1a_review_gate_v04_regression_qwen8b_2026-11-16/cases.jsonl",
+  "input_sha256": "95d9216e4aa0c3f248478c3a58742812ab254180a1190d62f2278fd7ff139352",
+  "prompt_sha256": "e93b288cff5608409c08836b2e0a4c1515c9366431bf2fdb6303f51d743b8ab4",
+  "schema_sha256": "127a02d26eacc0c3c4897b33afdb8edb8d9e7afd2462a733534029ae53e30393",
+  "codebook_sha256": "6304dc44befa80392bb4fff4bbb3be7c839d94700d437d7f608cbdc3daa99c87",
+  "model": "qwen3:8b",
+  "host": "http://127.0.0.1:11434",
+  "options": {
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 8192,
+    "num_predict": 512
+  },
+  "limit": 36,
+  "scope": "full_review_before_segmentation",
+  "no_retry": true,
+  "gate_status": "experimental_unvalidated"
+}
