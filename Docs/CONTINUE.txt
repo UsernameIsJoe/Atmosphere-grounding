@@ -11,6 +11,18 @@ Read first for goals / architecture:
   Docs/PROJECT.txt        (goals & stages)
 
 
+CURRENT EMOTION MODEL DECISION (2026-11-17)
+-------------------------------------------------------------------------
+Gemma4:31b-it-bf16 is the primary emotion extractor; qwen3.8:27b remains a
+separate comparison model. No emotion means no E/T. Do not fill Gemma's
+empty outputs with Qwen claims or conditional supplied-claim E/T labels.
+Invalid outputs remain failures, not no-emotion decisions. Keep gate v0.4
+and its Qwen3:8B model unchanged. No new inference was run for this decision.
+  configs/stage1a_emotion_models_current.json
+  Docs/STAGE1A_PRIMARY_EMOTION_MODEL_DECISION_2026-11-17.md
+The decision record traces why wedding T06 passed; Gemma still retains
+emotion claims in 7/12 of its segments, so it does not remove that review.
+
 CURRENT STAGE 1A DECISION (2026-11-16; supersedes older gate-status notes)
 -------------------------------------------------------------------------
 The full-review eligibility gate v0.4 is ACCEPTED for pilot operation:

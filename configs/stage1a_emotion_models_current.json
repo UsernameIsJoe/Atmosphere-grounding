@@ -1,0 +1,21 @@
+{
+  "stage": "stage1a",
+  "component": "emotion_extraction_model_selection",
+  "decided_on": "2026-11-17",
+  "status": "researcher_selected_pilot_primary",
+  "primary_model": "gemma4:31b-it-bf16",
+  "primary_model_digest": "df1661a2a6aaa94faf24bbaf23a691877a27d0e6052598f105a225618a079e76",
+  "comparison_model": "qwen3.8:27b",
+  "comparison_model_digest": "aaee06c39dcf2437cde036998d960e1fc1494b8191be7cc9657d01e509097813",
+  "provider": "ollama_on_runpod",
+  "comparison_role": "retain_separate_alternative_readings_for_audit",
+  "automatic_comparison_override": false,
+  "no_emotion_policy": "retain_empty_claims_and_assign_no_E_T",
+  "invalid_output_policy": "retain_as_invalid_not_no_emotion",
+  "et_assignment_scope": "only_emotion_claims_detected_by_the_same_model",
+  "cross_model_supplied_claim_et": "historical_diagnostic_only_excluded_from_primary_outputs",
+  "gate_config": "configs/stage1a_review_eligibility_gate_current.json",
+  "gate_changed": false,
+  "decision_record": "Docs/STAGE1A_PRIMARY_EMOTION_MODEL_DECISION_2026-11-17.md",
+  "implementation_status": "research_selection_config; historical_runners_frozen; no_new_inference_run"
+}
