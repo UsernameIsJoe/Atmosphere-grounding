@@ -36,3 +36,7 @@ Results were committed before deletion. The pod was **terminated**, and a fresh 
 The user's spending limits were **$3/hour maximum and under $3 total**. No paid resources were retained.
 
 [Initial source checks](SOURCE_CHECKS.md) distinguish residual semantic errors from invalid outputs and unattempted targets. Audit CSVs remain the unscored original exports.
+
+## Complete source audit added 2026-11-17
+
+[Full segment audit and exact counts](FULL_SEGMENT_AUDIT_2026-11-17.md) now covers all 110 collected outputs (106 valid, 4 invalid), all 71 source sentences and all 32 unattempted model/sentence combinations. This supersedes the initial selective source checks for aggregate comparison. On the same 38 valid targets, Qwen has 24 correct / 10 incorrect / 4 borderline; Gemma has 28 correct / 6 incorrect / 4 borderline. These are assistant unblinded audit judgments, not independent human benchmark accuracy.

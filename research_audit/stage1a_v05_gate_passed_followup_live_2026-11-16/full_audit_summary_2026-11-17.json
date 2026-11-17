@@ -1,0 +1,82 @@
+{
+  "all_source_segments": 71,
+  "attempted_outputs": 110,
+  "valid_outputs": 106,
+  "shared_valid_segments": 38,
+  "by_model": {
+    "qwen3.8:27b": {
+      "all": {
+        "correct": 39,
+        "incorrect": 16,
+        "borderline": 13,
+        "invalid": 1,
+        "not_run": 2
+      },
+      "shared": {
+        "correct": 24,
+        "incorrect": 10,
+        "borderline": 4,
+        "invalid": 0,
+        "not_run": 0
+      },
+      "claims": {
+        "supported": 41,
+        "unsupported": 16,
+        "borderline": 17,
+        "invalid_case": 0
+      },
+      "observed_tag_issue_claims": 4
+    },
+    "gemma4:31b-it-bf16": {
+      "all": {
+        "correct": 28,
+        "incorrect": 6,
+        "borderline": 4,
+        "invalid": 3,
+        "not_run": 30
+      },
+      "shared": {
+        "correct": 28,
+        "incorrect": 6,
+        "borderline": 4,
+        "invalid": 0,
+        "not_run": 0
+      },
+      "claims": {
+        "supported": 22,
+        "unsupported": 6,
+        "borderline": 1,
+        "invalid_case": 8
+      },
+      "observed_tag_issue_claims": 1
+    }
+  },
+  "empty_outputs": {
+    "qwen3.8:27b": {
+      "valid_empty": 10,
+      "correct": 10,
+      "borderline": 0,
+      "incorrect": 0
+    },
+    "gemma4:31b-it-bf16": {
+      "valid_empty": 14,
+      "correct": 11,
+      "borderline": 3,
+      "incorrect": 0
+    }
+  },
+  "method": {
+    "reviewer": "assistant",
+    "blinded": false,
+    "independent_human_gold": false,
+    "new_model_inference": false,
+    "primary_unit": "one model output for one target sentence",
+    "correct_definition": "No clearly unsupported directional claim, all required reference directions present, and no unresolved reference boundary. E/T or referent-only flags do not change primary emotion/grounding status.",
+    "incorrect_definition": "At least one clearly unsupported directional claim or missing required direction; even when another claim supplies the same correct emotion direction.",
+    "borderline_definition": "Reviewed, but the frozen codebook/source does not settle an applicability/attribution boundary; neither silently correct nor incorrect.",
+    "invalid_definition": "Existing mechanical validation failed; source errors preserved and excluded from semantic denominators.",
+    "not_run_definition": "No collected output; never treated as empty.",
+    "reference_policy": "Existing v0.5 broad place-level desirability is allowed; event gate ineligibility does not automatically make every scoped event claim semantically wrong. Price/product/exhibit facts are not automatically place atmosphere.",
+    "tag_flags_scope": "Observed E/T and referent flags are separate diagnostics, not a comprehensive tag-accuracy metric."
+  }
+}
