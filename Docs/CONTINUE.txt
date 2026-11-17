@@ -11,6 +11,21 @@ Read first for goals / architecture:
   Docs/PROJECT.txt        (goals & stages)
 
 
+CURRENT GATE CANDIDATE (2026-11-17; v5 SCENARIOS; UNTESTED)
+-------------------------------------------------------------------------
+User requested a separate v5 candidate; archived v0.4 stays the front runner.
+  Docs/STAGE1A_REVIEW_ELIGIBILITY_GATE_PROMPT_V0_5_SCENARIOS_DRAFT_2026-11-17.md
+  Docs/STAGE1A_REVIEW_ELIGIBILITY_GATE_CODEBOOK_V0_5_SCENARIOS_DRAFT_2026-11-17.md
+  configs/stage1a_review_eligibility_gate_v05_scenarios_draft.json
+Direct v0.4 base with common insufficient-evidence scenarios: private events,
+individual service/transaction outcomes, food/drink praise, incidental objects
+in unrelated disputes. These are evidence exclusions, NOT keyword bans.
+Preserve genuine mixed-review place observations, facilities and access rules.
+Keep the original three-field output and one review-level call; no ratio or
+main-focus criterion. No literal cohort quotations or labels are examples.
+Earlier v0.5-context and v0.6-focus proposals/results remain archived; this
+scenario candidate has not been run or adopted. Current pointer stays v0.4.
+
 CURRENT GATE TEST (2026-11-17; v0.6 FOCUS; COMPLETED, NOT ADOPTED)
 -------------------------------------------------------------------------
 Focus-first v0.6 tested on all 36 original reviews alongside a fresh v0.4

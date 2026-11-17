@@ -1,0 +1,35 @@
+{
+  "version": "v0.5_scenarios_draft",
+  "display_version": "v5",
+  "status": "draft_untested_not_adopted",
+  "based_on": "v0.4",
+  "front_runner_config": "configs/stage1a_review_eligibility_gate_current.json",
+  "front_runner_config_sha256": "acd58384e6ee3e0eb22650e5565af8666c4ae55351bb214331e934ea9495e17a",
+  "prompt_path": "Docs/STAGE1A_REVIEW_ELIGIBILITY_GATE_PROMPT_V0_5_SCENARIOS_DRAFT_2026-11-17.md",
+  "prompt_sha256": "6df94563003405f8e5097be4174eb56725aeef8427c79a105230f45d3839395f",
+  "codebook_path": "Docs/STAGE1A_REVIEW_ELIGIBILITY_GATE_CODEBOOK_V0_5_SCENARIOS_DRAFT_2026-11-17.md",
+  "codebook_sha256": "e335b11e2805304f27540a65f94dc6ac392c3859775658d5b1cab221bc90bcd6",
+  "schema_path": "configs/stage1a_review_eligibility_gate_v01.json",
+  "schema_sha256": "127a02d26eacc0c3c4897b33afdb8edb8d9e7afd2462a733534029ae53e30393",
+  "model": "qwen3:8b",
+  "provider": "ollama",
+  "inference_options": {
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 8192,
+    "num_predict": 512,
+    "think": false
+  },
+  "input_scope": "complete_original_review_before_segmentation",
+  "output_fields": [
+    "keep",
+    "anchor_quote",
+    "reason"
+  ],
+  "gate_calls_per_review": 1,
+  "keyword_blacklist": false,
+  "uses_ratio": false,
+  "requires_main_place_focus": false,
+  "runner_status": "not_prepared_for_this_candidate",
+  "executed": false
+}
