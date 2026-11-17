@@ -1,0 +1,9 @@
+{
+  "pod_id": "3cmbsqlv7yuzv6",
+  "captured_at_utc": "2026-11-17T18:46:54.141960+00:00",
+  "gpu_hourly_usd": 0.39,
+  "gpu": "NVIDIA GeForce RTX 5080, 16303 MiB, 580.178.04\n",
+  "python": "Python 3.12.3\n",
+  "ollama": "ollama version is 0.40.16\n",
+  "source_commit": "88364610af2bb82c1ad8f8c5f8cf91bad508baf2"
+}

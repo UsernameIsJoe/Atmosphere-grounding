@@ -1,0 +1,84 @@
+{
+  "attempted": 36,
+  "valid": 36,
+  "invalid": {},
+  "unattempted": [],
+  "old_keep_all_36": 23,
+  "old_keep_matched_valid": 23,
+  "any_relevant_keep": 31,
+  "thresholds": {
+    "25": {
+      "keep": 30,
+      "reject": 6,
+      "newly_rejected_vs_old": [],
+      "newly_kept_vs_old": [
+        "U02",
+        "T07",
+        "T08",
+        "T11",
+        "N02",
+        "N05",
+        "N12"
+      ],
+      "rejected_vs_any_control": [
+        "T09"
+      ],
+      "word_weighted_keep": 29
+    },
+    "50": {
+      "keep": 29,
+      "reject": 7,
+      "newly_rejected_vs_old": [
+        "N06"
+      ],
+      "newly_kept_vs_old": [
+        "U02",
+        "T07",
+        "T08",
+        "T11",
+        "N02",
+        "N05",
+        "N12"
+      ],
+      "rejected_vs_any_control": [
+        "T09",
+        "N06"
+      ],
+      "word_weighted_keep": 28
+    },
+    "75": {
+      "keep": 21,
+      "reject": 15,
+      "newly_rejected_vs_old": [
+        "K06",
+        "U04",
+        "U06",
+        "N04",
+        "N06",
+        "N10",
+        "N11"
+      ],
+      "newly_kept_vs_old": [
+        "U02",
+        "T07",
+        "T08",
+        "T11",
+        "N02"
+      ],
+      "rejected_vs_any_control": [
+        "K06",
+        "U04",
+        "U06",
+        "T09",
+        "N04",
+        "N05",
+        "N06",
+        "N10",
+        "N11",
+        "N12"
+      ],
+      "word_weighted_keep": 20
+    }
+  },
+  "accuracy_claim": false
+}

@@ -1,0 +1,673 @@
+[
+  {
+    "case_id": "K01",
+    "baseline_keep": true,
+    "counts": {
+      "relevant": 8
+    },
+    "relevant": 8,
+    "substantive": 8,
+    "ratio": 1.0,
+    "word_ratio": 1.0,
+    "any_keep": true,
+    "keep_25": true,
+    "keep_50": true,
+    "keep_75": true,
+    "word_keep_25": true,
+    "word_keep_50": true,
+    "word_keep_75": true
+  },
+  {
+    "case_id": "K02",
+    "baseline_keep": true,
+    "counts": {
+      "other": 2,
+      "relevant": 6
+    },
+    "relevant": 6,
+    "substantive": 8,
+    "ratio": 0.75,
+    "word_ratio": 0.6111111111111112,
+    "any_keep": true,
+    "keep_25": true,
+    "keep_50": true,
+    "keep_75": true,
+    "word_keep_25": true,
+    "word_keep_50": true,
+    "word_keep_75": false
+  },
+  {
+    "case_id": "K03",
+    "baseline_keep": true,
+    "counts": {
+      "relevant": 5,
+      "other": 1
+    },
+    "relevant": 5,
+    "substantive": 6,
+    "ratio": 0.8333333333333334,
+    "word_ratio": 0.847457627118644,
+    "any_keep": true,
+    "keep_25": true,
+    "keep_50": true,
+    "keep_75": true,
+    "word_keep_25": true,
+    "word_keep_50": true,
+    "word_keep_75": true
+  },
+  {
+    "case_id": "K04",
+    "baseline_keep": true,
+    "counts": {
+      "boilerplate": 2,
+      "relevant": 5
+    },
+    "relevant": 5,
+    "substantive": 5,
+    "ratio": 1.0,
+    "word_ratio": 1.0,
+    "any_keep": true,
+    "keep_25": true,
+    "keep_50": true,
+    "keep_75": true,
+    "word_keep_25": true,
+    "word_keep_50": true,
+    "word_keep_75": true
+  },
+  {
+    "case_id": "K05",
+    "baseline_keep": true,
+    "counts": {
+      "relevant": 4
+    },
+    "relevant": 4,
+    "substantive": 4,
+    "ratio": 1.0,
+    "word_ratio": 1.0,
+    "any_keep": true,
+    "keep_25": true,
+    "keep_50": true,
+    "keep_75": true,
+    "word_keep_25": true,
+    "word_keep_50": true,
+    "word_keep_75": true
+  },
+  {
+    "case_id": "K06",
+    "baseline_keep": true,
+    "counts": {
+      "relevant": 2,
+      "other": 1
+    },
+    "relevant": 2,
+    "substantive": 3,
+    "ratio": 0.6666666666666666,
+    "word_ratio": 0.7222222222222222,
+    "any_keep": true,
+    "keep_25": true,
+    "keep_50": true,
+    "keep_75": false,
+    "word_keep_25": true,
+    "word_keep_50": true,
+    "word_keep_75": false
+  },
+  {
+    "case_id": "U01",
+    "baseline_keep": true,
+    "counts": {
+      "other": 1,
+      "relevant": 3
+    },
+    "relevant": 3,
+    "substantive": 4,
+    "ratio": 0.75,
+    "word_ratio": 0.7454545454545455,
+    "any_keep": true,
+    "keep_25": true,
+    "keep_50": true,
+    "keep_75": true,
+    "word_keep_25": true,
+    "word_keep_50": true,
+    "word_keep_75": false
+  },
+  {
+    "case_id": "U02",
+    "baseline_keep": false,
+    "counts": {
+      "relevant": 1
+    },
+    "relevant": 1,
+    "substantive": 1,
+    "ratio": 1.0,
+    "word_ratio": 1.0,
+    "any_keep": true,
+    "keep_25": true,
+    "keep_50": true,
+    "keep_75": true,
+    "word_keep_25": true,
+    "word_keep_50": true,
+    "word_keep_75": true
+  },
+  {
+    "case_id": "U03",
+    "baseline_keep": true,
+    "counts": {
+      "boilerplate": 1,
+      "relevant": 2
+    },
+    "relevant": 2,
+    "substantive": 2,
+    "ratio": 1.0,
+    "word_ratio": 1.0,
+    "any_keep": true,
+    "keep_25": true,
+    "keep_50": true,
+    "keep_75": true,
+    "word_keep_25": true,
+    "word_keep_50": true,
+    "word_keep_75": true
+  },
+  {
+    "case_id": "U04",
+    "baseline_keep": true,
+    "counts": {
+      "relevant": 3,
+      "other": 2
+    },
+    "relevant": 3,
+    "substantive": 5,
+    "ratio": 0.6,
+    "word_ratio": 0.6363636363636364,
+    "any_keep": true,
+    "keep_25": true,
+    "keep_50": true,
+    "keep_75": false,
+    "word_keep_25": true,
+    "word_keep_50": true,
+    "word_keep_75": false
+  },
+  {
+    "case_id": "U05",
+    "baseline_keep": true,
+    "counts": {
+      "relevant": 5,
+      "other": 1
+    },
+    "relevant": 5,
+    "substantive": 6,
+    "ratio": 0.8333333333333334,
+    "word_ratio": 0.95,
+    "any_keep": true,
+    "keep_25": true,
+    "keep_50": true,
+    "keep_75": true,
+    "word_keep_25": true,
+    "word_keep_50": true,
+    "word_keep_75": true
+  },
+  {
+    "case_id": "U06",
+    "baseline_keep": true,
+    "counts": {
+      "relevant": 2,
+      "other": 1
+    },
+    "relevant": 2,
+    "substantive": 3,
+    "ratio": 0.6666666666666666,
+    "word_ratio": 0.7073170731707317,
+    "any_keep": true,
+    "keep_25": true,
+    "keep_50": true,
+    "keep_75": false,
+    "word_keep_25": true,
+    "word_keep_50": true,
+    "word_keep_75": false
+  },
+  {
+    "case_id": "T01",
+    "baseline_keep": false,
+    "counts": {
+      "other": 3
+    },
+    "relevant": 0,
+    "substantive": 3,
+    "ratio": 0.0,
+    "word_ratio": 0.0,
+    "any_keep": false,
+    "keep_25": false,
+    "keep_50": false,
+    "keep_75": false,
+    "word_keep_25": false,
+    "word_keep_50": false,
+    "word_keep_75": false
+  },
+  {
+    "case_id": "T02",
+    "baseline_keep": true,
+    "counts": {
+      "relevant": 1
+    },
+    "relevant": 1,
+    "substantive": 1,
+    "ratio": 1.0,
+    "word_ratio": 1.0,
+    "any_keep": true,
+    "keep_25": true,
+    "keep_50": true,
+    "keep_75": true,
+    "word_keep_25": true,
+    "word_keep_50": true,
+    "word_keep_75": true
+  },
+  {
+    "case_id": "T03",
+    "baseline_keep": false,
+    "counts": {
+      "boilerplate": 1
+    },
+    "relevant": 0,
+    "substantive": 0,
+    "ratio": 0,
+    "word_ratio": 0,
+    "any_keep": false,
+    "keep_25": false,
+    "keep_50": false,
+    "keep_75": false,
+    "word_keep_25": false,
+    "word_keep_50": false,
+    "word_keep_75": false
+  },
+  {
+    "case_id": "T04",
+    "baseline_keep": true,
+    "counts": {
+      "relevant": 2
+    },
+    "relevant": 2,
+    "substantive": 2,
+    "ratio": 1.0,
+    "word_ratio": 1.0,
+    "any_keep": true,
+    "keep_25": true,
+    "keep_50": true,
+    "keep_75": true,
+    "word_keep_25": true,
+    "word_keep_50": true,
+    "word_keep_75": true
+  },
+  {
+    "case_id": "T05",
+    "baseline_keep": false,
+    "counts": {
+      "boilerplate": 1
+    },
+    "relevant": 0,
+    "substantive": 0,
+    "ratio": 0,
+    "word_ratio": 0,
+    "any_keep": false,
+    "keep_25": false,
+    "keep_50": false,
+    "keep_75": false,
+    "word_keep_25": false,
+    "word_keep_50": false,
+    "word_keep_75": false
+  },
+  {
+    "case_id": "T06",
+    "baseline_keep": true,
+    "counts": {
+      "relevant": 10,
+      "other": 1,
+      "boilerplate": 1
+    },
+    "relevant": 10,
+    "substantive": 11,
+    "ratio": 0.9090909090909091,
+    "word_ratio": 0.9548387096774194,
+    "any_keep": true,
+    "keep_25": true,
+    "keep_50": true,
+    "keep_75": true,
+    "word_keep_25": true,
+    "word_keep_50": true,
+    "word_keep_75": true
+  },
+  {
+    "case_id": "T07",
+    "baseline_keep": false,
+    "counts": {
+      "relevant": 1
+    },
+    "relevant": 1,
+    "substantive": 1,
+    "ratio": 1.0,
+    "word_ratio": 1.0,
+    "any_keep": true,
+    "keep_25": true,
+    "keep_50": true,
+    "keep_75": true,
+    "word_keep_25": true,
+    "word_keep_50": true,
+    "word_keep_75": true
+  },
+  {
+    "case_id": "T08",
+    "baseline_keep": false,
+    "counts": {
+      "relevant": 4,
+      "boilerplate": 1
+    },
+    "relevant": 4,
+    "substantive": 4,
+    "ratio": 1.0,
+    "word_ratio": 1.0,
+    "any_keep": true,
+    "keep_25": true,
+    "keep_50": true,
+    "keep_75": true,
+    "word_keep_25": true,
+    "word_keep_50": true,
+    "word_keep_75": true
+  },
+  {
+    "case_id": "T09",
+    "baseline_keep": false,
+    "counts": {
+      "other": 8,
+      "relevant": 2,
+      "boilerplate": 1
+    },
+    "relevant": 2,
+    "substantive": 10,
+    "ratio": 0.2,
+    "word_ratio": 0.2839506172839506,
+    "any_keep": true,
+    "keep_25": false,
+    "keep_50": false,
+    "keep_75": false,
+    "word_keep_25": true,
+    "word_keep_50": false,
+    "word_keep_75": false
+  },
+  {
+    "case_id": "T10",
+    "baseline_keep": true,
+    "counts": {
+      "relevant": 3
+    },
+    "relevant": 3,
+    "substantive": 3,
+    "ratio": 1.0,
+    "word_ratio": 1.0,
+    "any_keep": true,
+    "keep_25": true,
+    "keep_50": true,
+    "keep_75": true,
+    "word_keep_25": true,
+    "word_keep_50": true,
+    "word_keep_75": true
+  },
+  {
+    "case_id": "T11",
+    "baseline_keep": false,
+    "counts": {
+      "relevant": 5,
+      "other": 1
+    },
+    "relevant": 5,
+    "substantive": 6,
+    "ratio": 0.8333333333333334,
+    "word_ratio": 0.9066666666666666,
+    "any_keep": true,
+    "keep_25": true,
+    "keep_50": true,
+    "keep_75": true,
+    "word_keep_25": true,
+    "word_keep_50": true,
+    "word_keep_75": true
+  },
+  {
+    "case_id": "T12",
+    "baseline_keep": true,
+    "counts": {
+      "relevant": 12
+    },
+    "relevant": 12,
+    "substantive": 12,
+    "ratio": 1.0,
+    "word_ratio": 1.0,
+    "any_keep": true,
+    "keep_25": true,
+    "keep_50": true,
+    "keep_75": true,
+    "word_keep_25": true,
+    "word_keep_50": true,
+    "word_keep_75": true
+  },
+  {
+    "case_id": "N01",
+    "baseline_keep": false,
+    "counts": {
+      "boilerplate": 1
+    },
+    "relevant": 0,
+    "substantive": 0,
+    "ratio": 0,
+    "word_ratio": 0,
+    "any_keep": false,
+    "keep_25": false,
+    "keep_50": false,
+    "keep_75": false,
+    "word_keep_25": false,
+    "word_keep_50": false,
+    "word_keep_75": false
+  },
+  {
+    "case_id": "N02",
+    "baseline_keep": false,
+    "counts": {
+      "relevant": 1
+    },
+    "relevant": 1,
+    "substantive": 1,
+    "ratio": 1.0,
+    "word_ratio": 1.0,
+    "any_keep": true,
+    "keep_25": true,
+    "keep_50": true,
+    "keep_75": true,
+    "word_keep_25": true,
+    "word_keep_50": true,
+    "word_keep_75": true
+  },
+  {
+    "case_id": "N03",
+    "baseline_keep": false,
+    "counts": {
+      "other": 1
+    },
+    "relevant": 0,
+    "substantive": 1,
+    "ratio": 0.0,
+    "word_ratio": 0.0,
+    "any_keep": false,
+    "keep_25": false,
+    "keep_50": false,
+    "keep_75": false,
+    "word_keep_25": false,
+    "word_keep_50": false,
+    "word_keep_75": false
+  },
+  {
+    "case_id": "N04",
+    "baseline_keep": true,
+    "counts": {
+      "boilerplate": 1,
+      "relevant": 10,
+      "other": 5
+    },
+    "relevant": 10,
+    "substantive": 15,
+    "ratio": 0.6666666666666666,
+    "word_ratio": 0.7610062893081762,
+    "any_keep": true,
+    "keep_25": true,
+    "keep_50": true,
+    "keep_75": false,
+    "word_keep_25": true,
+    "word_keep_50": true,
+    "word_keep_75": true
+  },
+  {
+    "case_id": "N05",
+    "baseline_keep": false,
+    "counts": {
+      "relevant": 4,
+      "other": 2,
+      "boilerplate": 2
+    },
+    "relevant": 4,
+    "substantive": 6,
+    "ratio": 0.6666666666666666,
+    "word_ratio": 0.6590909090909091,
+    "any_keep": true,
+    "keep_25": true,
+    "keep_50": true,
+    "keep_75": false,
+    "word_keep_25": true,
+    "word_keep_50": true,
+    "word_keep_75": false
+  },
+  {
+    "case_id": "N06",
+    "baseline_keep": true,
+    "counts": {
+      "other": 6,
+      "relevant": 4
+    },
+    "relevant": 4,
+    "substantive": 10,
+    "ratio": 0.4,
+    "word_ratio": 0.21232876712328766,
+    "any_keep": true,
+    "keep_25": true,
+    "keep_50": false,
+    "keep_75": false,
+    "word_keep_25": false,
+    "word_keep_50": false,
+    "word_keep_75": false
+  },
+  {
+    "case_id": "N07",
+    "baseline_keep": true,
+    "counts": {
+      "relevant": 8
+    },
+    "relevant": 8,
+    "substantive": 8,
+    "ratio": 1.0,
+    "word_ratio": 1.0,
+    "any_keep": true,
+    "keep_25": true,
+    "keep_50": true,
+    "keep_75": true,
+    "word_keep_25": true,
+    "word_keep_50": true,
+    "word_keep_75": true
+  },
+  {
+    "case_id": "N08",
+    "baseline_keep": true,
+    "counts": {
+      "relevant": 4
+    },
+    "relevant": 4,
+    "substantive": 4,
+    "ratio": 1.0,
+    "word_ratio": 1.0,
+    "any_keep": true,
+    "keep_25": true,
+    "keep_50": true,
+    "keep_75": true,
+    "word_keep_25": true,
+    "word_keep_50": true,
+    "word_keep_75": true
+  },
+  {
+    "case_id": "N09",
+    "baseline_keep": true,
+    "counts": {
+      "relevant": 5
+    },
+    "relevant": 5,
+    "substantive": 5,
+    "ratio": 1.0,
+    "word_ratio": 1.0,
+    "any_keep": true,
+    "keep_25": true,
+    "keep_50": true,
+    "keep_75": true,
+    "word_keep_25": true,
+    "word_keep_50": true,
+    "word_keep_75": true
+  },
+  {
+    "case_id": "N10",
+    "baseline_keep": true,
+    "counts": {
+      "relevant": 1,
+      "other": 1
+    },
+    "relevant": 1,
+    "substantive": 2,
+    "ratio": 0.5,
+    "word_ratio": 0.19444444444444445,
+    "any_keep": true,
+    "keep_25": true,
+    "keep_50": true,
+    "keep_75": false,
+    "word_keep_25": false,
+    "word_keep_50": false,
+    "word_keep_75": false
+  },
+  {
+    "case_id": "N11",
+    "baseline_keep": true,
+    "counts": {
+      "relevant": 2,
+      "other": 1
+    },
+    "relevant": 2,
+    "substantive": 3,
+    "ratio": 0.6666666666666666,
+    "word_ratio": 0.6153846153846154,
+    "any_keep": true,
+    "keep_25": true,
+    "keep_50": true,
+    "keep_75": false,
+    "word_keep_25": true,
+    "word_keep_50": true,
+    "word_keep_75": false
+  },
+  {
+    "case_id": "N12",
+    "baseline_keep": false,
+    "counts": {
+      "relevant": 2,
+      "other": 1
+    },
+    "relevant": 2,
+    "substantive": 3,
+    "ratio": 0.6666666666666666,
+    "word_ratio": 0.6666666666666666,
+    "any_keep": true,
+    "keep_25": true,
+    "keep_50": true,
+    "keep_75": false,
+    "word_keep_25": true,
+    "word_keep_50": true,
+    "word_keep_75": false
+  }
+]
