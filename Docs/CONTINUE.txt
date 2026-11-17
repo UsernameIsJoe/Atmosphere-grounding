@@ -11,6 +11,20 @@ Read first for goals / architecture:
   Docs/PROJECT.txt        (goals & stages)
 
 
+CURRENT GATE DRAFT (2026-11-17; v0.6 FOCUS; UNTESTED)
+-------------------------------------------------------------------------
+Return directly to archived v0.4 and change the strategy to review-focus-first:
+  Docs/STAGE1A_REVIEW_ELIGIBILITY_GATE_PROMPT_V0_6_FOCUS_DRAFT_2026-11-17.md
+  Docs/STAGE1A_REVIEW_ELIGIBILITY_GATE_CODEBOOK_V0_6_FOCUS_DRAFT_2026-11-17.md
+  configs/stage1a_review_eligibility_gate_v0_6_focus_draft.json
+Judge the main assessment subject before selecting evidence. An incidental
+place statement cannot rescue encounter focus. Main place focus plus real
+place evidence is required; mixed must have place as a genuine main thread.
+This deliberately changes the v0.4 any-qualifying-passage rule and may lose
+useful minority place observations. No ratio; no automatic event exclusion.
+The five-field draft schema needs a compatible future runner. Not run or
+adopted; the active gate remains v0.4. Older proposals/results follow.
+
 CURRENT GATE PROPOSAL (2026-11-17; TESTED, NOT ADOPTED)
 -------------------------------------------------------------------------
 Set the ratio idea aside. Draft contextual-relevance changes distinguish
