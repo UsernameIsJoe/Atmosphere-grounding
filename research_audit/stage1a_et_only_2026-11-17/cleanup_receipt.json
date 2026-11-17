@@ -1,0 +1,13 @@
+{
+  "pod_id": "yi1a6cq5a1y46f",
+  "created_at_utc": "2026-11-17T15:58:12.555Z",
+  "terminated_confirmed_at_utc": "2026-11-17T16:27:17.850Z",
+  "gpu_hourly_usd": 2.19,
+  "estimated_gpu_cost_usd": 1.062,
+  "cost_note": "Elapsed-time GPU estimate only, excludes storage; not a settled invoice.",
+  "results_commit_verified_before_deletion": "7dbee6a8a89cfd9e77d9db99f956032b8141d322",
+  "delete_response_status": 204,
+  "pods_remaining": 0,
+  "all_planned_requests_finished": true,
+  "process_exit": 0
+}
