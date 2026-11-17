@@ -31,7 +31,7 @@
   },
   "input_sha256": "95d9216e4aa0c3f248478c3a58742812ab254180a1190d62f2278fd7ff139352",
   "schema_sha256": "127a02d26eacc0c3c4897b33afdb8edb8d9e7afd2462a733534029ae53e30393",
-  "runner_sha256": "6863c8eeb3adbd43488c2edf9fc54a5bb7da6028c87307c3dd3cd309dfb46e98",
+  "runner_sha256": "64803317cc1d0d7083e1cf82823c5f62633fbef4c9947fd9ccb555d4bae202d8",
   "no_retries": true,
   "codebook_runtime_role": "supporting specification; executable system message is standalone, as in v0.4",
   "prior_verdicts_and_labels_in_input": false,

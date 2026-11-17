@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Paired whole-review v0.4/v0.5 prompt test, one unchanged gate model."""
-import argparse,hashlib,json,subprocess,time,urllib.request
+import argparse,hashlib,json,shutil,subprocess,time,urllib.request
 from pathlib import Path
 import stage1a_review_eligibility_gate_v04_20261116 as baseline
 ROOT=Path(__file__).resolve().parents[1]
@@ -33,7 +33,8 @@ def prepare():
     return data,schema
 def run():
     data,schema=prepare();tags=request('/api/tags');tag=next(x for x in tags['models'] if x['name']==MODEL);assert tag['digest']==EXPECTED_DIGEST
-    write(OUT/'runtime_environment.json',{'model':tag,'ollama':request('/api/version'),'gpu':subprocess.check_output(['nvidia-smi','--query-gpu=name,memory.total,driver_version','--format=csv,noheader'],text=True),'python':subprocess.check_output(['python3','--version'],text=True),'source_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()})
+    gpu=subprocess.check_output(['nvidia-smi','--query-gpu=name,memory.total,driver_version','--format=csv,noheader'],text=True) if shutil.which('nvidia-smi') else None
+    write(OUT/'runtime_environment.json',{'model':tag,'ollama':request('/api/version'),'gpu':gpu,'compute':'GPU' if gpu else 'CPU','cpu':Path('/proc/cpuinfo').read_text().split('model name',1)[-1].splitlines()[0].strip(),'python':subprocess.check_output(['python3','--version'],text=True),'source_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()})
     request('/api/generate',{'model':MODEL,'options':baseline.OPTIONS,'keep_alive':'20m','stream':False},600)
     done={(r['condition'],r['review_id']) for r in rows(OUT/'decisions.jsonl')}
     for condition,(prompt,book) in CONDITIONS.items():
