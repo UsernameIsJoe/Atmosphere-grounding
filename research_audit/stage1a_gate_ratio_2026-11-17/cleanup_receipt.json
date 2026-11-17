@@ -1,0 +1,15 @@
+{
+  "pod_id": "3cmbsqlv7yuzv6",
+  "created_at_utc": "2026-11-17T18:38:20.44Z",
+  "terminated_confirmed_at_utc": "2026-11-17T18:52:00.144Z",
+  "gpu_hourly_usd": 0.39,
+  "estimated_elapsed_gpu_cost_usd": 0.0888,
+  "cost_note": "Elapsed-time GPU estimate; excludes storage and is not settled billing.",
+  "results_commit_verified_before_termination": "51bfde4d9894e2017ee8129722b0589bbee43a19",
+  "delete_status": 204,
+  "pods_remaining": 0,
+  "attempted_reviews": 36,
+  "valid_outputs": 36,
+  "emotion_calls": 0,
+  "current_gate_changed": false
+}
