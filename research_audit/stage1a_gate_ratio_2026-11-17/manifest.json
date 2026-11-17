@@ -1,0 +1,33 @@
+{
+  "protocol": "gate_ratio_v05_experimental_not_adopted",
+  "model": "qwen3:8b",
+  "options": {
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 8192,
+    "num_predict": 4096
+  },
+  "think": false,
+  "thresholds_percent": [
+    25,
+    50,
+    75
+  ],
+  "comparison_control": "any_relevant_unit",
+  "no_retries": true,
+  "planned_calls": 36,
+  "units": 178,
+  "emotion_calls": 0,
+  "files_sha256": {
+    "research_audit/stage1a_review_gate_v04_regression_qwen8b_2026-11-16/cases.jsonl": "95d9216e4aa0c3f248478c3a58742812ab254180a1190d62f2278fd7ff139352",
+    "research_audit/stage1a_review_gate_v04_regression_qwen8b_2026-11-16/decisions.jsonl": "76a33789fd045671a3706ba55532eb13d03745717d4a70de76ed195a0aafd442",
+    "Docs/STAGE1A_GATE_RATIO_PROMPT_V0_5_2026-11-17.txt": "5d488180b30e6b2b917b3c33988620d2d4b15cefc03c8d934bb8a39b521ad288",
+    "Docs/STAGE1A_GATE_RATIO_V0_5_EXPERIMENT_2026-11-17.md": "ffd3d128f3b1e24c809ec8a0a229194e539177d00c2b8dc95f44beebe9375d79",
+    "research_audit/stage1a_gate_ratio_2026-11-17/inputs.jsonl": "9895ebf84239e96974a9158c3d0517ba45d6aaa6db75d9a1f76ec754168d6f6a",
+    "scripts/stage1a_gate_ratio_20261117.py": "fc5bd6d1122f79d2cfddf2c568ff811a670d01061fa0f7362a0070c83e23b394"
+  },
+  "baseline_weight_digest_not_recorded": true,
+  "zero_denominator": "REJECT",
+  "ratio_denominator": "relevant + other; boilerplate excluded",
+  "holdout": false
+}
