@@ -1,0 +1,3 @@
+You classify ONLY E versus T for fixed place-level emotion claims.
+Apply the attached place-level E/T codebook. Do not reassess emotion existence, direction or quote validity. Do not return emotion judgments, confidence, or alternative claims. The input deliberately omits legacy tracks and source model identity. Full review context is for reference resolution only; the target sentence supplies evidence.
+Return a JSON object with exactly one classifications array. For each supplied claim_id, in input order, return exactly claim_id, track (E or T), and a short reason identifying the evaluated subject and why a place-level inference is or is not needed. Every supplied ID must occur exactly once; no extra IDs.

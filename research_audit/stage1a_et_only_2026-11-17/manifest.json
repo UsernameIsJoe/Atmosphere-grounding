@@ -1,0 +1,30 @@
+{
+  "protocol": "v0.6_ET_only_fixed_shared_claim_pool",
+  "models": {
+    "qwen3.8:27b": "aaee06c39dcf2437cde036998d960e1fc1494b8191be7cc9657d01e509097813",
+    "gemma4:31b-it-bf16": "df1661a2a6aaa94faf24bbaf23a691877a27d0e6052598f105a225618a079e76"
+  },
+  "options": {
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 8192,
+    "num_predict": 2048
+  },
+  "think": false,
+  "legacy_completion_version": "0.5",
+  "no_retries": true,
+  "stop_rule": "finish all planned requests; no 30-minute cutoff",
+  "files_sha256": {
+    "research_audit/stage1a_v05_gate_passed_followup_live_2026-11-16/predictions.jsonl": "afe8672c6fa01b89df094c88dc0dff2791d681212b302f600f3e7b8b5b1fe8bd",
+    "research_audit/stage1a_v05_gate_passed_followup_prepared_2026-11-16/segments.jsonl": "dd184329bb28c72075c8a8327f4dee603ba6183bd63d8b821d4594ee3219cd28",
+    "Docs/STAGE1A_ET_CODEBOOK_V0_6_2026-11-17.md": "033105ef102612a1588ad8073bab3acbd2e9eb6b358c9c9adbcb95032116536e",
+    "Docs/STAGE1A_ET_PROMPT_V0_6_2026-11-17.md": "a5d9f361a5fbc30ad5219b162293ed9218d646bdfb11b67cafff7429e3d511e4"
+  },
+  "segments": 71,
+  "completion_calls": {
+    "qwen3.8:27b": 3,
+    "gemma4:31b-it-bf16": 33
+  },
+  "original_shared_pool_claims": 88,
+  "evaluation": "agreement and legacy track changes; no human accuracy claim"
+}
