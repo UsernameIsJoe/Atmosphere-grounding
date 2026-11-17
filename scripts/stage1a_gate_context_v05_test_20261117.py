@@ -9,6 +9,7 @@ OUT=ROOT/'research_audit/stage1a_gate_context_v05_test_2026-11-17'
 REV_PROMPT=ROOT/'Docs/STAGE1A_REVIEW_ELIGIBILITY_GATE_PROMPT_V0_5_CONTEXT_DRAFT_2026-11-17.md'
 REV_BOOK=ROOT/'Docs/STAGE1A_REVIEW_ELIGIBILITY_GATE_CODEBOOK_V0_5_CONTEXT_DRAFT_2026-11-17.md'
 MODEL='qwen3:8b'
+OPTIONS={**baseline.OPTIONS,'num_thread':8}
 EXPECTED_DIGEST='500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41'
 CONDITIONS={'v04_control':(baseline.PROMPT,baseline.CODEBOOK),'v05_context':(REV_PROMPT,REV_BOOK)}
 def rows(p):return [json.loads(x) for x in p.read_text().splitlines() if x.strip()] if p.exists() else []
@@ -27,7 +28,7 @@ def prepare():
     assert 'whole-review eligibility gate' in system(REV_PROMPT)
     assert all(x not in system(REV_PROMPT) for x in ['T06','K01','State Park','Chelsea'])
     OUT.mkdir(parents=True,exist_ok=True)
-    manifest={'protocol':'paired_gate_v04_vs_v05_context','status':'experimental_not_adopted','model':MODEL,'expected_model_digest':EXPECTED_DIGEST,'options':baseline.OPTIONS,'think':False,'scope':'complete_original_review_before_segmentation','reviews':36,'planned_calls':72,'conditions':{k:{'prompt_path':str(p.relative_to(ROOT)),'prompt_sha256':baseline.filehash(p),'codebook_path':str(b.relative_to(ROOT)),'codebook_sha256':baseline.filehash(b),'system_sha256':hashlib.sha256(system(p).encode()).hexdigest()} for k,(p,b) in CONDITIONS.items()},'input_sha256':baseline.filehash(SOURCE/'cases.jsonl'),'schema_sha256':baseline.filehash(baseline.SCHEMA),'runner_sha256':baseline.filehash(Path(__file__)),'no_retries':True,'codebook_runtime_role':'supporting specification; executable system message is standalone, as in v0.4','prior_verdicts_and_labels_in_input':False,'no_ratio_no_emotion_no_ET':True,'no_independent_accuracy_claim':True}
+    manifest={'protocol':'paired_gate_v04_vs_v05_context','status':'experimental_not_adopted','model':MODEL,'expected_model_digest':EXPECTED_DIGEST,'options':OPTIONS,'think':False,'scope':'complete_original_review_before_segmentation','reviews':36,'planned_calls':72,'conditions':{k:{'prompt_path':str(p.relative_to(ROOT)),'prompt_sha256':baseline.filehash(p),'codebook_path':str(b.relative_to(ROOT)),'codebook_sha256':baseline.filehash(b),'system_sha256':hashlib.sha256(system(p).encode()).hexdigest()} for k,(p,b) in CONDITIONS.items()},'input_sha256':baseline.filehash(SOURCE/'cases.jsonl'),'schema_sha256':baseline.filehash(baseline.SCHEMA),'runner_sha256':baseline.filehash(Path(__file__)),'no_retries':True,'codebook_runtime_role':'supporting specification; executable system message is standalone, as in v0.4','prior_verdicts_and_labels_in_input':False,'no_ratio_no_emotion_no_ET':True,'no_independent_accuracy_claim':True}
     write(OUT/'manifest.json',manifest)
     print('PREPARED 36 reviews x 2 prompts = 72 calls',flush=True)
     return data,schema
@@ -35,14 +36,14 @@ def run():
     data,schema=prepare();tags=request('/api/tags');tag=next(x for x in tags['models'] if x['name']==MODEL);assert tag['digest']==EXPECTED_DIGEST
     gpu=subprocess.check_output(['nvidia-smi','--query-gpu=name,memory.total,driver_version','--format=csv,noheader'],text=True) if shutil.which('nvidia-smi') else None
     write(OUT/'runtime_environment.json',{'model':tag,'ollama':request('/api/version'),'gpu':gpu,'compute':'GPU' if gpu else 'CPU','cpu':Path('/proc/cpuinfo').read_text().split('model name',1)[-1].splitlines()[0].strip(),'python':subprocess.check_output(['python3','--version'],text=True),'source_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()})
-    request('/api/generate',{'model':MODEL,'options':baseline.OPTIONS,'keep_alive':'20m','stream':False},600)
+    request('/api/generate',{'model':MODEL,'options':OPTIONS,'keep_alive':'20m','stream':False},600)
     done={(r['condition'],r['review_id']) for r in rows(OUT/'decisions.jsonl')}
     for condition,(prompt,book) in CONDITIONS.items():
         for x in data:
             if (condition,x['review_id']) in done:continue
             rec={'condition':condition,**{k:v for k,v in x.items() if k!='text'},'review_text':x['text'],'review_sha256':hashlib.sha256(x['text'].encode()).hexdigest(),'raw':'','parsed':None,'errors':[]};start=time.monotonic()
             try:
-                reply=request('/api/chat',{'model':MODEL,'messages':[{'role':'system','content':system(prompt)},{'role':'user','content':json.dumps({'review_text':x['text']},ensure_ascii=False)}],'format':schema,'stream':False,'think':False,'options':baseline.OPTIONS,'keep_alive':'20m'})
+                reply=request('/api/chat',{'model':MODEL,'messages':[{'role':'system','content':system(prompt)},{'role':'user','content':json.dumps({'review_text':x['text']},ensure_ascii=False)}],'format':schema,'stream':False,'think':False,'options':OPTIONS,'keep_alive':'20m'})
                 rec['raw']=reply.get('message',{}).get('content','');rec['parsed']=json.loads(rec['raw']);rec['errors']=baseline.validate(rec['parsed'],x['text']);rec['metadata']={k:reply.get(k) for k in ['eval_count','prompt_eval_count','total_duration','done_reason']}
             except Exception as ex:rec['errors']=[repr(ex)]
             rec['strict_valid']=not rec['errors'];rec['seconds']=round(time.monotonic()-start,3)
