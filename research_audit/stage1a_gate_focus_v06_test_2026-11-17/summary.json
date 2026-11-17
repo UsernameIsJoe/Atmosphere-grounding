@@ -1,0 +1,67 @@
+{
+  "planned_calls": 72,
+  "attempted": 72,
+  "conditions": {
+    "v04_control": {
+      "attempted": 36,
+      "parseable_verdicts": 36,
+      "keep": 22,
+      "reject": 14,
+      "strict_valid": 35,
+      "invalid": {
+        "K03": [
+          "nonexact_keep_quote"
+        ]
+      },
+      "unattempted": []
+    },
+    "v06_focus": {
+      "attempted": 36,
+      "parseable_verdicts": 36,
+      "keep": 12,
+      "reject": 24,
+      "strict_valid": 36,
+      "invalid": {},
+      "unattempted": []
+    }
+  },
+  "historical_v04_keep": 23,
+  "no_accuracy_claim": true,
+  "paired_parseable": 36,
+  "paired_changed": [
+    "K01",
+    "K02",
+    "K05",
+    "U01",
+    "U04",
+    "U05",
+    "T06",
+    "N06",
+    "N08",
+    "N11"
+  ],
+  "revised_vs_historical_changed": [
+    "K01",
+    "K02",
+    "K05",
+    "U01",
+    "U04",
+    "U05",
+    "T06",
+    "N06",
+    "N08",
+    "N10",
+    "N11"
+  ],
+  "control_vs_historical_changed": [
+    "N10"
+  ],
+  "focus_counts": {
+    "encounter": 24,
+    "place": 12
+  },
+  "focus_keep_counts": {
+    "encounter:False": 24,
+    "place:True": 12
+  }
+}
