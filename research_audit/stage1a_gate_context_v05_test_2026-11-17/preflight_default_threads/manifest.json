@@ -1,0 +1,40 @@
+{
+  "protocol": "paired_gate_v04_vs_v05_context",
+  "status": "experimental_not_adopted",
+  "model": "qwen3:8b",
+  "expected_model_digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+  "options": {
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 8192,
+    "num_predict": 512
+  },
+  "think": false,
+  "scope": "complete_original_review_before_segmentation",
+  "reviews": 36,
+  "planned_calls": 72,
+  "conditions": {
+    "v04_control": {
+      "prompt_path": "Docs/STAGE1A_REVIEW_ELIGIBILITY_GATE_PROMPT_V0_4_2026-11-16.md",
+      "prompt_sha256": "e93b288cff5608409c08836b2e0a4c1515c9366431bf2fdb6303f51d743b8ab4",
+      "codebook_path": "Docs/STAGE1A_REVIEW_ELIGIBILITY_GATE_CODEBOOK_V0_4_2026-11-16.md",
+      "codebook_sha256": "6304dc44befa80392bb4fff4bbb3be7c839d94700d437d7f608cbdc3daa99c87",
+      "system_sha256": "56e8222341fa3c171816b633ed2e8c2d46777e8c2fcc10ae37300fcb588c8375"
+    },
+    "v05_context": {
+      "prompt_path": "Docs/STAGE1A_REVIEW_ELIGIBILITY_GATE_PROMPT_V0_5_CONTEXT_DRAFT_2026-11-17.md",
+      "prompt_sha256": "cf50ea3eed26e6f376ac0bb1e7e59236a1404c9c9393968bdfe083d6af4574a3",
+      "codebook_path": "Docs/STAGE1A_REVIEW_ELIGIBILITY_GATE_CODEBOOK_V0_5_CONTEXT_DRAFT_2026-11-17.md",
+      "codebook_sha256": "5384367ff0ebfca5e94ac98807d47aee468480d798d3d2dbb8291e681ac707d6",
+      "system_sha256": "d1c4c52431e61f4c9ffaa32bc9479a47a06df7776b60ff31a645deabcd2959aa"
+    }
+  },
+  "input_sha256": "95d9216e4aa0c3f248478c3a58742812ab254180a1190d62f2278fd7ff139352",
+  "schema_sha256": "127a02d26eacc0c3c4897b33afdb8edb8d9e7afd2462a733534029ae53e30393",
+  "runner_sha256": "64803317cc1d0d7083e1cf82823c5f62633fbef4c9947fd9ccb555d4bae202d8",
+  "no_retries": true,
+  "codebook_runtime_role": "supporting specification; executable system message is standalone, as in v0.4",
+  "prior_verdicts_and_labels_in_input": false,
+  "no_ratio_no_emotion_no_ET": true,
+  "no_independent_accuracy_claim": true
+}

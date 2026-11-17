@@ -11,15 +11,17 @@ Read first for goals / architecture:
   Docs/PROJECT.txt        (goals & stages)
 
 
-CURRENT GATE PROPOSAL (2026-11-17; NOT ADOPTED OR RUN)
+CURRENT GATE PROPOSAL (2026-11-17; TESTED, NOT ADOPTED)
 -------------------------------------------------------------------------
 Set the ratio idea aside. Draft contextual-relevance changes distinguish
 a described place quality from the outcome of an event/service encounter:
   Docs/STAGE1A_REVIEW_ELIGIBILITY_GATE_PROMPT_V0_5_CONTEXT_DRAFT_2026-11-17.md
   Docs/STAGE1A_REVIEW_ELIGIBILITY_GATE_CODEBOOK_V0_5_CONTEXT_DRAFT_2026-11-17.md
-Keep v0.4 active until a separately authorized comparison is reviewed.
+Paired 36-review test completed; keep v0.4 active. Revised draft did not
+fix wedding/elopement and newly kept U02, T08 and N05 versus the archive.
+  research_audit/stage1a_gate_context_v05_test_2026-11-17/README.md
 One genuine place observation can still qualify a mixed review; no ratio
-or blanket private-event exclusion. No GPU run was started for this draft.
+or blanket private-event exclusion. Runpod CPU test finished; no new emotion run.
 
 CURRENT EMOTION MODEL DECISION (2026-11-17)
 -------------------------------------------------------------------------

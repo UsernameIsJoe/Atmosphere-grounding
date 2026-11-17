@@ -1,0 +1,52 @@
+{
+  "planned_calls": 72,
+  "attempted": 72,
+  "conditions": {
+    "v04_control": {
+      "attempted": 36,
+      "parseable_verdicts": 36,
+      "keep": 22,
+      "reject": 14,
+      "strict_valid": 35,
+      "invalid": {
+        "K03": [
+          "nonexact_keep_quote"
+        ]
+      },
+      "unattempted": []
+    },
+    "v05_context": {
+      "attempted": 36,
+      "parseable_verdicts": 36,
+      "keep": 26,
+      "reject": 10,
+      "strict_valid": 34,
+      "invalid": {
+        "K04": [
+          "nonexact_keep_quote"
+        ],
+        "U04": [
+          "nonexact_keep_quote"
+        ]
+      },
+      "unattempted": []
+    }
+  },
+  "historical_v04_keep": 23,
+  "no_accuracy_claim": true,
+  "paired_parseable": 36,
+  "paired_changed": [
+    "U02",
+    "T08",
+    "N05",
+    "N10"
+  ],
+  "revised_vs_historical_changed": [
+    "U02",
+    "T08",
+    "N05"
+  ],
+  "control_vs_historical_changed": [
+    "N10"
+  ]
+}
