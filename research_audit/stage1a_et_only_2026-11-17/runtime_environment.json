@@ -1,0 +1,64 @@
+{
+  "captured_at_utc": "2026-11-17T16:04:25.447317+00:00",
+  "pod_id": "yi1a6cq5a1y46f",
+  "gpu_hourly_usd": 2.19,
+  "gpu": "NVIDIA A100-SXM4-80GB, 81920 MiB, 595.112.07\n",
+  "ollama": "ollama version is 0.40.16\n",
+  "python": "Python 3.12.3\n",
+  "tags": {
+    "models": [
+      {
+        "name": "gemma4:31b-it-bf16",
+        "model": "gemma4:31b-it-bf16",
+        "modified_at": "2026-11-17T16:03:11.353839139Z",
+        "size": 62613927798,
+        "digest": "df1661a2a6aaa94faf24bbaf23a691877a27d0e6052598f105a225618a079e76",
+        "details": {
+          "parent_model": "dhiltgen/gemma4:31b-it-bf16-llamacpp",
+          "format": "gguf",
+          "family": "gemma4",
+          "families": [
+            "gemma4"
+          ],
+          "parameter_size": "30.7B",
+          "quantization_level": "BF16",
+          "context_length": 262144,
+          "embedding_length": 5376,
+          "runner": "llamacpp"
+        },
+        "capabilities": [
+          "completion",
+          "vision",
+          "tools",
+          "thinking"
+        ]
+      },
+      {
+        "name": "qwen3.8:27b",
+        "model": "qwen3.8:27b",
+        "modified_at": "2026-11-17T16:01:30.125406676Z",
+        "size": 17741872154,
+        "digest": "aaee06c39dcf2437cde036998d960e1fc1494b8191be7cc9657d01e509097813",
+        "details": {
+          "parent_model": "qwen3.8:27b-q4_K_M",
+          "format": "gguf",
+          "family": "qwen35",
+          "families": [
+            "qwen35"
+          ],
+          "parameter_size": "27.3B",
+          "quantization_level": "Q4_K_M",
+          "context_length": 262144,
+          "embedding_length": 5120,
+          "runner": "llamacpp"
+        },
+        "capabilities": [
+          "completion",
+          "vision",
+          "tools",
+          "thinking"
+        ]
+      }
+    ]
+  }
+}

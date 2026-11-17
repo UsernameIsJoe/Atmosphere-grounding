@@ -1,0 +1,1572 @@
+[
+  {
+    "claim_id": "82aac95aa97c00ded2a7",
+    "segment_id": "T04__01",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "Another beautiful Oasis",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "f4b3615a91dfc072107e",
+    "segment_id": "T06__01",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "truly could not have imagined a better experience",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "fcf4fcbbe47e10644792",
+    "segment_id": "T10__01",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "This is a great place to stop and wander around to see the art pieces.",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "b930e3e618993af95b06",
+    "segment_id": "N04__01",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "Amazing.",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      },
+      {
+        "model": "gemma4:31b-it-bf16",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "ed1d375def73232959f6",
+    "segment_id": "N06__01",
+    "emotion": "calm",
+    "direction": "supports",
+    "quote": "Love visiting state park with my coworkers to unwind.",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "2aed4549c840875f27bb",
+    "segment_id": "N06__01",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "Love visiting state park with my coworkers to unwind.",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "6622718be61983a037f0",
+    "segment_id": "N07__01",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "This place is exactly what you want out of a dive.",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "f734a010f8a6f42e8d99",
+    "segment_id": "N08__01",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "It is a good stable seafood place",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "b22a4b8acd5257b51256",
+    "segment_id": "N09__01",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "Gorgeous building",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      },
+      {
+        "model": "gemma4:31b-it-bf16",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "aa49768455f4eaadb3ae",
+    "segment_id": "N09__01",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "very spacious with lots of room to stretch your legs",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "T",
+        "phase": "original"
+      },
+      {
+        "model": "gemma4:31b-it-bf16",
+        "legacy_track": "T",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "a3d3463af4b71e82a32a",
+    "segment_id": "N10__01",
+    "emotion": "inviting",
+    "direction": "opposes",
+    "quote": "You can’t park here without a permit.",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "T",
+        "phase": "original"
+      },
+      {
+        "model": "gemma4:31b-it-bf16",
+        "legacy_track": "T",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "eb637034a34ac3165949",
+    "segment_id": "N11__01",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "Good design, and comfortable.",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      },
+      {
+        "model": "gemma4:31b-it-bf16",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "09048a265ec08e1056d6",
+    "segment_id": "T04__02",
+    "emotion": "calm",
+    "direction": "supports",
+    "quote": "giving families and all a peace with calm pause",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "b736e33654aee764ea9b",
+    "segment_id": "T04__02",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "Creates a needed break to the brick and pavement",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "T",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "0d250044ecddbe0da569",
+    "segment_id": "T06__02",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "Chelsea was incredible to work with.",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "016eb59440571c27655b",
+    "segment_id": "T10__02",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "No entry fee",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "T",
+        "phase": "original"
+      },
+      {
+        "model": "gemma4:31b-it-bf16",
+        "legacy_track": "T",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "7cc94f43f5d09cbe4115",
+    "segment_id": "T10__02",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "made it interesting for my kid to go through every floor and look at everything",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      },
+      {
+        "model": "gemma4:31b-it-bf16",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "dd1b5b6238dfe3243f66",
+    "segment_id": "T12__02",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "The interior and exterior are beautiful.",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      },
+      {
+        "model": "gemma4:31b-it-bf16",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "935455a047c8f0df0c2e",
+    "segment_id": "N04__02",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "Im really impressed by how useful the signs by the bones and old extinct dinasaures and mammales are.",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "570e3dc7703b60ef8cf1",
+    "segment_id": "N06__02",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "loved it",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "c12f753220999d003818",
+    "segment_id": "N07__02",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "Good vibe, warm atmosphere",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      },
+      {
+        "model": "gemma4:31b-it-bf16",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "a205beca45de26ff3b61",
+    "segment_id": "N08__02",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "Nice environment and friendly staff.",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "d89baa64afe7772ebae3",
+    "segment_id": "N09__02",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "Delicious food, good coffee!",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "982acc18b7e4eaf99447",
+    "segment_id": "N10__02",
+    "emotion": "inviting",
+    "direction": "opposes",
+    "quote": "the attendant told us that we could not",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      },
+      {
+        "model": "gemma4:31b-it-bf16",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "0d40b895dec610b106c1",
+    "segment_id": "T06__03",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "She always available to answer our questions, and so helpful in planning the flow of the night.",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "31fd3e5da2719673b2ba",
+    "segment_id": "T10__03",
+    "emotion": "calm",
+    "direction": "supports",
+    "quote": "The AC made it better on a hot day where you can sit and admire the paintings too.",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "T",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "82902c4facc92ef9fb3b",
+    "segment_id": "T10__03",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "The AC made it better on a hot day where you can sit and admire the paintings too.",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "78deadeb2a29249af33a",
+    "segment_id": "N07__03",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "Food punches well above its weight for a place like this.",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      },
+      {
+        "model": "gemma4:31b-it-bf16",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "c2df7aa1e30f9b6fdb58",
+    "segment_id": "N08__03",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "Definitely had a very pleasant a joyful experience.",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      },
+      {
+        "model": "gemma4:31b-it-bf16",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "cc6122ce6eb637afd0a6",
+    "segment_id": "N09__03",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "Live student performances hosted once a week.",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "T",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "2aa40eb6ea82749808b5",
+    "segment_id": "T06__04",
+    "emotion": "calm",
+    "direction": "supports",
+    "quote": "She made the entire process feel easy and stress-free.",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "1c8f6112bb66ed49dfd1",
+    "segment_id": "N04__04",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "great taxidermy animals (mammals and fish and birds)!!",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      },
+      {
+        "model": "gemma4:31b-it-bf16",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "9b590833d7861dbc7b8c",
+    "segment_id": "N06__04",
+    "emotion": "calm",
+    "direction": "supports",
+    "quote": "Their patio is nice",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "4a8d261e1009819449e4",
+    "segment_id": "N06__04",
+    "emotion": "calm",
+    "direction": "opposes",
+    "quote": "we did get into a predicament with the staff",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "f51ad96b5e63cc0afb99",
+    "segment_id": "N06__04",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "Their patio is nice",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "94bf7ba9d763feb464c0",
+    "segment_id": "N06__04",
+    "emotion": "inviting",
+    "direction": "opposes",
+    "quote": "we did get into a predicament with the staff",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "0b28fffb84ab78291627",
+    "segment_id": "N07__04",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "Beer list is pleasant",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      },
+      {
+        "model": "gemma4:31b-it-bf16",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "3cae7c00d311b4030155",
+    "segment_id": "N09__04",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "Great selection of small bites",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "e02914b0dabd427e43dc",
+    "segment_id": "T06__05",
+    "emotion": "calm",
+    "direction": "supports",
+    "quote": "so we could actually relax and enjoy ourselves",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      },
+      {
+        "model": "gemma4:31b-it-bf16",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "d63e6c80f21b5da902b5",
+    "segment_id": "T06__05",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "so we could actually relax and enjoy ourselves",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "a39688c2bf6bc817b41d",
+    "segment_id": "N04__05",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "sheer volumn and the placement of bone skeletons next to taxidermy skins is great for comparson",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "5a9ba75f53c182c195cd",
+    "segment_id": "N06__05",
+    "emotion": "calm",
+    "direction": "opposes",
+    "quote": "they didn’t want all of us to sit on the patio",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "135177d4a4d84ebba744",
+    "segment_id": "N06__05",
+    "emotion": "inviting",
+    "direction": "opposes",
+    "quote": "they didn’t want all of us to sit on the patio",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "45b99758cf67f8f9f2d9",
+    "segment_id": "N07__05",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "Duck nachos are awesome because each chip is loaded so your bite is perfect.",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "868ab4512a1dd166d13f",
+    "segment_id": "N09__05",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "comfy seats",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "T",
+        "phase": "original"
+      },
+      {
+        "model": "gemma4:31b-it-bf16",
+        "legacy_track": "E",
+        "phase": "completion"
+      }
+    ]
+  },
+  {
+    "claim_id": "c348e6cd63033bb46f28",
+    "segment_id": "N09__05",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "outlets EVERYWHERE",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "T",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "dec6656531a02e17fabd",
+    "segment_id": "T06__06",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "The bartenders absolutely crushed it.",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "8839f3570e46399ea118",
+    "segment_id": "T12__06",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "There is no other building that looks like Kresge.",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "a9d1a345ac4be2e10478",
+    "segment_id": "N04__06",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "Rock and gem area is fabulous.",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      },
+      {
+        "model": "gemma4:31b-it-bf16",
+        "legacy_track": "E",
+        "phase": "completion"
+      }
+    ]
+  },
+  {
+    "claim_id": "a6eb1516dda8a85c7b0c",
+    "segment_id": "N06__06",
+    "emotion": "calm",
+    "direction": "opposes",
+    "quote": "the bar staff told me we were not allowed to go up to the patio",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "52a0db2384c3e4fa0736",
+    "segment_id": "N06__06",
+    "emotion": "inviting",
+    "direction": "opposes",
+    "quote": "the bar staff told me we were not allowed to go up to the patio",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      },
+      {
+        "model": "gemma4:31b-it-bf16",
+        "legacy_track": "E",
+        "phase": "completion"
+      }
+    ]
+  },
+  {
+    "claim_id": "3bf472e5fa45a27f728b",
+    "segment_id": "T06__07",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "Every drink was amazing",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "00a1dddb832c64aa84c2",
+    "segment_id": "T06__07",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "kept the bar moving incredibly fast",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "33c74084baa10468b653",
+    "segment_id": "T12__07",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "You can sit or lie on the base of the building outside",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "T",
+        "phase": "original"
+      },
+      {
+        "model": "gemma4:31b-it-bf16",
+        "legacy_track": "T",
+        "phase": "completion"
+      }
+    ]
+  },
+  {
+    "claim_id": "30acfd467f35c8898e6a",
+    "segment_id": "N06__07",
+    "emotion": "calm",
+    "direction": "opposes",
+    "quote": "So then I had to wait while those two connected on the issue.",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "f5b25002976df352d66c",
+    "segment_id": "N06__07",
+    "emotion": "inviting",
+    "direction": "opposes",
+    "quote": "So then I had to wait while those two connected on the issue.",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "fb2b4d67bd73df99ac80",
+    "segment_id": "N07__07",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "overall I was pleased with everything we got",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "5fc2a3828074c6bc52c1",
+    "segment_id": "T06__08",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "Every single guest commented on how amazing the food was and how much fun they had.",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "059643a6ff53898591fc",
+    "segment_id": "T12__08",
+    "emotion": "inviting",
+    "direction": "opposes",
+    "quote": "lack of elevators or accessibility for people with physical limitations",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "T",
+        "phase": "original"
+      },
+      {
+        "model": "gemma4:31b-it-bf16",
+        "legacy_track": "T",
+        "phase": "completion"
+      }
+    ]
+  },
+  {
+    "claim_id": "b84844d87963ef4f79b5",
+    "segment_id": "N04__08",
+    "emotion": "calm",
+    "direction": "opposes",
+    "quote": "It's almost overwhelming to see so many together",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "ff7c9e6c5b84ba0c4593",
+    "segment_id": "N06__08",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "We then ate up there, no problem.",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "663bc0d04ae25fc16e07",
+    "segment_id": "T06__09",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "We’re still hearing about it weeks later.",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "52fd350d2ed4052ce880",
+    "segment_id": "T12__09",
+    "emotion": "inviting",
+    "direction": "opposes",
+    "quote": "The restrooms are in the basement which are around 18 steps and there is a lift for final three stairs, but why not put a lift for the other 15 steps?",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "T",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "7085292b75e4d623d3b6",
+    "segment_id": "N04__09",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "i rate this museum high",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      },
+      {
+        "model": "gemma4:31b-it-bf16",
+        "legacy_track": "E",
+        "phase": "completion"
+      }
+    ]
+  },
+  {
+    "claim_id": "a97e979526c09c627dca",
+    "segment_id": "N04__09",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "signage was inciteful, readable and explained how items were grouped",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "373ae5ca0f1385e39b1b",
+    "segment_id": "N06__09",
+    "emotion": "calm",
+    "direction": "opposes",
+    "quote": "didn’t enjoy the tension",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      },
+      {
+        "model": "gemma4:31b-it-bf16",
+        "legacy_track": "E",
+        "phase": "completion"
+      }
+    ]
+  },
+  {
+    "claim_id": "8e944326f6b4c57952f1",
+    "segment_id": "N06__09",
+    "emotion": "inviting",
+    "direction": "opposes",
+    "quote": "didn’t enjoy the tension",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "36556636de6794593c9f",
+    "segment_id": "T06__10",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "State Park created the perfect atmosphere for our reception and exceeded every expectation we had.",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "54b31c41d2a636e5701a",
+    "segment_id": "T12__10",
+    "emotion": "inviting",
+    "direction": "opposes",
+    "quote": "for people with issues with steps, you need to climb stairs to get into the Auditorium, you need to walk down stairs for the Little Kresge Theatre, and the most steps are to the restrooms",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "T",
+        "phase": "original"
+      },
+      {
+        "model": "gemma4:31b-it-bf16",
+        "legacy_track": "T",
+        "phase": "completion"
+      }
+    ]
+  },
+  {
+    "claim_id": "9d659c35ca432351340e",
+    "segment_id": "N04__10",
+    "emotion": "calm",
+    "direction": "opposes",
+    "quote": "There were kids groups going through scavenging hunting for answers.",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "T",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "9158cdfb95d0109575f7",
+    "segment_id": "T06__11",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "making our wedding night feel so special",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "ea3cd88505258bf60115",
+    "segment_id": "T12__11",
+    "emotion": "inviting",
+    "direction": "opposes",
+    "quote": "didn't think beyond aesthetics and acoustics",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      },
+      {
+        "model": "gemma4:31b-it-bf16",
+        "legacy_track": "T",
+        "phase": "completion"
+      }
+    ]
+  },
+  {
+    "claim_id": "7a7bf2dd140079a5f929",
+    "segment_id": "N04__11",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "And workers around to answer exhibit questions.",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "5d2126f4d913bd5b3cf3",
+    "segment_id": "T06__12",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "Highly, highly recommend!",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "original"
+      },
+      {
+        "model": "gemma4:31b-it-bf16",
+        "legacy_track": "E",
+        "phase": "completion"
+      }
+    ]
+  },
+  {
+    "claim_id": "e8f1c542ec9959e5a632",
+    "segment_id": "T04__01",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "beautiful Oasis",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "gemma4:31b-it-bf16",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "1731cc88d899ccf9940c",
+    "segment_id": "T06__01",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "could not have imagined a better experience",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "gemma4:31b-it-bf16",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "89105a7622f52f0e7145",
+    "segment_id": "T10__01",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "great place to stop and wander around",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "gemma4:31b-it-bf16",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "8f3817a67ad76269400b",
+    "segment_id": "N06__01",
+    "emotion": "calm",
+    "direction": "supports",
+    "quote": "unwind",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "gemma4:31b-it-bf16",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "9287f9ceb5888516d974",
+    "segment_id": "N06__01",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "Love visiting state park",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "gemma4:31b-it-bf16",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "73ca7461246316741475",
+    "segment_id": "N08__01",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "good stable seafood place",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "gemma4:31b-it-bf16",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "07f7c03207c6a0adb6e5",
+    "segment_id": "T04__02",
+    "emotion": "calm",
+    "direction": "supports",
+    "quote": "peace with calm pause",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "gemma4:31b-it-bf16",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "052baed8efde7726c130",
+    "segment_id": "T04__02",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "needed break to the brick and pavement",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "gemma4:31b-it-bf16",
+        "legacy_track": "T",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "72d08b4d86dd72a08c17",
+    "segment_id": "N08__02",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "Nice environment",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "gemma4:31b-it-bf16",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "b8adab072a78bb660c48",
+    "segment_id": "N08__02",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "friendly staff",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "gemma4:31b-it-bf16",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "8706c8eacfcf8c8e47fb",
+    "segment_id": "T06__03",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "so helpful in planning the flow of the night",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "gemma4:31b-it-bf16",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "3515b130714acce5aa18",
+    "segment_id": "T10__03",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "The AC made it better on a hot day where you can sit and admire the paintings too",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "gemma4:31b-it-bf16",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "ffc73a40ea7ed66cae14",
+    "segment_id": "T06__04",
+    "emotion": "calm",
+    "direction": "supports",
+    "quote": "feel easy and stress-free",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "gemma4:31b-it-bf16",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "5a798114921719e01b28",
+    "segment_id": "N04__05",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "Really good",
+    "cohort": "original",
+    "provenance": [
+      {
+        "model": "gemma4:31b-it-bf16",
+        "legacy_track": "E",
+        "phase": "original"
+      }
+    ]
+  },
+  {
+    "claim_id": "8970fc3fe5637aded1a1",
+    "segment_id": "T02__01",
+    "emotion": "calm",
+    "direction": "supports",
+    "quote": "A peaceful park",
+    "cohort": "completion",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "completion"
+      }
+    ]
+  },
+  {
+    "claim_id": "e8b24011c8e43abf13a4",
+    "segment_id": "T02__01",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "lovely, nature themed granite bollards and ground plates",
+    "cohort": "completion",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "completion"
+      }
+    ]
+  },
+  {
+    "claim_id": "f053c724b666f0decd63",
+    "segment_id": "N04__12",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "Reasonble price",
+    "cohort": "completion",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "E",
+        "phase": "completion"
+      },
+      {
+        "model": "gemma4:31b-it-bf16",
+        "legacy_track": "T",
+        "phase": "completion"
+      }
+    ]
+  },
+  {
+    "claim_id": "6dd505772009c7c121c8",
+    "segment_id": "N04__12",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "can see a few other nearby museums",
+    "cohort": "completion",
+    "provenance": [
+      {
+        "model": "qwen3.8:27b",
+        "legacy_track": "T",
+        "phase": "completion"
+      }
+    ]
+  },
+  {
+    "claim_id": "c523cf9bc325e5967926",
+    "segment_id": "T06__08",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "how much fun they had",
+    "cohort": "completion",
+    "provenance": [
+      {
+        "model": "gemma4:31b-it-bf16",
+        "legacy_track": "E",
+        "phase": "completion"
+      }
+    ]
+  },
+  {
+    "claim_id": "d78534d25169f450afe8",
+    "segment_id": "T06__10",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "created the perfect atmosphere for our reception and exceeded every expectation we had",
+    "cohort": "completion",
+    "provenance": [
+      {
+        "model": "gemma4:31b-it-bf16",
+        "legacy_track": "E",
+        "phase": "completion"
+      }
+    ]
+  },
+  {
+    "claim_id": "464e252e0a1ea34936df",
+    "segment_id": "T12__09",
+    "emotion": "inviting",
+    "direction": "opposes",
+    "quote": "why not put a lift for the other 15 steps?",
+    "cohort": "completion",
+    "provenance": [
+      {
+        "model": "gemma4:31b-it-bf16",
+        "legacy_track": "T",
+        "phase": "completion"
+      }
+    ]
+  },
+  {
+    "claim_id": "623a4d933192d4750dbe",
+    "segment_id": "N04__11",
+    "emotion": "inviting",
+    "direction": "supports",
+    "quote": "workers around to answer exhibit questions",
+    "cohort": "completion",
+    "provenance": [
+      {
+        "model": "gemma4:31b-it-bf16",
+        "legacy_track": "E",
+        "phase": "completion"
+      }
+    ]
+  }
+]

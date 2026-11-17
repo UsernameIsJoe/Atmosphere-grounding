@@ -1,0 +1,97 @@
+{
+  "emotion_completion": {
+    "qwen3.8:27b": {
+      "completion_attempts": 3,
+      "completion_valid": 3,
+      "total_valid_segments": 71,
+      "total_segments": 71,
+      "invalid_completion": {}
+    },
+    "gemma4:31b-it-bf16": {
+      "completion_attempts": 33,
+      "completion_valid": 29,
+      "total_valid_segments": 67,
+      "total_segments": 71,
+      "invalid_completion": {
+        "T02__01": [
+          "category_order_2"
+        ],
+        "N06__04": [
+          "nonexact_quote_0_0",
+          "nonexact_quote_1_1"
+        ],
+        "N06__05": [
+          "nonexact_quote_0_0"
+        ],
+        "N07__01": [
+          "nonexact_quote_1_1"
+        ]
+      }
+    }
+  },
+  "ET": {
+    "qwen3.8:27b": {
+      "calls": 60,
+      "valid_calls": 60,
+      "classified_claims": 96,
+      "tracks": {
+        "E": 28,
+        "T": 68
+      },
+      "legacy_original_claims_compared": 74,
+      "legacy_changed": 48,
+      "invalid_segments": []
+    },
+    "gemma4:31b-it-bf16": {
+      "calls": 60,
+      "valid_calls": 59,
+      "classified_claims": 95,
+      "tracks": {
+        "E": 37,
+        "T": 58
+      },
+      "legacy_original_claims_compared": 29,
+      "legacy_changed": 11,
+      "invalid_segments": [
+        "N07__05"
+      ]
+    }
+  },
+  "no_human_accuracy_claim": true,
+  "agreement_all": {
+    "shared_claims": 95,
+    "agree": 86,
+    "disagreement_ids": [
+      "eb637034a34ac3165949",
+      "dd1b5b6238dfe3243f66",
+      "a205beca45de26ff3b61",
+      "9b590833d7861dbc7b8c",
+      "f51ad96b5e63cc0afb99",
+      "e02914b0dabd427e43dc",
+      "d63e6c80f21b5da902b5",
+      "9158cdfb95d0109575f7",
+      "72d08b4d86dd72a08c17"
+    ]
+  },
+  "agreement_original": {
+    "shared_claims": 87,
+    "agree": 78,
+    "disagreement_ids": [
+      "eb637034a34ac3165949",
+      "dd1b5b6238dfe3243f66",
+      "a205beca45de26ff3b61",
+      "9b590833d7861dbc7b8c",
+      "f51ad96b5e63cc0afb99",
+      "e02914b0dabd427e43dc",
+      "d63e6c80f21b5da902b5",
+      "9158cdfb95d0109575f7",
+      "72d08b4d86dd72a08c17"
+    ]
+  },
+  "agreement_completion": {
+    "shared_claims": 8,
+    "agree": 8,
+    "disagreement_ids": []
+  },
+  "fixed_claims": 96
+}
