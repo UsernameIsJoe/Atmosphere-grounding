@@ -1,7 +1,7 @@
 {
   "version": "v0.5_scenarios_draft",
   "display_version": "v5",
-  "status": "draft_untested_not_adopted",
+  "status": "tested_not_adopted",
   "based_on": "v0.4",
   "front_runner_config": "configs/stage1a_review_eligibility_gate_current.json",
   "front_runner_config_sha256": "acd58384e6ee3e0eb22650e5565af8666c4ae55351bb214331e934ea9495e17a",
@@ -30,6 +30,8 @@
   "keyword_blacklist": false,
   "uses_ratio": false,
   "requires_main_place_focus": false,
-  "runner_status": "not_prepared_for_this_candidate",
-  "executed": false
+  "runner_status": "paired_test_completed",
+  "executed": true,
+  "runner_path": "scripts/stage1a_gate_scenarios_v5_test_20261117.py",
+  "latest_test_archive": "research_audit/stage1a_gate_scenarios_v5_test_2026-11-17"
 }

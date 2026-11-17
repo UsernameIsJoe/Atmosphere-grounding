@@ -11,20 +11,23 @@ Read first for goals / architecture:
   Docs/PROJECT.txt        (goals & stages)
 
 
-CURRENT GATE CANDIDATE (2026-11-17; v5 SCENARIOS; UNTESTED)
+CURRENT GATE CANDIDATE (2026-11-17; v5 SCENARIOS; TESTED, NOT ADOPTED)
 -------------------------------------------------------------------------
-User requested a separate v5 candidate; archived v0.4 stays the front runner.
-  Docs/STAGE1A_REVIEW_ELIGIBILITY_GATE_PROMPT_V0_5_SCENARIOS_DRAFT_2026-11-17.md
-  Docs/STAGE1A_REVIEW_ELIGIBILITY_GATE_CODEBOOK_V0_5_SCENARIOS_DRAFT_2026-11-17.md
+Scenario-aided v5 is tested against v0.4 on the same 36 full reviews, 72
+requests on Qwen3:8B/CPU8. Both fresh conditions: 22 KEEP/14 REJECT. V5
+rejects wedding T06/elopement K01, but rejects dance-floor review U01 and
+newly keeps U02 other-campus and N05 kitchen/food-policy reviews. N10
+parking-rule KEEP is restored against the fresh control (already historical
+KEEP). All 36 v5 outputs mechanically valid; no overall accuracy claim.
+Warm median time: 5.720 -> 6.716 seconds/review (+17.41%) on this CPU only.
+  research_audit/stage1a_gate_scenarios_v5_test_2026-11-17/README.md
+  research_audit/stage1a_gate_scenarios_v5_test_2026-11-17/CHANGED_REVIEWS.md
   configs/stage1a_review_eligibility_gate_v05_scenarios_draft.json
-Direct v0.4 base with common insufficient-evidence scenarios: private events,
-individual service/transaction outcomes, food/drink praise, incidental objects
-in unrelated disputes. These are evidence exclusions, NOT keyword bans.
-Preserve genuine mixed-review place observations, facilities and access rules.
-Keep the original three-field output and one review-level call; no ratio or
-main-focus criterion. No literal cohort quotations or labels are examples.
-Earlier v0.5-context and v0.6-focus proposals/results remain archived; this
-scenario candidate has not been run or adopted. Current pointer stays v0.4.
+Keep v0.4 as the unchanged active front runner. Saved v5 prompt/codebook
+remain frozen as-authored; their original untested headers are historical.
+No ratio, main-focus requirement, keyword blacklist or new emotion run.
+The full v5 package also removed legacy quotation examples; do not attribute
+all changes solely to adding scenario rules. No further inference started.
 
 CURRENT GATE TEST (2026-11-17; v0.6 FOCUS; COMPLETED, NOT ADOPTED)
 -------------------------------------------------------------------------
