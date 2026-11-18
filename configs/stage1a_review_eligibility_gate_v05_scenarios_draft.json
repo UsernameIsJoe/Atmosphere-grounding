@@ -33,5 +33,14 @@
   "runner_status": "paired_test_completed",
   "executed": true,
   "runner_path": "scripts/stage1a_gate_scenarios_v5_test_20261117.py",
-  "latest_test_archive": "research_audit/stage1a_gate_scenarios_v5_test_2026-11-17"
+  "latest_test_archive": "research_audit/stage1a_gate_scenarios_v5_test_2026-11-17",
+  "latest_human_audit": "research_audit/stage1a_gate_scenarios_v5_test_2026-11-17/human_adjudications_2026-11-18.jsonl",
+  "human_audit_scope": [
+    "U01",
+    "U02",
+    "N05"
+  ],
+  "human_audit_disagreements_in_scope": [
+    "N05"
+  ]
 }

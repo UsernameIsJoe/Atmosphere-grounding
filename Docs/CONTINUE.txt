@@ -11,6 +11,17 @@ Read first for goals / architecture:
   Docs/PROJECT.txt        (goals & stages)
 
 
+
+LATEST V5 HUMAN AUDIT (2026-11-18; THREE DISPLAYED REVIEWS)
+-------------------------------------------------------------------------
+User adjudication: U01=REJECT, U02=KEEP, N05=REJECT. V5 agrees on U01/U02;
+N05 is the only disagreement among these three (not proven across all 36).
+This supersedes prior provisional U01 KEEP/U02 REJECT references. Do not
+continue calling those two v5 regressions under the current human labels.
+  research_audit/stage1a_gate_scenarios_v5_test_2026-11-17/HUMAN_ADJUDICATION_2026-11-18.md
+  research_audit/stage1a_gate_scenarios_v5_test_2026-11-17/human_adjudications_2026-11-18.jsonl
+No prompt change, model run or adoption. V0.4 remains the active front runner.
+
 CURRENT GATE CANDIDATE (2026-11-17; v5 SCENARIOS; TESTED, NOT ADOPTED)
 -------------------------------------------------------------------------
 Scenario-aided v5 is tested against v0.4 on the same 36 full reviews, 72
