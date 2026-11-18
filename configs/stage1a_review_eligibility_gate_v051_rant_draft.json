@@ -1,7 +1,7 @@
 {
   "version": "v0.5.1_rant_draft",
   "display_version": "v5.1",
-  "status": "draft_untested_not_adopted",
+  "status": "tested_not_adopted",
   "based_on": "v0.5_scenarios_draft",
   "front_runner_config": "configs/stage1a_review_eligibility_gate_current.json",
   "front_runner_config_sha256": "acd58384e6ee3e0eb22650e5565af8666c4ae55351bb214331e934ea9495e17a",
@@ -30,12 +30,23 @@
   "keyword_blacklist": false,
   "uses_ratio": false,
   "requires_main_place_focus": false,
-  "runner_status": "not_prepared_for_this_candidate",
-  "executed": false,
+  "runner_status": "paired_test_completed",
+  "executed": true,
   "base_candidate_config": "configs/stage1a_review_eligibility_gate_v05_scenarios_draft.json",
   "review_level_hostile_rant_exclusion": true,
   "hostile_rant_exclusion_overrides_place_anchor": true,
   "excludes_emotion_intensity_alone": false,
   "base_candidate_test_archive": "research_audit/stage1a_gate_scenarios_v5_test_2026-11-17",
-  "base_candidate_human_audit": "research_audit/stage1a_gate_scenarios_v5_test_2026-11-17/human_adjudications_2026-11-18.jsonl"
+  "base_candidate_human_audit": "research_audit/stage1a_gate_scenarios_v5_test_2026-11-17/human_adjudications_2026-11-18.jsonl",
+  "runner_path": "scripts/stage1a_gate_rant_v51_test_20261118.py",
+  "latest_test_archive": "research_audit/stage1a_gate_rant_v51_test_2026-11-18",
+  "latest_test_result": {
+    "reviews": 36,
+    "keep": 22,
+    "reject": 14,
+    "strict_valid": 35,
+    "verdict_changes_vs_fresh_v5": 0,
+    "motivating_N05_keep": true,
+    "adopted": false
+  }
 }

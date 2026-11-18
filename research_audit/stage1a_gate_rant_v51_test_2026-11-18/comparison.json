@@ -1,0 +1,758 @@
+[
+  {
+    "review_id": "K01",
+    "historical_v04": {
+      "keep": true,
+      "anchor_quote": "We were able to take photos throughout the space and no one gave us a hard time.",
+      "reason": "Reports on the spatial accessibility and tolerance of the reviewed location during the event."
+    },
+    "v5_control": {
+      "keep": false,
+      "anchor_quote": "",
+      "reason": "The review describes a private event (elopement) and praises the kindness of individuals involved, but does not provide a meaningful observation about the physical space, atmosphere, accessibility, or facilities of the location itself. It focuses on personal interactions and event management rather than the place-level qualities of the venue."
+    },
+    "v51_rant": {
+      "keep": false,
+      "anchor_quote": "",
+      "reason": "The review is dominated by praise for a private event (elopement) and personal interactions, without a meaningful observation about the physical space, atmosphere, or facilities of the location. It focuses on the emotional experience of the event rather than the place itself."
+    },
+    "strict_valid_control": true,
+    "strict_valid_revised": true,
+    "review_text": "My husband and I got eloped here. Everyone was so nice and friendly. Our photographer was running late and city clerk told us they’d try their best to wait. Our justice of peace, Paula, is a gem! I’m so thankful for her empathy, consideration and warmth. It was so stressful but her humanity made everything so much better! We were able to take photos throughout the space and no one gave us a hard time. We had an amazing elopement here!"
+  },
+  {
+    "review_id": "K02",
+    "historical_v04": {
+      "keep": true,
+      "anchor_quote": "It was completely covered in graffiti. It was completely unclean, with tissues all over the place.",
+      "reason": "Describes the cleanliness and graffiti issues in the reviewed restroom."
+    },
+    "v5_control": {
+      "keep": true,
+      "anchor_quote": "It was completely unclean, with tissues all over the place.",
+      "reason": "The review describes the cleanliness of the restroom, which is a place-level condition."
+    },
+    "v51_rant": {
+      "keep": true,
+      "anchor_quote": "It was completely unclean, with tissues all over the place.",
+      "reason": "The review describes the cleanliness of the restroom, which is a place-level quality."
+    },
+    "strict_valid_control": true,
+    "strict_valid_revised": true,
+    "review_text": "I wish I could give this an honest review of a 4 or a 5, because I know that the people who put it there were trying to solve a universal problem and had a kind heart. However, it must be noted that maintenence was a huge issue. It was completely covered in graffiti. It was completely unclean, with tissues all over the place. Lights in the small box were years away- it was completely dark. Although the flush was operative, the hand washing station was not. It was seeming that nobody had the responsibility of cleaning this place, as it was clear that it had not been cleaned in days, if not weeks.\nIf possible, steer clear of their restroom, and find a local shop."
+  },
+  {
+    "review_id": "K03",
+    "historical_v04": {
+      "keep": true,
+      "anchor_quote": "There's usually only 2 other people, and it's a nice little place to hang out, with picnic benches.",
+      "reason": "Describes the low occupancy and presence of picnic facilities, indicating the park's atmosphere and amenities."
+    },
+    "v5_control": {
+      "keep": true,
+      "anchor_quote": "Great park for such a hidden location.",
+      "reason": "The review describes the park's hidden location as a meaningful characteristic, indicating its relative obscurity and potential for tranquility."
+    },
+    "v51_rant": {
+      "keep": true,
+      "anchor_quote": "Great park for such a hidden location.",
+      "reason": "The review describes the park's hidden location and its suitability as a quiet, family-friendly space with minimal litter, indicating a place-level quality."
+    },
+    "strict_valid_control": true,
+    "strict_valid_revised": true,
+    "review_text": "Great park for such a hidden location. When I go here, there's usually only 2 other people, and it's a nice little place to hang out, with picnic benches. I wouldn't go here if your looking for walk. They should install bathrooms, or at least an outhouse. Definently a good park with not much litter. Suitable for all ages."
+  },
+  {
+    "review_id": "K04",
+    "historical_v04": {
+      "keep": true,
+      "anchor_quote": "What made this visit extra special was how surprisingly uncrowded it was.",
+      "reason": "Reports the level of crowding at Harvard Square, a meaningful characteristic of the place."
+    },
+    "v5_control": {
+      "keep": true,
+      "anchor_quote": "What made this visit extra special was how surprisingly uncrowded it was.",
+      "reason": "The review describes the place-level characteristic of crowding, which is a meaningful observation about the spatial experience and accessibility of Harvard Square."
+    },
+    "v51_rant": {
+      "keep": true,
+      "anchor_quote": "What made this visit extra special was how surprisingly uncrowded it was.",
+      "reason": "The review describes the place-level quality of crowding, indicating the level of comfort and accessibility experienced in Harvard Square."
+    },
+    "strict_valid_control": true,
+    "strict_valid_revised": true,
+    "review_text": "Harvard Square never disappoints! I recently took my aunt for a visit, and we had such a lovely time soaking in the atmosphere. One of our favorite stops was the The Harvard Coop—and of course, we couldn’t leave without picking up some merchandise!\n\nWhat made this visit extra special was how surprisingly uncrowded it was. We were able to stroll comfortably, browse at our own pace, and truly enjoy the charm of the Square without the usual hustle and bustle.\n\nIt’s always such a classic Boston experience—great shopping, beautiful surroundings, and that unmistakable Harvard vibe. A must-visit every time!"
+  },
+  {
+    "review_id": "K05",
+    "historical_v04": {
+      "keep": true,
+      "anchor_quote": "he has a security camera pointing at the park",
+      "reason": "Reports the presence of a security camera, indicating surveillance and management practices at the park."
+    },
+    "v5_control": {
+      "keep": true,
+      "anchor_quote": "he has a security camera pointing at the park",
+      "reason": "describes a physical feature of the park"
+    },
+    "v51_rant": {
+      "keep": true,
+      "anchor_quote": "he has a security camera pointing at the park",
+      "reason": "The review describes a place-level observation about the park's security measures."
+    },
+    "strict_valid_control": true,
+    "strict_valid_revised": true,
+    "review_text": "Park is good. The chickens will chase you if you have any food. If the owner of the chickens sees it, he yells from his home and asks if you are feeding poison to them. Also he has a security camera pointing at the park."
+  },
+  {
+    "review_id": "K06",
+    "historical_v04": {
+      "keep": true,
+      "anchor_quote": "It’s not closed to the street though so you have to keep an eye on your kids",
+      "reason": "Describes the spatial relationship of the park to the street, indicating a potential safety concern."
+    },
+    "v5_control": {
+      "keep": true,
+      "anchor_quote": "It’s a cute small park good for little ones.",
+      "reason": "Describes the physical characteristics and appeal of the park as a place for children."
+    },
+    "v51_rant": {
+      "keep": true,
+      "anchor_quote": "It’s a cute small park good for little ones.",
+      "reason": "The review describes the physical characteristics and suitability of the park for young children, which is a meaningful observation about the place's environment and accessibility."
+    },
+    "strict_valid_control": true,
+    "strict_valid_revised": true,
+    "review_text": "It’s a cute small park good for little ones. It’s not closed to the street though so you have to keep an eye on your kids. But it’s really a great place to bring little as"
+  },
+  {
+    "review_id": "U01",
+    "historical_v04": {
+      "keep": true,
+      "anchor_quote": "1/2 of the space was empty to become a dance floor later in the night",
+      "reason": "Describes the spatial layout and adaptability of the venue for events."
+    },
+    "v5_control": {
+      "keep": false,
+      "anchor_quote": "",
+      "reason": "The review describes a private celebration and mentions a temporary use of space for a dance floor, but does not provide a meaningful observation about the physical environment, atmosphere, or facilities of the venue itself. The focus is on the event and personal experience rather than the place's characteristics."
+    },
+    "v51_rant": {
+      "keep": false,
+      "anchor_quote": "",
+      "reason": "The review is limited to a private celebration and describes the venue as a backdrop for an event. It does not contain a meaningful observation about the location's space, atmosphere, facilities, or visitor experience beyond the context of the event."
+    },
+    "strict_valid_control": true,
+    "strict_valid_revised": true,
+    "review_text": "We went to celebrate a friends 30th birthday, it was my first time here! 1/2 of the space was empty to become a dance floor later in the night. They had a fun cocktail menu. I mostly stuck to bottled beer but the cocktails and mocktails that my friends had they said were delicious."
+  },
+  {
+    "review_id": "U02",
+    "historical_v04": {
+      "keep": false,
+      "anchor_quote": "",
+      "reason": "The review focuses on the underwhelming exhibits and recommends exploring other parts of the campus, but contains no meaningful observation about the specific location being reviewed."
+    },
+    "v5_control": {
+      "keep": true,
+      "anchor_quote": "MIT buildings and public works of art on display that are scattered throughout the campus",
+      "reason": "The review describes the spatial distribution of public art on campus, indicating a place-level characteristic of the campus environment."
+    },
+    "v51_rant": {
+      "keep": true,
+      "anchor_quote": "The three exhibits on display were quite underwhelming",
+      "reason": "The review comments on the quality of the exhibits, which are part of the location's offerings, indicating a place-level observation about the displayed content."
+    },
+    "strict_valid_control": true,
+    "strict_valid_revised": true,
+    "review_text": "The three exhibits on display were quite underwhelming… I highly recommend spending more time looking around the MIT buildings and public works of art on display that are scattered throughout the campus."
+  },
+  {
+    "review_id": "U03",
+    "historical_v04": {
+      "keep": true,
+      "anchor_quote": "The basketball courts are smooth with nice concrete ledges surrounding them.",
+      "reason": "Describes the physical condition and design of the basketball courts at the reviewed location."
+    },
+    "v5_control": {
+      "keep": true,
+      "anchor_quote": "It is hard to get the sound of the Memorial Drive cars out of your head as they are only a few yards from this park with no real barriers blocking the sound.",
+      "reason": "The review describes the acoustic environment of the park, specifically the lack of sound barriers leading to persistent noise from Memorial Drive, which is a meaningful observation about the place's sensory conditions."
+    },
+    "v51_rant": {
+      "keep": true,
+      "anchor_quote": "It is hard to get the sound of the Memorial Drive cars out of your head as they are only a few yards from this park with no real barriers blocking the sound.",
+      "reason": "The review describes the acoustic environment of the park, specifically the noise from nearby Memorial Drive cars and the lack of sound barriers, which is a meaningful observation about the place's sensory conditions."
+    },
+    "strict_valid_control": true,
+    "strict_valid_revised": true,
+    "review_text": "AKA 'Acorns'. The basketball courts are smooth with nice concrete ledges surrounding them.\n\nIt is hard to get the sound of the Memorial Drive cars out of your head as they are only a few yards from this park with no real barriers blocking the sound."
+  },
+  {
+    "review_id": "U04",
+    "historical_v04": {
+      "keep": true,
+      "anchor_quote": "the commute to get to the museum is fairly simple and doesn't take that long",
+      "reason": "Reports on the accessibility and convenience of reaching the museum."
+    },
+    "v5_control": {
+      "keep": true,
+      "anchor_quote": "the commute to get to the museum is fairly simple and doesn't take that long",
+      "reason": "Describes the accessibility and ease of reaching the museum, which is a place-level quality."
+    },
+    "v51_rant": {
+      "keep": true,
+      "anchor_quote": "it's just a good time and a great way to spend a couple of hours",
+      "reason": "The review describes the museum's overall visitor experience and enjoyment, indicating a positive assessment of the place's appeal and engagement for visitors."
+    },
+    "strict_valid_control": true,
+    "strict_valid_revised": false,
+    "review_text": "This museum is fun for all ages. From the amazing rocks and geodes to the life sized animals and dinosaur fossils,  it's  just a good time and a great way to spend a couple of hours. I really loved the Americas exhibit. Compared to other museums,  it's not as pricey. And the commute to get to the museum is fairly simple and doesn't take that long"
+  },
+  {
+    "review_id": "U05",
+    "historical_v04": {
+      "keep": true,
+      "anchor_quote": "it is really difficult to find a toilet",
+      "reason": "Reports a place-level condition regarding accessibility and spatial organization in Harvard Square."
+    },
+    "v5_control": {
+      "keep": true,
+      "anchor_quote": "it is really difficult to find a toilet",
+      "reason": "Describes an accessibility issue related to restroom availability, which is a place-level condition."
+    },
+    "v51_rant": {
+      "keep": true,
+      "anchor_quote": "it was closed. So not great.",
+      "reason": "The review describes a place-level condition (restroom closure) and its impact on the visitor experience, which is relevant to the physical environment and accessibility of the location."
+    },
+    "strict_valid_control": true,
+    "strict_valid_revised": true,
+    "review_text": "This station is epic and famous, but not the cleanest.\nWe really enjoyed though visiting Harvard and passing through here seemed like being part of a movie.\nWe needed to use the bathroom and it was closed. So not great. To be noted that this is a place this Harvard square where it is really difficult to find a toilet."
+  },
+  {
+    "review_id": "U06",
+    "historical_v04": {
+      "keep": true,
+      "anchor_quote": "Lovely sitting under the fairy lights in a comfy Adirondack chair",
+      "reason": "Describes the seating arrangement and ambient lighting of the reviewed location."
+    },
+    "v5_control": {
+      "keep": true,
+      "anchor_quote": "Lovely sitting under the fairy lights in a comfy Adirondack chair",
+      "reason": "Describes the physical environment and seating arrangement, indicating the spatial quality and comfort of the location."
+    },
+    "v51_rant": {
+      "keep": true,
+      "anchor_quote": "Lovely sitting under the fairy lights in a comfy Adirondack chair",
+      "reason": "Describes the atmospheric and spatial experience of the location, including seating and ambient lighting."
+    },
+    "strict_valid_control": true,
+    "strict_valid_revised": true,
+    "review_text": "Lovely sitting under the fairy lights in a comfy Adirondack chair, while a busker played songs from the 70s.  I was right next to, and under, the giant tree.  I’d like to know the age of that tree if anyone knows."
+  },
+  {
+    "review_id": "T01",
+    "historical_v04": {
+      "keep": false,
+      "anchor_quote": "",
+      "reason": "The review contains no meaningful observation about the physical or experiential qualities of a location."
+    },
+    "v5_control": {
+      "keep": false,
+      "anchor_quote": "",
+      "reason": "The review contains no meaningful observation about the physical environment, facilities, atmosphere, or experience of a specific place. It focuses on abstract philosophical concepts and does not describe any place-level characteristics."
+    },
+    "v51_rant": {
+      "keep": false,
+      "anchor_quote": "",
+      "reason": "The review contains no meaningful observation about the location being reviewed. It is dominated by abstract philosophical discussion about parenting and education, with no reference to a physical place, its environment, or any visit experience."
+    },
+    "strict_valid_control": true,
+    "strict_valid_revised": true,
+    "review_text": "For the \"Harvard Dad,\" planning for Harvard was merely an outcome, not the ultimate objective; what mattered most to him was whether his child possessed the capacity for independent thought. His core philosophy can be distilled into two key concepts: \"meticulous design\" and \"meticulous free-range nurturing.\""
+  },
+  {
+    "review_id": "T02",
+    "historical_v04": {
+      "keep": true,
+      "anchor_quote": "A peaceful park right by the river with lovely, nature themed granite bollards and ground plates by artist William Reimann.",
+      "reason": "Describes the physical environment and artistic features of the park."
+    },
+    "v5_control": {
+      "keep": true,
+      "anchor_quote": "A peaceful park right by the river with lovely, nature themed granite bollards and ground plates by artist William Reimann.",
+      "reason": "Describes the physical environment and artistic features of the park, indicating its aesthetic and spatial qualities."
+    },
+    "v51_rant": {
+      "keep": true,
+      "anchor_quote": "A peaceful park right by the river with lovely, nature themed granite bollards and ground plates by artist William Reimann.",
+      "reason": "The review describes the place-level qualities of the park, including its atmosphere, design elements, and artistic features."
+    },
+    "strict_valid_control": true,
+    "strict_valid_revised": true,
+    "review_text": "A peaceful park right by the river with lovely, nature themed granite bollards and ground plates by artist William Reimann."
+  },
+  {
+    "review_id": "T03",
+    "historical_v04": {
+      "keep": false,
+      "anchor_quote": "",
+      "reason": "The review contains no meaningful observation about the park's characteristics, atmosphere, or environment."
+    },
+    "v5_control": {
+      "keep": false,
+      "anchor_quote": "",
+      "reason": "The review contains no meaningful observation about the park's physical, sensory, or spatial qualities. It is a personal expression of affection for a relative, not a description of the place itself."
+    },
+    "v51_rant": {
+      "keep": false,
+      "anchor_quote": "",
+      "reason": "No qualifying place-level observation exists. The review is limited to a personal tribute without meaningful description of the park's characteristics, atmosphere, facilities, or visitor experience."
+    },
+    "strict_valid_control": true,
+    "strict_valid_revised": true,
+    "review_text": "Love this park in honor of my Aunt!"
+  },
+  {
+    "review_id": "T04",
+    "historical_v04": {
+      "keep": true,
+      "anchor_quote": "Creates a needed break to the brick and pavement giving families and all a peace with calm pause",
+      "reason": "Describes the place's role in providing a calming atmosphere within a dense urban environment."
+    },
+    "v5_control": {
+      "keep": true,
+      "anchor_quote": "Creates a needed break to the brick and pavement giving families and all a peace with calm pause",
+      "reason": "Describes the place's role in providing a calming atmosphere within a dense urban environment, indicating its spatial and sensory qualities."
+    },
+    "v51_rant": {
+      "keep": true,
+      "anchor_quote": "Creates a needed break to the brick and pavement giving families and all a peace with calm pause.",
+      "reason": "The review describes the place's role in providing a peaceful, calming atmosphere in a dense urban environment, which is a meaningful observation about the location's spatial and atmospheric qualities."
+    },
+    "strict_valid_control": true,
+    "strict_valid_revised": true,
+    "review_text": "Another beautiful Oasis in a dense metro neighborhood. Creates a needed break to the brick and pavement giving families and all a peace with calm pause."
+  },
+  {
+    "review_id": "T05",
+    "historical_v04": {
+      "keep": false,
+      "anchor_quote": "",
+      "reason": "The review contains no meaningful observation about the place-level qualities or experience of visiting the location."
+    },
+    "v5_control": {
+      "keep": false,
+      "anchor_quote": "",
+      "reason": "The review contains no meaningful observation about the place's characteristics, facilities, atmosphere, or visitor experience. It is limited to an isolated praise of the food without any context or description of the location itself."
+    },
+    "v51_rant": {
+      "keep": false,
+      "anchor_quote": "",
+      "reason": "No qualifying place-level observation exists."
+    },
+    "strict_valid_control": true,
+    "strict_valid_revised": true,
+    "review_text": "This colage is very gooooooooood"
+  },
+  {
+    "review_id": "T06",
+    "historical_v04": {
+      "keep": true,
+      "anchor_quote": "State Park created the perfect atmosphere for our reception",
+      "reason": "Describes the atmosphere and experience of the venue as a place-level characteristic."
+    },
+    "v5_control": {
+      "keep": false,
+      "anchor_quote": "",
+      "reason": "The review focuses on a private event (wedding reception) and praises the service and experience during that specific event. It does not provide a meaningful observation about the physical characteristics, atmosphere, accessibility, or facilities of State Park as a place. The positive comments are tied to the event and service rather than the place itself."
+    },
+    "v51_rant": {
+      "keep": false,
+      "anchor_quote": "",
+      "reason": "The review is dominated by praise for a private event (wedding reception) and individual employees, without a meaningful observation about the physical environment, atmosphere, or place-level qualities of State Park. It focuses on the success of the event and personal interactions rather than the characteristics of the location itself."
+    },
+    "strict_valid_control": true,
+    "strict_valid_revised": true,
+    "review_text": "We were lucky enough to have our wedding reception at State Park and truly could not have imagined a better experience. Chelsea was incredible to work with. She always available to answer our questions, and so helpful in planning the flow of the night. She made the entire process feel easy and stress-free.\n\nThe night of the wedding, Nicholas managed everything seamlessly and kept the evening running so smoothly behind the scenes so we could actually relax and enjoy ourselves. The bartenders absolutely crushed it. Every drink was amazing and they somehow kept the bar moving incredibly fast all night long.\n\nEvery single guest commented on how amazing the food was and how much fun they had. We’re still hearing about it weeks later. State Park created the perfect atmosphere for our reception and exceeded every expectation we had. We are so grateful to the entire team for making our wedding night feel so special. Highly, highly recommend!"
+  },
+  {
+    "review_id": "T07",
+    "historical_v04": {
+      "keep": false,
+      "anchor_quote": "",
+      "reason": "The review contains no meaningful observation about the physical/sensory environment, atmosphere, accessibility, or facilities of the chapel itself."
+    },
+    "v5_control": {
+      "keep": false,
+      "anchor_quote": "",
+      "reason": "The review describes a private transaction with an employee and a specific event (memorial service) without a meaningful observation about the physical environment, facilities, or spatial conditions of the chapel itself."
+    },
+    "v51_rant": {
+      "keep": false,
+      "anchor_quote": "",
+      "reason": "The review contains a dominant pattern of hostile denunciation focused on a personal grievance with an employee, rather than a proportionate account of conditions or experience at the location. The review does not provide a meaningful observation about the place itself."
+    },
+    "strict_valid_control": true,
+    "strict_valid_revised": true,
+    "review_text": "Very unpleasant experience with the attendant who was unaware of 10 reserved parking spaces for a memorial service at the chapel."
+  },
+  {
+    "review_id": "T08",
+    "historical_v04": {
+      "keep": false,
+      "anchor_quote": "",
+      "reason": "The review contains no meaningful observation about the physical or spatial characteristics of the place, focusing instead on personal experience and service quality without place-level details."
+    },
+    "v5_control": {
+      "keep": false,
+      "anchor_quote": "",
+      "reason": "The review contains no meaningful observation about the physical or spatial qualities of the place. It focuses on personal experience, staff kindness, and course content, which do not independently characterize the location's environment or facilities."
+    },
+    "v51_rant": {
+      "keep": false,
+      "anchor_quote": "",
+      "reason": "The review contains no meaningful observation about the location's physical environment, atmosphere, facilities, or spatial qualities. It is dominated by praise for the staff, course, and personal experience, without any description of the place itself."
+    },
+    "strict_valid_control": true,
+    "strict_valid_revised": true,
+    "review_text": "The place is so comfortable and welcoming! The staff are really kind and always ready to help with everything. My experience was amazing — I truly enjoyed it and learned a lot from the course with Miss Nicholas. I’d definitely love to do it again! 💛✨"
+  },
+  {
+    "review_id": "T09",
+    "historical_v04": {
+      "keep": false,
+      "anchor_quote": "",
+      "reason": "The review contains no meaningful observation about the physical, spatial, or sensory characteristics of the location being reviewed."
+    },
+    "v5_control": {
+      "keep": false,
+      "anchor_quote": "",
+      "reason": "The review contains no meaningful observation about the physical, spatial, sensory, or atmospheric qualities of the location being reviewed. It focuses on political, social, and personal opinions about the area, rather than on the characteristics of the place itself."
+    },
+    "v51_rant": {
+      "keep": false,
+      "anchor_quote": "",
+      "reason": "The review contains a dominant pattern of hostile denunciation and personal grievances, including accusations and rhetorical questions about the community and policies, rather than a proportionate account of conditions or experience at the reviewed place."
+    },
+    "strict_valid_control": true,
+    "strict_valid_revised": true,
+    "review_text": "Do residents of Cambridge vote for the stuff forced upon you? Number one, please read the drawbacks to the place based treaty. They are real…but if your constituents want it, then far be it from me to complain. Also, I can’t imagine riding a bike home from work after being on my feet from 6am to 5pm. Are any of the commuting bike riders blue collar? I’m not from your area so moving here was a shock. Are the bike lanes something that a majority of the people in your town want or was it forced upon them? I avoid your city while staying in Belmont (wild how far I’m willing to drive around to avoid) because it’s a standstill with no lanes. (Except for Phil’s awesome twenty dollar haircuts. I’ll always deal with traffic for his place) Do you want your city to have no conservative or poor ppl living there? That seems like a recipe for failure of a tax base in such a dense area"
+  },
+  {
+    "review_id": "T10",
+    "historical_v04": {
+      "keep": true,
+      "anchor_quote": "The AC made it better on a hot day where you can sit and admire the paintings too.",
+      "reason": "Reports the climate control system and the spatial experience of the art gallery."
+    },
+    "v5_control": {
+      "keep": true,
+      "anchor_quote": "The AC made it better on a hot day where you can sit and admire the paintings too.",
+      "reason": "The review describes the climate control system and its impact on the visitor experience, indicating a meaningful observation about the physical environment and comfort of the space."
+    },
+    "v51_rant": {
+      "keep": true,
+      "anchor_quote": "No entry fee, they have a kids scavenger hunt which made it interesting for my kid to go through every floor and look at everything.",
+      "reason": "The review describes the place's accessibility and engaging features for visitors, including the absence of an entry fee and interactive elements that encourage exploration."
+    },
+    "strict_valid_control": true,
+    "strict_valid_revised": true,
+    "review_text": "This is a great place to stop and wander around to see the art pieces.  No entry fee, they have a kids scavenger hunt which made it interesting for my kid to go through every floor and look at everything. The AC made it better on a hot day where you can sit and admire the paintings too."
+  },
+  {
+    "review_id": "T11",
+    "historical_v04": {
+      "keep": false,
+      "anchor_quote": "",
+      "reason": "The review contains no meaningful observation about the physical environment, atmosphere, accessibility, or spatial qualities of the location. It focuses on a single meal and service issues without broader place-level characteristics."
+    },
+    "v5_control": {
+      "keep": false,
+      "anchor_quote": "",
+      "reason": "The review contains no meaningful observation about the physical environment, atmosphere, accessibility, or facilities of the place. It focuses on a single meal and service issues, which do not independently characterize the establishment."
+    },
+    "v51_rant": {
+      "keep": false,
+      "anchor_quote": "",
+      "reason": "The review contains a dominant pattern of hostile denunciation and personal grievance, focusing on a single negative experience without providing a meaningful observation about the place's characteristics, atmosphere, or facilities."
+    },
+    "strict_valid_control": true,
+    "strict_valid_revised": true,
+    "review_text": "I just ate there and, it was a very disappointing meal.  The soup came out cold and steak tip were ice cold.  The waitress never came back to check on us , so I got up to speak host and he never sent over the waitress.  Finally we had to flag her down .  They took the two items off our bill but the manger never came over till I asked for him.\nA very disappointing experience ."
+  },
+  {
+    "review_id": "T12",
+    "historical_v04": {
+      "keep": true,
+      "anchor_quote": "There is no other building that looks like Kresge.",
+      "reason": "Identifies a distinctive architectural feature of the reviewed location."
+    },
+    "v5_control": {
+      "keep": true,
+      "anchor_quote": "There is no other building that looks like Kresge.",
+      "reason": "The review identifies a unique architectural feature of the building, indicating its distinctive visual appearance as a place-level characteristic."
+    },
+    "v51_rant": {
+      "keep": true,
+      "anchor_quote": "There is no other building that looks like Kresge.",
+      "reason": "The review describes a unique architectural feature of the Kresge Auditorium, highlighting its distinctiveness as a place."
+    },
+    "strict_valid_control": true,
+    "strict_valid_revised": true,
+    "review_text": "Kresge Auditorium reminds me of a wedge of an egg. The interior and exterior are beautiful.  The acoustics are clear inside the auditorium.  There is a whispering gallery.  You can go to one end inside and whisper and a person at the other end of the gallery can hear you distinctly.  There is no other building that looks like Kresge.  You can sit or lie on the base of the building outside or try to climb it -- you won't get far.  One of the great mysteries is the lack of elevators or accessibility for people with physical limitations.  The restrooms are in the basement which are around 18 steps and there is a lift for final three stairs, but why not put a lift for the other 15 steps?  Basically, for people with issues with steps, you need to climb stairs to get into the Auditorium, you need to walk down stairs for the Little Kresge Theatre, and the most steps are to the restrooms.  Eero Saarinen the architect was probably able-bodied and didn't think beyond aesthetics and acoustics."
+  },
+  {
+    "review_id": "N01",
+    "historical_v04": {
+      "keep": false,
+      "anchor_quote": "",
+      "reason": "The review contains no meaningful observation about the place being reviewed."
+    },
+    "v5_control": {
+      "keep": false,
+      "anchor_quote": "",
+      "reason": "The review contains no meaningful observation about the place being reviewed. It merely mentions an event or activity that occurred there without describing any characteristics of the location itself."
+    },
+    "v51_rant": {
+      "keep": false,
+      "anchor_quote": "",
+      "reason": "The review contains no meaningful observation about the location being reviewed. It is limited to a one-off personal event where the venue is merely the backdrop."
+    },
+    "strict_valid_control": true,
+    "strict_valid_revised": true,
+    "review_text": "World Cup watch party"
+  },
+  {
+    "review_id": "N02",
+    "historical_v04": {
+      "keep": false,
+      "anchor_quote": "",
+      "reason": "The review contains no meaningful observation about the place-level characteristics or experience of visiting The Taste of Cambridge."
+    },
+    "v5_control": {
+      "keep": false,
+      "anchor_quote": "",
+      "reason": "The review contains no meaningful observation about the place's characteristics, atmosphere, facilities, or visitor experience. It is a vague statement of enjoyment without substantive details about the location being reviewed."
+    },
+    "v51_rant": {
+      "keep": false,
+      "anchor_quote": "",
+      "reason": "The review contains no meaningful observation about the place's characteristics, atmosphere, facilities, or visitor experience. It is limited to a general statement of enjoyment without specific details about the location being reviewed."
+    },
+    "strict_valid_control": true,
+    "strict_valid_revised": true,
+    "review_text": "We enjoyed being at The Taste of Cambridge in University Commons."
+  },
+  {
+    "review_id": "N03",
+    "historical_v04": {
+      "keep": false,
+      "anchor_quote": "",
+      "reason": "The review focuses on the event and collaboration rather than any meaningful observation about the physical space, atmosphere, or conditions of the location being reviewed."
+    },
+    "v5_control": {
+      "keep": false,
+      "anchor_quote": "",
+      "reason": "The review contains no meaningful observation about the physical/sensory environment, atmosphere, accessibility, facilities, or spatial qualities of the location being reviewed. It focuses solely on the event and its collaborators, without describing the venue's characteristics or visitor experience."
+    },
+    "v51_rant": {
+      "keep": false,
+      "anchor_quote": "",
+      "reason": "The review contains no meaningful observation about the physical environment, atmosphere, facilities, or spatial qualities of the location. It is limited to a description of a private event and does not provide substantive information about the place being reviewed."
+    },
+    "strict_valid_control": true,
+    "strict_valid_revised": true,
+    "review_text": "Phenomenal concert with Jacob Collier in collaboration with the MIT orchestra, jazz band, jazz choir and many others."
+  },
+  {
+    "review_id": "N04",
+    "historical_v04": {
+      "keep": true,
+      "anchor_quote": "The signage was inciteful, readable and explained how items were grouped.",
+      "reason": "Reports on the informative and accessible signage in the museum, which is a place-level characteristic."
+    },
+    "v5_control": {
+      "keep": true,
+      "anchor_quote": "the signage was inciteful, readable and explained how items were grouped",
+      "reason": "The review highlights the informative and effective signage, which is a meaningful observation about the museum's physical environment and visitor experience."
+    },
+    "v51_rant": {
+      "keep": true,
+      "anchor_quote": "signage was inciteful, readable and explained how items were grouped",
+      "reason": "The review describes the informative and effective signage in the museum, which is a meaningful observation about the place's educational environment and exhibit design."
+    },
+    "strict_valid_control": true,
+    "strict_valid_revised": true,
+    "review_text": "Amazing. Im really impressed by how useful the signs by the bones and old extinct dinasaures and mammales are. Glass flower exhibit made only for harvard in 1904-1914, one of a kind, still on display. great taxidermy animals (mammals and fish and birds)!! Really good (ok collection is like 100+ years old and animals really jammed together. Some have better personalities and internal structure than others, but sheer volumn and the placement of bone skeletons next to taxidermy skins is great for comparson). Rock and gem area is fabulous. Not small rocks. It's almost overwhelming to see so many together, and grouped into rock families.  I like the exhibits, but i rate this museum high because the signage was inciteful, readable and explained how items were grouped. There were kids groups going through scavenging hunting for answers.  And workers around to answer exhibit questions. Reasonble price, and can see a few other nearby museums. I was there on a weekday"
+  },
+  {
+    "review_id": "N05",
+    "historical_v04": {
+      "keep": false,
+      "anchor_quote": "",
+      "reason": "The review contains no meaningful observation about the physical/sensory environment, atmosphere, accessibility, or facilities of the shelter itself, beyond mentioning a kitchen and a refusal of food donations, which are not place-level characteristics."
+    },
+    "v5_control": {
+      "keep": true,
+      "anchor_quote": "They have a nice restaurant grade kitchen, too.",
+      "reason": "The review describes the kitchen as having restaurant-grade quality, which is a meaningful observation about the physical facilities of the shelter."
+    },
+    "v51_rant": {
+      "keep": true,
+      "anchor_quote": "They have a nice restaurant grade kitchen, too.",
+      "reason": "The review describes the physical facility of the shelter, specifically noting the quality of its kitchen, which is a place-level characteristic."
+    },
+    "strict_valid_control": true,
+    "strict_valid_revised": true,
+    "review_text": "Caspar, the shelter at 240 albany, feeds people donuts for breakfast and low quality, nutrient poor foods. They have a nice restaurant grade kitchen, too. Also, they refused my donation of two loaves of bread, two cartons of eggs, and three cartons of strawberries purchased via food stamps. I don't necessarily disagree with their decision to refuse the food, but there is CLEARLY some abuse of power happening here. People, please investigate this situation and take action so that the people living in the shelter can eat healthily. Share it on social media. Also, build a 5 star hotel resort for the homeless, and rezone the golf course."
+  },
+  {
+    "review_id": "N06",
+    "historical_v04": {
+      "keep": true,
+      "anchor_quote": "Their patio is nice",
+      "reason": "Describes the physical environment and atmosphere of the patio at the state park."
+    },
+    "v5_control": {
+      "keep": true,
+      "anchor_quote": "Their patio is nice",
+      "reason": "The review describes the patio as a place with a positive quality (nice), which is a meaningful observation about the physical environment of the location."
+    },
+    "v51_rant": {
+      "keep": true,
+      "anchor_quote": "Their patio is nice, although we did get into a predicament with the staff.",
+      "reason": "The review describes the patio as a place feature, indicating its physical or spatial quality, which is a meaningful observation about the location being reviewed."
+    },
+    "strict_valid_control": true,
+    "strict_valid_revised": true,
+    "review_text": "Love visiting state park with my coworkers to unwind. Tried their root beer float, and loved it. Big portion! Their patio is nice, although we did get into a predicament with the staff. We were celebrating a coworkers departure, most of us got drinks and finger foods but they didn’t want all of us to sit on the patio. And then later that evening after spending most of the night inside the bar, I asked the patio staff for 4 of us to eat on the patio, where he said yes, but then when I went to collect the rest of the group in the bar, the bar staff told me we were not allowed to go up to the patio. So then I had to wait while those two connected on the issue. We then ate up there, no problem. Anyway, didn’t enjoy the tension."
+  },
+  {
+    "review_id": "N07",
+    "historical_v04": {
+      "keep": true,
+      "anchor_quote": "The kale Cesar is surprisingly good (I’m not a salad guy).",
+      "reason": "Reports a positive observation about the food quality and preparation at the reviewed location."
+    },
+    "v5_control": {
+      "keep": true,
+      "anchor_quote": "Good vibe, warm atmosphere, no frills",
+      "reason": "Describes the atmosphere and ambiance of the place, which are place-level qualities."
+    },
+    "v51_rant": {
+      "keep": true,
+      "anchor_quote": "Good vibe, warm atmosphere, no frills, and surprisingly good food.",
+      "reason": "The review describes the place's atmosphere and food quality, which are meaningful characteristics of the location."
+    },
+    "strict_valid_control": true,
+    "strict_valid_revised": true,
+    "review_text": "This place is exactly what you want out of a dive. Good vibe, warm atmosphere, no frills, and surprisingly good food. Food punches well above its weight for a place like this. Beer list is pleasant, with several options (national, local, and import).\n\nDuck nachos are awesome because each chip is loaded so your bite is perfect. The kale Cesar is surprisingly good (I’m not a salad guy). Wings looked better than they tasted and were admittedly average (think they could have used a few more min in the fryer), as was the sandwich, but overall I was pleased with everything we got."
+  },
+  {
+    "review_id": "N08",
+    "historical_v04": {
+      "keep": true,
+      "anchor_quote": "Nice environment and friendly staff",
+      "reason": "Describes the physical and social atmosphere of the reviewed seafood place."
+    },
+    "v5_control": {
+      "keep": true,
+      "anchor_quote": "Nice environment and friendly staff.",
+      "reason": "The review describes the physical environment and staff interaction, which are place-level qualities."
+    },
+    "v51_rant": {
+      "keep": true,
+      "anchor_quote": "Nice environment and friendly staff",
+      "reason": "The review describes the physical environment and staff interaction, which are place-level qualities."
+    },
+    "strict_valid_control": true,
+    "strict_valid_revised": true,
+    "review_text": "It is a good stable seafood place, not the most innovative but you know what you get. Nice environment and friendly staff. Definitely had a very pleasant a joyful experience. The chocolate cake was by far the best part."
+  },
+  {
+    "review_id": "N09",
+    "historical_v04": {
+      "keep": true,
+      "anchor_quote": "Two story seating area for studying, comfy seats, outlets EVERYWHERE.",
+      "reason": "Describes the physical layout, comfort, and accessibility features of the reviewed location."
+    },
+    "v5_control": {
+      "keep": true,
+      "anchor_quote": "Two story seating area for studying, comfy seats, outlets EVERYWHERE.",
+      "reason": "Describes the physical layout and facilities of the space, including seating and electrical accessibility."
+    },
+    "v51_rant": {
+      "keep": true,
+      "anchor_quote": "Two story seating area for studying, comfy seats, outlets EVERYWHERE.",
+      "reason": "The review describes the physical layout and amenities of the space, including the seating area, comfort, and availability of outlets, which are place-level qualities."
+    },
+    "strict_valid_control": true,
+    "strict_valid_revised": true,
+    "review_text": "Gorgeous building, very spacious with lots of room to stretch your legs. Delicious food, good coffee! Live student performances hosted once a week. Great selection of small bites (blackbird, Pavement, whole heart provision, Saloniki, Otto). Two story seating area for studying, comfy seats, outlets EVERYWHERE."
+  },
+  {
+    "review_id": "N10",
+    "historical_v04": {
+      "keep": true,
+      "anchor_quote": "You can’t park here without a permit.",
+      "reason": "Reports a parking rule at the reviewed location."
+    },
+    "v5_control": {
+      "keep": true,
+      "anchor_quote": "You can’t park here without a permit.",
+      "reason": "The review describes an access restriction related to parking, which is a place-level condition."
+    },
+    "v51_rant": {
+      "keep": true,
+      "anchor_quote": "You can’t park here without a permit.",
+      "reason": "The review describes an access restriction related to parking, which is a place-level condition."
+    },
+    "strict_valid_control": true,
+    "strict_valid_revised": true,
+    "review_text": "You can’t park here without a permit. The MIT website says that you can but the attendant told us that we could not, despite the fact that we were there to attend an official MIT event."
+  },
+  {
+    "review_id": "N11",
+    "historical_v04": {
+      "keep": true,
+      "anchor_quote": "Hand wash not working, but probably gonna be fixed.",
+      "reason": "Reports a functional issue with a specific facility (hand wash) at the reviewed location."
+    },
+    "v5_control": {
+      "keep": true,
+      "anchor_quote": "Hand wash not working, but probably gonna be fixed.",
+      "reason": "Reports a place-level condition about the functionality of a restroom facility."
+    },
+    "v51_rant": {
+      "keep": true,
+      "anchor_quote": "Hand wash not working",
+      "reason": "Reports a place-level condition regarding facility functionality"
+    },
+    "strict_valid_control": true,
+    "strict_valid_revised": true,
+    "review_text": "Good design, and comfortable. Hand wash not working, but probably gonna be fixed."
+  },
+  {
+    "review_id": "N12",
+    "historical_v04": {
+      "keep": false,
+      "anchor_quote": "",
+      "reason": "The review contains no substantive place-level observation about the property or its environment."
+    },
+    "v5_control": {
+      "keep": false,
+      "anchor_quote": "",
+      "reason": "The review contains no meaningful observation about the physical or spatial qualities of the location being reviewed. It focuses on personal interactions with staff and general praise without describing the place's environment, facilities, or accessibility."
+    },
+    "v51_rant": {
+      "keep": false,
+      "anchor_quote": "",
+      "reason": "The review contains no meaningful observation about the physical space, environment, or conditions of the property. It is limited to praise about the leasing agent and staff, which does not independently characterize the place."
+    },
+    "strict_valid_control": true,
+    "strict_valid_revised": true,
+    "review_text": "I recently leased a beautiful apartment with the leasing agent Aaliyah. She was terrifically helpful, along with the other staff members. The property is awesome and the area is convenient."
+  }
+]

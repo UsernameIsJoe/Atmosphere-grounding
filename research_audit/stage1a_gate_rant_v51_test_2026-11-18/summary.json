@@ -1,0 +1,84 @@
+{
+  "planned_calls": 72,
+  "attempted": 72,
+  "conditions": {
+    "v5_control": {
+      "attempted": 36,
+      "parseable_verdicts": 36,
+      "keep": 22,
+      "reject": 14,
+      "strict_valid": 36,
+      "invalid": {},
+      "unattempted": []
+    },
+    "v51_rant": {
+      "attempted": 36,
+      "parseable_verdicts": 36,
+      "keep": 22,
+      "reject": 14,
+      "strict_valid": 35,
+      "invalid": {
+        "U04": [
+          "nonexact_keep_quote"
+        ]
+      },
+      "unattempted": []
+    }
+  },
+  "historical_v04_keep": 23,
+  "no_accuracy_claim": true,
+  "paired_parseable": 36,
+  "paired_changed": [],
+  "revised_vs_historical_changed": [
+    "K01",
+    "U01",
+    "U02",
+    "T06",
+    "N05"
+  ],
+  "control_vs_historical_changed": [
+    "K01",
+    "U01",
+    "U02",
+    "T06",
+    "N05"
+  ],
+  "speed": {
+    "v5_control": {
+      "calls": 36,
+      "warm_calls": 35,
+      "batch_seconds": 443.388,
+      "warm_median_seconds": 9.727,
+      "warm_p90_seconds": 16.557,
+      "median_output_tokens": 57,
+      "median_input_eval_seconds": 3.481091,
+      "median_generation_seconds": 6.111973
+    },
+    "v51_rant": {
+      "calls": 36,
+      "warm_calls": 35,
+      "batch_seconds": 517.523,
+      "warm_median_seconds": 11.406,
+      "warm_p90_seconds": 18.371,
+      "median_output_tokens": 59,
+      "median_input_eval_seconds": 3.74805,
+      "median_generation_seconds": 7.176597
+    },
+    "median_latency_change_percent": 17.26,
+    "note": "CPU8, one pass, fixed block order, prompt-cache reuse within each block; K01 excluded from warmed medians in both conditions. Output lengths differ. Not a GPU, uncached or repeated-load benchmark."
+  },
+  "control_vs_tested_v5_changed": [],
+  "human_audit_scope": {
+    "reviews": [
+      "U01",
+      "U02",
+      "N05"
+    ],
+    "v5_agreements": 2,
+    "v51_agreements": 2,
+    "v51_mismatches": [
+      "N05"
+    ],
+    "scope_note": "Only these three researcher adjudications; not full-cohort accuracy."
+  }
+}

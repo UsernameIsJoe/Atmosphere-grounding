@@ -12,7 +12,22 @@ Read first for goals / architecture:
 
 
 
-LATEST V5.1 HOSTILE-RANT DRAFT (2026-11-18; UNTESTED, NOT ADOPTED)
+LATEST V5.1 TEST RESULT (2026-11-18; TESTED, NOT ADOPTED)
+-------------------------------------------------------------------------
+All 72 calls completed normally. Fresh v5 and v5.1 both 22 KEEP / 14 REJECT,
+with 0/36 verdict changes. Fresh v5 reproduced all prior v5 verdicts.
+N05 remains KEEP: hostile-rant amendment did not fix the motivating case.
+K01/T06 remain REJECT; U01 REJECT/U02 KEEP preserved.
+V5.1 strict outputs 35/36: U04 anchor collapsed doubled spaces; raw KEEP is
+retained as a validation failure, not silently accepted or changed to REJECT.
+Warm median 9.727s v5 vs 11.406s v5.1 (+17.26%); CPU one-pass limits apply.
+No adoption or further tuning. V0.4 front runner unchanged. No emotion/E/T
+calls, no spam/duplicate filters. Frozen prompt headers reflect pre-run state.
+  research_audit/stage1a_gate_rant_v51_test_2026-11-18/README.md
+  research_audit/stage1a_gate_rant_v51_test_2026-11-18/summary.json
+  configs/stage1a_review_eligibility_gate_v051_rant_draft.json
+
+HISTORICAL V5.1 HOSTILE-RANT DRAFT (2026-11-18; UNTESTED, NOT ADOPTED)
 -------------------------------------------------------------------------
 New separate prompt/codebook/config; tested v5 and active v0.4 unchanged.
 User set aside the proposed N05-specific facility tuning. Instead, apply a

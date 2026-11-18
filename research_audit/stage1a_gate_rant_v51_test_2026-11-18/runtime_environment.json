@@ -1,0 +1,35 @@
+{
+  "model": {
+    "name": "qwen3:8b",
+    "model": "qwen3:8b",
+    "modified_at": "2026-11-18T14:45:22.101971686Z",
+    "size": 5225388164,
+    "digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+    "details": {
+      "parent_model": "",
+      "format": "gguf",
+      "family": "qwen3",
+      "families": [
+        "qwen3"
+      ],
+      "parameter_size": "8.2B",
+      "quantization_level": "Q4_K_M",
+      "context_length": 40960,
+      "embedding_length": 4096,
+      "runner": "ggml"
+    },
+    "capabilities": [
+      "completion",
+      "tools",
+      "thinking"
+    ]
+  },
+  "ollama": {
+    "version": "0.40.16"
+  },
+  "gpu": null,
+  "compute": "CPU",
+  "cpu": ": AMD EPYC 7713 64-Core Processor",
+  "python": "Python 3.12.3\n",
+  "source_commit": "628e3fda8a48ffcf73900d9d95038a35a3506392"
+}
