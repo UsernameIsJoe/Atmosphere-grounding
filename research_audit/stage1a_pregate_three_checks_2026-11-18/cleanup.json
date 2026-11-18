@@ -1,0 +1,14 @@
+{
+  "pod_id": "rxt07y642ys85u",
+  "created_at": "2026-11-18T15:26:50.343Z",
+  "terminated_at": "2026-11-18T15:31:41.737Z",
+  "delete_http_status": 204,
+  "verified_remaining_pods": [],
+  "completed_reviews": 36,
+  "interrupted": false,
+  "exit_code": 0,
+  "archive_verified_before_delete": "d0ddc76f34bd888f51b62c0273c15ead6cea8098",
+  "hourly_compute_rate_usd": 0.24,
+  "estimated_compute_cost_usd": 0.0194,
+  "cost_note": "Wall-time compute estimate; excludes separately billed storage; not final invoice."
+}
