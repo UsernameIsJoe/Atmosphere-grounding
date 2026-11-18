@@ -1,0 +1,22 @@
+{
+  "version": "pregate_three_checks_v01_diagnostic",
+  "status": "tested_not_adopted",
+  "active": false,
+  "reviews": 36,
+  "runner_path": "scripts/stage1a_pregate_three_checks_20261118.py",
+  "installer_path": "scripts/setup_pregate_three_checks_20261118.sh",
+  "archive_path": "research_audit/stage1a_pregate_three_checks_2026-11-18",
+  "models": {
+    "language": "fasttext/lid.176.bin",
+    "toxicity": "Detoxify/unbiased"
+  },
+  "duplicate_method": "raw+normalized exact match and word-trigram Jaccard; MinHash estimates",
+  "thresholds": {
+    "near_duplicate_jaccard": 0.8,
+    "language_uncertainty_below": 0.8,
+    "toxicity_flag": 0.5
+  },
+  "auto_reject": false,
+  "training_required": false,
+  "llm_calls": 0
+}

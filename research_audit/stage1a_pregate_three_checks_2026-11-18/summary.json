@@ -1,0 +1,209 @@
+{
+  "reviews": 36,
+  "completed": 36,
+  "duplicate_groups": [],
+  "near_duplicate_pairs": [],
+  "largest_nonidentical_pair": {
+    "a": "K06",
+    "b": "T10",
+    "word_trigram_jaccard": 0.02197802197802198,
+    "minhash_estimate": 0.03125,
+    "near_duplicate_flag": false
+  },
+  "non_english": [],
+  "language_uncertain": [],
+  "toxicity_flags": {
+    "0.2": [],
+    "0.5": [],
+    "0.8": []
+  },
+  "toxicity_flagged_v5_keep": [],
+  "top_toxicity": [
+    {
+      "review_id": "K05",
+      "scores": {
+        "toxicity": 0.007364591583609581,
+        "severe_toxicity": 5.5782011258997954e-06,
+        "obscene": 0.00012454857642296702,
+        "identity_attack": 0.0004169725871179253,
+        "insult": 0.0006429155473597348,
+        "threat": 0.0013547957642003894,
+        "sexual_explicit": 9.172208228847012e-05
+      },
+      "v5_keep": true
+    },
+    {
+      "review_id": "T05",
+      "scores": {
+        "toxicity": 0.001925168209709227,
+        "severe_toxicity": 2.172657332266681e-06,
+        "obscene": 0.00015274225734174252,
+        "identity_attack": 0.00011271770199527964,
+        "insult": 0.00044783958583138883,
+        "threat": 3.7114998121978715e-05,
+        "sexual_explicit": 3.8450460124295205e-05
+      },
+      "v5_keep": false
+    },
+    {
+      "review_id": "U03",
+      "scores": {
+        "toxicity": 0.001796121709048748,
+        "severe_toxicity": 2.267978743475396e-06,
+        "obscene": 7.52682244637981e-05,
+        "identity_attack": 0.00016089921700768173,
+        "insult": 0.00037141056964173913,
+        "threat": 6.555759318871424e-05,
+        "sexual_explicit": 5.930398401687853e-05
+      },
+      "v5_keep": true
+    },
+    {
+      "review_id": "K03",
+      "scores": {
+        "toxicity": 0.0016575134359300137,
+        "severe_toxicity": 1.7780606640371843e-06,
+        "obscene": 6.641646177740768e-05,
+        "identity_attack": 0.0001229037152370438,
+        "insult": 0.00039545001345686615,
+        "threat": 3.9556682168040425e-05,
+        "sexual_explicit": 3.1984189263312146e-05
+      },
+      "v5_keep": true
+    },
+    {
+      "review_id": "N09",
+      "scores": {
+        "toxicity": 0.0013933549635112286,
+        "severe_toxicity": 5.229727321420796e-06,
+        "obscene": 7.825932698324323e-05,
+        "identity_attack": 0.000450755818746984,
+        "insult": 0.00028945793746970594,
+        "threat": 4.833614730159752e-05,
+        "sexual_explicit": 3.9448379538953304e-05
+      },
+      "v5_keep": true
+    },
+    {
+      "review_id": "U06",
+      "scores": {
+        "toxicity": 0.0013084199745208025,
+        "severe_toxicity": 2.189206952607492e-06,
+        "obscene": 5.8316178183304146e-05,
+        "identity_attack": 0.000168591330293566,
+        "insult": 0.00031636268249712884,
+        "threat": 5.240956670604646e-05,
+        "sexual_explicit": 2.7732654416467994e-05
+      },
+      "v5_keep": true
+    },
+    {
+      "review_id": "T11",
+      "scores": {
+        "toxicity": 0.0012764910934492946,
+        "severe_toxicity": 1.6879419035831233e-06,
+        "obscene": 8.321410132339224e-05,
+        "identity_attack": 0.00013349458458833396,
+        "insult": 0.0003635086177382618,
+        "threat": 3.1812014640308917e-05,
+        "sexual_explicit": 2.269354990858119e-05
+      },
+      "v5_keep": false
+    },
+    {
+      "review_id": "U05",
+      "scores": {
+        "toxicity": 0.0012630370911210775,
+        "severe_toxicity": 2.6222487576887943e-06,
+        "obscene": 9.693961328594014e-05,
+        "identity_attack": 9.766071889316663e-05,
+        "insult": 0.0002375460317125544,
+        "threat": 2.113949813065119e-05,
+        "sexual_explicit": 0.00010895944433286786
+      },
+      "v5_keep": true
+    },
+    {
+      "review_id": "T09",
+      "scores": {
+        "toxicity": 0.0011573733063414693,
+        "severe_toxicity": 1.2892359109173412e-06,
+        "obscene": 5.451259858091362e-05,
+        "identity_attack": 9.915245027514175e-05,
+        "insult": 0.00039895172812975943,
+        "threat": 2.0088213204871863e-05,
+        "sexual_explicit": 1.5519930457230657e-05
+      },
+      "v5_keep": false
+    },
+    {
+      "review_id": "T01",
+      "scores": {
+        "toxicity": 0.0008125632884912193,
+        "severe_toxicity": 1.3444725937006297e-06,
+        "obscene": 3.74906521756202e-05,
+        "identity_attack": 9.43119521252811e-05,
+        "insult": 0.0002602181921247393,
+        "threat": 1.8146925867768005e-05,
+        "sexual_explicit": 1.6272833818220533e-05
+      },
+      "v5_keep": false
+    }
+  ],
+  "N05": {
+    "review_id": "N05",
+    "place_id": "ChIJCdxNHFF344kRZyXENOL_AzI",
+    "review_text": "Caspar, the shelter at 240 albany, feeds people donuts for breakfast and low quality, nutrient poor foods. They have a nice restaurant grade kitchen, too. Also, they refused my donation of two loaves of bread, two cartons of eggs, and three cartons of strawberries purchased via food stamps. I don't necessarily disagree with their decision to refuse the food, but there is CLEARLY some abuse of power happening here. People, please investigate this situation and take action so that the people living in the shelter can eat healthily. Share it on social media. Also, build a 5 star hotel resort for the homeless, and rezone the golf course.",
+    "review_sha256": "4b49930e6c9076132b92e8c2f58696b0be85c63c913e8a45811626a06b051444",
+    "language": {
+      "top3": [
+        {
+          "language": "en",
+          "score": 0.9581771492958069
+        },
+        {
+          "language": "de",
+          "score": 0.0038986336439847946
+        },
+        {
+          "language": "fr",
+          "score": 0.0029163071885704994
+        }
+      ],
+      "non_english_flag": false,
+      "uncertain_flag": false
+    },
+    "detoxify": {
+      "model": "unbiased",
+      "input_tokens_without_special": 138,
+      "windows": 1,
+      "scores": {
+        "toxicity": 0.0006343557615764439,
+        "severe_toxicity": 1.4046830756342388e-06,
+        "obscene": 3.2824184017954394e-05,
+        "identity_attack": 8.973861986305565e-05,
+        "insult": 0.00017021239909809083,
+        "threat": 2.5044877475011162e-05,
+        "sexual_explicit": 1.5443776646861807e-05
+      },
+      "window_scores": [
+        {
+          "toxicity": 0.0006343557615764439,
+          "severe_toxicity": 1.4046830756342388e-06,
+          "obscene": 3.2824184017954394e-05,
+          "identity_attack": 8.973861986305565e-05,
+          "insult": 0.00017021239909809083,
+          "threat": 2.5044877475011162e-05,
+          "sexual_explicit": 1.5443776646861807e-05
+        }
+      ],
+      "flag_at_0_5": false,
+      "seconds": 1.3847085079178214
+    },
+    "archived_v5_keep": true
+  },
+  "multi_window_reviews": [],
+  "elapsed_seconds_including_model_downloads": 54.57465270999819,
+  "adopted": false,
+  "new_gate_or_emotion_calls": 0
+}

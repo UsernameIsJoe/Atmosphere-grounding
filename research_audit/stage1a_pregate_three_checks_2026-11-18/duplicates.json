@@ -1,0 +1,4416 @@
+{
+  "exact_groups": [],
+  "near_duplicate_pairs": [],
+  "all_pairs": [
+    {
+      "a": "K06",
+      "b": "T10",
+      "word_trigram_jaccard": 0.02197802197802198,
+      "minhash_estimate": 0.03125,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K01",
+      "b": "K04",
+      "word_trigram_jaccard": 0.011049723756906077,
+      "minhash_estimate": 0.0078125,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K03",
+      "b": "K06",
+      "word_trigram_jaccard": 0.010416666666666666,
+      "minhash_estimate": 0.015625,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K06",
+      "b": "U04",
+      "word_trigram_jaccard": 0.009708737864077669,
+      "minhash_estimate": 0.015625,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U05",
+      "b": "T10",
+      "word_trigram_jaccard": 0.008849557522123894,
+      "minhash_estimate": 0.0078125,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K03",
+      "b": "U04",
+      "word_trigram_jaccard": 0.007936507936507936,
+      "minhash_estimate": 0.0078125,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U05",
+      "b": "T11",
+      "word_trigram_jaccard": 0.007751937984496124,
+      "minhash_estimate": 0.0078125,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T10",
+      "b": "N05",
+      "word_trigram_jaccard": 0.006172839506172839,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K02",
+      "b": "U05",
+      "word_trigram_jaccard": 0.00558659217877095,
+      "minhash_estimate": 0.0078125,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K06",
+      "b": "T09",
+      "word_trigram_jaccard": 0.004784688995215311,
+      "minhash_estimate": 0.0078125,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K02",
+      "b": "N05",
+      "word_trigram_jaccard": 0.0043859649122807015,
+      "minhash_estimate": 0.0078125,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T10",
+      "b": "T12",
+      "word_trigram_jaccard": 0.004329004329004329,
+      "minhash_estimate": 0.0078125,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K03",
+      "b": "T09",
+      "word_trigram_jaccard": 0.004310344827586207,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T09",
+      "b": "N07",
+      "word_trigram_jaccard": 0.0036496350364963502,
+      "minhash_estimate": 0.0078125,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T06",
+      "b": "N06",
+      "word_trigram_jaccard": 0.0033222591362126247,
+      "minhash_estimate": 0.0078125,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K01",
+      "b": "K02",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K01",
+      "b": "K03",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K01",
+      "b": "K05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K01",
+      "b": "K06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K01",
+      "b": "U01",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K01",
+      "b": "U02",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K01",
+      "b": "U03",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K01",
+      "b": "U04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K01",
+      "b": "U05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K01",
+      "b": "U06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K01",
+      "b": "T01",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K01",
+      "b": "T02",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K01",
+      "b": "T03",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K01",
+      "b": "T04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K01",
+      "b": "T05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K01",
+      "b": "T06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K01",
+      "b": "T07",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K01",
+      "b": "T08",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K01",
+      "b": "T09",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K01",
+      "b": "T10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K01",
+      "b": "T11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K01",
+      "b": "T12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K01",
+      "b": "N01",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K01",
+      "b": "N02",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K01",
+      "b": "N03",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K01",
+      "b": "N04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K01",
+      "b": "N05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K01",
+      "b": "N06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K01",
+      "b": "N07",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K01",
+      "b": "N08",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K01",
+      "b": "N09",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K01",
+      "b": "N10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K01",
+      "b": "N11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K01",
+      "b": "N12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K02",
+      "b": "K03",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K02",
+      "b": "K04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K02",
+      "b": "K05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K02",
+      "b": "K06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K02",
+      "b": "U01",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K02",
+      "b": "U02",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K02",
+      "b": "U03",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K02",
+      "b": "U04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K02",
+      "b": "U06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K02",
+      "b": "T01",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K02",
+      "b": "T02",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K02",
+      "b": "T03",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K02",
+      "b": "T04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K02",
+      "b": "T05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K02",
+      "b": "T06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K02",
+      "b": "T07",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K02",
+      "b": "T08",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K02",
+      "b": "T09",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K02",
+      "b": "T10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K02",
+      "b": "T11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K02",
+      "b": "T12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K02",
+      "b": "N01",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K02",
+      "b": "N02",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K02",
+      "b": "N03",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K02",
+      "b": "N04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K02",
+      "b": "N06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K02",
+      "b": "N07",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K02",
+      "b": "N08",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K02",
+      "b": "N09",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K02",
+      "b": "N10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K02",
+      "b": "N11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K02",
+      "b": "N12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K03",
+      "b": "K04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K03",
+      "b": "K05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K03",
+      "b": "U01",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K03",
+      "b": "U02",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K03",
+      "b": "U03",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K03",
+      "b": "U05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K03",
+      "b": "U06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K03",
+      "b": "T01",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K03",
+      "b": "T02",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K03",
+      "b": "T03",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K03",
+      "b": "T04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K03",
+      "b": "T05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K03",
+      "b": "T06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K03",
+      "b": "T07",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K03",
+      "b": "T08",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K03",
+      "b": "T10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K03",
+      "b": "T11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K03",
+      "b": "T12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K03",
+      "b": "N01",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K03",
+      "b": "N02",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K03",
+      "b": "N03",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K03",
+      "b": "N04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K03",
+      "b": "N05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K03",
+      "b": "N06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K03",
+      "b": "N07",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K03",
+      "b": "N08",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K03",
+      "b": "N09",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K03",
+      "b": "N10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K03",
+      "b": "N11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K03",
+      "b": "N12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K04",
+      "b": "K05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K04",
+      "b": "K06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K04",
+      "b": "U01",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K04",
+      "b": "U02",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K04",
+      "b": "U03",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K04",
+      "b": "U04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K04",
+      "b": "U05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K04",
+      "b": "U06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K04",
+      "b": "T01",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K04",
+      "b": "T02",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K04",
+      "b": "T03",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K04",
+      "b": "T04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K04",
+      "b": "T05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K04",
+      "b": "T06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K04",
+      "b": "T07",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K04",
+      "b": "T08",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K04",
+      "b": "T09",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K04",
+      "b": "T10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K04",
+      "b": "T11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K04",
+      "b": "T12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K04",
+      "b": "N01",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K04",
+      "b": "N02",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K04",
+      "b": "N03",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K04",
+      "b": "N04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K04",
+      "b": "N05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K04",
+      "b": "N06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K04",
+      "b": "N07",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K04",
+      "b": "N08",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K04",
+      "b": "N09",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K04",
+      "b": "N10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K04",
+      "b": "N11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K04",
+      "b": "N12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K05",
+      "b": "K06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K05",
+      "b": "U01",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K05",
+      "b": "U02",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K05",
+      "b": "U03",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K05",
+      "b": "U04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K05",
+      "b": "U05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K05",
+      "b": "U06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K05",
+      "b": "T01",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K05",
+      "b": "T02",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K05",
+      "b": "T03",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K05",
+      "b": "T04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K05",
+      "b": "T05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K05",
+      "b": "T06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K05",
+      "b": "T07",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K05",
+      "b": "T08",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K05",
+      "b": "T09",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K05",
+      "b": "T10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K05",
+      "b": "T11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K05",
+      "b": "T12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K05",
+      "b": "N01",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K05",
+      "b": "N02",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K05",
+      "b": "N03",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K05",
+      "b": "N04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K05",
+      "b": "N05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K05",
+      "b": "N06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K05",
+      "b": "N07",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K05",
+      "b": "N08",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K05",
+      "b": "N09",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K05",
+      "b": "N10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K05",
+      "b": "N11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K05",
+      "b": "N12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K06",
+      "b": "U01",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K06",
+      "b": "U02",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K06",
+      "b": "U03",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K06",
+      "b": "U05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K06",
+      "b": "U06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K06",
+      "b": "T01",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K06",
+      "b": "T02",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K06",
+      "b": "T03",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K06",
+      "b": "T04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K06",
+      "b": "T05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K06",
+      "b": "T06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K06",
+      "b": "T07",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K06",
+      "b": "T08",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K06",
+      "b": "T11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K06",
+      "b": "T12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K06",
+      "b": "N01",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K06",
+      "b": "N02",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K06",
+      "b": "N03",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K06",
+      "b": "N04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K06",
+      "b": "N05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K06",
+      "b": "N06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K06",
+      "b": "N07",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K06",
+      "b": "N08",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K06",
+      "b": "N09",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K06",
+      "b": "N10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K06",
+      "b": "N11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "K06",
+      "b": "N12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U01",
+      "b": "U02",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U01",
+      "b": "U03",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U01",
+      "b": "U04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U01",
+      "b": "U05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U01",
+      "b": "U06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U01",
+      "b": "T01",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U01",
+      "b": "T02",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U01",
+      "b": "T03",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U01",
+      "b": "T04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U01",
+      "b": "T05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U01",
+      "b": "T06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U01",
+      "b": "T07",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U01",
+      "b": "T08",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U01",
+      "b": "T09",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U01",
+      "b": "T10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U01",
+      "b": "T11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U01",
+      "b": "T12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U01",
+      "b": "N01",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U01",
+      "b": "N02",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U01",
+      "b": "N03",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U01",
+      "b": "N04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U01",
+      "b": "N05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U01",
+      "b": "N06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U01",
+      "b": "N07",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U01",
+      "b": "N08",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U01",
+      "b": "N09",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U01",
+      "b": "N10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U01",
+      "b": "N11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U01",
+      "b": "N12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U02",
+      "b": "U03",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U02",
+      "b": "U04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U02",
+      "b": "U05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U02",
+      "b": "U06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U02",
+      "b": "T01",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U02",
+      "b": "T02",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U02",
+      "b": "T03",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U02",
+      "b": "T04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U02",
+      "b": "T05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U02",
+      "b": "T06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U02",
+      "b": "T07",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U02",
+      "b": "T08",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U02",
+      "b": "T09",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U02",
+      "b": "T10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U02",
+      "b": "T11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U02",
+      "b": "T12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U02",
+      "b": "N01",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U02",
+      "b": "N02",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U02",
+      "b": "N03",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U02",
+      "b": "N04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U02",
+      "b": "N05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U02",
+      "b": "N06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U02",
+      "b": "N07",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U02",
+      "b": "N08",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U02",
+      "b": "N09",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U02",
+      "b": "N10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U02",
+      "b": "N11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U02",
+      "b": "N12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U03",
+      "b": "U04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U03",
+      "b": "U05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U03",
+      "b": "U06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U03",
+      "b": "T01",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U03",
+      "b": "T02",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U03",
+      "b": "T03",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U03",
+      "b": "T04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U03",
+      "b": "T05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U03",
+      "b": "T06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U03",
+      "b": "T07",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U03",
+      "b": "T08",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U03",
+      "b": "T09",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U03",
+      "b": "T10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U03",
+      "b": "T11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U03",
+      "b": "T12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U03",
+      "b": "N01",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U03",
+      "b": "N02",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U03",
+      "b": "N03",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U03",
+      "b": "N04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U03",
+      "b": "N05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U03",
+      "b": "N06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U03",
+      "b": "N07",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U03",
+      "b": "N08",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U03",
+      "b": "N09",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U03",
+      "b": "N10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U03",
+      "b": "N11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U03",
+      "b": "N12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U04",
+      "b": "U05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U04",
+      "b": "U06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U04",
+      "b": "T01",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U04",
+      "b": "T02",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U04",
+      "b": "T03",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U04",
+      "b": "T04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U04",
+      "b": "T05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U04",
+      "b": "T06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U04",
+      "b": "T07",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U04",
+      "b": "T08",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U04",
+      "b": "T09",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U04",
+      "b": "T10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U04",
+      "b": "T11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U04",
+      "b": "T12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U04",
+      "b": "N01",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U04",
+      "b": "N02",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U04",
+      "b": "N03",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U04",
+      "b": "N04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U04",
+      "b": "N05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U04",
+      "b": "N06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U04",
+      "b": "N07",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U04",
+      "b": "N08",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U04",
+      "b": "N09",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U04",
+      "b": "N10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U04",
+      "b": "N11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U04",
+      "b": "N12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U05",
+      "b": "U06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U05",
+      "b": "T01",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U05",
+      "b": "T02",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U05",
+      "b": "T03",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U05",
+      "b": "T04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U05",
+      "b": "T05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U05",
+      "b": "T06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U05",
+      "b": "T07",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U05",
+      "b": "T08",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U05",
+      "b": "T09",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U05",
+      "b": "T12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U05",
+      "b": "N01",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U05",
+      "b": "N02",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U05",
+      "b": "N03",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U05",
+      "b": "N04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U05",
+      "b": "N05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U05",
+      "b": "N06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U05",
+      "b": "N07",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U05",
+      "b": "N08",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U05",
+      "b": "N09",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U05",
+      "b": "N10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U05",
+      "b": "N11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U05",
+      "b": "N12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U06",
+      "b": "T01",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U06",
+      "b": "T02",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U06",
+      "b": "T03",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U06",
+      "b": "T04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U06",
+      "b": "T05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U06",
+      "b": "T06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U06",
+      "b": "T07",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U06",
+      "b": "T08",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U06",
+      "b": "T09",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U06",
+      "b": "T10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U06",
+      "b": "T11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U06",
+      "b": "T12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U06",
+      "b": "N01",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U06",
+      "b": "N02",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U06",
+      "b": "N03",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U06",
+      "b": "N04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U06",
+      "b": "N05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U06",
+      "b": "N06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U06",
+      "b": "N07",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U06",
+      "b": "N08",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U06",
+      "b": "N09",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U06",
+      "b": "N10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U06",
+      "b": "N11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "U06",
+      "b": "N12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T01",
+      "b": "T02",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T01",
+      "b": "T03",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T01",
+      "b": "T04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T01",
+      "b": "T05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T01",
+      "b": "T06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T01",
+      "b": "T07",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T01",
+      "b": "T08",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T01",
+      "b": "T09",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T01",
+      "b": "T10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T01",
+      "b": "T11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T01",
+      "b": "T12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T01",
+      "b": "N01",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T01",
+      "b": "N02",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T01",
+      "b": "N03",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T01",
+      "b": "N04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T01",
+      "b": "N05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T01",
+      "b": "N06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T01",
+      "b": "N07",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T01",
+      "b": "N08",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T01",
+      "b": "N09",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T01",
+      "b": "N10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T01",
+      "b": "N11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T01",
+      "b": "N12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T02",
+      "b": "T03",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T02",
+      "b": "T04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T02",
+      "b": "T05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T02",
+      "b": "T06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T02",
+      "b": "T07",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T02",
+      "b": "T08",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T02",
+      "b": "T09",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T02",
+      "b": "T10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T02",
+      "b": "T11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T02",
+      "b": "T12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T02",
+      "b": "N01",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T02",
+      "b": "N02",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T02",
+      "b": "N03",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T02",
+      "b": "N04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T02",
+      "b": "N05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T02",
+      "b": "N06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T02",
+      "b": "N07",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T02",
+      "b": "N08",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T02",
+      "b": "N09",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T02",
+      "b": "N10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T02",
+      "b": "N11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T02",
+      "b": "N12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T03",
+      "b": "T04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T03",
+      "b": "T05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T03",
+      "b": "T06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T03",
+      "b": "T07",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T03",
+      "b": "T08",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T03",
+      "b": "T09",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T03",
+      "b": "T10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T03",
+      "b": "T11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T03",
+      "b": "T12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T03",
+      "b": "N01",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T03",
+      "b": "N02",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T03",
+      "b": "N03",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T03",
+      "b": "N04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T03",
+      "b": "N05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T03",
+      "b": "N06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T03",
+      "b": "N07",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T03",
+      "b": "N08",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T03",
+      "b": "N09",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T03",
+      "b": "N10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T03",
+      "b": "N11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T03",
+      "b": "N12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T04",
+      "b": "T05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T04",
+      "b": "T06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T04",
+      "b": "T07",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T04",
+      "b": "T08",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T04",
+      "b": "T09",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T04",
+      "b": "T10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T04",
+      "b": "T11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T04",
+      "b": "T12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T04",
+      "b": "N01",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T04",
+      "b": "N02",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T04",
+      "b": "N03",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T04",
+      "b": "N04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T04",
+      "b": "N05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T04",
+      "b": "N06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T04",
+      "b": "N07",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T04",
+      "b": "N08",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T04",
+      "b": "N09",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T04",
+      "b": "N10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T04",
+      "b": "N11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T04",
+      "b": "N12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T05",
+      "b": "T06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T05",
+      "b": "T07",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T05",
+      "b": "T08",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T05",
+      "b": "T09",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T05",
+      "b": "T10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T05",
+      "b": "T11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T05",
+      "b": "T12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T05",
+      "b": "N01",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T05",
+      "b": "N02",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T05",
+      "b": "N03",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T05",
+      "b": "N04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T05",
+      "b": "N05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T05",
+      "b": "N06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T05",
+      "b": "N07",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T05",
+      "b": "N08",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T05",
+      "b": "N09",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T05",
+      "b": "N10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T05",
+      "b": "N11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T05",
+      "b": "N12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T06",
+      "b": "T07",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T06",
+      "b": "T08",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T06",
+      "b": "T09",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T06",
+      "b": "T10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T06",
+      "b": "T11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T06",
+      "b": "T12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T06",
+      "b": "N01",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T06",
+      "b": "N02",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T06",
+      "b": "N03",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T06",
+      "b": "N04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T06",
+      "b": "N05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T06",
+      "b": "N07",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T06",
+      "b": "N08",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T06",
+      "b": "N09",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T06",
+      "b": "N10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T06",
+      "b": "N11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T06",
+      "b": "N12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T07",
+      "b": "T08",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T07",
+      "b": "T09",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T07",
+      "b": "T10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T07",
+      "b": "T11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T07",
+      "b": "T12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T07",
+      "b": "N01",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T07",
+      "b": "N02",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T07",
+      "b": "N03",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T07",
+      "b": "N04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T07",
+      "b": "N05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T07",
+      "b": "N06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T07",
+      "b": "N07",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T07",
+      "b": "N08",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T07",
+      "b": "N09",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T07",
+      "b": "N10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T07",
+      "b": "N11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T07",
+      "b": "N12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T08",
+      "b": "T09",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T08",
+      "b": "T10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T08",
+      "b": "T11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T08",
+      "b": "T12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T08",
+      "b": "N01",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T08",
+      "b": "N02",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T08",
+      "b": "N03",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T08",
+      "b": "N04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T08",
+      "b": "N05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T08",
+      "b": "N06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T08",
+      "b": "N07",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T08",
+      "b": "N08",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T08",
+      "b": "N09",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T08",
+      "b": "N10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T08",
+      "b": "N11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T08",
+      "b": "N12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T09",
+      "b": "T10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T09",
+      "b": "T11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T09",
+      "b": "T12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T09",
+      "b": "N01",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T09",
+      "b": "N02",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T09",
+      "b": "N03",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T09",
+      "b": "N04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T09",
+      "b": "N05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T09",
+      "b": "N06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T09",
+      "b": "N08",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T09",
+      "b": "N09",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T09",
+      "b": "N10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T09",
+      "b": "N11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T09",
+      "b": "N12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T10",
+      "b": "T11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T10",
+      "b": "N01",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T10",
+      "b": "N02",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T10",
+      "b": "N03",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T10",
+      "b": "N04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T10",
+      "b": "N06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T10",
+      "b": "N07",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T10",
+      "b": "N08",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T10",
+      "b": "N09",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T10",
+      "b": "N10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T10",
+      "b": "N11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T10",
+      "b": "N12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T11",
+      "b": "T12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T11",
+      "b": "N01",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T11",
+      "b": "N02",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T11",
+      "b": "N03",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T11",
+      "b": "N04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T11",
+      "b": "N05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T11",
+      "b": "N06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T11",
+      "b": "N07",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T11",
+      "b": "N08",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T11",
+      "b": "N09",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T11",
+      "b": "N10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T11",
+      "b": "N11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T11",
+      "b": "N12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T12",
+      "b": "N01",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T12",
+      "b": "N02",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T12",
+      "b": "N03",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T12",
+      "b": "N04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T12",
+      "b": "N05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T12",
+      "b": "N06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T12",
+      "b": "N07",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T12",
+      "b": "N08",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T12",
+      "b": "N09",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T12",
+      "b": "N10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T12",
+      "b": "N11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "T12",
+      "b": "N12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N01",
+      "b": "N02",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N01",
+      "b": "N03",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N01",
+      "b": "N04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N01",
+      "b": "N05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N01",
+      "b": "N06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N01",
+      "b": "N07",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N01",
+      "b": "N08",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N01",
+      "b": "N09",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N01",
+      "b": "N10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N01",
+      "b": "N11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N01",
+      "b": "N12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N02",
+      "b": "N03",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N02",
+      "b": "N04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N02",
+      "b": "N05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N02",
+      "b": "N06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N02",
+      "b": "N07",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N02",
+      "b": "N08",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N02",
+      "b": "N09",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N02",
+      "b": "N10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N02",
+      "b": "N11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N02",
+      "b": "N12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N03",
+      "b": "N04",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N03",
+      "b": "N05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N03",
+      "b": "N06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N03",
+      "b": "N07",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N03",
+      "b": "N08",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N03",
+      "b": "N09",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N03",
+      "b": "N10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N03",
+      "b": "N11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N03",
+      "b": "N12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N04",
+      "b": "N05",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N04",
+      "b": "N06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N04",
+      "b": "N07",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N04",
+      "b": "N08",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N04",
+      "b": "N09",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N04",
+      "b": "N10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N04",
+      "b": "N11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N04",
+      "b": "N12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N05",
+      "b": "N06",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N05",
+      "b": "N07",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N05",
+      "b": "N08",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N05",
+      "b": "N09",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N05",
+      "b": "N10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N05",
+      "b": "N11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N05",
+      "b": "N12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N06",
+      "b": "N07",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N06",
+      "b": "N08",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N06",
+      "b": "N09",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N06",
+      "b": "N10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N06",
+      "b": "N11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N06",
+      "b": "N12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N07",
+      "b": "N08",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N07",
+      "b": "N09",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N07",
+      "b": "N10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N07",
+      "b": "N11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N07",
+      "b": "N12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N08",
+      "b": "N09",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N08",
+      "b": "N10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N08",
+      "b": "N11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N08",
+      "b": "N12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N09",
+      "b": "N10",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N09",
+      "b": "N11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N09",
+      "b": "N12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N10",
+      "b": "N11",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N10",
+      "b": "N12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    },
+    {
+      "a": "N11",
+      "b": "N12",
+      "word_trigram_jaccard": 0.0,
+      "minhash_estimate": 0.0,
+      "near_duplicate_flag": false
+    }
+  ]
+}

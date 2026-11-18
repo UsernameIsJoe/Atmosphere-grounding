@@ -1,0 +1,57 @@
+{
+  "actions": [
+    "stop",
+    "restart",
+    "terminate"
+  ],
+  "args": "{\"cmd\":[\"sleep 86400\"],\"entrypoint\":[\"sh\",\"-c\"]}",
+  "cloud": "SECURE",
+  "cmd": [
+    "sleep 86400"
+  ],
+  "cost": 0.24,
+  "cpu": {
+    "id": "cpu3c",
+    "memory": 16,
+    "vcpuCount": 8
+  },
+  "createdAt": "2026-11-18T15:26:50.343Z",
+  "cudaVersion": null,
+  "dataCenterId": "US-CA-2",
+  "disk": 20,
+  "entrypoint": [
+    "sh",
+    "-c"
+  ],
+  "env": {
+    "HF_HOME": "/workspace/huggingface",
+    "MKL_NUM_THREADS": "8",
+    "OMP_NUM_THREADS": "8",
+    "TOKENIZERS_PARALLELISM": "[redacted]",
+    "TORCH_HOME": "/workspace/torch"
+  },
+  "globalNetworking": {
+    "enabled": false
+  },
+  "id": "rxt07y642ys85u",
+  "image": "python:3.11-slim",
+  "locked": false,
+  "mounts": {},
+  "name": "pregate-three-checks-20261118",
+  "ports": [],
+  "registry": null,
+  "runtime": null,
+  "ssh": {
+    "direct": null,
+    "proxy": {
+      "command": "ssh rxt07y642ys85u-64411cae@ssh.runpod.io",
+      "host": "ssh.runpod.io",
+      "port": 22,
+      "username": "rxt07y642ys85u-64411cae"
+    }
+  },
+  "startedAt": "2026-11-18T15:26:50.336Z",
+  "status": "RUNNING",
+  "tags": [],
+  "template": null
+}

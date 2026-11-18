@@ -1,0 +1,650 @@
+{
+  "K01": {
+    "top3": [
+      {
+        "language": "en",
+        "score": 0.9898841977119446
+      },
+      {
+        "language": "de",
+        "score": 0.0018222036305814981
+      },
+      {
+        "language": "fr",
+        "score": 0.0008193170069716871
+      }
+    ],
+    "non_english_flag": false,
+    "uncertain_flag": false
+  },
+  "K02": {
+    "top3": [
+      {
+        "language": "en",
+        "score": 0.9976937770843506
+      },
+      {
+        "language": "nl",
+        "score": 0.00026226157206110656
+      },
+      {
+        "language": "de",
+        "score": 0.00019007634546142071
+      }
+    ],
+    "non_english_flag": false,
+    "uncertain_flag": false
+  },
+  "K03": {
+    "top3": [
+      {
+        "language": "en",
+        "score": 0.9766291379928589
+      },
+      {
+        "language": "ru",
+        "score": 0.000972558103967458
+      },
+      {
+        "language": "es",
+        "score": 0.0009517541038803756
+      }
+    ],
+    "non_english_flag": false,
+    "uncertain_flag": false
+  },
+  "K04": {
+    "top3": [
+      {
+        "language": "en",
+        "score": 0.9651579856872559
+      },
+      {
+        "language": "ru",
+        "score": 0.002568027237430215
+      },
+      {
+        "language": "de",
+        "score": 0.0025414174888283014
+      }
+    ],
+    "non_english_flag": false,
+    "uncertain_flag": false
+  },
+  "K05": {
+    "top3": [
+      {
+        "language": "en",
+        "score": 0.9847119450569153
+      },
+      {
+        "language": "id",
+        "score": 0.0013220382388681173
+      },
+      {
+        "language": "th",
+        "score": 0.0008473875932395458
+      }
+    ],
+    "non_english_flag": false,
+    "uncertain_flag": false
+  },
+  "K06": {
+    "top3": [
+      {
+        "language": "en",
+        "score": 0.9686509966850281
+      },
+      {
+        "language": "de",
+        "score": 0.006908292416483164
+      },
+      {
+        "language": "ru",
+        "score": 0.004897823091596365
+      }
+    ],
+    "non_english_flag": false,
+    "uncertain_flag": false
+  },
+  "U01": {
+    "top3": [
+      {
+        "language": "en",
+        "score": 0.9961815476417542
+      },
+      {
+        "language": "nl",
+        "score": 0.000586025242228061
+      },
+      {
+        "language": "ru",
+        "score": 0.0003954996936954558
+      }
+    ],
+    "non_english_flag": false,
+    "uncertain_flag": false
+  },
+  "U02": {
+    "top3": [
+      {
+        "language": "en",
+        "score": 0.9798675179481506
+      },
+      {
+        "language": "pt",
+        "score": 0.002568041905760765
+      },
+      {
+        "language": "it",
+        "score": 0.0012743840925395489
+      }
+    ],
+    "non_english_flag": false,
+    "uncertain_flag": false
+  },
+  "U03": {
+    "top3": [
+      {
+        "language": "en",
+        "score": 0.9807093739509583
+      },
+      {
+        "language": "de",
+        "score": 0.0014990767231211066
+      },
+      {
+        "language": "ru",
+        "score": 0.0012594596482813358
+      }
+    ],
+    "non_english_flag": false,
+    "uncertain_flag": false
+  },
+  "U04": {
+    "top3": [
+      {
+        "language": "en",
+        "score": 0.9676540493965149
+      },
+      {
+        "language": "de",
+        "score": 0.0021395860239863396
+      },
+      {
+        "language": "ru",
+        "score": 0.0019158897921442986
+      }
+    ],
+    "non_english_flag": false,
+    "uncertain_flag": false
+  },
+  "U05": {
+    "top3": [
+      {
+        "language": "en",
+        "score": 0.9883140325546265
+      },
+      {
+        "language": "th",
+        "score": 0.0005714526050724089
+      },
+      {
+        "language": "hi",
+        "score": 0.0005423241527751088
+      }
+    ],
+    "non_english_flag": false,
+    "uncertain_flag": false
+  },
+  "U06": {
+    "top3": [
+      {
+        "language": "en",
+        "score": 0.9811589121818542
+      },
+      {
+        "language": "ru",
+        "score": 0.001362331211566925
+      },
+      {
+        "language": "id",
+        "score": 0.0012535412097349763
+      }
+    ],
+    "non_english_flag": false,
+    "uncertain_flag": false
+  },
+  "T01": {
+    "top3": [
+      {
+        "language": "en",
+        "score": 0.9689716696739197
+      },
+      {
+        "language": "ru",
+        "score": 0.0016879095928743482
+      },
+      {
+        "language": "es",
+        "score": 0.001575071713887155
+      }
+    ],
+    "non_english_flag": false,
+    "uncertain_flag": false
+  },
+  "T02": {
+    "top3": [
+      {
+        "language": "en",
+        "score": 0.9424707889556885
+      },
+      {
+        "language": "vi",
+        "score": 0.004129995126277208
+      },
+      {
+        "language": "ru",
+        "score": 0.003331569256260991
+      }
+    ],
+    "non_english_flag": false,
+    "uncertain_flag": false
+  },
+  "T03": {
+    "top3": [
+      {
+        "language": "en",
+        "score": 0.9153456091880798
+      },
+      {
+        "language": "nl",
+        "score": 0.009740191511809826
+      },
+      {
+        "language": "de",
+        "score": 0.007979110814630985
+      }
+    ],
+    "non_english_flag": false,
+    "uncertain_flag": false
+  },
+  "T04": {
+    "top3": [
+      {
+        "language": "en",
+        "score": 0.8967587351799011
+      },
+      {
+        "language": "es",
+        "score": 0.007708738092333078
+      },
+      {
+        "language": "pt",
+        "score": 0.006451474502682686
+      }
+    ],
+    "non_english_flag": false,
+    "uncertain_flag": false
+  },
+  "T05": {
+    "top3": [
+      {
+        "language": "en",
+        "score": 0.9353506565093994
+      },
+      {
+        "language": "de",
+        "score": 0.016050102189183235
+      },
+      {
+        "language": "nl",
+        "score": 0.0099816108122468
+      }
+    ],
+    "non_english_flag": false,
+    "uncertain_flag": false
+  },
+  "T06": {
+    "top3": [
+      {
+        "language": "en",
+        "score": 0.9711477160453796
+      },
+      {
+        "language": "es",
+        "score": 0.0024428514298051596
+      },
+      {
+        "language": "de",
+        "score": 0.0022788061760365963
+      }
+    ],
+    "non_english_flag": false,
+    "uncertain_flag": false
+  },
+  "T07": {
+    "top3": [
+      {
+        "language": "en",
+        "score": 0.9422444701194763
+      },
+      {
+        "language": "ru",
+        "score": 0.006126869469881058
+      },
+      {
+        "language": "es",
+        "score": 0.004772272892296314
+      }
+    ],
+    "non_english_flag": false,
+    "uncertain_flag": false
+  },
+  "T08": {
+    "top3": [
+      {
+        "language": "en",
+        "score": 0.9782992601394653
+      },
+      {
+        "language": "ru",
+        "score": 0.0017295288853347301
+      },
+      {
+        "language": "de",
+        "score": 0.001498693716712296
+      }
+    ],
+    "non_english_flag": false,
+    "uncertain_flag": false
+  },
+  "T09": {
+    "top3": [
+      {
+        "language": "en",
+        "score": 0.9586914777755737
+      },
+      {
+        "language": "de",
+        "score": 0.004280925262719393
+      },
+      {
+        "language": "ru",
+        "score": 0.002892286516726017
+      }
+    ],
+    "non_english_flag": false,
+    "uncertain_flag": false
+  },
+  "T10": {
+    "top3": [
+      {
+        "language": "en",
+        "score": 0.9766792058944702
+      },
+      {
+        "language": "es",
+        "score": 0.0015692146262153983
+      },
+      {
+        "language": "de",
+        "score": 0.0013700397685170174
+      }
+    ],
+    "non_english_flag": false,
+    "uncertain_flag": false
+  },
+  "T11": {
+    "top3": [
+      {
+        "language": "en",
+        "score": 0.9939906597137451
+      },
+      {
+        "language": "nl",
+        "score": 0.0006480836891569197
+      },
+      {
+        "language": "ru",
+        "score": 0.0005496905650943518
+      }
+    ],
+    "non_english_flag": false,
+    "uncertain_flag": false
+  },
+  "T12": {
+    "top3": [
+      {
+        "language": "en",
+        "score": 0.9648072123527527
+      },
+      {
+        "language": "es",
+        "score": 0.002245381474494934
+      },
+      {
+        "language": "ru",
+        "score": 0.0020512023475021124
+      }
+    ],
+    "non_english_flag": false,
+    "uncertain_flag": false
+  },
+  "N01": {
+    "top3": [
+      {
+        "language": "en",
+        "score": 0.8226984739303589
+      },
+      {
+        "language": "it",
+        "score": 0.013319263234734535
+      },
+      {
+        "language": "fr",
+        "score": 0.010159932076931
+      }
+    ],
+    "non_english_flag": false,
+    "uncertain_flag": false
+  },
+  "N02": {
+    "top3": [
+      {
+        "language": "en",
+        "score": 0.9551528096199036
+      },
+      {
+        "language": "de",
+        "score": 0.0039525460451841354
+      },
+      {
+        "language": "ru",
+        "score": 0.003240588353946805
+      }
+    ],
+    "non_english_flag": false,
+    "uncertain_flag": false
+  },
+  "N03": {
+    "top3": [
+      {
+        "language": "en",
+        "score": 0.9367968440055847
+      },
+      {
+        "language": "de",
+        "score": 0.004544608760625124
+      },
+      {
+        "language": "pt",
+        "score": 0.004536383785307407
+      }
+    ],
+    "non_english_flag": false,
+    "uncertain_flag": false
+  },
+  "N04": {
+    "top3": [
+      {
+        "language": "en",
+        "score": 0.9668376445770264
+      },
+      {
+        "language": "ru",
+        "score": 0.0020420688670128584
+      },
+      {
+        "language": "th",
+        "score": 0.0017345569794997573
+      }
+    ],
+    "non_english_flag": false,
+    "uncertain_flag": false
+  },
+  "N05": {
+    "top3": [
+      {
+        "language": "en",
+        "score": 0.9581771492958069
+      },
+      {
+        "language": "de",
+        "score": 0.0038986336439847946
+      },
+      {
+        "language": "fr",
+        "score": 0.0029163071885704994
+      }
+    ],
+    "non_english_flag": false,
+    "uncertain_flag": false
+  },
+  "N06": {
+    "top3": [
+      {
+        "language": "en",
+        "score": 0.9783377051353455
+      },
+      {
+        "language": "de",
+        "score": 0.0016364235198125243
+      },
+      {
+        "language": "ru",
+        "score": 0.0012428576592355967
+      }
+    ],
+    "non_english_flag": false,
+    "uncertain_flag": false
+  },
+  "N07": {
+    "top3": [
+      {
+        "language": "en",
+        "score": 0.9839285612106323
+      },
+      {
+        "language": "de",
+        "score": 0.0008788416744209826
+      },
+      {
+        "language": "ru",
+        "score": 0.0007024718215689063
+      }
+    ],
+    "non_english_flag": false,
+    "uncertain_flag": false
+  },
+  "N08": {
+    "top3": [
+      {
+        "language": "en",
+        "score": 0.9771249294281006
+      },
+      {
+        "language": "de",
+        "score": 0.002514920197427273
+      },
+      {
+        "language": "fr",
+        "score": 0.0020443310495465994
+      }
+    ],
+    "non_english_flag": false,
+    "uncertain_flag": false
+  },
+  "N09": {
+    "top3": [
+      {
+        "language": "en",
+        "score": 0.8915020823478699
+      },
+      {
+        "language": "es",
+        "score": 0.010363906621932983
+      },
+      {
+        "language": "nl",
+        "score": 0.007511438336223364
+      }
+    ],
+    "non_english_flag": false,
+    "uncertain_flag": false
+  },
+  "N10": {
+    "top3": [
+      {
+        "language": "en",
+        "score": 0.9833797216415405
+      },
+      {
+        "language": "fr",
+        "score": 0.0012240102514624596
+      },
+      {
+        "language": "id",
+        "score": 0.0011575850658118725
+      }
+    ],
+    "non_english_flag": false,
+    "uncertain_flag": false
+  },
+  "N11": {
+    "top3": [
+      {
+        "language": "en",
+        "score": 0.9282132387161255
+      },
+      {
+        "language": "es",
+        "score": 0.005387366283684969
+      },
+      {
+        "language": "ru",
+        "score": 0.0044614775106310844
+      }
+    ],
+    "non_english_flag": false,
+    "uncertain_flag": false
+  },
+  "N12": {
+    "top3": [
+      {
+        "language": "en",
+        "score": 0.9801958203315735
+      },
+      {
+        "language": "id",
+        "score": 0.0016890955157577991
+      },
+      {
+        "language": "hi",
+        "score": 0.0012485458282753825
+      }
+    ],
+    "non_english_flag": false,
+    "uncertain_flag": false
+  }
+}

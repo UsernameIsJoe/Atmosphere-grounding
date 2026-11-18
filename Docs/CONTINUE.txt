@@ -12,6 +12,21 @@ Read first for goals / architecture:
 
 
 
+LATEST PRE-GATE THREE-CHECK TEST (2026-11-18; TESTED, NOT ADOPTED)
+-------------------------------------------------------------------------
+All 36 original reviews processed on Runpod without training or LLM calls.
+Exact/near duplicates: 0; non-English/uncertain language: 0; toxicity >=0.5: 0.
+Even main toxicity >=0.2 flagged none. N05 toxicity 0.00063436: not caught.
+All reviews fit 512-token model window; none truncated. CPU inference 41.60s.
+No automatic rejection, no gate rerun; joining archived v5 leaves 22 KEEP/14
+REJECT unchanged. This cohort has no positive toxicity controls; no accuracy
+claim. Thresholds diagnostic, not calibrated or tuned to force N05 rejection.
+Reusable installer and runner now versioned; model hashes/packages archived.
+No persistent endpoint deployed. V5 still leading candidate, v0.4 active.
+  research_audit/stage1a_pregate_three_checks_2026-11-18/README.md
+  configs/stage1a_pregate_three_checks_v01_diagnostic.json
+  scripts/setup_pregate_three_checks_20261118.sh
+
 LATEST V5.1 TEST RESULT (2026-11-18; TESTED, NOT ADOPTED)
 -------------------------------------------------------------------------
 All 72 calls completed normally. Fresh v5 and v5.1 both 22 KEEP / 14 REJECT,

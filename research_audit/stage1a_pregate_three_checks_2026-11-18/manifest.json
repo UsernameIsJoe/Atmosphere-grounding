@@ -1,0 +1,30 @@
+{
+  "status": "diagnostic_not_adopted",
+  "reviews": 36,
+  "input_sha256": "95d9216e4aa0c3f248478c3a58742812ab254180a1190d62f2278fd7ff139352",
+  "runner_sha256": "bae28e91d9f08135ba0f98e4940415c2a6d4c038cab66b62fc29947f9f37f0dc",
+  "source_commit": "df8dc7b12abedc0e024c3a659a2c03ab094eda32",
+  "training": false,
+  "llm_calls": 0,
+  "original_reviews_modified": false,
+  "thresholds_predeclared": {
+    "near_duplicate_jaccard": 0.8,
+    "language_uncertain_top_score_below": 0.8,
+    "toxicity_flag": 0.5,
+    "toxicity_sensitivity": [
+      0.2,
+      0.5,
+      0.8
+    ]
+  },
+  "language_policy": "report top language and uncertainty; route rather than assume non-English is invalid",
+  "toxicity_policy": "main toxicity score >=0.5 is provisional flag, not calibrated rejection; all class scores saved",
+  "duplicate_policy": "exact raw and NFKC+casefold+whitespace normalized matching; all 630 pairs checked for exact word-trigram Jaccard >=0.8, >=5 words each; MinHash128 seed42 estimate recorded, not used to discard pairs",
+  "model_sources": {
+    "fasttext": "https://dl.fbaipublicfiles.com/fasttext/supervised-models/lid.176.bin",
+    "detoxify": "https://github.com/unitaryai/detoxify/releases/download/v0.3-alpha/toxic_debiased-c7548aa0.ckpt",
+    "detoxify_implementation_commit": "7ef6576274b91bfc6e06a41f69ad41cc04eaccf1"
+  },
+  "long_review_policy": "Detoxify original whole-review predict if <=512 tokens including special tokens; otherwise overlapping 400-token windows stride272, per-label maximum; no tail discarded",
+  "gate_comparison": "join archived v5 decisions by review ID and identical text; do not rerun or modify gate"
+}
