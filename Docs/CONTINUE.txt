@@ -12,6 +12,20 @@ Read first for goals / architecture:
 
 
 
+LATEST V5.1 HOSTILE-RANT DRAFT (2026-11-18; UNTESTED, NOT ADOPTED)
+-------------------------------------------------------------------------
+New separate prompt/codebook/config; tested v5 and active v0.4 unchanged.
+User set aside the proposed N05-specific facility tuning. Instead, apply a
+whole-review exclusion for dominant hostile personal/institutional denunciation,
+even with genuine place details. Strong specific negative accounts remain
+eligible for relevance screening; anger, profanity, allegations or requests for
+accountability alone do not trigger exclusion. Do not diagnose irrationality.
+No ratio, general main-place-focus requirement, new output fields or extra call.
+No new inference run. Prior v5 results do not evaluate this amendment.
+  Docs/STAGE1A_REVIEW_ELIGIBILITY_GATE_PROMPT_V0_5_1_RANT_DRAFT_2026-11-18.md
+  Docs/STAGE1A_REVIEW_ELIGIBILITY_GATE_CODEBOOK_V0_5_1_RANT_DRAFT_2026-11-18.md
+  configs/stage1a_review_eligibility_gate_v051_rant_draft.json
+
 LATEST V5 HUMAN AUDIT (2026-11-18; THREE DISPLAYED REVIEWS)
 -------------------------------------------------------------------------
 User adjudication: U01=REJECT, U02=KEEP, N05=REJECT. V5 agrees on U01/U02;

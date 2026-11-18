@@ -1,0 +1,41 @@
+{
+  "version": "v0.5.1_rant_draft",
+  "display_version": "v5.1",
+  "status": "draft_untested_not_adopted",
+  "based_on": "v0.5_scenarios_draft",
+  "front_runner_config": "configs/stage1a_review_eligibility_gate_current.json",
+  "front_runner_config_sha256": "acd58384e6ee3e0eb22650e5565af8666c4ae55351bb214331e934ea9495e17a",
+  "prompt_path": "Docs/STAGE1A_REVIEW_ELIGIBILITY_GATE_PROMPT_V0_5_1_RANT_DRAFT_2026-11-18.md",
+  "prompt_sha256": "dd4d583f07ad0bae9824be7b1c8fe34eb9847351f3a4e9a747671bd565d00e5d",
+  "codebook_path": "Docs/STAGE1A_REVIEW_ELIGIBILITY_GATE_CODEBOOK_V0_5_1_RANT_DRAFT_2026-11-18.md",
+  "codebook_sha256": "9c126c1ece9087f921a1c25fbd4f25969b3d8a47c4c479483fd6b6f306408b7a",
+  "schema_path": "configs/stage1a_review_eligibility_gate_v01.json",
+  "schema_sha256": "127a02d26eacc0c3c4897b33afdb8edb8d9e7afd2462a733534029ae53e30393",
+  "model": "qwen3:8b",
+  "provider": "ollama",
+  "inference_options": {
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 8192,
+    "num_predict": 512,
+    "think": false
+  },
+  "input_scope": "complete_original_review_before_segmentation",
+  "output_fields": [
+    "keep",
+    "anchor_quote",
+    "reason"
+  ],
+  "gate_calls_per_review": 1,
+  "keyword_blacklist": false,
+  "uses_ratio": false,
+  "requires_main_place_focus": false,
+  "runner_status": "not_prepared_for_this_candidate",
+  "executed": false,
+  "base_candidate_config": "configs/stage1a_review_eligibility_gate_v05_scenarios_draft.json",
+  "review_level_hostile_rant_exclusion": true,
+  "hostile_rant_exclusion_overrides_place_anchor": true,
+  "excludes_emotion_intensity_alone": false,
+  "base_candidate_test_archive": "research_audit/stage1a_gate_scenarios_v5_test_2026-11-17",
+  "base_candidate_human_audit": "research_audit/stage1a_gate_scenarios_v5_test_2026-11-17/human_adjudications_2026-11-18.jsonl"
+}
