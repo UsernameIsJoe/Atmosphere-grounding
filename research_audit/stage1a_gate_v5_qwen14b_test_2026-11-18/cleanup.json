@@ -1,0 +1,14 @@
+{
+  "pod_id": "k5nbvyaaqfrlsj",
+  "created_at": "2026-11-18T20:46:43.283Z",
+  "terminated_at": "2026-11-18T20:53:04.241Z",
+  "delete_http_status": 204,
+  "remaining_pods": [],
+  "verified_archive_before_termination": "26eb08f8991eda4065fb101c494b3200ff6124f0",
+  "calls_completed": 72,
+  "exit_code": 0,
+  "interrupted": false,
+  "hourly_rate_usd": 0.59,
+  "estimated_compute_cost_usd": 0.0624,
+  "cost_note": "Wall-time estimate, excludes separately billed storage; not final invoice."
+}
