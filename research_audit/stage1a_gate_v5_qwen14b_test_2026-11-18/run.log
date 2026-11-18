@@ -1,0 +1,1668 @@
+Get:1 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+Get:2 http://archive.ubuntu.com/ubuntu noble InRelease [256 kB]
+Get:3 http://security.ubuntu.com/ubuntu noble-security/restricted amd64 Packages [2216 kB]
+Get:4 http://security.ubuntu.com/ubuntu noble-security/multiverse amd64 Packages [55.6 kB]
+Get:5 http://security.ubuntu.com/ubuntu noble-security/main amd64 Packages [1475 kB]
+Get:6 http://security.ubuntu.com/ubuntu noble-security/universe amd64 Packages [1558 kB]
+Get:7 http://archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+Get:8 http://archive.ubuntu.com/ubuntu noble-backports InRelease [126 kB]
+Get:9 http://archive.ubuntu.com/ubuntu noble/multiverse amd64 Packages [331 kB]
+Get:10 http://archive.ubuntu.com/ubuntu noble/universe amd64 Packages [19.3 MB]
+Get:11 http://archive.ubuntu.com/ubuntu noble/main amd64 Packages [1808 kB]
+Get:12 http://archive.ubuntu.com/ubuntu noble/restricted amd64 Packages [117 kB]
+Get:13 http://archive.ubuntu.com/ubuntu noble-updates/multiverse amd64 Packages [61.7 kB]
+Get:14 http://archive.ubuntu.com/ubuntu noble-updates/restricted amd64 Packages [2329 kB]
+Get:15 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1799 kB]
+Get:16 http://archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [2182 kB]
+Get:17 http://archive.ubuntu.com/ubuntu noble-backports/multiverse amd64 Packages [669 B]
+Get:18 http://archive.ubuntu.com/ubuntu noble-backports/main amd64 Packages [49.0 kB]
+Get:19 http://archive.ubuntu.com/ubuntu noble-backports/universe amd64 Packages [36.0 kB]
+Fetched 34.0 MB in 3s (12.4 MB/s)
+Reading package lists...
+Reading package lists...
+Building dependency tree...
+Reading state information...
+ca-certificates is already the newest version (20260816ubuntu0.24.04.2).
+The following additional packages will be installed:
+  adduser git-man krb5-locales less libbrotli1 libcbor0.10 libcurl3t64-gnutls
+  liberror-perl libfido2-1 libgdbm-compat4t64 libgdbm6t64 libgssapi-krb5-2
+  libk5crypto3 libkeyutils1 libkrb5-3 libkrb5support0 libldap-common libldap2
+  libnghttp2-14 libperl5.38t64 libpsl5t64 libpython3-stdlib
+  libpython3.12-minimal libpython3.12-stdlib libreadline8t64 librtmp1
+  libsasl2-2 libsasl2-modules libsasl2-modules-db libsqlite3-0 libssh-4
+  libxext6 libxmuu1 media-types netbase openssh-client patch perl perl-base
+  perl-modules-5.38 publicsuffix python3-minimal python3.12 python3.12-minimal
+  readline-common tzdata xauth
+Suggested packages:
+  liblocale-gettext-perl cron quota ecryptfs-utils gettext-base git-daemon-run
+  | git-daemon-sysvinit git-doc git-email git-gui gitk gitweb git-cvs
+  git-mediawiki git-svn gdbm-l10n krb5-doc krb5-user
+  libsasl2-modules-gssapi-mit | libsasl2-modules-gssapi-heimdal
+  libsasl2-modules-ldap libsasl2-modules-otp libsasl2-modules-sql keychain
+  libpam-ssh monkeysphere ssh-askpass ed diffutils-doc perl-doc
+  libterm-readline-gnu-perl | libterm-readline-perl-perl make
+  libtap-harness-archive-perl python3-doc python3-tk python3-venv
+  python3.12-venv python3.12-doc binutils binfmt-support readline-doc
+The following NEW packages will be installed:
+  adduser git git-man krb5-locales less libbrotli1 libcbor0.10
+  libcurl3t64-gnutls liberror-perl libfido2-1 libgdbm-compat4t64 libgdbm6t64
+  libgssapi-krb5-2 libk5crypto3 libkeyutils1 libkrb5-3 libkrb5support0
+  libldap-common libldap2 libnghttp2-14 libperl5.38t64 libpsl5t64
+  libpython3-stdlib libpython3.12-minimal libpython3.12-stdlib libreadline8t64
+  librtmp1 libsasl2-2 libsasl2-modules libsasl2-modules-db libsqlite3-0
+  libssh-4 libxext6 libxmuu1 media-types netbase openssh-client patch perl
+  perl-modules-5.38 publicsuffix python3 python3-minimal python3.12
+  python3.12-minimal readline-common tzdata xauth
+The following packages will be upgraded:
+  perl-base
+1 upgraded, 48 newly installed, 0 to remove and 6 not upgraded.
+Need to get 25.7 MB of archives.
+After this operation, 114 MB of additional disk space will be used.
+Get:1 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 perl-base amd64 5.38.2-3.2ubuntu0.7 [1828 kB]
+Get:2 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpython3.12-minimal amd64 3.12.3-1ubuntu0.17 [839 kB]
+Get:3 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3.12-minimal amd64 3.12.3-1ubuntu0.17 [2335 kB]
+Get:4 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3-minimal amd64 3.12.3-0ubuntu2.1 [27.4 kB]
+Get:5 http://archive.ubuntu.com/ubuntu noble/main amd64 media-types all 10.1.0 [27.5 kB]
+Get:6 http://archive.ubuntu.com/ubuntu noble/main amd64 netbase all 6.4 [13.1 kB]
+Get:7 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 tzdata all 2026e-0ubuntu0.24.04.1 [282 kB]
+Get:8 http://archive.ubuntu.com/ubuntu noble/main amd64 readline-common all 8.2-4build1 [56.5 kB]
+Get:9 http://archive.ubuntu.com/ubuntu noble/main amd64 libreadline8t64 amd64 8.2-4build1 [153 kB]
+Get:10 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsqlite3-0 amd64 3.45.1-1ubuntu2.9 [702 kB]
+Get:11 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpython3.12-stdlib amd64 3.12.3-1ubuntu0.17 [2071 kB]
+Get:12 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3.12 amd64 3.12.3-1ubuntu0.17 [651 kB]
+Get:13 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libpython3-stdlib amd64 3.12.3-0ubuntu2.1 [10.1 kB]
+Get:14 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 python3 amd64 3.12.3-0ubuntu2.1 [23.0 kB]
+Get:15 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 perl-modules-5.38 all 5.38.2-3.2ubuntu0.7 [3110 kB]
+Get:16 http://archive.ubuntu.com/ubuntu noble/main amd64 libgdbm6t64 amd64 1.23-5.1build1 [34.4 kB]
+Get:17 http://archive.ubuntu.com/ubuntu noble/main amd64 libgdbm-compat4t64 amd64 1.23-5.1build1 [6710 B]
+Get:18 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libperl5.38t64 amd64 5.38.2-3.2ubuntu0.7 [4864 kB]
+Get:19 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 perl amd64 5.38.2-3.2ubuntu0.7 [231 kB]
+Get:20 http://archive.ubuntu.com/ubuntu noble/main amd64 adduser all 3.137ubuntu1 [101 kB]
+Get:21 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 krb5-locales all 1.20.1-6ubuntu2.10 [15.3 kB]
+Get:22 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 less amd64 590-2ubuntu2.1 [142 kB]
+Get:23 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libkrb5support0 amd64 1.20.1-6ubuntu2.10 [34.9 kB]
+Get:24 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libk5crypto3 amd64 1.20.1-6ubuntu2.10 [81.9 kB]
+Get:25 http://archive.ubuntu.com/ubuntu noble/main amd64 libkeyutils1 amd64 1.6.3-3build1 [9490 B]
+Get:26 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libkrb5-3 amd64 1.20.1-6ubuntu2.10 [348 kB]
+Get:27 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libgssapi-krb5-2 amd64 1.20.1-6ubuntu2.10 [143 kB]
+Get:28 http://archive.ubuntu.com/ubuntu noble/main amd64 libcbor0.10 amd64 0.10.2-1.2ubuntu2 [25.8 kB]
+Get:29 http://archive.ubuntu.com/ubuntu noble/main amd64 libfido2-1 amd64 1.14.0-1build3 [83.5 kB]
+Get:30 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libnghttp2-14 amd64 1.59.0-1ubuntu0.4 [74.6 kB]
+Get:31 http://archive.ubuntu.com/ubuntu noble/main amd64 libpsl5t64 amd64 0.21.2-1.1build1 [57.1 kB]
+Get:32 http://archive.ubuntu.com/ubuntu noble/main amd64 libxext6 amd64 2:1.3.4-1build2 [30.4 kB]
+Get:33 http://archive.ubuntu.com/ubuntu noble/main amd64 libxmuu1 amd64 2:1.1.3-3build2 [8958 B]
+Get:34 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 openssh-client amd64 1:9.6p1-3ubuntu13.20 [909 kB]
+Get:35 http://archive.ubuntu.com/ubuntu noble/main amd64 publicsuffix all 20231001.0357-0.1 [129 kB]
+Get:36 http://archive.ubuntu.com/ubuntu noble/main amd64 xauth amd64 1:1.1.2-1build1 [25.6 kB]
+Get:37 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libbrotli1 amd64 1.1.0-2ubuntu0.1 [331 kB]
+Get:38 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsasl2-modules-db amd64 2.1.28+dfsg1-5ubuntu3.1 [20.4 kB]
+Get:39 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsasl2-2 amd64 2.1.28+dfsg1-5ubuntu3.1 [53.2 kB]
+Get:40 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libldap2 amd64 2.6.10+dfsg-0ubuntu0.24.04.1 [198 kB]
+Get:41 http://archive.ubuntu.com/ubuntu noble/main amd64 librtmp1 amd64 2.4+20151223.gitfa8646d.1-2build7 [56.3 kB]
+Get:42 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libssh-4 amd64 0.10.6-2ubuntu0.5 [191 kB]
+Get:43 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libcurl3t64-gnutls amd64 8.5.0-2ubuntu10.16 [337 kB]
+Get:44 http://archive.ubuntu.com/ubuntu noble/main amd64 liberror-perl all 0.17029-2 [25.6 kB]
+Get:45 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git-man all 1:2.43.0-1ubuntu7.4 [1101 kB]
+Get:46 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 git amd64 1:2.43.0-1ubuntu7.4 [3681 kB]
+Get:47 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libldap-common all 2.6.10+dfsg-0ubuntu0.24.04.1 [32.9 kB]
+Get:48 http://archive.ubuntu.com/ubuntu noble-updates/main amd64 libsasl2-modules amd64 2.1.28+dfsg1-5ubuntu3.1 [69.9 kB]
+Get:49 http://archive.ubuntu.com/ubuntu noble/main amd64 patch amd64 2.7.6-7build3 [104 kB]
+debconf: delaying package configuration, since apt-utils is not installed
+Fetched 25.7 MB in 2s (13.8 MB/s)
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 5297 files and directories currently installed.)
+Preparing to unpack .../perl-base_5.38.2-3.2ubuntu0.7_amd64.deb ...
+Unpacking perl-base (5.38.2-3.2ubuntu0.7) over (5.38.2-3.2ubuntu0.6) ...
+Setting up perl-base (5.38.2-3.2ubuntu0.7) ...
+Selecting previously unselected package libpython3.12-minimal:amd64.
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 5297 files and directories currently installed.)
+Preparing to unpack .../libpython3.12-minimal_3.12.3-1ubuntu0.17_amd64.deb ...
+Unpacking libpython3.12-minimal:amd64 (3.12.3-1ubuntu0.17) ...
+Selecting previously unselected package python3.12-minimal.
+Preparing to unpack .../python3.12-minimal_3.12.3-1ubuntu0.17_amd64.deb ...
+Unpacking python3.12-minimal (3.12.3-1ubuntu0.17) ...
+Setting up libpython3.12-minimal:amd64 (3.12.3-1ubuntu0.17) ...
+Setting up python3.12-minimal (3.12.3-1ubuntu0.17) ...
+Selecting previously unselected package python3-minimal.
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 5608 files and directories currently installed.)
+Preparing to unpack .../0-python3-minimal_3.12.3-0ubuntu2.1_amd64.deb ...
+Unpacking python3-minimal (3.12.3-0ubuntu2.1) ...
+Selecting previously unselected package media-types.
+Preparing to unpack .../1-media-types_10.1.0_all.deb ...
+Unpacking media-types (10.1.0) ...
+Selecting previously unselected package netbase.
+Preparing to unpack .../2-netbase_6.4_all.deb ...
+Unpacking netbase (6.4) ...
+Selecting previously unselected package tzdata.
+Preparing to unpack .../3-tzdata_2026e-0ubuntu0.24.04.1_all.deb ...
+Unpacking tzdata (2026e-0ubuntu0.24.04.1) ...
+Selecting previously unselected package readline-common.
+Preparing to unpack .../4-readline-common_8.2-4build1_all.deb ...
+Unpacking readline-common (8.2-4build1) ...
+Selecting previously unselected package libreadline8t64:amd64.
+Preparing to unpack .../5-libreadline8t64_8.2-4build1_amd64.deb ...
+Adding 'diversion of /lib/x86_64-linux-gnu/libhistory.so.8 to /lib/x86_64-linux-gnu/libhistory.so.8.usr-is-merged by libreadline8t64'
+Adding 'diversion of /lib/x86_64-linux-gnu/libhistory.so.8.2 to /lib/x86_64-linux-gnu/libhistory.so.8.2.usr-is-merged by libreadline8t64'
+Adding 'diversion of /lib/x86_64-linux-gnu/libreadline.so.8 to /lib/x86_64-linux-gnu/libreadline.so.8.usr-is-merged by libreadline8t64'
+Adding 'diversion of /lib/x86_64-linux-gnu/libreadline.so.8.2 to /lib/x86_64-linux-gnu/libreadline.so.8.2.usr-is-merged by libreadline8t64'
+Unpacking libreadline8t64:amd64 (8.2-4build1) ...
+Selecting previously unselected package libsqlite3-0:amd64.
+Preparing to unpack .../6-libsqlite3-0_3.45.1-1ubuntu2.9_amd64.deb ...
+Unpacking libsqlite3-0:amd64 (3.45.1-1ubuntu2.9) ...
+Selecting previously unselected package libpython3.12-stdlib:amd64.
+Preparing to unpack .../7-libpython3.12-stdlib_3.12.3-1ubuntu0.17_amd64.deb ...
+Unpacking libpython3.12-stdlib:amd64 (3.12.3-1ubuntu0.17) ...
+Selecting previously unselected package python3.12.
+Preparing to unpack .../8-python3.12_3.12.3-1ubuntu0.17_amd64.deb ...
+Unpacking python3.12 (3.12.3-1ubuntu0.17) ...
+Selecting previously unselected package libpython3-stdlib:amd64.
+Preparing to unpack .../9-libpython3-stdlib_3.12.3-0ubuntu2.1_amd64.deb ...
+Unpacking libpython3-stdlib:amd64 (3.12.3-0ubuntu2.1) ...
+Setting up python3-minimal (3.12.3-0ubuntu2.1) ...
+Selecting previously unselected package python3.
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 6614 files and directories currently installed.)
+Preparing to unpack .../0-python3_3.12.3-0ubuntu2.1_amd64.deb ...
+Unpacking python3 (3.12.3-0ubuntu2.1) ...
+Selecting previously unselected package perl-modules-5.38.
+Preparing to unpack .../1-perl-modules-5.38_5.38.2-3.2ubuntu0.7_all.deb ...
+Unpacking perl-modules-5.38 (5.38.2-3.2ubuntu0.7) ...
+Selecting previously unselected package libgdbm6t64:amd64.
+Preparing to unpack .../2-libgdbm6t64_1.23-5.1build1_amd64.deb ...
+Unpacking libgdbm6t64:amd64 (1.23-5.1build1) ...
+Selecting previously unselected package libgdbm-compat4t64:amd64.
+Preparing to unpack .../3-libgdbm-compat4t64_1.23-5.1build1_amd64.deb ...
+Unpacking libgdbm-compat4t64:amd64 (1.23-5.1build1) ...
+Selecting previously unselected package libperl5.38t64:amd64.
+Preparing to unpack .../4-libperl5.38t64_5.38.2-3.2ubuntu0.7_amd64.deb ...
+Unpacking libperl5.38t64:amd64 (5.38.2-3.2ubuntu0.7) ...
+Selecting previously unselected package perl.
+Preparing to unpack .../5-perl_5.38.2-3.2ubuntu0.7_amd64.deb ...
+Unpacking perl (5.38.2-3.2ubuntu0.7) ...
+Selecting previously unselected package adduser.
+Preparing to unpack .../6-adduser_3.137ubuntu1_all.deb ...
+Unpacking adduser (3.137ubuntu1) ...
+Setting up adduser (3.137ubuntu1) ...
+Selecting previously unselected package krb5-locales.
+(Reading database ... 
+(Reading database ... 5%
+(Reading database ... 10%
+(Reading database ... 15%
+(Reading database ... 20%
+(Reading database ... 25%
+(Reading database ... 30%
+(Reading database ... 35%
+(Reading database ... 40%
+(Reading database ... 45%
+(Reading database ... 50%
+(Reading database ... 55%
+(Reading database ... 60%
+(Reading database ... 65%
+(Reading database ... 70%
+(Reading database ... 75%
+(Reading database ... 80%
+(Reading database ... 85%
+(Reading database ... 90%
+(Reading database ... 95%
+(Reading database ... 100%
+(Reading database ... 8695 files and directories currently installed.)
+Preparing to unpack .../00-krb5-locales_1.20.1-6ubuntu2.10_all.deb ...
+Unpacking krb5-locales (1.20.1-6ubuntu2.10) ...
+Selecting previously unselected package less.
+Preparing to unpack .../01-less_590-2ubuntu2.1_amd64.deb ...
+Unpacking less (590-2ubuntu2.1) ...
+Selecting previously unselected package libkrb5support0:amd64.
+Preparing to unpack .../02-libkrb5support0_1.20.1-6ubuntu2.10_amd64.deb ...
+Unpacking libkrb5support0:amd64 (1.20.1-6ubuntu2.10) ...
+Selecting previously unselected package libk5crypto3:amd64.
+Preparing to unpack .../03-libk5crypto3_1.20.1-6ubuntu2.10_amd64.deb ...
+Unpacking libk5crypto3:amd64 (1.20.1-6ubuntu2.10) ...
+Selecting previously unselected package libkeyutils1:amd64.
+Preparing to unpack .../04-libkeyutils1_1.6.3-3build1_amd64.deb ...
+Unpacking libkeyutils1:amd64 (1.6.3-3build1) ...
+Selecting previously unselected package libkrb5-3:amd64.
+Preparing to unpack .../05-libkrb5-3_1.20.1-6ubuntu2.10_amd64.deb ...
+Unpacking libkrb5-3:amd64 (1.20.1-6ubuntu2.10) ...
+Selecting previously unselected package libgssapi-krb5-2:amd64.
+Preparing to unpack .../06-libgssapi-krb5-2_1.20.1-6ubuntu2.10_amd64.deb ...
+Unpacking libgssapi-krb5-2:amd64 (1.20.1-6ubuntu2.10) ...
+Selecting previously unselected package libcbor0.10:amd64.
+Preparing to unpack .../07-libcbor0.10_0.10.2-1.2ubuntu2_amd64.deb ...
+Unpacking libcbor0.10:amd64 (0.10.2-1.2ubuntu2) ...
+Selecting previously unselected package libfido2-1:amd64.
+Preparing to unpack .../08-libfido2-1_1.14.0-1build3_amd64.deb ...
+Unpacking libfido2-1:amd64 (1.14.0-1build3) ...
+Selecting previously unselected package libnghttp2-14:amd64.
+Preparing to unpack .../09-libnghttp2-14_1.59.0-1ubuntu0.4_amd64.deb ...
+Unpacking libnghttp2-14:amd64 (1.59.0-1ubuntu0.4) ...
+Selecting previously unselected package libpsl5t64:amd64.
+Preparing to unpack .../10-libpsl5t64_0.21.2-1.1build1_amd64.deb ...
+Unpacking libpsl5t64:amd64 (0.21.2-1.1build1) ...
+Selecting previously unselected package libxext6:amd64.
+Preparing to unpack .../11-libxext6_2%3a1.3.4-1build2_amd64.deb ...
+Unpacking libxext6:amd64 (2:1.3.4-1build2) ...
+Selecting previously unselected package libxmuu1:amd64.
+Preparing to unpack .../12-libxmuu1_2%3a1.1.3-3build2_amd64.deb ...
+Unpacking libxmuu1:amd64 (2:1.1.3-3build2) ...
+Selecting previously unselected package openssh-client.
+Preparing to unpack .../13-openssh-client_1%3a9.6p1-3ubuntu13.20_amd64.deb ...
+Unpacking openssh-client (1:9.6p1-3ubuntu13.20) ...
+Selecting previously unselected package publicsuffix.
+Preparing to unpack .../14-publicsuffix_20231001.0357-0.1_all.deb ...
+Unpacking publicsuffix (20231001.0357-0.1) ...
+Selecting previously unselected package xauth.
+Preparing to unpack .../15-xauth_1%3a1.1.2-1build1_amd64.deb ...
+Unpacking xauth (1:1.1.2-1build1) ...
+Selecting previously unselected package libbrotli1:amd64.
+Preparing to unpack .../16-libbrotli1_1.1.0-2ubuntu0.1_amd64.deb ...
+Unpacking libbrotli1:amd64 (1.1.0-2ubuntu0.1) ...
+Selecting previously unselected package libsasl2-modules-db:amd64.
+Preparing to unpack .../17-libsasl2-modules-db_2.1.28+dfsg1-5ubuntu3.1_amd64.deb ...
+Unpacking libsasl2-modules-db:amd64 (2.1.28+dfsg1-5ubuntu3.1) ...
+Selecting previously unselected package libsasl2-2:amd64.
+Preparing to unpack .../18-libsasl2-2_2.1.28+dfsg1-5ubuntu3.1_amd64.deb ...
+Unpacking libsasl2-2:amd64 (2.1.28+dfsg1-5ubuntu3.1) ...
+Selecting previously unselected package libldap2:amd64.
+Preparing to unpack .../19-libldap2_2.6.10+dfsg-0ubuntu0.24.04.1_amd64.deb ...
+Unpacking libldap2:amd64 (2.6.10+dfsg-0ubuntu0.24.04.1) ...
+Selecting previously unselected package librtmp1:amd64.
+Preparing to unpack .../20-librtmp1_2.4+20151223.gitfa8646d.1-2build7_amd64.deb ...
+Unpacking librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2build7) ...
+Selecting previously unselected package libssh-4:amd64.
+Preparing to unpack .../21-libssh-4_0.10.6-2ubuntu0.5_amd64.deb ...
+Unpacking libssh-4:amd64 (0.10.6-2ubuntu0.5) ...
+Selecting previously unselected package libcurl3t64-gnutls:amd64.
+Preparing to unpack .../22-libcurl3t64-gnutls_8.5.0-2ubuntu10.16_amd64.deb ...
+Unpacking libcurl3t64-gnutls:amd64 (8.5.0-2ubuntu10.16) ...
+Selecting previously unselected package liberror-perl.
+Preparing to unpack .../23-liberror-perl_0.17029-2_all.deb ...
+Unpacking liberror-perl (0.17029-2) ...
+Selecting previously unselected package git-man.
+Preparing to unpack .../24-git-man_1%3a2.43.0-1ubuntu7.4_all.deb ...
+Unpacking git-man (1:2.43.0-1ubuntu7.4) ...
+Selecting previously unselected package git.
+Preparing to unpack .../25-git_1%3a2.43.0-1ubuntu7.4_amd64.deb ...
+Unpacking git (1:2.43.0-1ubuntu7.4) ...
+Selecting previously unselected package libldap-common.
+Preparing to unpack .../26-libldap-common_2.6.10+dfsg-0ubuntu0.24.04.1_all.deb ...
+Unpacking libldap-common (2.6.10+dfsg-0ubuntu0.24.04.1) ...
+Selecting previously unselected package libsasl2-modules:amd64.
+Preparing to unpack .../27-libsasl2-modules_2.1.28+dfsg1-5ubuntu3.1_amd64.deb ...
+Unpacking libsasl2-modules:amd64 (2.1.28+dfsg1-5ubuntu3.1) ...
+Selecting previously unselected package patch.
+Preparing to unpack .../28-patch_2.7.6-7build3_amd64.deb ...
+Unpacking patch (2.7.6-7build3) ...
+Setting up media-types (10.1.0) ...
+Setting up libkeyutils1:amd64 (1.6.3-3build1) ...
+Setting up libgdbm6t64:amd64 (1.23-5.1build1) ...
+Setting up libgdbm-compat4t64:amd64 (1.23-5.1build1) ...
+Setting up libcbor0.10:amd64 (0.10.2-1.2ubuntu2) ...
+Setting up libbrotli1:amd64 (1.1.0-2ubuntu0.1) ...
+Setting up libsqlite3-0:amd64 (3.45.1-1ubuntu2.9) ...
+Setting up libsasl2-modules:amd64 (2.1.28+dfsg1-5ubuntu3.1) ...
+Setting up libpsl5t64:amd64 (0.21.2-1.1build1) ...
+Setting up libnghttp2-14:amd64 (1.59.0-1ubuntu0.4) ...
+Setting up less (590-2ubuntu2.1) ...
+Setting up libxext6:amd64 (2:1.3.4-1build2) ...
+Setting up krb5-locales (1.20.1-6ubuntu2.10) ...
+Setting up libldap-common (2.6.10+dfsg-0ubuntu0.24.04.1) ...
+Setting up libkrb5support0:amd64 (1.20.1-6ubuntu2.10) ...
+Setting up libsasl2-modules-db:amd64 (2.1.28+dfsg1-5ubuntu3.1) ...
+Setting up tzdata (2026e-0ubuntu0.24.04.1) ...
+debconf: unable to initialize frontend: Dialog
+debconf: (TERM is not set, so the dialog frontend is not usable.)
+debconf: falling back to frontend: Readline
+debconf: unable to initialize frontend: Readline
+debconf: (This frontend requires a controlling tty.)
+debconf: falling back to frontend: Teletype
+Configuring tzdata
+------------------
+
+Please select the geographic area in which you live. Subsequent configuration
+questions will narrow this down by presenting a list of cities, representing
+the time zones in which they are located.
+
+  1. Africa      4. Arctic    7. Australia  10. Pacific
+  2. America     5. Asia      8. Europe     11. Etc
+  3. Antarctica  6. Atlantic  9. Indian     12. Legacy
+Geographic area: 
+Use of uninitialized value $_[1] in join or string at /usr/share/perl5/Debconf/DbDriver/Stack.pm line 112.
+
+Current default time zone: '/UTC'
+Local time is now:      Wed Nov 18 20:47:40 UTC 2026.
+Universal Time is now:  Wed Nov 18 20:47:40 UTC 2026.
+Run 'dpkg-reconfigure tzdata' if you wish to change it.
+
+Use of uninitialized value $val in substitution (s///) at /usr/share/perl5/Debconf/Format/822.pm line 84, <GEN6> line 4.
+Use of uninitialized value $val in concatenation (.) or string at /usr/share/perl5/Debconf/Format/822.pm line 85, <GEN6> line 4.
+Setting up librtmp1:amd64 (2.4+20151223.gitfa8646d.1-2build7) ...
+Setting up perl-modules-5.38 (5.38.2-3.2ubuntu0.7) ...
+Setting up patch (2.7.6-7build3) ...
+Setting up libk5crypto3:amd64 (1.20.1-6ubuntu2.10) ...
+Setting up libsasl2-2:amd64 (2.1.28+dfsg1-5ubuntu3.1) ...
+Setting up git-man (1:2.43.0-1ubuntu7.4) ...
+Setting up netbase (6.4) ...
+Setting up libkrb5-3:amd64 (1.20.1-6ubuntu2.10) ...
+Setting up libperl5.38t64:amd64 (5.38.2-3.2ubuntu0.7) ...
+Setting up libfido2-1:amd64 (1.14.0-1build3) ...
+Setting up readline-common (8.2-4build1) ...
+Setting up publicsuffix (20231001.0357-0.1) ...
+Setting up libldap2:amd64 (2.6.10+dfsg-0ubuntu0.24.04.1) ...
+Setting up libxmuu1:amd64 (2:1.1.3-3build2) ...
+Setting up perl (5.38.2-3.2ubuntu0.7) ...
+Setting up libgssapi-krb5-2:amd64 (1.20.1-6ubuntu2.10) ...
+Setting up libssh-4:amd64 (0.10.6-2ubuntu0.5) ...
+Setting up libreadline8t64:amd64 (8.2-4build1) ...
+Setting up xauth (1:1.1.2-1build1) ...
+Setting up libpython3.12-stdlib:amd64 (3.12.3-1ubuntu0.17) ...
+Setting up openssh-client (1:9.6p1-3ubuntu13.20) ...
+Setting up python3.12 (3.12.3-1ubuntu0.17) ...
+Setting up libcurl3t64-gnutls:amd64 (8.5.0-2ubuntu10.16) ...
+Setting up liberror-perl (0.17029-2) ...
+Setting up git (1:2.43.0-1ubuntu7.4) ...
+Setting up libpython3-stdlib:amd64 (3.12.3-0ubuntu2.1) ...
+Setting up python3 (3.12.3-0ubuntu2.1) ...
+running python rtupdate hooks for python3.12...
+running python post-rtupdate hooks for python3.12...
+Processing triggers for libc-bin (2.39-0ubuntu8.9) ...
+Cloning into '/workspace/repo'...
+[?2026h[?25l[1Gpulling manifest ⠋ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠙ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠹ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠸ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠼ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠴ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠦ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠧ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠇ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠏ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠋ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠙ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠹ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠸ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest [K
+pulling a3de86cd1c13:   1% ▕                  ▏  41 MB/5.2 GB                  [K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:   2% ▕                  ▏ 115 MB/5.2 GB                  [K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:   2% ▕                  ▏ 124 MB/5.2 GB                  [K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:   4% ▕                  ▏ 183 MB/5.2 GB                  [K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:   5% ▕                  ▏ 236 MB/5.2 GB                  [K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:   5% ▕                  ▏ 245 MB/5.2 GB                  [K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:   6% ▕█                 ▏ 294 MB/5.2 GB                  [K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:   7% ▕█                 ▏ 340 MB/5.2 GB                  [K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:   7% ▕█                 ▏ 346 MB/5.2 GB                  [K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:   7% ▕█                 ▏ 385 MB/5.2 GB                  [K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:   8% ▕█                 ▏ 429 MB/5.2 GB  401 MB/s     11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:   8% ▕█                 ▏ 435 MB/5.2 GB  401 MB/s     11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:   9% ▕█                 ▏ 478 MB/5.2 GB  401 MB/s     11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  10% ▕█                 ▏ 524 MB/5.2 GB  401 MB/s     11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  11% ▕█                 ▏ 556 MB/5.2 GB  401 MB/s     11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  11% ▕█                 ▏ 569 MB/5.2 GB  401 MB/s     11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  12% ▕██                ▏ 614 MB/5.2 GB  401 MB/s     11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  12% ▕██                ▏ 623 MB/5.2 GB  401 MB/s     11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  13% ▕██                ▏ 663 MB/5.2 GB  401 MB/s     11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  13% ▕██                ▏ 704 MB/5.2 GB  401 MB/s     11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  14% ▕██                ▏ 713 MB/5.2 GB  356 MB/s     12s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  15% ▕██                ▏ 757 MB/5.2 GB  356 MB/s     12s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  15% ▕██                ▏ 797 MB/5.2 GB  356 MB/s     12s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  15% ▕██                ▏ 802 MB/5.2 GB  356 MB/s     12s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  16% ▕██                ▏ 849 MB/5.2 GB  356 MB/s     12s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  17% ▕███               ▏ 894 MB/5.2 GB  356 MB/s     12s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  17% ▕███               ▏ 899 MB/5.2 GB  356 MB/s     12s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  18% ▕███               ▏ 954 MB/5.2 GB  356 MB/s     11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  19% ▕███               ▏ 1.0 GB/5.2 GB  356 MB/s     11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  19% ▕███               ▏ 1.0 GB/5.2 GB  356 MB/s     11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  20% ▕███               ▏ 1.1 GB/5.2 GB  354 MB/s     11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  21% ▕███               ▏ 1.1 GB/5.2 GB  354 MB/s     11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  21% ▕███               ▏ 1.1 GB/5.2 GB  354 MB/s     11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  22% ▕████              ▏ 1.2 GB/5.2 GB  354 MB/s     11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  23% ▕████              ▏ 1.2 GB/5.2 GB  354 MB/s     11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  23% ▕████              ▏ 1.2 GB/5.2 GB  354 MB/s     11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  24% ▕████              ▏ 1.3 GB/5.2 GB  354 MB/s     11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  25% ▕████              ▏ 1.3 GB/5.2 GB  354 MB/s     10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  26% ▕████              ▏ 1.3 GB/5.2 GB  354 MB/s     10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  27% ▕████              ▏ 1.4 GB/5.2 GB  354 MB/s     10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  28% ▕████              ▏ 1.4 GB/5.2 GB  361 MB/s     10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  28% ▕█████             ▏ 1.5 GB/5.2 GB  361 MB/s     10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  29% ▕█████             ▏ 1.5 GB/5.2 GB  361 MB/s     10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  30% ▕█████             ▏ 1.6 GB/5.2 GB  361 MB/s     10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  30% ▕█████             ▏ 1.6 GB/5.2 GB  361 MB/s     10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  31% ▕█████             ▏ 1.6 GB/5.2 GB  361 MB/s      9s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  32% ▕█████             ▏ 1.7 GB/5.2 GB  361 MB/s      9s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  32% ▕█████             ▏ 1.7 GB/5.2 GB  361 MB/s      9s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  33% ▕█████             ▏ 1.7 GB/5.2 GB  361 MB/s      9s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  34% ▕██████            ▏ 1.8 GB/5.2 GB  361 MB/s      9s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  34% ▕██████            ▏ 1.8 GB/5.2 GB  361 MB/s      9s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  35% ▕██████            ▏ 1.8 GB/5.2 GB  361 MB/s      9s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  36% ▕██████            ▏ 1.9 GB/5.2 GB  361 MB/s      9s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  36% ▕██████            ▏ 1.9 GB/5.2 GB  361 MB/s      9s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  37% ▕██████            ▏ 1.9 GB/5.2 GB  361 MB/s      9s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  38% ▕██████            ▏ 2.0 GB/5.2 GB  361 MB/s      8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  38% ▕██████            ▏ 2.0 GB/5.2 GB  361 MB/s      8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  39% ▕███████           ▏ 2.1 GB/5.2 GB  361 MB/s      8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  40% ▕███████           ▏ 2.1 GB/5.2 GB  361 MB/s      8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  40% ▕███████           ▏ 2.1 GB/5.2 GB  361 MB/s      8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  41% ▕███████           ▏ 2.2 GB/5.2 GB  361 MB/s      8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  42% ▕███████           ▏ 2.2 GB/5.2 GB  367 MB/s      8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  42% ▕███████           ▏ 2.2 GB/5.2 GB  367 MB/s      8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  43% ▕███████           ▏ 2.3 GB/5.2 GB  367 MB/s      8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  44% ▕████████          ▏ 2.3 GB/5.2 GB  367 MB/s      7s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  45% ▕████████          ▏ 2.3 GB/5.2 GB  367 MB/s      7s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  46% ▕████████          ▏ 2.4 GB/5.2 GB  367 MB/s      7s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  47% ▕████████          ▏ 2.4 GB/5.2 GB  367 MB/s      7s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  47% ▕████████          ▏ 2.4 GB/5.2 GB  367 MB/s      7s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  48% ▕████████          ▏ 2.5 GB/5.2 GB  367 MB/s      7s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  49% ▕████████          ▏ 2.5 GB/5.2 GB  367 MB/s      7s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  49% ▕████████          ▏ 2.5 GB/5.2 GB  367 MB/s      7s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  50% ▕████████          ▏ 2.6 GB/5.2 GB  367 MB/s      7s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  51% ▕█████████         ▏ 2.6 GB/5.2 GB  367 MB/s      7s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  51% ▕█████████         ▏ 2.7 GB/5.2 GB  367 MB/s      6s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  52% ▕█████████         ▏ 2.7 GB/5.2 GB  367 MB/s      6s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  53% ▕█████████         ▏ 2.8 GB/5.2 GB  367 MB/s      6s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  53% ▕█████████         ▏ 2.8 GB/5.2 GB  367 MB/s      6s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  54% ▕█████████         ▏ 2.8 GB/5.2 GB  367 MB/s      6s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  55% ▕█████████         ▏ 2.9 GB/5.2 GB  367 MB/s      6s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  55% ▕█████████         ▏ 2.9 GB/5.2 GB  367 MB/s      6s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  56% ▕██████████        ▏ 2.9 GB/5.2 GB  367 MB/s      6s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  57% ▕██████████        ▏ 3.0 GB/5.2 GB  374 MB/s      5s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  57% ▕██████████        ▏ 3.0 GB/5.2 GB  374 MB/s      5s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  58% ▕██████████        ▏ 3.0 GB/5.2 GB  374 MB/s      5s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  59% ▕██████████        ▏ 3.1 GB/5.2 GB  374 MB/s      5s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  59% ▕██████████        ▏ 3.1 GB/5.2 GB  374 MB/s      5s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  60% ▕██████████        ▏ 3.1 GB/5.2 GB  374 MB/s      5s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  61% ▕██████████        ▏ 3.2 GB/5.2 GB  374 MB/s      5s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  61% ▕███████████       ▏ 3.2 GB/5.2 GB  374 MB/s      5s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  62% ▕███████████       ▏ 3.2 GB/5.2 GB  374 MB/s      5s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  63% ▕███████████       ▏ 3.3 GB/5.2 GB  374 MB/s      5s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  63% ▕███████████       ▏ 3.3 GB/5.2 GB  374 MB/s      5s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  64% ▕███████████       ▏ 3.4 GB/5.2 GB  370 MB/s      5s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  65% ▕███████████       ▏ 3.4 GB/5.2 GB  370 MB/s      4s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  65% ▕███████████       ▏ 3.4 GB/5.2 GB  370 MB/s      4s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  66% ▕███████████       ▏ 3.5 GB/5.2 GB  370 MB/s      4s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  67% ▕████████████      ▏ 3.5 GB/5.2 GB  370 MB/s      4s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  67% ▕████████████      ▏ 3.5 GB/5.2 GB  370 MB/s      4s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  68% ▕████████████      ▏ 3.6 GB/5.2 GB  370 MB/s      4s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  69% ▕████████████      ▏ 3.6 GB/5.2 GB  370 MB/s      4s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  69% ▕████████████      ▏ 3.6 GB/5.2 GB  370 MB/s      4s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  70% ▕████████████      ▏ 3.7 GB/5.2 GB  370 MB/s      4s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  71% ▕████████████      ▏ 3.7 GB/5.2 GB  363 MB/s      4s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  71% ▕████████████      ▏ 3.7 GB/5.2 GB  363 MB/s      4s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  72% ▕████████████      ▏ 3.8 GB/5.2 GB  363 MB/s      4s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  73% ▕█████████████     ▏ 3.8 GB/5.2 GB  363 MB/s      3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  73% ▕█████████████     ▏ 3.8 GB/5.2 GB  363 MB/s      3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  74% ▕█████████████     ▏ 3.9 GB/5.2 GB  363 MB/s      3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  75% ▕█████████████     ▏ 3.9 GB/5.2 GB  363 MB/s      3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  75% ▕█████████████     ▏ 3.9 GB/5.2 GB  363 MB/s      3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  76% ▕█████████████     ▏ 4.0 GB/5.2 GB  363 MB/s      3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  77% ▕█████████████     ▏ 4.0 GB/5.2 GB  363 MB/s      3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  77% ▕█████████████     ▏ 4.0 GB/5.2 GB  367 MB/s      3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  78% ▕██████████████    ▏ 4.1 GB/5.2 GB  367 MB/s      3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  79% ▕██████████████    ▏ 4.1 GB/5.2 GB  367 MB/s      3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  79% ▕██████████████    ▏ 4.1 GB/5.2 GB  367 MB/s      3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  80% ▕██████████████    ▏ 4.2 GB/5.2 GB  367 MB/s      2s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  81% ▕██████████████    ▏ 4.2 GB/5.2 GB  367 MB/s      2s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  81% ▕██████████████    ▏ 4.2 GB/5.2 GB  367 MB/s      2s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  82% ▕██████████████    ▏ 4.3 GB/5.2 GB  367 MB/s      2s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  83% ▕██████████████    ▏ 4.3 GB/5.2 GB  367 MB/s      2s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  83% ▕██████████████    ▏ 4.3 GB/5.2 GB  367 MB/s      2s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  84% ▕███████████████   ▏ 4.4 GB/5.2 GB  368 MB/s      2s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  85% ▕███████████████   ▏ 4.4 GB/5.2 GB  368 MB/s      2s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  85% ▕███████████████   ▏ 4.4 GB/5.2 GB  368 MB/s      2s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  86% ▕███████████████   ▏ 4.5 GB/5.2 GB  368 MB/s      2s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  87% ▕███████████████   ▏ 4.5 GB/5.2 GB  368 MB/s      1s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  87% ▕███████████████   ▏ 4.5 GB/5.2 GB  368 MB/s      1s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  88% ▕███████████████   ▏ 4.6 GB/5.2 GB  368 MB/s      1s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  89% ▕███████████████   ▏ 4.6 GB/5.2 GB  368 MB/s      1s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  89% ▕███████████████   ▏ 4.6 GB/5.2 GB  368 MB/s      1s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  89% ▕████████████████  ▏ 4.7 GB/5.2 GB  368 MB/s      1s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  90% ▕████████████████  ▏ 4.7 GB/5.2 GB  363 MB/s      1s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  90% ▕████████████████  ▏ 4.7 GB/5.2 GB  363 MB/s      1s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  91% ▕████████████████  ▏ 4.8 GB/5.2 GB  363 MB/s      1s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  92% ▕████████████████  ▏ 4.8 GB/5.2 GB  363 MB/s      1s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  92% ▕████████████████  ▏ 4.8 GB/5.2 GB  363 MB/s      1s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  93% ▕████████████████  ▏ 4.9 GB/5.2 GB  363 MB/s      0s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  94% ▕████████████████  ▏ 4.9 GB/5.2 GB  363 MB/s      0s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  94% ▕████████████████  ▏ 4.9 GB/5.2 GB  363 MB/s      0s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  95% ▕█████████████████ ▏ 5.0 GB/5.2 GB  363 MB/s      0s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  96% ▕█████████████████ ▏ 5.0 GB/5.2 GB  363 MB/s      0s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  96% ▕█████████████████ ▏ 5.0 GB/5.2 GB  363 MB/s      0s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  97% ▕█████████████████ ▏ 5.1 GB/5.2 GB  362 MB/s      0s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  98% ▕█████████████████ ▏ 5.1 GB/5.2 GB  362 MB/s      0s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13:  99% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[A[1Gpulling manifest [K
+pulling a3de86cd1c13: 100% ▕█████████████████ ▏ 5.2 GB/5.2 GB  362 MB/s      0s[K
+pulling 05a61d37b084: 100% ▕██████████████████▏  487 B                         [K
+verifying sha256 digest [K
+writing manifest [K
+success [K[?25h[?2026l
+[?2026h[?25l[1Gpulling manifest ⠋ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠙ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠹ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠸ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠼ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠴ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠦ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠧ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠇ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠏ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠋ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠙ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠹ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠸ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠼ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠴ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest ⠦ [K[?25h[?2026l[?2026h[?25l[1Gpulling manifest [K
+pulling a8cc1361f314:   0% ▕                  ▏  39 MB/9.3 GB                  [K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:   1% ▕                  ▏  97 MB/9.3 GB                  [K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:   1% ▕                  ▏ 125 MB/9.3 GB                  [K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:   2% ▕                  ▏ 164 MB/9.3 GB                  [K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:   2% ▕                  ▏ 205 MB/9.3 GB                  [K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:   3% ▕                  ▏ 235 MB/9.3 GB                  [K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:   3% ▕                  ▏ 267 MB/9.3 GB                  [K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:   3% ▕                  ▏ 307 MB/9.3 GB                  [K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:   4% ▕                  ▏ 340 MB/9.3 GB                  [K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:   4% ▕                  ▏ 376 MB/9.3 GB                  [K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:   5% ▕                  ▏ 424 MB/9.3 GB  410 MB/s     21s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:   5% ▕                  ▏ 456 MB/9.3 GB  410 MB/s     21s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:   5% ▕                  ▏ 493 MB/9.3 GB  410 MB/s     21s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:   6% ▕█                 ▏ 534 MB/9.3 GB  410 MB/s     21s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:   6% ▕█                 ▏ 568 MB/9.3 GB  410 MB/s     21s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:   6% ▕█                 ▏ 601 MB/9.3 GB  410 MB/s     21s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:   7% ▕█                 ▏ 642 MB/9.3 GB  410 MB/s     21s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:   7% ▕█                 ▏ 678 MB/9.3 GB  410 MB/s     20s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:   8% ▕█                 ▏ 717 MB/9.3 GB  410 MB/s     20s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:   8% ▕█                 ▏ 759 MB/9.3 GB  410 MB/s     20s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:   9% ▕█                 ▏ 792 MB/9.3 GB  395 MB/s     21s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:   9% ▕█                 ▏ 827 MB/9.3 GB  395 MB/s     21s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:   9% ▕█                 ▏ 873 MB/9.3 GB  395 MB/s     21s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  10% ▕█                 ▏ 909 MB/9.3 GB  395 MB/s     21s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  10% ▕█                 ▏ 948 MB/9.3 GB  395 MB/s     21s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  11% ▕█                 ▏ 1.0 GB/9.3 GB  395 MB/s     20s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  11% ▕██                ▏ 1.0 GB/9.3 GB  395 MB/s     20s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  12% ▕██                ▏ 1.1 GB/9.3 GB  395 MB/s     20s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  12% ▕██                ▏ 1.1 GB/9.3 GB  395 MB/s     20s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  12% ▕██                ▏ 1.1 GB/9.3 GB  395 MB/s     20s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  13% ▕██                ▏ 1.2 GB/9.3 GB  395 MB/s     20s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  13% ▕██                ▏ 1.2 GB/9.3 GB  405 MB/s     19s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  14% ▕██                ▏ 1.3 GB/9.3 GB  405 MB/s     19s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  14% ▕██                ▏ 1.3 GB/9.3 GB  405 MB/s     19s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  15% ▕██                ▏ 1.4 GB/9.3 GB  405 MB/s     19s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  15% ▕██                ▏ 1.4 GB/9.3 GB  405 MB/s     19s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  15% ▕██                ▏ 1.4 GB/9.3 GB  405 MB/s     19s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  16% ▕██                ▏ 1.5 GB/9.3 GB  405 MB/s     19s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  16% ▕██                ▏ 1.5 GB/9.3 GB  405 MB/s     19s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  17% ▕███               ▏ 1.6 GB/9.3 GB  405 MB/s     19s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  17% ▕███               ▏ 1.6 GB/9.3 GB  405 MB/s     18s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  18% ▕███               ▏ 1.6 GB/9.3 GB  408 MB/s     18s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  18% ▕███               ▏ 1.7 GB/9.3 GB  408 MB/s     18s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  18% ▕███               ▏ 1.7 GB/9.3 GB  408 MB/s     18s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  19% ▕███               ▏ 1.7 GB/9.3 GB  408 MB/s     18s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  19% ▕███               ▏ 1.8 GB/9.3 GB  408 MB/s     18s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  20% ▕███               ▏ 1.8 GB/9.3 GB  408 MB/s     18s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  20% ▕███               ▏ 1.9 GB/9.3 GB  408 MB/s     18s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  20% ▕███               ▏ 1.9 GB/9.3 GB  408 MB/s     18s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  21% ▕███               ▏ 1.9 GB/9.3 GB  408 MB/s     17s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  21% ▕███               ▏ 2.0 GB/9.3 GB  408 MB/s     17s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  22% ▕███               ▏ 2.0 GB/9.3 GB  408 MB/s     17s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  22% ▕███               ▏ 2.0 GB/9.3 GB  407 MB/s     17s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  22% ▕████              ▏ 2.1 GB/9.3 GB  407 MB/s     17s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  23% ▕████              ▏ 2.1 GB/9.3 GB  407 MB/s     17s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  23% ▕████              ▏ 2.2 GB/9.3 GB  407 MB/s     17s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  24% ▕████              ▏ 2.2 GB/9.3 GB  407 MB/s     17s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  24% ▕████              ▏ 2.2 GB/9.3 GB  407 MB/s     17s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  24% ▕████              ▏ 2.3 GB/9.3 GB  407 MB/s     17s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  25% ▕████              ▏ 2.3 GB/9.3 GB  407 MB/s     17s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  25% ▕████              ▏ 2.3 GB/9.3 GB  407 MB/s     17s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  26% ▕████              ▏ 2.4 GB/9.3 GB  407 MB/s     16s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  26% ▕████              ▏ 2.4 GB/9.3 GB  405 MB/s     16s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  27% ▕████              ▏ 2.5 GB/9.3 GB  405 MB/s     16s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  27% ▕████              ▏ 2.5 GB/9.3 GB  405 MB/s     16s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  28% ▕████              ▏ 2.6 GB/9.3 GB  405 MB/s     16s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  28% ▕█████             ▏ 2.6 GB/9.3 GB  405 MB/s     16s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  29% ▕█████             ▏ 2.6 GB/9.3 GB  405 MB/s     16s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  29% ▕█████             ▏ 2.7 GB/9.3 GB  405 MB/s     16s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  29% ▕█████             ▏ 2.7 GB/9.3 GB  405 MB/s     16s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  30% ▕█████             ▏ 2.8 GB/9.3 GB  405 MB/s     16s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  30% ▕█████             ▏ 2.8 GB/9.3 GB  405 MB/s     15s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  31% ▕█████             ▏ 2.8 GB/9.3 GB  405 MB/s     15s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  31% ▕█████             ▏ 2.9 GB/9.3 GB  405 MB/s     15s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  31% ▕█████             ▏ 2.9 GB/9.3 GB  405 MB/s     15s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  32% ▕█████             ▏ 2.9 GB/9.3 GB  405 MB/s     15s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  32% ▕█████             ▏ 3.0 GB/9.3 GB  405 MB/s     15s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  32% ▕█████             ▏ 3.0 GB/9.3 GB  405 MB/s     15s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  33% ▕█████             ▏ 3.0 GB/9.3 GB  405 MB/s     15s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  33% ▕█████             ▏ 3.1 GB/9.3 GB  405 MB/s     15s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  33% ▕██████            ▏ 3.1 GB/9.3 GB  405 MB/s     15s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  34% ▕██████            ▏ 3.1 GB/9.3 GB  405 MB/s     15s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  34% ▕██████            ▏ 3.2 GB/9.3 GB  396 MB/s     15s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  35% ▕██████            ▏ 3.2 GB/9.3 GB  396 MB/s     15s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  35% ▕██████            ▏ 3.2 GB/9.3 GB  396 MB/s     15s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  35% ▕██████            ▏ 3.3 GB/9.3 GB  396 MB/s     15s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  36% ▕██████            ▏ 3.3 GB/9.3 GB  396 MB/s     15s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  36% ▕██████            ▏ 3.4 GB/9.3 GB  396 MB/s     14s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  37% ▕██████            ▏ 3.4 GB/9.3 GB  396 MB/s     14s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  37% ▕██████            ▏ 3.4 GB/9.3 GB  396 MB/s     14s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  37% ▕██████            ▏ 3.5 GB/9.3 GB  396 MB/s     14s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  38% ▕██████            ▏ 3.5 GB/9.3 GB  396 MB/s     14s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  38% ▕██████            ▏ 3.5 GB/9.3 GB  396 MB/s     14s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  39% ▕██████            ▏ 3.6 GB/9.3 GB  395 MB/s     14s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  39% ▕███████           ▏ 3.6 GB/9.3 GB  395 MB/s     14s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  39% ▕███████           ▏ 3.7 GB/9.3 GB  395 MB/s     14s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  40% ▕███████           ▏ 3.7 GB/9.3 GB  395 MB/s     14s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  40% ▕███████           ▏ 3.7 GB/9.3 GB  395 MB/s     14s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  41% ▕███████           ▏ 3.8 GB/9.3 GB  395 MB/s     13s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  41% ▕███████           ▏ 3.8 GB/9.3 GB  395 MB/s     13s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  41% ▕███████           ▏ 3.8 GB/9.3 GB  395 MB/s     13s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  42% ▕███████           ▏ 3.9 GB/9.3 GB  395 MB/s     13s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  42% ▕███████           ▏ 3.9 GB/9.3 GB  395 MB/s     13s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  43% ▕███████           ▏ 4.0 GB/9.3 GB  391 MB/s     13s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  43% ▕███████           ▏ 4.0 GB/9.3 GB  391 MB/s     13s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  44% ▕███████           ▏ 4.0 GB/9.3 GB  391 MB/s     13s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  44% ▕███████           ▏ 4.1 GB/9.3 GB  391 MB/s     13s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  44% ▕███████           ▏ 4.1 GB/9.3 GB  391 MB/s     13s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  45% ▕████████          ▏ 4.2 GB/9.3 GB  391 MB/s     13s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  45% ▕████████          ▏ 4.2 GB/9.3 GB  391 MB/s     12s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  46% ▕████████          ▏ 4.2 GB/9.3 GB  391 MB/s     12s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  46% ▕████████          ▏ 4.3 GB/9.3 GB  391 MB/s     12s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  47% ▕████████          ▏ 4.3 GB/9.3 GB  391 MB/s     12s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  47% ▕████████          ▏ 4.4 GB/9.3 GB  395 MB/s     12s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  47% ▕████████          ▏ 4.4 GB/9.3 GB  395 MB/s     12s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  48% ▕████████          ▏ 4.4 GB/9.3 GB  395 MB/s     12s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  48% ▕████████          ▏ 4.5 GB/9.3 GB  395 MB/s     12s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  49% ▕████████          ▏ 4.5 GB/9.3 GB  395 MB/s     12s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  49% ▕████████          ▏ 4.5 GB/9.3 GB  395 MB/s     11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  49% ▕████████          ▏ 4.6 GB/9.3 GB  395 MB/s     11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  50% ▕████████          ▏ 4.6 GB/9.3 GB  395 MB/s     11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  50% ▕█████████         ▏ 4.7 GB/9.3 GB  395 MB/s     11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  51% ▕█████████         ▏ 4.7 GB/9.3 GB  395 MB/s     11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  51% ▕█████████         ▏ 4.7 GB/9.3 GB  389 MB/s     11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  51% ▕█████████         ▏ 4.8 GB/9.3 GB  389 MB/s     11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  52% ▕█████████         ▏ 4.8 GB/9.3 GB  389 MB/s     11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  52% ▕█████████         ▏ 4.9 GB/9.3 GB  389 MB/s     11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  53% ▕█████████         ▏ 4.9 GB/9.3 GB  389 MB/s     11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  53% ▕█████████         ▏ 4.9 GB/9.3 GB  389 MB/s     11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  54% ▕█████████         ▏ 5.0 GB/9.3 GB  389 MB/s     11s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  54% ▕█████████         ▏ 5.0 GB/9.3 GB  389 MB/s     10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  54% ▕█████████         ▏ 5.0 GB/9.3 GB  389 MB/s     10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  55% ▕█████████         ▏ 5.1 GB/9.3 GB  389 MB/s     10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  55% ▕█████████         ▏ 5.1 GB/9.3 GB  387 MB/s     10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  56% ▕██████████        ▏ 5.2 GB/9.3 GB  387 MB/s     10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  56% ▕██████████        ▏ 5.2 GB/9.3 GB  387 MB/s     10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  57% ▕██████████        ▏ 5.2 GB/9.3 GB  387 MB/s     10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  57% ▕██████████        ▏ 5.3 GB/9.3 GB  387 MB/s     10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  57% ▕██████████        ▏ 5.3 GB/9.3 GB  387 MB/s     10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  58% ▕██████████        ▏ 5.4 GB/9.3 GB  387 MB/s     10s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  58% ▕██████████        ▏ 5.4 GB/9.3 GB  387 MB/s      9s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  59% ▕██████████        ▏ 5.4 GB/9.3 GB  387 MB/s      9s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  59% ▕██████████        ▏ 5.5 GB/9.3 GB  387 MB/s      9s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  60% ▕██████████        ▏ 5.5 GB/9.3 GB  387 MB/s      9s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  60% ▕██████████        ▏ 5.6 GB/9.3 GB  388 MB/s      9s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  60% ▕██████████        ▏ 5.6 GB/9.3 GB  388 MB/s      9s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  61% ▕██████████        ▏ 5.6 GB/9.3 GB  388 MB/s      9s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  61% ▕██████████        ▏ 5.7 GB/9.3 GB  388 MB/s      9s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  61% ▕███████████       ▏ 5.7 GB/9.3 GB  388 MB/s      9s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  62% ▕███████████       ▏ 5.7 GB/9.3 GB  388 MB/s      9s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  62% ▕███████████       ▏ 5.8 GB/9.3 GB  388 MB/s      9s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  63% ▕███████████       ▏ 5.8 GB/9.3 GB  388 MB/s      8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  63% ▕███████████       ▏ 5.8 GB/9.3 GB  388 MB/s      8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  63% ▕███████████       ▏ 5.9 GB/9.3 GB  388 MB/s      8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  64% ▕███████████       ▏ 5.9 GB/9.3 GB  385 MB/s      8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  64% ▕███████████       ▏ 5.9 GB/9.3 GB  385 MB/s      8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  64% ▕███████████       ▏ 6.0 GB/9.3 GB  385 MB/s      8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  65% ▕███████████       ▏ 6.0 GB/9.3 GB  385 MB/s      8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  65% ▕███████████       ▏ 6.1 GB/9.3 GB  385 MB/s      8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  66% ▕███████████       ▏ 6.1 GB/9.3 GB  385 MB/s      8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  66% ▕███████████       ▏ 6.1 GB/9.3 GB  385 MB/s      8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  66% ▕███████████       ▏ 6.2 GB/9.3 GB  385 MB/s      8s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  67% ▕████████████      ▏ 6.2 GB/9.3 GB  385 MB/s      7s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  67% ▕████████████      ▏ 6.2 GB/9.3 GB  385 MB/s      7s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  67% ▕████████████      ▏ 6.3 GB/9.3 GB  380 MB/s      7s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  68% ▕████████████      ▏ 6.3 GB/9.3 GB  380 MB/s      7s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  68% ▕████████████      ▏ 6.3 GB/9.3 GB  380 MB/s      7s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  69% ▕████████████      ▏ 6.4 GB/9.3 GB  380 MB/s      7s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  69% ▕████████████      ▏ 6.4 GB/9.3 GB  380 MB/s      7s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  69% ▕████████████      ▏ 6.4 GB/9.3 GB  380 MB/s      7s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  70% ▕████████████      ▏ 6.5 GB/9.3 GB  380 MB/s      7s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  70% ▕████████████      ▏ 6.5 GB/9.3 GB  380 MB/s      7s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  71% ▕████████████      ▏ 6.5 GB/9.3 GB  380 MB/s      7s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  71% ▕████████████      ▏ 6.6 GB/9.3 GB  380 MB/s      7s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  71% ▕████████████      ▏ 6.6 GB/9.3 GB  380 MB/s      6s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  72% ▕████████████      ▏ 6.7 GB/9.3 GB  386 MB/s      6s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  72% ▕█████████████     ▏ 6.7 GB/9.3 GB  386 MB/s      6s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  73% ▕█████████████     ▏ 6.7 GB/9.3 GB  386 MB/s      6s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  73% ▕█████████████     ▏ 6.8 GB/9.3 GB  386 MB/s      6s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  74% ▕█████████████     ▏ 6.8 GB/9.3 GB  386 MB/s      6s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  74% ▕█████████████     ▏ 6.9 GB/9.3 GB  386 MB/s      6s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  74% ▕█████████████     ▏ 6.9 GB/9.3 GB  386 MB/s      6s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  75% ▕█████████████     ▏ 6.9 GB/9.3 GB  386 MB/s      6s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  75% ▕█████████████     ▏ 7.0 GB/9.3 GB  386 MB/s      5s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  76% ▕█████████████     ▏ 7.0 GB/9.3 GB  386 MB/s      5s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  76% ▕█████████████     ▏ 7.1 GB/9.3 GB  388 MB/s      5s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  77% ▕█████████████     ▏ 7.1 GB/9.3 GB  388 MB/s      5s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  77% ▕█████████████     ▏ 7.1 GB/9.3 GB  388 MB/s      5s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  77% ▕█████████████     ▏ 7.2 GB/9.3 GB  388 MB/s      5s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  78% ▕█████████████     ▏ 7.2 GB/9.3 GB  388 MB/s      5s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  78% ▕██████████████    ▏ 7.3 GB/9.3 GB  388 MB/s      5s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  79% ▕██████████████    ▏ 7.3 GB/9.3 GB  388 MB/s      5s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  79% ▕██████████████    ▏ 7.3 GB/9.3 GB  388 MB/s      5s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  79% ▕██████████████    ▏ 7.4 GB/9.3 GB  388 MB/s      4s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  80% ▕██████████████    ▏ 7.4 GB/9.3 GB  388 MB/s      4s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  80% ▕██████████████    ▏ 7.4 GB/9.3 GB  388 MB/s      4s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  81% ▕██████████████    ▏ 7.5 GB/9.3 GB  392 MB/s      4s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  81% ▕██████████████    ▏ 7.5 GB/9.3 GB  392 MB/s      4s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  81% ▕██████████████    ▏ 7.5 GB/9.3 GB  392 MB/s      4s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  82% ▕██████████████    ▏ 7.6 GB/9.3 GB  392 MB/s      4s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  82% ▕██████████████    ▏ 7.6 GB/9.3 GB  392 MB/s      4s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  82% ▕██████████████    ▏ 7.6 GB/9.3 GB  392 MB/s      4s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  83% ▕██████████████    ▏ 7.7 GB/9.3 GB  392 MB/s      4s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  83% ▕██████████████    ▏ 7.7 GB/9.3 GB  392 MB/s      3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  84% ▕███████████████   ▏ 7.8 GB/9.3 GB  392 MB/s      3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  84% ▕███████████████   ▏ 7.8 GB/9.3 GB  392 MB/s      3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  84% ▕███████████████   ▏ 7.8 GB/9.3 GB  385 MB/s      3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  85% ▕███████████████   ▏ 7.9 GB/9.3 GB  385 MB/s      3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  85% ▕███████████████   ▏ 7.9 GB/9.3 GB  385 MB/s      3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  86% ▕███████████████   ▏ 7.9 GB/9.3 GB  385 MB/s      3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  86% ▕███████████████   ▏ 8.0 GB/9.3 GB  385 MB/s      3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  86% ▕███████████████   ▏ 8.0 GB/9.3 GB  385 MB/s      3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  87% ▕███████████████   ▏ 8.1 GB/9.3 GB  385 MB/s      3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  87% ▕███████████████   ▏ 8.1 GB/9.3 GB  385 MB/s      3s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  88% ▕███████████████   ▏ 8.1 GB/9.3 GB  385 MB/s      2s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  88% ▕███████████████   ▏ 8.2 GB/9.3 GB  385 MB/s      2s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  88% ▕███████████████   ▏ 8.2 GB/9.3 GB  385 MB/s      2s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  89% ▕███████████████   ▏ 8.2 GB/9.3 GB  389 MB/s      2s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  89% ▕████████████████  ▏ 8.3 GB/9.3 GB  389 MB/s      2s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  89% ▕████████████████  ▏ 8.3 GB/9.3 GB  389 MB/s      2s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  90% ▕████████████████  ▏ 8.3 GB/9.3 GB  389 MB/s      2s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  90% ▕████████████████  ▏ 8.4 GB/9.3 GB  389 MB/s      2s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  91% ▕████████████████  ▏ 8.4 GB/9.3 GB  389 MB/s      2s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  91% ▕████████████████  ▏ 8.4 GB/9.3 GB  389 MB/s      2s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  91% ▕████████████████  ▏ 8.5 GB/9.3 GB  389 MB/s      2s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  92% ▕████████████████  ▏ 8.5 GB/9.3 GB  389 MB/s      1s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  92% ▕████████████████  ▏ 8.6 GB/9.3 GB  389 MB/s      1s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  93% ▕████████████████  ▏ 8.6 GB/9.3 GB  386 MB/s      1s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  93% ▕████████████████  ▏ 8.6 GB/9.3 GB  386 MB/s      1s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  93% ▕████████████████  ▏ 8.7 GB/9.3 GB  386 MB/s      1s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  94% ▕████████████████  ▏ 8.7 GB/9.3 GB  386 MB/s      1s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  94% ▕████████████████  ▏ 8.7 GB/9.3 GB  386 MB/s      1s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  95% ▕█████████████████ ▏ 8.8 GB/9.3 GB  386 MB/s      1s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  95% ▕█████████████████ ▏ 8.8 GB/9.3 GB  386 MB/s      1s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  96% ▕█████████████████ ▏ 8.9 GB/9.3 GB  386 MB/s      1s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  96% ▕█████████████████ ▏ 8.9 GB/9.3 GB  386 MB/s      0s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  96% ▕█████████████████ ▏ 8.9 GB/9.3 GB  386 MB/s      0s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  97% ▕█████████████████ ▏ 9.0 GB/9.3 GB  382 MB/s      0s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  97% ▕█████████████████ ▏ 9.0 GB/9.3 GB  382 MB/s      0s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  98% ▕█████████████████ ▏ 9.0 GB/9.3 GB  382 MB/s      0s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  98% ▕█████████████████ ▏ 9.1 GB/9.3 GB  382 MB/s      0s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  98% ▕█████████████████ ▏ 9.1 GB/9.3 GB  382 MB/s      0s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  99% ▕█████████████████ ▏ 9.2 GB/9.3 GB  382 MB/s      0s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314:  99% ▕█████████████████ ▏ 9.2 GB/9.3 GB  382 MB/s      0s[K[?25h[?2026l[?2026h[?25l[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠸ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠼ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠴ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠦ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠧ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠇ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠏ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠋ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠙ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest ⠹ [K[?25h[?2026l[?2026h[?25l[A[A[A[A[A[A[1Gpulling manifest [K
+pulling a8cc1361f314: 100% ▕█████████████████ ▏ 9.3 GB/9.3 GB  382 MB/s      0s[K
+pulling ae370d884f10: 100% ▕██████████████████▏ 1.7 KB                         [K
+pulling d18a5cc71b84: 100% ▕██████████████████▏  11 KB                         [K
+pulling cff3f395ef37: 100% ▕██████████████████▏  120 B                         [K
+pulling 78b3b822087d: 100% ▕██████████████████▏  488 B                         [K
+verifying sha256 digest [K
+writing manifest [K
+success [K[?25h[?2026l
+PREPARED 36 REVIEWS X 2 MODELS = 72 CALLS
+qwen3:8b K01 False True 37.114
+qwen3:8b K02 True True 0.613
+qwen3:8b K03 True True 0.761
+qwen3:8b K04 True True 0.736
+qwen3:8b K05 True True 0.455
+qwen3:8b K06 True True 0.561
+qwen3:8b U01 False True 0.876
+qwen3:8b U02 True True 0.72
+qwen3:8b U03 True True 0.892
+qwen3:8b U04 True True 0.637
+qwen3:8b U05 True True 0.505
+qwen3:8b U06 True True 0.64
+qwen3:8b T01 False True 0.727
+qwen3:8b T02 True True 0.742
+qwen3:8b T03 False True 0.66
+qwen3:8b T04 True True 0.657
+qwen3:8b T05 False True 0.693
+qwen3:8b T06 False True 1.052
+qwen3:8b T07 False True 0.667
+qwen3:8b T08 False True 0.726
+qwen3:8b T09 False True 0.812
+qwen3:8b T10 True True 0.772
+qwen3:8b T11 False True 0.703
+qwen3:8b T12 True True 0.678
+qwen3:8b N01 False True 0.586
+qwen3:8b N02 False True 0.651
+qwen3:8b N03 False True 0.734
+qwen3:8b N04 True True 0.747
+qwen3:8b N05 True True 0.675
+qwen3:8b N06 True True 0.655
+qwen3:8b N07 True True 0.66
+qwen3:8b N08 True True 0.507
+qwen3:8b N09 True True 0.614
+qwen3:8b N10 True True 0.549
+qwen3:8b N11 True True 0.418
+qwen3:8b N12 False True 0.654
+qwen3:14b K01 False True 23.151
+qwen3:14b K02 True True 1.798
+qwen3:14b K03 True True 1.325
+qwen3:14b K04 True True 1.087
+qwen3:14b K05 True True 1.13
+qwen3:14b K06 True True 1.331
+qwen3:14b U01 True True 1.454
+qwen3:14b U02 True True 1.195
+qwen3:14b U03 True True 1.66
+qwen3:14b U04 True True 0.936
+qwen3:14b U05 True True 1.113
+qwen3:14b U06 True True 1.401
+qwen3:14b T01 False True 1.165
+qwen3:14b T02 True True 1.099
+qwen3:14b T03 False True 0.978
+qwen3:14b T04 True True 1.409
+qwen3:14b T05 False True 1.058
+qwen3:14b T06 False True 1.912
+qwen3:14b T07 False True 1.093
+qwen3:14b T08 False True 1.255
+qwen3:14b T09 False True 1.441
+qwen3:14b T10 True True 1.236
+qwen3:14b T11 False True 1.473
+qwen3:14b T12 True True 1.425
+qwen3:14b N01 False True 1.003
+qwen3:14b N02 False True 1.134
+qwen3:14b N03 False True 0.765
+qwen3:14b N04 True True 1.401
+qwen3:14b N05 True True 1.123
+qwen3:14b N06 True False 0.996
+qwen3:14b N07 True True 1.1
+qwen3:14b N08 True True 0.911
+qwen3:14b N09 True True 0.908
+qwen3:14b N10 True True 1.001
+qwen3:14b N11 True True 1.031
+qwen3:14b N12 False True 1.051
+{"planned_calls": 72, "attempted": 72, "models": {"qwen3:8b": {"attempted": 36, "parseable_verdicts": 36, "keep": 22, "reject": 14, "strict_valid": 36, "invalid": {}, "batch_seconds": 60.849, "warm_median_seconds": 0.667}, "qwen3:14b": {"attempted": 36, "parseable_verdicts": 36, "keep": 23, "reject": 13, "strict_valid": 35, "invalid": {"N06": ["nonexact_keep_quote"]}, "batch_seconds": 65.549, "warm_median_seconds": 1.13}}, "changed_vs_fresh_8b": ["U01"], "fresh_8b_vs_archived_changed": [], "q14_vs_archived_changed": ["U01"], "current_three_review_human_audit": {"qwen3:8b": {"agreements": 2, "scope": {"U01": false, "U02": true, "N05": false}}, "qwen3:14b": {"agreements": 1, "scope": {"U01": false, "U02": true, "N05": false}}}, "not_full_cohort_accuracy": true}
+ALL_72_REQUESTS_FINISHED

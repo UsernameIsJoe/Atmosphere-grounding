@@ -1,0 +1,56 @@
+{
+  "planned_calls": 72,
+  "attempted": 72,
+  "models": {
+    "qwen3:8b": {
+      "attempted": 36,
+      "parseable_verdicts": 36,
+      "keep": 22,
+      "reject": 14,
+      "strict_valid": 36,
+      "invalid": {},
+      "batch_seconds": 60.849,
+      "warm_median_seconds": 0.667
+    },
+    "qwen3:14b": {
+      "attempted": 36,
+      "parseable_verdicts": 36,
+      "keep": 23,
+      "reject": 13,
+      "strict_valid": 35,
+      "invalid": {
+        "N06": [
+          "nonexact_keep_quote"
+        ]
+      },
+      "batch_seconds": 65.549,
+      "warm_median_seconds": 1.13
+    }
+  },
+  "changed_vs_fresh_8b": [
+    "U01"
+  ],
+  "fresh_8b_vs_archived_changed": [],
+  "q14_vs_archived_changed": [
+    "U01"
+  ],
+  "current_three_review_human_audit": {
+    "qwen3:8b": {
+      "agreements": 2,
+      "scope": {
+        "U01": false,
+        "U02": true,
+        "N05": false
+      }
+    },
+    "qwen3:14b": {
+      "agreements": 1,
+      "scope": {
+        "U01": false,
+        "U02": true,
+        "N05": false
+      }
+    }
+  },
+  "not_full_cohort_accuracy": true
+}

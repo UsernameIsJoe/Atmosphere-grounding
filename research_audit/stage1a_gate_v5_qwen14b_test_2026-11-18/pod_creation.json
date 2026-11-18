@@ -1,0 +1,50 @@
+{
+  "actions": [
+    "stop",
+    "restart",
+    "terminate"
+  ],
+  "args": "",
+  "cloud": "SECURE",
+  "cost": 0.59,
+  "createdAt": "2026-11-18T20:46:43.283Z",
+  "cudaVersion": "13.2",
+  "dataCenterId": "EU-SE-1",
+  "disk": 35,
+  "env": {
+    "OLLAMA_HOST": "127.0.0.1:11434",
+    "OLLAMA_MAX_LOADED_MODELS": "1",
+    "OLLAMA_MODELS": "/workspace/ollama",
+    "OLLAMA_NUM_PARALLEL": "1"
+  },
+  "globalNetworking": {
+    "enabled": false
+  },
+  "gpu": {
+    "count": 1,
+    "id": "NVIDIA A40",
+    "memory": 50,
+    "vcpuCount": 9
+  },
+  "id": "k5nbvyaaqfrlsj",
+  "image": "ollama/ollama:latest",
+  "locked": false,
+  "mounts": {},
+  "name": "gate-v5-qwen14b-20261118",
+  "ports": [],
+  "registry": null,
+  "runtime": null,
+  "ssh": {
+    "direct": null,
+    "proxy": {
+      "command": "ssh k5nbvyaaqfrlsj-64412530@ssh.runpod.io",
+      "host": "ssh.runpod.io",
+      "port": 22,
+      "username": "k5nbvyaaqfrlsj-64412530"
+    }
+  },
+  "startedAt": "2026-11-18T20:46:43.276Z",
+  "status": "RUNNING",
+  "tags": [],
+  "template": null
+}

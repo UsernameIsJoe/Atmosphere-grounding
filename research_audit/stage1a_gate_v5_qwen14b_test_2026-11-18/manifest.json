@@ -1,0 +1,79 @@
+{
+  "reviews": 36,
+  "planned_calls": 72,
+  "models": {
+    "qwen3:8b": {
+      "name": "qwen3:8b",
+      "model": "qwen3:8b",
+      "modified_at": "2026-11-18T20:48:06.988656228Z",
+      "size": 5225388164,
+      "digest": "500a1f067a9f782620b40bee6f7b0c89e17ae61f686b92c24933e4ca4b2b8b41",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen3",
+        "families": [
+          "qwen3"
+        ],
+        "parameter_size": "8.2B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 40960,
+        "embedding_length": 4096,
+        "runner": "ggml"
+      },
+      "capabilities": [
+        "completion",
+        "tools",
+        "thinking"
+      ]
+    },
+    "qwen3:14b": {
+      "name": "qwen3:14b",
+      "model": "qwen3:14b",
+      "modified_at": "2026-11-18T20:48:42.608929821Z",
+      "size": 9276198565,
+      "digest": "bdbd181c33f2ed1b31c972991882db3cf4d192569092138a7d29e973cd9debe8",
+      "details": {
+        "parent_model": "",
+        "format": "gguf",
+        "family": "qwen3",
+        "families": [
+          "qwen3"
+        ],
+        "parameter_size": "14.8B",
+        "quantization_level": "Q4_K_M",
+        "context_length": 40960,
+        "embedding_length": 5120,
+        "runner": "ggml"
+      },
+      "capabilities": [
+        "completion",
+        "tools",
+        "thinking"
+      ]
+    }
+  },
+  "options": {
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 8192,
+    "num_predict": 512,
+    "num_thread": 8
+  },
+  "think": false,
+  "prompt_path": "Docs/STAGE1A_REVIEW_ELIGIBILITY_GATE_PROMPT_V0_5_SCENARIOS_DRAFT_2026-11-17.md",
+  "prompt_sha256": "6df94563003405f8e5097be4174eb56725aeef8427c79a105230f45d3839395f",
+  "system_sha256": "0eb230aba50ca69f6ff847a7b49087f338e7605d0b6ec9ba7b8b94206a20b46c",
+  "codebook_sha256": "e335b11e2805304f27540a65f94dc6ac392c3859775658d5b1cab221bc90bcd6",
+  "input_sha256": "95d9216e4aa0c3f248478c3a58742812ab254180a1190d62f2278fd7ff139352",
+  "schema_sha256": "127a02d26eacc0c3c4897b33afdb8edb8d9e7afd2462a733534029ae53e30393",
+  "runner_sha256": "ff5beb77b401f87069cde4764ea3c3c35beceacc0a861aafe77d906f0f821140",
+  "source_commit": "30b0a5bbc8a8612a74ecf94a6aa52373be57ee69",
+  "scope": "entire original review, before segmentation",
+  "no_retries": true,
+  "prompt_and_codebook_unchanged": true,
+  "prior_labels_or_verdicts_in_model_input": false,
+  "status": "experimental_not_adopted",
+  "codebook_runtime_role": "supporting specification, standalone prompt only as in tested v5",
+  "confounds": "Model-size comparison also changes trained checkpoint; one fixed block order, quantized GPU run, no general latency or accuracy claim."
+}

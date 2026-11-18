@@ -12,6 +12,20 @@ Read first for goals / architecture:
 
 
 
+LATEST V5 QWEN3:14B TEST (2026-11-18; TESTED, NOT ADOPTED)
+-------------------------------------------------------------------------
+All 72 paired GPU requests completed normally (36 reviews x 8B/14B).
+Same frozen v5 prompt, settings and Q4_K_M, fresh matched A40 control.
+8B 22 KEEP/14 REJECT; 14B 23 KEEP/13 REJECT. One verdict change:
+U01 REJECT -> KEEP, contrary to current researcher REJECT label.
+N05 stays KEEP; T06 wedding/K01 elopement remain REJECT; U02 KEEP.
+Fresh 8B reproduces all 36 archived v5 verdicts.
+8B strict 36/36; 14B strict 35/36, N06 lowercased source-exact quote.
+No retries or repair. Known 3-case label agreement 2/3 vs 1/3, not full accuracy.
+No improvement shown. V5 remains leading candidate, v0.4 active unchanged.
+  research_audit/stage1a_gate_v5_qwen14b_test_2026-11-18/README.md
+  research_audit/stage1a_gate_v5_qwen14b_test_2026-11-18/CHANGED_REVIEWS.md
+
 LATEST PRE-GATE THREE-CHECK TEST (2026-11-18; TESTED, NOT ADOPTED)
 -------------------------------------------------------------------------
 All 36 original reviews processed on Runpod without training or LLM calls.

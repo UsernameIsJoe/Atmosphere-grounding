@@ -1,0 +1,7 @@
+{
+  "ollama": {
+    "version": "0.40.16"
+  },
+  "gpu": "NVIDIA A40, 46068 MiB, 595.112.07\n",
+  "python": "Python 3.12.3\n"
+}
