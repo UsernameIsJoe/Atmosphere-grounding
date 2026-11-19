@@ -1,0 +1,116 @@
+# Research discussion — November 19, 2026
+
+This is a structured record of today's concept and methodology discussion for Atmosphere Grounding. It preserves the development of the proposal, the researcher's clarifications, agreed direction, open issues and candidate methods. The detailed methodology and the later answer are linked below.
+
+| Record | What it preserves |
+|---|---|
+| [Shared-catalogue cross-modal methodology](shared-catalogue-cross-modal-methodology-2026-11-19.md) | Full methodological proposal, representation and eligibility rules, aggregation, model comparisons, four issues and primary references. |
+| [Cross-modal matching research walkthrough](cross-modal-matching-research-walkthrough-2026-11-19.md) | The later research answer preserved as written, with clickable citations: how to process each location's images and segments, match at several scales, allow no match and compare methods. |
+
+## 1. Why we stepped back from the LLM experiments
+
+The recent LLM work concerns extracting and interpreting emotional evidence from reviews. The researcher clarified that the **214 reviews and calm/inviting/safe experiments are a pilot**, not the complete project scope or final emotion catalogue.
+
+The long-term goal is to use weakly tied text and image data about locations to train or adapt a model that predicts emotional or atmospheric qualities from images. Reviews provide emotional evidence. A parallel image pipeline measures descriptive visual attributes. The research question is how those measured attributes relate to the reported experience, and how this can support an image-based predictor.
+
+The discussion therefore concerns the concept and contribution of the full project, rather than another model-capacity experiment.
+
+## 2. How the shared-catalogue idea developed
+
+| Step in the discussion | Researcher's proposal or clarification | Resulting interpretation |
+|---|---|---|
+| Initial proposal | Emotional interpretation remains uncertain even for people. Preserve different kinds of evidence rather than mixing all judgments together. Organize text evidence using categories also used by the image pipeline. | Keep the source and character of emotional evidence available for later analysis and grounding. |
+| More precise clarification | Each review contains segments; each segment has an emotion vector. Evidence can concern activity, people, objects, nature, buildings or open-space design. Images contain several of these simultaneously. The initial description assigned one evidence type to a text segment. | A shared catalogue can organize category-conditioned emotional supervision, while images retain multiple descriptive attributes. |
+| Subsequent revision | The researcher explicitly agreed that text evidence should also be a vector rather than one categorical value. | **The current direction is an evidence-category vector and an emotion vector for each text segment, with a multi-category descriptive vector for each image.** The earlier single-type formulation is superseded. |
+| Scope clarification | Categories need not contribute equally. A nice-waitress comment should not contribute to the place-emotion target, but its category should be retained. | Category membership, eligibility for the target and numerical weighting are separate decisions. Retaining metadata does not require using it as emotional supervision. |
+
+Within-text correlations between category-conditioned emotion profiles may help describe the data or guide model sharing. Such correlations would not independently establish an image–emotion relationship.
+
+## 3. Current representation and eligibility direction
+
+| Unit or field | Intended role |
+|---|---|
+| Text segment | Emotion vector, evidence-category vector, original text/context, validity and eligibility metadata. |
+| Review | Preserves the relationship among its segments; segmentation should not give verbose reviewers extra independent weight. |
+| Image | Measured descriptive attributes spanning several categories; no emotion score assigned during feature extraction. |
+| Location | A collection of review segments and photographs linked by the same place ID. |
+| E/T provenance | Describes how an emotional judgment is supported; distinct from what category the evidence concerns. |
+| Visual predictor | Learns from eligible text-derived supervision and must have an image-only prediction route. |
+
+For the researcher's nice-waitress example, retain the people category and original record, but give that staff-service appraisal **zero eligibility for the defined place-emotion target**. This does not exclude all people-related evidence: crowding, access and public use may concern the place.
+
+Category membership does not itself express confidence, emotional contribution or visual observability. An unmentioned emotion is missing evidence, not a negative score. Overlapping categories also do not turn one emotional proposition into several independent observations.
+
+The category names are examples, not an adopted final taxonomy. The catalogue, score scales, observation masks and any numerical weights still require definition and evaluation.
+
+## 4. The four issues identified in the discussion
+
+| Issue | Why it matters | Proposed response |
+|---|---|---|
+| **Categories need attributes and relationships underneath them.** | People presence does not distinguish a dense crowd from scattered visitors. Trees and benches do not establish that the seating is shaded. | Preserve specific conditions, relationships, qualifiers and scene context alongside broad categories. |
+| **Allow genuinely unmatched evidence.** | Reviews and photos can concern different areas, times, seasons or situations. Eligible experiences may lack visible evidence. | Same place and category create candidate links; permit several matches, uncertainty or no match. Keep out-of-scope eligibility decisions separate from missing visual correspondence. |
+| **Multi-category evidence does not isolate each category's emotional effect.** | A calm report about trees, seating and people concerns that described situation; it does not establish a separate calming effect for each component. | Preserve the proposition, segment identity, review hierarchy and overlapping memberships. Interpret category profiles as observational summaries. |
+| **Place-level supervision and image-level prediction need different validation.** | Predicting a place's review profile does not prove that each photograph receives a valid emotion score. | Distinguish review-grounded place atmosphere from an individual image's perceived emotion. Evaluate the intended claim using held-out places and independent judgments; add image-level evaluation for a single-image claim. |
+
+These are unresolved methodological issues, not reasons to abandon the proposal. The [detailed treatment](shared-catalogue-cross-modal-methodology-2026-11-19.md#12-four-issues-to-resolve) is preserved in the methodology record.
+
+## 5. How the literature discussion expanded
+
+The first comparison covered four established families: **CLIP** for global image–text alignment, **FILIP** for word–patch correspondence, **ALBEF** for alignment followed by joint processing, and **MIL-NCE** for learning from weak candidate correspondences. Their roles and references are in [the methodology comparison](shared-catalogue-cross-modal-methodology-2026-11-19.md#11-how-imagetext-relationships-are-commonly-learned).
+
+The later research found more specific precedents:
+
+| Precedent | Ingredient relevant to the discussion | Limit on what it establishes here |
+|---|---|---|
+| [Hessel, Lee and Mimno, EMNLP 2019](https://aclanthology.org/D19-1210/) | Learn links inside multi-image, multi-sentence documents using collection-level membership rather than individual training pairs. | Replacing a document with a location is a proposed adaptation; it does not validate the added emotion-supervision task. |
+| RegionCLIP and FILIP | Region- or patch-level image–text representations and correspondence. | Ordinary whole-image CLIP representations should not automatically be assumed to provide equally reliable local matching. |
+| DenseCLIP | Pixel–text matching for dense prediction. | Pixel-level descriptive measurements do not establish pixel-level emotional attribution. |
+| [MASK, ICLR 2026](https://proceedings.iclr.cc/paper_files/paper/2026/hash/e48fa1c4f08fd1ae35d5df8352c3106d-Abstract-Conference.html) | Externally grounded semantic concepts connect words and visual-region prototypes for unpaired matching. | Supports the concept-bridge principle, not the sufficiency of our proposed broad categories. |
+| [OMIT: optimal partial transport](https://arxiv.org/html/2603.14349v1) | Partial correspondence between visual and textual fragments, reducing irrelevant alignments. | Extending it from image–caption retrieval to location-wide collections requires new design choices and validation. |
+| [Attention-based MIL, ICML 2018](https://proceedings.mlr.press/v80/ilse18a.html) | Learn weighted aggregation when labels belong to collections rather than every instance. | Our emotion vectors need a suitable regression or distributional objective rather than an unchanged classification formulation. |
+
+The [preserved walkthrough](cross-modal-matching-research-walkthrough-2026-11-19.md) contains the explanations and complete linked sources.
+
+## 6. Candidate workflow for a location
+
+The researcher asked whether to filter segment–image similarity first, whether to inspect an entire image at once, whether pixels should be the starting unit, and how to handle collections on both sides.
+
+The proposed response was:
+
+1. **Preserve both roles of each segment:** descriptive conditions for possible correspondence, and eligible emotional evidence for supervision. A generic emotional report can inform the place profile without a fabricated local match.
+2. **Keep multiple visual scales:** whole scenes for layout and context, regions for identifiable elements, and masks for relevant descriptive measurements. Keep regions attached to their image and position.
+3. **Use evidence vectors as guidance:** combine category membership with entities, attributes and relationships. Category overlap alone is insufficient.
+4. **Score possible correspondences before hard filtering:** construct a segment-by-image compatibility matrix, refine it with local evidence and retain multiple plausible links or no match.
+5. **Compare selective similarity links with partial transport:** start with the more transparent formulation and assess whether joint allocation improves correspondence.
+6. **Train from weighted visual collections:** do not copy each segment's emotional label onto every candidate photograph. Establish descriptive matching separately first, then evaluate emotion learning.
+
+CLIP can supply pretrained descriptive representations even when our own data lack exact pairs. Using it as an encoder does not require treating every same-place combination as a correct caption–image pair.
+
+Matching should concern described conditions, rather than selecting an image because a model already calls it calm or safe. Material from different places can also depict the same conditions, so automatically treating every different-place combination as a negative needs scrutiny.
+
+## 7. Proposed comparisons and what remains open
+
+Two related experimental proposals were discussed. Their similarly named variants should not be conflated.
+
+| Proposal | Comparisons | Main question |
+|---|---|---|
+| Earlier shared-catalogue comparison | Pooled emotion target; additional category-conditioned targets; strict category inputs versus category plus scene context; category-shuffle control. | Does preserving the evidence category improve supervision or interpretation? |
+| Later matching comparison | A: category/place profiles without segment–photo links; B: add whole-image descriptive links; C: add regions while retaining scenes; D: replace simple selection with partial transport. | Does explicit matching help, does local evidence add value, and is joint allocation worthwhile? |
+
+The recommendation to begin with **A–C in the later matching comparison** is a proposal, not a claim that those methods have already been run or adopted as a final architecture.
+
+Still open:
+
+- The shared catalogue and crosswalk to existing visual features.
+- Emotion score meaning, validity and aggregation.
+- The correspondence scorer, acceptance rules, no-match handling and numerical weights.
+- How much pretrained representation learning to retain or adapt.
+- The pooling and emotion-prediction objective.
+- Independent evaluation of both descriptive links and emotional predictions.
+- The scope of a place-level versus single-image prediction claim.
+
+**No new inference or training experiment was run as part of this conceptual discussion.** Published components support the candidate methods; they do not empirically validate their exact combination for this project.
+
+## 8. Where to resume
+
+Use this record as the entry point, the [shared-catalogue methodology](shared-catalogue-cross-modal-methodology-2026-11-19.md) for the broader contribution and statistical formulation, and the [preserved walkthrough](cross-modal-matching-research-walkthrough-2026-11-19.md) for the detailed matching discussion. The next conceptual task is to choose and specify a candidate method while retaining the unresolved decisions above.

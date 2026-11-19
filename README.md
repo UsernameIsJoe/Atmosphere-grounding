@@ -1,4 +1,4 @@
-> **Concept and methodology discussion (2026-11-19):** [Shared-catalogue cross-modal emotion grounding](Docs/SHARED_CATALOGUE_CROSS_MODAL_METHODOLOGY_2026-11-19.md) records the agreed evidence-vector direction, target eligibility, image–text research methods and [four unresolved issues](Docs/SHARED_CATALOGUE_CROSS_MODAL_METHODOLOGY_2026-11-19.md#12-four-issues-to-resolve). The 214 reviews and three pilot emotions are not the full scope. The proposed learning methods remain unimplemented and unvalidated.
+> **Concept and methodology discussion (2026-11-19):** [Shared-catalogue cross-modal emotion grounding](Discussions/shared-catalogue-cross-modal-methodology-2026-11-19.md) records the agreed evidence-vector direction, target eligibility, image–text research methods and [four unresolved issues](Discussions/shared-catalogue-cross-modal-methodology-2026-11-19.md#12-four-issues-to-resolve). The 214 reviews and three pilot emotions are not the full scope. The proposed learning methods remain unimplemented and unvalidated. [Full November 19 discussion record](Discussions/research-discussion-2026-11-19.md).
 
 > **STAGE 1A REVIEW GATE LOCKED (2026-11-16):** The accepted **pre-segmentation, full-review eligibility gate is v0.4 / Qwen3:8B** — [decision lock](Docs/STAGE1A_REVIEW_ELIGIBILITY_GATE_LOCK_2026-11-16.md) · [current version config](configs/stage1a_review_eligibility_gate_current.json) · [frozen prompt](Docs/STAGE1A_REVIEW_ELIGIBILITY_GATE_PROMPT_V0_4_2026-11-16.md) · [gate codebook](Docs/STAGE1A_REVIEW_ELIGIBILITY_GATE_CODEBOOK_V0_4_2026-11-16.md) · [36-review regression audit](research_audit/stage1a_review_gate_v04_regression_qwen8b_2026-11-16/README.md). **Provisional pilot adoption, not independently validated accuracy.** Preserve rejected reviews for audit and pass original KEEP reviews into later segmentation. Historical notes below predate this lock.
 
@@ -138,8 +138,9 @@ Pass-A comment-only mentions stay in `mentions.jsonl`. Fusion does not overwrite
 
 | Doc | Contents |
 |-----|----------|
+| [November 19 research discussion](Discussions/research-discussion-2026-11-19.md) | Full session record: proposal development, agreed direction, four issues, literature and matching options |
 | [Cross-modal matching research walkthrough](Discussions/cross-modal-matching-research-walkthrough-2026-11-19.md) | Full November 19 answer: processing location collections, whole-image/region matching, unmatched evidence, partial transport and A–D comparison |
-| [Shared-catalogue cross-modal methodology](Docs/SHARED_CATALOGUE_CROSS_MODAL_METHODOLOGY_2026-11-19.md) | November 19 concept record, research references, candidate learning methods and four unresolved issues |
+| [Shared-catalogue cross-modal methodology](Discussions/shared-catalogue-cross-modal-methodology-2026-11-19.md) | November 19 concept record, research references, candidate learning methods and four unresolved issues |
 | [`Docs/PROJECT.txt`](Docs/PROJECT.txt) | Goals, non-goals, Layer A/B, research stages |
 | [`Docs/CONTINUE.txt`](Docs/CONTINUE.txt) | Handoff / next actions |
 | [`Docs/visual_categories/`](Docs/visual_categories/) | Ontology phases 1–4 |

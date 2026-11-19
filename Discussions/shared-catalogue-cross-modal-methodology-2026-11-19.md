@@ -2,6 +2,8 @@
 
 Research discussion record · November 19, 2026
 
+Part of the [November 19 discussion record](research-discussion-2026-11-19.md). The [matching walkthrough](cross-modal-matching-research-walkthrough-2026-11-19.md) preserves the later research answer as written.
+
 **Scope:** Each text segment has an evidence-category vector and a vector of emotion scores. Each image has a vector of descriptive attributes covering multiple categories from that same catalogue. Reviews and images correspond by location. The aim is to use this structure to learn an image-based emotion predictor.
 
 **Status:** Focused literature review and proposed method, updated to reflect the researcher's agreement that text evidence may belong to multiple categories. Category membership is separate from eligibility for the place-emotion target. A comment about a nice waitress retains its people metadata but is excluded from that target under the researcher's stated scope. No new inference or training experiments were run. The pilot size and pilot emotions do not define the full research scope.
@@ -19,7 +21,7 @@ The exact catalogue, score scales, aggregation, numerical weights, matching obje
 - Established image–text methods: [Section 11](#11-how-imagetext-relationships-are-commonly-learned).
 - The four unresolved issues from the discussion: [Section 12](#12-four-issues-to-resolve).
 - Primary research references: [References](#references).
-- Follow-up answer, preserved as written: [Cross-modal matching research walkthrough](../Discussions/cross-modal-matching-research-walkthrough-2026-11-19.md).
+- Follow-up answer, preserved as written: [Cross-modal matching research walkthrough](cross-modal-matching-research-walkthrough-2026-11-19.md).
 
 ## 1. The proposal, precisely
 
@@ -256,10 +258,10 @@ Start with the pooled-target versus category-supervision comparison in Section 9
 
 ## 13. Relationship to existing project records
 
-- [Earlier E/T/I research framing](THREE_CHANNEL_RESEARCH_DIRECTION_2026-11-11.md): evidence provenance remains distinct from the new content-category vector.
+- [Earlier E/T/I research framing](../Docs/THREE_CHANNEL_RESEARCH_DIRECTION_2026-11-11.md): evidence provenance remains distinct from the new content-category vector.
 - [Current visual-category configuration](../configs/visual_categories_v1.yaml): existing feature groups are a starting point for a crosswalk, not an already validated shared catalogue.
-- [Stage 1A review-gate decision record](STAGE1A_REVIEW_ELIGIBILITY_GATE_LOCK_2026-11-16.md): operational pilot decisions remain separately documented.
-- [Earlier project research baseline](../Discussions/current-research-baseline-2026-11.md): historical context for the parallel text and image branches.
+- [Stage 1A review-gate decision record](../Docs/STAGE1A_REVIEW_ELIGIBILITY_GATE_LOCK_2026-11-16.md): operational pilot decisions remain separately documented.
+- [Earlier project research baseline](current-research-baseline-2026-11.md): historical context for the parallel text and image branches.
 
 ## References
 
