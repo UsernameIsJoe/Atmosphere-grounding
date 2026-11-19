@@ -97,7 +97,7 @@ E/T can remain separate provenance metadata. The category vector identifies what
 For location l and category c, collect eligible, observed segment emotion vectors whose membership includes c. In the simple binary-membership baseline:
 
 $$
-\mathbf y_{l,c}=\operatorname{Aggregate}\{\mathbf e_s:s\text{ belongs to }l,\ a_{s,c}=1,\ g_s=1\}.
+\mathbf y_{l,c}=\mathrm{Aggregate}\{\mathbf e_s:s\text{ belongs to }l,\ a_{s,c}=1,\ g_s=1\}.
 $$
 
 Here g_s is the target-eligibility indicator. Use emotion-specific or proposition-specific masks when a segment contains several claims with different eligibility. A defensible first baseline aggregates within each review and category, then across reviews. This prevents a verbose reviewer from receiving more weight simply by producing more segments. Preserve segment identity across categories so overlapping memberships do not become additional independent observations or inflate a pooled overall target.
