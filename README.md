@@ -138,6 +138,7 @@ Pass-A comment-only mentions stay in `mentions.jsonl`. Fusion does not overwrite
 
 | Doc | Contents |
 |-----|----------|
+| [Cross-modal matching research walkthrough](Docs/CROSS_MODAL_MATCHING_RESEARCH_WALKTHROUGH_2026-11-19.md) | Full November 19 answer: processing location collections, whole-image/region matching, unmatched evidence, partial transport and A–D comparison |
 | [Shared-catalogue cross-modal methodology](Docs/SHARED_CATALOGUE_CROSS_MODAL_METHODOLOGY_2026-11-19.md) | November 19 concept record, research references, candidate learning methods and four unresolved issues |
 | [`Docs/PROJECT.txt`](Docs/PROJECT.txt) | Goals, non-goals, Layer A/B, research stages |
 | [`Docs/CONTINUE.txt`](Docs/CONTINUE.txt) | Handoff / next actions |

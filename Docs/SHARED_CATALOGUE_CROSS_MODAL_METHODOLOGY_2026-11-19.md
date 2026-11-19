@@ -19,6 +19,7 @@ The exact catalogue, score scales, aggregation, numerical weights, matching obje
 - Established image–text methods: [Section 11](#11-how-imagetext-relationships-are-commonly-learned).
 - The four unresolved issues from the discussion: [Section 12](#12-four-issues-to-resolve).
 - Primary research references: [References](#references).
+- Follow-up answer, preserved as written: [Cross-modal matching research walkthrough](CROSS_MODAL_MATCHING_RESEARCH_WALKTHROUGH_2026-11-19.md).
 
 ## 1. The proposal, precisely
 
