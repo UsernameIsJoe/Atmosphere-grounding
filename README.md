@@ -1,3 +1,5 @@
+> **Concept and methodology discussion (2026-11-19):** [Shared-catalogue cross-modal emotion grounding](Docs/SHARED_CATALOGUE_CROSS_MODAL_METHODOLOGY_2026-11-19.md) records the agreed evidence-vector direction, target eligibility, image–text research methods and [four unresolved issues](Docs/SHARED_CATALOGUE_CROSS_MODAL_METHODOLOGY_2026-11-19.md#12-four-issues-to-resolve). The 214 reviews and three pilot emotions are not the full scope. The proposed learning methods remain unimplemented and unvalidated.
+
 > **STAGE 1A REVIEW GATE LOCKED (2026-11-16):** The accepted **pre-segmentation, full-review eligibility gate is v0.4 / Qwen3:8B** — [decision lock](Docs/STAGE1A_REVIEW_ELIGIBILITY_GATE_LOCK_2026-11-16.md) · [current version config](configs/stage1a_review_eligibility_gate_current.json) · [frozen prompt](Docs/STAGE1A_REVIEW_ELIGIBILITY_GATE_PROMPT_V0_4_2026-11-16.md) · [gate codebook](Docs/STAGE1A_REVIEW_ELIGIBILITY_GATE_CODEBOOK_V0_4_2026-11-16.md) · [36-review regression audit](research_audit/stage1a_review_gate_v04_regression_qwen8b_2026-11-16/README.md). **Provisional pilot adoption, not independently validated accuracy.** Preserve rejected reviews for audit and pass original KEEP reviews into later segmentation. Historical notes below predate this lock.
 
 > **Runpod first-model capability check (2026-11-13):** [12 complete real reviews × Qwen3:8B / Qwen3.6:27B BF16 / Gemma4:31B BF16, same prompt](Docs/STAGE1A_RUNPOD_FIRSTLOOK_12REVIEWS_2026-11-13.md). The 36-call test evaluates direct vs inferred evidence and calm/inviting/safe interpretation before choosing any segmentation or scoring architecture. **Prepared, not yet run on GPU.** The earlier 30-segment Runpod scripts are retained only as later-method experiments.
@@ -6,7 +8,7 @@
 
 > **Local E/T pilot (2026-11-11):** [Independent explicit-evidence and text-inference test on 50 segmented real reviews](Docs/STAGE1A_DUAL_CHANNEL_50_2026-11-11.md) uses `qwen3:8b` and `gemma3:4b` with separate prompts, calls and outputs. Run locally; no inference results are claimed yet.
 
-> **Project research direction (2026-11-11):** [Three-Channel Triangle — Text Evidence (E), Text Inference/Description (T), Image Quality (I)](Docs/THREE_CHANNEL_RESEARCH_DIRECTION_2026-11-11.md) is the **current conceptual research hypothesis**. **E–I is the direct target**; E–T and T–I are potential indirect support, to be compared with—not automatically merged into—the direct estimate. This is not implemented or validated. The Stage 1A plan below is a candidate method for E only.
+> **Earlier project research framing (2026-11-11; extended by the November 19 discussion above):** [Three-Channel Triangle — Text Evidence (E), Text Inference/Description (T), Image Quality (I)](Docs/THREE_CHANNEL_RESEARCH_DIRECTION_2026-11-11.md) records the **earlier conceptual research hypothesis**. **E–I is the direct target**; E–T and T–I are potential indirect support, to be compared with—not automatically merged into—the direct estimate. This is not implemented or validated. The Stage 1A plan below is a candidate method for E only.
 
 > **Stage 1A design decision (2026-11-11):** [Explicit-atmosphere evidence + recall-expansion research plan](Docs/STAGE1A_RESEARCH_PLAN_2026-11-11.md) is the **current Stage 1A architecture and execution plan**. The prior November 10 panel/NLI design and scripts remain historical experiments, **not the approved default workflow**. The new plan is documentation only, not implemented or validated.
 
@@ -136,6 +138,7 @@ Pass-A comment-only mentions stay in `mentions.jsonl`. Fusion does not overwrite
 
 | Doc | Contents |
 |-----|----------|
+| [Shared-catalogue cross-modal methodology](Docs/SHARED_CATALOGUE_CROSS_MODAL_METHODOLOGY_2026-11-19.md) | November 19 concept record, research references, candidate learning methods and four unresolved issues |
 | [`Docs/PROJECT.txt`](Docs/PROJECT.txt) | Goals, non-goals, Layer A/B, research stages |
 | [`Docs/CONTINUE.txt`](Docs/CONTINUE.txt) | Handoff / next actions |
 | [`Docs/visual_categories/`](Docs/visual_categories/) | Ontology phases 1–4 |

@@ -2,17 +2,18 @@
 
 Research brief materials and design-session outputs for **Atmosphere Grounding**.
 
-This folder is **standalone documentation** for presentations and design history. The existing implemented/earlier technical architecture is described in [`Docs/ARCHITECTURE.txt`](../Docs/ARCHITECTURE.txt). **The latest research direction, not yet implemented or locked, is recorded in [`current-research-baseline-2026-11.md`](current-research-baseline-2026-11.md).**
+This folder is **standalone documentation** for presentations and design history. The existing implemented/earlier technical architecture is described in [`Docs/ARCHITECTURE.txt`](../Docs/ARCHITECTURE.txt). **The latest conceptual discussion (2026-11-19) is [shared-catalogue cross-modal emotion grounding](../Docs/SHARED_CATALOGUE_CROSS_MODAL_METHODOLOGY_2026-11-19.md), including evidence vectors, target eligibility and four unresolved methodological issues. Its learning methods remain proposals.** The [earlier research baseline](current-research-baseline-2026-11.md) provides historical context.
 
 ## Contents
 
 | File | Description |
 |------|-------------|
+| [Shared-catalogue cross-modal methodology](../Docs/SHARED_CATALOGUE_CROSS_MODAL_METHODOLOGY_2026-11-19.md) | **November 19 discussion record**: text emotion/evidence vectors, image attributes, eligibility, primary research references, experiment proposal and four unresolved issues |
 | [`presentation-slides.md`](presentation-slides.md) | All slide text + embedded images (Markdown) |
 | [`text/`](text/) | **Exact plain-text** slide copy (`.txt`, one file per slide) |
 | [`flowcharts.md`](flowcharts.md) | Mermaid source diagrams |
 | [`design-decisions-summary.md`](design-decisions-summary.md) | Condensed design decisions | 
-| [`current-research-baseline-2026-11.md`](current-research-baseline-2026-11.md) | **Current research baseline**: two parallel branches, shared-location learning, visual predictor and open methods |
+| [`current-research-baseline-2026-11.md`](current-research-baseline-2026-11.md) | **Earlier research baseline**: two parallel branches, shared-location learning, visual predictor and open methods |
 | [`project-research-map-and-workstreams-2026-11-03.md`](project-research-map-and-workstreams-2026-11-03.md) | **Project-wide research map**: NLI, ABSA, evidence integration, visual features, cross-modal learning, prediction and evaluation guardrails |
 | [`location-sentiment-five-research-questions.md`](location-sentiment-five-research-questions.md) | Five conceptual research topics (exploratory learning agenda) |
 | [`stage1a-three-approach-comparison-2026-11-03.md`](stage1a-three-approach-comparison-2026-11-03.md) | **Current three-way text experiment**: direct NLI, multi-hypothesis NLI, pretrained ABSA → NLI |
