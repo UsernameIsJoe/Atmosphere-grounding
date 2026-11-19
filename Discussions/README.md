@@ -8,6 +8,7 @@ This folder is **standalone documentation** for presentations and design history
 
 | File | Description |
 |------|-------------|
+| [Cross-modal matching research walkthrough](cross-modal-matching-research-walkthrough-2026-11-19.md) | **Full November 19 answer, preserved as written**: processing location collections, whole-image and region matching, no-match handling, partial transport, sources and A–D comparison |
 | [Shared-catalogue cross-modal methodology](../Docs/SHARED_CATALOGUE_CROSS_MODAL_METHODOLOGY_2026-11-19.md) | **November 19 discussion record**: text emotion/evidence vectors, image attributes, eligibility, primary research references, experiment proposal and four unresolved issues |
 | [`presentation-slides.md`](presentation-slides.md) | All slide text + embedded images (Markdown) |
 | [`text/`](text/) | **Exact plain-text** slide copy (`.txt`, one file per slide) |
