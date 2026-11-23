@@ -8,6 +8,8 @@
 2. **Semantic words improve typical order robustness, with remaining failures.** Median order spread is 6.29 pp against 16.36 pp for letters. Their largest spread is 39.94 pp, with changed chosen states in 1/12 cases. None of the tested formats makes a single prompted probability vector robust to all tested changes.
 3. **Gemma's softened distributions reveal previously compressed letter sensitivity.** T=4 lowers mean winning probability to 93.57%, while mapping differences reach 14.20 pp. Its sixteen saved direct repeat pairs remain identical. Softening and computational repeatability answer different questions.
 
+**Usefulness check added:** [Gemma probability signal versus fixed smoothing](GEMMA_SIGNAL_EVALUATION.md) evaluates the recorded reference judgments and case influence. No robust added usefulness is established; the reference remains provisional.
+
 ## Questions and what was actually done
 
 - **Qwen:** compare A–D, 1–4 and meaningful semantic answers; distinguish code assignment from definition order; use full prompt recomputation throughout. Reuse previously measured cold letter conditions, rather than repeating the original letter study.

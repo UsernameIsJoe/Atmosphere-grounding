@@ -238,3 +238,18 @@ This sharpens the earlier interpretation: Gemma's raw percentages and verdicts l
 The evaluation also finds that omitted top-20 alternatives become consequential when softened: native state-probability bounds can be 3.02 points wide at T=4, and wider at larger temperatures. Use the full four captured logits, not rounded percentages or zero-filled omissions. Native cached repeat variation and deterministic direct-backend results remain separate conditions.
 
 The owned Qwen pod was terminated after about fourteen minutes; estimated compute **$0.63** at the observed $2.69/hour. All downloaded archive/file hashes were verified before deletion, and the post-termination pod list was empty. No production pipeline or final probability-supervision scheme was changed.
+
+
+---
+
+## 13. Does Gemma's softened distribution add useful information? — November 23
+
+The researcher identified a gap: the previous evaluation described distribution shape, repeatability and sensitivity without evaluating whether the probabilities help identify dependable judgments. The [offline usefulness addendum](../research_audit/stage1a_probability_formats_12_2026-11-23/GEMMA_SIGNAL_EVALUATION.md) addresses this with saved logits and recorded references; no additional model calls were made.
+
+Reference provenance limits this check. The current v0.5 runner's explicit calm audit contains only K01 = none and U06 = supports. The twelve-case reference fields also include inherited, partly disputed labels; K03 and U01 differ from the older conservative reference. These wider labels are retained as provisional sensitivity checks, not promoted to current independent ground truth.
+
+Four mapping distributions are averaged per review, preserving twelve cases rather than counting mappings or repeats as independent observations. The control is fixed uniform label smoothing around the same hard verdicts, matched to the mean winning probability without using reference labels. At T=4, the model vectors have NLL **1.012 versus 1.011** for the control, Brier sum **0.432 versus 0.463**, and error-ranking AUROC **0.556**, all against the merged provisional reference. Removing K01 reverses the Brier advantage (**0.363 versus 0.344**); the modest advantage is case-sensitive rather than robust.
+
+Some coarse preferences are visible. At T=4 the known K01 attribution failure receives about **74%** winning probability, versus about **99%** on explicit intrusive traffic noise (U03, aligned with its archived reference). U06, the other explicit current calm audit, receives about **92%** on support. K04 remains about **95%** despite its earlier low-crowding grounding concern; that concern is not assigned a new error label. Fine confidence ordering also changes with mappings in six of twenty-five pairs sharing a winner; those reversals are below one percentage point among high-confidence neither cases.
+
+**Current assessment:** there are reproducible model preferences and promising coarse distinctions, but no robust evidence yet that the case-specific softened vectors outperform simple smoothing or provide dependable confidence weights. They remain research artifacts. This is not proof that soft targets cannot help downstream training; that comparison was not run. The addendum preserves case-level vectors, reference variants, all leave-one-case-out comparisons and a reproducible evaluation script.

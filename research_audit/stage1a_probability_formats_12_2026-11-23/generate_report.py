@@ -67,6 +67,8 @@ def build():
 2. **Semantic words improve typical order robustness, with remaining failures.** Median order spread is {q['formats']['text']['families']['order']['median_case_spread_upper_pp']:.2f} pp against {q['formats']['letters']['families']['order']['median_case_spread_upper_pp']:.2f} pp for letters. Their largest spread is {q['formats']['text']['families']['order']['max_spread_upper_pp']:.2f} pp, with changed chosen states in {q['formats']['text']['families']['order']['cases_with_changed_states']}/12 cases. None of the tested formats makes a single prompted probability vector robust to all tested changes.
 3. **Gemma's softened distributions reveal previously compressed letter sensitivity.** T=4 lowers mean winning probability to {100*t4['mean_winning_probability']:.2f}%, while mapping differences reach {t4['max_mapping_probability_spread_pp']:.2f} pp. Its sixteen saved direct repeat pairs remain identical. Softening and computational repeatability answer different questions.
 
+**Usefulness check added:** [Gemma probability signal versus fixed smoothing](GEMMA_SIGNAL_EVALUATION.md) evaluates the recorded reference judgments and case influence. No robust added usefulness is established; the reference remains provisional.
+
 ## Questions and what was actually done
 
 - **Qwen:** compare A–D, 1–4 and meaningful semantic answers; distinguish code assignment from definition order; use full prompt recomputation throughout. Reuse previously measured cold letter conditions, rather than repeating the original letter study.
