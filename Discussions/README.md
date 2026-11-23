@@ -2,6 +2,8 @@
 
 Research brief materials and design-session outputs for **Atmosphere Grounding**.
 
+**November 23 follow-up:** [Three-point discussion remark](research-discussion-2026-11-19.md#9-november-23-follow-up) — probability signals in the emotion representation, embedding-based segment weights, and NLI hypothesis families aligned with image definitions. Embedding and NLI directions are provisionally agreed; probability utility remains to be tested.
+
 **November 19 session:** [Full discussion record](research-discussion-2026-11-19.md) · [Shared-catalogue methodology](shared-catalogue-cross-modal-methodology-2026-11-19.md) · [Matching walkthrough](cross-modal-matching-research-walkthrough-2026-11-19.md).
 
 This folder is **standalone documentation** for presentations and design history. The existing implemented/earlier technical architecture is described in [`Docs/ARCHITECTURE.txt`](../Docs/ARCHITECTURE.txt). **The latest conceptual discussion (2026-11-19) is [shared-catalogue cross-modal emotion grounding](shared-catalogue-cross-modal-methodology-2026-11-19.md), including evidence vectors, target eligibility and four unresolved methodological issues. Its learning methods remain proposals.** The [earlier research baseline](current-research-baseline-2026-11.md) provides historical context.
