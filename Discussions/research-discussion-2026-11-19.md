@@ -4,6 +4,7 @@ This is a structured record of today's concept and methodology discussion for At
 
 | Record | What it preserves |
 |---|---|
+| [November 23 follow-up remark](#9-november-23-follow-up) | Native probability signals, segment representativeness weights, and NLI hypothesis families aligned with image categories; provisional decisions and open validation. |
 | [Shared-catalogue cross-modal methodology](shared-catalogue-cross-modal-methodology-2026-11-19.md) | Full methodological proposal, representation and eligibility rules, aggregation, model comparisons, four issues and primary references. |
 | [Cross-modal matching research walkthrough](cross-modal-matching-research-walkthrough-2026-11-19.md) | The later research answer preserved as written, with clickable citations: how to process each location's images and segments, match at several scales, allow no match and compare methods. |
 
@@ -114,3 +115,55 @@ Still open:
 ## 8. Where to resume
 
 Use this record as the entry point, the [shared-catalogue methodology](shared-catalogue-cross-modal-methodology-2026-11-19.md) for the broader contribution and statistical formulation, and the [preserved walkthrough](cross-modal-matching-research-walkthrough-2026-11-19.md) for the detailed matching discussion. The next conceptual task is to choose and specify a candidate method while retaining the unresolved decisions above.
+
+---
+
+## 9. November 23 follow-up
+
+**Status: discussion remark only.** The embedding and NLI directions below are provisionally agreed. Probability is accepted as a candidate soft signal under the stated trust premise; its empirical benefit remains open. This remark records the discussion and does not change prompts, code, model choices or the implemented pipeline.
+
+### 1. Native probabilities in the text emotion representation
+
+The intended use is to retain native model probabilities as part of the segment's emotion representation or soft supervision. The model is not being asked to generate numerical confidence scores or score its own verdict.
+
+**Agreed interpretation:** if we trust the model's interpretation and its relative preferences among defined semantic alternatives, properly extracted probabilities over those alternatives are mathematically legitimate signals of how strongly the model favors an interpretation. Here, "strength" means model confidence/preference about the interpretation, not the intensity of the experienced emotion. Trusting the winning label alone does not establish calibration of the probability values.
+
+The existing [v0.5 extraction prompt](../Docs/STAGE1A_PILOT_PROMPT_V0_5_2026-11-16.md) already makes a controlled `supports`/`opposes` decision for each accepted claim. This is not a newly proposed prompt principle. Keep its ability to return no claims or retain separate supporting and opposing claims, with quotes and E/T provenance.
+
+Distinguish:
+
+- Native likelihoods of actual direction choices can supply a decision-preference signal.
+- Likelihoods of mandatory emotion names or formatting tokens do not measure emotional evidence.
+- Free emotion generation is not inherently invalid, but a word's probability at one generated position is not automatically a comparable probability that a segment supports that emotion.
+
+**Usefulness is still to be established.** There are two separate questions: whether probabilities help identify reliable claims, and whether retaining them as soft targets improves later training beyond hard decisions. Poor calibration alone does not settle the second question. Compare against hard labels, constant label smoothing and probabilities shuffled among comparable claims. A probability assigned to an alternative direction is model uncertainty; it is not an independently observed opposing claim. Missing emotional evidence remains missing supervision.
+
+The inspected [v0.5 benchmark runner](../scripts/stage1a_codebook_v05_directional_benchmark_20261116.py) does not request or save native log probabilities. Extraction of full alternative-label likelihoods, tokenization, aggregation into segment vectors and downstream use remain implementation/research decisions. No replacement prompt or new probability experiment is adopted or reported by this remark.
+
+### 2. Embeddings for segment representativeness
+
+**Provisionally agreed:** use embedding similarity between the original segment and its original full review to estimate how much that segment represents the review. This is intended to contribute to segment weighting during aggregation/training. It is a salience/representativeness measure, not a check of whether an LLM-generated interpretation is correct.
+
+Use the same suitable embedding model for both texts. A shared embedding space makes similarity calculations consistent; it does not guarantee correct relative rankings. Run a rudimentary task-specific comparison of a small number of credible models on real reviews, select an adequate model and freeze it. Do not become fixated on finding an optimal model.
+
+Validate against representativeness judgments. A less central segment can still carry important emotional evidence. The precise score-to-weight transformation, normalization and placement in the learning objective remain open.
+
+### 3. NLI evidence-type vectors and shared image definitions
+
+**Provisionally agreed:** pursue NLI category-membership vectors using a small hypothesis family for each evidence category. In this role the families concern categories such as vegetation, people, objects, buildings or spatial layout; they are not automatically an additional emotion-scoring system.
+
+Build the hypotheses from the same category definitions used by the image pipeline. The wording and measurement procedures may differ by modality, but the category meanings must align. These examples are not a frozen final taxonomy.
+
+Allow multiple categories per segment. Keep category membership separate from eligibility: a nice-waitress comment can retain people metadata while contributing zero eligibility under the agreed place-emotion scope.
+
+Check sensitivity using equivalent hypothesis paraphrases on fixed real segments: compare score spread, membership flips, and accuracy against independent category annotations. Distinguish equivalent wording from different category facets; different facets need not receive identical scores. Averaging a family can improve robustness, but stable outputs can still be wrong. Keep the variation visible, select on development cases and check separate cases and unused paraphrases before freezing the family. No NLI checkpoint, thresholds or final catalogue are selected here.
+
+### Research precedents discussed
+
+These support the component methods, not the untested combination for our project:
+
+- [Zhao et al., 2021 — Calibrate Before Use](https://proceedings.mlr.press/v139/zhao21c.html): label-probability classification and prompt/label bias.
+- [Hinton et al., 2015 — Distilling the Knowledge in a Neural Network](https://arxiv.org/abs/1503.02531): class distributions as soft training targets.
+- [Rossiello et al., 2017 — Centroid-based Text Summarization](https://aclanthology.org/W17-1003/): sentence-to-document representativeness through embedding similarity.
+- [Muennighoff et al., 2023 — MTEB](https://aclanthology.org/2023.eacl-main.148/): embedding suitability varies across tasks.
+- [Plaza-del-Arco et al., 2022 — NLI Prompts for Zero-shot Emotion Classification](https://aclanthology.org/2022.coling-1.592/): sensitivity to hypothesis formulation and prompt-ensemble robustness; transferring this to our evidence categories requires validation.
