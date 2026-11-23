@@ -72,7 +72,7 @@ For an actual score strictly inside the cap:
 u = c \mathrm{atanh}(s/c).
 ```
 
-All four code scores were inside the cap in **64/64** passes; the largest forward/inverse round-trip residual was **3.55e-15**. These are analytic reconstructions from finite-precision capped outputs, **not an internal pre-cap tensor hook**. Boundary scores cannot be inverted reliably. Absolute pre-cap scores cannot be recovered uniquely from returned probabilities alone because softmax discards a shared additive offset; available log-probability differences do recover post-cap score differences.
+All four code scores were inside the cap in **64/64** passes; the largest forward/inverse round-trip residual was **3.55e-15**. These are analytic reconstructions from finite-precision capped outputs, **not an internal pre-cap tensor hook**. The round-trip check verifies the algebra; it cannot recover precision lost upstream, and the inverse becomes sensitive near the cap. Boundary scores cannot be inverted reliably. Absolute pre-cap scores cannot be recovered uniquely from returned probabilities alone because softmax discards a shared additive offset; available log-probability differences do recover post-cap score differences.
 
 Examples below are original ABCD mapping, first direct pass. The strongest alternative is another one of the four codes, not the whole vocabulary.
 
