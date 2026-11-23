@@ -4,6 +4,8 @@
 
 ## What this test establishes
 
+**November 23 interpretive follow-up:** each mapping was run once per case/model; there is no repeated-identical-request probability baseline in this experiment. The numerical gap below is an observed difference between mappings, not an isolated estimate of a letter effect or a question-wording test. Gemma's near-1 saturation can also conceal underlying score variation. See the [stability, stabilization and logits discussion](../../Discussions/model-probability-stability-and-logits-2026-11-23.md) for the literature, corrected interpretation and proposed repeat controls. Raw requests, results and numerical analysis remain unchanged.
+
 **Native decision probabilities can be captured in a clear, mathematically defined way. They are neither forced to 0/1 by greedy decoding nor generated confidence ratings.** Both models produced valid single-code measurements on all 24 readouts per model. However, score robustness differed: Qwen's chosen states were stable while probabilities moved appreciably after code renaming; Gemma was nearly saturated and confidently retained a known attribution error. This supports further testing, not automatic adoption as evidence-quality weights.
 
 | Measurement | Qwen | Gemma |

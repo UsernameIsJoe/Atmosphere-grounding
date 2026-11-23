@@ -2,6 +2,8 @@
 
 Research brief materials and design-session outputs for **Atmosphere Grounding**.
 
+**November 23 probability stability follow-up:** [Discussion, literature and four answers](model-probability-stability-and-logits-2026-11-23.md) — identical-run repeatability versus code/wording sensitivity, stabilization methods, proposed tolerance and logits access. Includes the correction that the first pilot did not measure identical-request probability variability.
+
 **Executed probability pilot (November 23):** [Calm, same 12 reviews, Qwen and Gemma](../research_audit/stage1a_calm_probability_12_2026-11-23/README.md) — 72 main calls, native probability readouts, code-mapping control, raw results and cleanup record. Development experiment; no calibration or training-benefit claim.
 
 **November 23 follow-up:** [Three-point discussion remark](research-discussion-2026-11-19.md#9-november-23-follow-up) — probability signals in the emotion representation, embedding-based segment weights, and NLI hypothesis families aligned with image definitions. Embedding and NLI directions are provisionally agreed; probability utility remains to be tested.
@@ -14,6 +16,7 @@ This folder is **standalone documentation** for presentations and design history
 
 | File | Description |
 |------|-------------|
+| [Model probability stability, stabilization and logits](model-probability-stability-and-logits-2026-11-23.md) | **November 23 follow-up discussion**: four research answers, repeat-control caveat, comparison chart, primary sources and proposed diagnostics |
 | [November 19 research discussion](research-discussion-2026-11-19.md) | **Start here for the full day's discussion**: development of the idea, clarifications, decisions, open issues and links to both detailed records |
 | [Cross-modal matching research walkthrough](cross-modal-matching-research-walkthrough-2026-11-19.md) | **Full November 19 answer, preserved as written**: processing location collections, whole-image and region matching, no-match handling, partial transport, sources and A–D comparison |
 | [Shared-catalogue cross-modal methodology](shared-catalogue-cross-modal-methodology-2026-11-19.md) | **November 19 discussion record**: text emotion/evidence vectors, image attributes, eligibility, primary research references, experiment proposal and four unresolved issues |

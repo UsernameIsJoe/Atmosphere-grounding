@@ -4,6 +4,7 @@ This is a structured record of today's concept and methodology discussion for At
 
 | Record | What it preserves |
 |---|---|
+| [Probability stability, stabilization and logits — November 23](model-probability-stability-and-logits-2026-11-23.md) | Follow-up discussion and four research answers: repeatability, practical stabilization, proposed fluctuation tolerance, pre-softmax access and primary sources. |
 | [November 23 follow-up remark](#9-november-23-follow-up) | Native probability signals, segment representativeness weights, and NLI hypothesis families aligned with image categories; provisional decisions and open validation. |
 | [Shared-catalogue cross-modal methodology](shared-catalogue-cross-modal-methodology-2026-11-19.md) | Full methodological proposal, representation and eligibility rules, aggregation, model comparisons, four issues and primary references. |
 | [Cross-modal matching research walkthrough](cross-modal-matching-research-walkthrough-2026-11-19.md) | The later research answer preserved as written, with clickable citations: how to process each location's images and segments, match at several scales, allow no match and compare methods. |
@@ -169,3 +170,14 @@ These support the component methods, not the untested combination for our projec
 - [Rossiello et al., 2017 — Centroid-based Text Summarization](https://aclanthology.org/W17-1003/): sentence-to-document representativeness through embedding similarity.
 - [Muennighoff et al., 2023 — MTEB](https://aclanthology.org/2023.eacl-main.148/): embedding suitability varies across tasks.
 - [Plaza-del-Arco et al., 2022 — NLI Prompts for Zero-shot Emotion Classification](https://aclanthology.org/2022.coling-1.592/): sensitivity to hypothesis formulation and prompt-ensemble robustness; transferring this to our evidence categories requires validation.
+
+
+---
+
+## 10. Probability stability, stabilization and logits — November 23
+
+The researcher asked whether the observed code-mapping probability changes could instead reflect variation across identical requests, then requested a literature-based assessment of reproducibility, stabilization, acceptable fluctuation and pre-softmax access. The [full follow-up discussion](model-probability-stability-and-logits-2026-11-23.md) preserves the four answers, exact original/rotated mappings, comparison chart, primary papers and implementation references.
+
+**Interpretation correction:** the probability pilot ran each mapping once per case/model. Its 23.26-point Qwen difference is an observed between-mapping gap; there is no identical-request probability-repeat baseline to isolate a letter effect. Gemma's saturation can also suppress visible percentage movement. Neither result establishes which model has intrinsically more stable probabilities.
+
+The record distinguishes computation controls and batch-invariant kernels from label/wording robustness methods. Four balanced mappings with semantic probability averaging and a 50-repeat diagnostic are proposed. The **1 percentage point peak-to-peak tolerance is an assistant-proposed project criterion, not a literature standard or adopted rule**. Native logits can be captured through direct llama.cpp/Transformers access; returned log probabilities already preserve relative logit differences for available candidates. These are discussion findings and proposals; no additional inference, backend migration, calibration or training was executed for this follow-up.
