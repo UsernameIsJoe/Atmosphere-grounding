@@ -206,3 +206,35 @@ The native phases had no verdict flips within an identical payload. Smaller perc
 **Current direction:** retain log probabilities/logit margins; control full recomputation for further measurements; compare balanced semantic-mapping averages and retain their spread. Temperature scaling remains a sensitivity calculation until fitted on separate annotations. No calibrated-confidence or image-training benefit is established by this test. The provisionally agreed embedding and NLI directions are unchanged.
 
 All results were downloaded and hashes verified before terminating the owned pod. Lease approximately 33 minutes; estimated compute $1.48 at $2.69/hour. The post-termination pod list was empty. See the report's cleanup record.
+
+
+---
+
+## 12. Qwen alternatives and Gemma softened scores — November 23
+
+The researcher asked whether numbers or unmarked option text could improve Qwen, whether letter sensitivity had already ruled those alternatives out, and whether Gemma's saturated probabilities could become usable through softening. The subsequent clarification was to reuse the existing letter experiment and evaluate saved Gemma outputs, avoiding an unnecessary new Gemma stability run. The researcher authorized starting the tests and evaluation.
+
+The [executed report](../research_audit/stage1a_probability_formats_12_2026-11-23/README.md) now preserves the exact protocol, prompts, inputs, tokenization, model/runtime records, raw outputs, evaluation scripts and charts. Qwen uses the original twelve reviews, calm-only v0.5 codebook and checkpoint, with full prompt recomputation. Label assignment changes and definition-order changes are separate factors. Four balanced cyclic variants per factor were tested; all 24 permutations and assignment/order interactions were not tested.
+
+Three cross-runtime letter anchors reproduced the old cold scores exactly, allowing reuse of 120 existing readouts on three reviews × four mappings. New calls fill nine reviews' missing cold letter baselines, test previously unmeasured definition orders, and evaluate numbers and semantic answers. Three repetitions per new input, plus the three anchors, give **615 new readout records**; nine required an additional top-200 readout to obtain all candidates. Shared native scores did not change on expansion. All **216 unique conditions** had identical returned state probabilities across repeats.
+
+| Qwen comparison | Letters | Numbers | Unmarked semantic answers |
+|---|---:|---:|---:|
+| Median assignment spread (percentage points) | 14.34 | 7.70 | Not applicable |
+| Largest assignment spread | 24.78 | 23.61 | Not applicable |
+| Cases changing verdict under assignments | 1/12 | 0/12 | Not applicable |
+| Median definition-order spread | 16.36 | 17.67 | 6.29 |
+| Largest definition-order spread | 40.53 | 48.14 | 39.94 |
+| Cases changing verdict under order | 2/12 | 1/12 | 1/12 |
+
+Numbers reduce assignment sensitivity on ten of twelve cases, while definition order remains a problem. Semantic answers improve typical order sensitivity and share the same canonical verdicts as the two coded formats on all twelve cases, but retain a large worst case and one order-induced verdict change. Median logit-margin variation also supports these typical improvements, so the analysis does not rely only on visually flatter percentages. This is evidence of partial robustness gains, not an independently validated accuracy or calibration improvement.
+
+The semantic response vocabulary is `none/support/opposition/both`, with meaningful state names embedded in otherwise unmarked definition sentences. The initially proposed `neither` was two tokens. Before any scored review, it was changed to the equivalent one-token `none`; the first preflight failure is retained. All response strings then passed tokenization, and all scored responses complied exactly. No grammar or logit bias forced the choices.
+
+**Gemma required no new inference.** The existing 64 direct readouts (48 unique inputs, sixteen repeat pairs), 624 native readouts and T=1,2,4,6,8 grid were evaluated offline. Every direct repeat pair remains identical at every temperature and winners do not change. At T=4, mean winning probability is **93.57%**, compared with **99.90%** at T=1; maximum letter-mapping spread rises from **1.16 to 14.20 percentage points**. K01's opposition probability ranges from 68.20% to 82.40% across mappings at T=4, retaining the earlier attribution-error verdict.
+
+This sharpens the earlier interpretation: Gemma's raw percentages and verdicts looked less sensitive, while saturation compressed changes in its underlying preferences. Softening reveals those changes; it does not provide calibrated certainty or resolve mapping bias. The distributions contain case-specific information beyond fixed label smoothing, but its training value is untested. Four-mapping averages are exported as comparison artifacts rather than adopted targets.
+
+The evaluation also finds that omitted top-20 alternatives become consequential when softened: native state-probability bounds can be 3.02 points wide at T=4, and wider at larger temperatures. Use the full four captured logits, not rounded percentages or zero-filled omissions. Native cached repeat variation and deterministic direct-backend results remain separate conditions.
+
+The owned Qwen pod was terminated after about fourteen minutes; estimated compute **$0.63** at the observed $2.69/hour. All downloaded archive/file hashes were verified before deletion, and the post-termination pod list was empty. No production pipeline or final probability-supervision scheme was changed.

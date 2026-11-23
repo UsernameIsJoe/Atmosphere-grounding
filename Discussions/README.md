@@ -1,5 +1,7 @@
 # Discussions
 
+**Executed alternatives and softening evaluation (November 23):** [Qwen numbers/semantic answers and offline Gemma evaluation](../research_audit/stage1a_probability_formats_12_2026-11-23/README.md) — existing cold letter observations reused, missing baselines and new orders added; 615 new Qwen readouts plus nine expanded top-k calls, zero new Gemma calls. Numbers and semantic answers improve typical sensitivity, with large remaining order effects. Gemma softening exposes previously compressed letter sensitivity.
+
 **Executed repeatability and logits test (November 23):** [Report, charts, code and raw results](../research_audit/stage1a_probability_repeatability_12_2026-11-23/README.md) — 1,248 native readouts on the same 12 reviews, 240 cache-control calls and 64 direct Gemma passes. Qwen's letter effect survives deterministic full recomputation; disabling cache reuse stabilized the tested prompts. Undoing Gemma's soft-cap did not soften its probabilities.
 
 Research brief materials and design-session outputs for **Atmosphere Grounding**.

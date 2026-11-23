@@ -1,5 +1,7 @@
 # Native probability repeatability, label mapping and Gemma logits
 
+**Evaluated follow-up:** [Qwen numbers/semantic words and Gemma temperature evaluation](../stage1a_probability_formats_12_2026-11-23/README.md) reuses this report's cold letter results and Gemma logits. It adds matched missing baselines/new option orders and shows partial format improvements, remaining order sensitivity and Gemma sensitivity unmasked by softening.
+
 **Executed November 23, 2026.** Same twelve real source reviews/target segments as the preceding [calm probability pilot](../stage1a_calm_probability_12_2026-11-23/README.md); calm only. These repeated measurements do not add independent review samples. The wider project remains weakly tied image–text emotion grounding, beyond this pilot.
 
 ## Findings

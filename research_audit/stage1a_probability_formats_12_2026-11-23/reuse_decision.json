@@ -1,0 +1,19 @@
+{
+  "reuse_old_cold_baselines": true,
+  "anchors": [
+    {
+      "case_id": "K01",
+      "max_probability_gap": 0.0
+    },
+    {
+      "case_id": "K06",
+      "max_probability_gap": 0.0
+    },
+    {
+      "case_id": "U06",
+      "max_probability_gap": 0.0
+    }
+  ],
+  "tolerance_absolute": 0.0001,
+  "qualification": "Engineering threshold for cross-runtime data reuse, not a semantic confidence tolerance."
+}

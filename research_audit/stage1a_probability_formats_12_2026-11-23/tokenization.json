@@ -1,0 +1,98 @@
+{
+  "A": {
+    "tokens": [
+      {
+        "id": 32,
+        "piece": "A"
+      }
+    ]
+  },
+  "B": {
+    "tokens": [
+      {
+        "id": 33,
+        "piece": "B"
+      }
+    ]
+  },
+  "C": {
+    "tokens": [
+      {
+        "id": 34,
+        "piece": "C"
+      }
+    ]
+  },
+  "D": {
+    "tokens": [
+      {
+        "id": 35,
+        "piece": "D"
+      }
+    ]
+  },
+  "1": {
+    "tokens": [
+      {
+        "id": 16,
+        "piece": "1"
+      }
+    ]
+  },
+  "2": {
+    "tokens": [
+      {
+        "id": 17,
+        "piece": "2"
+      }
+    ]
+  },
+  "3": {
+    "tokens": [
+      {
+        "id": 18,
+        "piece": "3"
+      }
+    ]
+  },
+  "4": {
+    "tokens": [
+      {
+        "id": 19,
+        "piece": "4"
+      }
+    ]
+  },
+  "none": {
+    "tokens": [
+      {
+        "id": 6487,
+        "piece": "none"
+      }
+    ]
+  },
+  "support": {
+    "tokens": [
+      {
+        "id": 22637,
+        "piece": "support"
+      }
+    ]
+  },
+  "opposition": {
+    "tokens": [
+      {
+        "id": 209926,
+        "piece": "opposition"
+      }
+    ]
+  },
+  "both": {
+    "tokens": [
+      {
+        "id": 20385,
+        "piece": "both"
+      }
+    ]
+  }
+}

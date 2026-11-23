@@ -1,5 +1,7 @@
 # Model probability stability, stabilization and logits — November 23, 2026
 
+**Further executed follow-up:** [Qwen response alternatives and Gemma softened-score evaluation](../research_audit/stage1a_probability_formats_12_2026-11-23/README.md) tests numbers and semantic answers, separates definition order from code assignment, and evaluates Gemma entirely from saved scores. Its raw saturation had concealed substantial mapping sensitivity after softening.
+
 **Executed follow-up:** [Same-checkpoint repeatability, cache control and direct logits](../research_audit/stage1a_probability_repeatability_12_2026-11-23/README.md) now tests these proposals with ten main repetitions plus three after reload, four letter mappings, 240 supplementary cache calls and 64 Gemma direct passes. The original-pilot caveat below describes the earlier experiment; the new report provides the missing repeat baseline.
 
 **Status: literature-informed discussion remark.** This records the follow-up to the [calm probability pilot](../research_audit/stage1a_calm_probability_12_2026-11-23/README.md) and the [three-point probability/embedding/NLI remark](research-discussion-2026-11-19.md#9-november-23-follow-up). The stabilization methods and acceptance criterion below are proposals. No additional model inference, backend migration, calibration, model selection or training was executed for this follow-up.
@@ -136,3 +138,10 @@ The [new report](../research_audit/stage1a_probability_repeatability_12_2026-11-
 Gemma's corresponding main-phase values were 1.21 points between mapping means and 1.55 within identical requests, while saturation concealed logit-margin movement. Direct capped logits from the same BF16 GGUF agreed with all 64 native chosen states and verified c=30 metadata. Analytic inversion was valid for the four code scores in all 64 passes, and removing the cap never softened the winning probability. This is a finite-precision reconstruction, not an internal pre-cap hook; probabilities alone still cannot uniquely recover absolute pre-cap scores.
 
 The report records API/backend distinctions, missing-alternative bounds and legacy raw-field caveats, backend alignment, temperature sensitivity, source-byte recovery, raw artifacts and verified pod termination. Calibration and downstream usefulness remain separate experiments.
+
+
+## Response alternatives and softening: evaluated follow-up
+
+The [new evaluation](../research_audit/stage1a_probability_formats_12_2026-11-23/README.md) reuses existing cold letter records, verifies identical runtime anchors, and adds only missing/new Qwen conditions. Number labels reduce median assignment spread from 14.34 to 7.70 points, and semantic answers reduce median order spread from 16.36 to 6.29 points. Worst-case order spreads remain 48.14 points for numbers and 39.94 for semantic words, including verdict changes. All cold repetitions return identical native state scores, so this is prompt sensitivity rather than observed repeat noise.
+
+Gemma's existing direct repeat pairs remain identical under every saved scoring temperature. However, T=4 changes its largest letter-mapping spread from 1.16 to 14.20 points, exposing variation hidden by saturation. The result supports preserving full logits and evaluating tempered/averaged targets; it does not validate a temperature or probability-based emotion supervision. Native top-20 omissions also need interval treatment after softening. No new Gemma inference was required.

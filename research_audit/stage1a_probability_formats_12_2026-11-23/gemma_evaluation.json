@@ -1,0 +1,482 @@
+{
+  "source_commit": "5557db9fe857438bda336b9cd1eb4c79b1fcde5e",
+  "new_model_calls": 0,
+  "direct_readouts": 64,
+  "unique_direct_inputs": 48,
+  "direct_repeat_pairs": 16,
+  "native_readouts": 624,
+  "max_saved_distribution_reconstruction_error": 0.0,
+  "temperatures": [
+    {
+      "temperature": 1.0,
+      "unique_inputs": 48,
+      "mean_winning_probability": 0.9990461869417722,
+      "min_winning_probability": 0.98799399791028,
+      "max_winning_probability": 0.9999999997619338,
+      "winning_probability_ge_99_9_count": 42,
+      "mean_entropy_nats": 0.005530343227848593,
+      "mean_effective_class_count": 1.0056750648833506,
+      "max_mapping_probability_spread_pp": 1.1643276193238794,
+      "mapping_case_details": [
+        {
+          "case_id": "K01",
+          "max_mapping_spread_pp": 1.1643276193238794,
+          "winning_probability_min": 0.98799399791028,
+          "winning_probability_max": 0.9996372741035188
+        },
+        {
+          "case_id": "K02",
+          "max_mapping_spread_pp": 2.6950031098852153e-05,
+          "winning_probability_min": 0.9999997193011105,
+          "winning_probability_max": 0.9999999858060309
+        },
+        {
+          "case_id": "K03",
+          "max_mapping_spread_pp": 5.915638268128021e-06,
+          "winning_probability_min": 0.9999999369418009,
+          "winning_probability_max": 0.9999999960981836
+        },
+        {
+          "case_id": "K04",
+          "max_mapping_spread_pp": 0.0008389652573326245,
+          "winning_probability_min": 0.9999915383354337,
+          "winning_probability_max": 0.9999999279880071
+        },
+        {
+          "case_id": "K05",
+          "max_mapping_spread_pp": 0.00019441963406974239,
+          "winning_probability_min": 0.9999975890670264,
+          "winning_probability_max": 0.9999995332633671
+        },
+        {
+          "case_id": "K06",
+          "max_mapping_spread_pp": 0.9386283811412266,
+          "winning_probability_min": 0.9902810552107121,
+          "winning_probability_max": 0.9996673390221243
+        },
+        {
+          "case_id": "U01",
+          "max_mapping_spread_pp": 1.1896848950421202e-06,
+          "winning_probability_min": 0.9999999878650848,
+          "winning_probability_max": 0.9999999997619338
+        },
+        {
+          "case_id": "U02",
+          "max_mapping_spread_pp": 1.342022026840084e-06,
+          "winning_probability_min": 0.9999999861871685,
+          "winning_probability_max": 0.9999999996073887
+        },
+        {
+          "case_id": "U03",
+          "max_mapping_spread_pp": 1.5323689412114989e-06,
+          "winning_probability_min": 0.9999999843630138,
+          "winning_probability_max": 0.9999999996817006
+        },
+        {
+          "case_id": "U04",
+          "max_mapping_spread_pp": 1.0385654669597955e-06,
+          "winning_probability_min": 0.9999999891925803,
+          "winning_probability_max": 0.9999999995782349
+        },
+        {
+          "case_id": "U05",
+          "max_mapping_spread_pp": 2.2824856116265835e-06,
+          "winning_probability_min": 0.9999999767394888,
+          "winning_probability_max": 0.9999999995643449
+        },
+        {
+          "case_id": "U06",
+          "max_mapping_spread_pp": 0.0127451223464136,
+          "winning_probability_min": 0.9998715168465915,
+          "winning_probability_max": 0.9999989363643387
+        }
+      ],
+      "max_direct_repeat_probability_difference_pp": 0.0,
+      "native_repeat_range_lower_pp": 1.546363816810221,
+      "native_repeat_range_upper_pp": 1.546363816810221,
+      "native_complete_groups": 30,
+      "native_complete_group_max_repeat_range_pp": 1.546363816810221,
+      "max_native_missingness_interval_width_pp": 7.172758331730478e-06,
+      "matched_uniform_label_smoothing_epsilon": 0.0012717507443037828,
+      "mean_total_variation_from_matched_label_smoothing": 0.0017116409618311117,
+      "max_total_variation_from_matched_label_smoothing": 0.011624494412582237
+    },
+    {
+      "temperature": 2.0,
+      "unique_inputs": 48,
+      "mean_winning_probability": 0.9886047477221891,
+      "min_winning_probability": 0.8929689690634782,
+      "max_winning_probability": 0.9999816007604642,
+      "winning_probability_ge_99_9_count": 31,
+      "mean_entropy_nats": 0.04535492243062322,
+      "mean_effective_class_count": 1.051637620358594,
+      "max_mapping_probability_spread_pp": 8.532006473333098,
+      "mapping_case_details": [
+        {
+          "case_id": "K01",
+          "max_mapping_spread_pp": 8.532006473333098,
+          "winning_probability_min": 0.8929689690634782,
+          "winning_probability_max": 0.9782890337968092
+        },
+        {
+          "case_id": "K02",
+          "max_mapping_spread_pp": 0.04691159097394085,
+          "winning_probability_min": 0.9993738439634843,
+          "winning_probability_max": 0.9998373783720038
+        },
+        {
+          "case_id": "K03",
+          "max_mapping_spread_pp": 0.02665678278097605,
+          "winning_probability_min": 0.9996620329932704,
+          "winning_probability_max": 0.9999286008210801
+        },
+        {
+          "case_id": "K04",
+          "max_mapping_spread_pp": 0.2969222428881313,
+          "winning_probability_min": 0.996646900467199,
+          "winning_probability_max": 0.9996161228960803
+        },
+        {
+          "case_id": "K05",
+          "max_mapping_spread_pp": 0.13688020897707487,
+          "winning_probability_min": 0.9976443560602951,
+          "winning_probability_max": 0.9990131581500659
+        },
+        {
+          "case_id": "K06",
+          "max_mapping_spread_pp": 7.298633675910848,
+          "winning_probability_min": 0.9078955599093053,
+          "winning_probability_max": 0.9808818966684137
+        },
+        {
+          "case_id": "U01",
+          "max_mapping_spread_pp": 0.014012476226665793,
+          "winning_probability_min": 0.9998414759981975,
+          "winning_probability_max": 0.9999816007604642
+        },
+        {
+          "case_id": "U02",
+          "max_mapping_spread_pp": 0.014237846259890219,
+          "winning_probability_min": 0.9998343966617986,
+          "winning_probability_max": 0.9999767751243975
+        },
+        {
+          "case_id": "U03",
+          "max_mapping_spread_pp": 0.012522980210527557,
+          "winning_probability_min": 0.9998532138656578,
+          "winning_probability_max": 0.9999784436677631
+        },
+        {
+          "case_id": "U04",
+          "max_mapping_spread_pp": 0.012734819889925753,
+          "winning_probability_min": 0.9998491715032612,
+          "winning_probability_max": 0.9999765197021605
+        },
+        {
+          "case_id": "U05",
+          "max_mapping_spread_pp": 0.01865533229650218,
+          "winning_probability_min": 0.9997892761886586,
+          "winning_probability_max": 0.9999758295116237
+        },
+        {
+          "case_id": "U06",
+          "max_mapping_spread_pp": 1.0222598145441064,
+          "winning_probability_min": 0.988467893896345,
+          "winning_probability_max": 0.9986734949998293
+        }
+      ],
+      "max_direct_repeat_probability_difference_pp": 0.0,
+      "native_repeat_range_lower_pp": 4.228624711005518,
+      "native_repeat_range_upper_pp": 4.228624711005518,
+      "native_complete_groups": 30,
+      "native_complete_group_max_repeat_range_pp": 4.228624711005518,
+      "max_native_missingness_interval_width_pp": 0.034913593238250495,
+      "matched_uniform_label_smoothing_epsilon": 0.015193669703747878,
+      "mean_total_variation_from_matched_label_smoothing": 0.018519395913286146,
+      "max_total_variation_from_matched_label_smoothing": 0.09746649191532486
+    },
+    {
+      "temperature": 4.0,
+      "unique_inputs": 48,
+      "mean_winning_probability": 0.9357068689959979,
+      "min_winning_probability": 0.6819693458459569,
+      "max_winning_probability": 0.9937458718900587,
+      "winning_probability_ge_99_9_count": 0,
+      "mean_entropy_nats": 0.2423539561753506,
+      "mean_effective_class_count": 1.3078936151856773,
+      "max_mapping_probability_spread_pp": 14.200043808217877,
+      "mapping_case_details": [
+        {
+          "case_id": "K01",
+          "max_mapping_spread_pp": 14.200043808217877,
+          "winning_probability_min": 0.6819693458459569,
+          "winning_probability_max": 0.8239697839281357
+        },
+        {
+          "case_id": "K02",
+          "max_mapping_spread_pp": 1.603259919662725,
+          "winning_probability_min": 0.9649324173367888,
+          "winning_probability_max": 0.9809650165334161
+        },
+        {
+          "case_id": "K03",
+          "max_mapping_spread_pp": 1.5496622372303204,
+          "winning_probability_min": 0.9727459526964487,
+          "winning_probability_max": 0.9882425750687519
+        },
+        {
+          "case_id": "K04",
+          "max_mapping_spread_pp": 4.552621232326748,
+          "winning_probability_min": 0.9247662329332713,
+          "winning_probability_max": 0.9702924452565388
+        },
+        {
+          "case_id": "K05",
+          "max_mapping_spread_pp": 2.676291741149184,
+          "winning_probability_min": 0.9262786474691986,
+          "winning_probability_max": 0.9530415648806905
+        },
+        {
+          "case_id": "K06",
+          "max_mapping_spread_pp": 12.770397164792701,
+          "winning_probability_min": 0.7226092487579596,
+          "winning_probability_max": 0.8503132204058866
+        },
+        {
+          "case_id": "U01",
+          "max_mapping_spread_pp": 1.3211963628284806,
+          "winning_probability_min": 0.9805339082617739,
+          "winning_probability_max": 0.9937458718900587
+        },
+        {
+          "case_id": "U02",
+          "max_mapping_spread_pp": 1.2780661121047254,
+          "winning_probability_min": 0.9803252781345398,
+          "winning_probability_max": 0.9931059392555871
+        },
+        {
+          "case_id": "U03",
+          "max_mapping_spread_pp": 1.0705079544206741,
+          "winning_probability_min": 0.9825512640079036,
+          "winning_probability_max": 0.9932563435521103
+        },
+        {
+          "case_id": "U04",
+          "max_mapping_spread_pp": 1.2142939603295044,
+          "winning_probability_min": 0.9810281021846341,
+          "winning_probability_max": 0.9931710417879291
+        },
+        {
+          "case_id": "U05",
+          "max_mapping_spread_pp": 1.45473159189492,
+          "winning_probability_min": 0.9784635133069524,
+          "winning_probability_max": 0.9930108292259016
+        },
+        {
+          "case_id": "U06",
+          "max_mapping_spread_pp": 6.439801784062304,
+          "winning_probability_min": 0.8838720379217253,
+          "winning_probability_max": 0.9482276017072776
+        }
+      ],
+      "max_direct_repeat_probability_difference_pp": 0.0,
+      "native_repeat_range_lower_pp": 4.014643471528484,
+      "native_repeat_range_upper_pp": 4.014643471528484,
+      "native_complete_groups": 30,
+      "native_complete_group_max_repeat_range_pp": 4.014643471528484,
+      "max_native_missingness_interval_width_pp": 3.01798048321007,
+      "matched_uniform_label_smoothing_epsilon": 0.08572417467200284,
+      "mean_total_variation_from_matched_label_smoothing": 0.06416037592628708,
+      "max_total_variation_from_matched_label_smoothing": 0.25373752315004094
+    },
+    {
+      "temperature": 6.0,
+      "unique_inputs": 48,
+      "mean_winning_probability": 0.8458402374395263,
+      "min_winning_probability": 0.5534750638193439,
+      "max_winning_probability": 0.9550880579529281,
+      "winning_probability_ge_99_9_count": 0,
+      "mean_entropy_nats": 0.5348851576615673,
+      "mean_effective_class_count": 1.7573128600813372,
+      "max_mapping_probability_spread_pp": 11.814510508872978,
+      "mapping_case_details": [
+        {
+          "case_id": "K01",
+          "max_mapping_spread_pp": 11.814510508872978,
+          "winning_probability_min": 0.5534750638193439,
+          "winning_probability_max": 0.6716201689080736
+        },
+        {
+          "case_id": "K02",
+          "max_mapping_spread_pp": 4.5626965019731625,
+          "winning_probability_min": 0.8636110348463143,
+          "winning_probability_max": 0.9092379998660459
+        },
+        {
+          "case_id": "K03",
+          "max_mapping_spread_pp": 4.7179681305916095,
+          "winning_probability_min": 0.8866720029492113,
+          "winning_probability_max": 0.9338516842551274
+        },
+        {
+          "case_id": "K04",
+          "max_mapping_spread_pp": 8.225832350982243,
+          "winning_probability_min": 0.7975496087541054,
+          "winning_probability_max": 0.8798079322639278
+        },
+        {
+          "case_id": "K05",
+          "max_mapping_spread_pp": 5.2001603605731095,
+          "winning_probability_min": 0.791914609457831,
+          "winning_probability_max": 0.8412412986788397
+        },
+        {
+          "case_id": "K06",
+          "max_mapping_spread_pp": 11.58545729990631,
+          "winning_probability_min": 0.5970518073236053,
+          "winning_probability_max": 0.7129063803226684
+        },
+        {
+          "case_id": "U01",
+          "max_mapping_spread_pp": 4.826453221458504,
+          "winning_probability_min": 0.906823525738343,
+          "winning_probability_max": 0.9550880579529281
+        },
+        {
+          "case_id": "U02",
+          "max_mapping_spread_pp": 4.599088945062224,
+          "winning_probability_min": 0.9065231620566768,
+          "winning_probability_max": 0.9525140515072991
+        },
+        {
+          "case_id": "U03",
+          "max_mapping_spread_pp": 3.903678753372186,
+          "winning_probability_min": 0.9140071617112892,
+          "winning_probability_max": 0.953043949245011
+        },
+        {
+          "case_id": "U04",
+          "max_mapping_spread_pp": 4.456254086621236,
+          "winning_probability_min": 0.9083909340703055,
+          "winning_probability_max": 0.9529534749365178
+        },
+        {
+          "case_id": "U05",
+          "max_mapping_spread_pp": 4.978604303020018,
+          "winning_probability_min": 0.9023592211889586,
+          "winning_probability_max": 0.9521452642191588
+        },
+        {
+          "case_id": "U06",
+          "max_mapping_spread_pp": 8.583859401966713,
+          "winning_probability_min": 0.7511853064361473,
+          "winning_probability_max": 0.8343161095578632
+        }
+      ],
+      "max_direct_repeat_probability_difference_pp": 0.0,
+      "native_repeat_range_lower_pp": 3.2084625984038495,
+      "native_repeat_range_upper_pp": 12.487126167108132,
+      "native_complete_groups": 30,
+      "native_complete_group_max_repeat_range_pp": 3.2084625984038495,
+      "max_native_missingness_interval_width_pp": 12.487126167108132,
+      "matched_uniform_label_smoothing_epsilon": 0.2055463500806316,
+      "mean_total_variation_from_matched_label_smoothing": 0.09119921501808104,
+      "max_total_variation_from_matched_label_smoothing": 0.2923651736201825
+    },
+    {
+      "temperature": 8.0,
+      "unique_inputs": 48,
+      "mean_winning_probability": 0.7502912967074558,
+      "min_winning_probability": 0.4787353295802783,
+      "max_winning_probability": 0.8844815829575423,
+      "winning_probability_ge_99_9_count": 0,
+      "mean_entropy_nats": 0.7847508995923148,
+      "mean_effective_class_count": 2.235958062625682,
+      "max_mapping_probability_spread_pp": 9.582640650565288,
+      "mapping_case_details": [
+        {
+          "case_id": "K01",
+          "max_mapping_spread_pp": 9.152665637109624,
+          "winning_probability_min": 0.4787353295802783,
+          "winning_probability_max": 0.5702619859513746
+        },
+        {
+          "case_id": "K02",
+          "max_mapping_spread_pp": 6.115280380784293,
+          "winning_probability_min": 0.7521854946306591,
+          "winning_probability_max": 0.813338298438502
+        },
+        {
+          "case_id": "K03",
+          "max_mapping_spread_pp": 6.667378993907236,
+          "winning_probability_min": 0.7833299793963557,
+          "winning_probability_max": 0.8500037693354281
+        },
+        {
+          "case_id": "K04",
+          "max_mapping_spread_pp": 8.842895887045222,
+          "winning_probability_min": 0.6857676373119436,
+          "winning_probability_max": 0.7741965961823958
+        },
+        {
+          "case_id": "K05",
+          "max_mapping_spread_pp": 6.303477702686494,
+          "winning_probability_min": 0.6756726988036235,
+          "winning_probability_max": 0.7284159439118992
+        },
+        {
+          "case_id": "K06",
+          "max_mapping_spread_pp": 9.582640650565288,
+          "winning_probability_min": 0.5173868862089502,
+          "winning_probability_max": 0.6132132927146031
+        },
+        {
+          "case_id": "U01",
+          "max_mapping_spread_pp": 7.541883228239743,
+          "winning_probability_min": 0.8090627506751449,
+          "winning_probability_max": 0.8844815829575423
+        },
+        {
+          "case_id": "U02",
+          "max_mapping_spread_pp": 7.134739808440416,
+          "winning_probability_min": 0.8088995852005847,
+          "winning_probability_max": 0.8802469832849888
+        },
+        {
+          "case_id": "U03",
+          "max_mapping_spread_pp": 6.223417364765403,
+          "winning_probability_min": 0.8196858988259255,
+          "winning_probability_max": 0.8810823240620752
+        },
+        {
+          "case_id": "U04",
+          "max_mapping_spread_pp": 6.981242017446554,
+          "winning_probability_min": 0.8113158724845956,
+          "winning_probability_max": 0.8811282926590611
+        },
+        {
+          "case_id": "U05",
+          "max_mapping_spread_pp": 7.535815111674971,
+          "winning_probability_min": 0.8042718454920461,
+          "winning_probability_max": 0.8796299966087958
+        },
+        {
+          "case_id": "U06",
+          "max_mapping_spread_pp": 8.301712963080094,
+          "winning_probability_min": 0.6462308164014774,
+          "winning_probability_max": 0.7223627866062808
+        }
+      ],
+      "max_direct_repeat_probability_difference_pp": 0.0,
+      "native_repeat_range_lower_pp": 2.6086472684835216,
+      "native_repeat_range_upper_pp": 23.40355545152012,
+      "native_complete_groups": 30,
+      "native_complete_group_max_repeat_range_pp": 2.6086472684835216,
+      "max_native_missingness_interval_width_pp": 23.40355545152012,
+      "matched_uniform_label_smoothing_epsilon": 0.33294493772339234,
+      "mean_total_variation_from_matched_label_smoothing": 0.09747675211749111,
+      "max_total_variation_from_matched_label_smoothing": 0.27155596712717733
+    }
+  ],
+  "qualification": "Descriptive reuse of development cases. No independent gold set, calibrated temperature selection or downstream training validation. Native softened distributions use intervals for missing codes, rather than zero imputation."
+}

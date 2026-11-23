@@ -1,0 +1,393 @@
+{
+  "new_readouts": 615,
+  "reused_readouts": 120,
+  "unique_conditions": 216,
+  "formats": {
+    "letters": {
+      "conditions": 84,
+      "readouts": 336,
+      "valid_exact_response_count": 336,
+      "complete_four_state_readouts": 336,
+      "mean_candidate_mass": 0.9980925924059626,
+      "min_candidate_mass": 0.9687397859571004,
+      "max_repeat_range_upper_pp": 0.0,
+      "repeat_state_flip_groups": 0,
+      "groups_with_identical_native_state_scores": 84,
+      "families": {
+        "assignment": {
+          "max_spread_lower_pp": 24.781866820677905,
+          "max_spread_upper_pp": 24.781866820677905,
+          "median_case_spread_upper_pp": 14.342600084122065,
+          "cases_with_changed_states": 1,
+          "median_canonical_winner_logit_margin_range": 1.0366173293441534,
+          "max_canonical_winner_logit_margin_range": 1.4907167851924896
+        },
+        "order": {
+          "max_spread_lower_pp": 40.52883299565357,
+          "max_spread_upper_pp": 40.52883299565357,
+          "median_case_spread_upper_pp": 16.35519791932355,
+          "cases_with_changed_states": 2,
+          "median_canonical_winner_logit_margin_range": 1.685710915364325,
+          "max_canonical_winner_logit_margin_range": 2.051389775238931
+        }
+      }
+    },
+    "numbers": {
+      "conditions": 84,
+      "readouts": 252,
+      "valid_exact_response_count": 252,
+      "complete_four_state_readouts": 252,
+      "mean_candidate_mass": 0.9964220260628043,
+      "min_candidate_mass": 0.9785019010857073,
+      "max_repeat_range_upper_pp": 0.0,
+      "repeat_state_flip_groups": 0,
+      "groups_with_identical_native_state_scores": 84,
+      "families": {
+        "assignment": {
+          "max_spread_lower_pp": 23.609475897684096,
+          "max_spread_upper_pp": 23.609475897684096,
+          "median_case_spread_upper_pp": 7.696170591834602,
+          "cases_with_changed_states": 0,
+          "median_canonical_winner_logit_margin_range": 0.6631602216511965,
+          "max_canonical_winner_logit_margin_range": 1.4526520371437073
+        },
+        "order": {
+          "max_spread_lower_pp": 48.13638900421288,
+          "max_spread_upper_pp": 48.13638900421288,
+          "median_case_spread_upper_pp": 17.667919112477072,
+          "cases_with_changed_states": 1,
+          "median_canonical_winner_logit_margin_range": 2.332219149917364,
+          "max_canonical_winner_logit_margin_range": 4.212516573781613
+        }
+      }
+    },
+    "text": {
+      "conditions": 48,
+      "readouts": 144,
+      "valid_exact_response_count": 144,
+      "complete_four_state_readouts": 144,
+      "mean_candidate_mass": 0.967514518520385,
+      "min_candidate_mass": 0.8623483880419064,
+      "max_repeat_range_upper_pp": 0.0,
+      "repeat_state_flip_groups": 0,
+      "groups_with_identical_native_state_scores": 48,
+      "families": {
+        "order": {
+          "max_spread_lower_pp": 39.93657408756191,
+          "max_spread_upper_pp": 39.93657408756191,
+          "median_case_spread_upper_pp": 6.285330396011869,
+          "cases_with_changed_states": 1,
+          "median_canonical_winner_logit_margin_range": 1.016206892207265,
+          "max_canonical_winner_logit_margin_range": 2.011289682239294
+        }
+      }
+    }
+  },
+  "numbers_vs_letters": [
+    {
+      "family": "assignment",
+      "case_id": "K01",
+      "numbers_less_sensitive": false,
+      "letters_spread_pp": 19.961908064512862,
+      "numbers_spread_pp": 21.777930276239992
+    },
+    {
+      "family": "assignment",
+      "case_id": "K02",
+      "numbers_less_sensitive": true,
+      "letters_spread_pp": 14.827624407160334,
+      "numbers_spread_pp": 12.866730152427092
+    },
+    {
+      "family": "assignment",
+      "case_id": "K03",
+      "numbers_less_sensitive": true,
+      "letters_spread_pp": 13.857575761083796,
+      "numbers_spread_pp": 9.629841526214944
+    },
+    {
+      "family": "assignment",
+      "case_id": "K04",
+      "numbers_less_sensitive": true,
+      "letters_spread_pp": 15.436310955514966,
+      "numbers_spread_pp": 6.155576913421937
+    },
+    {
+      "family": "assignment",
+      "case_id": "K05",
+      "numbers_less_sensitive": false,
+      "letters_spread_pp": 17.994232262851728,
+      "numbers_spread_pp": 23.609475897684096
+    },
+    {
+      "family": "assignment",
+      "case_id": "K06",
+      "numbers_less_sensitive": true,
+      "letters_spread_pp": 22.933357168562548,
+      "numbers_spread_pp": 9.236764270247267
+    },
+    {
+      "family": "assignment",
+      "case_id": "U01",
+      "numbers_less_sensitive": true,
+      "letters_spread_pp": 7.119779609704535,
+      "numbers_spread_pp": 4.950907176077957
+    },
+    {
+      "family": "assignment",
+      "case_id": "U02",
+      "numbers_less_sensitive": true,
+      "letters_spread_pp": 4.132706077283377,
+      "numbers_spread_pp": 2.951828373268728
+    },
+    {
+      "family": "assignment",
+      "case_id": "U03",
+      "numbers_less_sensitive": true,
+      "letters_spread_pp": 2.660982700416677,
+      "numbers_spread_pp": 2.438019192901808
+    },
+    {
+      "family": "assignment",
+      "case_id": "U04",
+      "numbers_less_sensitive": true,
+      "letters_spread_pp": 3.520225814639233,
+      "numbers_spread_pp": 0.9663231574742914
+    },
+    {
+      "family": "assignment",
+      "case_id": "U05",
+      "numbers_less_sensitive": true,
+      "letters_spread_pp": 6.495304350950559,
+      "numbers_spread_pp": 3.621594445830756
+    },
+    {
+      "family": "assignment",
+      "case_id": "U06",
+      "numbers_less_sensitive": true,
+      "letters_spread_pp": 24.781866820677905,
+      "numbers_spread_pp": 23.07484659145523
+    },
+    {
+      "family": "order",
+      "case_id": "K01",
+      "numbers_less_sensitive": false,
+      "letters_spread_pp": 34.00903154312103,
+      "numbers_spread_pp": 47.25290791336589
+    },
+    {
+      "family": "order",
+      "case_id": "K02",
+      "numbers_less_sensitive": true,
+      "letters_spread_pp": 22.552825155877944,
+      "numbers_spread_pp": 18.64669918938937
+    },
+    {
+      "family": "order",
+      "case_id": "K03",
+      "numbers_less_sensitive": false,
+      "letters_spread_pp": 20.51865761666062,
+      "numbers_spread_pp": 21.686427207221893
+    },
+    {
+      "family": "order",
+      "case_id": "K04",
+      "numbers_less_sensitive": false,
+      "letters_spread_pp": 5.8999897695899115,
+      "numbers_spread_pp": 16.68913903556477
+    },
+    {
+      "family": "order",
+      "case_id": "K05",
+      "numbers_less_sensitive": true,
+      "letters_spread_pp": 33.05927603181479,
+      "numbers_spread_pp": 32.18598791312978
+    },
+    {
+      "family": "order",
+      "case_id": "K06",
+      "numbers_less_sensitive": true,
+      "letters_spread_pp": 40.52883299565357,
+      "numbers_spread_pp": 37.021245462392095
+    },
+    {
+      "family": "order",
+      "case_id": "U01",
+      "numbers_less_sensitive": true,
+      "letters_spread_pp": 12.191738221986482,
+      "numbers_spread_pp": 9.27541826194439
+    },
+    {
+      "family": "order",
+      "case_id": "U02",
+      "numbers_less_sensitive": true,
+      "letters_spread_pp": 7.229764167258123,
+      "numbers_spread_pp": 5.527375100311183
+    },
+    {
+      "family": "order",
+      "case_id": "U03",
+      "numbers_less_sensitive": false,
+      "letters_spread_pp": 5.840099121908393,
+      "numbers_spread_pp": 9.83545749464087
+    },
+    {
+      "family": "order",
+      "case_id": "U04",
+      "numbers_less_sensitive": true,
+      "letters_spread_pp": 7.188212213121615,
+      "numbers_spread_pp": 2.739739180769085
+    },
+    {
+      "family": "order",
+      "case_id": "U05",
+      "numbers_less_sensitive": true,
+      "letters_spread_pp": 11.336692575917162,
+      "numbers_spread_pp": 8.580834716470553
+    },
+    {
+      "family": "order",
+      "case_id": "U06",
+      "numbers_less_sensitive": false,
+      "letters_spread_pp": 25.13804427708185,
+      "numbers_spread_pp": 48.13638900421288
+    }
+  ],
+  "canonical_states": {
+    "K01": {
+      "letters": [
+        "neither"
+      ],
+      "numbers": [
+        "neither"
+      ],
+      "text": [
+        "neither"
+      ]
+    },
+    "K02": {
+      "letters": [
+        "neither"
+      ],
+      "numbers": [
+        "neither"
+      ],
+      "text": [
+        "neither"
+      ]
+    },
+    "K03": {
+      "letters": [
+        "neither"
+      ],
+      "numbers": [
+        "neither"
+      ],
+      "text": [
+        "neither"
+      ]
+    },
+    "K04": {
+      "letters": [
+        "support_only"
+      ],
+      "numbers": [
+        "support_only"
+      ],
+      "text": [
+        "support_only"
+      ]
+    },
+    "K05": {
+      "letters": [
+        "neither"
+      ],
+      "numbers": [
+        "neither"
+      ],
+      "text": [
+        "neither"
+      ]
+    },
+    "K06": {
+      "letters": [
+        "opposition_only"
+      ],
+      "numbers": [
+        "opposition_only"
+      ],
+      "text": [
+        "opposition_only"
+      ]
+    },
+    "U01": {
+      "letters": [
+        "neither"
+      ],
+      "numbers": [
+        "neither"
+      ],
+      "text": [
+        "neither"
+      ]
+    },
+    "U02": {
+      "letters": [
+        "neither"
+      ],
+      "numbers": [
+        "neither"
+      ],
+      "text": [
+        "neither"
+      ]
+    },
+    "U03": {
+      "letters": [
+        "opposition_only"
+      ],
+      "numbers": [
+        "opposition_only"
+      ],
+      "text": [
+        "opposition_only"
+      ]
+    },
+    "U04": {
+      "letters": [
+        "neither"
+      ],
+      "numbers": [
+        "neither"
+      ],
+      "text": [
+        "neither"
+      ]
+    },
+    "U05": {
+      "letters": [
+        "neither"
+      ],
+      "numbers": [
+        "neither"
+      ],
+      "text": [
+        "neither"
+      ]
+    },
+    "U06": {
+      "letters": [
+        "support_only"
+      ],
+      "numbers": [
+        "support_only"
+      ],
+      "text": [
+        "support_only"
+      ]
+    }
+  },
+  "topk_expansion_calls": 9,
+  "max_shared_logprob_difference_after_topk_expansion": 0.0,
+  "qualification": "Same development reviews. Four cyclic variants per factor, no all-permutation or full-factorial guarantee; no independent accuracy/calibration evaluation."
+}

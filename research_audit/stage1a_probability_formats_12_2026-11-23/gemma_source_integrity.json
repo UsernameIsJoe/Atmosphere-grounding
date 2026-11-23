@@ -1,0 +1,10 @@
+{
+  "direct_gemma/readouts.jsonl": {
+    "bytes": 128106,
+    "sha256": "bd655d97e15a766f17bb92877ecfe2bbb1a83959fcfd40b878d3693b4af7ee68"
+  },
+  "results/gemma4_31b-it-bf16/responses.jsonl": {
+    "bytes": 10377748,
+    "sha256": "9e1914a4abbf98faa5463d53ad75cbc06a312ed92a6a0602ea315fb41427b457"
+  }
+}

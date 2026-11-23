@@ -1,0 +1,14 @@
+{
+  "pod_id": "fcgp0qpyac0x2k",
+  "name": "atmosphere-qwen-formats-20261123",
+  "created_at": "2026-11-23T21:45:51.976Z",
+  "terminated_at": "2026-11-23T21:59:51.994Z",
+  "termination_http_status": 204,
+  "post_termination_account_pods": [],
+  "hourly_compute_rate_usd": 2.69,
+  "estimated_lease_seconds": 840.018,
+  "estimated_compute_cost_usd": 0.6276801166666667,
+  "qualification": "Compute estimate at observed hourly rate, not an itemized bill.",
+  "download_and_all_hash_verification_before_termination": true,
+  "new_gemma_model_calls": 0
+}

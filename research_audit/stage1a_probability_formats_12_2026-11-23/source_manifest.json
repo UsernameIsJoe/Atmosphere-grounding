@@ -1,0 +1,58 @@
+{
+  "source_commit": "5557db9fe857438bda336b9cd1eb4c79b1fcde5e",
+  "cases_sha256": "ea9396d9bf007a5f86674f3b5f21c95873a67923921f15cb99145c520b09ceed",
+  "source_files": {
+    "inputs.jsonl": {
+      "bytes": 7101,
+      "sha256": "2bd95d20f6df4ae4ff340e450ea19c20ec10d4cda4232568531f2dd3bcc650c9"
+    },
+    "previous_cold_readouts.jsonl": {
+      "bytes": 3787370,
+      "sha256": "e490251bf9b8f2e7262a4d73524d290a61be09b8e9ebfda055a02a86e06634ba"
+    },
+    "previous_rendered_prompts.json": {
+      "bytes": 1248044,
+      "sha256": "0e0132a8958fb7228508e62fb0c33bf1494dce4a8b81605cd9939b40ca3a0e27"
+    },
+    "frozen_pilot/fetch_sources.py": {
+      "bytes": 938,
+      "sha256": "ecef9dc69640a06447ad2310d719c50e4502c4acd934d6fde0ebaf27f9893f40"
+    },
+    "frozen_pilot/run_pilot.py": {
+      "bytes": 16263,
+      "sha256": "aff01b2d47b93931abc00dee94e737135b59f070d6c2a11db2ed7fd6fe85239e"
+    },
+    "frozen_pilot/source_manifest.json": {
+      "bytes": 1404,
+      "sha256": "b5ca237ad1f18c5590c1f96a1e087256e7c2b8bebb6d732723d1d6edca367b4e"
+    },
+    "frozen_pilot/manifest.json": {
+      "bytes": 4534,
+      "sha256": "e301edd3ced2ff6b116ec7720159615bf139b33ef67a667c6cb7634591f9c0f3"
+    },
+    "frozen_pilot/source/baseline_runner_v05.py": {
+      "bytes": 13204,
+      "sha256": "b21178137073868df4cf5cd657269340a3bc3eaa73a5cc7c32783277cffaacb2"
+    },
+    "frozen_pilot/source/previous_claims_by_emotion.json": {
+      "bytes": 42065,
+      "sha256": "0c1d2813f6b02d225f7a33129549032326ae45af4836782917518fd2dea3cfb5"
+    },
+    "frozen_pilot/source/codebook_v05.md": {
+      "bytes": 10679,
+      "sha256": "eaf8e1f4498087d7847bc321feaa7a224121c51b61b7ff320a0f88d749242e60"
+    },
+    "frozen_pilot/source/prompt_v05.md": {
+      "bytes": 5726,
+      "sha256": "92459110bbaf579ee1b6109a671ba260b26eddf870d1678dca0ede939ca83858"
+    },
+    "frozen_pilot/source/target_script.py": {
+      "bytes": 6513,
+      "sha256": "9d594f222ad303156dadf833504af8db6fbf67263eb3e5dbea8c2b6b88f96f0e"
+    },
+    "frozen_pilot/source/cases_original.jsonl": {
+      "bytes": 5795,
+      "sha256": "7dba0bdbc8b80face14ab76d1716e7dd26bde19b322d1d76cd95dd703e076071"
+    }
+  }
+}
