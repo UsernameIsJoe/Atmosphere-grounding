@@ -181,3 +181,28 @@ The researcher asked whether the observed code-mapping probability changes could
 **Interpretation correction:** the probability pilot ran each mapping once per case/model. Its 23.26-point Qwen difference is an observed between-mapping gap; there is no identical-request probability-repeat baseline to isolate a letter effect. Gemma's saturation can also suppress visible percentage movement. Neither result establishes which model has intrinsically more stable probabilities.
 
 The record distinguishes computation controls and batch-invariant kernels from label/wording robustness methods. Four balanced mappings with semantic probability averaging and a 50-repeat diagnostic are proposed. The **1 percentage point peak-to-peak tolerance is an assistant-proposed project criterion, not a literature standard or adopted rule**. Native logits can be captured through direct llama.cpp/Transformers access; returned log probabilities already preserve relative logit differences for available candidates. These are discussion findings and proposals; no additional inference, backend migration, calibration or training was executed for this follow-up.
+
+
+---
+
+## 11. Executed probability repeatability test — November 23
+
+The researcher authorized testing whether Qwen's letter sensitivity exceeds identical-request variation and whether Gemma's extreme probabilities can be explained or reversed through its internal transformations. The [executed report](../research_audit/stage1a_probability_repeatability_12_2026-11-23/README.md) preserves the protocol, exact checkpoints, twelve inputs/targets, figures, analysis, scripts and raw archive.
+
+**Design actually run:** same reviews and target segments, calm only; ABCD, BCDA, CDAB and DABC with fixed semantic option order and wording. Ten shuffled repeat blocks per model, followed by three after reload: **1,248 native readouts**. The earlier 50-repeat proposal was not executed.
+
+| Main-phase comparison | Qwen | Gemma |
+|---|---:|---:|
+| Largest identical-request probability range | 3.66 percentage points | 1.55 percentage points |
+| Largest spread between mapping means | 22.93 percentage points | 1.21 percentage points |
+| Cases with different winners across four mappings | 1/12 | 0/12 |
+
+The native phases had no verdict flips within an identical payload. Smaller percentage movement in Gemma can be masked by saturation and does not establish intrinsically steadier internal preferences.
+
+**Practical stabilizer:** observed Qwen noise motivated a separately logged control: three reviews under four mappings, ten repeats per cache condition, **240 additional calls**. Same GGUF, same Ollama-bundled binary and rendered prompts; only `cache_prompt` changes within the direct endpoint. Reuse produced a maximum 4.81-point repeat range and verdict flips in two of twelve prompt groups. Full recomputation produced identical four-code log probabilities in all twelve groups, at median 0.89 s rather than 0.50 s per call. This does not remove letter sensitivity: the cold-cache mapping spread reached **24.78 points**, and U06 changed from support to neither under CDAB. The normal Ollama completion implementation hardcodes cache reuse, so adopting this stabilizer requires the tested backend route or an adapter; production code was not changed.
+
+**Gemma math test:** a separate llama-cpp-python backend loaded the identical BF16 GGUF for **64 direct passes**. Chosen states and input token counts matched native results in 64/64 comparisons; the largest probability gap against a native mean was 0.399 points. Metadata verifies final soft-capping with c=30. All four code logits were inside the cap in every pass, permitting an analytic inverse. Removing the cap did not reduce any winning probability; it sharpened choices or left them numerically saturated. For example, K01's original-map probability was 98.7994%, and its uncapped counterpart was effectively 100%. This remains the earlier attribution-error case. The inverse reconstructs values from actual finite-precision capped logits; it is not a directly hooked internal pre-cap tensor.
+
+**Current direction:** retain log probabilities/logit margins; control full recomputation for further measurements; compare balanced semantic-mapping averages and retain their spread. Temperature scaling remains a sensitivity calculation until fitted on separate annotations. No calibrated-confidence or image-training benefit is established by this test. The provisionally agreed embedding and NLI directions are unchanged.
+
+All results were downloaded and hashes verified before terminating the owned pod. Lease approximately 33 minutes; estimated compute $1.48 at $2.69/hour. The post-termination pod list was empty. See the report's cleanup record.

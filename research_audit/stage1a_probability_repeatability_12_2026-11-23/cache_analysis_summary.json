@@ -1,0 +1,42 @@
+{
+  "readouts": 240,
+  "prompts": 12,
+  "repeats_per_condition": 10,
+  "max_native_vs_warm_mean_gap_upper_pp": 4.6614294028559105,
+  "warm_native_state_agreement_prompts": 10,
+  "cold_native_state_agreement_prompts": 12,
+  "max_warm_vs_cold_mean_gap_upper_pp": 3.180117904332258,
+  "conditions": {
+    "warm": {
+      "readouts": 120,
+      "max_identical_request_probability_range_upper_pp": 4.813874576335786,
+      "repeat_label_flip_groups": 2,
+      "groups_with_identical_native_logprobs": 0,
+      "median_request_seconds": 0.4997834609821439,
+      "cached_prefix_tokens_range": [
+        1486,
+        2556
+      ],
+      "prompt_tokens_evaluated_range": [
+        4,
+        1074
+      ]
+    },
+    "cold": {
+      "readouts": 120,
+      "max_identical_request_probability_range_upper_pp": 0.0,
+      "repeat_label_flip_groups": 0,
+      "groups_with_identical_native_logprobs": 12,
+      "median_request_seconds": 0.8916487900132779,
+      "cached_prefix_tokens_range": [
+        0,
+        0
+      ],
+      "prompt_tokens_evaluated_range": [
+        2510,
+        2560
+      ]
+    }
+  },
+  "qualification": "Adaptive diagnostic after native repeat noise was observed. Same Ollama-bundled binary and rendered prompts; direct completion endpoint. Twelve selected prompts, no calibration or general determinism claim."
+}

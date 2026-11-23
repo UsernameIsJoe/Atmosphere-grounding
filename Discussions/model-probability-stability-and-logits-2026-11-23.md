@@ -1,5 +1,7 @@
 # Model probability stability, stabilization and logits — November 23, 2026
 
+**Executed follow-up:** [Same-checkpoint repeatability, cache control and direct logits](../research_audit/stage1a_probability_repeatability_12_2026-11-23/README.md) now tests these proposals with ten main repetitions plus three after reload, four letter mappings, 240 supplementary cache calls and 64 Gemma direct passes. The original-pilot caveat below describes the earlier experiment; the new report provides the missing repeat baseline.
+
 **Status: literature-informed discussion remark.** This records the follow-up to the [calm probability pilot](../research_audit/stage1a_calm_probability_12_2026-11-23/README.md) and the [three-point probability/embedding/NLI remark](research-discussion-2026-11-19.md#9-november-23-follow-up). The stabilization methods and acceptance criterion below are proposals. No additional model inference, backend migration, calibration, model selection or training was executed for this follow-up.
 
 ## How the question developed
@@ -125,3 +127,12 @@ First measure identical-request repeatability for each exact model on the fixed 
 12. Hugging Face Transformers, [Gemma4 implementation](https://github.com/huggingface/transformers/blob/main/src/transformers/models/gemma4/modeling_gemma4.py), language-model head and `final_logit_softcapping`.
 
 External documentation was checked November 23, 2026. Unversioned upstream links can change. Published component findings support these candidates; they do not validate the exact combined pipeline or a numerical acceptance threshold for this project.
+
+
+## Executed diagnostic: new evidence
+
+The [new report](../research_audit/stage1a_probability_repeatability_12_2026-11-23/README.md) separates mapping sensitivity from repeat variation. Qwen's native main-phase mapping-mean spread reached 22.93 percentage points against a 3.66-point identical-request range. Controlled full recomputation removed observed repeat variation on twelve selected prompts yet retained a 24.78-point mapping spread. A letter effect is confirmed in this setup, independently of the observed cache-related variation; the training mechanism behind the letter preference was not isolated.
+
+Gemma's corresponding main-phase values were 1.21 points between mapping means and 1.55 within identical requests, while saturation concealed logit-margin movement. Direct capped logits from the same BF16 GGUF agreed with all 64 native chosen states and verified c=30 metadata. Analytic inversion was valid for the four code scores in all 64 passes, and removing the cap never softened the winning probability. This is a finite-precision reconstruction, not an internal pre-cap hook; probabilities alone still cannot uniquely recover absolute pre-cap scores.
+
+The report records API/backend distinctions, missing-alternative bounds and legacy raw-field caveats, backend alignment, temperature sensitivity, source-byte recovery, raw artifacts and verified pod termination. Calibration and downstream usefulness remain separate experiments.

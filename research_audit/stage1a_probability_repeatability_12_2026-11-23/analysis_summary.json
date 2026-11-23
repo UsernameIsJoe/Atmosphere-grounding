@@ -1,0 +1,84 @@
+{
+  "native_readouts": 1248,
+  "models": {
+    "qwen3.8:27b": {
+      "readouts": 624,
+      "phases": {
+        "main": {
+          "readouts": 480,
+          "max_identical_request_range_upper_pp": 3.662293631334099,
+          "max_mapping_mean_spread_lower_pp": 22.934132732571513,
+          "max_mapping_mean_spread_upper_pp": 22.934132732571513,
+          "max_original_pair_mean_gap_lower_pp": 22.934132732571513,
+          "max_original_pair_mean_gap_upper_pp": 22.934132732571513,
+          "cases_with_mapping_spread_exceeding_repeat_range": 12,
+          "repeat_label_flip_groups": 0,
+          "cases_with_different_mapping_winners": 1
+        },
+        "reloaded": {
+          "readouts": 144,
+          "max_identical_request_range_upper_pp": 0.723597783564688,
+          "max_mapping_mean_spread_lower_pp": 25.204942574087895,
+          "max_mapping_mean_spread_upper_pp": 25.204942574087895,
+          "max_original_pair_mean_gap_lower_pp": 25.204942574087895,
+          "max_original_pair_mean_gap_upper_pp": 25.204942574087895,
+          "cases_with_mapping_spread_exceeding_repeat_range": 12,
+          "repeat_label_flip_groups": 0,
+          "cases_with_different_mapping_winners": 1
+        }
+      },
+      "max_phase_mean_shift_same_payload_after_reload_upper_pp": 2.692183135391779,
+      "max_observed_identical_request_logit_margin_range": 0.47275757789611816,
+      "complete_four_state_readouts": 624,
+      "chosen_probability_at_least_99_9_count": 0,
+      "max_probability_missingness_interval_width": 0.0
+    },
+    "gemma4:31b-it-bf16": {
+      "readouts": 624,
+      "phases": {
+        "main": {
+          "readouts": 480,
+          "max_identical_request_range_upper_pp": 1.546363816810221,
+          "max_mapping_mean_spread_lower_pp": 1.214874839641289,
+          "max_mapping_mean_spread_upper_pp": 1.214874839641289,
+          "max_original_pair_mean_gap_lower_pp": 0.40855392121997847,
+          "max_original_pair_mean_gap_upper_pp": 0.40855392121997847,
+          "cases_with_mapping_spread_exceeding_repeat_range": 7,
+          "repeat_label_flip_groups": 0,
+          "cases_with_different_mapping_winners": 0
+        },
+        "reloaded": {
+          "readouts": 144,
+          "max_identical_request_range_upper_pp": 0.7152273742256068,
+          "max_mapping_mean_spread_lower_pp": 1.1564616493009994,
+          "max_mapping_mean_spread_upper_pp": 1.1564616493009994,
+          "max_original_pair_mean_gap_lower_pp": 0.4367207655399219,
+          "max_original_pair_mean_gap_upper_pp": 0.4367207655399219,
+          "cases_with_mapping_spread_exceeding_repeat_range": 8,
+          "repeat_label_flip_groups": 0,
+          "cases_with_different_mapping_winners": 0
+        }
+      },
+      "max_phase_mean_shift_same_payload_after_reload_upper_pp": 0.22782713634779267,
+      "max_observed_identical_request_logit_margin_range": 1.7604691982269287,
+      "complete_four_state_readouts": 195,
+      "chosen_probability_at_least_99_9_count": 533,
+      "max_probability_missingness_interval_width": 7.172758331730478e-08
+    }
+  },
+  "interpretation": "Observed repeatability in this environment; mappings are four cyclic assignments, not all 24; no calibration/accuracy claim.",
+  "direct_gemma": {
+    "readouts": 64,
+    "expected_readouts": 64,
+    "native_argmax_agreement": 64,
+    "direct_prompt_hashes_verified": 64,
+    "direct_token_count_matches_native_count": 64,
+    "full_vocabulary_winner_is_a_code": 64,
+    "max_native_vs_direct_probability_gap_upper_pp": 0.3987539278701529,
+    "fully_invertible_four_code_readouts": 64,
+    "maximum_softcap_roundtrip_abs_error": 3.552713678800501e-15,
+    "uncapping_does_not_reduce_chosen_probability": 64,
+    "max_direct_repeated_logit_difference": 0.0,
+    "qualification": "Different inference binary on identical GGUF. Analytic pre-cap reconstruction; temperature grid is uncalibrated."
+  }
+}

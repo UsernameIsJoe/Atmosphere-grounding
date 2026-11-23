@@ -1,5 +1,7 @@
 # Discussions
 
+**Executed repeatability and logits test (November 23):** [Report, charts, code and raw results](../research_audit/stage1a_probability_repeatability_12_2026-11-23/README.md) — 1,248 native readouts on the same 12 reviews, 240 cache-control calls and 64 direct Gemma passes. Qwen's letter effect survives deterministic full recomputation; disabling cache reuse stabilized the tested prompts. Undoing Gemma's soft-cap did not soften its probabilities.
+
 Research brief materials and design-session outputs for **Atmosphere Grounding**.
 
 **November 23 probability stability follow-up:** [Discussion, literature and four answers](model-probability-stability-and-logits-2026-11-23.md) — identical-run repeatability versus code/wording sensitivity, stabilization methods, proposed tolerance and logits access. Includes the correction that the first pilot did not measure identical-request probability variability.

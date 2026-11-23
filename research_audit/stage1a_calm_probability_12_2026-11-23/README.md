@@ -1,5 +1,7 @@
 # Calm native-probability pilot — 12 matched reviews, November 23, 2026
 
+**Controlled follow-up:** [Repeatability, four letter mappings, cache control and Gemma direct logits](../stage1a_probability_repeatability_12_2026-11-23/README.md) uses these same twelve inputs and checkpoint digests. It supplies the identical-request probability baseline missing from this earlier report and tests the soft-cap inverse.
+
 **Status: executed development pilot.** 72 main calls across the same 12 original target segments/full reviews and the same two model digests used in the v0.5 study. One additional JSON-interface preflight failed atomic-code validation and is archived separately. No gate, cascade, new training or independent held-out evaluation was run.
 
 ## What this test establishes

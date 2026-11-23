@@ -1,0 +1,125 @@
+{
+  "protocol": "native_repeat_and_letter_mapping_v1",
+  "source_pilot_commit": "e58939fd1c67b67c802103cc081fd2d07bc1187e",
+  "models": {
+    "qwen3.8:27b": "aaee06c39dcf2437cde036998d960e1fc1494b8191be7cc9657d01e509097813",
+    "gemma4:31b-it-bf16": "df1661a2a6aaa94faf24bbaf23a691877a27d0e6052598f105a225618a079e76"
+  },
+  "cases_sha256": "ea9396d9bf007a5f86674f3b5f21c95873a67923921f15cb99145c520b09ceed",
+  "source_runner_sha256": "aff01b2d47b93931abc00dee94e737135b59f070d6c2a11db2ed7fd6fe85239e",
+  "runner_sha256": "33c623bd573daaf9c0b11b086963f320291d8e7ccfa8a9c0872469e6198b0eb4",
+  "mappings": {
+    "rotation_0": {
+      "neither": "A",
+      "support_only": "B",
+      "opposition_only": "C",
+      "both": "D"
+    },
+    "rotation_1": {
+      "neither": "B",
+      "support_only": "C",
+      "opposition_only": "D",
+      "both": "A"
+    },
+    "rotation_2": {
+      "neither": "C",
+      "support_only": "D",
+      "opposition_only": "A",
+      "both": "B"
+    },
+    "rotation_3": {
+      "neither": "D",
+      "support_only": "A",
+      "opposition_only": "B",
+      "both": "C"
+    }
+  },
+  "options": {
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 8192,
+    "top_k": 0,
+    "top_p": 1,
+    "min_p": 0,
+    "repeat_penalty": 1
+  },
+  "main_repeats_per_mapping_case": 10,
+  "reload_repeats_per_mapping_case": 3,
+  "expected_native_readouts": 1248,
+  "payload_hashes": {
+    "K01": {
+      "rotation_0": "ac5eeb6d0209e3a922bcc79814ad4977f288e63fc02f64f43245b5b0b202fac8",
+      "rotation_1": "1ac3ea1dd19cd18d3c0a616efdcb38d8470d8b9c6d79103b954978987b435bd8",
+      "rotation_2": "007218e7059ab68624587dd7f4cd33f63e2bfb443de9aefb7464925a5c835e1d",
+      "rotation_3": "eb44b9b80e408bddb7138f91b9b667a3d446006ba4ac681c9d96817632089eb3"
+    },
+    "K02": {
+      "rotation_0": "cf02475b0911f74b8bd68587a04130dc73cbfe15e15e5e5eb838993510802a6c",
+      "rotation_1": "83a9c5a04f93ad1c2d4cfd1abe601c743db3ab24e5836f2acee91971c6fd0155",
+      "rotation_2": "e993d8969cdbba7050a1318db45ecd2fd114a922d633fbe35e9ae18b5362facc",
+      "rotation_3": "caaf8fbc91d3da66e979fe3424573951dad698a7336a2282e20f2e9a3a2f6e71"
+    },
+    "K03": {
+      "rotation_0": "d1d43bb8a1f4259a8793b1a756968ac6451489570cfb6c2ab009c3232f76eb83",
+      "rotation_1": "371ddd0c59179a8bc59dac316a376ceda9b7b7a5f654257827e43f53dc7bacd4",
+      "rotation_2": "58fa1e8019a4023e8c100639e47974574d517cdad499395549916eeb45be5860",
+      "rotation_3": "d1ecbc760d9d29dc2631875375b1d19beca62003d7aad4c0191d66203e46c60b"
+    },
+    "K04": {
+      "rotation_0": "6fcab7df5d968bc68f29d19fd60815e918c7d4067daddd5301ec3945508da9e3",
+      "rotation_1": "852f204b56a4271fcd9a51ee7237b10a40caca48bfb3312494e5aba25e0cc343",
+      "rotation_2": "d964f89091cf98ea6379aa9d1977600c6ca3674f3038acd44528b3cc7999958a",
+      "rotation_3": "2fd60199c09aa25adbf013a363092ba5450b8a8d017bcb1f67457c38a81dfb1e"
+    },
+    "K05": {
+      "rotation_0": "80054c76c437b290b2de0e00d824c37c21981a50f244f0c966c0ec28c6112f59",
+      "rotation_1": "a08114b2d4626b43839ba556bc680391cc63b66d18f27144a556a466340b2c99",
+      "rotation_2": "2550d009c431aaa1177de19cdb28d7174146376a44758d4625f10844ef96664f",
+      "rotation_3": "5f1f9b7ebd78bdf12dfc889cf6fb0cca0d6e24e8ed9f89da740e9685d344eb9f"
+    },
+    "K06": {
+      "rotation_0": "ca937fa2b0d5b0f1141782e0a8cc350d6897b2e66a295fb7fa3822b17e28e43f",
+      "rotation_1": "38f57a13ab0555a1f6d8adbe004ddcd7d32be60309fe4632e9e68dc6990d249d",
+      "rotation_2": "2d02337a72115eb4fa0f49819b090459d26c0ca9d95306375191be096de428dd",
+      "rotation_3": "8c1c41e370bd8a60d98bea0f077096a0b47c6b58c1781f038fddd7a60982084e"
+    },
+    "U01": {
+      "rotation_0": "bd19e80a8bc5e2e64dc42c31902c5eeff1dfb35c1588df4d78db14cd50b1e2c0",
+      "rotation_1": "14ed34e553d7073cc82cc481153970f9d0c6024f6a5c6c2005097bf71481f069",
+      "rotation_2": "5bb36817cba594788d72bf4f3d3ad646e2971fe70f1e5f055668ea7871315208",
+      "rotation_3": "694efd7353ecb0298a0485ef6df7eae8f89ad09e572ab8d0f272dae015e50ead"
+    },
+    "U02": {
+      "rotation_0": "89d4ca6f0de4a475396a48b88adba8bf5ceb4e23a986efbcdf4b632b7cea8520",
+      "rotation_1": "ff64645d7a71c56ac8202f80fe7f166a592142c6c0aceb7eccfb7dee5f3e60cc",
+      "rotation_2": "2ad60c43bc58cc803999a1b563c96487b4818a153105a5272f4ceb44754bb16b",
+      "rotation_3": "54220dd8c1c11e4a45c6d381bb7331a3af976fb1ec227f707fb0c38ed6ddad88"
+    },
+    "U03": {
+      "rotation_0": "cb5f6402ad2de2e9b9a5b1f32c9a7d75d2a77f0c1ac981562ca228d7921e58f6",
+      "rotation_1": "5c7f1baafd49e74593624087cf75f24de3fcf49e45f7680458b0260a18cc349b",
+      "rotation_2": "418069e034315b6e2b038326282cc66a9d1617a56aa417dd7cbe5949a46e6ffa",
+      "rotation_3": "2dc8cfb7a8cfc9298d9038e799210ac89ac4b7d579584c8de1662ac8c47697b9"
+    },
+    "U04": {
+      "rotation_0": "9f827c80a5cc92ed4696b60e0ced255070275a00a3b0632ced2d11f68776ed2f",
+      "rotation_1": "4c383f9a695e0e9a98cf6667cb519a4bdad0a643fb388d47c7fe390b866fee42",
+      "rotation_2": "cec254905af282bd8533e18761a3e88d477f01f923c32e06b2570c1586432de6",
+      "rotation_3": "f640f9e29cfcb97d08bcbb1d92b0ed9517040256123191f5f1b64e74fe4fd6a7"
+    },
+    "U05": {
+      "rotation_0": "82971e5d85a9dadc5c3e55b1f961e2bf3c2368040483aaa9a4b063611c368a06",
+      "rotation_1": "d2448a6a6cab7daf336e616733eb6d96db0a6f9d1cb02f910038f060967f24be",
+      "rotation_2": "89b1988c1346e746cf957ecea446b64672bd575b8378aa778500f6e486bffab0",
+      "rotation_3": "5768bf0ce2d9066211d7c9dcb355d15859af1b1f154633eae3bad3c61d11fc50"
+    },
+    "U06": {
+      "rotation_0": "f87e28364816a86ad124bd58114c15ed61360756f413c482339c08b984d5f9d6",
+      "rotation_1": "727f272a6f86cf3a6e6825c649440e3f355f3ebe81b7df9bb55dff889fa5048b",
+      "rotation_2": "b629c7eb857df2b241a9c42298334b2721ce499f8530940333ac689af838efda",
+      "rotation_3": "f31618feb47e1dab1ee51a259b121aacdab54d3ea530a60a63878a1f3bafc21b"
+    }
+  },
+  "schedule": "interleaved mappings/cases within repeat blocks, random seed 20261123",
+  "qualification": "development pilot; no new gold labels, calibration or model training"
+}
