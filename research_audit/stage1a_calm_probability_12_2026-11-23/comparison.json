@@ -1,0 +1,3611 @@
+[
+  {
+    "model": "qwen3.8:27b",
+    "case_id": "K01",
+    "target_segment": "It was so stressful but her humanity made everything so much better!",
+    "canonical": {
+      "raw_text": "A",
+      "valid": true,
+      "error": null,
+      "tokens_reconstruct_content": true,
+      "selected_code": "A",
+      "selected_state": "neither",
+      "decision_token_index": 0,
+      "decision_prefix": "",
+      "selected_native_logprob": -0.7205098867416382,
+      "selected_native_probability": 0.4865041307014607,
+      "native_state_probabilities": {
+        "neither": 0.4865041307014607,
+        "support_only": 0.2350387040713953,
+        "opposition_only": 0.2518732334236944,
+        "both": 0.02486544738452335
+      },
+      "candidate_mass_known": 0.9982815155810737,
+      "missing_states": [],
+      "complete_distribution": true,
+      "normalized_state_probabilities": {
+        "neither": 0.4873416196815778,
+        "support_only": 0.23544330973070796,
+        "opposition_only": 0.2523068187605232,
+        "both": 0.02490825182719107
+      },
+      "state_probability_intervals": {
+        "neither": [
+          0.4873416196815778,
+          0.4873416196815778
+        ],
+        "support_only": [
+          0.23544330973070796,
+          0.23544330973070796
+        ],
+        "opposition_only": [
+          0.2523068187605232,
+          0.2523068187605232
+        ],
+        "both": [
+          0.02490825182719107,
+          0.02490825182719107
+        ]
+      },
+      "marginal_probability_intervals": {
+        "support": [
+          0.26035156155789907,
+          0.26035156155789907
+        ],
+        "opposition": [
+          0.2772150705877143,
+          0.2772150705877143
+        ],
+        "any": [
+          0.5126583803184221,
+          0.5126583803184221
+        ]
+      },
+      "topk_cutoff_probability": 2.22457655663265e-05,
+      "max_state_interval_width": 0.0,
+      "other_semantic_token_variants": []
+    },
+    "extract": {
+      "valid": true,
+      "error": null,
+      "claims": [
+        {
+          "quote": "It was so stressful",
+          "direction": "opposes",
+          "track": "E",
+          "referent": "place",
+          "reason": "The visitor directly reports experiencing stress during the visit, which constitutes opposition to the construct of calm (tranquility/low agitation). Although the context suggests the stress was related to a logistical delay, the statement is a direct experiential report of the atmosphere/condition during the visit at the place."
+        }
+      ],
+      "state": "opposition_only",
+      "has_native_logprobs": true
+    },
+    "rotated": {
+      "raw_text": "B",
+      "valid": true,
+      "error": null,
+      "tokens_reconstruct_content": true,
+      "selected_code": "B",
+      "selected_state": "neither",
+      "decision_token_index": 0,
+      "decision_prefix": "",
+      "selected_native_logprob": -0.39246249198913574,
+      "selected_native_probability": 0.6753916784759167,
+      "native_state_probabilities": {
+        "neither": 0.6753916784759167,
+        "support_only": 0.17767806123106833,
+        "opposition_only": 0.13824575643597947,
+        "both": 0.006844129285796649
+      },
+      "candidate_mass_known": 0.9981596254287612,
+      "missing_states": [],
+      "complete_distribution": true,
+      "normalized_state_probabilities": {
+        "neither": 0.6766369439014337,
+        "support_only": 0.17800565831817372,
+        "opposition_only": 0.1385006495094367,
+        "both": 0.006856748270955902
+      },
+      "state_probability_intervals": {
+        "neither": [
+          0.6766369439014337,
+          0.6766369439014337
+        ],
+        "support_only": [
+          0.17800565831817372,
+          0.17800565831817372
+        ],
+        "opposition_only": [
+          0.1385006495094367,
+          0.1385006495094367
+        ],
+        "both": [
+          0.006856748270955902,
+          0.006856748270955902
+        ]
+      },
+      "marginal_probability_intervals": {
+        "support": [
+          0.1848624065891296,
+          0.1848624065891296
+        ],
+        "opposition": [
+          0.14535739778039258,
+          0.14535739778039258
+        ],
+        "any": [
+          0.3233630560985663,
+          0.3233630560985663
+        ]
+      },
+      "topk_cutoff_probability": 1.8837291725002996e-05,
+      "max_state_interval_width": 0.0,
+      "other_semantic_token_variants": []
+    },
+    "archived_v05_calm_direction_sets": [
+      "opposes"
+    ],
+    "mapping_state_flip": false,
+    "mapping_total_variation": 0.1892953242198559
+  },
+  {
+    "model": "qwen3.8:27b",
+    "case_id": "K02",
+    "target_segment": "Lights in the small box were years away- it was completely dark.",
+    "extract": {
+      "valid": true,
+      "error": null,
+      "claims": [],
+      "state": "neither",
+      "has_native_logprobs": true
+    },
+    "canonical": {
+      "raw_text": "A",
+      "valid": true,
+      "error": null,
+      "tokens_reconstruct_content": true,
+      "selected_code": "A",
+      "selected_state": "neither",
+      "decision_token_index": 0,
+      "decision_prefix": "",
+      "selected_native_logprob": -0.2865649163722992,
+      "selected_native_probability": 0.7508383352480813,
+      "native_state_probabilities": {
+        "neither": 0.7508383352480813,
+        "support_only": 0.12670446626204024,
+        "opposition_only": 0.11114926022379026,
+        "both": 0.010466205972185089
+      },
+      "candidate_mass_known": 0.9991582677060968,
+      "missing_states": [],
+      "complete_distribution": true,
+      "normalized_state_probabilities": {
+        "neither": 0.7514708725494338,
+        "support_only": 0.126811207350496,
+        "opposition_only": 0.11124289696263105,
+        "both": 0.010475023137439254
+      },
+      "state_probability_intervals": {
+        "neither": [
+          0.7514708725494338,
+          0.7514708725494338
+        ],
+        "support_only": [
+          0.126811207350496,
+          0.126811207350496
+        ],
+        "opposition_only": [
+          0.11124289696263105,
+          0.11124289696263105
+        ],
+        "both": [
+          0.010475023137439254,
+          0.010475023137439254
+        ]
+      },
+      "marginal_probability_intervals": {
+        "support": [
+          0.13728623048793526,
+          0.13728623048793526
+        ],
+        "opposition": [
+          0.1217179201000703,
+          0.1217179201000703
+        ],
+        "any": [
+          0.2485291274505663,
+          0.2485291274505663
+        ]
+      },
+      "topk_cutoff_probability": 8.965996826545024e-06,
+      "max_state_interval_width": 0.0,
+      "other_semantic_token_variants": []
+    },
+    "rotated": {
+      "raw_text": "B",
+      "valid": true,
+      "error": null,
+      "tokens_reconstruct_content": true,
+      "selected_code": "B",
+      "selected_state": "neither",
+      "decision_token_index": 0,
+      "decision_prefix": "",
+      "selected_native_logprob": -0.14404872059822083,
+      "selected_native_probability": 0.8658455625177882,
+      "native_state_probabilities": {
+        "neither": 0.8658455625177882,
+        "support_only": 0.08462138618229824,
+        "opposition_only": 0.04751612402022385,
+        "both": 0.0010740927626902476
+      },
+      "candidate_mass_known": 0.9990571654830005,
+      "missing_states": [],
+      "complete_distribution": true,
+      "normalized_state_probabilities": {
+        "neither": 0.8666626820089817,
+        "support_only": 0.08470124544013204,
+        "opposition_only": 0.04756096614076321,
+        "both": 0.0010751064101231591
+      },
+      "state_probability_intervals": {
+        "neither": [
+          0.8666626820089817,
+          0.8666626820089817
+        ],
+        "support_only": [
+          0.08470124544013204,
+          0.08470124544013204
+        ],
+        "opposition_only": [
+          0.04756096614076321,
+          0.04756096614076321
+        ],
+        "both": [
+          0.0010751064101231591,
+          0.0010751064101231591
+        ]
+      },
+      "marginal_probability_intervals": {
+        "support": [
+          0.0857763518502552,
+          0.0857763518502552
+        ],
+        "opposition": [
+          0.04863607255088637,
+          0.04863607255088637
+        ],
+        "any": [
+          0.13333731799101842,
+          0.13333731799101842
+        ]
+      },
+      "topk_cutoff_probability": 1.1719061858267494e-05,
+      "max_state_interval_width": 0.0,
+      "other_semantic_token_variants": []
+    },
+    "archived_v05_calm_direction_sets": [
+      "empty"
+    ],
+    "mapping_state_flip": false,
+    "mapping_total_variation": 0.11519180945954789
+  },
+  {
+    "model": "qwen3.8:27b",
+    "case_id": "K03",
+    "target_segment": "I wouldn't go here if your looking for walk.",
+    "extract": {
+      "valid": true,
+      "error": null,
+      "claims": [],
+      "state": "neither",
+      "has_native_logprobs": true
+    },
+    "canonical": {
+      "raw_text": "A",
+      "valid": true,
+      "error": null,
+      "tokens_reconstruct_content": true,
+      "selected_code": "A",
+      "selected_state": "neither",
+      "decision_token_index": 0,
+      "decision_prefix": "",
+      "selected_native_logprob": -0.3553958237171173,
+      "selected_native_probability": 0.7008959570513617,
+      "native_state_probabilities": {
+        "neither": 0.7008959570513617,
+        "support_only": 0.15868937507615186,
+        "opposition_only": 0.12313354760398973,
+        "both": 0.01633872402995265
+      },
+      "candidate_mass_known": 0.9990576037614559,
+      "missing_states": [],
+      "complete_distribution": true,
+      "normalized_state_probabilities": {
+        "neither": 0.7015571018252457,
+        "support_only": 0.1588390644129885,
+        "opposition_only": 0.12324969765546193,
+        "both": 0.01635413610630387
+      },
+      "state_probability_intervals": {
+        "neither": [
+          0.7015571018252457,
+          0.7015571018252457
+        ],
+        "support_only": [
+          0.1588390644129885,
+          0.1588390644129885
+        ],
+        "opposition_only": [
+          0.12324969765546193,
+          0.12324969765546193
+        ],
+        "both": [
+          0.01635413610630387,
+          0.01635413610630387
+        ]
+      },
+      "marginal_probability_intervals": {
+        "support": [
+          0.17519320051929238,
+          0.17519320051929238
+        ],
+        "opposition": [
+          0.1396038337617658,
+          0.1396038337617658
+        ],
+        "any": [
+          0.29844289817475433,
+          0.29844289817475433
+        ]
+      },
+      "topk_cutoff_probability": 1.0555714022009949e-05,
+      "max_state_interval_width": 0.0,
+      "other_semantic_token_variants": []
+    },
+    "rotated": {
+      "raw_text": "B",
+      "valid": true,
+      "error": null,
+      "tokens_reconstruct_content": true,
+      "selected_code": "B",
+      "selected_state": "neither",
+      "decision_token_index": 0,
+      "decision_prefix": "",
+      "selected_native_logprob": -0.26613110303878784,
+      "selected_native_probability": 0.7663386515888505,
+      "native_state_probabilities": {
+        "neither": 0.7663386515888505,
+        "support_only": 0.1470667189012697,
+        "opposition_only": 0.08281430785841545,
+        "both": 0.002415532512610179
+      },
+      "candidate_mass_known": 0.9986352108611458,
+      "missing_states": [],
+      "complete_distribution": true,
+      "normalized_state_probabilities": {
+        "neither": 0.7673859716282377,
+        "support_only": 0.1472677082700206,
+        "opposition_only": 0.08292748639115458,
+        "both": 0.0024188337105870827
+      },
+      "state_probability_intervals": {
+        "neither": [
+          0.7673859716282377,
+          0.7673859716282377
+        ],
+        "support_only": [
+          0.1472677082700206,
+          0.1472677082700206
+        ],
+        "opposition_only": [
+          0.08292748639115458,
+          0.08292748639115458
+        ],
+        "both": [
+          0.0024188337105870827,
+          0.0024188337105870827
+        ]
+      },
+      "marginal_probability_intervals": {
+        "support": [
+          0.14968654198060766,
+          0.14968654198060766
+        ],
+        "opposition": [
+          0.08534632010174166,
+          0.08534632010174166
+        ],
+        "any": [
+          0.23261402837176223,
+          0.23261402837176223
+        ]
+      },
+      "topk_cutoff_probability": 8.499106589233785e-06,
+      "max_state_interval_width": 0.0,
+      "other_semantic_token_variants": []
+    },
+    "archived_v05_calm_direction_sets": [
+      "empty"
+    ],
+    "mapping_state_flip": false,
+    "mapping_total_variation": 0.06582886980299206
+  },
+  {
+    "model": "qwen3.8:27b",
+    "case_id": "K04",
+    "target_segment": "What made this visit extra special was how surprisingly uncrowded it was.",
+    "extract": {
+      "valid": true,
+      "error": null,
+      "claims": [
+        {
+          "quote": "surprisingly uncrowded",
+          "direction": "supports",
+          "track": "T",
+          "referent": "place",
+          "reason": "The reported condition of low crowd density is a specific spatial/social state that plausibly supports an atmosphere of tranquility and low agitation, distinct from the explicit experience of comfort described in the surrounding context."
+        }
+      ],
+      "state": "support_only",
+      "has_native_logprobs": true
+    },
+    "canonical": {
+      "raw_text": "B",
+      "valid": true,
+      "error": null,
+      "tokens_reconstruct_content": true,
+      "selected_code": "B",
+      "selected_state": "support_only",
+      "decision_token_index": 0,
+      "decision_prefix": "",
+      "selected_native_logprob": -0.11513262987136841,
+      "selected_native_probability": 0.8912479299693458,
+      "native_state_probabilities": {
+        "neither": 0.03685965369179325,
+        "support_only": 0.8912479299693458,
+        "opposition_only": 0.02250213987247404,
+        "both": 0.04837408943902937
+      },
+      "candidate_mass_known": 0.9989838129726424,
+      "missing_states": [],
+      "complete_distribution": true,
+      "normalized_state_probabilities": {
+        "neither": 0.036897148095033916,
+        "support_only": 0.8921545258248874,
+        "opposition_only": 0.022525029515258293,
+        "both": 0.04842329656482043
+      },
+      "state_probability_intervals": {
+        "neither": [
+          0.036897148095033916,
+          0.036897148095033916
+        ],
+        "support_only": [
+          0.8921545258248874,
+          0.8921545258248874
+        ],
+        "opposition_only": [
+          0.022525029515258293,
+          0.022525029515258293
+        ],
+        "both": [
+          0.04842329656482043,
+          0.04842329656482043
+        ]
+      },
+      "marginal_probability_intervals": {
+        "support": [
+          0.9405778223897078,
+          0.9405778223897078
+        ],
+        "opposition": [
+          0.07094832608007871,
+          0.07094832608007871
+        ],
+        "any": [
+          0.9631028519049661,
+          0.9631028519049661
+        ]
+      },
+      "topk_cutoff_probability": 1.1855167202057242e-05,
+      "max_state_interval_width": 0.0,
+      "other_semantic_token_variants": []
+    },
+    "rotated": {
+      "raw_text": "C",
+      "valid": true,
+      "error": null,
+      "tokens_reconstruct_content": true,
+      "selected_code": "C",
+      "selected_state": "support_only",
+      "decision_token_index": 0,
+      "decision_prefix": "",
+      "selected_native_logprob": -0.08837751299142838,
+      "selected_native_probability": 0.9154152303424253,
+      "native_state_probabilities": {
+        "neither": 0.0432583741802954,
+        "support_only": 0.9154152303424253,
+        "opposition_only": 0.017427065762009152,
+        "both": 0.022801170794429327
+      },
+      "candidate_mass_known": 0.9989018410791592,
+      "missing_states": [],
+      "complete_distribution": true,
+      "normalized_state_probabilities": {
+        "neither": 0.0433059309747206,
+        "support_only": 0.9164216069052996,
+        "opposition_only": 0.01744622448906681,
+        "both": 0.022826237630912946
+      },
+      "state_probability_intervals": {
+        "neither": [
+          0.0433059309747206,
+          0.0433059309747206
+        ],
+        "support_only": [
+          0.9164216069052996,
+          0.9164216069052996
+        ],
+        "opposition_only": [
+          0.01744622448906681,
+          0.01744622448906681
+        ],
+        "both": [
+          0.022826237630912946,
+          0.022826237630912946
+        ]
+      },
+      "marginal_probability_intervals": {
+        "support": [
+          0.9392478445362126,
+          0.9392478445362126
+        ],
+        "opposition": [
+          0.04027246211997976,
+          0.04027246211997976
+        ],
+        "any": [
+          0.9566940690252793,
+          0.9566940690252793
+        ]
+      },
+      "topk_cutoff_probability": 8.481406685471554e-06,
+      "max_state_interval_width": 0.0,
+      "other_semantic_token_variants": []
+    },
+    "archived_v05_calm_direction_sets": [
+      "supports"
+    ],
+    "mapping_state_flip": false,
+    "mapping_total_variation": 0.03067586396009893
+  },
+  {
+    "model": "qwen3.8:27b",
+    "case_id": "K05",
+    "target_segment": "If the owner of the chickens sees it, he yells from his home and asks if you are feeding poison to them.",
+    "extract": {
+      "valid": true,
+      "error": null,
+      "claims": [
+        {
+          "quote": "he yells from his home",
+          "direction": "opposes",
+          "track": "E",
+          "referent": "place",
+          "reason": "The reported action of yelling constitutes intrusive noise and agitation that disrupts the tranquility of the park environment."
+        }
+      ],
+      "state": "opposition_only",
+      "has_native_logprobs": true
+    },
+    "canonical": {
+      "raw_text": "A",
+      "valid": true,
+      "error": null,
+      "tokens_reconstruct_content": true,
+      "selected_code": "A",
+      "selected_state": "neither",
+      "decision_token_index": 0,
+      "decision_prefix": "",
+      "selected_native_logprob": -0.5066112875938416,
+      "selected_native_probability": 0.60253393738492,
+      "native_state_probabilities": {
+        "neither": 0.60253393738492,
+        "support_only": 0.13020473602942922,
+        "opposition_only": 0.2444073795519501,
+        "both": 0.022186402015075785
+      },
+      "candidate_mass_known": 0.9993324549813751,
+      "missing_states": [],
+      "complete_distribution": true,
+      "normalized_state_probabilities": {
+        "neither": 0.6029364245917037,
+        "support_only": 0.13029171161248423,
+        "opposition_only": 0.2445706414653622,
+        "both": 0.02220122233044986
+      },
+      "state_probability_intervals": {
+        "neither": [
+          0.6029364245917037,
+          0.6029364245917037
+        ],
+        "support_only": [
+          0.13029171161248423,
+          0.13029171161248423
+        ],
+        "opposition_only": [
+          0.2445706414653622,
+          0.2445706414653622
+        ],
+        "both": [
+          0.02220122233044986,
+          0.02220122233044986
+        ]
+      },
+      "marginal_probability_intervals": {
+        "support": [
+          0.15249293394293412,
+          0.15249293394293412
+        ],
+        "opposition": [
+          0.2667718637958121,
+          0.2667718637958121
+        ],
+        "any": [
+          0.3970635754082963,
+          0.3970635754082963
+        ]
+      },
+      "topk_cutoff_probability": 8.082224373517875e-06,
+      "max_state_interval_width": 0.0,
+      "other_semantic_token_variants": []
+    },
+    "rotated": {
+      "raw_text": "B",
+      "valid": true,
+      "error": null,
+      "tokens_reconstruct_content": true,
+      "selected_code": "B",
+      "selected_state": "neither",
+      "decision_token_index": 0,
+      "decision_prefix": "",
+      "selected_native_logprob": -0.22143307328224182,
+      "selected_native_probability": 0.801369553387153,
+      "native_state_probabilities": {
+        "neither": 0.801369553387153,
+        "support_only": 0.07077724855138877,
+        "opposition_only": 0.12406971193623967,
+        "both": 0.002775897347277542
+      },
+      "candidate_mass_known": 0.998992411222059,
+      "missing_states": [],
+      "complete_distribution": true,
+      "normalized_state_probabilities": {
+        "neither": 0.802177818755244,
+        "support_only": 0.0708486348407868,
+        "opposition_only": 0.12419484927264486,
+        "both": 0.0027786971313243617
+      },
+      "state_probability_intervals": {
+        "neither": [
+          0.802177818755244,
+          0.802177818755244
+        ],
+        "support_only": [
+          0.0708486348407868,
+          0.0708486348407868
+        ],
+        "opposition_only": [
+          0.12419484927264486,
+          0.12419484927264486
+        ],
+        "both": [
+          0.0027786971313243617,
+          0.0027786971313243617
+        ]
+      },
+      "marginal_probability_intervals": {
+        "support": [
+          0.07362733197211115,
+          0.07362733197211115
+        ],
+        "opposition": [
+          0.1269735464039692,
+          0.1269735464039692
+        ],
+        "any": [
+          0.19782218124475603,
+          0.19782218124475603
+        ]
+      },
+      "topk_cutoff_probability": 1.0243357500918829e-05,
+      "max_state_interval_width": 0.0,
+      "other_semantic_token_variants": []
+    },
+    "archived_v05_calm_direction_sets": [
+      "opposes"
+    ],
+    "mapping_state_flip": false,
+    "mapping_total_variation": 0.19924139416354025
+  },
+  {
+    "model": "qwen3.8:27b",
+    "case_id": "K06",
+    "target_segment": "It’s not closed to the street though so you have to keep an eye on your kids.",
+    "extract": {
+      "valid": true,
+      "error": null,
+      "claims": [],
+      "state": "neither",
+      "has_native_logprobs": true
+    },
+    "canonical": {
+      "raw_text": "C",
+      "valid": true,
+      "error": null,
+      "tokens_reconstruct_content": true,
+      "selected_code": "C",
+      "selected_state": "opposition_only",
+      "decision_token_index": 0,
+      "decision_prefix": "",
+      "selected_native_logprob": -0.44798150658607483,
+      "selected_native_probability": 0.6389164996699521,
+      "native_state_probabilities": {
+        "neither": 0.1512941354667619,
+        "support_only": 0.11516832763528419,
+        "opposition_only": 0.6389164996699521,
+        "both": 0.09206219836963749
+      },
+      "candidate_mass_known": 0.9974411611416357,
+      "missing_states": [],
+      "complete_distribution": true,
+      "normalized_state_probabilities": {
+        "neither": 0.15168226594298154,
+        "support_only": 0.1154637808444426,
+        "opposition_only": 0.6405555781743266,
+        "both": 0.09229837503824924
+      },
+      "state_probability_intervals": {
+        "neither": [
+          0.15168226594298154,
+          0.15168226594298154
+        ],
+        "support_only": [
+          0.1154637808444426,
+          0.1154637808444426
+        ],
+        "opposition_only": [
+          0.6405555781743266,
+          0.6405555781743266
+        ],
+        "both": [
+          0.09229837503824924,
+          0.09229837503824924
+        ]
+      },
+      "marginal_probability_intervals": {
+        "support": [
+          0.20776215588269184,
+          0.20776215588269184
+        ],
+        "opposition": [
+          0.7328539532125758,
+          0.7328539532125758
+        ],
+        "any": [
+          0.8483177340570184,
+          0.8483177340570184
+        ]
+      },
+      "topk_cutoff_probability": 1.4115235585403456e-05,
+      "max_state_interval_width": 0.0,
+      "other_semantic_token_variants": []
+    },
+    "rotated": {
+      "raw_text": "D",
+      "valid": true,
+      "error": null,
+      "tokens_reconstruct_content": true,
+      "selected_code": "D",
+      "selected_state": "opposition_only",
+      "decision_token_index": 0,
+      "decision_prefix": "",
+      "selected_native_logprob": -0.8316844701766968,
+      "selected_native_probability": 0.4353153925877424,
+      "native_state_probabilities": {
+        "neither": 0.38281717763568435,
+        "support_only": 0.13251830672448608,
+        "opposition_only": 0.4353153925877424,
+        "both": 0.04545388142345345
+      },
+      "candidate_mass_known": 0.9961047583713663,
+      "missing_states": [],
+      "complete_distribution": true,
+      "normalized_state_probabilities": {
+        "neither": 0.3843141742055237,
+        "support_only": 0.1330365161001277,
+        "opposition_only": 0.43701768205533337,
+        "both": 0.04563162763901525
+      },
+      "state_probability_intervals": {
+        "neither": [
+          0.3843141742055237,
+          0.3843141742055237
+        ],
+        "support_only": [
+          0.1330365161001277,
+          0.1330365161001277
+        ],
+        "opposition_only": [
+          0.43701768205533337,
+          0.43701768205533337
+        ],
+        "both": [
+          0.04563162763901525,
+          0.04563162763901525
+        ]
+      },
+      "marginal_probability_intervals": {
+        "support": [
+          0.17866814373914294,
+          0.17866814373914294
+        ],
+        "opposition": [
+          0.4826493096943486,
+          0.4826493096943486
+        ],
+        "any": [
+          0.6156858257944763,
+          0.6156858257944763
+        ]
+      },
+      "topk_cutoff_probability": 1.5735634403644073e-05,
+      "max_state_interval_width": 0.0,
+      "other_semantic_token_variants": []
+    },
+    "archived_v05_calm_direction_sets": [
+      "empty"
+    ],
+    "mapping_state_flip": false,
+    "mapping_total_variation": 0.25020464351822724
+  },
+  {
+    "model": "qwen3.8:27b",
+    "case_id": "U01",
+    "target_segment": "1/2 of the space was empty to become a dance floor later in the night.",
+    "extract": {
+      "valid": true,
+      "error": null,
+      "claims": [],
+      "state": "neither",
+      "has_native_logprobs": true
+    },
+    "canonical": {
+      "raw_text": "A",
+      "valid": true,
+      "error": null,
+      "tokens_reconstruct_content": true,
+      "selected_code": "A",
+      "selected_state": "neither",
+      "decision_token_index": 0,
+      "decision_prefix": "",
+      "selected_native_logprob": -0.12492106109857559,
+      "selected_native_probability": 0.8825665686702419,
+      "native_state_probabilities": {
+        "neither": 0.8825665686702419,
+        "support_only": 0.1015993996029971,
+        "opposition_only": 0.011751098474113477,
+        "both": 0.0038060035580477344
+      },
+      "candidate_mass_known": 0.9997230703054002,
+      "missing_states": [],
+      "complete_distribution": true,
+      "normalized_state_probabilities": {
+        "neither": 0.8828110452633959,
+        "support_only": 0.10162754328752265,
+        "opposition_only": 0.011754353603667158,
+        "both": 0.0038070578454141887
+      },
+      "state_probability_intervals": {
+        "neither": [
+          0.8828110452633959,
+          0.8828110452633959
+        ],
+        "support_only": [
+          0.10162754328752265,
+          0.10162754328752265
+        ],
+        "opposition_only": [
+          0.011754353603667158,
+          0.011754353603667158
+        ],
+        "both": [
+          0.0038070578454141887,
+          0.0038070578454141887
+        ]
+      },
+      "marginal_probability_intervals": {
+        "support": [
+          0.10543460113293683,
+          0.10543460113293683
+        ],
+        "opposition": [
+          0.015561411449081347,
+          0.015561411449081347
+        ],
+        "any": [
+          0.11718895473660398,
+          0.11718895473660398
+        ]
+      },
+      "topk_cutoff_probability": 3.0817353318894337e-06,
+      "max_state_interval_width": 0.0,
+      "other_semantic_token_variants": []
+    },
+    "rotated": {
+      "raw_text": "B",
+      "valid": true,
+      "error": null,
+      "tokens_reconstruct_content": true,
+      "selected_code": "B",
+      "selected_state": "neither",
+      "decision_token_index": 0,
+      "decision_prefix": "",
+      "selected_native_logprob": -0.05647417530417442,
+      "selected_native_probability": 0.945090890864786,
+      "native_state_probabilities": {
+        "neither": 0.945090890864786,
+        "support_only": 0.045745189683344845,
+        "opposition_only": 0.008120159243247854,
+        "both": 0.0005699702694992231
+      },
+      "candidate_mass_known": 0.9995262100608779,
+      "missing_states": [],
+      "complete_distribution": true,
+      "normalized_state_probabilities": {
+        "neither": 0.9455388776720758,
+        "support_only": 0.04576687356758624,
+        "opposition_only": 0.008124008316653629,
+        "both": 0.0005702404436843212
+      },
+      "state_probability_intervals": {
+        "neither": [
+          0.9455388776720758,
+          0.9455388776720758
+        ],
+        "support_only": [
+          0.04576687356758624,
+          0.04576687356758624
+        ],
+        "opposition_only": [
+          0.008124008316653629,
+          0.008124008316653629
+        ],
+        "both": [
+          0.0005702404436843212,
+          0.0005702404436843212
+        ]
+      },
+      "marginal_probability_intervals": {
+        "support": [
+          0.04633711401127056,
+          0.04633711401127056
+        ],
+        "opposition": [
+          0.008694248760337949,
+          0.008694248760337949
+        ],
+        "any": [
+          0.05446112232792419,
+          0.05446112232792419
+        ]
+      },
+      "topk_cutoff_probability": 3.9904434213247285e-06,
+      "max_state_interval_width": 0.0,
+      "other_semantic_token_variants": []
+    },
+    "archived_v05_calm_direction_sets": [
+      "empty"
+    ],
+    "mapping_state_flip": false,
+    "mapping_total_variation": 0.06272783240867982
+  },
+  {
+    "model": "qwen3.8:27b",
+    "case_id": "U02",
+    "target_segment": "The three exhibits on display were quite underwhelming…",
+    "extract": {
+      "valid": true,
+      "error": null,
+      "claims": [],
+      "state": "neither",
+      "has_native_logprobs": true
+    },
+    "canonical": {
+      "raw_text": "A",
+      "valid": true,
+      "error": null,
+      "tokens_reconstruct_content": true,
+      "selected_code": "A",
+      "selected_state": "neither",
+      "decision_token_index": 0,
+      "decision_prefix": "",
+      "selected_native_logprob": -0.06745299696922302,
+      "selected_native_probability": 0.9347716566844039,
+      "native_state_probabilities": {
+        "neither": 0.9347716566844039,
+        "support_only": 0.0573714128810184,
+        "opposition_only": 0.0066243213445095804,
+        "both": 0.0009846644180206753
+      },
+      "candidate_mass_known": 0.9997520553279525,
+      "missing_states": [],
+      "complete_distribution": true,
+      "normalized_state_probabilities": {
+        "neither": 0.935003485817058,
+        "support_only": 0.057385641345041934,
+        "opposition_only": 0.006625964217034371,
+        "both": 0.0009849086208656725
+      },
+      "state_probability_intervals": {
+        "neither": [
+          0.935003485817058,
+          0.935003485817058
+        ],
+        "support_only": [
+          0.057385641345041934,
+          0.057385641345041934
+        ],
+        "opposition_only": [
+          0.006625964217034371,
+          0.006625964217034371
+        ],
+        "both": [
+          0.0009849086208656725,
+          0.0009849086208656725
+        ]
+      },
+      "marginal_probability_intervals": {
+        "support": [
+          0.058370549965907605,
+          0.058370549965907605
+        ],
+        "opposition": [
+          0.007610872837900044,
+          0.007610872837900044
+        ],
+        "any": [
+          0.06499651418294197,
+          0.06499651418294197
+        ]
+      },
+      "topk_cutoff_probability": 2.5188109001792577e-06,
+      "max_state_interval_width": 0.0,
+      "other_semantic_token_variants": []
+    },
+    "rotated": {
+      "raw_text": "B",
+      "valid": true,
+      "error": null,
+      "tokens_reconstruct_content": true,
+      "selected_code": "B",
+      "selected_state": "neither",
+      "decision_token_index": 0,
+      "decision_prefix": "",
+      "selected_native_logprob": -0.02767583169043064,
+      "selected_native_probability": 0.97270363539164,
+      "native_state_probabilities": {
+        "neither": 0.97270363539164,
+        "support_only": 0.02461706385258482,
+        "opposition_only": 0.002068453650751614,
+        "both": 0.00015348202346616622
+      },
+      "candidate_mass_known": 0.9995426349184425,
+      "missing_states": [],
+      "complete_distribution": true,
+      "normalized_state_probabilities": {
+        "neither": 0.9731487196351635,
+        "support_only": 0.02462832798982451,
+        "opposition_only": 0.0020694001221072365,
+        "both": 0.00015355225290483937
+      },
+      "state_probability_intervals": {
+        "neither": [
+          0.9731487196351635,
+          0.9731487196351635
+        ],
+        "support_only": [
+          0.02462832798982451,
+          0.02462832798982451
+        ],
+        "opposition_only": [
+          0.0020694001221072365,
+          0.0020694001221072365
+        ],
+        "both": [
+          0.00015355225290483937,
+          0.00015355225290483937
+        ]
+      },
+      "marginal_probability_intervals": {
+        "support": [
+          0.02478188024272935,
+          0.02478188024272935
+        ],
+        "opposition": [
+          0.002222952375012076,
+          0.002222952375012076
+        ],
+        "any": [
+          0.026851280364836586,
+          0.026851280364836586
+        ]
+      },
+      "topk_cutoff_probability": 2.5146658442307187e-06,
+      "max_state_interval_width": 0.0,
+      "other_semantic_token_variants": []
+    },
+    "archived_v05_calm_direction_sets": [
+      "empty"
+    ],
+    "mapping_state_flip": false,
+    "mapping_total_variation": 0.038145233818105403
+  },
+  {
+    "model": "qwen3.8:27b",
+    "case_id": "U03",
+    "target_segment": "It is hard to get the sound of the Memorial Drive cars out of your head as they are only a few yards from this park with no real barriers blocking the sound.",
+    "extract": {
+      "valid": true,
+      "error": null,
+      "claims": [
+        {
+          "quote": "It is hard to get the sound of the Memorial Drive cars out of your head as they are only a few yards from this park with no real barriers blocking the sound.",
+          "direction": "opposes",
+          "track": "E",
+          "referent": "place",
+          "reason": "The review explicitly reports that the noise from nearby cars is intrusive and persistent ('hard to get... out of your head') due to the lack of sound barriers, which directly opposes the construct of tranquility and low agitation."
+        }
+      ],
+      "state": "opposition_only",
+      "has_native_logprobs": true
+    },
+    "canonical": {
+      "raw_text": "C",
+      "valid": true,
+      "error": null,
+      "tokens_reconstruct_content": true,
+      "selected_code": "C",
+      "selected_state": "opposition_only",
+      "decision_token_index": 0,
+      "decision_prefix": "",
+      "selected_native_logprob": -0.01715545542538166,
+      "selected_native_probability": 0.9829908614941044,
+      "native_state_probabilities": {
+        "neither": 0.002530002209699094,
+        "support_only": 0.0049331192130197135,
+        "opposition_only": 0.9829908614941044,
+        "both": 0.009405730052480278
+      },
+      "candidate_mass_known": 0.9998597129693035,
+      "missing_states": [],
+      "complete_distribution": true,
+      "normalized_state_probabilities": {
+        "neither": 0.0025303571859953185,
+        "support_only": 0.004933811362765813,
+        "opposition_only": 0.9831287817116829,
+        "both": 0.009407049739555855
+      },
+      "state_probability_intervals": {
+        "neither": [
+          0.0025303571859953185,
+          0.0025303571859953185
+        ],
+        "support_only": [
+          0.004933811362765813,
+          0.004933811362765813
+        ],
+        "opposition_only": [
+          0.9831287817116829,
+          0.9831287817116829
+        ],
+        "both": [
+          0.009407049739555855,
+          0.009407049739555855
+        ]
+      },
+      "marginal_probability_intervals": {
+        "support": [
+          0.014340861102321667,
+          0.014340861102321667
+        ],
+        "opposition": [
+          0.9925358314512388,
+          0.9925358314512388
+        ],
+        "any": [
+          0.9974696428140046,
+          0.9974696428140046
+        ]
+      },
+      "topk_cutoff_probability": 9.597709281102938e-07,
+      "max_state_interval_width": 0.0,
+      "other_semantic_token_variants": []
+    },
+    "rotated": {
+      "raw_text": "D",
+      "valid": true,
+      "error": null,
+      "tokens_reconstruct_content": true,
+      "selected_code": "D",
+      "selected_state": "opposition_only",
+      "decision_token_index": 0,
+      "decision_prefix": "",
+      "selected_native_logprob": -0.029791397973895073,
+      "selected_native_probability": 0.9706479915688734,
+      "native_state_probabilities": {
+        "neither": 0.01657588569492917,
+        "support_only": 0.008199071994483463,
+        "opposition_only": 0.9706479915688734,
+        "both": 0.00421817061566232
+      },
+      "candidate_mass_known": 0.9996411198739483,
+      "missing_states": [],
+      "complete_distribution": true,
+      "normalized_state_probabilities": {
+        "neither": 0.016581836586533512,
+        "support_only": 0.008202015534852489,
+        "opposition_only": 0.9709964629018754,
+        "both": 0.0042196849767386704
+      },
+      "state_probability_intervals": {
+        "neither": [
+          0.016581836586533512,
+          0.016581836586533512
+        ],
+        "support_only": [
+          0.008202015534852489,
+          0.008202015534852489
+        ],
+        "opposition_only": [
+          0.9709964629018754,
+          0.9709964629018754
+        ],
+        "both": [
+          0.0042196849767386704,
+          0.0042196849767386704
+        ]
+      },
+      "marginal_probability_intervals": {
+        "support": [
+          0.012421700511591159,
+          0.012421700511591159
+        ],
+        "opposition": [
+          0.975216147878614,
+          0.975216147878614
+        ],
+        "any": [
+          0.9834181634134664,
+          0.9834181634134664
+        ]
+      },
+      "topk_cutoff_probability": 2.099467556606225e-06,
+      "max_state_interval_width": 0.0,
+      "other_semantic_token_variants": [
+        {
+          "token": " D",
+          "logprob": -13.008025169372559,
+          "bytes": [
+            32,
+            68
+          ]
+        }
+      ]
+    },
+    "archived_v05_calm_direction_sets": [
+      "opposes"
+    ],
+    "mapping_state_flip": false,
+    "mapping_total_variation": 0.017319683572624818
+  },
+  {
+    "model": "qwen3.8:27b",
+    "case_id": "U04",
+    "target_segment": "This museum is fun for all ages.",
+    "extract": {
+      "valid": true,
+      "error": null,
+      "claims": [],
+      "state": "neither",
+      "has_native_logprobs": true
+    },
+    "canonical": {
+      "raw_text": "A",
+      "valid": true,
+      "error": null,
+      "tokens_reconstruct_content": true,
+      "selected_code": "A",
+      "selected_state": "neither",
+      "decision_token_index": 0,
+      "decision_prefix": "",
+      "selected_native_logprob": -0.044160351157188416,
+      "selected_native_probability": 0.9568005211007685,
+      "native_state_probabilities": {
+        "neither": 0.9568005211007685,
+        "support_only": 0.0389726384132621,
+        "opposition_only": 0.003061663443591478,
+        "both": 0.0010052828600249993
+      },
+      "candidate_mass_known": 0.9998401058176472,
+      "missing_states": [],
+      "complete_distribution": true,
+      "normalized_state_probabilities": {
+        "neither": 0.9569535324033819,
+        "support_only": 0.03897887090795497,
+        "opposition_only": 0.0030621530640518937,
+        "both": 0.0010054436246112583
+      },
+      "state_probability_intervals": {
+        "neither": [
+          0.9569535324033819,
+          0.9569535324033819
+        ],
+        "support_only": [
+          0.03897887090795497,
+          0.03897887090795497
+        ],
+        "opposition_only": [
+          0.0030621530640518937,
+          0.0030621530640518937
+        ],
+        "both": [
+          0.0010054436246112583,
+          0.0010054436246112583
+        ]
+      },
+      "marginal_probability_intervals": {
+        "support": [
+          0.03998431453256623,
+          0.03998431453256623
+        ],
+        "opposition": [
+          0.004067596688663152,
+          0.004067596688663152
+        ],
+        "any": [
+          0.043046467596618114,
+          0.043046467596618114
+        ]
+      },
+      "topk_cutoff_probability": 1.5931471535561494e-06,
+      "max_state_interval_width": 0.0,
+      "other_semantic_token_variants": []
+    },
+    "rotated": {
+      "raw_text": "B",
+      "valid": true,
+      "error": null,
+      "tokens_reconstruct_content": true,
+      "selected_code": "B",
+      "selected_state": "neither",
+      "decision_token_index": 0,
+      "decision_prefix": "",
+      "selected_native_logprob": -0.02134726569056511,
+      "selected_native_probability": 0.9788789744563814,
+      "native_state_probabilities": {
+        "neither": 0.9788789744563814,
+        "support_only": 0.01956648136423938,
+        "opposition_only": 0.0011281220541407959,
+        "both": 0.000226463842294993
+      },
+      "candidate_mass_known": 0.9998000417170566,
+      "missing_states": [],
+      "complete_distribution": true,
+      "normalized_state_probabilities": {
+        "neither": 0.9790747485619771,
+        "support_only": 0.019570394626745466,
+        "opposition_only": 0.0011283476766047729,
+        "both": 0.00022650913467263313
+      },
+      "state_probability_intervals": {
+        "neither": [
+          0.9790747485619771,
+          0.9790747485619771
+        ],
+        "support_only": [
+          0.019570394626745466,
+          0.019570394626745466
+        ],
+        "opposition_only": [
+          0.0011283476766047729,
+          0.0011283476766047729
+        ],
+        "both": [
+          0.00022650913467263313,
+          0.00022650913467263313
+        ]
+      },
+      "marginal_probability_intervals": {
+        "support": [
+          0.0197969037614181,
+          0.0197969037614181
+        ],
+        "opposition": [
+          0.001354856811277406,
+          0.001354856811277406
+        ],
+        "any": [
+          0.020925251438022874,
+          0.020925251438022874
+        ]
+      },
+      "topk_cutoff_probability": 1.689242757850991e-06,
+      "max_state_interval_width": 0.0,
+      "other_semantic_token_variants": []
+    },
+    "archived_v05_calm_direction_sets": [
+      "empty"
+    ],
+    "mapping_state_flip": false,
+    "mapping_total_variation": 0.02212121615859522
+  },
+  {
+    "model": "qwen3.8:27b",
+    "case_id": "U05",
+    "target_segment": "This station is epic and famous, but not the cleanest.",
+    "extract": {
+      "valid": true,
+      "error": null,
+      "claims": [],
+      "state": "neither",
+      "has_native_logprobs": true
+    },
+    "canonical": {
+      "raw_text": "A",
+      "valid": true,
+      "error": null,
+      "tokens_reconstruct_content": true,
+      "selected_code": "A",
+      "selected_state": "neither",
+      "decision_token_index": 0,
+      "decision_prefix": "",
+      "selected_native_logprob": -0.10206936299800873,
+      "selected_native_probability": 0.9029669170041718,
+      "native_state_probabilities": {
+        "neither": 0.9029669170041718,
+        "support_only": 0.06119293219018798,
+        "opposition_only": 0.03156533894813685,
+        "both": 0.0038765628653007708
+      },
+      "candidate_mass_known": 0.9996017510077974,
+      "missing_states": [],
+      "complete_distribution": true,
+      "normalized_state_probabilities": {
+        "neither": 0.9033266659385115,
+        "support_only": 0.06121731192296666,
+        "opposition_only": 0.03157791482089013,
+        "both": 0.0038781073176316714
+      },
+      "state_probability_intervals": {
+        "neither": [
+          0.9033266659385115,
+          0.9033266659385115
+        ],
+        "support_only": [
+          0.06121731192296666,
+          0.06121731192296666
+        ],
+        "opposition_only": [
+          0.03157791482089013,
+          0.03157791482089013
+        ],
+        "both": [
+          0.0038781073176316714,
+          0.0038781073176316714
+        ]
+      },
+      "marginal_probability_intervals": {
+        "support": [
+          0.06509541924059833,
+          0.06509541924059833
+        ],
+        "opposition": [
+          0.0354560221385218,
+          0.0354560221385218
+        ],
+        "any": [
+          0.09667333406148847,
+          0.09667333406148847
+        ]
+      },
+      "topk_cutoff_probability": 5.328367822094381e-06,
+      "max_state_interval_width": 0.0,
+      "other_semantic_token_variants": []
+    },
+    "rotated": {
+      "raw_text": "B",
+      "valid": true,
+      "error": null,
+      "tokens_reconstruct_content": true,
+      "selected_code": "B",
+      "selected_state": "neither",
+      "decision_token_index": 0,
+      "decision_prefix": "",
+      "selected_native_logprob": -0.05582062900066376,
+      "selected_native_probability": 0.945708753401889,
+      "native_state_probabilities": {
+        "neither": 0.945708753401889,
+        "support_only": 0.04445432895233466,
+        "opposition_only": 0.008720249828996118,
+        "both": 0.0007186279355451321
+      },
+      "candidate_mass_known": 0.9996019601187649,
+      "missing_states": [],
+      "complete_distribution": true,
+      "normalized_state_probabilities": {
+        "neither": 0.9460853330955126,
+        "support_only": 0.04447203059411062,
+        "opposition_only": 0.008723722218351838,
+        "both": 0.00071891409202494
+      },
+      "state_probability_intervals": {
+        "neither": [
+          0.9460853330955126,
+          0.9460853330955126
+        ],
+        "support_only": [
+          0.04447203059411062,
+          0.04447203059411062
+        ],
+        "opposition_only": [
+          0.008723722218351838,
+          0.008723722218351838
+        ],
+        "both": [
+          0.00071891409202494,
+          0.00071891409202494
+        ]
+      },
+      "marginal_probability_intervals": {
+        "support": [
+          0.04519094468613556,
+          0.04519094468613556
+        ],
+        "opposition": [
+          0.009442636310376779,
+          0.009442636310376779
+        ],
+        "any": [
+          0.053914666904487395,
+          0.053914666904487395
+        ]
+      },
+      "topk_cutoff_probability": 4.833864293724892e-06,
+      "max_state_interval_width": 0.0,
+      "other_semantic_token_variants": []
+    },
+    "archived_v05_calm_direction_sets": [
+      "empty"
+    ],
+    "mapping_state_flip": false,
+    "mapping_total_variation": 0.04275866715700106
+  },
+  {
+    "model": "qwen3.8:27b",
+    "case_id": "U06",
+    "target_segment": "Lovely sitting under the fairy lights in a comfy Adirondack chair, while a busker played songs from the 70s.",
+    "extract": {
+      "valid": true,
+      "error": null,
+      "claims": [
+        {
+          "quote": "Lovely sitting under the fairy lights in a comfy Adirondack chair",
+          "direction": "supports",
+          "track": "E",
+          "referent": "surroundings",
+          "reason": "The visitor directly appraises the experience of sitting in a comfortable chair under lights as 'Lovely', indicating a state of ease and relaxation consistent with a calm atmosphere."
+        }
+      ],
+      "state": "support_only",
+      "has_native_logprobs": true
+    },
+    "canonical": {
+      "raw_text": "B",
+      "valid": true,
+      "error": null,
+      "tokens_reconstruct_content": true,
+      "selected_code": "B",
+      "selected_state": "support_only",
+      "decision_token_index": 0,
+      "decision_prefix": "",
+      "selected_native_logprob": -0.7263978719711304,
+      "selected_native_probability": 0.48364801819133263,
+      "native_state_probabilities": {
+        "neither": 0.44589409428809734,
+        "support_only": 0.48364801819133263,
+        "opposition_only": 0.03425666319111502,
+        "both": 0.03383329635458812
+      },
+      "candidate_mass_known": 0.9976320720251332,
+      "missing_states": [],
+      "complete_distribution": true,
+      "normalized_state_probabilities": {
+        "neither": 0.44695244548720164,
+        "support_only": 0.48479598015484426,
+        "opposition_only": 0.034337973038072095,
+        "both": 0.03391360131988195
+      },
+      "state_probability_intervals": {
+        "neither": [
+          0.44695244548720164,
+          0.44695244548720164
+        ],
+        "support_only": [
+          0.48479598015484426,
+          0.48479598015484426
+        ],
+        "opposition_only": [
+          0.034337973038072095,
+          0.034337973038072095
+        ],
+        "both": [
+          0.03391360131988195,
+          0.03391360131988195
+        ]
+      },
+      "marginal_probability_intervals": {
+        "support": [
+          0.5187095814747262,
+          0.5187095814747262
+        ],
+        "opposition": [
+          0.06825157435795405,
+          0.06825157435795405
+        ],
+        "any": [
+          0.5530475545127984,
+          0.5530475545127984
+        ]
+      },
+      "topk_cutoff_probability": 2.6616901290073946e-05,
+      "max_state_interval_width": 0.0,
+      "other_semantic_token_variants": []
+    },
+    "rotated": {
+      "raw_text": "C",
+      "valid": true,
+      "error": null,
+      "tokens_reconstruct_content": true,
+      "selected_code": "C",
+      "selected_state": "support_only",
+      "decision_token_index": 0,
+      "decision_prefix": "",
+      "selected_native_logprob": -0.5803598761558533,
+      "selected_native_probability": 0.559696908745681,
+      "native_state_probabilities": {
+        "neither": 0.41419213396873966,
+        "support_only": 0.559696908745681,
+        "opposition_only": 0.018915187147763156,
+        "both": 0.005573143782345583
+      },
+      "candidate_mass_known": 0.9983773736445294,
+      "missing_states": [],
+      "complete_distribution": true,
+      "normalized_state_probabilities": {
+        "neither": 0.4148653053471663,
+        "support_only": 0.5606065637310408,
+        "opposition_only": 0.01894592931199368,
+        "both": 0.005582201609799194
+      },
+      "state_probability_intervals": {
+        "neither": [
+          0.4148653053471663,
+          0.4148653053471663
+        ],
+        "support_only": [
+          0.5606065637310408,
+          0.5606065637310408
+        ],
+        "opposition_only": [
+          0.01894592931199368,
+          0.01894592931199368
+        ],
+        "both": [
+          0.005582201609799194,
+          0.005582201609799194
+        ]
+      },
+      "marginal_probability_intervals": {
+        "support": [
+          0.5661887653408401,
+          0.5661887653408401
+        ],
+        "opposition": [
+          0.024528130921792873,
+          0.024528130921792873
+        ],
+        "any": [
+          0.5851346946528336,
+          0.5851346946528336
+        ]
+      },
+      "topk_cutoff_probability": 1.1314329519892594e-05,
+      "max_state_interval_width": 0.0,
+      "other_semantic_token_variants": []
+    },
+    "archived_v05_calm_direction_sets": [
+      "supports"
+    ],
+    "mapping_state_flip": false,
+    "mapping_total_variation": 0.07581058357619651
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "case_id": "K01",
+    "target_segment": "It was so stressful but her humanity made everything so much better!",
+    "canonical": {
+      "raw_text": "C",
+      "valid": true,
+      "error": null,
+      "tokens_reconstruct_content": true,
+      "selected_code": "C",
+      "selected_state": "opposition_only",
+      "decision_token_index": 0,
+      "decision_prefix": "",
+      "selected_native_logprob": -0.024699309840798378,
+      "selected_native_probability": 0.975603222216585,
+      "native_state_probabilities": {
+        "neither": 0.024326577350505335,
+        "support_only": 3.0294630815765568e-05,
+        "opposition_only": 0.975603222216585,
+        "both": 4.192351021195421e-06
+      },
+      "candidate_mass_known": 0.9999642865489273,
+      "missing_states": [],
+      "complete_distribution": true,
+      "normalized_state_probabilities": {
+        "neither": 0.024327446167563764,
+        "support_only": 3.0295712780221656e-05,
+        "opposition_only": 0.9756380656189061,
+        "both": 4.192500749865823e-06
+      },
+      "state_probability_intervals": {
+        "neither": [
+          0.024327446167563764,
+          0.024327446167563764
+        ],
+        "support_only": [
+          3.0295712780221656e-05,
+          3.0295712780221656e-05
+        ],
+        "opposition_only": [
+          0.9756380656189061,
+          0.9756380656189061
+        ],
+        "both": [
+          4.192500749865823e-06,
+          4.192500749865823e-06
+        ]
+      },
+      "marginal_probability_intervals": {
+        "support": [
+          3.448821353008748e-05,
+          3.448821353008748e-05
+        ],
+        "opposition": [
+          0.975642258119656,
+          0.975642258119656
+        ],
+        "any": [
+          0.9756725538324362,
+          0.9756725538324362
+        ]
+      },
+      "topk_cutoff_probability": 7.558079203395958e-08,
+      "max_state_interval_width": 0.0,
+      "other_semantic_token_variants": [
+        {
+          "token": " C",
+          "logprob": -13.464007377624512,
+          "bytes": [
+            32,
+            67
+          ]
+        }
+      ]
+    },
+    "extract": {
+      "valid": true,
+      "error": null,
+      "claims": [
+        {
+          "quote": "It was so stressful",
+          "direction": "opposes",
+          "track": "E",
+          "referent": "place",
+          "reason": "The visitor directly reports experiencing stress during their visit to the place."
+        }
+      ],
+      "state": "opposition_only",
+      "has_native_logprobs": true
+    },
+    "rotated": {
+      "raw_text": "D",
+      "valid": true,
+      "error": null,
+      "tokens_reconstruct_content": true,
+      "selected_code": "D",
+      "selected_state": "opposition_only",
+      "decision_token_index": 0,
+      "decision_prefix": "",
+      "selected_native_logprob": -0.009396875277161598,
+      "selected_native_probability": 0.9906471373869334,
+      "native_state_probabilities": {
+        "neither": 0.009318104675604722,
+        "support_only": 2.030834555481904e-05,
+        "opposition_only": 0.9906471373869334,
+        "both": 5.997538620878874e-08
+      },
+      "candidate_mass_known": 0.9999856103834792,
+      "missing_states": [],
+      "complete_distribution": true,
+      "normalized_state_probabilities": {
+        "neither": 0.009318238761487149,
+        "support_only": 2.0308637788328873e-05,
+        "opposition_only": 0.9906613926244753,
+        "both": 5.997624924401572e-08
+      },
+      "state_probability_intervals": {
+        "neither": [
+          0.009318238761487149,
+          0.009318238761487149
+        ],
+        "support_only": [
+          2.0308637788328873e-05,
+          2.0308637788328873e-05
+        ],
+        "opposition_only": [
+          0.9906613926244753,
+          0.9906613926244753
+        ],
+        "both": [
+          5.997624924401572e-08,
+          5.997624924401572e-08
+        ]
+      },
+      "marginal_probability_intervals": {
+        "support": [
+          2.036861403757289e-05,
+          2.036861403757289e-05
+        ],
+        "opposition": [
+          0.9906614526007245,
+          0.9906614526007245
+        ],
+        "any": [
+          0.9906817612385128,
+          0.9906817612385128
+        ]
+      },
+      "topk_cutoff_probability": 2.2637830427929382e-08,
+      "max_state_interval_width": 0.0,
+      "other_semantic_token_variants": [
+        {
+          "token": " D",
+          "logprob": -12.311089515686035,
+          "bytes": [
+            32,
+            68
+          ]
+        }
+      ]
+    },
+    "archived_v05_calm_direction_sets": [
+      "opposes"
+    ],
+    "mapping_state_flip": false,
+    "mapping_total_variation": 0.015023327005569157
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "case_id": "K02",
+    "target_segment": "Lights in the small box were years away- it was completely dark.",
+    "extract": {
+      "valid": true,
+      "error": null,
+      "claims": [],
+      "state": "neither",
+      "has_native_logprobs": true
+    },
+    "canonical": {
+      "raw_text": "A",
+      "valid": true,
+      "error": null,
+      "tokens_reconstruct_content": true,
+      "selected_code": "A",
+      "selected_state": "neither",
+      "decision_token_index": 0,
+      "decision_prefix": "",
+      "selected_native_logprob": -5.960466182841628e-07,
+      "selected_native_probability": 0.9999994039535594,
+      "native_state_probabilities": {
+        "neither": 0.9999994039535594,
+        "support_only": 9.288296681254579e-09,
+        "opposition_only": 2.546173251542213e-07
+      },
+      "candidate_mass_known": 0.9999996678591812,
+      "missing_states": [
+        "both"
+      ],
+      "complete_distribution": false,
+      "normalized_state_probabilities": null,
+      "state_probability_intervals": {
+        "neither": [
+          0.9999997296053992,
+          0.9999997360942905
+        ],
+        "support_only": [
+          9.288299706007285e-09,
+          9.28829976627807e-09
+        ],
+        "opposition_only": [
+          2.5461740807087115e-07,
+          2.546174097230563e-07
+        ],
+        "both": [
+          0.0,
+          6.488893045060562e-09
+        ]
+      },
+      "marginal_probability_intervals": {
+        "support": [
+          9.28829976627807e-09,
+          1.5777192751067848e-08
+        ],
+        "opposition": [
+          2.546174097230563e-07,
+          2.611063011159317e-07
+        ],
+        "any": [
+          2.6390570948933436e-07,
+          2.70394600821939e-07
+        ]
+      },
+      "topk_cutoff_probability": 6.488890931940033e-09,
+      "max_state_interval_width": 6.488893045060562e-09,
+      "other_semantic_token_variants": [
+        {
+          "token": " A",
+          "logprob": -16.208593368530273,
+          "bytes": [
+            32,
+            65
+          ]
+        }
+      ]
+    },
+    "rotated": {
+      "raw_text": "B",
+      "valid": true,
+      "error": null,
+      "tokens_reconstruct_content": true,
+      "selected_code": "B",
+      "selected_state": "neither",
+      "decision_token_index": 0,
+      "decision_prefix": "",
+      "selected_native_logprob": 0.0,
+      "selected_native_probability": 1.0,
+      "native_state_probabilities": {
+        "neither": 1.0,
+        "support_only": 1.1325431583636706e-08,
+        "opposition_only": 2.8238909133338356e-09
+      },
+      "candidate_mass_known": 1.0000000141493226,
+      "missing_states": [
+        "both"
+      ],
+      "complete_distribution": false,
+      "normalized_state_probabilities": null,
+      "state_probability_intervals": {
+        "neither": [
+          0.9999999858506776,
+          0.9999999858506776
+        ],
+        "support_only": [
+          1.1325431423389523e-08,
+          1.1325431423389523e-08
+        ],
+        "opposition_only": [
+          2.8238908733776926e-09,
+          2.8238908733776926e-09
+        ],
+        "both": [
+          0.0,
+          0.0
+        ]
+      },
+      "marginal_probability_intervals": {
+        "support": [
+          1.1325431423389523e-08,
+          1.1325431423389523e-08
+        ],
+        "opposition": [
+          2.8238908733776926e-09,
+          2.8238908733776926e-09
+        ],
+        "any": [
+          1.4149322296767216e-08,
+          1.4149322296767216e-08
+        ]
+      },
+      "topk_cutoff_probability": 2.686855442408227e-10,
+      "max_state_interval_width": 0.0,
+      "other_semantic_token_variants": [
+        {
+          "token": " B",
+          "logprob": -16.741840362548828,
+          "bytes": [
+            32,
+            66
+          ]
+        }
+      ]
+    },
+    "archived_v05_calm_direction_sets": [
+      "empty"
+    ],
+    "mapping_state_flip": false
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "case_id": "K03",
+    "target_segment": "I wouldn't go here if your looking for walk.",
+    "extract": {
+      "valid": true,
+      "error": null,
+      "claims": [],
+      "state": "neither",
+      "has_native_logprobs": true
+    },
+    "canonical": {
+      "raw_text": "A",
+      "valid": true,
+      "error": null,
+      "tokens_reconstruct_content": true,
+      "selected_code": "A",
+      "selected_state": "neither",
+      "decision_token_index": 0,
+      "decision_prefix": "",
+      "selected_native_logprob": -1.1920928955078125e-07,
+      "selected_native_probability": 0.9999998807907176,
+      "native_state_probabilities": {
+        "neither": 0.9999998807907176,
+        "support_only": 9.906727119075628e-09,
+        "opposition_only": 5.0680059529204245e-08
+      },
+      "candidate_mass_known": 0.9999999413775043,
+      "missing_states": [
+        "both"
+      ],
+      "complete_distribution": false,
+      "normalized_state_probabilities": null,
+      "state_probability_intervals": {
+        "neither": [
+          0.9999999343518332,
+          0.9999999394132097
+        ],
+        "support_only": [
+          9.906727649691049e-09,
+          9.90672769983273e-09
+        ],
+        "opposition_only": [
+          5.06800622436851e-08,
+          5.068006250019599e-08
+        ],
+        "both": [
+          0.0,
+          5.061376797489938e-09
+        ]
+      },
+      "marginal_probability_intervals": {
+        "support": [
+          9.90672769983273e-09,
+          1.4968104447180985e-08
+        ],
+        "opposition": [
+          5.068006250019599e-08,
+          5.574143904117504e-08
+        ],
+        "any": [
+          6.058679020002873e-08,
+          6.564816669086609e-08
+        ]
+      },
+      "topk_cutoff_probability": 5.061376526396932e-09,
+      "max_state_interval_width": 5.061376797489938e-09,
+      "other_semantic_token_variants": [
+        {
+          "token": " A",
+          "logprob": -16.678081512451172,
+          "bytes": [
+            32,
+            65
+          ]
+        }
+      ]
+    },
+    "rotated": {
+      "raw_text": "B",
+      "valid": true,
+      "error": null,
+      "tokens_reconstruct_content": true,
+      "selected_code": "B",
+      "selected_state": "neither",
+      "decision_token_index": 0,
+      "decision_prefix": "",
+      "selected_native_logprob": 0.0,
+      "selected_native_probability": 1.0,
+      "native_state_probabilities": {
+        "neither": 1.0,
+        "support_only": 4.26924987793059e-09
+      },
+      "candidate_mass_known": 1.0000000042692498,
+      "missing_states": [
+        "opposition_only",
+        "both"
+      ],
+      "complete_distribution": false,
+      "normalized_state_probabilities": null,
+      "state_probability_intervals": {
+        "neither": [
+          0.9999999957307502,
+          0.9999999957307502
+        ],
+        "support_only": [
+          4.269249859704095e-09,
+          4.269249859704095e-09
+        ],
+        "opposition_only": [
+          0.0,
+          0.0
+        ],
+        "both": [
+          0.0,
+          0.0
+        ]
+      },
+      "marginal_probability_intervals": {
+        "support": [
+          4.269249859704095e-09,
+          4.269249859704095e-09
+        ],
+        "opposition": [
+          0.0,
+          0.0
+        ],
+        "any": [
+          4.269249859704095e-09,
+          4.269249859704095e-09
+        ]
+      },
+      "topk_cutoff_probability": 1.2233909347230604e-10,
+      "max_state_interval_width": 0.0,
+      "other_semantic_token_variants": [
+        {
+          "token": " B",
+          "logprob": -16.90554428100586,
+          "bytes": [
+            32,
+            66
+          ]
+        }
+      ]
+    },
+    "archived_v05_calm_direction_sets": [
+      "empty"
+    ],
+    "mapping_state_flip": false
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "case_id": "K04",
+    "target_segment": "What made this visit extra special was how surprisingly uncrowded it was.",
+    "extract": {
+      "valid": false,
+      "error": "AssertionError('nonexact source quote')",
+      "claims": []
+    },
+    "canonical": {
+      "raw_text": "B",
+      "valid": true,
+      "error": null,
+      "tokens_reconstruct_content": true,
+      "selected_code": "B",
+      "selected_state": "support_only",
+      "decision_token_index": 0,
+      "decision_prefix": "",
+      "selected_native_logprob": -2.3841860752327193e-07,
+      "selected_native_probability": 0.9999997615814209,
+      "native_state_probabilities": {
+        "neither": 2.4184641229938018e-08,
+        "support_only": 0.9999997615814209,
+        "opposition_only": 5.6372834197649624e-08
+      },
+      "candidate_mass_known": 0.9999998421388964,
+      "missing_states": [
+        "both"
+      ],
+      "complete_distribution": false,
+      "normalized_state_probabilities": null,
+      "state_probability_intervals": {
+        "neither": [
+          2.418464503126847e-08,
+          2.4184645047752777e-08
+        ],
+        "support_only": [
+          0.9999999187609097,
+          0.9999999194425118
+        ],
+        "opposition_only": [
+          5.6372843058304994e-08,
+          5.637284309672885e-08
+        ],
+        "both": [
+          0.0,
+          6.816022393227249e-10
+        ]
+      },
+      "marginal_probability_intervals": {
+        "support": [
+          0.9999999194425118,
+          0.9999999194425119
+        ],
+        "opposition": [
+          5.637284309672885e-08,
+          5.705444529762772e-08
+        ],
+        "any": [
+          0.9999999758153549,
+          0.9999999758153549
+        ]
+      },
+      "topk_cutoff_probability": 6.816021321888247e-10,
+      "max_state_interval_width": 6.816022393227249e-10,
+      "other_semantic_token_variants": [
+        {
+          "token": " B",
+          "logprob": -15.460609436035156,
+          "bytes": [
+            32,
+            66
+          ]
+        }
+      ]
+    },
+    "rotated": {
+      "raw_text": "C",
+      "valid": true,
+      "error": null,
+      "tokens_reconstruct_content": true,
+      "selected_code": "C",
+      "selected_state": "support_only",
+      "decision_token_index": 0,
+      "decision_prefix": "",
+      "selected_native_logprob": -8.940736734075472e-06,
+      "selected_native_probability": 0.9999910593032342,
+      "native_state_probabilities": {
+        "neither": 7.993908759486004e-06,
+        "support_only": 0.9999910593032342,
+        "opposition_only": 1.925430757521472e-07,
+        "both": 1.8201729091787187e-09
+      },
+      "candidate_mass_known": 0.9999992475752423,
+      "missing_states": [],
+      "complete_distribution": true,
+      "normalized_state_probabilities": {
+        "neither": 7.99391477430539e-06,
+        "support_only": 0.9999918117218308,
+        "opposition_only": 1.925432206264333e-07,
+        "both": 1.8201742787229094e-09
+      },
+      "state_probability_intervals": {
+        "neither": [
+          7.99391477430539e-06,
+          7.99391477430539e-06
+        ],
+        "support_only": [
+          0.9999918117218308,
+          0.9999918117218308
+        ],
+        "opposition_only": [
+          1.925432206264333e-07,
+          1.925432206264333e-07
+        ],
+        "both": [
+          1.8201742787229094e-09,
+          1.8201742787229094e-09
+        ]
+      },
+      "marginal_probability_intervals": {
+        "support": [
+          0.9999918135420051,
+          0.9999918135420051
+        ],
+        "opposition": [
+          1.9436339490515622e-07,
+          1.9436339490515622e-07
+        ],
+        "any": [
+          0.9999920060852256,
+          0.9999920060852256
+        ]
+      },
+      "topk_cutoff_probability": 1.58217201739713e-09,
+      "max_state_interval_width": 0.0,
+      "other_semantic_token_variants": [
+        {
+          "token": " C",
+          "logprob": -14.816908836364746,
+          "bytes": [
+            32,
+            67
+          ]
+        }
+      ]
+    },
+    "archived_v05_calm_direction_sets": [
+      "supports"
+    ],
+    "mapping_state_flip": false
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "case_id": "K05",
+    "target_segment": "If the owner of the chickens sees it, he yells from his home and asks if you are feeding poison to them.",
+    "extract": {
+      "valid": true,
+      "error": null,
+      "claims": [
+        {
+          "quote": "he yells from his home",
+          "direction": "opposes",
+          "track": "E",
+          "referent": "place",
+          "reason": "Visitor reports a disturbance in the form of yelling from the owner."
+        }
+      ],
+      "state": "opposition_only",
+      "has_native_logprobs": true
+    },
+    "canonical": {
+      "raw_text": "C",
+      "valid": true,
+      "error": null,
+      "tokens_reconstruct_content": true,
+      "selected_code": "C",
+      "selected_state": "opposition_only",
+      "decision_token_index": 0,
+      "decision_prefix": "",
+      "selected_native_logprob": -9.536747711536009e-07,
+      "selected_native_probability": 0.9999990463256836,
+      "native_state_probabilities": {
+        "neither": 2.6826796125959722e-08,
+        "support_only": 3.0586964835386196e-07,
+        "opposition_only": 0.9999990463256836,
+        "both": 1.1938887413513585e-07
+      },
+      "candidate_mass_known": 0.9999994984110022,
+      "missing_states": [],
+      "complete_distribution": true,
+      "normalized_state_probabilities": {
+        "neither": 2.6826809581992253e-08,
+        "support_only": 3.058698017747893e-07,
+        "opposition_only": 0.9999995479144547,
+        "both": 1.1938893401931162e-07
+      },
+      "state_probability_intervals": {
+        "neither": [
+          2.6826809581992253e-08,
+          2.6826809581992253e-08
+        ],
+        "support_only": [
+          3.058698017747893e-07,
+          3.058698017747893e-07
+        ],
+        "opposition_only": [
+          0.9999995479144547,
+          0.9999995479144547
+        ],
+        "both": [
+          1.1938893401931162e-07,
+          1.1938893401931162e-07
+        ]
+      },
+      "marginal_probability_intervals": {
+        "support": [
+          4.252587357941009e-07,
+          4.252587357941009e-07
+        ],
+        "opposition": [
+          0.9999996673033886,
+          0.9999996673033886
+        ],
+        "any": [
+          0.9999999731731904,
+          0.9999999731731904
+        ]
+      },
+      "topk_cutoff_probability": 2.293290567012314e-09,
+      "max_state_interval_width": 0.0,
+      "other_semantic_token_variants": [
+        {
+          "token": " C",
+          "logprob": -15.809075355529785,
+          "bytes": [
+            32,
+            67
+          ]
+        }
+      ]
+    },
+    "rotated": {
+      "raw_text": "D",
+      "valid": true,
+      "error": null,
+      "tokens_reconstruct_content": true,
+      "selected_code": "D",
+      "selected_state": "opposition_only",
+      "decision_token_index": 0,
+      "decision_prefix": "",
+      "selected_native_logprob": -2.7418175250204513e-06,
+      "selected_native_probability": 0.9999972581862338,
+      "native_state_probabilities": {
+        "neither": 8.716582006510423e-07,
+        "support_only": 1.151211181366717e-06,
+        "opposition_only": 0.9999972581862338,
+        "both": 3.444103238858262e-08
+      },
+      "candidate_mass_known": 0.9999993154966481,
+      "missing_states": [],
+      "complete_distribution": true,
+      "normalized_state_probabilities": {
+        "neither": 8.716587973044107e-07,
+        "support_only": 1.1512119693751689e-06,
+        "opposition_only": 0.9999979426881774,
+        "both": 3.4441055963600865e-08
+      },
+      "state_probability_intervals": {
+        "neither": [
+          8.716587973044107e-07,
+          8.716587973044107e-07
+        ],
+        "support_only": [
+          1.1512119693751689e-06,
+          1.1512119693751689e-06
+        ],
+        "opposition_only": [
+          0.9999979426881774,
+          0.9999979426881774
+        ],
+        "both": [
+          3.4441055963600865e-08,
+          3.4441055963600865e-08
+        ]
+      },
+      "marginal_probability_intervals": {
+        "support": [
+          1.1856530253387697e-06,
+          1.1856530253387697e-06
+        ],
+        "opposition": [
+          0.9999979771292333,
+          0.9999979771292333
+        ],
+        "any": [
+          0.9999991283412027,
+          0.9999991283412027
+        ]
+      },
+      "topk_cutoff_probability": 3.727493433481642e-09,
+      "max_state_interval_width": 0.0,
+      "other_semantic_token_variants": [
+        {
+          "token": " D",
+          "logprob": -16.373674392700195,
+          "bytes": [
+            32,
+            68
+          ]
+        }
+      ]
+    },
+    "archived_v05_calm_direction_sets": [
+      "opposes"
+    ],
+    "mapping_state_flip": false,
+    "mapping_total_variation": 1.6901741553066574e-06
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "case_id": "K06",
+    "target_segment": "It’s not closed to the street though so you have to keep an eye on your kids.",
+    "extract": {
+      "valid": true,
+      "error": null,
+      "claims": [],
+      "state": "neither",
+      "has_native_logprobs": true
+    },
+    "canonical": {
+      "raw_text": "A",
+      "valid": true,
+      "error": null,
+      "tokens_reconstruct_content": true,
+      "selected_code": "A",
+      "selected_state": "neither",
+      "decision_token_index": 0,
+      "decision_prefix": "",
+      "selected_native_logprob": -0.0018021600553765893,
+      "selected_native_probability": 0.9981994628599918,
+      "native_state_probabilities": {
+        "neither": 0.9981994628599918,
+        "opposition_only": 0.0017881327044971425
+      },
+      "candidate_mass_known": 0.999987595564489,
+      "missing_states": [
+        "support_only",
+        "both"
+      ],
+      "complete_distribution": false,
+      "normalized_state_probabilities": null,
+      "state_probability_intervals": {
+        "neither": [
+          0.9982117737966436,
+          0.9982118451144508
+        ],
+        "support_only": [
+          0.0,
+          3.572278276776887e-08
+        ],
+        "opposition_only": [
+          0.0017881547577933714,
+          0.001788154885549104
+        ],
+        "both": [
+          0.0,
+          3.572278276776887e-08
+        ]
+      },
+      "marginal_probability_intervals": {
+        "support": [
+          0.0,
+          7.144556298330343e-08
+        ],
+        "opposition": [
+          0.0017881548216712353,
+          0.0017881905444540032
+        ],
+        "any": [
+          0.001788154885549104,
+          0.0017882262033563547
+        ]
+      },
+      "topk_cutoff_probability": 3.5722340922915184e-08,
+      "max_state_interval_width": 7.131780721536529e-08,
+      "other_semantic_token_variants": [
+        {
+          "token": " A",
+          "logprob": -12.02105712890625,
+          "bytes": [
+            32,
+            65
+          ]
+        }
+      ]
+    },
+    "rotated": {
+      "raw_text": "B",
+      "valid": true,
+      "error": null,
+      "tokens_reconstruct_content": true,
+      "selected_code": "B",
+      "selected_state": "neither",
+      "decision_token_index": 0,
+      "decision_prefix": "",
+      "selected_native_logprob": -0.0002121554280165583,
+      "selected_native_probability": 0.9997878670753548,
+      "native_state_probabilities": {
+        "neither": 0.9997878670753548,
+        "support_only": 1.2474560747260909e-06,
+        "opposition_only": 0.0002080340161749215
+      },
+      "candidate_mass_known": 0.9999971485476045,
+      "missing_states": [
+        "both"
+      ],
+      "complete_distribution": false,
+      "normalized_state_probabilities": null,
+      "state_probability_intervals": {
+        "neither": [
+          0.9997907022729771,
+          0.9997907179309925
+        ],
+        "support_only": [
+          1.2474596122610155e-06,
+          1.2474596317978463e-06
+        ],
+        "opposition_only": [
+          0.00020803460611761577,
+          0.00020803460937570675
+        ],
+        "both": [
+          0.0,
+          1.566129303949715e-08
+        ]
+      },
+      "marginal_probability_intervals": {
+        "support": [
+          1.2474596317978463e-06,
+          1.2631209053005124e-06
+        ],
+        "opposition": [
+          0.00020803460937570675,
+          0.00020805026741065527
+        ],
+        "any": [
+          0.0002092820690075046,
+          0.0002092977270229163
+        ]
+      },
+      "topk_cutoff_probability": 1.5661248627341e-08,
+      "max_state_interval_width": 1.566129303949715e-08,
+      "other_semantic_token_variants": [
+        {
+          "token": " B",
+          "logprob": -15.884856224060059,
+          "bytes": [
+            32,
+            66
+          ]
+        }
+      ]
+    },
+    "archived_v05_calm_direction_sets": [
+      "empty"
+    ],
+    "mapping_state_flip": false
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "case_id": "U01",
+    "target_segment": "1/2 of the space was empty to become a dance floor later in the night.",
+    "extract": {
+      "valid": true,
+      "error": null,
+      "claims": [],
+      "state": "neither",
+      "has_native_logprobs": true
+    },
+    "canonical": {
+      "raw_text": "A",
+      "valid": true,
+      "error": null,
+      "tokens_reconstruct_content": true,
+      "selected_code": "A",
+      "selected_state": "neither",
+      "decision_token_index": 0,
+      "decision_prefix": "",
+      "selected_native_logprob": -3.576279254957626e-07,
+      "selected_native_probability": 0.9999996423721385,
+      "native_state_probabilities": {
+        "neither": 0.9999996423721385
+      },
+      "candidate_mass_known": 0.9999996423721385,
+      "missing_states": [
+        "support_only",
+        "opposition_only",
+        "both"
+      ],
+      "complete_distribution": false,
+      "normalized_state_probabilities": null,
+      "state_probability_intervals": {
+        "neither": [
+          0.9999999663834509,
+          1.0
+        ],
+        "support_only": [
+          0.0,
+          1.1205516629899248e-08
+        ],
+        "opposition_only": [
+          0.0,
+          1.1205516629899248e-08
+        ],
+        "both": [
+          0.0,
+          1.1205516629899248e-08
+        ]
+      },
+      "marginal_probability_intervals": {
+        "support": [
+          0.0,
+          2.2411033008671293e-08
+        ],
+        "opposition": [
+          0.0,
+          2.2411033008671293e-08
+        ],
+        "any": [
+          0.0,
+          3.361654913631614e-08
+        ]
+      },
+      "topk_cutoff_probability": 1.1205512748057858e-08,
+      "max_state_interval_width": 3.361654909994627e-08,
+      "other_semantic_token_variants": [
+        {
+          "token": " A",
+          "logprob": -16.692108154296875,
+          "bytes": [
+            32,
+            65
+          ]
+        }
+      ]
+    },
+    "rotated": {
+      "raw_text": "B",
+      "valid": true,
+      "error": null,
+      "tokens_reconstruct_content": true,
+      "selected_code": "B",
+      "selected_state": "neither",
+      "decision_token_index": 0,
+      "decision_prefix": "",
+      "selected_native_logprob": -1.1920928955078125e-07,
+      "selected_native_probability": 0.9999998807907176,
+      "native_state_probabilities": {
+        "neither": 0.9999998807907176,
+        "support_only": 2.428909203325164e-10
+      },
+      "candidate_mass_known": 0.9999998810336085,
+      "missing_states": [
+        "opposition_only",
+        "both"
+      ],
+      "complete_distribution": false,
+      "normalized_state_probabilities": null,
+      "state_probability_intervals": {
+        "neither": [
+          0.999999999336476,
+          0.9999999997571091
+        ],
+        "support_only": [
+          2.428909491262082e-10,
+          2.4289094922837617e-10
+        ],
+        "opposition_only": [
+          0.0,
+          2.1031648634832232e-10
+        ],
+        "both": [
+          0.0,
+          2.1031648634832232e-10
+        ]
+      },
+      "marginal_probability_intervals": {
+        "support": [
+          2.4289094917729223e-10,
+          4.5320743552561453e-10
+        ],
+        "opposition": [
+          0.0,
+          4.2063297260817856e-10
+        ],
+        "any": [
+          2.4289094922837617e-10,
+          6.635239217343868e-10
+        ]
+      },
+      "topk_cutoff_probability": 2.1031646137196187e-10,
+      "max_state_interval_width": 4.206330839195971e-10,
+      "other_semantic_token_variants": [
+        {
+          "token": " B",
+          "logprob": -16.035240173339844,
+          "bytes": [
+            32,
+            66
+          ]
+        }
+      ]
+    },
+    "archived_v05_calm_direction_sets": [
+      "empty"
+    ],
+    "mapping_state_flip": false
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "case_id": "U02",
+    "target_segment": "The three exhibits on display were quite underwhelming…",
+    "extract": {
+      "valid": true,
+      "error": null,
+      "claims": [],
+      "state": "neither",
+      "has_native_logprobs": true
+    },
+    "canonical": {
+      "raw_text": "A",
+      "valid": true,
+      "error": null,
+      "tokens_reconstruct_content": true,
+      "selected_code": "A",
+      "selected_state": "neither",
+      "decision_token_index": 0,
+      "decision_prefix": "",
+      "selected_native_logprob": -4.768372718899627e-07,
+      "selected_native_probability": 0.9999995231628418,
+      "native_state_probabilities": {
+        "neither": 0.9999995231628418
+      },
+      "candidate_mass_known": 0.9999995231628418,
+      "missing_states": [
+        "support_only",
+        "opposition_only",
+        "both"
+      ],
+      "complete_distribution": false,
+      "normalized_state_probabilities": null,
+      "state_probability_intervals": {
+        "neither": [
+          0.9999999679535597,
+          1.0
+        ],
+        "support_only": [
+          0.0,
+          1.0682147007523545e-08
+        ],
+        "opposition_only": [
+          0.0,
+          1.0682147007523545e-08
+        ],
+        "both": [
+          0.0,
+          1.0682147007523545e-08
+        ]
+      },
+      "marginal_probability_intervals": {
+        "support": [
+          0.0,
+          2.1364293786830566e-08
+        ],
+        "opposition": [
+          0.0,
+          2.1364293786830566e-08
+        ],
+        "any": [
+          0.0,
+          3.2046440337921064e-08
+        ]
+      },
+      "topk_cutoff_probability": 1.0682142027987135e-08,
+      "max_state_interval_width": 3.2046440279209776e-08,
+      "other_semantic_token_variants": [
+        {
+          "token": " A",
+          "logprob": -16.715909957885742,
+          "bytes": [
+            32,
+            65
+          ]
+        }
+      ]
+    },
+    "rotated": {
+      "raw_text": "B",
+      "valid": true,
+      "error": null,
+      "tokens_reconstruct_content": true,
+      "selected_code": "B",
+      "selected_state": "neither",
+      "decision_token_index": 0,
+      "decision_prefix": "",
+      "selected_native_logprob": -1.1920928955078125e-07,
+      "selected_native_probability": 0.9999998807907176,
+      "native_state_probabilities": {
+        "neither": 0.9999998807907176,
+        "support_only": 3.6869329937764953e-10
+      },
+      "candidate_mass_known": 0.9999998811594109,
+      "missing_states": [
+        "opposition_only",
+        "both"
+      ],
+      "complete_distribution": false,
+      "normalized_state_probabilities": null,
+      "state_probability_intervals": {
+        "neither": [
+          0.9999999991683269,
+          0.9999999996313067
+        ],
+        "support_only": [
+          3.686933430226861e-10,
+          3.686933431933837e-10
+        ],
+        "opposition_only": [
+          0.0,
+          2.3148983054042246e-10
+        ],
+        "both": [
+          0.0,
+          2.3148983054042246e-10
+        ]
+      },
+      "marginal_probability_intervals": {
+        "support": [
+          3.6869334310803487e-10,
+          6.001831736484574e-10
+        ],
+        "opposition": [
+          0.0,
+          4.629796609736698e-10
+        ],
+        "any": [
+          3.686933431933837e-10,
+          8.316730039963559e-10
+        ]
+      },
+      "topk_cutoff_probability": 2.3148980308362216e-10,
+      "max_state_interval_width": 4.629797656363621e-10,
+      "other_semantic_token_variants": [
+        {
+          "token": " B",
+          "logprob": -16.02503204345703,
+          "bytes": [
+            32,
+            66
+          ]
+        }
+      ]
+    },
+    "archived_v05_calm_direction_sets": [
+      "empty"
+    ],
+    "mapping_state_flip": false
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "case_id": "U03",
+    "target_segment": "It is hard to get the sound of the Memorial Drive cars out of your head as they are only a few yards from this park with no real barriers blocking the sound.",
+    "extract": {
+      "valid": true,
+      "error": null,
+      "claims": [
+        {
+          "quote": "hard to get the sound of the Memorial Drive cars out of your head",
+          "direction": "opposes",
+          "track": "E",
+          "referent": "place",
+          "reason": "Visitor reports a persistent, intrusive sound from nearby traffic that disrupts their mental state."
+        },
+        {
+          "quote": "only a few yards from this park with no real barriers blocking the sound",
+          "direction": "opposes",
+          "track": "T",
+          "referent": "place",
+          "reason": "The lack of sound barriers and proximity to a road creates a condition of intrusive noise."
+        }
+      ],
+      "state": "opposition_only",
+      "has_native_logprobs": true
+    },
+    "canonical": {
+      "raw_text": "C",
+      "valid": true,
+      "error": null,
+      "tokens_reconstruct_content": true,
+      "selected_code": "C",
+      "selected_state": "opposition_only",
+      "decision_token_index": 0,
+      "decision_prefix": "",
+      "selected_native_logprob": -1.1920928955078125e-07,
+      "selected_native_probability": 0.9999998807907176,
+      "native_state_probabilities": {
+        "support_only": 1.2173588413584213e-08,
+        "opposition_only": 0.9999998807907176
+      },
+      "candidate_mass_known": 0.9999998929643059,
+      "missing_states": [
+        "neither",
+        "both"
+      ],
+      "complete_distribution": false,
+      "normalized_state_probabilities": null,
+      "state_probability_intervals": {
+        "neither": [
+          0.0,
+          3.9266444854986976e-10
+        ],
+        "support_only": [
+          1.2173589707032566e-08,
+          1.2173589716592838e-08
+        ],
+        "opposition_only": [
+          0.9999999870410815,
+          0.9999999878264103
+        ],
+        "both": [
+          0.0,
+          3.9266444854986976e-10
+        ]
+      },
+      "marginal_probability_intervals": {
+        "support": [
+          1.2173589711812702e-08,
+          1.2566254160362572e-08
+        ],
+        "opposition": [
+          0.9999999874337459,
+          0.9999999878264103
+        ],
+        "any": [
+          0.9999999996073355,
+          1.0
+        ]
+      },
+      "topk_cutoff_probability": 3.9266440667494333e-10,
+      "max_state_interval_width": 7.853288019887827e-10,
+      "other_semantic_token_variants": [
+        {
+          "token": " C",
+          "logprob": -15.91100025177002,
+          "bytes": [
+            32,
+            67
+          ]
+        }
+      ]
+    },
+    "rotated": {
+      "raw_text": "D",
+      "valid": true,
+      "error": null,
+      "tokens_reconstruct_content": true,
+      "selected_code": "D",
+      "selected_state": "opposition_only",
+      "decision_token_index": 0,
+      "decision_prefix": "",
+      "selected_native_logprob": -2.3841860752327193e-07,
+      "selected_native_probability": 0.9999997615814209,
+      "native_state_probabilities": {
+        "neither": 1.7931846033423395e-09,
+        "support_only": 2.6846489401299683e-09,
+        "opposition_only": 0.9999997615814209
+      },
+      "candidate_mass_known": 0.9999997660592544,
+      "missing_states": [
+        "both"
+      ],
+      "complete_distribution": false,
+      "normalized_state_probabilities": null,
+      "state_probability_intervals": {
+        "neither": [
+          1.7931850208336382e-09,
+          1.7931850228413807e-09
+        ],
+        "support_only": [
+          2.684649565173018e-09,
+          2.6846495681788897e-09
+        ],
+        "opposition_only": [
+          0.9999999944025139,
+          0.9999999955221655
+        ],
+        "both": [
+          0.0,
+          1.1196515312623797e-09
+        ]
+      },
+      "marginal_probability_intervals": {
+        "support": [
+          2.6846495681788897e-09,
+          3.804301096435398e-09
+        ],
+        "opposition": [
+          0.9999999955221655,
+          0.9999999955221655
+        ],
+        "any": [
+          0.999999998206815,
+          0.999999998206815
+        ]
+      },
+      "topk_cutoff_probability": 1.119651270583885e-09,
+      "max_state_interval_width": 1.1196515936617857e-09,
+      "other_semantic_token_variants": [
+        {
+          "token": " D",
+          "logprob": -16.317384719848633,
+          "bytes": [
+            32,
+            68
+          ]
+        }
+      ]
+    },
+    "archived_v05_calm_direction_sets": [
+      "opposes"
+    ],
+    "mapping_state_flip": false
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "case_id": "U04",
+    "target_segment": "This museum is fun for all ages.",
+    "extract": {
+      "valid": true,
+      "error": null,
+      "claims": [],
+      "state": "neither",
+      "has_native_logprobs": true
+    },
+    "canonical": {
+      "raw_text": "A",
+      "valid": true,
+      "error": null,
+      "tokens_reconstruct_content": true,
+      "selected_code": "A",
+      "selected_state": "neither",
+      "decision_token_index": 0,
+      "decision_prefix": "",
+      "selected_native_logprob": -2.3841860752327193e-07,
+      "selected_native_probability": 0.9999997615814209,
+      "native_state_probabilities": {
+        "neither": 0.9999997615814209
+      },
+      "candidate_mass_known": 0.9999997615814209,
+      "missing_states": [
+        "support_only",
+        "opposition_only",
+        "both"
+      ],
+      "complete_distribution": false,
+      "normalized_state_probabilities": null,
+      "state_probability_intervals": {
+        "neither": [
+          0.9999999810810423,
+          1.0
+        ],
+        "support_only": [
+          0.0,
+          6.30631934864493e-09
+        ],
+        "opposition_only": [
+          0.0,
+          6.30631934864493e-09
+        ],
+        "both": [
+          0.0,
+          6.30631934864493e-09
+        ]
+      },
+      "marginal_probability_intervals": {
+        "support": [
+          0.0,
+          1.261263861775053e-08
+        ],
+        "opposition": [
+          0.0,
+          1.261263861775053e-08
+        ],
+        "any": [
+          0.0,
+          1.891895780731681e-08
+        ]
+      },
+      "topk_cutoff_probability": 6.3063178848708856e-09,
+      "max_state_interval_width": 1.8918957733760067e-08,
+      "other_semantic_token_variants": [
+        {
+          "token": " A",
+          "logprob": -16.537870407104492,
+          "bytes": [
+            32,
+            65
+          ]
+        }
+      ]
+    },
+    "rotated": {
+      "raw_text": "B",
+      "valid": true,
+      "error": null,
+      "tokens_reconstruct_content": true,
+      "selected_code": "B",
+      "selected_state": "neither",
+      "decision_token_index": 0,
+      "decision_prefix": "",
+      "selected_native_logprob": -1.1920928955078125e-07,
+      "selected_native_probability": 0.9999998807907176,
+      "native_state_probabilities": {
+        "neither": 0.9999998807907176,
+        "support_only": 4.4846334395102335e-10
+      },
+      "candidate_mass_known": 0.9999998812391809,
+      "missing_states": [
+        "opposition_only",
+        "both"
+      ],
+      "complete_distribution": false,
+      "normalized_state_probabilities": null,
+      "state_probability_intervals": {
+        "neither": [
+          0.9999999989572664,
+          0.9999999995515366
+        ],
+        "support_only": [
+          4.484633969443953e-10,
+          4.4846339721090374e-10
+        ],
+        "opposition_only": [
+          0.0,
+          2.9713509451341016e-10
+        ],
+        "both": [
+          0.0,
+          2.9713509451341016e-10
+        ]
+      },
+      "marginal_probability_intervals": {
+        "support": [
+          4.484633970776495e-10,
+          7.455984915910596e-10
+        ],
+        "opposition": [
+          0.0,
+          5.942701888502418e-10
+        ],
+        "any": [
+          4.4846339721090374e-10,
+          1.0427335857946372e-09
+        ]
+      },
+      "topk_cutoff_probability": 2.971350593136922e-10,
+      "max_state_interval_width": 5.942701886141322e-10,
+      "other_semantic_token_variants": [
+        {
+          "token": " B",
+          "logprob": -15.638219833374023,
+          "bytes": [
+            32,
+            66
+          ]
+        }
+      ]
+    },
+    "archived_v05_calm_direction_sets": [
+      "empty"
+    ],
+    "mapping_state_flip": false
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "case_id": "U05",
+    "target_segment": "This station is epic and famous, but not the cleanest.",
+    "extract": {
+      "valid": true,
+      "error": null,
+      "claims": [],
+      "state": "neither",
+      "has_native_logprobs": true
+    },
+    "canonical": {
+      "raw_text": "A",
+      "valid": true,
+      "error": null,
+      "tokens_reconstruct_content": true,
+      "selected_code": "A",
+      "selected_state": "neither",
+      "decision_token_index": 0,
+      "decision_prefix": "",
+      "selected_native_logprob": -7.152559646783629e-07,
+      "selected_native_probability": 0.9999992847442911,
+      "native_state_probabilities": {
+        "neither": 0.9999992847442911,
+        "opposition_only": 1.7957285481005643e-08
+      },
+      "candidate_mass_known": 0.9999993027015766,
+      "missing_states": [
+        "support_only",
+        "both"
+      ],
+      "complete_distribution": false,
+      "normalized_state_probabilities": null,
+      "state_probability_intervals": {
+        "neither": [
+          0.9999999487090852,
+          0.999999982042702
+        ],
+        "support_only": [
+          0.0,
+          1.6666809022220412e-08
+        ],
+        "opposition_only": [
+          1.7957297404019527e-08,
+          1.795729800260123e-08
+        ],
+        "both": [
+          0.0,
+          1.6666809022220412e-08
+        ]
+      },
+      "marginal_probability_intervals": {
+        "support": [
+          0.0,
+          3.333361748887579e-08
+        ],
+        "opposition": [
+          1.7957297703310374e-08,
+          3.462410672553078e-08
+        ],
+        "any": [
+          1.795729800260123e-08,
+          5.129091489289532e-08
+        ]
+      },
+      "topk_cutoff_probability": 1.6666797678263093e-08,
+      "max_state_interval_width": 3.333361686674863e-08,
+      "other_semantic_token_variants": [
+        {
+          "token": " A",
+          "logprob": -16.566072463989258,
+          "bytes": [
+            32,
+            65
+          ]
+        }
+      ]
+    },
+    "rotated": {
+      "raw_text": "B",
+      "valid": true,
+      "error": null,
+      "tokens_reconstruct_content": true,
+      "selected_code": "B",
+      "selected_state": "neither",
+      "decision_token_index": 0,
+      "decision_prefix": "",
+      "selected_native_logprob": -1.1920928955078125e-07,
+      "selected_native_probability": 0.9999998807907176,
+      "native_state_probabilities": {
+        "neither": 0.9999998807907176,
+        "support_only": 4.348231271187255e-10
+      },
+      "candidate_mass_known": 0.9999998812255407,
+      "missing_states": [
+        "opposition_only",
+        "both"
+      ],
+      "complete_distribution": false,
+      "normalized_state_probabilities": null,
+      "state_probability_intervals": {
+        "neither": [
+          0.9999999989759877,
+          0.9999999995651768
+        ],
+        "support_only": [
+          4.348231785084204e-10,
+          4.348231787646134e-10
+        ],
+        "opposition_only": [
+          0.0,
+          2.945945533405541e-10
+        ],
+        "both": [
+          0.0,
+          2.945945533405541e-10
+        ]
+      },
+      "marginal_probability_intervals": {
+        "support": [
+          4.348231786365169e-10,
+          7.294177319770709e-10
+        ],
+        "opposition": [
+          0.0,
+          5.891891065075363e-10
+        ],
+        "any": [
+          4.348231787646134e-10,
+          1.0240122850159565e-09
+        ]
+      },
+      "topk_cutoff_probability": 2.9459451843703126e-10,
+      "max_state_interval_width": 5.891891419196327e-10,
+      "other_semantic_token_variants": [
+        {
+          "token": " B",
+          "logprob": -16.065811157226562,
+          "bytes": [
+            32,
+            66
+          ]
+        }
+      ]
+    },
+    "archived_v05_calm_direction_sets": [
+      "empty"
+    ],
+    "mapping_state_flip": false
+  },
+  {
+    "model": "gemma4:31b-it-bf16",
+    "case_id": "U06",
+    "target_segment": "Lovely sitting under the fairy lights in a comfy Adirondack chair, while a busker played songs from the 70s.",
+    "extract": {
+      "valid": true,
+      "error": null,
+      "claims": [
+        {
+          "quote": "Lovely sitting under the fairy lights in a comfy Adirondack chair",
+          "direction": "supports",
+          "track": "E",
+          "referent": "place",
+          "reason": "The visitor reports a relaxing experience of sitting in a comfortable chair under decorative lighting."
+        }
+      ],
+      "state": "support_only",
+      "has_native_logprobs": true
+    },
+    "canonical": {
+      "raw_text": "B",
+      "valid": true,
+      "error": null,
+      "tokens_reconstruct_content": true,
+      "selected_code": "B",
+      "selected_state": "support_only",
+      "decision_token_index": 0,
+      "decision_prefix": "",
+      "selected_native_logprob": -6.55653229841846e-06,
+      "selected_native_probability": 0.9999934434891956,
+      "native_state_probabilities": {
+        "neither": 6.26192548441067e-06,
+        "support_only": 0.9999934434891956,
+        "opposition_only": 7.523000499458625e-08,
+        "both": 1.338108558958516e-09
+      },
+      "candidate_mass_known": 0.9999997819827936,
+      "missing_states": [],
+      "complete_distribution": true,
+      "normalized_state_probabilities": {
+        "neither": 6.261926849618468e-06,
+        "support_only": 0.9999936615050201,
+        "opposition_only": 7.523002139602536e-08,
+        "both": 1.3381088506892694e-09
+      },
+      "state_probability_intervals": {
+        "neither": [
+          6.261926849618468e-06,
+          6.261926849618468e-06
+        ],
+        "support_only": [
+          0.9999936615050201,
+          0.9999936615050201
+        ],
+        "opposition_only": [
+          7.523002139602536e-08,
+          7.523002139602536e-08
+        ],
+        "both": [
+          1.3381088506892694e-09,
+          1.3381088506892694e-09
+        ]
+      },
+      "marginal_probability_intervals": {
+        "support": [
+          0.999993662843129,
+          0.999993662843129
+        ],
+        "opposition": [
+          7.656813024671462e-08,
+          7.656813024671462e-08
+        ],
+        "any": [
+          0.9999937380731503,
+          0.9999937380731503
+        ]
+      },
+      "topk_cutoff_probability": 7.645471900940999e-10,
+      "max_state_interval_width": 0.0,
+      "other_semantic_token_variants": [
+        {
+          "token": " B",
+          "logprob": -16.207685470581055,
+          "bytes": [
+            32,
+            66
+          ]
+        }
+      ]
+    },
+    "rotated": {
+      "raw_text": "C",
+      "valid": true,
+      "error": null,
+      "tokens_reconstruct_content": true,
+      "selected_code": "C",
+      "selected_state": "support_only",
+      "decision_token_index": 0,
+      "decision_prefix": "",
+      "selected_native_logprob": -0.00014151143841445446,
+      "selected_native_probability": 0.9998584985738569,
+      "native_state_probabilities": {
+        "neither": 0.00013800458508970648,
+        "support_only": 0.9998584985738569,
+        "opposition_only": 6.536432709446879e-08,
+        "both": 6.976717296543346e-09
+      },
+      "candidate_mass_known": 0.999996575499991,
+      "missing_states": [],
+      "complete_distribution": true,
+      "normalized_state_probabilities": {
+        "neither": 0.00013800505768802777,
+        "support_only": 0.9998619226010198,
+        "opposition_only": 6.536455093537405e-08,
+        "both": 6.976741188393608e-09
+      },
+      "state_probability_intervals": {
+        "neither": [
+          0.00013800505768802777,
+          0.00013800505768802777
+        ],
+        "support_only": [
+          0.9998619226010198,
+          0.9998619226010198
+        ],
+        "opposition_only": [
+          6.536455093537405e-08,
+          6.536455093537405e-08
+        ],
+        "both": [
+          6.976741188393608e-09,
+          6.976741188393608e-09
+        ]
+      },
+      "marginal_probability_intervals": {
+        "support": [
+          0.9998619295777611,
+          0.9998619295777611
+        ],
+        "opposition": [
+          7.234129212376767e-08,
+          7.234129212376767e-08
+        ],
+        "any": [
+          0.999861994942312,
+          0.999861994942312
+        ]
+      },
+      "topk_cutoff_probability": 4.499054836630625e-09,
+      "max_state_interval_width": 0.0,
+      "other_semantic_token_variants": [
+        {
+          "token": " C",
+          "logprob": -14.082598686218262,
+          "bytes": [
+            32,
+            67
+          ]
+        }
+      ]
+    },
+    "archived_v05_calm_direction_sets": [
+      "empty"
+    ],
+    "mapping_state_flip": false,
+    "mapping_total_variation": 0.00013174876947075954
+  }
+]

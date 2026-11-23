@@ -1,0 +1,44 @@
+{
+  "qwen3.8:27b": {
+    "calls": 36,
+    "valid_extractions": 12,
+    "valid_probe_readouts": 24,
+    "complete_probe_distributions": 24,
+    "code_mapping_state_flips": [],
+    "cases": [
+      "K01",
+      "K02",
+      "K03",
+      "K04",
+      "K05",
+      "K06",
+      "U01",
+      "U02",
+      "U03",
+      "U04",
+      "U05",
+      "U06"
+    ]
+  },
+  "gemma4:31b-it-bf16": {
+    "calls": 36,
+    "valid_extractions": 11,
+    "valid_probe_readouts": 24,
+    "complete_probe_distributions": 7,
+    "code_mapping_state_flips": [],
+    "cases": [
+      "K01",
+      "K02",
+      "K03",
+      "K04",
+      "K05",
+      "K06",
+      "U01",
+      "U02",
+      "U03",
+      "U04",
+      "U05",
+      "U06"
+    ]
+  }
+}

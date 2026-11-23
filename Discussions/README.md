@@ -2,6 +2,8 @@
 
 Research brief materials and design-session outputs for **Atmosphere Grounding**.
 
+**Executed probability pilot (November 23):** [Calm, same 12 reviews, Qwen and Gemma](../research_audit/stage1a_calm_probability_12_2026-11-23/README.md) — 72 main calls, native probability readouts, code-mapping control, raw results and cleanup record. Development experiment; no calibration or training-benefit claim.
+
 **November 23 follow-up:** [Three-point discussion remark](research-discussion-2026-11-19.md#9-november-23-follow-up) — probability signals in the emotion representation, embedding-based segment weights, and NLI hypothesis families aligned with image definitions. Embedding and NLI directions are provisionally agreed; probability utility remains to be tested.
 
 **November 19 session:** [Full discussion record](research-discussion-2026-11-19.md) · [Shared-catalogue methodology](shared-catalogue-cross-modal-methodology-2026-11-19.md) · [Matching walkthrough](cross-modal-matching-research-walkthrough-2026-11-19.md).

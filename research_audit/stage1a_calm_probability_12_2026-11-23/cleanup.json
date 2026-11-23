@@ -1,0 +1,11 @@
+{
+  "pod_id": "hjnyoks7iuatn1",
+  "created_at": "2026-11-23T18:40:11.884Z",
+  "terminated_at": "2026-11-23T18:58:29.824Z",
+  "advertised_hourly_rate_usd": 2.69,
+  "termination_confirmed": true,
+  "remaining_pods": [],
+  "note": "All 72 main results and the separate failed JSON interface preflight were downloaded and SHA256-verified before termination. Compute estimate is not an itemized billing statement.",
+  "elapsed_minutes": 18.299,
+  "estimated_compute_usd": 0.8204051666666666
+}

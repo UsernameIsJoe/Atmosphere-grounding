@@ -1,0 +1,8 @@
+{
+  "raw_results_bundle.tar.gz": {
+    "sha256": "7898b48a48cbcb001a8da70985779b04fe992c4a72fa15d85655c82b5419540f",
+    "bytes": 904428
+  },
+  "main_records": 72,
+  "failed_json_interface_preflight_records": 1
+}

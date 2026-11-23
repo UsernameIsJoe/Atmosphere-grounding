@@ -1,0 +1,101 @@
+{
+  "protocol": "calm_native_probability_12_v1",
+  "source_commit": "79a6e4b61ec962661355aec898ca577551e87b47",
+  "cases_sha256": "ea9396d9bf007a5f86674f3b5f21c95873a67923921f15cb99145c520b09ceed",
+  "models": {
+    "qwen3.8:27b": "aaee06c39dcf2437cde036998d960e1fc1494b8191be7cc9657d01e509097813",
+    "gemma4:31b-it-bf16": "df1661a2a6aaa94faf24bbaf23a691877a27d0e6052598f105a225618a079e76"
+  },
+  "options": {
+    "temperature": 0,
+    "seed": 42,
+    "num_ctx": 8192,
+    "top_k": 0,
+    "top_p": 1,
+    "min_p": 0,
+    "repeat_penalty": 1
+  },
+  "thinking": false,
+  "native_logprobs": true,
+  "top_logprobs": 20,
+  "mappings": {
+    "canonical": {
+      "neither": "A",
+      "support_only": "B",
+      "opposition_only": "C",
+      "both": "D"
+    },
+    "rotated": {
+      "neither": "B",
+      "support_only": "C",
+      "opposition_only": "D",
+      "both": "A"
+    }
+  },
+  "codebook_sha256": "eaf8e1f4498087d7847bc321feaa7a224121c51b61b7ff320a0f88d749242e60",
+  "payload_hashes": {
+    "K01": {
+      "extract": "87da304a71ca5fcccc0da7fb3826734bcfb2b6347703c0185344e18c86091cab",
+      "canonical": "ac5eeb6d0209e3a922bcc79814ad4977f288e63fc02f64f43245b5b0b202fac8",
+      "rotated": "1ac3ea1dd19cd18d3c0a616efdcb38d8470d8b9c6d79103b954978987b435bd8"
+    },
+    "K02": {
+      "extract": "bfa2291c486a3c6fd98e2b3ce2944a2d8e7c570c0904649793346d755612c9a9",
+      "canonical": "cf02475b0911f74b8bd68587a04130dc73cbfe15e15e5e5eb838993510802a6c",
+      "rotated": "83a9c5a04f93ad1c2d4cfd1abe601c743db3ab24e5836f2acee91971c6fd0155"
+    },
+    "K03": {
+      "extract": "9ef1fbe1ea7b4976d33c54f0fda1f44ac2205a835c125b2053c29449bae5c70b",
+      "canonical": "d1d43bb8a1f4259a8793b1a756968ac6451489570cfb6c2ab009c3232f76eb83",
+      "rotated": "371ddd0c59179a8bc59dac316a376ceda9b7b7a5f654257827e43f53dc7bacd4"
+    },
+    "K04": {
+      "extract": "8a69c5c02316d71285972009ea204e6bbfd392ce3296f47e6e3bdc41a3c5531c",
+      "canonical": "6fcab7df5d968bc68f29d19fd60815e918c7d4067daddd5301ec3945508da9e3",
+      "rotated": "852f204b56a4271fcd9a51ee7237b10a40caca48bfb3312494e5aba25e0cc343"
+    },
+    "K05": {
+      "extract": "83781b82c7746ded99e3114f098673387de629e96b4a0ce656226654da42ff8c",
+      "canonical": "80054c76c437b290b2de0e00d824c37c21981a50f244f0c966c0ec28c6112f59",
+      "rotated": "a08114b2d4626b43839ba556bc680391cc63b66d18f27144a556a466340b2c99"
+    },
+    "K06": {
+      "extract": "22b5820e77da4fb1724c821c7b2b2352db92d670107f60fd33f6bfaddaa27a10",
+      "canonical": "ca937fa2b0d5b0f1141782e0a8cc350d6897b2e66a295fb7fa3822b17e28e43f",
+      "rotated": "38f57a13ab0555a1f6d8adbe004ddcd7d32be60309fe4632e9e68dc6990d249d"
+    },
+    "U01": {
+      "extract": "99eabc57bc83b52faf7d8fd9cba8bce8d2c026ef48986dc88edcf219f83c3ac1",
+      "canonical": "bd19e80a8bc5e2e64dc42c31902c5eeff1dfb35c1588df4d78db14cd50b1e2c0",
+      "rotated": "14ed34e553d7073cc82cc481153970f9d0c6024f6a5c6c2005097bf71481f069"
+    },
+    "U02": {
+      "extract": "603bd31ef2206abe7ba790c32b1bbc4ee9734b8e0eb7938059f83ef4237a4a40",
+      "canonical": "89d4ca6f0de4a475396a48b88adba8bf5ceb4e23a986efbcdf4b632b7cea8520",
+      "rotated": "ff64645d7a71c56ac8202f80fe7f166a592142c6c0aceb7eccfb7dee5f3e60cc"
+    },
+    "U03": {
+      "extract": "21059b3ea12823578d8455c2fb5c55f2553703d1e8583b47c1649d7247780b53",
+      "canonical": "cb5f6402ad2de2e9b9a5b1f32c9a7d75d2a77f0c1ac981562ca228d7921e58f6",
+      "rotated": "5c7f1baafd49e74593624087cf75f24de3fcf49e45f7680458b0260a18cc349b"
+    },
+    "U04": {
+      "extract": "4c54511935f767ff4f4dcf373b207cf6c41c719bec8cb1c211632cd7d0e015f7",
+      "canonical": "9f827c80a5cc92ed4696b60e0ced255070275a00a3b0632ced2d11f68776ed2f",
+      "rotated": "4c383f9a695e0e9a98cf6667cb519a4bdad0a643fb388d47c7fe390b866fee42"
+    },
+    "U05": {
+      "extract": "7a5044c7bc0b86ab82f218a42575c871a28eb5f590b3bd5b4d7cf897677912d5",
+      "canonical": "82971e5d85a9dadc5c3e55b1f961e2bf3c2368040483aaa9a4b063611c368a06",
+      "rotated": "d2448a6a6cab7daf336e616733eb6d96db0a6f9d1cb02f910038f060967f24be"
+    },
+    "U06": {
+      "extract": "c57dcb918d63245d4de62ba710edb7461490c2b9f8a3ac3f8c204246aa5ed43a",
+      "canonical": "f87e28364816a86ad124bd58114c15ed61360756f413c482339c08b984d5f9d6",
+      "rotated": "727f272a6f86cf3a6e6825c649440e3f355f3ebe81b7df9bb55dff889fa5048b"
+    }
+  },
+  "runner_sha256": "aff01b2d47b93931abc00dee94e737135b59f070d6c2a11db2ed7fd6fe85239e",
+  "planned_main_calls": 72,
+  "reference_status": "reused development cases; K01 calm none and U06 calm support user adjudications only"
+}

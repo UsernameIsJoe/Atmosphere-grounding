@@ -1,0 +1,8 @@
+{
+  "export_time_unix": 1795460200.339274,
+  "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition, 97887 MiB, 595.112.07",
+  "pod_id": "hjnyoks7iuatn1",
+  "advertised_hourly_price_usd": 2.69,
+  "created_at": "2026-11-23T18:40:11.884Z",
+  "source_commit": "79a6e4b61ec962661355aec898ca577551e87b47"
+}

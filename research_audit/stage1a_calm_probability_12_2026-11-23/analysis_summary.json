@@ -1,0 +1,57 @@
+{
+  "models": {
+    "qwen3.8:27b": {
+      "calls": 36,
+      "valid_extractions": 12,
+      "valid_native_probability_readouts": 24,
+      "complete_four_state_distributions": 24,
+      "missing_alternative_readouts": 0,
+      "code_mapping_label_flips": 0,
+      "selected_conditional_probability_min": 0.43701768205533337,
+      "selected_conditional_probability_max": 0.9831287817116829,
+      "readouts_at_least_99_9_percent": 0,
+      "max_semantic_state_probability_shift_pp": 23.263190826254217,
+      "mean_total_variation_lower": 0.09244342681795542,
+      "mean_total_variation_upper": 0.09244342681795542,
+      "minimum_native_candidate_mass_known": 0.9961047583713663,
+      "maximum_missingness_interval_width": 0.0,
+      "nonempty_extractions": 5,
+      "extract_vs_canonical_state_disagreements": [
+        "K01",
+        "K05",
+        "K06"
+      ],
+      "source_quote_failures": []
+    },
+    "gemma4:31b-it-bf16": {
+      "calls": 36,
+      "valid_extractions": 11,
+      "valid_native_probability_readouts": 24,
+      "complete_four_state_distributions": 7,
+      "missing_alternative_readouts": 17,
+      "code_mapping_label_flips": 0,
+      "selected_conditional_probability_min": 0.9756380656189061,
+      "selected_conditional_probability_max": 0.999999999336476,
+      "readouts_at_least_99_9_percent": 21,
+      "max_semantic_state_probability_shift_pp": 1.5023327005569187,
+      "mean_total_variation_lower": 0.0013954417778453253,
+      "mean_total_variation_upper": 0.0013954593290603984,
+      "minimum_native_candidate_mass_known": 0.9999642865489273,
+      "maximum_missingness_interval_width": 7.131780721536529e-08,
+      "nonempty_extractions": 4,
+      "extract_vs_canonical_state_disagreements": [],
+      "source_quote_failures": [
+        "K04"
+      ]
+    }
+  },
+  "canonical_cross_model_disagreements": [
+    "K01",
+    "K05",
+    "K06"
+  ],
+  "main_calls": 72,
+  "additional_failed_json_interface_calls": 1,
+  "reference_status": "Reused development data; no 12-case gold accuracy, AUROC, or calibration claim.",
+  "bounds_note": "Top-k cutoff bounds recomputed offline to avoid zeroing omitted labels when float32 top logprob rounds to zero. Raw model outputs and frozen runner unchanged."
+}

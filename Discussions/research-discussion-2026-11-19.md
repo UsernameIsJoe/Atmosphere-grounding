@@ -140,6 +140,8 @@ Distinguish:
 
 The inspected [v0.5 benchmark runner](../scripts/stage1a_codebook_v05_directional_benchmark_20261116.py) does not request or save native log probabilities. Extraction of full alternative-label likelihoods, tokenization, aggregation into segment vectors and downstream use remain implementation/research decisions. No replacement prompt or new probability experiment is adopted or reported by this remark.
 
+**Executed follow-up (November 23):** the [calm-only probability pilot](../research_audit/stage1a_calm_probability_12_2026-11-23/README.md) now records 72 main calls on the same 12 source reviews and prior model digests. Single-token readouts captured native probabilities; code swapping preserved chosen states but changed Qwen scores, while Gemma was highly saturated and retained the known K01 attribution failure. See the report for exact comparisons, raw outputs, missing-alternative bounds and limitations. This adds experimental evidence to the remark; it does not change the provisional embedding/NLI decisions or adopt probabilities as calibrated evidence-quality weights.
+
 ### 2. Embeddings for segment representativeness
 
 **Provisionally agreed:** use embedding similarity between the original segment and its original full review to estimate how much that segment represents the review. This is intended to contribute to segment weighting during aggregation/training. It is a salience/representativeness measure, not a check of whether an LLM-generated interpretation is correct.

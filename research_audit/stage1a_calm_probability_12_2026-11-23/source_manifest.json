@@ -1,0 +1,30 @@
+{
+  "repository": "UsernameIsJoe/Atmosphere-grounding",
+  "commit": "79a6e4b61ec962661355aec898ca577551e87b47",
+  "files": {
+    "source/cases_original.jsonl": {
+      "repository_path": "research_audit/stage1a_runpod_12review_firstlook_2026-11-13/cases.jsonl",
+      "sha256": "7dba0bdbc8b80face14ab76d1716e7dd26bde19b322d1d76cd95dd703e076071"
+    },
+    "source/target_script.py": {
+      "repository_path": "scripts/stage1a_stage2_reduced_20261113.py",
+      "sha256": "9d594f222ad303156dadf833504af8db6fbf67263eb3e5dbea8c2b6b88f96f0e"
+    },
+    "source/codebook_v05.md": {
+      "repository_path": "Docs/STAGE1A_PILOT_CODEBOOK_V0_5_2026-11-16.md",
+      "sha256": "eaf8e1f4498087d7847bc321feaa7a224121c51b61b7ff320a0f88d749242e60"
+    },
+    "source/prompt_v05.md": {
+      "repository_path": "Docs/STAGE1A_PILOT_PROMPT_V0_5_2026-11-16.md",
+      "sha256": "92459110bbaf579ee1b6109a671ba260b26eddf870d1678dca0ede939ca83858"
+    },
+    "source/previous_claims_by_emotion.json": {
+      "repository_path": "research_audit/stage1a_v05_directional_live_2026-11-16/claims_by_emotion.json",
+      "sha256": "0c1d2813f6b02d225f7a33129549032326ae45af4836782917518fd2dea3cfb5"
+    },
+    "source/baseline_runner_v05.py": {
+      "repository_path": "scripts/stage1a_codebook_v05_directional_benchmark_20261116.py",
+      "sha256": "b21178137073868df4cf5cd657269340a3bc3eaa73a5cc7c32783277cffaacb2"
+    }
+  }
+}
