@@ -1,5 +1,7 @@
 # Gemma probability plausibility: assistant audit, November 24, 2026
 
+**Researcher follow-up:** The researcher subsequently said “i actually agree with those cases,” referring to K04, K05, K06 and U06. This records general agreement with the presented assessments; no separate replacement percentages or new blinded labels were supplied. See the [full November 24 discussion](../../Discussions/gemma-probability-audit-temperature-and-stability-2026-11-24.md).
+
 The researcher requested a current advanced-LLM review of whether Gemma's probabilities make semantic sense, with controversial cases deferred to the researcher. This replaces using inherited reference labels as the basis for the requested qualitative judgment; earlier numeric audits remain archived.
 
 **Models tested:** `qwen3.8:27b`, 27B Q4_K_M, and `gemma4:31b-it-bf16`, 31B BF16. This review adds zero calls to either model. The current ChatGPT/Codex assistant performed the reading; its exact backend model identifier is not exposed.
@@ -10,7 +12,7 @@ All twelve original targets and complete reviews, the frozen v0.5 calm definitio
 
 ## Assessment
 
-**Seven distributions are qualitatively reasonable, one has a clear attribution mismatch, and four require researcher review.** These categories are the assistant's judgments, not human adjudications or measured accuracy.
+**Seven distributions are qualitatively reasonable, one has a clear attribution mismatch, and four were referred for researcher review.** These categories are the assistant's judgments, not human adjudications or measured accuracy.
 
 | Case | Target | T=4 winning state / probability | Assessment |
 |---|---|---|---|
@@ -45,9 +47,9 @@ All twelve original targets and complete reviews, the frozen v0.5 calm definitio
 
 **U05: neither.** Fame, positive place appraisal and poor cleanliness do not themselves supply tranquility or agitation in this target. The model correctly avoids transferring general sentiment or inviting-related evidence into calm.
 
-## Cases for researcher adjudication
+## Four cases discussed with the researcher
 
-Judge the quoted target for calm using the v0.5 rule. The available states are support only, opposition only, neither, or both; an unresolved judgment may remain pending. No human decision has been filled in.
+The quoted targets and full contexts below were presented for calm review under v0.5. The researcher expressed general agreement with these four case assessments. That response is recorded as group agreement, rather than manufacturing separately supplied labels or probability vectors.
 
 ### K04
 
@@ -63,7 +65,7 @@ What made this visit extra special was how surprisingly uncrowded it was. We wer
 
 It’s always such a classic Boston experience—great shopping, beautiful surroundings, and that unmistakable Harvard vibe. A must-visit every time!
 
-**Researcher decision: pending.**
+**Researcher response:** General agreement with the presented assessment, recorded in the follow-up above.
 
 ### K05
 
@@ -75,7 +77,7 @@ It’s always such a classic Boston experience—great shopping, beautiful surro
 
 **Full review for scope/attribution:** Park is good. The chickens will chase you if you have any food. If the owner of the chickens sees it, he yells from his home and asks if you are feeding poison to them. Also he has a security camera pointing at the park.
 
-**Researcher decision: pending.**
+**Researcher response:** General agreement with the presented assessment, recorded in the follow-up above.
 
 ### K06
 
@@ -87,7 +89,7 @@ It’s always such a classic Boston experience—great shopping, beautiful surro
 
 **Full review for scope/attribution:** It’s a cute small park good for little ones. It’s not closed to the street though so you have to keep an eye on your kids. But it’s really a great place to bring little as
 
-**Researcher decision: pending.**
+**Researcher response:** General agreement with the presented assessment, recorded in the follow-up above.
 
 ### U06
 
@@ -99,7 +101,7 @@ It’s always such a classic Boston experience—great shopping, beautiful surro
 
 **Full review for scope/attribution:** Lovely sitting under the fairy lights in a comfy Adirondack chair, while a busker played songs from the 70s.  I was right next to, and under, the giant tree.  I’d like to know the age of that tree if anyone knows.
 
-**Researcher decision: pending.**
+**Researcher response:** General agreement with the presented assessment, recorded in the follow-up above.
 
 ## What the probabilities appear to add
 
@@ -110,6 +112,6 @@ It’s always such a classic Boston experience—great shopping, beautiful surro
 - At T=8, the explicit traffic-noise case falls to 84.5% opposition and assigns 5.6% support and 4.3% both, despite no calm-supporting target evidence. Higher temperature spreads mass mechanically and does not consistently make semantic alternatives more plausible. It cannot be selected solely because the values look less extreme.
 - Mapping variation remains relevant: K01's T=4 opposition probability spans 68.2–82.4%, and K06's neither spans 72.3–85.0%. Retain the full mapping vectors/ranges; fine percentage differences are not automatically meaningful.
 
-**Present interpretation:** the distributions contain potentially useful case distinctions and alternative-state information, alongside a clear attribution error and unresolved construct boundaries. This assistant review judges qualitative plausibility; an exact claim such as “94% means 94% correct” is not established. Pending human judgments stay separate from this reading. Temperature scaling preserves each individual distribution's winning state and does not create new evidence.
+**Present interpretation:** the distributions contain potentially useful case distinctions and alternative-state information, alongside a clear attribution error and unresolved construct boundaries. This assistant review judges qualitative plausibility; an exact claim such as “94% means 94% correct” is not established. The researcher response stays separate from the initial assistant reading. Temperature scaling preserves each individual distribution's winning state and does not create new evidence.
 
 [Machine-readable audit, full contexts and temperature vectors](GEMMA_QUALITATIVE_AUDIT_2026-11-24.json) · [Original experimental report](README.md) · [Earlier provisional-reference check](GEMMA_SIGNAL_EVALUATION.md)

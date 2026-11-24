@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-24",
+  "source_repository_commit": "11d87fb90f7f9b179044c56baebb0f8fab619984",
+  "new_qwen_calls": 0,
+  "new_gemma_calls": 0,
+  "source_data": [
+    "gemma_evaluation.json",
+    "gemma_mapping_averages.csv",
+    "../stage1a_probability_repeatability_12_2026-11-23/raw_results_bundle.tar.gz"
+  ],
+  "direct_source_readouts_sha256": "bd655d97e15a766f17bb92877ecfe2bbb1a83959fcfd40b878d3693b4af7ee68",
+  "probability_aggregation": "Arithmetic mean of four probability vectors after semantic code alignment at each scoring temperature.",
+  "sensitivity_aggregation": "Per review: maximum state-probability range across the four mappings; report maximum, mean and median of twelve such gaps.",
+  "qualification": "No new inference, calibrated temperature, independent accuracy estimate or downstream training improvement is asserted.",
+  "files": {
+    "figures/Gemma_temperature_all_12_cases.png": {
+      "bytes": 414337,
+      "sha256": "9a0f85f57c33ad98de1804f6ddf3899e6aa44ab38ce2caad4354e15b6348b1d8"
+    },
+    "figures/Gemma_stability_repeat_vs_mapping.png": {
+      "bytes": 233427,
+      "sha256": "3fae8abe059ab5dc3f59dc440f7dedb2cd38175c0d62efcb56de47403dcb28f5"
+    },
+    "figures/Gemma_stability_mean_median_mapping.png": {
+      "bytes": 217533,
+      "sha256": "e6d3b118a2526baeaa3ccdb8f911a54ed6ea6989e44d63c0bb8d913ea0a461f3"
+    },
+    "figures/Gemma_temperature_four_cases.png": {
+      "bytes": 203367,
+      "sha256": "5ff07f68041db8c8f821d8559e5a2997b4a5cee4ac9c656c0ed1cc54520a3555"
+    },
+    "figures/Gemma_stability_letter_ranges_by_case.png": {
+      "bytes": 283692,
+      "sha256": "e32dbdf4b82d92c8da8621081798fdb176b5d1f48638afa9b67753f9d0640eef"
+    },
+    "Gemma_probability_distributions.csv": {
+      "bytes": 6879,
+      "sha256": "6b4ecf837c9ba1f60f9554941384637f597add1cc4a6b2cc22e9bd7632d972a9"
+    },
+    "Gemma_mapping_probabilities_by_temperature.csv": {
+      "bytes": 28006,
+      "sha256": "8ce156fe39d7b6343622024638aafbd5192223900fdd9e6e39ea4c2d464feb51"
+    },
+    "Gemma_stability_summary.csv": {
+      "bytes": 786,
+      "sha256": "70b04be86a7c8dfe258cc9b3f9ef53062599de473ed6ed1c311f681a62992de1"
+    },
+    "plot_gemma_followup.py": {
+      "bytes": 14085,
+      "sha256": "87e4525a8485cee9f8159e729986b486af4db039dae498611cc532061780e928"
+    }
+  }
+}

@@ -229,7 +229,8 @@
       "rationale": "The target positively appraises an uncrowded visit, which plausibly reduces bustle. It does not itself describe ease or tranquility. The following sentences about comfortable strolling are outside the target. I lean toward support by inference, but support at 94.9% versus neither at 2.9% looks more decisive than this boundary warrants.",
       "human_review_requested": true,
       "human_verdict": null,
-      "human_review_status": "pending"
+      "human_review_status": "general_agreement_with_presented_assessment",
+      "human_review_note": "This is group assent to the presented assessments, not separately elicited per-case probability distributions, calibrated percentages, or an independent blinded annotation exercise."
     },
     {
       "case_id": "K05",
@@ -277,7 +278,8 @@
       "rationale": "Visitor-directed yelling and accusation plausibly constitute an agitating encounter at the park. I lean opposition. Whether this is sufficient calm evidence, rather than solely hostility relevant to inviting/safe, remains a construct-boundary judgment. The 94.3% preference is plausible directionally but cannot itself settle that boundary.",
       "human_review_requested": true,
       "human_verdict": null,
-      "human_review_status": "pending"
+      "human_review_status": "general_agreement_with_presented_assessment",
+      "human_review_note": "This is group assent to the presented assessments, not separately elicited per-case probability distributions, calibrated percentages, or an independent blinded annotation exercise."
     },
     {
       "case_id": "K06",
@@ -325,7 +327,8 @@
       "rationale": "The target explicitly requires parental vigilance because of access to the street. This directly concerns safety and can plausibly imply reduced ease, although no stress or agitation is stated. The split of 79.6% neither and 17.1% opposition acknowledges a relevant alternative and is qualitatively sensible.",
       "human_review_requested": true,
       "human_verdict": null,
-      "human_review_status": "pending"
+      "human_review_status": "general_agreement_with_presented_assessment",
+      "human_review_note": "This is group assent to the presented assessments, not separately elicited per-case probability distributions, calibrated percentages, or an independent blinded annotation exercise."
     },
     {
       "case_id": "U01",
@@ -613,7 +616,21 @@
       "rationale": "Lovely sitting in a comfortable chair with music plausibly depicts ease. I lean support. Comfort, pleasantness and music do not necessarily establish tranquility, and music presence alone is insufficient. The 92.2% versus 5.7% neither preference may be too decisive for an unsettled calm boundary.",
       "human_review_requested": true,
       "human_verdict": null,
-      "human_review_status": "pending"
+      "human_review_status": "general_agreement_with_presented_assessment",
+      "human_review_note": "This is group assent to the presented assessments, not separately elicited per-case probability distributions, calibrated percentages, or an independent blinded annotation exercise."
     }
-  ]
+  ],
+  "researcher_follow_up": {
+    "date": "2026-11-24",
+    "source_user_message": "i actually agree with those cases. show me the distribution of probabilities for gemma under different T.",
+    "case_ids": [
+      "K04",
+      "K05",
+      "K06",
+      "U06"
+    ],
+    "recorded_response": "General agreement with the four presented case assessments.",
+    "qualification": "This is group assent to the presented assessments, not separately elicited per-case probability distributions, calibrated percentages, or an independent blinded annotation exercise."
+  },
+  "summary_counts_note": "These counts describe the initial assistant reading; the four referred cases subsequently received general researcher agreement, recorded separately."
 }

@@ -61,6 +61,8 @@ def build():
 
 **Executed November 23, 2026.** Same twelve real reviews/target segments and calm-only v0.5 decision task. This is a representation/repeatability diagnostic; no new independent emotion labels or image-model training.
 
+**November 24 discussion and figures:** [Gemma plausibility audit, researcher response, temperature/stability plots and mean-versus-median clarification](../../Discussions/gemma-probability-audit-temperature-and-stability-2026-11-24.md). The complete figure data and regeneration script are linked there.
+
 ## Findings
 
 1. **Numbers improve typical code-assignment robustness, while order sensitivity remains.** Median assignment spread falls from {q['formats']['letters']['families']['assignment']['median_case_spread_upper_pp']:.2f} to {q['formats']['numbers']['families']['assignment']['median_case_spread_upper_pp']:.2f} pp, with no assignment-induced verdict changes for numbers. The largest numeric assignment spread is still {q['formats']['numbers']['families']['assignment']['max_spread_upper_pp']:.2f} pp, and reordering numbered definitions produces a {q['formats']['numbers']['families']['order']['max_spread_upper_pp']:.2f}-point spread.
@@ -130,7 +132,7 @@ The native cached/reloaded data also contains computational variation: on the **
 
 **Practical extraction issue:** top-20 native probabilities omit some very unlikely state tokens. Those omissions become more consequential after softening: the maximum resulting state-probability interval width is **{t4['max_native_missingness_interval_width_pp']:.2f} pp at T=4**, and larger at T=6/8. The direct evaluation uses all four captured logits and therefore has no such missing-state ambiguity. Do not soften rounded percentages or replace omitted candidates with zero.
 
-For the smoothing control, each temperature is compared with fixed uniform label smoothing matched to its mean winning probability: target `(1-epsilon)*one_hot(winner) + epsilon/4`. Total variation measures how much the full case-specific distribution differs from that control. Softened Gemma vectors contain case/alternative-specific information beyond one constant smoothing level; **whether that extra information is useful remains untested**.
+For the smoothing control, each temperature is compared with fixed uniform label smoothing matched to its mean winning probability: target `(1-epsilon)*one_hot(winner) + epsilon/4`. Total variation measures how much the full case-specific distribution differs from that control. Softened Gemma vectors contain case/alternative-specific information beyond one constant smoothing level; **qualitative plausibility and provisional-reference checks are documented in the follow-ups; downstream training benefit remains untested**.
 
 ## Decisions supported at this stage
 

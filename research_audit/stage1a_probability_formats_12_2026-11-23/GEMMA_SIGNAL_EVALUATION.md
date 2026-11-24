@@ -1,5 +1,7 @@
 # Gemma: does softening provide a useful signal?
 
+**November 24 clarification:** This file scores agreement with historical working reference labels; it does not independently establish truth or compare with old Gemma probabilities. The requested current-assistant semantic review and researcher response are recorded in the [consolidated discussion](../../Discussions/gemma-probability-audit-temperature-and-stability-2026-11-24.md).
+
 **Offline addendum, November 23, 2026. No new model inference.** The preceding evaluation established distribution shape, repeatability and sensitivity. Those observations did not establish that the probabilities identify dependable judgments or improve supervision. This addendum addresses that missing question as far as the existing reference data permits.
 
 **Assessment: no robust added usefulness is established yet.** There are reproducible case-specific preferences, including lower confidence on K01's attribution failure. Against archived provisional reference fields, however, error detection is weak and any benefit over fixed smoothing is small, metric-dependent and sensitive to one case. This is insufficient to adopt the scores as validated confidence or training targets.
@@ -52,3 +54,4 @@ Fine confidence ordering is less robust: **6/25** pairs of reviews with the same
 The two explicit audit judgments are too few to validate an error detector. The wider provisional reference is useful for exploratory sensitivity checks, but its inherited conflicts materially change the evaluation. No model-generated judgments were introduced as ground truth, and no temperature or threshold was selected using these results.
 
 Reproduce with [evaluate_gemma_signal.py](evaluate_gemma_signal.py), the original probability-repeat raw data, and the saved [reference snapshot](gemma_reference_provenance.json). The [case-level CSV](gemma_signal_cases.csv) exposes every target, reference source and temperature vector.
+

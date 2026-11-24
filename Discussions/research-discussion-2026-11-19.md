@@ -270,3 +270,20 @@ Potentially useful information is visible: K01 has a lower winning probability t
 Four human-review cases are documented with exact targets, full contexts, complete state vectors, assistant leanings and explicit pending decisions. No human answer is inferred from silence, and no old reference is overwritten. The machine-readable audit records the assistant role and notes that an exact reviewer backend model identifier is not exposed.
 
 **Model reminder:** the tested Ollama tags are **qwen3.8:27b (27B, Q4_K_M)** and **gemma4:31b-it-bf16 (31B instruction-tuned, BF16)**.
+
+
+---
+
+## 15. Gemma audit clarified, temperature/stability figures, and mean versus median — November 24
+
+The [consolidated November 24 discussion](gemma-probability-audit-temperature-and-stability-2026-11-24.md) records the complete follow-up rather than only a final answer. It includes the model versions, earlier Qwen numbers/position findings, Gemma logit extraction/inverse/softening distinctions, and the correction that the first numeric audit compared softened probabilities against inherited verdict labels rather than old Gemma probabilities.
+
+The researcher requested a current advanced-LLM plausibility audit and human review of controversial cases. The assistant read all twelve targets and full contexts against the actual codebook: seven distributions appeared reasonable, one retained a clear attribution error, and four were presented for human review. The researcher responded “i actually agree with those cases.” General agreement on K04/K05/K06/U06 is now recorded separately from the initial assistant reading; no replacement probability distributions or independent blinded benchmark is implied.
+
+Five figures and their data are included in the linked discussion: four-case and twelve-case temperature distributions, the A/B repeat-versus-mapping plot, per-review letter ranges, and the newly requested maximum/mean/median sensitivity plot. T=4 remains an illustrative middle grid value, not an optimized or calibrated choice. Increasing T eventually makes the four-state distribution uniform, so more softening is not automatically more information.
+
+**A** repeats identical inputs. Native Ollama shows some probability variation, while sixteen direct-backend full-recomputation pairs match exactly. The setups and coverage differ; this was not a Gemma cache-only causal experiment. **B** changes only letter assignments, with definitions and their order fixed. B is the largest max-minus-min state-probability gap across four cyclic assignments, taking the worst review; it is not a mean, a maximum probability, or a definition-order change.
+
+The added chart shows that at T=4 the mean review-level mapping gap is **4.18 percentage points**, the median is **1.58**, and the maximum is **14.20**. Typical sensitivity increases through the explored temperature grid even though the maximum declines after T=4.
+
+Two operations are now explicitly separated: **arithmetic means of four semantic-aligned probability vectors** give a combined prediction, whereas **medians of twelve review-level gaps** summarize typical sensitivity. The lower median curve does not establish that median prediction aggregation is better or remove the underlying variation. The current comparison representation retains arithmetic probability averaging; median and maximum are reported for sensitivity, with the mean alongside them. No production training temperature or confidence-weighting scheme is adopted.
