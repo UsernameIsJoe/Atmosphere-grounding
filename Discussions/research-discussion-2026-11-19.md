@@ -253,3 +253,20 @@ Four mapping distributions are averaged per review, preserving twelve cases rath
 Some coarse preferences are visible. At T=4 the known K01 attribution failure receives about **74%** winning probability, versus about **99%** on explicit intrusive traffic noise (U03, aligned with its archived reference). U06, the other explicit current calm audit, receives about **92%** on support. K04 remains about **95%** despite its earlier low-crowding grounding concern; that concern is not assigned a new error label. Fine confidence ordering also changes with mappings in six of twenty-five pairs sharing a winner; those reversals are below one percentage point among high-confidence neither cases.
 
 **Current assessment:** there are reproducible model preferences and promising coarse distinctions, but no robust evidence yet that the case-specific softened vectors outperform simple smoothing or provide dependable confidence weights. They remain research artifacts. This is not proof that soft targets cannot help downstream training; that comparison was not run. The addendum preserves case-level vectors, reference variants, all leave-one-case-out comparisons and a reproducible evaluation script.
+
+
+---
+
+## 14. Researcher clarification: assistant audit of probability plausibility — November 24
+
+The researcher clarified the intended evaluation: the current advanced LLM should read the text and assess whether the probability pattern makes sense, while controversial cases should be brought to the researcher. The earlier NLL/Brier check against inherited verdict labels did not provide the requested kind of audit. Those calculations remain archived as provisional-reference comparisons.
+
+The [new qualitative audit](../research_audit/stage1a_probability_formats_12_2026-11-23/GEMMA_QUALITATIVE_AUDIT_2026-11-24.md) reads all twelve targets and full reviews against the actual fixed-choice prompt and v0.5 calm definition. It examines the saved full four-state vectors at T=1,2,4,6,8, with T=4 displayed for continuity rather than selected as optimal. No new Gemma or Qwen inference was run. The current assistant had already seen the earlier labels, so this is not a blinded benchmark.
+
+**Assistant assessment:** seven distributions appear semantically reasonable; K01 remains a clear personal-logistics/site-attribution mismatch; K04, K05, K06 and U06 require researcher adjudication. K03's walking-suitability target and U01's future dance-floor target plausibly warrant neither, despite the inherited reference version marking opposition. The earlier three-disagreement error-ranking figure therefore does not represent this assistant reading.
+
+Potentially useful information is visible: K01 has a lower winning probability than explicit intrusive traffic noise, and K06 assigns meaningful alternative probability to calm opposition arising from required vigilance. Strong concentrations on the unsettled uncrowding/comfort boundaries remain questionable. Larger temperatures also allocate mass to unsupported alternatives, so spreading values out is not by itself improved semantic plausibility.
+
+Four human-review cases are documented with exact targets, full contexts, complete state vectors, assistant leanings and explicit pending decisions. No human answer is inferred from silence, and no old reference is overwritten. The machine-readable audit records the assistant role and notes that an exact reviewer backend model identifier is not exposed.
+
+**Model reminder:** the tested Ollama tags are **qwen3.8:27b (27B, Q4_K_M)** and **gemma4:31b-it-bf16 (31B instruction-tuned, BF16)**.

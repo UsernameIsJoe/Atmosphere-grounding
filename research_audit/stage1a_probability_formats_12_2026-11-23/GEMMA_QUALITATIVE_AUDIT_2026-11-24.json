@@ -1,0 +1,619 @@
+{
+  "audit_date": "2026-11-24",
+  "reviewer": "Current ChatGPT/Codex assistant",
+  "reviewer_exact_model_id": null,
+  "reviewer_model_note": "An exact backend model identifier is not exposed in this session; no separate model was invoked as adjudicator.",
+  "method": "Qualitative reading of all twelve target segments, full reviews, the actual fixed-choice prompt and v0.5 codebook against saved full four-state distributions. Prior reference fields are not used as truth or scored. This is not blind: the assistant has seen the old labels and probabilities. No NLL/Brier/accuracy claim is computed from this reading.",
+  "temperatures_reviewed": [
+    1,
+    2,
+    4,
+    6,
+    8
+  ],
+  "display_temperature": 4,
+  "display_temperature_note": "T=4 is a diagnostic view retained from the earlier report, not a selected calibrated temperature.",
+  "new_gemma_calls": 0,
+  "new_qwen_calls": 0,
+  "models": {
+    "qwen": {
+      "ollama_tag": "qwen3.8:27b",
+      "parameters": "27B",
+      "quantization": "Q4_K_M"
+    },
+    "gemma": {
+      "ollama_tag": "gemma4:31b-it-bf16",
+      "parameters": "31B",
+      "precision": "BF16"
+    }
+  },
+  "source_sha256": {
+    "probability_repeat_2026_11_23/direct_gemma/readouts.jsonl": "bd655d97e15a766f17bb92877ecfe2bbb1a83959fcfd40b878d3693b4af7ee68",
+    "probability_repeat_2026_11_23/frozen_source_snapshot/source/codebook_v05.md": "eaf8e1f4498087d7847bc321feaa7a224121c51b61b7ff320a0f88d749242e60",
+    "probability_repeat_2026_11_23/frozen_source_snapshot/run_pilot.py": "aff01b2d47b93931abc00dee94e737135b59f070d6c2a11db2ed7fd6fe85239e",
+    "probability_formats_2026_11_23/inputs.jsonl": "2bd95d20f6df4ae4ff340e450ea19c20ec10d4cda4232568531f2dd3bcc650c9"
+  },
+  "summary_counts": {
+    "reasonable": 7,
+    "clear_mismatch": 1,
+    "human_review": 4
+  },
+  "cases": [
+    {
+      "case_id": "K01",
+      "target_segment": "It was so stressful but her humanity made everything so much better!",
+      "full_review_context": "My husband and I got eloped here. Everyone was so nice and friendly. Our photographer was running late and city clerk told us they’d try their best to wait. Our justice of peace, Paula, is a gem! I’m so thankful for her empathy, consideration and warmth. It was so stressful but her humanity made everything so much better! We were able to take photos throughout the space and no one gave us a hard time. We had an amazing elopement here!",
+      "gemma_winning_state": "opposition_only",
+      "temperature_vectors_mapping_means": {
+        "1": {
+          "neither": 0.00787268844251468,
+          "support_only": 2.003677884829431e-05,
+          "opposition_only": 0.9921040421392575,
+          "both": 3.2326393795465387e-06
+        },
+        "2": {
+          "neither": 0.07378221201789133,
+          "support_only": 0.003028950115586958,
+          "opposition_only": 0.9218677767154964,
+          "both": 0.0013210611510254197
+        },
+        "4": {
+          "neither": 0.19860272837209214,
+          "support_only": 0.03643921859484377,
+          "opposition_only": 0.7396882392670481,
+          "both": 0.025269813766015996
+        },
+        "6": {
+          "neither": 0.2504729399593549,
+          "support_only": 0.07875367502594001,
+          "opposition_only": 0.6087470124790442,
+          "both": 0.062026372535660915
+        },
+        "8": {
+          "neither": 0.26908005063448487,
+          "support_only": 0.11192005744007377,
+          "opposition_only": 0.5255270205176861,
+          "both": 0.0934728714077553
+        }
+      },
+      "T4_winner_mapping_range": [
+        0.6819693458459569,
+        0.8239697839281357
+      ],
+      "qualitative_assessment": "clear_mismatch",
+      "assistant_reading": "neither",
+      "rationale": "The full review attributes stress to a late photographer and elopement logistics. Empathetic service improves that situation; the target does not establish site-induced disturbance. Opposition remains the dominant state after softening, so the principal interpretation error persists. Its lower certainty than the direct traffic-noise case is informative but does not repair attribution.",
+      "human_review_requested": false,
+      "human_verdict": null,
+      "human_review_status": "not_requested"
+    },
+    {
+      "case_id": "K02",
+      "target_segment": "Lights in the small box were years away- it was completely dark.",
+      "full_review_context": "I wish I could give this an honest review of a 4 or a 5, because I know that the people who put it there were trying to solve a universal problem and had a kind heart. However, it must be noted that maintenence was a huge issue. It was completely covered in graffiti. It was completely unclean, with tissues all over the place. Lights in the small box were years away- it was completely dark. Although the flush was operative, the hand washing station was not. It was seeming that nobody had the responsibility of cleaning this place, as it was clear that it had not been cleaned in days, if not weeks.\nIf possible, steer clear of their restroom, and find a local shop.",
+      "gemma_winning_state": "neither",
+      "temperature_vectors_mapping_means": {
+        "1": {
+          "neither": 0.9999998897223444,
+          "support_only": 7.441352359619762e-09,
+          "opposition_only": 9.086711840324362e-08,
+          "both": 1.1969184829337847e-08
+        },
+        "2": {
+          "neither": 0.9995967933530321,
+          "support_only": 7.796706090715426e-05,
+          "opposition_only": 0.0002461709625480971,
+          "both": 7.906862351278011e-05
+        },
+        "4": {
+          "neither": 0.9704252237096632,
+          "support_only": 0.008177337299629252,
+          "opposition_only": 0.014183796323796273,
+          "both": 0.007213642666911163
+        },
+        "6": {
+          "neither": 0.8808144936862659,
+          "support_only": 0.0359845534753808,
+          "opposition_only": 0.05162378298516292,
+          "both": 0.0315771698531903
+        },
+        "8": {
+          "neither": 0.7759442301981755,
+          "support_only": 0.07012427882009263,
+          "opposition_only": 0.09168039656539581,
+          "both": 0.06225109441633595
+        }
+      },
+      "T4_winner_mapping_range": [
+        0.9649324173367888,
+        0.9809650165334161
+      ],
+      "qualitative_assessment": "reasonable",
+      "assistant_reading": "neither",
+      "rationale": "The target reports darkness in a restroom without reporting calm, agitation, intrusive noise or place-induced tension. Darkness may relate to other constructs; neither is a reasonable calm-specific preference.",
+      "human_review_requested": false,
+      "human_verdict": null,
+      "human_review_status": "not_requested"
+    },
+    {
+      "case_id": "K03",
+      "target_segment": "I wouldn't go here if your looking for walk.",
+      "full_review_context": "Great park for such a hidden location. When I go here, there's usually only 2 other people, and it's a nice little place to hang out, with picnic benches. I wouldn't go here if your looking for walk. They should install bathrooms, or at least an outhouse. Definently a good park with not much litter. Suitable for all ages.",
+      "gemma_winning_state": "neither",
+      "temperature_vectors_mapping_means": {
+        "1": {
+          "neither": 0.9999999734559544,
+          "support_only": 4.0763389271372565e-09,
+          "opposition_only": 1.8094719035467497e-08,
+          "both": 4.372987674814612e-09
+        },
+        "2": {
+          "neither": 0.9997969447690691,
+          "support_only": 5.7371278430790797e-05,
+          "opposition_only": 9.66304491907555e-05,
+          "both": 4.905350330941183e-05
+        },
+        "4": {
+          "neither": 0.9790755286609052,
+          "support_only": 0.0071831780290458995,
+          "opposition_only": 0.008028923648769289,
+          "both": 0.005712369661279717
+        },
+        "6": {
+          "neither": 0.9040322347529475,
+          "support_only": 0.03388813290747554,
+          "opposition_only": 0.03462735401630441,
+          "both": 0.027452278323272676
+        },
+        "8": {
+          "neither": 0.8064828894688688,
+          "support_only": 0.06853295315228762,
+          "opposition_only": 0.0680434754369051,
+          "both": 0.056940681941938444
+        }
+      },
+      "T4_winner_mapping_range": [
+        0.9727459526964487,
+        0.9882425750687519
+      ],
+      "qualitative_assessment": "reasonable",
+      "assistant_reading": "neither",
+      "rationale": "A warning that the park is unsuitable for walking is about activity suitability. No calm-related experience or specific disturbance appears in this target. Positive descriptions elsewhere cannot supply another target claim.",
+      "human_review_requested": false,
+      "human_verdict": null,
+      "human_review_status": "not_requested"
+    },
+    {
+      "case_id": "K04",
+      "target_segment": "What made this visit extra special was how surprisingly uncrowded it was.",
+      "full_review_context": "Harvard Square never disappoints! I recently took my aunt for a visit, and we had such a lovely time soaking in the atmosphere. One of our favorite stops was the The Harvard Coop—and of course, we couldn’t leave without picking up some merchandise!\n\nWhat made this visit extra special was how surprisingly uncrowded it was. We were able to stroll comfortably, browse at our own pace, and truly enjoy the charm of the Square without the usual hustle and bustle.\n\nIt’s always such a classic Boston experience—great shopping, beautiful surroundings, and that unmistakable Harvard vibe. A must-visit every time!",
+      "gemma_winning_state": "support_only",
+      "temperature_vectors_mapping_means": {
+        "1": {
+          "neither": 2.7959690924043906e-06,
+          "support_only": 0.9999971175129205,
+          "opposition_only": 6.715677571031118e-08,
+          "both": 1.9361211294260988e-08
+        },
+        "2": {
+          "neither": 0.0012487199859742666,
+          "support_only": 0.9984241522320702,
+          "opposition_only": 0.00021629091294610901,
+          "both": 0.00011083686900942809
+        },
+        "4": {
+          "neither": 0.029191187454737647,
+          "support_only": 0.9485969437286714,
+          "opposition_only": 0.013224041697816907,
+          "both": 0.00898782711877406
+        },
+        "6": {
+          "neither": 0.0787278634838084,
+          "support_only": 0.837128564909134,
+          "opposition_only": 0.04787856534720325,
+          "both": 0.036265006259854335
+        },
+        "8": {
+          "neither": 0.12126176229450417,
+          "support_only": 0.7261838733955056,
+          "opposition_only": 0.0845627537532562,
+          "both": 0.06799161055673404
+        }
+      },
+      "T4_winner_mapping_range": [
+        0.9247662329332713,
+        0.9702924452565388
+      ],
+      "qualitative_assessment": "human_review",
+      "assistant_reading": "support_only (T) is plausible; neither remains defensible",
+      "rationale": "The target positively appraises an uncrowded visit, which plausibly reduces bustle. It does not itself describe ease or tranquility. The following sentences about comfortable strolling are outside the target. I lean toward support by inference, but support at 94.9% versus neither at 2.9% looks more decisive than this boundary warrants.",
+      "human_review_requested": true,
+      "human_verdict": null,
+      "human_review_status": "pending"
+    },
+    {
+      "case_id": "K05",
+      "target_segment": "If the owner of the chickens sees it, he yells from his home and asks if you are feeding poison to them.",
+      "full_review_context": "Park is good. The chickens will chase you if you have any food. If the owner of the chickens sees it, he yells from his home and asks if you are feeding poison to them. Also he has a security camera pointing at the park.",
+      "gemma_winning_state": "opposition_only",
+      "temperature_vectors_mapping_means": {
+        "1": {
+          "neither": 6.29866155610633e-07,
+          "support_only": 4.252532119060449e-07,
+          "opposition_only": 0.9999987843667323,
+          "both": 1.6051390028136996e-07
+        },
+        "2": {
+          "neither": 0.0006511239302298894,
+          "support_only": 0.00047395475182866406,
+          "opposition_only": 0.9985383719349952,
+          "both": 0.00033654938294615374
+        },
+        "4": {
+          "neither": 0.022292554347683544,
+          "support_only": 0.017802551541896222,
+          "opposition_only": 0.943425461291546,
+          "both": 0.01647943281887429
+        },
+        "6": {
+          "neither": 0.06636696807125482,
+          "support_only": 0.05591830101483655,
+          "opposition_only": 0.8228997013593156,
+          "both": 0.054815029554593074
+        },
+        "8": {
+          "neither": 0.10636509982909892,
+          "support_only": 0.09273316635189328,
+          "opposition_only": 0.7083980278535362,
+          "both": 0.09250370596547161
+        }
+      },
+      "T4_winner_mapping_range": [
+        0.9262786474691986,
+        0.9530415648806905
+      ],
+      "qualitative_assessment": "human_review",
+      "assistant_reading": "opposition_only (T)",
+      "rationale": "Visitor-directed yelling and accusation plausibly constitute an agitating encounter at the park. I lean opposition. Whether this is sufficient calm evidence, rather than solely hostility relevant to inviting/safe, remains a construct-boundary judgment. The 94.3% preference is plausible directionally but cannot itself settle that boundary.",
+      "human_review_requested": true,
+      "human_verdict": null,
+      "human_review_status": "pending"
+    },
+    {
+      "case_id": "K06",
+      "target_segment": "It’s not closed to the street though so you have to keep an eye on your kids.",
+      "full_review_context": "It’s a cute small park good for little ones. It’s not closed to the street though so you have to keep an eye on your kids. But it’s really a great place to bring little as",
+      "gemma_winning_state": "neither",
+      "temperature_vectors_mapping_means": {
+        "1": {
+          "neither": 0.9964935946423156,
+          "support_only": 6.992565575958049e-07,
+          "opposition_only": 0.0035050815591147976,
+          "both": 6.245420120687077e-07
+        },
+        "2": {
+          "neither": 0.9505727007604929,
+          "support_only": 0.0006162977468410427,
+          "opposition_only": 0.048282521901771965,
+          "both": 0.0005284795908941059
+        },
+        "4": {
+          "neither": 0.7963488968600068,
+          "support_only": 0.017997283276872555,
+          "opposition_only": 0.17067186660363942,
+          "both": 0.014981953259481318
+        },
+        "6": {
+          "neither": 0.6678469197379076,
+          "support_only": 0.05156920623512499,
+          "opposition_only": 0.2366562486362599,
+          "both": 0.04392762539070752
+        },
+        "8": {
+          "neither": 0.5785386697434372,
+          "support_only": 0.08358363285915157,
+          "opposition_only": 0.2648612473698744,
+          "both": 0.07301645002753697
+        }
+      },
+      "T4_winner_mapping_range": [
+        0.7226092487579596,
+        0.8503132204058866
+      ],
+      "qualitative_assessment": "human_review",
+      "assistant_reading": "neither, with opposition as a plausible alternative",
+      "rationale": "The target explicitly requires parental vigilance because of access to the street. This directly concerns safety and can plausibly imply reduced ease, although no stress or agitation is stated. The split of 79.6% neither and 17.1% opposition acknowledges a relevant alternative and is qualitatively sensible.",
+      "human_review_requested": true,
+      "human_verdict": null,
+      "human_review_status": "pending"
+    },
+    {
+      "case_id": "U01",
+      "target_segment": "1/2 of the space was empty to become a dance floor later in the night.",
+      "full_review_context": "We went to celebrate a friends 30th birthday, it was my first time here! 1/2 of the space was empty to become a dance floor later in the night. They had a fun cocktail menu. I mostly stuck to bottled beer but the cocktails and mocktails that my friends had they said were delicious.",
+      "gemma_winning_state": "neither",
+      "temperature_vectors_mapping_means": {
+        "1": {
+          "neither": 0.9999999931758291,
+          "support_only": 1.1333255441811772e-09,
+          "opposition_only": 4.019217239711998e-09,
+          "both": 1.6716281397473517e-09
+        },
+        "2": {
+          "neither": 0.9998989515528915,
+          "support_only": 2.481869454138445e-05,
+          "opposition_only": 4.6516530763583e-05,
+          "both": 2.971322180348319e-05
+        },
+        "4": {
+          "neither": 0.9856339612955849,
+          "support_only": 0.004465581583443188,
+          "opposition_only": 0.005557862589747216,
+          "both": 0.004342594531224682
+        },
+        "6": {
+          "neither": 0.9248642521834842,
+          "support_only": 0.024776651071098117,
+          "opposition_only": 0.02739757870211113,
+          "both": 0.022961518043306442
+        },
+        "8": {
+          "neither": 0.8366615079910149,
+          "support_only": 0.054954745630175786,
+          "opposition_only": 0.0579535434717083,
+          "both": 0.05043020290710105
+        }
+      },
+      "T4_winner_mapping_range": [
+        0.9805339082617739,
+        0.9937458718900587
+      ],
+      "qualitative_assessment": "reasonable",
+      "assistant_reading": "neither",
+      "rationale": "The target describes a future dance-floor use, not experienced dancing, noise or agitation. Empty space and a future activity are insufficient calm evidence. Neither is reasonable despite the inherited conflicting reference.",
+      "human_review_requested": false,
+      "human_verdict": null,
+      "human_review_status": "not_requested"
+    },
+    {
+      "case_id": "U02",
+      "target_segment": "The three exhibits on display were quite underwhelming…",
+      "full_review_context": "The three exhibits on display were quite underwhelming… I highly recommend spending more time looking around the MIT buildings and public works of art on display that are scattered throughout the campus.",
+      "gemma_winning_state": "neither",
+      "temperature_vectors_mapping_means": {
+        "1": {
+          "neither": 0.9999999923840981,
+          "support_only": 8.690632740823724e-10,
+          "opposition_only": 5.098699132083869e-09,
+          "both": 1.6481394465800117e-09
+        },
+        "2": {
+          "neither": 0.9998957631578875,
+          "support_only": 2.2575345179314107e-05,
+          "opposition_only": 5.2154760246032945e-05,
+          "both": 2.9506736687186905e-05
+        },
+        "4": {
+          "neither": 0.9855423190692412,
+          "support_only": 0.00429878820997519,
+          "opposition_only": 0.005839332960041084,
+          "both": 0.0043195597607426075
+        },
+        "6": {
+          "neither": 0.9247153723877356,
+          "support_only": 0.02420203150323921,
+          "opposition_only": 0.028218487372371773,
+          "both": 0.02286410873665346
+        },
+        "8": {
+          "neither": 0.836527590230603,
+          "support_only": 0.05404189667617851,
+          "opposition_only": 0.05916747586879637,
+          "both": 0.05026303722442217
+        }
+      },
+      "T4_winner_mapping_range": [
+        0.9803252781345398,
+        0.9931059392555871
+      ],
+      "qualitative_assessment": "reasonable",
+      "assistant_reading": "neither",
+      "rationale": "Disappointment with exhibit quality does not establish a calm or agitating atmosphere. Neither is a reasonable construct-specific preference.",
+      "human_review_requested": false,
+      "human_verdict": null,
+      "human_review_status": "not_requested"
+    },
+    {
+      "case_id": "U03",
+      "target_segment": "It is hard to get the sound of the Memorial Drive cars out of your head as they are only a few yards from this park with no real barriers blocking the sound.",
+      "full_review_context": "AKA 'Acorns'. The basketball courts are smooth with nice concrete ledges surrounding them.\n\nIt is hard to get the sound of the Memorial Drive cars out of your head as they are only a few yards from this park with no real barriers blocking the sound.",
+      "gemma_winning_state": "opposition_only",
+      "temperature_vectors_mapping_means": {
+        "1": {
+          "neither": 4.273610607165654e-09,
+          "support_only": 3.739387407919415e-09,
+          "opposition_only": 0.9999999918315499,
+          "both": 1.55452176407801e-10
+        },
+        "2": {
+          "neither": 4.2810677779551435e-05,
+          "support_only": 4.2547167472027244e-05,
+          "opposition_only": 0.9999043251436148,
+          "both": 1.0317011133637594e-05
+        },
+        "4": {
+          "neither": 0.005150453430239672,
+          "support_only": 0.00519555197048761,
+          "opposition_only": 0.9868320495175169,
+          "both": 0.0028219450817558965
+        },
+        "6": {
+          "neither": 0.026022258011449775,
+          "support_only": 0.026031778146454142,
+          "opposition_only": 0.9299851640747179,
+          "both": 0.01796079976737829
+        },
+        "8": {
+          "neither": 0.056054478830113885,
+          "support_only": 0.05578542206552563,
+          "opposition_only": 0.8452074432306311,
+          "both": 0.042952655873729415
+        }
+      },
+      "T4_winner_mapping_range": [
+        0.9825512640079036,
+        0.9932563435521103
+      ],
+      "qualitative_assessment": "reasonable",
+      "assistant_reading": "opposition_only",
+      "rationale": "The target explicitly describes intrusive traffic sound that the visitor cannot get out of their head, attributable to the park surroundings. Strong opposition is supported by the calm codebook; no supporting calm claim is supplied.",
+      "human_review_requested": false,
+      "human_verdict": null,
+      "human_review_status": "not_requested"
+    },
+    {
+      "case_id": "U04",
+      "target_segment": "This museum is fun for all ages.",
+      "full_review_context": "This museum is fun for all ages. From the amazing rocks and geodes to the life sized animals and dinosaur fossils,  it's  just a good time and a great way to spend a couple of hours. I really loved the Americas exhibit. Compared to other museums,  it's not as pricey. And the commute to get to the museum is fairly simple and doesn't take that long",
+      "gemma_winning_state": "neither",
+      "temperature_vectors_mapping_means": {
+        "1": {
+          "neither": 0.9999999948703122,
+          "support_only": 5.328366990836613e-10,
+          "opposition_only": 2.680347158486412e-09,
+          "both": 1.9165038722083876e-09
+        },
+        "2": {
+          "neither": 0.9999115116938753,
+          "support_only": 1.9431015957614486e-05,
+          "opposition_only": 3.7489203506685156e-05,
+          "both": 3.156808666044502e-05
+        },
+        "4": {
+          "neither": 0.9865182244701995,
+          "support_only": 0.004116838255741983,
+          "opposition_only": 0.004960872577769569,
+          "both": 0.004404064696288928
+        },
+        "6": {
+          "neither": 0.9277708838837189,
+          "support_only": 0.023754729585994554,
+          "opposition_only": 0.0254342662436604,
+          "both": 0.023040120286626227
+        },
+        "8": {
+          "neither": 0.8409376889035015,
+          "support_only": 0.0535975955453449,
+          "opposition_only": 0.05495756394998186,
+          "both": 0.05050715160117172
+        }
+      },
+      "T4_winner_mapping_range": [
+        0.9810281021846341,
+        0.9931710417879291
+      ],
+      "qualitative_assessment": "reasonable",
+      "assistant_reading": "neither",
+      "rationale": "Fun for all ages reports enjoyment and accessibility, without calm or disturbance. Neither is a reasonable calm-specific preference.",
+      "human_review_requested": false,
+      "human_verdict": null,
+      "human_review_status": "not_requested"
+    },
+    {
+      "case_id": "U05",
+      "target_segment": "This station is epic and famous, but not the cleanest.",
+      "full_review_context": "This station is epic and famous, but not the cleanest.\nWe really enjoyed though visiting Harvard and passing through here seemed like being part of a movie.\nWe needed to use the bathroom and it was closed. So not great. To be noted that this is a place this Harvard square where it is really difficult to find a toilet.",
+      "gemma_winning_state": "neither",
+      "temperature_vectors_mapping_means": {
+        "1": {
+          "neither": 0.9999999899911955,
+          "support_only": 1.5151062371527107e-09,
+          "opposition_only": 6.713161751461928e-09,
+          "both": 1.7805362735909985e-09
+        },
+        "2": {
+          "neither": 0.9998828128668995,
+          "support_only": 2.7702998228789586e-05,
+          "opposition_only": 5.878657567438418e-05,
+          "both": 3.0697559197414435e-05
+        },
+        "4": {
+          "neither": 0.9848528420610617,
+          "support_only": 0.0045876374278482086,
+          "opposition_only": 0.006120307477017765,
+          "both": 0.00443921303407227
+        },
+        "6": {
+          "neither": 0.9227785968837486,
+          "support_only": 0.024967150659414114,
+          "opposition_only": 0.02890421804595658,
+          "both": 0.023350034410880714
+        },
+        "8": {
+          "neither": 0.8339236921404565,
+          "support_only": 0.05499896655083149,
+          "opposition_only": 0.05998509216988679,
+          "both": 0.05109224913882534
+        }
+      },
+      "T4_winner_mapping_range": [
+        0.9784635133069524,
+        0.9930108292259016
+      ],
+      "qualitative_assessment": "reasonable",
+      "assistant_reading": "neither",
+      "rationale": "Fame, positive place appraisal and poor cleanliness do not themselves supply tranquility or agitation in this target. The model correctly avoids transferring general sentiment or inviting-related evidence into calm.",
+      "human_review_requested": false,
+      "human_verdict": null,
+      "human_review_status": "not_requested"
+    },
+    {
+      "case_id": "U06",
+      "target_segment": "Lovely sitting under the fairy lights in a comfy Adirondack chair, while a busker played songs from the 70s.",
+      "full_review_context": "Lovely sitting under the fairy lights in a comfy Adirondack chair, while a busker played songs from the 70s.  I was right next to, and under, the giant tree.  I’d like to know the age of that tree if anyone knows.",
+      "gemma_winning_state": "support_only",
+      "temperature_vectors_mapping_means": {
+        "1": {
+          "neither": 3.903224434861142e-05,
+          "support_only": 0.9999608792087561,
+          "opposition_only": 2.9022893416571624e-08,
+          "both": 5.952400197996365e-08
+        },
+        "2": {
+          "neither": 0.00470079409369449,
+          "support_only": 0.9949668684859432,
+          "opposition_only": 0.00013596806658012955,
+          "both": 0.00019636935378216681
+        },
+        "4": {
+          "neither": 0.056829482117450036,
+          "support_only": 0.9215427380205309,
+          "opposition_only": 0.009801918011226486,
+          "both": 0.01182586185079252
+        },
+        "6": {
+          "neither": 0.12116598293291421,
+          "support_only": 0.7984996529362974,
+          "opposition_only": 0.03766157800808261,
+          "both": 0.042672786122705836
+        },
+        "8": {
+          "neither": 0.165925150466945,
+          "support_only": 0.6891629268160531,
+          "opposition_only": 0.06910146522658799,
+          "both": 0.07581045749041387
+        }
+      },
+      "T4_winner_mapping_range": [
+        0.8838720379217253,
+        0.9482276017072776
+      ],
+      "qualitative_assessment": "human_review",
+      "assistant_reading": "support_only (T)",
+      "rationale": "Lovely sitting in a comfortable chair with music plausibly depicts ease. I lean support. Comfort, pleasantness and music do not necessarily establish tranquility, and music presence alone is insufficient. The 92.2% versus 5.7% neither preference may be too decisive for an unsettled calm boundary.",
+      "human_review_requested": true,
+      "human_verdict": null,
+      "human_review_status": "pending"
+    }
+  ]
+}
