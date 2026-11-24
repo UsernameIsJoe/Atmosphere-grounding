@@ -1,5 +1,7 @@
 # Gemma probability audit, temperature, stability and aggregation — November 24, 2026
 
+> **Later same-day status:** the [temporary probability wrap](three-native-decision-models-probability-comparison-2026-11-24.md#temporary-probability-wrap-for-november-24-2026) retains Gemma alongside Mammoth, Karpo, GLiDE and PPLX-Decider as five open candidates, then pauses probability testing before embeddings. The audit, figures and original measurements below remain unchanged; T=4 is not an adopted calibration.
+
 This records the discussion following the November 23 probability experiments, including corrections to the initial interpretation, the requested assistant audit, the researcher's response, and the figures explained during the session. All November 24 analysis reused saved outputs; **no additional Qwen or Gemma inference or GPU lease was used**.
 
 ## Models, task and source experiments

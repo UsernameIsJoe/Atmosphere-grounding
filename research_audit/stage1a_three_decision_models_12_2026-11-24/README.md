@@ -2,7 +2,7 @@
 
 Completed November 24, 2026. **All three models ran successfully through their native implementations**, without Ollama, on the same twelve real target segments and v0.5 codebook used for the earlier Qwen, Gemma and PPLX-Decider experiments. Calm is the only measured emotion.
 
-**Current assessment:** retain **Karpo and GLiDE as the two most useful new candidates**. Karpo is the stricter reader and has the smallest typical native probability shifts. GLiDE retains the two plausible positive calm inferences while handling the known personal-stress attribution case better than Decider. Mammoth is reproducible, but its public consistency advantage does not transfer cleanly to this four-state task: it retains the attribution error and has larger typical order effects.
+**Temporary candidate decision, November 24:** retain all five graph models: Mammoth-1, Karpo 31B, GLiDE 27B, PPLX-Decider v1.2 and Gemma4 31B BF16. The earlier preference for only Karpo/GLiDE and firm last-place judgment for Mammoth are superseded by this open candidate set. The [temporary probability wrap and embedding handoff](../../Discussions/three-native-decision-models-probability-comparison-2026-11-24.md#temporary-probability-wrap-for-november-24-2026) records the full discussion. This report's measurements, charts and raw evidence are unchanged; no winner, calibration or probability training weight is adopted.
 
 This is an assistant assessment of a twelve-target development study. No production model, training target, calibrated temperature or confidence-weighting rule is adopted.
 
@@ -139,11 +139,15 @@ Compared with Decider, GLiDE changes the wedding target to neither and retains t
 
 ## Assessment and next decision
 
-- **Karpo:** the strongest new candidate for strict evidence acceptance. Its low typical sensitivity, exact repeats and cleaner attribution are useful. The two rejected positive T inferences and the worst seating/music wording shift need explicit attention before adoption.
-- **GLiDE:** the more useful candidate when retaining defensible indirect calm evidence matters. Its order/wording shifts are modest in this study, but a borderline case can change winner. Its full probability vector should accompany the verdict.
-- **Mammoth:** retain as a comparison rather than the leading candidate from this test. It is exactly repeatable, but has larger typical order effects and still misattributes personal-event emotions. The public abstention-related symmetry result does not settle our forced four-state task.
+**Updated researcher decision: keep all five graph models as candidates and pause this side study before moving to embeddings.** This supersedes the earlier two-finalist shortlist. These are measured tradeoffs, not a final ranking:
 
-Keep both Karpo and GLiDE for a focused next evaluation rather than declaring a universal winner from these twelve targets. A separate, balanced set with explicit positive calm evidence and agreed T boundaries would answer the main remaining selection question. Its labels and downstream soft-target benefit were not measured here.
+- **Mammoth-1:** exact controlled repeats and both plausible positive T readings retained. Its larger typical native order gap and wedding-stress attribution error remain concerns. Its worst wording gap after four-order averaging, 4.27 pp, was smaller than Karpo's 9.82 and GLiDE's 6.22. A firm last-place judgment was premature.
+- **Karpo 31B:** strict evidence acceptance, low typical order sensitivity and cleaner personal-stress attribution. Returning neither for the two plausible positive T inferences and its seating/music wording sensitivity remain concerns.
+- **GLiDE 27B:** retains the positive T readings and improves the personal-stress winning interpretation. Seating/music is essentially tied, and some presentations change its verdict.
+- **PPLX-Decider v1.2:** retain the exactly repeatable native probability reader and accessible raw scores. Its twelve aggregate verdicts match Gemma, including the attribution error; the new matched paraphrase study did not cover it.
+- **Gemma4 31B BF16:** retain the interpretation baseline and controlled direct-backend repeat evidence. Native T=1 saturation, revealed softening/mapping sensitivity and the personal-stress error remain unresolved.
+
+No production model, scoring temperature, evidence-weighting rule or downstream soft-target benefit is established. These twelve development targets lack an unambiguous explicitly worded positive-calm control. See the [consolidated temporary wrap](../../Discussions/three-native-decision-models-probability-comparison-2026-11-24.md#temporary-probability-wrap-for-november-24-2026) for the prior Qwen/Gemma tests, audit corrections, mean/median distinction, existing graph interpretation and agreed embedding/NLI handoff. No new inference or chart regeneration was needed for this update.
 
 ## Preservation, cost and reproduction
 
