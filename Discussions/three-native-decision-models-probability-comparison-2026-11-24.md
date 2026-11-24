@@ -12,9 +12,13 @@ The [completed report](../research_audit/stage1a_three_decision_models_12_2026-1
 
 ### Verdicts across all five models
 
-![Calm verdicts from Mammoth, Karpo, GLiDE, Decider and Gemma](../research_audit/stage1a_three_decision_models_12_2026-11-24/five_model_verdict_comparison.png)
+![Calm verdicts shaded by winning probability](../research_audit/stage1a_three_decision_models_12_2026-11-24/five_model_verdict_probabilities.png)
 
-[Open the verdict chart at full size](../research_audit/stage1a_three_decision_models_12_2026-11-24/five_model_verdict_comparison.png) · [Vector graphic](../research_audit/stage1a_three_decision_models_12_2026-11-24/five_model_verdict_comparison.svg) · [Exact verdicts and target segments](../research_audit/stage1a_three_decision_models_12_2026-11-24/five_model_verdict_comparison.csv).
+[Open the shaded verdict chart at full size](../research_audit/stage1a_three_decision_models_12_2026-11-24/five_model_verdict_probabilities.png) · [Vector graphic](../research_audit/stage1a_three_decision_models_12_2026-11-24/five_model_verdict_probabilities.svg) · [Complete probabilities and winner margins](../research_audit/stage1a_three_decision_models_12_2026-11-24/five_model_verdict_probabilities.csv) · [Target segments and categorical verdicts](../research_audit/stage1a_three_decision_models_12_2026-11-24/five_model_verdict_comparison.csv).
+
+Color hue identifies the verdict; darker shades indicate a larger probability for that displayed state. Each cell also prints the winning probability. The color ramp mixes white at 25% with the verdict color at 100%; this is a visualization mapping only. The underlying saved probabilities are unchanged. Four alternatives mean a winning state may have less than 50% probability. The CSV retains all four states plus the runner-up and winning margin.
+
+Gemma keeps its original native T=1 values, explaining its nearly saturated cells. All probabilities are arithmetic means of four aligned original-wording vectors. Cross-model probability scales have not been calibrated; shading displays each model's commitment among the four states, not measured correctness or emotion intensity. The earlier [categorical chart](../research_audit/stage1a_three_decision_models_12_2026-11-24/five_model_verdict_comparison.png) remains available.
 
 All five models agree on **9 of 12** targets. Gemma and Decider agree on **12 of 12**. Karpo returns neither on the two inferred positives (uncrowding and comfortable seating/music), while the other four return support. For personal wedding stress, Mammoth returns both, Karpo and GLiDE return neither, and Decider and Gemma return opposition.
 

@@ -3,8 +3,8 @@
   "raw_archive_sha256": "949cd80b48810944a90f4507c5a212cfdce34998c594f87aa363ce65fdb31bd5",
   "files": {
     "README.md": {
-      "bytes": 17573,
-      "sha256": "bf732fec87eb1e3a70140a38b4448c6ef1795ab8bb40f044a7f55f04fc4ff527"
+      "bytes": 18535,
+      "sha256": "0eef0920235740d62aa05e74587487035ec7848225f847b295c4f211daa5f370"
     },
     "METHOD.md": {
       "bytes": 10530,
@@ -253,6 +253,22 @@
     "plot_verdicts.py": {
       "bytes": 6811,
       "sha256": "2805beb9983d45e7bf90b88dbac3476352be3fb17d3eca7ca84109d0c7c2bbc8"
+    },
+    "five_model_verdict_probabilities.png": {
+      "bytes": 588194,
+      "sha256": "74e33114f6b08236f64880169e5361d4e61e2c152ad7484865ecb7c8be5cc20f"
+    },
+    "five_model_verdict_probabilities.svg": {
+      "bytes": 57272,
+      "sha256": "99a84de708e0ab13eff094771ee08bd09c88d2f8f886aa6dad66ac7bee1b6a95"
+    },
+    "five_model_verdict_probabilities.csv": {
+      "bytes": 12362,
+      "sha256": "6e8c1f96c57a5c4a3312f6be33d2e99fc4011f988ebea7e66b64d3c7e80dcfb8"
+    },
+    "plot_verdict_probabilities.py": {
+      "bytes": 7363,
+      "sha256": "db82399c45b73674cb7890e5be5071a40a31e60a2287edc90b64d1d58c04f233"
     }
   }
 }
