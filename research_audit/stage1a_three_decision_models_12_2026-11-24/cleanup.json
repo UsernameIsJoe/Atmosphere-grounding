@@ -1,0 +1,12 @@
+{
+  "pod_id": "cljvjg1tfr3z7u",
+  "createdAt": "2026-11-24T18:38:33.29Z",
+  "termination_confirmed_at_utc": "2026-11-24T19:20:48.288Z",
+  "termination_confirmed": true,
+  "post_termination_pods": [],
+  "archive_verified_before_termination": true,
+  "lease_seconds_upper_estimate": 2534.998,
+  "observed_hourly_gpu_price_usd": 2.69,
+  "estimated_compute_cost_usd": 1.8942068388888889,
+  "qualification": "Compute estimate uses termination confirmation time and the observed hourly GPU price; not an invoice and excludes any provider storage charges."
+}

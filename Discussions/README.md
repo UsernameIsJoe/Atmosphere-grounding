@@ -1,5 +1,7 @@
 # Discussions
 
+**Executed three-model comparison (November 24):** [Mammoth-1, Karpo and GLiDE: native probabilities, order/wording stability and case audit](three-native-decision-models-probability-comparison-2026-11-24.md) — 2,340 completed decisions on the same twelve calm targets. All repeated vectors and reload checks match exactly; Karpo is stricter on indirect evidence, GLiDE retains it more readily, and Mammoth keeps the known attribution error. Includes both charts, raw evidence, the preserved formatter correction and verified cleanup.
+
 **PPLX-Decider executed test (November 24):** [Native BF16 probability, repeatability and option-order results](../research_audit/stage1a_pplx_decider_12_2026-11-24/README.md) — same twelve calm targets; 480 main readouts plus reload/API checks. Identical logits and probabilities across ten repeats of each input; median order gap 1.07 points, maximum 6.90; no verdict flips. All twelve verdicts match Gemma, including the personal-stress attribution error. Includes native raw logits, two figures and an assistant plausibility audit; no emotion-calibration or accuracy claim.
 
 **November 24 consolidated discussion:** [Gemma audit, temperature, stability figures and mean/median clarification](gemma-probability-audit-temperature-and-stability-2026-11-24.md) — includes the researcher's agreement on the reviewed cases, all five charts and exact values, reference-audit limitations, the A/B definitions, and the distinction between averaging predictions and summarizing sensitivity. No new model inference.

@@ -1,0 +1,80 @@
+{
+  "date": "2026-11-24",
+  "baseline_commit": "92dad92ae5351d4782c42d1bba0a6b9ac7ec5c1e",
+  "models": {
+    "mammoth": {
+      "repo": "baselabs/mammoth-1",
+      "revision": "858aab610d4d124315ebf72d2f36c5e7341f758f",
+      "private": false,
+      "gated": false
+    },
+    "karpo": {
+      "repo": "MachinePulseAI/karpo-decision-31B",
+      "revision": "b8e6fd7463cea8662c556d6257955d7ef9c10d19",
+      "private": false,
+      "gated": false
+    },
+    "glide": {
+      "repo": "fastino/GLiDE-27B",
+      "revision": "061c7d4312670f98261c007f5fd24851a64124dc",
+      "private": false,
+      "gated": false
+    }
+  },
+  "runtime_revisions": [
+    {
+      "name": "onejev",
+      "url": "https://github.com/OmniJev/OneJev.git",
+      "revision": "81ce62f1597c91e46767d4d02d6ac2e18534fe94"
+    },
+    {
+      "name": "karpo",
+      "url": "https://github.com/machinepulse-ai/karpo-decision.git",
+      "revision": "c52d3507a254d3ad8423726c6bc6568c99113e7d"
+    }
+  ],
+  "task": "Same twelve real targets and context, unchanged v0.5 codebook, calm only. No gate rerun. Native four-state choice.",
+  "states": [
+    "neither",
+    "support_only",
+    "opposition_only",
+    "both"
+  ],
+  "primary": {
+    "wordings": 1,
+    "cases": 12,
+    "cyclic_orders": 4,
+    "repeats": 10,
+    "readouts_per_model": 480
+  },
+  "wording_extension": {
+    "extra_equivalent_task_wordings": 2,
+    "codebook_and_criteria_unchanged": true,
+    "cases": 12,
+    "cyclic_orders": 4,
+    "repeats": 3,
+    "readouts_per_model": 288
+  },
+  "reload": {
+    "wording": "wording_0",
+    "order": "order_0",
+    "readouts_per_model": 12
+  },
+  "expected_readouts_per_model": 780,
+  "expected_total_readouts": 2340,
+  "factor_note": "Criteria reordering jointly changes positions and native internal codes. Task instruction paraphrases leave codebook, review text and criterion definitions unchanged. Four cyclic orders, not all 24 permutations. Existing Decider comparison has no new paraphrase runs.",
+  "probability_policy": "Use each published native inference/temperature, record all four raw option scores from the same native decision call. No added abstention option, invented confidence or fitted temperature. All code/probability reconstruction checked.",
+  "repeat_policy": "Serial one-request calls, fresh request computation; native within-request prefix handling retained. Mammoth uses supported sequential branches with fresh prefix per call; Karpo/GLiDE use native no-cache full forwards. No cross-request cache. Seed 42. Native models and wrappers differ.",
+  "evaluation": "Exact repeated-vector checks, order and paraphrase ranges/TV distances, case-level qualitative probability audit against text/codebook, and saved baseline agreements. No inherited-label accuracy or task-calibration claim.",
+  "budget": {
+    "hourly_gpu_max_usd": 3,
+    "total_target_usd": 3,
+    "global_inference_stop_after_seconds": 3000,
+    "terminate_target_minutes": 58
+  },
+  "input_hashes": {
+    "inputs.jsonl": "2bd95d20f6df4ae4ff340e450ea19c20ec10d4cda4232568531f2dd3bcc650c9",
+    "codebook_v05.md": "eaf8e1f4498087d7847bc321feaa7a224121c51b61b7ff320a0f88d749242e60",
+    "requests.jsonl": "2ad835d4486d78034160825d1f37913b10d7dd56c33a59dafaef558eb8845fae"
+  }
+}

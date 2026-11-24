@@ -1,0 +1,53 @@
+{
+  "model": "glide",
+  "complete": true,
+  "readouts": 780,
+  "primary_readouts": 480,
+  "paraphrase_readouts": 288,
+  "reload_readouts": 12,
+  "counted_model_forward_passes": 780,
+  "primary_repeatability": {
+    "conditions": 48,
+    "identical_probability_groups": 48,
+    "identical_logit_groups": 48,
+    "max_probability_range_pp": 0.0,
+    "max_logit_range": 0.0,
+    "groups_with_winner_flips": 0
+  },
+  "all_wordings_repeatability": {
+    "conditions": 144,
+    "identical_probability_groups": 144,
+    "identical_logit_groups": 144,
+    "max_probability_range_pp": 0.0,
+    "groups_with_winner_flips": 0
+  },
+  "primary_order_sensitivity": {
+    "median_review_gap_pp": 0.6219844475687033,
+    "mean_review_gap_pp": 1.4828916628152464,
+    "maximum_review_gap_pp": 4.142622228490955,
+    "cases_with_winner_flips": 1
+  },
+  "wording_sensitivity_after_order_averaging": {
+    "cases": 12,
+    "median_review_gap_pp": 0.2274321065887255,
+    "mean_review_gap_pp": 1.4287298865661398,
+    "maximum_review_gap_pp": 6.215603644947043,
+    "cases_with_mean_winner_flips": 0,
+    "cases_with_matched_order_winner_flips": 1,
+    "matched_order_conditions_with_wording_winner_flips": 2,
+    "max_matched_order_wording_gap_pp": 7.698716939218825
+  },
+  "reloaded": {
+    "comparisons": 12,
+    "identical_probability_vectors": 12,
+    "identical_logit_vectors": 12,
+    "max_probability_shift_pp": 0.0,
+    "cases_with_winner_flips": 0
+  },
+  "native_score_reconstruction_max_abs_error": 0.0,
+  "formatter_verification": null,
+  "primary_mean_winning_probability": 0.8775350985276292,
+  "primary_winning_probability_ge_999": 40,
+  "primary_mean_entropy_bits": 0.40900714034857927,
+  "median_decision_seconds": 0.6557568390271626
+}

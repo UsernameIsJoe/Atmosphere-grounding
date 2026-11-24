@@ -1,0 +1,13 @@
+model,case_id,probabilities_identical,raw_logits_identical,max_probability_shift_pp,same_winner
+glide,K01,True,True,0.0,True
+glide,K02,True,True,0.0,True
+glide,K03,True,True,0.0,True
+glide,K04,True,True,0.0,True
+glide,K05,True,True,0.0,True
+glide,K06,True,True,0.0,True
+glide,U01,True,True,0.0,True
+glide,U02,True,True,0.0,True
+glide,U03,True,True,0.0,True
+glide,U04,True,True,0.0,True
+glide,U05,True,True,0.0,True
+glide,U06,True,True,0.0,True

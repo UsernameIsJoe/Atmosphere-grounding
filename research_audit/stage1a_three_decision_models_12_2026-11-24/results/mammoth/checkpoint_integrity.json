@@ -1,0 +1,12 @@
+{
+  "model-00001-of-00002.safetensors": {
+    "bytes": 49825162976,
+    "sha256": "29701f9a7b131bedb3fe1d565dad69b912d9128c6fc27e3d8fb0aedc47ae0e06",
+    "expected_lfs_sha256": "29701f9a7b131bedb3fe1d565dad69b912d9128c6fc27e3d8fb0aedc47ae0e06"
+  },
+  "model-00002-of-00002.safetensors": {
+    "bytes": 4888445168,
+    "sha256": "4da0ff5476813bbd9898454f0d7f7ba3c82914c42e32e2b87577c6d69daae671",
+    "expected_lfs_sha256": "4da0ff5476813bbd9898454f0d7f7ba3c82914c42e32e2b87577c6d69daae671"
+  }
+}

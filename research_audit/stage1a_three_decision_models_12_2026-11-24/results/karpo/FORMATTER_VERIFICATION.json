@@ -1,0 +1,5 @@
+{
+  "readouts_checked": 780,
+  "native_softmax_plus_official_formatter_max_abs_error": 0,
+  "original_harness_note": "Original per-call reconstruction compares the float32 softmax before the official formatter renormalizes it. That small recorded difference is arithmetic formatting, not repeated-inference variation. No model calls were made."
+}

@@ -1,0 +1,55 @@
+{
+  "model": "glide",
+  "model_source": {
+    "repo": "fastino/GLiDE-27B",
+    "revision": "061c7d4312670f98261c007f5fd24851a64124dc",
+    "private": false,
+    "gated": false
+  },
+  "seed": 42,
+  "torch": "2.14.0+cu130",
+  "cuda_runtime": "13.0",
+  "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition, 595.112.07, 97887 MiB",
+  "packages": {
+    "torch": "2.14.0",
+    "transformers": "5.17.0",
+    "safetensors": "0.8.0",
+    "huggingface-hub": "1.33.0",
+    "numpy": "2.5.3"
+  },
+  "load_seconds": 12.666667800978757,
+  "native_temperature": 1.0,
+  "native_info": {
+    "attention": "noncausal_full_attention",
+    "midloop": {
+      "conv": "A",
+      "strategy": "euler",
+      "gamma": 1.0,
+      "a": 24,
+      "b": 47,
+      "blocks": [
+        [
+          24,
+          35
+        ],
+        [
+          36,
+          47
+        ]
+      ],
+      "n_gate": 0,
+      "n_lora": 0,
+      "passes": 2
+    },
+    "vision": true,
+    "max_length": 8192
+  },
+  "deterministic_algorithms": false,
+  "serial_requests": true,
+  "cache_note": "Mammoth retains native within-request prefix computation and fresh cache per request; no cross-request prefix reuse. Karpo/GLiDE use full native reference forwards.",
+  "min_input_tokens": 2475,
+  "max_input_tokens": 2616,
+  "reload_seconds": 4.874897974077612,
+  "end_time": 1795547318.9518692,
+  "peak_gpu_memory_bytes": 54764836864
+}

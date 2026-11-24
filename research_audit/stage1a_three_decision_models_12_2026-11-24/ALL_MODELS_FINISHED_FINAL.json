@@ -1,0 +1,22 @@
+{
+  "stage": "finished_final",
+  "time": 1795547973.971758,
+  "outcomes": {
+    "mammoth": "complete",
+    "karpo": "complete",
+    "glide": "complete"
+  },
+  "primary_readouts": 2340,
+  "per_model_counts": {
+    "mammoth": 780,
+    "karpo": 780,
+    "glide": 780
+  },
+  "counted_primary_model_forward_passes": 3120,
+  "extra_initial_attempt_native_decisions": 2,
+  "extra_initial_attempt_logged_records": 1,
+  "extra_initial_attempt_model_forward_passes": 4,
+  "total_native_decisions_including_initial_attempt": 2342,
+  "total_model_forward_passes_including_initial_attempt": 3124,
+  "initial_and_retry_first_readout_logits_and_native_probabilities_exactly_match": true
+}

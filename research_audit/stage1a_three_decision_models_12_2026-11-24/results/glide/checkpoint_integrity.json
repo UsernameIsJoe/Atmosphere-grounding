@@ -1,0 +1,37 @@
+{
+  "model-00001-of-00005.safetensors": {
+    "bytes": 10752475776,
+    "sha256": "3556f1dce9d385ea590c5e449af0e2fb7622ec228c4737a952796022e7294066",
+    "expected_lfs_sha256": "3556f1dce9d385ea590c5e449af0e2fb7622ec228c4737a952796022e7294066"
+  },
+  "model-00002-of-00005.safetensors": {
+    "bytes": 10821787824,
+    "sha256": "04b5cbcaf4452868cac962369f3869ad074579319b5ea31260a7f4286eb7448c",
+    "expected_lfs_sha256": "04b5cbcaf4452868cac962369f3869ad074579319b5ea31260a7f4286eb7448c"
+  },
+  "model-00003-of-00005.safetensors": {
+    "bytes": 10791416008,
+    "sha256": "37751d200d4a89dc1a01f9e7823cdf33da3290d760e68d8635a0aa254c94cb04",
+    "expected_lfs_sha256": "37751d200d4a89dc1a01f9e7823cdf33da3290d760e68d8635a0aa254c94cb04"
+  },
+  "model-00004-of-00005.safetensors": {
+    "bytes": 10748470520,
+    "sha256": "b4a78217aaac427ffde7904a35678ab5d74a907daf5ded753097c9d15a2de43f",
+    "expected_lfs_sha256": "b4a78217aaac427ffde7904a35678ab5d74a907daf5ded753097c9d15a2de43f"
+  },
+  "model-00005-of-00005.safetensors": {
+    "bytes": 8135161744,
+    "sha256": "3f322a07812fe9235ef4e5bb7e053863cc4a7ed2fe5773ec860a6414d7c8f2b0",
+    "expected_lfs_sha256": "3f322a07812fe9235ef4e5bb7e053863cc4a7ed2fe5773ec860a6414d7c8f2b0"
+  },
+  "model-visual.safetensors": {
+    "bytes": 921497224,
+    "sha256": "0aed35369c4026e1315f3606ecd1ef6083c3938024ec84a30ceaab2dea7f28b3",
+    "expected_lfs_sha256": "0aed35369c4026e1315f3606ecd1ef6083c3938024ec84a30ceaab2dea7f28b3"
+  },
+  "readout.safetensors": {
+    "bytes": 2611288,
+    "sha256": "349362d9dee3418da538b91183596b5f9240e805df85f9a8d5dc4372d55b4559",
+    "expected_lfs_sha256": "349362d9dee3418da538b91183596b5f9240e805df85f9a8d5dc4372d55b4559"
+  }
+}

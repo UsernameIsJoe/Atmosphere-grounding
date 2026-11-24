@@ -1,0 +1,466 @@
+{
+  "date": "2026-11-24",
+  "reviewer": "Current assistant; exact backend identifier is not exposed",
+  "blinded": false,
+  "human_probability_annotations_available": false,
+  "method": "Read target and full context against the unchanged v0.5 codebook; inspect original-wording four-order means and actual sensitivity results. This is qualitative plausibility assessment, not accuracy or calibration measurement.",
+  "prior_human_context": "Earlier general agreement on the four Gemma boundary-case readings does not assign new probabilities or blind labels for these candidates.",
+  "cases": [
+    {
+      "case_id": "K01",
+      "target_segment": "It was so stressful but her humanity made everything so much better!",
+      "assessment_category": "known_attribution_case",
+      "assistant_text_reading": "Neither is appropriate: the late photographer and personal wedding schedule explain the target stress and relief. The target does not attribute calm or agitation to the site atmosphere.",
+      "model_observations": {
+        "mammoth": {
+          "original_wording_order_mean": {
+            "neither": 0.22995567568766595,
+            "support_only": 0.10193193763448,
+            "opposition_only": 0.32361770356768554,
+            "both": 0.3444946831101685
+          },
+          "winner": "both",
+          "assistant_assessment": "The original mean winner is both, with another large opposition component. This spreads probability between two misattributed readings; lower concentration does not repair the source attribution. The mean winner changes to opposition under wording 1 and returns to both under wording 2."
+        },
+        "karpo": {
+          "original_wording_order_mean": {
+            "neither": 0.8832551438691068,
+            "support_only": 0.011420268409565448,
+            "opposition_only": 0.08913651016760475,
+            "both": 0.016188077553723108
+          },
+          "winner": "neither",
+          "assistant_assessment": "Neither is the winner in every tested presentation of this target. Its 88.33% original mean is a cleaner preference for the established attribution reading than the saved Decider vector. The exact percentage is not independently calibrated."
+        },
+        "glide": {
+          "original_wording_order_mean": {
+            "neither": 0.562774157152403,
+            "support_only": 0.06669790298502304,
+            "opposition_only": 0.25788160389272935,
+            "both": 0.11264633596984466
+          },
+          "winner": "neither",
+          "assistant_assessment": "Neither is the winner in every tested presentation, but opposition plus both still holds 37.05% in the original mean. The correct winning state does not establish a reliable complete training vector."
+        }
+      }
+    },
+    {
+      "case_id": "K02",
+      "target_segment": "Lights in the small box were years away- it was completely dark.",
+      "assessment_category": "clear_dimension_exclusion",
+      "assistant_text_reading": "The target reports darkness in a restroom. It does not establish tranquility or calm-related disturbance; maintenance and general unpleasantness cannot automatically supply that dimension.",
+      "model_observations": {
+        "mammoth": {
+          "original_wording_order_mean": {
+            "neither": 0.8392393099004611,
+            "support_only": 0.007807131614051897,
+            "opposition_only": 0.15075205891812266,
+            "both": 0.0022014995673644566
+          },
+          "winner": "neither",
+          "assistant_assessment": "Neither wins, with 15.08% on opposition. That alternative needs a specific calm-related link not supplied by the target. This is a plausibility concern about the alternative allocation, not a numerical calibration verdict."
+        },
+        "karpo": {
+          "original_wording_order_mean": {
+            "neither": 0.9985012833314743,
+            "support_only": 0.0002451060388871643,
+            "opposition_only": 0.001200188285343549,
+            "both": 5.342234429503105e-05
+          },
+          "winner": "neither",
+          "assistant_assessment": "Strong neither is consistent with the target boundary. Its near-certainty is not established as calibrated."
+        },
+        "glide": {
+          "original_wording_order_mean": {
+            "neither": 0.9692568511089273,
+            "support_only": 0.002861793991086949,
+            "opposition_only": 0.027252081808764837,
+            "both": 0.0006292730912209085
+          },
+          "winner": "neither",
+          "assistant_assessment": "Strong neither is consistent with the target boundary; the small opposition alternative does not change the exclusion."
+        }
+      }
+    },
+    {
+      "case_id": "K03",
+      "target_segment": "I wouldn't go here if your looking for walk.",
+      "assessment_category": "clear_dimension_exclusion",
+      "assistant_text_reading": "The target is about suitability for a walk. Other sentences describing a pleasant, sparsely attended park cannot silently become evidence in this target.",
+      "model_observations": {
+        "mammoth": {
+          "original_wording_order_mean": {
+            "neither": 0.9116002626457793,
+            "support_only": 0.017519924095258904,
+            "opposition_only": 0.06640257842659573,
+            "both": 0.004477234832365968
+          },
+          "winner": "neither",
+          "assistant_assessment": "Neither is a reasonable winner; its opposition alternative may reflect the negative recommendation rather than calm-specific evidence."
+        },
+        "karpo": {
+          "original_wording_order_mean": {
+            "neither": 0.9998884284661285,
+            "support_only": 5.0112664881787455e-05,
+            "opposition_only": 4.658237062541082e-05,
+            "both": 1.4876498364323518e-05
+          },
+          "winner": "neither",
+          "assistant_assessment": "Strong neither respects the target and emotion scope."
+        },
+        "glide": {
+          "original_wording_order_mean": {
+            "neither": 0.9985013472937729,
+            "support_only": 0.0003399552282698473,
+            "opposition_only": 0.0010209071115191812,
+            "both": 0.0001377903664381086
+          },
+          "winner": "neither",
+          "assistant_assessment": "Strong neither respects the target and emotion scope."
+        }
+      }
+    },
+    {
+      "case_id": "K04",
+      "target_segment": "What made this visit extra special was how surprisingly uncrowded it was.",
+      "assessment_category": "construct_boundary",
+      "assistant_text_reading": "Surprisingly uncrowded is a reported spatial/social condition with a defensible T connection to calm. It is not an explicit report of tranquility. Subsequent comfortable-strolling text cannot replace target evidence.",
+      "model_observations": {
+        "mammoth": {
+          "original_wording_order_mean": {
+            "neither": 0.022027586907053205,
+            "support_only": 0.9744722132980002,
+            "opposition_only": 0.0021143433921637024,
+            "both": 0.001385856402783022
+          },
+          "winner": "support_only",
+          "assistant_assessment": "Strong support retains the accepted positive inference, but its 97.45% concentration is not itself validated for this boundary."
+        },
+        "karpo": {
+          "original_wording_order_mean": {
+            "neither": 0.6778798613361336,
+            "support_only": 0.32106515325576473,
+            "opposition_only": 0.0004567081280519061,
+            "both": 0.0005982772800496747
+          },
+          "winner": "neither",
+          "assistant_assessment": "Neither 67.79% versus support 32.11% is stricter than the earlier Gemma/Decider readings. This may exclude the T evidence the project intends to retain; it should not automatically be called a correctness improvement."
+        },
+        "glide": {
+          "original_wording_order_mean": {
+            "neither": 0.1242772232031327,
+            "support_only": 0.8701300635556535,
+            "opposition_only": 0.0032949208698853,
+            "both": 0.002297792371328577
+          },
+          "winner": "support_only",
+          "assistant_assessment": "Support 87.01% retains the T inference while leaving some neither mass. The allocation is plausible without proving its numerical confidence."
+        }
+      }
+    },
+    {
+      "case_id": "K05",
+      "target_segment": "If the owner of the chickens sees it, he yells from his home and asks if you are feeding poison to them.",
+      "assessment_category": "construct_boundary",
+      "assistant_text_reading": "Yelling directed toward visitors can disturb the encountered place experience. The habitual conditional wording and inference from an interaction leave a plausible neither alternative.",
+      "model_observations": {
+        "mammoth": {
+          "original_wording_order_mean": {
+            "neither": 0.21247143965774756,
+            "support_only": 0.0031144700557551707,
+            "opposition_only": 0.7808246159273649,
+            "both": 0.0035894743591323563
+          },
+          "winner": "opposition_only",
+          "assistant_assessment": "Opposition 78.08% and neither 21.25% put the uncertainty on relevant alternatives."
+        },
+        "karpo": {
+          "original_wording_order_mean": {
+            "neither": 0.09316249254779431,
+            "support_only": 0.000398675380401267,
+            "opposition_only": 0.9061495281738654,
+            "both": 0.0002893038979390156
+          },
+          "winner": "opposition_only",
+          "assistant_assessment": "Opposition 90.61% is consistent with the earlier accepted reading, though more committed than the other new models."
+        },
+        "glide": {
+          "original_wording_order_mean": {
+            "neither": 0.3154179516119575,
+            "support_only": 0.0031299080673056062,
+            "opposition_only": 0.6774608610195062,
+            "both": 0.003991279301230773
+          },
+          "winner": "opposition_only",
+          "assistant_assessment": "Opposition 67.75% and neither 31.54% expose the interaction-versus-atmosphere boundary. This is not automatically better calibrated than the more concentrated alternatives."
+        }
+      }
+    },
+    {
+      "case_id": "K06",
+      "target_segment": "It’s not closed to the street though so you have to keep an eye on your kids.",
+      "assessment_category": "construct_boundary",
+      "assistant_text_reading": "The target directly concerns child vigilance near traffic. Neither for calm is reasonable; heightened vigilance can also support a T agitation inference. A safety consequence is not automatically calm opposition.",
+      "model_observations": {
+        "mammoth": {
+          "original_wording_order_mean": {
+            "neither": 0.8483332061653046,
+            "support_only": 0.0032736230180596283,
+            "opposition_only": 0.14508850708019444,
+            "both": 0.00330466373644141
+          },
+          "winner": "neither",
+          "assistant_assessment": "Neither 84.83% and opposition 14.51% leave a meaningful vigilance-related alternative."
+        },
+        "karpo": {
+          "original_wording_order_mean": {
+            "neither": 0.958301235599373,
+            "support_only": 0.0004932227734419566,
+            "opposition_only": 0.04096289795359357,
+            "both": 0.0002426436735917026
+          },
+          "winner": "neither",
+          "assistant_assessment": "Neither 95.83% strongly separates the safety/vigilance concern from calm. This is a boundary choice, not proof that a T calm inference is impossible."
+        },
+        "glide": {
+          "original_wording_order_mean": {
+            "neither": 0.9835386406156498,
+            "support_only": 0.0007217477994128333,
+            "opposition_only": 0.015076288405028726,
+            "both": 0.0006633231799087883
+          },
+          "winner": "neither",
+          "assistant_assessment": "Neither 98.35% makes the same distinction very strongly; the tiny alternative mass has not been empirically validated."
+        }
+      }
+    },
+    {
+      "case_id": "U01",
+      "target_segment": "1/2 of the space was empty to become a dance floor later in the night.",
+      "assessment_category": "clear_scope_exclusion",
+      "assistant_text_reading": "The target describes space reserved for a future dance floor, rather than a present experience of tranquility or disturbance. Preserve its temporal scope.",
+      "model_observations": {
+        "mammoth": {
+          "original_wording_order_mean": {
+            "neither": 0.7881410777772471,
+            "support_only": 0.08978461003783131,
+            "opposition_only": 0.04334804164652438,
+            "both": 0.0787262705383972
+          },
+          "winner": "neither",
+          "assistant_assessment": "Neither wins, but 8.98% support, 4.33% opposition and 7.87% both allocate notable mass to unsupported directional configurations. Both cannot be used as an uncertainty bucket."
+        },
+        "karpo": {
+          "original_wording_order_mean": {
+            "neither": 0.9984393547101129,
+            "support_only": 0.0009134574043032658,
+            "opposition_only": 0.0005278758863789488,
+            "both": 0.00011931199920487244
+          },
+          "winner": "neither",
+          "assistant_assessment": "Strong neither follows the target temporal scope."
+        },
+        "glide": {
+          "original_wording_order_mean": {
+            "neither": 0.9710923158511995,
+            "support_only": 0.017714063957059826,
+            "opposition_only": 0.009498408982314282,
+            "both": 0.0016952112094266408
+          },
+          "winner": "neither",
+          "assistant_assessment": "Strong neither follows the target temporal scope."
+        }
+      }
+    },
+    {
+      "case_id": "U02",
+      "target_segment": "The three exhibits on display were quite underwhelming…",
+      "assessment_category": "clear_dimension_exclusion",
+      "assistant_text_reading": "Underwhelming exhibits concern content quality and do not establish calm support or opposition.",
+      "model_observations": {
+        "mammoth": {
+          "original_wording_order_mean": {
+            "neither": 0.9745436865470718,
+            "support_only": 0.0004703773276771981,
+            "opposition_only": 0.0247832722186164,
+            "both": 0.0002026639066346088
+          },
+          "winner": "neither",
+          "assistant_assessment": "Neither is appropriate. The small opposition component remains a model preference, not observed agitation."
+        },
+        "karpo": {
+          "original_wording_order_mean": {
+            "neither": 0.9999589739799805,
+            "support_only": 1.2874030875789983e-05,
+            "opposition_only": 1.9309238212714556e-05,
+            "both": 8.84275093087508e-06
+          },
+          "winner": "neither",
+          "assistant_assessment": "Strong neither is consistent with separating exhibit quality from atmosphere."
+        },
+        "glide": {
+          "original_wording_order_mean": {
+            "neither": 0.9997659401791239,
+            "support_only": 5.503113453367085e-05,
+            "opposition_only": 0.0001455073181550956,
+            "both": 3.352136818740887e-05
+          },
+          "winner": "neither",
+          "assistant_assessment": "Strong neither is consistent with separating exhibit quality from atmosphere."
+        }
+      }
+    },
+    {
+      "case_id": "U03",
+      "target_segment": "It is hard to get the sound of the Memorial Drive cars out of your head as they are only a few yards from this park with no real barriers blocking the sound.",
+      "assessment_category": "clear_calm_opposition",
+      "assistant_text_reading": "The target explicitly reports intrusive traffic sound affecting the visitor at the park, with no effective sound barrier. This is direct calm-related disturbance.",
+      "model_observations": {
+        "mammoth": {
+          "original_wording_order_mean": {
+            "neither": 0.002415023016986792,
+            "support_only": 0.0008880295083537246,
+            "opposition_only": 0.9960192732083326,
+            "both": 0.0006776742663269623
+          },
+          "winner": "opposition_only",
+          "assistant_assessment": "Strong opposition is grounded in the text."
+        },
+        "karpo": {
+          "original_wording_order_mean": {
+            "neither": 0.00033972061730873295,
+            "support_only": 4.6034146275836767e-05,
+            "opposition_only": 0.9994864976991538,
+            "both": 0.00012774753726174849
+          },
+          "winner": "opposition_only",
+          "assistant_assessment": "Strong opposition is grounded in the text."
+        },
+        "glide": {
+          "original_wording_order_mean": {
+            "neither": 0.0019071505754049392,
+            "support_only": 0.0007754279783005974,
+            "opposition_only": 0.9967125303394446,
+            "both": 0.0006048911068499549
+          },
+          "winner": "opposition_only",
+          "assistant_assessment": "Strong opposition is grounded in the text."
+        }
+      }
+    },
+    {
+      "case_id": "U04",
+      "target_segment": "This museum is fun for all ages.",
+      "assessment_category": "clear_dimension_exclusion",
+      "assistant_text_reading": "Fun for all ages describes enjoyment and suitability rather than tranquility.",
+      "model_observations": {
+        "mammoth": {
+          "original_wording_order_mean": {
+            "neither": 0.9599924585032633,
+            "support_only": 0.037612366977628084,
+            "opposition_only": 0.0019105622749188973,
+            "both": 0.0004846122441896438
+          },
+          "winner": "neither",
+          "assistant_assessment": "Neither is appropriate; the modest support alternative should not be treated as observed calm."
+        },
+        "karpo": {
+          "original_wording_order_mean": {
+            "neither": 0.9993887644723934,
+            "support_only": 0.00046208864693020834,
+            "opposition_only": 0.00011748341080026657,
+            "both": 3.166346987631734e-05
+          },
+          "winner": "neither",
+          "assistant_assessment": "Strong neither respects the emotion-specific boundary."
+        },
+        "glide": {
+          "original_wording_order_mean": {
+            "neither": 0.9970305975524147,
+            "support_only": 0.0020975950997257063,
+            "opposition_only": 0.0007342996406749948,
+            "both": 0.00013750770718457924
+          },
+          "winner": "neither",
+          "assistant_assessment": "Strong neither respects the emotion-specific boundary."
+        }
+      }
+    },
+    {
+      "case_id": "U05",
+      "target_segment": "This station is epic and famous, but not the cleanest.",
+      "assessment_category": "clear_dimension_exclusion",
+      "assistant_text_reading": "Fame and imperfect cleanliness do not themselves establish calm or disturbance. Context about a closed toilet cannot become separate target evidence.",
+      "model_observations": {
+        "mammoth": {
+          "original_wording_order_mean": {
+            "neither": 0.8908518913593704,
+            "support_only": 0.004335835606287064,
+            "opposition_only": 0.09736007393004933,
+            "both": 0.00745219910429319
+          },
+          "winner": "neither",
+          "assistant_assessment": "Neither wins, but opposition receives 9.74%. A calm-specific link for that alternative is absent from the target."
+        },
+        "karpo": {
+          "original_wording_order_mean": {
+            "neither": 0.9997814158127796,
+            "support_only": 6.927417280814181e-05,
+            "opposition_only": 0.0001083315461073792,
+            "both": 4.097846830499558e-05
+          },
+          "winner": "neither",
+          "assistant_assessment": "Strong neither follows the construct and target-scope rules."
+        },
+        "glide": {
+          "original_wording_order_mean": {
+            "neither": 0.9981716355675044,
+            "support_only": 0.00040810972406859244,
+            "opposition_only": 0.0012414858611616477,
+            "both": 0.00017876884726527117
+          },
+          "winner": "neither",
+          "assistant_assessment": "Strong neither follows the construct and target-scope rules."
+        }
+      }
+    },
+    {
+      "case_id": "U06",
+      "target_segment": "Lovely sitting under the fairy lights in a comfy Adirondack chair, while a busker played songs from the 70s.",
+      "assessment_category": "construct_boundary",
+      "assistant_text_reading": "The lovely seated experience, comfortable chair and music support a defensible ease/relaxation inference without explicitly reporting tranquility. Music and comfort are not automatically calm.",
+      "model_observations": {
+        "mammoth": {
+          "original_wording_order_mean": {
+            "neither": 0.20792619767067463,
+            "support_only": 0.7790858105043559,
+            "opposition_only": 0.004753165445966027,
+            "both": 0.008234826379003591
+          },
+          "winner": "support_only",
+          "assistant_assessment": "Support 77.91% versus neither 20.79% retains the T interpretation with an alternative."
+        },
+        "karpo": {
+          "original_wording_order_mean": {
+            "neither": 0.6040689066503103,
+            "support_only": 0.39506798855795255,
+            "opposition_only": 0.00032127284845746026,
+            "both": 0.0005418319432797068
+          },
+          "winner": "neither",
+          "assistant_assessment": "Neither 60.41% versus support 39.51% is a stricter boundary. Under wording 1, the four-order mean is neither 51.65% versus support 48.26%; one individual order changes winner."
+        },
+        "glide": {
+          "original_wording_order_mean": {
+            "neither": 0.49051896191254196,
+            "support_only": 0.49827201686597555,
+            "opposition_only": 0.00546168842938619,
+            "both": 0.00574733279209637
+          },
+          "winner": "support_only",
+          "assistant_assessment": "Support 49.83% versus neither 49.05% is effectively tied. One original order and two matched-order wording comparisons change winner. A single positive verdict hides this ambiguity."
+        }
+      }
+    }
+  ]
+}

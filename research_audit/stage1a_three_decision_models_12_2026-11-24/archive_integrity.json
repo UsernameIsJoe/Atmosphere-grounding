@@ -1,0 +1,12 @@
+{
+  "sha256": "949cd80b48810944a90f4507c5a212cfdce34998c594f87aa363ce65fdb31bd5",
+  "bytes": 348828,
+  "verified_files": 165,
+  "per_model_readouts": {
+    "mammoth": 780,
+    "karpo": 780,
+    "glide": 780
+  },
+  "initial_attempt_archived_records": 1,
+  "completed_planned_readouts": 2340
+}

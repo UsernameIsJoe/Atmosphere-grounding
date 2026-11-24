@@ -1,0 +1,248 @@
+[
+  {
+    "model": "mammoth",
+    "file": "LICENSE",
+    "bytes": 1424,
+    "sha256": "bd914b96f2ca553c34128c512c90a6424a3080a4cf6e6b3266db42ec9577a850"
+  },
+  {
+    "model": "mammoth",
+    "file": "NOTICE",
+    "bytes": 564,
+    "sha256": "ed6ff378aedd3ba2446c47bb880fdc16f4733ab8532d0708f5f9781b8638d206"
+  },
+  {
+    "model": "mammoth",
+    "file": "README.md",
+    "bytes": 6174,
+    "sha256": "d98e1a4e86bcf563448b18f2ce6692aff7a1e55343446832c6dec2c8c36c7c8e"
+  },
+  {
+    "model": "mammoth",
+    "file": "chat_template.jinja",
+    "bytes": 7756,
+    "sha256": "a4aee8afcf2e0711942cf848899be66016f8d14a889ff9ede07bca099c28f715"
+  },
+  {
+    "model": "mammoth",
+    "file": "config.json",
+    "bytes": 3962,
+    "sha256": "bab5a8ceb73fd6a8f191afaf23afbf689d931da5b3c7c9d5153cf1e4b5024502"
+  },
+  {
+    "model": "mammoth",
+    "file": "constraints.txt",
+    "bytes": 1416,
+    "sha256": "7afb5334b5d57ef09e3d8ac2fc670f07182c50ffb51035d5b6eb7898f863edfb"
+  },
+  {
+    "model": "mammoth",
+    "file": "engine.py",
+    "bytes": 2799,
+    "sha256": "72373353379c53b7cabfb5d05b6fef3c898d48c87cc386e03fc3de9c07e67ca7"
+  },
+  {
+    "model": "mammoth",
+    "file": "generation_config.json",
+    "bytes": 214,
+    "sha256": "eb67f249756eede535dd6f8c941570e91a2a73f0c8d05d00c6012216ecfca869"
+  },
+  {
+    "model": "mammoth",
+    "file": "model.safetensors.index.json",
+    "bytes": 111110,
+    "sha256": "0424520f63f04816eee4d229a4487dc9744866ceb46513e591dd987e401b1663"
+  },
+  {
+    "model": "mammoth",
+    "file": "processor_config.json",
+    "bytes": 1220,
+    "sha256": "bfbc24af59a3e73a9cd0653b8d4ae758dfaec4e3e6c15dfb1c6c8ee8d5683c85"
+  },
+  {
+    "model": "mammoth",
+    "file": "readout.json",
+    "bytes": 63,
+    "sha256": "96ea8a5c6ecfc30c20cdd369762db5997c5f4fb9821ce0a0318941343eb5e8ba"
+  },
+  {
+    "model": "mammoth",
+    "file": "serve.patch",
+    "bytes": 41045,
+    "sha256": "f234c125f1d38d82104b9e1f24e75bde51e4401928acfba2fbf5c59ef2fb46b8"
+  },
+  {
+    "model": "mammoth",
+    "file": "setup.sh",
+    "bytes": 1285,
+    "sha256": "6bf9514c6b80f585a94f9a40c03f87c27cce9e2de8d2ba4cf4b41434babca62a"
+  },
+  {
+    "model": "mammoth",
+    "file": "tokenizer_config.json",
+    "bytes": 1505,
+    "sha256": "2984c03425a28d242744e234a5003786fd289b3713db79fe0958c65eb59d85b2"
+  },
+  {
+    "model": "karpo",
+    "file": "LICENSE",
+    "bytes": 11353,
+    "sha256": "f55746ffa4558bbf92895636f8efcf5afa73b8e549313618ec32f406c489f4ff"
+  },
+  {
+    "model": "karpo",
+    "file": "NOTICE",
+    "bytes": 841,
+    "sha256": "d2476be1b1c92c2609a86f393496e6f83e454eb1976bd0bd238641b07c719563"
+  },
+  {
+    "model": "karpo",
+    "file": "README.md",
+    "bytes": 10406,
+    "sha256": "34c34d3a352cf21d76f7be521bb000f3ec71d8880f3adaa8ddf8e37a474db344"
+  },
+  {
+    "model": "karpo",
+    "file": "chat_template.jinja",
+    "bytes": 18683,
+    "sha256": "ae53464bf3be25802b3a5b37def7fd89667067d7577049b3b2d74c4d8de4c6d4"
+  },
+  {
+    "model": "karpo",
+    "file": "config.json",
+    "bytes": 5058,
+    "sha256": "df331a6adf48a0c9af910d155be20a4143aeeb22e4a739da2d6b9190a6dc77fd"
+  },
+  {
+    "model": "karpo",
+    "file": "decision_config.json",
+    "bytes": 4602,
+    "sha256": "9a4502700d4aca2d277d177d45d886c5e7525c71e5c483bba77f115b4a7f13af"
+  },
+  {
+    "model": "karpo",
+    "file": "licenses/Gemma-4-LICENSE",
+    "bytes": 11358,
+    "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30"
+  },
+  {
+    "model": "karpo",
+    "file": "model.safetensors.index.json",
+    "bytes": 108310,
+    "sha256": "333f56710f858b18770dbe4a8d65fbc0d47b315d560219cb41dba92c2ce15774"
+  },
+  {
+    "model": "karpo",
+    "file": "tokenizer_config.json",
+    "bytes": 3728,
+    "sha256": "b8045a4576903e86903291d5cbdd4adfc8859e9ce3c98621bdbd957f73ed394b"
+  },
+  {
+    "model": "glide",
+    "file": "LICENSE",
+    "bytes": 5177,
+    "sha256": "07baba666b4a986185f850912e85c679825599d4b13ee8a868e220ab1a2a5d3e"
+  },
+  {
+    "model": "glide",
+    "file": "NOTICE",
+    "bytes": 495,
+    "sha256": "9a3e5ac1b76b35de70ed32f9977045370f673278bc4cf9c1d0ba62f7ffbc4656"
+  },
+  {
+    "model": "glide",
+    "file": "README.md",
+    "bytes": 16631,
+    "sha256": "4d87c76597bc4bb18c6b9cc68598958a72239b59862bdae6347797e4350188b4"
+  },
+  {
+    "model": "glide",
+    "file": "chat_template.jinja",
+    "bytes": 8952,
+    "sha256": "c3cf9e34abf4f9e36c2d72165aa9c132d3e2a725b6c2586aaa3a8af9d7a81041"
+  },
+  {
+    "model": "glide",
+    "file": "config.json",
+    "bytes": 3298,
+    "sha256": "0792f5f0fca346147e010bc9196f87d19ca0df3bb4937d9c85f8cf383aa7b04f"
+  },
+  {
+    "model": "glide",
+    "file": "decision_config.json",
+    "bytes": 4751,
+    "sha256": "be2e8cb90cc901a1da176eef884f97d87c03b77ebc261517d902e272d7039d42"
+  },
+  {
+    "model": "glide",
+    "file": "generation_config.json",
+    "bytes": 214,
+    "sha256": "df6f86c3fdce573ecdb55cec35f502ddda70e70abe78288a78164aef120232e7"
+  },
+  {
+    "model": "glide",
+    "file": "glide/__init__.py",
+    "bytes": 255,
+    "sha256": "7e807d7d94895d436c43c2b2add0521608e208c5dde7e0016549c5b8ee5d7192"
+  },
+  {
+    "model": "glide",
+    "file": "glide/images.py",
+    "bytes": 2785,
+    "sha256": "4858f30b92819abe463d845886f3240145c532fd0dfc725f5a08586e7591c616"
+  },
+  {
+    "model": "glide",
+    "file": "glide/model.py",
+    "bytes": 18676,
+    "sha256": "202b865933cd2c8282e9363e80e9e2d76a84a4f0247d886753d9fdd67a7dc5cd"
+  },
+  {
+    "model": "glide",
+    "file": "glide/prompt.py",
+    "bytes": 6434,
+    "sha256": "e47149ac980fe12c3cb24ea0ee63822d5bcde71f32d4a5cc9f37499853948338"
+  },
+  {
+    "model": "glide",
+    "file": "glide/recurrent.py",
+    "bytes": 6034,
+    "sha256": "5814edb8404f4b9199f12a65033dbe979054b3b7eec398cdc02e3aa376cc2d71"
+  },
+  {
+    "model": "glide",
+    "file": "glide/server.py",
+    "bytes": 8420,
+    "sha256": "6fcf1ee8847ee52f3697d5d8baecbcd7df93a7da85b63b96feed41a2160a265b"
+  },
+  {
+    "model": "glide",
+    "file": "licenses/Qwen3.8-27B-LICENSE",
+    "bytes": 11544,
+    "sha256": "bbedc3fda3305820b977265f01b8619d87570a6739de3a5582c3464840f1e57a"
+  },
+  {
+    "model": "glide",
+    "file": "model.safetensors.index.json",
+    "bytes": 105978,
+    "sha256": "832070be48f3e3419841b9324da33b5b865f3f7ab790125a5d244080917aaf0e"
+  },
+  {
+    "model": "glide",
+    "file": "preprocessor_config.json",
+    "bytes": 390,
+    "sha256": "27225450ac9c6529872ee1924fcb0962ff5634834f817040f444118116f4e516"
+  },
+  {
+    "model": "glide",
+    "file": "requirements.txt",
+    "bytes": 390,
+    "sha256": "a75af0bae5435ce58fbc3e33f7dac5b8d158054c883458c4dc4d1b5a61661351"
+  },
+  {
+    "model": "glide",
+    "file": "tokenizer_config.json",
+    "bytes": 1124,
+    "sha256": "66e427c470fe580fe8c7b5725d857af23d8417e37fae62667ec698306a19987b"
+  }
+]

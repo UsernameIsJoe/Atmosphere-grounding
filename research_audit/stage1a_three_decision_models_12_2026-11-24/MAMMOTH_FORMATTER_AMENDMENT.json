@@ -1,0 +1,25 @@
+{
+  "date": "2026-11-24",
+  "reason": "Mammoth native formatter normalizes then rounds every probability to six decimals. The original harness compared pre-format softmax values using a tighter tolerance and stopped during its second decision.",
+  "changes": [
+    "Use the official make_choice formatter for exact output reconstruction.",
+    "Retain the unrounded normalized native softmax in probabilities_full_precision alongside unchanged six-decimal native probabilities.",
+    "Allow the corresponding native rounded sum tolerance; unrounded vectors remain the primary analysis precision for Mammoth.",
+    "Archive the initial attempt and restart the same complete frozen request schedule."
+  ],
+  "unchanged": [
+    "Weights and native runtime",
+    "Review targets, codebook, criteria, wordings and order/repeat schedule",
+    "Native temperature and model computation",
+    "Inference deadline and GPU budget"
+  ],
+  "primary_probability_policy": "For Mammoth use its same-forward full-precision native softmax before six-decimal display rounding; preserve both forms. Other models retain their full native distributions.",
+  "initial_attempt": {
+    "successful_readouts": 1,
+    "native_decision_calls": 2,
+    "top_level_model_forward_passes": 4,
+    "second_call_scores_not_logged_because_assertion_preceded_append": true
+  },
+  "original_harness_sha256": "10bc78b650197191f40e975bde9eb27e3ea1454320091d850e44dc4b02268254",
+  "retry_harness_sha256": "624085941a53986c3dcd5680ce1b6246943176bd75d67da01ae9790eb857ffb5"
+}

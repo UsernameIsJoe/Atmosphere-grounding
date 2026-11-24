@@ -1,0 +1,170 @@
+{
+  "models": {
+    "mammoth": {
+      "model": "mammoth",
+      "complete": true,
+      "readouts": 780,
+      "primary_readouts": 480,
+      "paraphrase_readouts": 288,
+      "reload_readouts": 12,
+      "counted_model_forward_passes": 1560,
+      "primary_repeatability": {
+        "conditions": 48,
+        "identical_probability_groups": 48,
+        "identical_logit_groups": 48,
+        "max_probability_range_pp": 0.0,
+        "max_logit_range": 0.0,
+        "groups_with_winner_flips": 0
+      },
+      "all_wordings_repeatability": {
+        "conditions": 144,
+        "identical_probability_groups": 144,
+        "identical_logit_groups": 144,
+        "max_probability_range_pp": 0.0,
+        "groups_with_winner_flips": 0
+      },
+      "primary_order_sensitivity": {
+        "median_review_gap_pp": 4.7424329544810515,
+        "mean_review_gap_pp": 4.079373873996964,
+        "maximum_review_gap_pp": 7.531378871524866,
+        "cases_with_winner_flips": 1
+      },
+      "wording_sensitivity_after_order_averaging": {
+        "cases": 12,
+        "median_review_gap_pp": 2.021053431117431,
+        "mean_review_gap_pp": 2.2762578362811596,
+        "maximum_review_gap_pp": 4.273554196658047,
+        "cases_with_mean_winner_flips": 1,
+        "cases_with_matched_order_winner_flips": 1,
+        "matched_order_conditions_with_wording_winner_flips": 4,
+        "max_matched_order_wording_gap_pp": 8.778592720986131
+      },
+      "reloaded": {
+        "comparisons": 12,
+        "identical_probability_vectors": 12,
+        "identical_logit_vectors": 12,
+        "max_probability_shift_pp": 0.0,
+        "cases_with_winner_flips": 0
+      },
+      "native_score_reconstruction_max_abs_error": 0.0,
+      "formatter_verification": null,
+      "primary_mean_winning_probability": 0.8410940389307167,
+      "primary_winning_probability_ge_999": 0,
+      "primary_mean_entropy_bits": 0.638745882837465,
+      "median_decision_seconds": 0.5317135474761017
+    },
+    "karpo": {
+      "model": "karpo",
+      "complete": true,
+      "readouts": 780,
+      "primary_readouts": 480,
+      "paraphrase_readouts": 288,
+      "reload_readouts": 12,
+      "counted_model_forward_passes": 780,
+      "primary_repeatability": {
+        "conditions": 48,
+        "identical_probability_groups": 48,
+        "identical_logit_groups": 48,
+        "max_probability_range_pp": 0.0,
+        "max_logit_range": 0.0,
+        "groups_with_winner_flips": 0
+      },
+      "all_wordings_repeatability": {
+        "conditions": 144,
+        "identical_probability_groups": 144,
+        "identical_logit_groups": 144,
+        "max_probability_range_pp": 0.0,
+        "groups_with_winner_flips": 0
+      },
+      "primary_order_sensitivity": {
+        "median_review_gap_pp": 0.0749574784543202,
+        "mean_review_gap_pp": 0.9730620219378298,
+        "maximum_review_gap_pp": 4.134472609815187,
+        "cases_with_winner_flips": 0
+      },
+      "wording_sensitivity_after_order_averaging": {
+        "cases": 12,
+        "median_review_gap_pp": 0.07137477575763218,
+        "mean_review_gap_pp": 1.8618679466223755,
+        "maximum_review_gap_pp": 9.821259560450086,
+        "cases_with_mean_winner_flips": 0,
+        "cases_with_matched_order_winner_flips": 1,
+        "matched_order_conditions_with_wording_winner_flips": 1,
+        "max_matched_order_wording_gap_pp": 13.541170882974152
+      },
+      "reloaded": {
+        "comparisons": 12,
+        "identical_probability_vectors": 12,
+        "identical_logit_vectors": 12,
+        "max_probability_shift_pp": 0.0,
+        "cases_with_winner_flips": 0
+      },
+      "native_score_reconstruction_max_abs_error": 1.6104165934116565e-07,
+      "formatter_verification": {
+        "readouts_checked": 780,
+        "native_softmax_plus_official_formatter_max_abs_error": 0,
+        "original_harness_note": "Original per-call reconstruction compares the float32 softmax before the official formatter renormalizes it. That small recorded difference is arithmetic formatting, not repeated-inference variation. No model calls were made."
+      },
+      "primary_mean_winning_probability": 0.9187582828417343,
+      "primary_winning_probability_ge_999": 200,
+      "primary_mean_entropy_bits": 0.2749572023813476,
+      "median_decision_seconds": 0.93947774451226
+    },
+    "glide": {
+      "model": "glide",
+      "complete": true,
+      "readouts": 780,
+      "primary_readouts": 480,
+      "paraphrase_readouts": 288,
+      "reload_readouts": 12,
+      "counted_model_forward_passes": 780,
+      "primary_repeatability": {
+        "conditions": 48,
+        "identical_probability_groups": 48,
+        "identical_logit_groups": 48,
+        "max_probability_range_pp": 0.0,
+        "max_logit_range": 0.0,
+        "groups_with_winner_flips": 0
+      },
+      "all_wordings_repeatability": {
+        "conditions": 144,
+        "identical_probability_groups": 144,
+        "identical_logit_groups": 144,
+        "max_probability_range_pp": 0.0,
+        "groups_with_winner_flips": 0
+      },
+      "primary_order_sensitivity": {
+        "median_review_gap_pp": 0.6219844475687033,
+        "mean_review_gap_pp": 1.4828916628152464,
+        "maximum_review_gap_pp": 4.142622228490955,
+        "cases_with_winner_flips": 1
+      },
+      "wording_sensitivity_after_order_averaging": {
+        "cases": 12,
+        "median_review_gap_pp": 0.2274321065887255,
+        "mean_review_gap_pp": 1.4287298865661398,
+        "maximum_review_gap_pp": 6.215603644947043,
+        "cases_with_mean_winner_flips": 0,
+        "cases_with_matched_order_winner_flips": 1,
+        "matched_order_conditions_with_wording_winner_flips": 2,
+        "max_matched_order_wording_gap_pp": 7.698716939218825
+      },
+      "reloaded": {
+        "comparisons": 12,
+        "identical_probability_vectors": 12,
+        "identical_logit_vectors": 12,
+        "max_probability_shift_pp": 0.0,
+        "cases_with_winner_flips": 0
+      },
+      "native_score_reconstruction_max_abs_error": 0.0,
+      "formatter_verification": null,
+      "primary_mean_winning_probability": 0.8775350985276292,
+      "primary_winning_probability_ge_999": 40,
+      "primary_mean_entropy_bits": 0.40900714034857927,
+      "median_decision_seconds": 0.6557568390271626
+    }
+  },
+  "complete": true,
+  "total_recorded_readouts": 2340,
+  "qualification": "Twelve development targets, one emotion; native runtimes, attention and temperatures differ. Original-wording primary means average four aligned state distributions. Mammoth analysis retains its same-forward unrounded native softmax; its native six-decimal display values are also saved. Wording extension is within each new model; saved Decider/Gemma/Qwen have no matched new paraphrase experiment. No task-accuracy, calibration or downstream-training claim."
+}

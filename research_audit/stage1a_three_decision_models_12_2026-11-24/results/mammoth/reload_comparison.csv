@@ -1,0 +1,13 @@
+model,case_id,probabilities_identical,raw_logits_identical,max_probability_shift_pp,same_winner
+mammoth,K01,True,True,0.0,True
+mammoth,K02,True,True,0.0,True
+mammoth,K03,True,True,0.0,True
+mammoth,K04,True,True,0.0,True
+mammoth,K05,True,True,0.0,True
+mammoth,K06,True,True,0.0,True
+mammoth,U01,True,True,0.0,True
+mammoth,U02,True,True,0.0,True
+mammoth,U03,True,True,0.0,True
+mammoth,U04,True,True,0.0,True
+mammoth,U05,True,True,0.0,True
+mammoth,U06,True,True,0.0,True

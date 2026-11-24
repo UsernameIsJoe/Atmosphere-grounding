@@ -1,0 +1,13 @@
+model,case_id,probabilities_identical,raw_logits_identical,max_probability_shift_pp,same_winner
+karpo,K01,True,True,0.0,True
+karpo,K02,True,True,0.0,True
+karpo,K03,True,True,0.0,True
+karpo,K04,True,True,0.0,True
+karpo,K05,True,True,0.0,True
+karpo,K06,True,True,0.0,True
+karpo,U01,True,True,0.0,True
+karpo,U02,True,True,0.0,True
+karpo,U03,True,True,0.0,True
+karpo,U04,True,True,0.0,True
+karpo,U05,True,True,0.0,True
+karpo,U06,True,True,0.0,True

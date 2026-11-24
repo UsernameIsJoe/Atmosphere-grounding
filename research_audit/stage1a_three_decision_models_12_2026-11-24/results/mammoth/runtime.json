@@ -1,0 +1,47 @@
+{
+  "model": "mammoth",
+  "model_source": {
+    "repo": "baselabs/mammoth-1",
+    "revision": "858aab610d4d124315ebf72d2f36c5e7341f758f",
+    "private": false,
+    "gated": false
+  },
+  "seed": 42,
+  "torch": "2.8.0+cu128",
+  "cuda_runtime": "12.8",
+  "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition, 595.112.07, 97887 MiB",
+  "packages": {
+    "torch": "2.8.0+cu128",
+    "transformers": "5.19.0",
+    "safetensors": "0.8.0",
+    "huggingface-hub": "2.2.0",
+    "numpy": "2.5.4"
+  },
+  "load_seconds": 10.018059338908643,
+  "native_temperature": 1.0,
+  "native_info": {
+    "model_path": "/workspace/checkpoints/mammoth",
+    "model_type": "qwen3_5_text",
+    "dtype": "bfloat16",
+    "device": "cuda:0",
+    "fork_mode": "sequential",
+    "fork_max_abs_diff": null,
+    "prompt_version": "qev-labels-v2",
+    "transformers_version": "5.19.0",
+    "torch_version": "2.8.0+cu128",
+    "extra": {
+      "head_dtype": "float32",
+      "attention": "noncausal",
+      "readout": "slot_lm",
+      "calibration": "none"
+    }
+  },
+  "deterministic_algorithms": false,
+  "serial_requests": true,
+  "cache_note": "Mammoth retains native within-request prefix computation and fresh cache per request; no cross-request prefix reuse. Karpo/GLiDE use full native reference forwards.",
+  "min_input_tokens": 2516,
+  "max_input_tokens": 2657,
+  "reload_seconds": 5.858380986028351,
+  "end_time": 1795547921.7660606,
+  "peak_gpu_memory_bytes": 61430008832
+}
