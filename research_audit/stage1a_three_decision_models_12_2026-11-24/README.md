@@ -6,6 +6,24 @@ Completed November 24, 2026. **All three models ran successfully through their n
 
 This is an assistant assessment of a twelve-target development study. No production model, training target, calibrated temperature or confidence-weighting rule is adopted.
 
+## Graphics
+
+### Probability distributions
+
+Original-wording profiles for four audited cases, including saved Qwen, Gemma and Decider baselines. Labels are rounded to one decimal; complete vectors are retained in the CSVs.
+
+![Four audited cases compared with saved models](four_case_probability_comparison.png)
+
+[Open the probability chart at full size](four_case_probability_comparison.png).
+
+### Order and wording sensitivity
+
+Median and worst state-probability shifts across twelve targets. The wording panel uses four-order mean vectors. Identical-input repeat variation was zero for all three models.
+
+![Separate order and wording sensitivity](order_and_wording_sensitivity.png)
+
+[Open the sensitivity chart at full size](order_and_wording_sensitivity.png).
+
 ## What was actually done
 
 | Component | Per model | Three models |
@@ -69,7 +87,7 @@ The worst and typical cases tell different stories. Karpo's very small median do
 
 Small median probability gaps are also partly shaped by concentration on easy neither cases. Lower absolute variation is an observed practical property, not proof of better internal reasoning or calibration.
 
-![Separate order and wording sensitivity](order_and_wording_sensitivity.png)
+See the [order and wording sensitivity chart](#order-and-wording-sensitivity) above.
 
 ## What the actual probabilities say
 
@@ -91,7 +109,7 @@ Values are original-wording arithmetic means across four aligned orders; remaini
 
 **Clear exclusions:** all three prefer neither on the six targets about darkness/maintenance, walking suitability, future dance-floor use, exhibit quality, general fun and fame/cleanliness. All three strongly prefer opposition on explicitly intrusive traffic noise. This does not estimate broad emotion recall: the set has no unambiguous explicitly worded positive-calm control, and its two positive examples depend on T inference.
 
-![Four audited cases compared with saved models](four_case_probability_comparison.png)
+See the [probability comparison chart](#probability-distributions) above.
 
 ## Against Qwen, Gemma and Decider
 

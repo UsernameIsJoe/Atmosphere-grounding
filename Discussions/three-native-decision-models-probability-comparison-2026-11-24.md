@@ -8,6 +8,24 @@ The researcher supplied six further candidates, initially requested evaluation o
 
 The [completed report](../research_audit/stage1a_three_decision_models_12_2026-11-24/README.md) contains the exact model/runtime pins, original inputs, raw evidence, two charts, full probability exports and case-level assistant audit.
 
+## Graphics
+
+### Probability distributions
+
+Original-wording probability profiles for the four audited cases, comparing the three new models with saved Qwen, Gemma and Decider results. Gemma T=4 is illustrative softening; cross-model confidence calibration is untested.
+
+![Probability distributions: Mammoth, Karpo and GLiDE versus Qwen, Gemma and Decider](../research_audit/stage1a_three_decision_models_12_2026-11-24/four_case_probability_comparison.png)
+
+[Open the probability chart at full size](../research_audit/stage1a_three_decision_models_12_2026-11-24/four_case_probability_comparison.png).
+
+### Order and wording sensitivity
+
+Median and worst probability shifts across the twelve targets. The wording panel averages four aligned option-order vectors per wording; these shifts are separate from identical-input repeatability.
+
+![Median and maximum option-order and wording sensitivity](../research_audit/stage1a_three_decision_models_12_2026-11-24/order_and_wording_sensitivity.png)
+
+[Open the sensitivity chart at full size](../research_audit/stage1a_three_decision_models_12_2026-11-24/order_and_wording_sensitivity.png).
+
 ## Executed design
 
 Same twelve real targets, unchanged full v0.5 codebook, calm only. For each model: 480 original-wording evaluations, 288 evaluations under two equivalent task-instruction paraphrases, and twelve canonical requests after unload/reload. The completed planned total is **2,340 decisions**. Original-wording requests match the saved Decider requests; the new wordings preserve the reviews, codebook and criterion definitions.
