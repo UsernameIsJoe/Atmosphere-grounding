@@ -8,6 +8,16 @@ This is an assistant assessment of a twelve-target development study. No product
 
 ## Graphics
 
+### Verdicts across all five models
+
+![Calm verdicts from Mammoth, Karpo, GLiDE, Decider and Gemma](five_model_verdict_comparison.png)
+
+[Open the verdict chart at full size](five_model_verdict_comparison.png) · [Vector graphic](five_model_verdict_comparison.svg) · [Exact verdicts and target segments](five_model_verdict_comparison.csv).
+
+All five models agree on **9 of 12** targets. Gemma and Decider agree on **12 of 12**. Karpo returns neither on the two inferred positives (uncrowding and comfortable seating/music), while the other four return support. For personal wedding stress, Mammoth returns both, Karpo and GLiDE return neither, and Decider and Gemma return opposition.
+
+Each cell takes the highest-probability state after the arithmetic mean of four semantically aligned, original-wording vectors. Gemma uses the saved T=1 mapping mean; its T=4 mapping mean gives the same twelve verdicts. New models and Decider jointly vary criterion order and native codes; Gemma varies letter assignment at fixed definition order. These are saved-system comparisons, not a common controlled order manipulation or an accuracy ranking. Original-wording presentation flips for Mammoth K01 and GLiDE U06 are hidden by a single aggregate cell; the full distributions and sensitivity results remain below.
+
 ### Probability distributions
 
 Original-wording profiles for four audited cases, including saved Qwen, Gemma and Decider baselines. Labels are rounded to one decimal; complete vectors are retained in the CSVs.

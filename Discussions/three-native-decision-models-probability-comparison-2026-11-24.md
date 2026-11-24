@@ -6,9 +6,19 @@ The earlier PPLX-Decider test established exact repeatability in its tested nati
 
 The researcher supplied six further candidates, initially requested evaluation only, and then selected the first three for testing. Mammoth-1 offered relevant public evidence on equivalent-question consistency, with the important caveat that abstention helped drive that result. Karpo offered a Gemma-family decision fine-tune; GLiDE offered another native decision approach. d3-ultra, Clef and hosted Drex were not tested here. The researcher also asked whether Ollama availability was required. It was not: all three selected models were executed with published weights and their native Python implementations on Runpod.
 
-The [completed report](../research_audit/stage1a_three_decision_models_12_2026-11-24/README.md) contains the exact model/runtime pins, original inputs, raw evidence, two charts, full probability exports and case-level assistant audit.
+The [completed report](../research_audit/stage1a_three_decision_models_12_2026-11-24/README.md) contains the exact model/runtime pins, original inputs, raw evidence, three charts, full probability exports and case-level assistant audit.
 
 ## Graphics
+
+### Verdicts across all five models
+
+![Calm verdicts from Mammoth, Karpo, GLiDE, Decider and Gemma](../research_audit/stage1a_three_decision_models_12_2026-11-24/five_model_verdict_comparison.png)
+
+[Open the verdict chart at full size](../research_audit/stage1a_three_decision_models_12_2026-11-24/five_model_verdict_comparison.png) · [Vector graphic](../research_audit/stage1a_three_decision_models_12_2026-11-24/five_model_verdict_comparison.svg) · [Exact verdicts and target segments](../research_audit/stage1a_three_decision_models_12_2026-11-24/five_model_verdict_comparison.csv).
+
+All five models agree on **9 of 12** targets. Gemma and Decider agree on **12 of 12**. Karpo returns neither on the two inferred positives (uncrowding and comfortable seating/music), while the other four return support. For personal wedding stress, Mammoth returns both, Karpo and GLiDE return neither, and Decider and Gemma return opposition.
+
+Each cell takes the highest-probability state after the arithmetic mean of four semantically aligned, original-wording vectors. Gemma uses the saved T=1 mapping mean; its T=4 mapping mean gives the same twelve verdicts. New models and Decider jointly vary criterion order and native codes; Gemma varies letter assignment at fixed definition order. These are saved-system comparisons, not a common controlled order manipulation or an accuracy ranking. Original-wording presentation flips for Mammoth K01 and GLiDE U06 are hidden by a single aggregate cell; the full distributions and sensitivity results remain below.
 
 ### Probability distributions
 

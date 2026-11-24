@@ -1,0 +1,13 @@
+case_id,description,target_segment,Mammoth-1,Karpo 31B,GLiDE 27B,Decider v1.2,Gemma,unanimous
+K01,Personal wedding stress,It was so stressful but her humanity made everything so much better!,both,neither,neither,opposition_only,opposition_only,False
+K02,Dark restroom,Lights in the small box were years away- it was completely dark.,neither,neither,neither,neither,neither,True
+K03,Unsuitable for walking,I wouldn't go here if your looking for walk.,neither,neither,neither,neither,neither,True
+K04,Surprisingly uncrowded visit,What made this visit extra special was how surprisingly uncrowded it was.,support_only,neither,support_only,support_only,support_only,False
+K05,Owner yelling at visitors,"If the owner of the chickens sees it, he yells from his home and asks if you are feeding poison to them.",opposition_only,opposition_only,opposition_only,opposition_only,opposition_only,True
+K06,Watching children near traffic,It’s not closed to the street though so you have to keep an eye on your kids.,neither,neither,neither,neither,neither,True
+U01,Space for a future dance floor,1/2 of the space was empty to become a dance floor later in the night.,neither,neither,neither,neither,neither,True
+U02,Underwhelming exhibits,The three exhibits on display were quite underwhelming…,neither,neither,neither,neither,neither,True
+U03,Intrusive traffic noise,It is hard to get the sound of the Memorial Drive cars out of your head as they are only a few yards from this park with no real barriers blocking the sound.,opposition_only,opposition_only,opposition_only,opposition_only,opposition_only,True
+U04,Fun for all ages,This museum is fun for all ages.,neither,neither,neither,neither,neither,True
+U05,Fame and cleanliness,"This station is epic and famous, but not the cleanest.",neither,neither,neither,neither,neither,True
+U06,Comfortable seating and music,"Lovely sitting under the fairy lights in a comfy Adirondack chair, while a busker played songs from the 70s.",support_only,neither,support_only,support_only,support_only,False

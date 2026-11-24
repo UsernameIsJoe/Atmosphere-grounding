@@ -3,8 +3,8 @@
   "raw_archive_sha256": "949cd80b48810944a90f4507c5a212cfdce34998c594f87aa363ce65fdb31bd5",
   "files": {
     "README.md": {
-      "bytes": 16269,
-      "sha256": "ac8c772e93e524f2016ba4df56d12a269a055534a33eb5f2477341ae51e4415e"
+      "bytes": 17573,
+      "sha256": "bf732fec87eb1e3a70140a38b4448c6ef1795ab8bb40f044a7f55f04fc4ff527"
     },
     "METHOD.md": {
       "bytes": 10530,
@@ -237,6 +237,22 @@
     "results/karpo/FORMATTER_VERIFICATION.json": {
       "bytes": 347,
       "sha256": "ea5a33a2629dfdc0a46b7480c3992503c042af7fcb0df4db4f886e100ec97883"
+    },
+    "five_model_verdict_comparison.png": {
+      "bytes": 319490,
+      "sha256": "ae5096c0180ee642009cb9b4e5f67a7958e915b17e736835a5071a02fb2fb056"
+    },
+    "five_model_verdict_comparison.svg": {
+      "bytes": 40179,
+      "sha256": "19ce9564f98c58b26b3865a7351057d7f110305f56a695f35456de0a4a74bec3"
+    },
+    "five_model_verdict_comparison.csv": {
+      "bytes": 2052,
+      "sha256": "5a46dfa165bc2b4f41710ed40c412734f96173f530e162415b0ff62242d30176"
+    },
+    "plot_verdicts.py": {
+      "bytes": 6811,
+      "sha256": "2805beb9983d45e7bf90b88dbac3476352be3fb17d3eca7ca84109d0c7c2bbc8"
     }
   }
 }
