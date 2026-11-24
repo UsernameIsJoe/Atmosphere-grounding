@@ -1,0 +1,39 @@
+{
+  "source_sha256": "3f01d923fd7bc662332566baabc7999cf45a87016d2144e19bcaa65839c5c25b",
+  "source_reviews": 100,
+  "sampling_seed": 20261124,
+  "sampling": "place-balanced round-robin after seeded shuffling; source IDs preserved",
+  "reviews": 100,
+  "places": 43,
+  "segments": 379,
+  "instruction": "Represent the topics and aspects of the place experience described in this text, focusing on what is discussed rather than whether the opinion is positive or negative.",
+  "weight_rule": "max(cosine,0) / sum(max(cosine,0)) within review; uniform if all zero; single-segment weight=1",
+  "gpu": "NVIDIA GeForce RTX 4090",
+  "python": "3.12.3",
+  "libraries": {
+    "torch": "2.8.0+cu128",
+    "transformers": "4.57.1",
+    "sentence-transformers": "5.1.2",
+    "numpy": "2.1.2",
+    "pandas": "2.3.3",
+    "scipy": "1.16.3"
+  },
+  "models": {
+    "mpnet": {
+      "id": "sentence-transformers/all-mpnet-base-v2",
+      "revision": "e8c3b32edf5434bc2275fc9bab85f82640a19130",
+      "max_seq_length": 384,
+      "max_observed_tokens": 433,
+      "over_limit_unique_texts": 24,
+      "dtype": "torch.float32"
+    },
+    "qwen": {
+      "id": "Qwen/Qwen3-Embedding-8B",
+      "revision": "1d8ad4ca9b3dd8059ad90a75d4983776a23d44af",
+      "max_seq_length": 40960,
+      "max_observed_tokens": 466,
+      "over_limit_unique_texts": 0,
+      "dtype": "torch.bfloat16"
+    }
+  }
+}

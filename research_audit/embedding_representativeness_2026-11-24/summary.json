@@ -1,0 +1,164 @@
+{
+  "sample": {
+    "source_sha256": "3f01d923fd7bc662332566baabc7999cf45a87016d2144e19bcaa65839c5c25b",
+    "source_reviews": 100,
+    "sampling_seed": 20261124,
+    "sampling": "place-balanced round-robin after seeded shuffling; source IDs preserved",
+    "reviews": 100,
+    "places": 43,
+    "segments": 379,
+    "instruction": "Represent the topics and aspects of the place experience described in this text, focusing on what is discussed rather than whether the opinion is positive or negative.",
+    "weight_rule": "max(cosine,0) / sum(max(cosine,0)) within review; uniform if all zero; single-segment weight=1",
+    "gpu": "NVIDIA GeForce RTX 4090",
+    "python": "3.12.3",
+    "libraries": {
+      "torch": "2.8.0+cu128",
+      "transformers": "4.57.1",
+      "sentence-transformers": "5.1.2",
+      "numpy": "2.1.2",
+      "pandas": "2.3.3",
+      "scipy": "1.16.3"
+    },
+    "models": {
+      "mpnet": {
+        "id": "sentence-transformers/all-mpnet-base-v2",
+        "revision": "e8c3b32edf5434bc2275fc9bab85f82640a19130",
+        "max_seq_length": 384,
+        "max_observed_tokens": 433,
+        "over_limit_unique_texts": 24,
+        "dtype": "torch.float32"
+      },
+      "qwen": {
+        "id": "Qwen/Qwen3-Embedding-8B",
+        "revision": "1d8ad4ca9b3dd8059ad90a75d4983776a23d44af",
+        "max_seq_length": 40960,
+        "max_observed_tokens": 466,
+        "over_limit_unique_texts": 0,
+        "dtype": "torch.bfloat16"
+      }
+    }
+  },
+  "sanity": {
+    "mpnet": {
+      "sanity_rude_lovely_cosine": 0.6612387895584106,
+      "sanity_rude_unhelpful_cosine": 0.7053361535072327,
+      "sanity_rude_building_cosine": 0.0779990404844284
+    },
+    "qwen": {
+      "sanity_rude_lovely_cosine": 0.7842206358909607,
+      "sanity_rude_unhelpful_cosine": 0.86347895860672,
+      "sanity_rude_building_cosine": 0.29681596159935
+    }
+  },
+  "models": {
+    "qwen": {
+      "eligible_multi_reviews": 80,
+      "eligible_segments": 359,
+      "raw_cosine_percentiles": {
+        "p05": 0.4514533966779709,
+        "p50": 0.7000564932823181,
+        "p95": 0.9135349929332732
+      },
+      "pooled_weight_length_rho": -0.050827424491196094,
+      "relative_weight_length_rho": 0.3856176990597,
+      "within_review_length": {
+        "median_rho": 0.5,
+        "reviews": 61
+      },
+      "within_review_position": {
+        "median_rho": -0.39999999999999997,
+        "reviews": 61
+      },
+      "within_review_length_share": {
+        "median_rho": 0.5,
+        "reviews": 61
+      },
+      "mean_absolute_difference_length_share": 0.06903726704625784,
+      "mean_absolute_difference_uniform": 0.02659409326626635,
+      "mean_self_match_inflation": 0.1383289410460294,
+      "within_review_full_vs_loo": {
+        "median_rho": 0.7,
+        "reviews": 61
+      },
+      "median_full_minus_reversed_cosine": -0.007409036159515381,
+      "within_review_rank_agreement_reversed": {
+        "median_rho": 0.7928571428571427,
+        "reviews": 61
+      },
+      "review_fixed_effect_cosine_regression": {
+        "log_length_coefficient": 0.11746264932033053,
+        "position_coefficient": -0.1198227703146391,
+        "cluster_bootstrap_95ci": [
+          [
+            0.09883398414808377,
+            -0.14757943941629315
+          ],
+          [
+            0.1364245198616826,
+            -0.0941017292169533
+          ]
+        ]
+      }
+    },
+    "mpnet": {
+      "eligible_multi_reviews": 79,
+      "eligible_segments": 336,
+      "raw_cosine_percentiles": {
+        "p05": 0.14412496238946915,
+        "p50": 0.5422136187553406,
+        "p95": 0.8775275647640228
+      },
+      "pooled_weight_length_rho": 0.10379983831939191,
+      "relative_weight_length_rho": 0.3560080056997592,
+      "within_review_length": {
+        "median_rho": 0.49999999999999994,
+        "reviews": 60
+      },
+      "within_review_position": {
+        "median_rho": -0.39999999999999997,
+        "reviews": 60
+      },
+      "within_review_length_share": {
+        "median_rho": 0.49999999999999994,
+        "reviews": 60
+      },
+      "mean_absolute_difference_length_share": 0.07540856692763194,
+      "mean_absolute_difference_uniform": 0.0566290033841295,
+      "mean_self_match_inflation": 0.16544658072303892,
+      "within_review_full_vs_loo": {
+        "median_rho": 0.8729270729270731,
+        "reviews": 60
+      },
+      "median_full_minus_reversed_cosine": -0.001989617943763733,
+      "within_review_rank_agreement_reversed": {
+        "median_rho": 0.8999999999999998,
+        "reviews": 60
+      },
+      "review_fixed_effect_cosine_regression": {
+        "log_length_coefficient": 0.1817516894579119,
+        "position_coefficient": -0.18772424493147452,
+        "cluster_bootstrap_95ci": [
+          [
+            0.15129007760435867,
+            -0.22856079364828466
+          ],
+          [
+            0.21061126223466833,
+            -0.15113646476612339
+          ]
+        ]
+      }
+    }
+  },
+  "cross_model": {
+    "shared_multi_reviews": 79,
+    "shared_segments": 336,
+    "pooled_weight_rho": 0.928273026158398,
+    "relative_weight_rho": 0.7540059943504729,
+    "within_review": {
+      "median_rho": 0.7428571428571428,
+      "reviews": 60
+    },
+    "mean_absolute_weight_difference": 0.03909293858219011
+  }
+}

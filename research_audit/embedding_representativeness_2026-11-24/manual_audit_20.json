@@ -1,0 +1,981 @@
+[
+  {
+    "source_id": 67,
+    "full_review": "Beautiful urban park. Summer offers movies and musicians.",
+    "segments": [
+      {
+        "unit_id": 1,
+        "text": "Summer offers movies and musicians.",
+        "words": 5,
+        "qwen_cosine": 0.8084242343902588,
+        "qwen_weight": 0.5152683748812561,
+        "mpnet_weight": 0.4518911201973929,
+        "length_share": 0.625
+      },
+      {
+        "unit_id": 0,
+        "text": "Beautiful urban park.",
+        "words": 3,
+        "qwen_cosine": 0.760513961315155,
+        "qwen_weight": 0.4847316251187438,
+        "mpnet_weight": 0.548108879802607,
+        "length_share": 0.375
+      }
+    ],
+    "highest": "Summer offers movies and musicians.",
+    "lowest": "Beautiful urban park."
+  },
+  {
+    "source_id": 181,
+    "full_review": "Best happening place really close to Harvard Square. Great times to be here and have Should here in Harvard having a class with the smart people and learn about the digital market here in Harvard business school the place is where everyone wanted to be it’s my pleasure of course I need you complain.",
+    "segments": [
+      {
+        "unit_id": 1,
+        "text": "Great times to be here and have Should here in Harvard having a class with the smart people and learn about the digital market here in Harvard business school the place is where everyone wanted to be it’s my pleasure of course I need you complain.",
+        "words": 46,
+        "qwen_cosine": 0.882243275642395,
+        "qwen_weight": 0.5012820947878412,
+        "mpnet_weight": 0.5368895442766287,
+        "length_share": 0.8518518518518519
+      },
+      {
+        "unit_id": 0,
+        "text": "Best happening place really close to Harvard Square.",
+        "words": 8,
+        "qwen_cosine": 0.8777303695678711,
+        "qwen_weight": 0.4987179052121588,
+        "mpnet_weight": 0.4631104557233713,
+        "length_share": 0.14814814814814814
+      }
+    ],
+    "highest": "Great times to be here and have Should here in Harvard having a class with the smart people and learn about the digital market here in Harvard business school the place is where everyone wanted to be it’s my pleasure of course I need you complain.",
+    "lowest": "Best happening place really close to Harvard Square."
+  },
+  {
+    "source_id": 166,
+    "full_review": "Good place with lots shopping stores and restaurants bar 🍸 clubs. Wonderful public transportation red line train and hub of bus station.",
+    "segments": [
+      {
+        "unit_id": 0,
+        "text": "Good place with lots shopping stores and restaurants bar 🍸 clubs.",
+        "words": 11,
+        "qwen_cosine": 0.8682628870010376,
+        "qwen_weight": 0.5312769180102346,
+        "mpnet_weight": 0.5099581556857128,
+        "length_share": 0.5
+      },
+      {
+        "unit_id": 1,
+        "text": "Wonderful public transportation red line train and hub of bus station.",
+        "words": 11,
+        "qwen_cosine": 0.7660315036773682,
+        "qwen_weight": 0.4687230819897655,
+        "mpnet_weight": 0.4900418443142872,
+        "length_share": 0.5
+      }
+    ],
+    "highest": "Good place with lots shopping stores and restaurants bar 🍸 clubs.",
+    "lowest": "Wonderful public transportation red line train and hub of bus station."
+  },
+  {
+    "source_id": 20,
+    "full_review": "It was so nice park for resting, running or for kayaking, there is a closed road exclusive for those activities, which means you can do whatever you want without worrying for the car drivers and crowd roads.\nI spent like 3 hours and can say it was one of the best and quiet times I've spent before\nI loved that place and wish to visit it again.",
+    "segments": [
+      {
+        "unit_id": 0,
+        "text": "It was so nice park for resting, running or for kayaking, there is a closed road exclusive for those activities, which means you can do whatever you want without worrying for the car drivers and crowd roads.",
+        "words": 37,
+        "qwen_cosine": 0.964141845703125,
+        "qwen_weight": 0.5769117682094953,
+        "mpnet_weight": 0.5817246795041081,
+        "length_share": 0.5522388059701493
+      },
+      {
+        "unit_id": 1,
+        "text": "I spent like 3 hours and can say it was one of the best and quiet times I've spent before\nI loved that place and wish to visit it again.",
+        "words": 30,
+        "qwen_cosine": 0.7070701122283936,
+        "qwen_weight": 0.4230882317905047,
+        "mpnet_weight": 0.4182753204958919,
+        "length_share": 0.44776119402985076
+      }
+    ],
+    "highest": "It was so nice park for resting, running or for kayaking, there is a closed road exclusive for those activities, which means you can do whatever you want without worrying for the car drivers and crowd roads.",
+    "lowest": "I spent like 3 hours and can say it was one of the best and quiet times I've spent before\nI loved that place and wish to visit it again."
+  },
+  {
+    "source_id": 38,
+    "full_review": "I Love this park, they have sprinklers there that are on now! Great place to bring your little kid's",
+    "segments": [
+      {
+        "unit_id": 0,
+        "text": "I Love this park, they have sprinklers there that are on now!",
+        "words": 12,
+        "qwen_cosine": 0.9386560916900636,
+        "qwen_weight": 0.5573788896448951,
+        "mpnet_weight": 0.5891069785031569,
+        "length_share": 0.631578947368421
+      },
+      {
+        "unit_id": 1,
+        "text": "Great place to bring your little kid's",
+        "words": 7,
+        "qwen_cosine": 0.7453978061676025,
+        "qwen_weight": 0.4426211103551049,
+        "mpnet_weight": 0.4108930214968431,
+        "length_share": 0.3684210526315789
+      }
+    ],
+    "highest": "I Love this park, they have sprinklers there that are on now!",
+    "lowest": "Great place to bring your little kid's"
+  },
+  {
+    "source_id": 76,
+    "full_review": "For the \"Harvard Dad,\" planning for Harvard was merely an outcome, not the ultimate objective; what mattered most to him was whether his child possessed the capacity for independent thought. His core philosophy can be distilled into two key concepts: \"meticulous design\" and \"meticulous free-range nurturing.\"",
+    "segments": [
+      {
+        "unit_id": 0,
+        "text": "For the \"Harvard Dad,\" planning for Harvard was merely an outcome, not the ultimate objective;",
+        "words": 15,
+        "qwen_cosine": 0.8166805505752563,
+        "qwen_weight": 0.3490813346042802,
+        "mpnet_weight": 0.4074491366415544,
+        "length_share": 0.32608695652173914
+      },
+      {
+        "unit_id": 1,
+        "text": "what mattered most to him was whether his child possessed the capacity for independent thought.",
+        "words": 15,
+        "qwen_cosine": 0.7866929769515991,
+        "qwen_weight": 0.3362634681634585,
+        "mpnet_weight": 0.2597997118011338,
+        "length_share": 0.32608695652173914
+      },
+      {
+        "unit_id": 2,
+        "text": "His core philosophy can be distilled into two key concepts: \"meticulous design\" and \"meticulous free-range nurturing.\"",
+        "words": 16,
+        "qwen_cosine": 0.7361401319503784,
+        "qwen_weight": 0.3146551972322613,
+        "mpnet_weight": 0.3327511515573118,
+        "length_share": 0.34782608695652173
+      }
+    ],
+    "highest": "For the \"Harvard Dad,\" planning for Harvard was merely an outcome, not the ultimate objective;",
+    "lowest": "His core philosophy can be distilled into two key concepts: \"meticulous design\" and \"meticulous free-range nurturing.\""
+  },
+  {
+    "source_id": 186,
+    "full_review": "I have a thing for architecture! I love the architecture in and around MIT! I need about month to explore this beautiful part of Massachusetts!",
+    "segments": [
+      {
+        "unit_id": 1,
+        "text": "I love the architecture in and around MIT!",
+        "words": 8,
+        "qwen_cosine": 0.9052290916442872,
+        "qwen_weight": 0.3890090167717354,
+        "mpnet_weight": 0.3453486065312759,
+        "length_share": 0.32
+      },
+      {
+        "unit_id": 0,
+        "text": "I have a thing for architecture!",
+        "words": 6,
+        "qwen_cosine": 0.7305128574371338,
+        "qwen_weight": 0.3139272599983986,
+        "mpnet_weight": 0.2952547422115124,
+        "length_share": 0.24
+      },
+      {
+        "unit_id": 2,
+        "text": "I need about month to explore this beautiful part of Massachusetts!",
+        "words": 11,
+        "qwen_cosine": 0.691271185874939,
+        "qwen_weight": 0.297063723229866,
+        "mpnet_weight": 0.3593966512572116,
+        "length_share": 0.44
+      }
+    ],
+    "highest": "I love the architecture in and around MIT!",
+    "lowest": "I need about month to explore this beautiful part of Massachusetts!"
+  },
+  {
+    "source_id": 197,
+    "full_review": "Harvard is a great campus to tour, and catch the rich history. The campus is typically quite busy, although you are mostly staring at the beautiful buildings and reading historical plaques.",
+    "segments": [
+      {
+        "unit_id": 0,
+        "text": "Harvard is a great campus to tour, and catch the rich history.",
+        "words": 12,
+        "qwen_cosine": 0.947350025177002,
+        "qwen_weight": 0.3954964863313813,
+        "mpnet_weight": 0.5122031636637876,
+        "length_share": 0.3870967741935484
+      },
+      {
+        "unit_id": 2,
+        "text": "although you are mostly staring at the beautiful buildings and reading historical plaques.",
+        "words": 13,
+        "qwen_cosine": 0.7373950481414795,
+        "qwen_weight": 0.3078451921966494,
+        "mpnet_weight": 0.1996540380814716,
+        "length_share": 0.41935483870967744
+      },
+      {
+        "unit_id": 1,
+        "text": "The campus is typically quite busy,",
+        "words": 6,
+        "qwen_cosine": 0.7105986475944519,
+        "qwen_weight": 0.2966583214719692,
+        "mpnet_weight": 0.2881427982547408,
+        "length_share": 0.1935483870967742
+      }
+    ],
+    "highest": "Harvard is a great campus to tour, and catch the rich history.",
+    "lowest": "The campus is typically quite busy,"
+  },
+  {
+    "source_id": 138,
+    "full_review": "What a beautiful and clean venue to spend the day outdoors in good weather listening to a vast number of bands perform. The sound was on point, and the positive atmosphere of my fellow music connoisseurs. Most people appeared just as grateful for the experience as I was at that moment!",
+    "segments": [
+      {
+        "unit_id": 0,
+        "text": "What a beautiful and clean venue to spend the day outdoors in good weather listening to a vast number of bands perform.",
+        "words": 22,
+        "qwen_cosine": 0.9358937740325928,
+        "qwen_weight": 0.4130524612695875,
+        "mpnet_weight": 0.45367835926827,
+        "length_share": 0.43137254901960786
+      },
+      {
+        "unit_id": 1,
+        "text": "The sound was on point, and the positive atmosphere of my fellow music connoisseurs.",
+        "words": 14,
+        "qwen_cosine": 0.7668150663375854,
+        "qwen_weight": 0.338430342499865,
+        "mpnet_weight": 0.361367103844423,
+        "length_share": 0.27450980392156865
+      },
+      {
+        "unit_id": 2,
+        "text": "Most people appeared just as grateful for the experience as I was at that moment!",
+        "words": 15,
+        "qwen_cosine": 0.5630899667739868,
+        "qwen_weight": 0.2485171962305474,
+        "mpnet_weight": 0.1849545368873069,
+        "length_share": 0.29411764705882354
+      }
+    ],
+    "highest": "What a beautiful and clean venue to spend the day outdoors in good weather listening to a vast number of bands perform.",
+    "lowest": "Most people appeared just as grateful for the experience as I was at that moment!"
+  },
+  {
+    "source_id": 85,
+    "full_review": "Very nice little park. Has green areas, benches, gardens, and trash cans. A lot of locals walk their dogs here.",
+    "segments": [
+      {
+        "unit_id": 1,
+        "text": "Has green areas, benches, gardens, and trash cans.",
+        "words": 8,
+        "qwen_cosine": 0.8076401948928833,
+        "qwen_weight": 0.3401704905139559,
+        "mpnet_weight": 0.3345442492538388,
+        "length_share": 0.4
+      },
+      {
+        "unit_id": 0,
+        "text": "Very nice little park.",
+        "words": 4,
+        "qwen_cosine": 0.8014949560165405,
+        "qwen_weight": 0.3375821734191533,
+        "mpnet_weight": 0.3898022898533472,
+        "length_share": 0.2
+      },
+      {
+        "unit_id": 2,
+        "text": "A lot of locals walk their dogs here.",
+        "words": 8,
+        "qwen_cosine": 0.7650866508483887,
+        "qwen_weight": 0.3222473360668907,
+        "mpnet_weight": 0.2756534608928139,
+        "length_share": 0.4
+      }
+    ],
+    "highest": "Has green areas, benches, gardens, and trash cans.",
+    "lowest": "A lot of locals walk their dogs here."
+  },
+  {
+    "source_id": 205,
+    "full_review": "This gorgeous auditorium designed by Eero Saarinen is a time capsule for building innovation in the 1950s. The ankylosaurus-shaped shell creates a very interesting interior while allowing glass sides to frame a beautiful perspective of the Eero Saarinen's MIT chapel. Strongly recommend those who appreciate architecture to visit this cool building.",
+    "segments": [
+      {
+        "unit_id": 0,
+        "text": "This gorgeous auditorium designed by Eero Saarinen is a time capsule for building innovation in the 1950s.",
+        "words": 17,
+        "qwen_cosine": 0.9154470562934875,
+        "qwen_weight": 0.3102524082273792,
+        "mpnet_weight": 0.3161900946249836,
+        "length_share": 0.3333333333333333
+      },
+      {
+        "unit_id": 3,
+        "text": "Strongly recommend those who appreciate architecture to visit this cool building.",
+        "words": 11,
+        "qwen_cosine": 0.7449886798858643,
+        "qwen_weight": 0.2524826864073993,
+        "mpnet_weight": 0.2251318235575258,
+        "length_share": 0.21568627450980393
+      },
+      {
+        "unit_id": 2,
+        "text": "while allowing glass sides to frame a beautiful perspective of the Eero Saarinen's MIT chapel.",
+        "words": 15,
+        "qwen_cosine": 0.6928533315658569,
+        "qwen_weight": 0.2348135953782073,
+        "mpnet_weight": 0.2492886091396702,
+        "length_share": 0.29411764705882354
+      },
+      {
+        "unit_id": 1,
+        "text": "The ankylosaurus-shaped shell creates a very interesting interior",
+        "words": 8,
+        "qwen_cosine": 0.5973634719848633,
+        "qwen_weight": 0.2024513099870141,
+        "mpnet_weight": 0.2093894726778202,
+        "length_share": 0.1568627450980392
+      }
+    ],
+    "highest": "This gorgeous auditorium designed by Eero Saarinen is a time capsule for building innovation in the 1950s.",
+    "lowest": "The ankylosaurus-shaped shell creates a very interesting interior"
+  },
+  {
+    "source_id": 169,
+    "full_review": "An amazing place to relax. Grab a quick bite or some coffee, and study in the multi-story lounge. On nicer days, there's a great spot outdoors on the second-floor terrace. Definitely works for both locking in to focus, destressing from class in a public setting, or meeting up in a group. Good luck!",
+    "segments": [
+      {
+        "unit_id": 1,
+        "text": "Grab a quick bite or some coffee, and study in the multi-story lounge.",
+        "words": 13,
+        "qwen_cosine": 0.8728430867195129,
+        "qwen_weight": 0.249499289191954,
+        "mpnet_weight": 0.3110135349574882,
+        "length_share": 0.24528301886792453
+      },
+      {
+        "unit_id": 3,
+        "text": "Definitely works for both locking in to focus, destressing from class in a public setting, or meeting up in a group.",
+        "words": 21,
+        "qwen_cosine": 0.7827435731887817,
+        "qwen_weight": 0.2237446433403771,
+        "mpnet_weight": 0.167999075012549,
+        "length_share": 0.39622641509433965
+      },
+      {
+        "unit_id": 0,
+        "text": "An amazing place to relax.",
+        "words": 5,
+        "qwen_cosine": 0.7150465250015259,
+        "qwen_weight": 0.2043936675921537,
+        "mpnet_weight": 0.2693494987384181,
+        "length_share": 0.09433962264150944
+      },
+      {
+        "unit_id": 2,
+        "text": "On nicer days, there's a great spot outdoors on the second-floor terrace.",
+        "words": 12,
+        "qwen_cosine": 0.6531831622123718,
+        "qwen_weight": 0.1867102313849332,
+        "mpnet_weight": 0.1865834991800918,
+        "length_share": 0.22641509433962265
+      },
+      {
+        "unit_id": 4,
+        "text": "Good luck!",
+        "words": 2,
+        "qwen_cosine": 0.4745627045631408,
+        "qwen_weight": 0.1356521684905818,
+        "mpnet_weight": 0.0650543921114528,
+        "length_share": 0.03773584905660377
+      }
+    ],
+    "highest": "Grab a quick bite or some coffee, and study in the multi-story lounge.",
+    "lowest": "Good luck!"
+  },
+  {
+    "source_id": 133,
+    "full_review": "This playground is not as well equipped as some of its modern contemporarys but that doesn't detract from its individual old fashioned charm. Something for everyone, a nice touch is the quiet circular segment with seats facing a round structure which offers scope for various planted greenery, probably appreciated by senior citizens. Of course the play area itself includes the usual climbing frames and slides suitable for toddlers and children aged up to ten years. Lovely hedges and trees situated throughout creates a gardenesque ambiance to round of what is really a special neighbourhood place.",
+    "segments": [
+      {
+        "unit_id": 2,
+        "text": "Something for everyone, a nice touch is the quiet circular segment with seats facing a round structure which offers scope for various planted greenery, probably appreciated by senior citizens.",
+        "words": 29,
+        "qwen_cosine": 0.7795612812042236,
+        "qwen_weight": 0.2198901056204421,
+        "mpnet_weight": 0.233224087792499,
+        "length_share": 0.30526315789473685
+      },
+      {
+        "unit_id": 0,
+        "text": "This playground is not as well equipped as some of its modern contemporarys",
+        "words": 13,
+        "qwen_cosine": 0.7567050457000732,
+        "qwen_weight": 0.2134430691137935,
+        "mpnet_weight": 0.2112885267330362,
+        "length_share": 0.1368421052631579
+      },
+      {
+        "unit_id": 3,
+        "text": "Of course the play area itself includes the usual climbing frames and slides suitable for toddlers and children aged up to ten years.",
+        "words": 23,
+        "qwen_cosine": 0.704318642616272,
+        "qwen_weight": 0.1986664864577414,
+        "mpnet_weight": 0.239870463983648,
+        "length_share": 0.24210526315789474
+      },
+      {
+        "unit_id": 4,
+        "text": "Lovely hedges and trees situated throughout creates a gardenesque ambiance to round of what is really a special neighbourhood place.",
+        "words": 20,
+        "qwen_cosine": 0.6719396114349365,
+        "qwen_weight": 0.189533364074658,
+        "mpnet_weight": 0.2133581134334301,
+        "length_share": 0.21052631578947367
+      },
+      {
+        "unit_id": 1,
+        "text": "but that doesn't detract from its individual old fashioned charm.",
+        "words": 10,
+        "qwen_cosine": 0.6327067017555237,
+        "qwen_weight": 0.1784669747333647,
+        "mpnet_weight": 0.1022588080573866,
+        "length_share": 0.10526315789473684
+      }
+    ],
+    "highest": "Something for everyone, a nice touch is the quiet circular segment with seats facing a round structure which offers scope for various planted greenery, probably appreciated by senior citizens.",
+    "lowest": "but that doesn't detract from its individual old fashioned charm."
+  },
+  {
+    "source_id": 68,
+    "full_review": "Cute, well maintained park in a residential area next to Central Square. Perfect spot for having picnics! There are 2 basketball courts and a bunch of children can be seen playing - super lively. The entrance of the park provides bags to collect your dog’s poo.",
+    "segments": [
+      {
+        "unit_id": 0,
+        "text": "Cute, well maintained park in a residential area next to Central Square.",
+        "words": 12,
+        "qwen_cosine": 0.8317447304725647,
+        "qwen_weight": 0.2879812918125987,
+        "mpnet_weight": 0.3610671137102714,
+        "length_share": 0.2608695652173913
+      },
+      {
+        "unit_id": 3,
+        "text": "The entrance of the park provides bags to collect your dog’s poo.",
+        "words": 12,
+        "qwen_cosine": 0.7700396776199341,
+        "qwen_weight": 0.2666166829598692,
+        "mpnet_weight": 0.2286269847751792,
+        "length_share": 0.2608695652173913
+      },
+      {
+        "unit_id": 1,
+        "text": "Perfect spot for having picnics!",
+        "words": 5,
+        "qwen_cosine": 0.6632285118103027,
+        "qwen_weight": 0.2296346422171633,
+        "mpnet_weight": 0.2499210956049402,
+        "length_share": 0.10869565217391304
+      },
+      {
+        "unit_id": 2,
+        "text": "There are 2 basketball courts and a bunch of children can be seen playing - super lively.",
+        "words": 17,
+        "qwen_cosine": 0.6231772303581238,
+        "qwen_weight": 0.2157673830103688,
+        "mpnet_weight": 0.160384805909609,
+        "length_share": 0.3695652173913043
+      }
+    ],
+    "highest": "Cute, well maintained park in a residential area next to Central Square.",
+    "lowest": "There are 2 basketball courts and a bunch of children can be seen playing - super lively."
+  },
+  {
+    "source_id": 137,
+    "full_review": "The event space situated at 1 Oxford Street, which is utilized for a variety of gatherings near Harvard's campus, is, in my practical estimation and based on the frequent, genuinely impressed feedback from friends who have attended professional and social functions there, an exceptional choice for hosting sophisticated and smoothly executed events that require both elegance and robust logistical support. Everyone I’ve spoken with consistently praises the beautifully appointed and versatile spaces, the absolute professionalism of the coordinating staff, and the high quality of the catering and technical infrastructure, emphasizing that the venue successfully handles everything from large conferences to intimate celebratory dinners with seamless grace. I've learned from their narratives that the atmosphere is one of dignified refinement and highly efficient delivery, making it an outstanding option for any organization or individual looking to make a memorable, positive impression on their guests. My subjective conclusion is that the venue at 1 Oxford Street is an irreplaceable, top-tier facility for special occasions - a true mark of quality event planning - so definitely consider booking this location for your next important function.",
+    "segments": [
+      {
+        "unit_id": 0,
+        "text": "The event space situated at 1 Oxford Street, which is utilized for a variety of gatherings near Harvard's campus, is, in my practical estimation and based on the frequent, genuinely impressed feedback from friends who have attended professional and social functions there, an exceptional choice for hosting sophisticated and smoothly executed events that require both elegance and robust logistical support.",
+        "words": 60,
+        "qwen_cosine": 0.9574207663536072,
+        "qwen_weight": 0.2966732804799594,
+        "mpnet_weight": 0.3065602655350261,
+        "length_share": 0.32967032967032966
+      },
+      {
+        "unit_id": 3,
+        "text": "My subjective conclusion is that the venue at 1 Oxford Street is an irreplaceable, top-tier facility for special occasions - a true mark of quality event planning - so definitely consider booking this location for your next important function.",
+        "words": 39,
+        "qwen_cosine": 0.833548903465271,
+        "qwen_weight": 0.2582894546703219,
+        "mpnet_weight": 0.2634850704650364,
+        "length_share": 0.21428571428571427
+      },
+      {
+        "unit_id": 1,
+        "text": "Everyone I’ve spoken with consistently praises the beautifully appointed and versatile spaces, the absolute professionalism of the coordinating staff, and the high quality of the catering and technical infrastructure, emphasizing that the venue successfully handles everything from large conferences to intimate celebratory dinners with seamless grace.",
+        "words": 46,
+        "qwen_cosine": 0.7928327322006226,
+        "qwen_weight": 0.2456728491796428,
+        "mpnet_weight": 0.2194943985026909,
+        "length_share": 0.25274725274725274
+      },
+      {
+        "unit_id": 2,
+        "text": "I've learned from their narratives that the atmosphere is one of dignified refinement and highly efficient delivery, making it an outstanding option for any organization or individual looking to make a memorable, positive impression on their guests.",
+        "words": 37,
+        "qwen_cosine": 0.6433866620063782,
+        "qwen_weight": 0.1993644156700758,
+        "mpnet_weight": 0.2104602654972465,
+        "length_share": 0.2032967032967033
+      }
+    ],
+    "highest": "The event space situated at 1 Oxford Street, which is utilized for a variety of gatherings near Harvard's campus, is, in my practical estimation and based on the frequent, genuinely impressed feedback from friends who have attended professional and social functions there, an exceptional choice for hosting sophisticated and smoothly executed events that require both elegance and robust logistical support.",
+    "lowest": "I've learned from their narratives that the atmosphere is one of dignified refinement and highly efficient delivery, making it an outstanding option for any organization or individual looking to make a memorable, positive impression on their guests."
+  },
+  {
+    "source_id": 80,
+    "full_review": "Lovely little park.\nGates can close to keep the little kids in.\nHas a small splash pad.\nHas a water fountain for drinking.\nIs shaded (attracts mosquitoes in summer).\nHas sand pit, 1 basketball hoop, 1 slide, 4 swings, 1 tower to climb on. Best for 1 to 5 years old",
+    "segments": [
+      {
+        "unit_id": 5,
+        "text": "Has sand pit, 1 basketball hoop, 1 slide, 4 swings, 1 tower to climb on.",
+        "words": 15,
+        "qwen_cosine": 0.7914808392524719,
+        "qwen_weight": 0.1666808424651961,
+        "mpnet_weight": 0.1951227116021819,
+        "length_share": 0.29411764705882354
+      },
+      {
+        "unit_id": 2,
+        "text": "Has a small splash pad.",
+        "words": 5,
+        "qwen_cosine": 0.7633257508277893,
+        "qwen_weight": 0.1607515594989268,
+        "mpnet_weight": 0.1526237519367709,
+        "length_share": 0.09803921568627451
+      },
+      {
+        "unit_id": 1,
+        "text": "Gates can close to keep the little kids in.",
+        "words": 9,
+        "qwen_cosine": 0.7168121337890625,
+        "qwen_weight": 0.1509560868991847,
+        "mpnet_weight": 0.1073378988009974,
+        "length_share": 0.17647058823529413
+      },
+      {
+        "unit_id": 0,
+        "text": "Lovely little park.",
+        "words": 3,
+        "qwen_cosine": 0.7127354145050049,
+        "qwen_weight": 0.1500975556864738,
+        "mpnet_weight": 0.1821124735440676,
+        "length_share": 0.058823529411764705
+      },
+      {
+        "unit_id": 6,
+        "text": "Best for 1 to 5 years old",
+        "words": 7,
+        "qwen_cosine": 0.6536652445793152,
+        "qwen_weight": 0.1376577527253872,
+        "mpnet_weight": 0.1195102235902295,
+        "length_share": 0.13725490196078433
+      },
+      {
+        "unit_id": 4,
+        "text": "Is shaded (attracts mosquitoes in summer).",
+        "words": 6,
+        "qwen_cosine": 0.5723869204521179,
+        "qwen_weight": 0.1205410534096138,
+        "mpnet_weight": 0.1023575574296959,
+        "length_share": 0.11764705882352941
+      },
+      {
+        "unit_id": 3,
+        "text": "Has a water fountain for drinking.",
+        "words": 6,
+        "qwen_cosine": 0.5380748510360718,
+        "qwen_weight": 0.1133151493152173,
+        "mpnet_weight": 0.1409353830960565,
+        "length_share": 0.11764705882352941
+      }
+    ],
+    "highest": "Has sand pit, 1 basketball hoop, 1 slide, 4 swings, 1 tower to climb on.",
+    "lowest": "Has a water fountain for drinking."
+  },
+  {
+    "source_id": 51,
+    "full_review": "John F. Kennedy Memorial Park is a beautiful and peaceful green space located just a short walk from Harvard Square in Cambridge, Massachusetts. This park is an excellent spot for anyone looking to take a break from the hustle and bustle of the city and enjoy a moment of quiet reflection. The landscaping is beautifully maintained, with lush lawns, colorful flowers, and plenty of shady trees that make it a comfortable place to relax.\n\nOne of the highlights of the park is the memorial dedicated to President John F. Kennedy. The memorial is simple yet very moving, featuring a granite fountain surrounded by engraved quotations from JFK’s speeches. The setting feels respectful and inspiring without being overly formal or somber.\n\nWide paved pathways make it easy for visitors to stroll around or even ride a bike through the area. There are several benches scattered throughout the park where you can sit and enjoy the surroundings or read a book. It’s also a nice spot for a casual picnic if the weather is good.\n\nThe park is clean, feels very safe, and is generally not too crowded, even on weekends. If you are visiting Harvard University or exploring Harvard Square, this park is definitely worth a stop. It’s a hidden gem that offers a perfect blend of natural beauty, history, and a sense of calm right in the middle of the city.",
+    "segments": [
+      {
+        "unit_id": 1,
+        "text": "Kennedy Memorial Park is a beautiful and peaceful green space located just a short walk from Harvard Square in Cambridge, Massachusetts.",
+        "words": 21,
+        "qwen_cosine": 0.9139420986175536,
+        "qwen_weight": 0.0975645350952236,
+        "mpnet_weight": 0.116014442317404,
+        "length_share": 0.09090909090909091
+      },
+      {
+        "unit_id": 13,
+        "text": "If you are visiting Harvard University or exploring Harvard Square, this park is definitely worth a stop.",
+        "words": 17,
+        "qwen_cosine": 0.8125303983688354,
+        "qwen_weight": 0.0867387011578784,
+        "mpnet_weight": 0.0966274865753462,
+        "length_share": 0.0735930735930736
+      },
+      {
+        "unit_id": 2,
+        "text": "This park is an excellent spot for anyone looking to take a break from the hustle and bustle of the city and enjoy a moment of quiet reflection.",
+        "words": 28,
+        "qwen_cosine": 0.6964731216430664,
+        "qwen_weight": 0.0743494324445815,
+        "mpnet_weight": 0.0726727069155468,
+        "length_share": 0.12121212121212122
+      },
+      {
+        "unit_id": 3,
+        "text": "The landscaping is beautifully maintained, with lush lawns, colorful flowers, and plenty of shady trees that make it a comfortable place to relax.",
+        "words": 23,
+        "qwen_cosine": 0.6751136779785156,
+        "qwen_weight": 0.0720692834130655,
+        "mpnet_weight": 0.0614056617378342,
+        "length_share": 0.09956709956709957
+      },
+      {
+        "unit_id": 4,
+        "text": "One of the highlights of the park is the memorial dedicated to President John F.",
+        "words": 15,
+        "qwen_cosine": 0.6716675758361816,
+        "qwen_weight": 0.0717014074240767,
+        "mpnet_weight": 0.0907485176146226,
+        "length_share": 0.06493506493506493
+      },
+      {
+        "unit_id": 10,
+        "text": "There are several benches scattered throughout the park where you can sit and enjoy the surroundings or read a book.",
+        "words": 20,
+        "qwen_cosine": 0.6304463148117065,
+        "qwen_weight": 0.0673009829617665,
+        "mpnet_weight": 0.0547437040263706,
+        "length_share": 0.08658008658008658
+      },
+      {
+        "unit_id": 12,
+        "text": "The park is clean, feels very safe, and is generally not too crowded, even on weekends.",
+        "words": 16,
+        "qwen_cosine": 0.6183838248252869,
+        "qwen_weight": 0.066013296105678,
+        "mpnet_weight": 0.0566703789678519,
+        "length_share": 0.06926406926406926
+      },
+      {
+        "unit_id": 7,
+        "text": "yet very moving, featuring a granite fountain surrounded by engraved quotations from JFK’s speeches.",
+        "words": 14,
+        "qwen_cosine": 0.5998530387878418,
+        "qwen_weight": 0.0640351100395944,
+        "mpnet_weight": 0.0848291798096827,
+        "length_share": 0.06060606060606061
+      },
+      {
+        "unit_id": 14,
+        "text": "It’s a hidden gem that offers a perfect blend of natural beauty, history, and a sense of calm right in the middle of the city.",
+        "words": 25,
+        "qwen_cosine": 0.5813373327255249,
+        "qwen_weight": 0.0620585337809208,
+        "mpnet_weight": 0.0575472079379881,
+        "length_share": 0.10822510822510822
+      },
+      {
+        "unit_id": 5,
+        "text": "Kennedy.",
+        "words": 1,
+        "qwen_cosine": 0.5544068813323975,
+        "qwen_weight": 0.05918367226174,
+        "mpnet_weight": 0.0485854401446757,
+        "length_share": 0.004329004329004329
+      },
+      {
+        "unit_id": 11,
+        "text": "It’s also a nice spot for a casual picnic if the weather is good.",
+        "words": 14,
+        "qwen_cosine": 0.5525064468383789,
+        "qwen_weight": 0.0589807983508343,
+        "mpnet_weight": 0.060823988647204,
+        "length_share": 0.06060606060606061
+      },
+      {
+        "unit_id": 9,
+        "text": "Wide paved pathways make it easy for visitors to stroll around or even ride a bike through the area.",
+        "words": 19,
+        "qwen_cosine": 0.5463966131210327,
+        "qwen_weight": 0.0583285654719204,
+        "mpnet_weight": 0.0462020926529971,
+        "length_share": 0.08225108225108226
+      },
+      {
+        "unit_id": 8,
+        "text": "The setting feels respectful and inspiring without being overly formal or somber.",
+        "words": 12,
+        "qwen_cosine": 0.5196826457977295,
+        "qwen_weight": 0.0554768139152414,
+        "mpnet_weight": 0.0539694695667249,
+        "length_share": 0.05194805194805195
+      },
+      {
+        "unit_id": 6,
+        "text": "The memorial is simple",
+        "words": 4,
+        "qwen_cosine": 0.5171330571174622,
+        "qwen_weight": 0.0552046419312059,
+        "mpnet_weight": 0.0591663388521884,
+        "length_share": 0.017316017316017316
+      },
+      {
+        "unit_id": 0,
+        "text": "John F.",
+        "words": 2,
+        "qwen_cosine": 0.4776917099952698,
+        "qwen_weight": 0.0509942256462719,
+        "mpnet_weight": 0.0399933842335622,
+        "length_share": 0.008658008658008658
+      }
+    ],
+    "highest": "Kennedy Memorial Park is a beautiful and peaceful green space located just a short walk from Harvard Square in Cambridge, Massachusetts.",
+    "lowest": "John F."
+  },
+  {
+    "source_id": 209,
+    "full_review": "We visited the Harvard Museum of Natural History after exploring Harvard, and it was one of the best surprises of the trip.\n\nEven if you’re not usually into museums, this one is absolutely worth a visit. It’s not very large, but every exhibit is thoughtfully curated, so there’s always something fascinating to see.\n\nThe famous Glass Flowers collection is on the second floor, and it completely lived up to the hype. Even knowing every flower was made of glass, it was almost impossible to believe. they looked unbelievably delicate and lifelike.\n\nThe animal exhibits were another highlight. Seeing so many animals up close, along with the enormous whale skeleton suspended from the ceiling, was an unforgettable. I also loved browsing the beautiful gems and minerals, especially spotting my birthstone.\n\nIf you’re visiting Harvard and have an hour or two to spare, don’t skip this museum. It’s easily one of the most memorable stops in the area.",
+    "segments": [
+      {
+        "unit_id": 0,
+        "text": "We visited the Harvard Museum of Natural History after exploring Harvard, and it was one of the best surprises of the trip.",
+        "words": 22,
+        "qwen_cosine": 0.8158383369445801,
+        "qwen_weight": 0.1071974684301111,
+        "mpnet_weight": 0.1600156700941022,
+        "length_share": 0.14102564102564102
+      },
+      {
+        "unit_id": 4,
+        "text": "The famous Glass Flowers collection is on the second floor, and it completely lived up to the hype.",
+        "words": 18,
+        "qwen_cosine": 0.7639756798744202,
+        "qwen_weight": 0.1003829498028039,
+        "mpnet_weight": 0.0596885043207055,
+        "length_share": 0.11538461538461539
+      },
+      {
+        "unit_id": 1,
+        "text": "Even if you’re not usually into museums, this one is absolutely worth a visit.",
+        "words": 14,
+        "qwen_cosine": 0.7161159515380859,
+        "qwen_weight": 0.094094397910744,
+        "mpnet_weight": 0.1113667280765172,
+        "length_share": 0.08974358974358974
+      },
+      {
+        "unit_id": 10,
+        "text": "If you’re visiting Harvard and have an hour or two to spare, don’t skip this museum.",
+        "words": 16,
+        "qwen_cosine": 0.7024738788604736,
+        "qwen_weight": 0.0923018912474061,
+        "mpnet_weight": 0.1361144813243543,
+        "length_share": 0.10256410256410256
+      },
+      {
+        "unit_id": 3,
+        "text": "but every exhibit is thoughtfully curated, so there’s always something fascinating to see.",
+        "words": 13,
+        "qwen_cosine": 0.6878036856651306,
+        "qwen_weight": 0.090374294196977,
+        "mpnet_weight": 0.1019102023698367,
+        "length_share": 0.08333333333333333
+      },
+      {
+        "unit_id": 9,
+        "text": "I also loved browsing the beautiful gems and minerals, especially spotting my birthstone.",
+        "words": 13,
+        "qwen_cosine": 0.666329562664032,
+        "qwen_weight": 0.0875526915359697,
+        "mpnet_weight": 0.0644051511906503,
+        "length_share": 0.08333333333333333
+      },
+      {
+        "unit_id": 8,
+        "text": "Seeing so many animals up close, along with the enormous whale skeleton suspended from the ceiling, was an unforgettable.",
+        "words": 19,
+        "qwen_cosine": 0.6572377681732178,
+        "qwen_weight": 0.0863580708510038,
+        "mpnet_weight": 0.0860330080921473,
+        "length_share": 0.12179487179487179
+      },
+      {
+        "unit_id": 7,
+        "text": "The animal exhibits were another highlight.",
+        "words": 6,
+        "qwen_cosine": 0.6026585102081299,
+        "qwen_weight": 0.0791866031499845,
+        "mpnet_weight": 0.1081904522518336,
+        "length_share": 0.038461538461538464
+      },
+      {
+        "unit_id": 5,
+        "text": "Even knowing every flower was made of glass, it was almost impossible to believe.",
+        "words": 14,
+        "qwen_cosine": 0.5632327795028687,
+        "qwen_weight": 0.0740062404099354,
+        "mpnet_weight": 0.0444189214862514,
+        "length_share": 0.08974358974358974
+      },
+      {
+        "unit_id": 6,
+        "text": "they looked unbelievably delicate and lifelike.",
+        "words": 6,
+        "qwen_cosine": 0.5209925174713135,
+        "qwen_weight": 0.0684560609803129,
+        "mpnet_weight": 0.0439810806216299,
+        "length_share": 0.038461538461538464
+      },
+      {
+        "unit_id": 11,
+        "text": "It’s easily one of the most memorable stops in the area.",
+        "words": 11,
+        "qwen_cosine": 0.4885486364364624,
+        "qwen_weight": 0.0641930817165424,
+        "mpnet_weight": 0.0710758615335139,
+        "length_share": 0.07051282051282051
+      },
+      {
+        "unit_id": 2,
+        "text": "It’s not very large,",
+        "words": 4,
+        "qwen_cosine": 0.4254046678543091,
+        "qwen_weight": 0.0558962497682086,
+        "mpnet_weight": 0.0127999386384572,
+        "length_share": 0.02564102564102564
+      }
+    ],
+    "highest": "We visited the Harvard Museum of Natural History after exploring Harvard, and it was one of the best surprises of the trip.",
+    "lowest": "It’s not very large,"
+  },
+  {
+    "source_id": 7,
+    "full_review": "Great spot to play basketball. Havnt seen too many runs recently but good hoops and lights stay on late. Main lights stay on till 11:15 but even after that there is still one big light and street lights that light it up enough to hoop",
+    "segments": [
+      {
+        "unit_id": 0,
+        "text": "Great spot to play basketball.",
+        "words": 5,
+        "qwen_cosine": 0.8773061037063599,
+        "qwen_weight": 0.2596060381221762,
+        "mpnet_weight": 0.3015480558732439,
+        "length_share": 0.1111111111111111
+      },
+      {
+        "unit_id": 2,
+        "text": "but good hoops and lights stay on late.",
+        "words": 8,
+        "qwen_cosine": 0.7672271728515625,
+        "qwen_weight": 0.2270322819392329,
+        "mpnet_weight": 0.2291360574070982,
+        "length_share": 0.17777777777777778
+      },
+      {
+        "unit_id": 4,
+        "text": "but even after that there is still one big light and street lights that light it up enough to hoop",
+        "words": 20,
+        "qwen_cosine": 0.6959360837936401,
+        "qwen_weight": 0.2059363416447868,
+        "mpnet_weight": 0.2385214227757224,
+        "length_share": 0.4444444444444444
+      },
+      {
+        "unit_id": 3,
+        "text": "Main lights stay on till 11:15",
+        "words": 6,
+        "qwen_cosine": 0.5973188877105713,
+        "qwen_weight": 0.1767542586093628,
+        "mpnet_weight": 0.1054035272355632,
+        "length_share": 0.13333333333333333
+      },
+      {
+        "unit_id": 1,
+        "text": "Havnt seen too many runs recently",
+        "words": 6,
+        "qwen_cosine": 0.4415865540504455,
+        "qwen_weight": 0.1306710796844412,
+        "mpnet_weight": 0.1253909367083721,
+        "length_share": 0.13333333333333333
+      }
+    ],
+    "highest": "Great spot to play basketball.",
+    "lowest": "Havnt seen too many runs recently"
+  },
+  {
+    "source_id": 40,
+    "full_review": "Great park! There is a fenced in playground with large and small play structures, swings, etc. There are tall trees that provide shade, benches and a picnic table inside the play area.\nThe park also has basketball courts and a good-sized exercise area/structure.\n\nThe other half of the park is an open grass area (but that half is still under construction as of May 2023, as they've been fixing it up).",
+    "segments": [
+      {
+        "unit_id": 1,
+        "text": "There is a fenced in playground with large and small play structures, swings, etc.",
+        "words": 14,
+        "qwen_cosine": 0.845520555973053,
+        "qwen_weight": 0.2141560744024082,
+        "mpnet_weight": 0.1973229790544155,
+        "length_share": 0.19718309859154928
+      },
+      {
+        "unit_id": 3,
+        "text": "The park also has basketball courts and a good-sized exercise area/structure.",
+        "words": 11,
+        "qwen_cosine": 0.8266279101371765,
+        "qwen_weight": 0.2093708863443484,
+        "mpnet_weight": 0.2186608675524386,
+        "length_share": 0.15492957746478872
+      },
+      {
+        "unit_id": 2,
+        "text": "There are tall trees that provide shade, benches and a picnic table inside the play area.",
+        "words": 16,
+        "qwen_cosine": 0.8092706799507141,
+        "qwen_weight": 0.2049745931342396,
+        "mpnet_weight": 0.1868238261287891,
+        "length_share": 0.22535211267605634
+      },
+      {
+        "unit_id": 0,
+        "text": "Great park!",
+        "words": 2,
+        "qwen_cosine": 0.7423360347747803,
+        "qwen_weight": 0.1880211781626786,
+        "mpnet_weight": 0.1911264673314799,
+        "length_share": 0.028169014084507043
+      },
+      {
+        "unit_id": 4,
+        "text": "The other half of the park is an open grass area (but that half is still under construction as of May 2023, as they've been fixing it up).",
+        "words": 28,
+        "qwen_cosine": 0.7243959903717041,
+        "qwen_weight": 0.1834772679563251,
+        "mpnet_weight": 0.2060658599328768,
+        "length_share": 0.39436619718309857
+      }
+    ],
+    "highest": "There is a fenced in playground with large and small play structures, swings, etc.",
+    "lowest": "The other half of the park is an open grass area (but that half is still under construction as of May 2023, as they've been fixing it up)."
+  }
+]

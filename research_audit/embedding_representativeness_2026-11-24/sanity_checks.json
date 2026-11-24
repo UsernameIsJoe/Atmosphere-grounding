@@ -1,0 +1,12 @@
+{
+  "mpnet": {
+    "sanity_rude_lovely_cosine": 0.6612387895584106,
+    "sanity_rude_unhelpful_cosine": 0.7053361535072327,
+    "sanity_rude_building_cosine": 0.0779990404844284
+  },
+  "qwen": {
+    "sanity_rude_lovely_cosine": 0.7842206358909607,
+    "sanity_rude_unhelpful_cosine": 0.86347895860672,
+    "sanity_rude_building_cosine": 0.29681596159935
+  }
+}
