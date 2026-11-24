@@ -1,0 +1,72 @@
+{
+  "repo": "perplexity-ai/pplx-decider-v1.2",
+  "revision": "cce0f3f80033e9d89d80831d5281fd72124aacce",
+  "private": false,
+  "gated": false,
+  "files": {
+    "README.md": {
+      "bytes": 19298,
+      "sha256": "978562adfa1e70609e0f1ca1376182ff4f7dfba4271ba81ab83a55da40633a9b"
+    },
+    "config.json": {
+      "bytes": 3757,
+      "sha256": "687f20bf493b8ee787dadaf338cf6df644dad44e32bcd2c3677a47c6c213d8b3"
+    },
+    "decision_config.json": {
+      "bytes": 5436,
+      "sha256": "ade1801ff9ee38fdeb561f91b808f57aaab547924e72bae0d1c5a795717f497b"
+    },
+    "evaluation/inference-verification.json": {
+      "bytes": 8578,
+      "sha256": "d7cb2f9d65c200414b9612b9e1db628036deabdcb09b3f3154dd091140b198bd"
+    },
+    "joint_config.json": {
+      "bytes": 248,
+      "sha256": "ecc88efc2a8ebd81ddf93f7d722e35b2829fd7526b5ce754db53395aa49fb510"
+    },
+    "model.safetensors.index.json": {
+      "bytes": 103954,
+      "sha256": "e0d2c6a2b917ef18677b9f740ca35909c7665992ff4454031cdee51d53470fbb"
+    },
+    "release-manifest.json": {
+      "bytes": 5742,
+      "sha256": "00c72c4bc83e24829339e2d43a92a8f55fb09942369af25c27170191762d4529"
+    },
+    "requirements-fast.txt": {
+      "bytes": 50,
+      "sha256": "2c1d756f1be3b408ddacad3485f140a9099c066ec5ae83ecce9c916bd0046b3c"
+    },
+    "requirements.txt": {
+      "bytes": 113,
+      "sha256": "ba5651e48af38608f3c43bbb8557a5b1a8b33082b8be86e6fb186332f0f7016d"
+    },
+    "source/pyproject.toml": {
+      "bytes": 583,
+      "sha256": "d89014942e02c01f0bbc3f4f2be4034cc6910f2efba91c5747947996a403ad78"
+    },
+    "source/src/pplx_decider/__init__.py": {
+      "bytes": 569,
+      "sha256": "48c26c24432476f2e4a43486d60e24ee0a6e124093a38fb8803686e99fecb5b3"
+    },
+    "source/src/pplx_decider/fast.py": {
+      "bytes": 19003,
+      "sha256": "afef05e1935be967b6ab6015bea3c86933dd5a45b7f349b0ed2ab5788a66cdbc"
+    },
+    "source/src/pplx_decider/model.py": {
+      "bytes": 13460,
+      "sha256": "ab5f42bd051d9e04cb9266e378d96dd72684c7a7f074efd9fc5117508e3dee91"
+    },
+    "source/src/pplx_decider/protocol.py": {
+      "bytes": 12572,
+      "sha256": "b29d7a50d7214bd42397f8d3ddd5b5706cb8da2b257e175bf89b5a8da455d6a0"
+    },
+    "source/src/pplx_decider/py.typed": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "source/src/pplx_decider/types.py": {
+      "bytes": 2550,
+      "sha256": "3de3e545d81692346f65c0f4ff9843952696a12f7b357cf6a5d0e8545badff8a"
+    }
+  }
+}

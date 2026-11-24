@@ -1,0 +1,145 @@
+{
+  "model_repo": "perplexity-ai/pplx-decider-v1.2",
+  "model_revision": "cce0f3f80033e9d89d80831d5281fd72124aacce",
+  "publisher_temperature": 1.3823494677922652,
+  "main_readouts": 480,
+  "unique_conditions": 48,
+  "all_expected_main_readouts_complete": true,
+  "repeatability": {
+    "max_probability_range_pp": 0.0,
+    "max_raw_logit_range": 0.0,
+    "groups_with_identical_probabilities": 48,
+    "groups_with_identical_raw_logits": 48,
+    "groups_with_changed_selected_states": 0
+  },
+  "native_option_order_sensitivity": {
+    "cases": 12,
+    "maximum_review_gap_pp": 6.900543052965979,
+    "mean_review_gap_pp": 1.8623315288069373,
+    "median_review_gap_pp": 1.0675108932747108,
+    "cases_with_changed_selected_state": 0
+  },
+  "native_decide_alignment": {
+    "checks": 12,
+    "max_probability_difference": 0.0,
+    "all_choices_agree": true
+  },
+  "native_distribution": {
+    "mean_winning_probability": 0.8602348539662681,
+    "median_winning_probability": 0.9511301115312594,
+    "minimum_winning_probability": 0.5140412863962642,
+    "winning_probability_ge_999_count": 0,
+    "mean_entropy_bits": 0.5249683867063101,
+    "T1_mean_winning_probability": 0.8980537075677901
+  },
+  "reloaded": {
+    "readouts": 12,
+    "max_probability_shift_from_main_mean_pp": 2.220446049250313e-14,
+    "max_probability_shift_from_original_readout_pp": 0.0,
+    "all_raw_logits_exactly_match_original": true,
+    "all_probabilities_exactly_match_original": true,
+    "mean_comparison_note": "Any approximately 1e-14 percentage-point difference against the arithmetic mean of ten identical vectors is floating-point averaging roundoff, not observed model variation.",
+    "changed_selected_states": 0,
+    "case_details": [
+      {
+        "case_id": "K01",
+        "max_probability_shift_from_main_mean_pp": 1.1102230246251565e-14,
+        "max_probability_shift_from_original_readout_pp": 0.0,
+        "raw_logits_exactly_match_original": true,
+        "probabilities_exactly_match_original": true,
+        "same_selected_state": true
+      },
+      {
+        "case_id": "K02",
+        "max_probability_shift_from_main_mean_pp": 1.1102230246251565e-14,
+        "max_probability_shift_from_original_readout_pp": 0.0,
+        "raw_logits_exactly_match_original": true,
+        "probabilities_exactly_match_original": true,
+        "same_selected_state": true
+      },
+      {
+        "case_id": "K03",
+        "max_probability_shift_from_main_mean_pp": 4.336808689942018e-17,
+        "max_probability_shift_from_original_readout_pp": 0.0,
+        "raw_logits_exactly_match_original": true,
+        "probabilities_exactly_match_original": true,
+        "same_selected_state": true
+      },
+      {
+        "case_id": "K04",
+        "max_probability_shift_from_main_mean_pp": 2.220446049250313e-14,
+        "max_probability_shift_from_original_readout_pp": 0.0,
+        "raw_logits_exactly_match_original": true,
+        "probabilities_exactly_match_original": true,
+        "same_selected_state": true
+      },
+      {
+        "case_id": "K05",
+        "max_probability_shift_from_main_mean_pp": 1.1102230246251565e-14,
+        "max_probability_shift_from_original_readout_pp": 0.0,
+        "raw_logits_exactly_match_original": true,
+        "probabilities_exactly_match_original": true,
+        "same_selected_state": true
+      },
+      {
+        "case_id": "K06",
+        "max_probability_shift_from_main_mean_pp": 6.938893903907228e-16,
+        "max_probability_shift_from_original_readout_pp": 0.0,
+        "raw_logits_exactly_match_original": true,
+        "probabilities_exactly_match_original": true,
+        "same_selected_state": true
+      },
+      {
+        "case_id": "U01",
+        "max_probability_shift_from_main_mean_pp": 1.1102230246251565e-14,
+        "max_probability_shift_from_original_readout_pp": 0.0,
+        "raw_logits_exactly_match_original": true,
+        "probabilities_exactly_match_original": true,
+        "same_selected_state": true
+      },
+      {
+        "case_id": "U02",
+        "max_probability_shift_from_main_mean_pp": 4.336808689942018e-17,
+        "max_probability_shift_from_original_readout_pp": 0.0,
+        "raw_logits_exactly_match_original": true,
+        "probabilities_exactly_match_original": true,
+        "same_selected_state": true
+      },
+      {
+        "case_id": "U03",
+        "max_probability_shift_from_main_mean_pp": 1.734723475976807e-16,
+        "max_probability_shift_from_original_readout_pp": 0.0,
+        "raw_logits_exactly_match_original": true,
+        "probabilities_exactly_match_original": true,
+        "same_selected_state": true
+      },
+      {
+        "case_id": "U04",
+        "max_probability_shift_from_main_mean_pp": 1.1102230246251565e-14,
+        "max_probability_shift_from_original_readout_pp": 0.0,
+        "raw_logits_exactly_match_original": true,
+        "probabilities_exactly_match_original": true,
+        "same_selected_state": true
+      },
+      {
+        "case_id": "U05",
+        "max_probability_shift_from_main_mean_pp": 2.220446049250313e-14,
+        "max_probability_shift_from_original_readout_pp": 0.0,
+        "raw_logits_exactly_match_original": true,
+        "probabilities_exactly_match_original": true,
+        "same_selected_state": true
+      },
+      {
+        "case_id": "U06",
+        "max_probability_shift_from_main_mean_pp": 5.551115123125783e-15,
+        "max_probability_shift_from_original_readout_pp": 0.0,
+        "raw_logits_exactly_match_original": true,
+        "probabilities_exactly_match_original": true,
+        "same_selected_state": true
+      }
+    ]
+  },
+  "median_forward_seconds": 0.6477872024406679,
+  "confidence_field_definition": "For four-way choice, the author's formatter computes confidence=(max_probability-0.25)/0.75, clipped to [0,1]. It is a concentration transform, not an additional independent correctness estimate.",
+  "qualification": "Native criterion reordering jointly changes option position and internal A-D assignment; not the isolated Gemma letter-only factor. Stored Qwen/Gemma baselines differ in runtime, precision, wrapper and temperature. No inherited-reference accuracy or task-calibration claim is computed."
+}

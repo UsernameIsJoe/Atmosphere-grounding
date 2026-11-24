@@ -1,0 +1,246 @@
+{
+  "source_project_commit": "e847d43069035f34f9f9a50b740d79c4635edf15",
+  "qualification": "Stored baselines, not rerun. Wrappers, precision, runtime and temperature differ. Qwen averages four semantic definition orders; Gemma averages four fixed-position letter assignments. These are practical comparisons, not a causal architecture test.",
+  "cases": {
+    "K01": {
+      "qwen_semantic_order_mean": {
+        "neither": 0.5297784786975065,
+        "support_only": 0.3158333006397813,
+        "opposition_only": 0.13792712686930605,
+        "both": 0.016461093793406188
+      },
+      "gemma_T1_mapping_mean": {
+        "neither": 0.00787268844251468,
+        "support_only": 2.003677884829431e-05,
+        "opposition_only": 0.9921040421392575,
+        "both": 3.2326393795465387e-06
+      },
+      "gemma_T4_mapping_mean": {
+        "neither": 0.19860272837209214,
+        "support_only": 0.03643921859484377,
+        "opposition_only": 0.7396882392670481,
+        "both": 0.025269813766016
+      }
+    },
+    "K02": {
+      "qwen_semantic_order_mean": {
+        "neither": 0.8983782976159965,
+        "support_only": 0.08636727872649408,
+        "opposition_only": 0.014236468585290755,
+        "both": 0.0010179550722186161
+      },
+      "gemma_T1_mapping_mean": {
+        "neither": 0.9999998897223444,
+        "support_only": 7.4413523596197615e-09,
+        "opposition_only": 9.086711840324362e-08,
+        "both": 1.1969184829337847e-08
+      },
+      "gemma_T4_mapping_mean": {
+        "neither": 0.9704252237096632,
+        "support_only": 0.008177337299629252,
+        "opposition_only": 0.014183796323796275,
+        "both": 0.007213642666911163
+      }
+    },
+    "K03": {
+      "qwen_semantic_order_mean": {
+        "neither": 0.8232825021031833,
+        "support_only": 0.1573092593925784,
+        "opposition_only": 0.018059743388304964,
+        "both": 0.0013484951159333611
+      },
+      "gemma_T1_mapping_mean": {
+        "neither": 0.9999999734559544,
+        "support_only": 4.076338927137256e-09,
+        "opposition_only": 1.8094719035467497e-08,
+        "both": 4.372987674814612e-09
+      },
+      "gemma_T4_mapping_mean": {
+        "neither": 0.9790755286609051,
+        "support_only": 0.0071831780290458995,
+        "opposition_only": 0.008028923648769289,
+        "both": 0.005712369661279718
+      }
+    },
+    "K04": {
+      "qwen_semantic_order_mean": {
+        "neither": 0.007711794572950405,
+        "support_only": 0.9817041514919835,
+        "opposition_only": 0.0034222505467599498,
+        "both": 0.007161803388306028
+      },
+      "gemma_T1_mapping_mean": {
+        "neither": 2.7959690924043906e-06,
+        "support_only": 0.9999971175129206,
+        "opposition_only": 6.715677571031118e-08,
+        "both": 1.936121129426099e-08
+      },
+      "gemma_T4_mapping_mean": {
+        "neither": 0.029191187454737647,
+        "support_only": 0.9485969437286714,
+        "opposition_only": 0.013224041697816907,
+        "both": 0.00898782711877406
+      }
+    },
+    "K05": {
+      "qwen_semantic_order_mean": {
+        "neither": 0.7829721174730411,
+        "support_only": 0.10650712405393364,
+        "opposition_only": 0.10691382295944857,
+        "both": 0.003606935513576763
+      },
+      "gemma_T1_mapping_mean": {
+        "neither": 6.29866155610633e-07,
+        "support_only": 4.252532119060449e-07,
+        "opposition_only": 0.9999987843667322,
+        "both": 1.6051390028136996e-07
+      },
+      "gemma_T4_mapping_mean": {
+        "neither": 0.022292554347683544,
+        "support_only": 0.017802551541896222,
+        "opposition_only": 0.943425461291546,
+        "both": 0.01647943281887429
+      }
+    },
+    "K06": {
+      "qwen_semantic_order_mean": {
+        "neither": 0.2852494216802948,
+        "support_only": 0.19133323791447207,
+        "opposition_only": 0.5074153920650681,
+        "both": 0.016001948340164926
+      },
+      "gemma_T1_mapping_mean": {
+        "neither": 0.9964935946423155,
+        "support_only": 6.992565575958049e-07,
+        "opposition_only": 0.0035050815591147976,
+        "both": 6.245420120687077e-07
+      },
+      "gemma_T4_mapping_mean": {
+        "neither": 0.7963488968600066,
+        "support_only": 0.017997283276872555,
+        "opposition_only": 0.17067186660363942,
+        "both": 0.01498195325948132
+      }
+    },
+    "U01": {
+      "qwen_semantic_order_mean": {
+        "neither": 0.9467842916118006,
+        "support_only": 0.05127001558884928,
+        "opposition_only": 0.0012951873464865382,
+        "both": 0.0006505054528636875
+      },
+      "gemma_T1_mapping_mean": {
+        "neither": 0.9999999931758291,
+        "support_only": 1.1333255441811772e-09,
+        "opposition_only": 4.019217239711998e-09,
+        "both": 1.6716281397473517e-09
+      },
+      "gemma_T4_mapping_mean": {
+        "neither": 0.9856339612955849,
+        "support_only": 0.004465581583443188,
+        "opposition_only": 0.005557862589747216,
+        "both": 0.004342594531224682
+      }
+    },
+    "U02": {
+      "qwen_semantic_order_mean": {
+        "neither": 0.9692763498094304,
+        "support_only": 0.02957679978872167,
+        "opposition_only": 0.0009426248825348481,
+        "both": 0.00020422551931304004
+      },
+      "gemma_T1_mapping_mean": {
+        "neither": 0.9999999923840981,
+        "support_only": 8.690632740823724e-10,
+        "opposition_only": 5.09869913208387e-09,
+        "both": 1.6481394465800117e-09
+      },
+      "gemma_T4_mapping_mean": {
+        "neither": 0.9855423190692412,
+        "support_only": 0.00429878820997519,
+        "opposition_only": 0.005839332960041085,
+        "both": 0.0043195597607426075
+      }
+    },
+    "U03": {
+      "qwen_semantic_order_mean": {
+        "neither": 0.003027546989928841,
+        "support_only": 0.0216984546864439,
+        "opposition_only": 0.9745004088651402,
+        "both": 0.000773589458487052
+      },
+      "gemma_T1_mapping_mean": {
+        "neither": 4.273610607165654e-09,
+        "support_only": 3.7393874079194154e-09,
+        "opposition_only": 0.9999999918315498,
+        "both": 1.55452176407801e-10
+      },
+      "gemma_T4_mapping_mean": {
+        "neither": 0.005150453430239672,
+        "support_only": 0.00519555197048761,
+        "opposition_only": 0.9868320495175169,
+        "both": 0.0028219450817558965
+      }
+    },
+    "U04": {
+      "qwen_semantic_order_mean": {
+        "neither": 0.9824735068997155,
+        "support_only": 0.01712917427034703,
+        "opposition_only": 0.00031568474246801035,
+        "both": 8.16340874695574e-05
+      },
+      "gemma_T1_mapping_mean": {
+        "neither": 0.9999999948703123,
+        "support_only": 5.328366990836612e-10,
+        "opposition_only": 2.6803471584864124e-09,
+        "both": 1.9165038722083876e-09
+      },
+      "gemma_T4_mapping_mean": {
+        "neither": 0.9865182244701995,
+        "support_only": 0.004116838255741983,
+        "opposition_only": 0.004960872577769569,
+        "both": 0.004404064696288928
+      }
+    },
+    "U05": {
+      "qwen_semantic_order_mean": {
+        "neither": 0.9572280095595052,
+        "support_only": 0.04017791775323233,
+        "opposition_only": 0.002043308199244808,
+        "both": 0.0005507644880177136
+      },
+      "gemma_T1_mapping_mean": {
+        "neither": 0.9999999899911957,
+        "support_only": 1.5151062371527107e-09,
+        "opposition_only": 6.713161751461928e-09,
+        "both": 1.7805362735909985e-09
+      },
+      "gemma_T4_mapping_mean": {
+        "neither": 0.9848528420610618,
+        "support_only": 0.0045876374278482086,
+        "opposition_only": 0.006120307477017765,
+        "both": 0.00443921303407227
+      }
+    },
+    "U06": {
+      "qwen_semantic_order_mean": {
+        "neither": 0.1950166712698258,
+        "support_only": 0.7896527674309803,
+        "opposition_only": 0.004830669710635958,
+        "both": 0.010499891588557917
+      },
+      "gemma_T1_mapping_mean": {
+        "neither": 3.903224434861142e-05,
+        "support_only": 0.999960879208756,
+        "opposition_only": 2.9022893416571624e-08,
+        "both": 5.952400197996365e-08
+      },
+      "gemma_T4_mapping_mean": {
+        "neither": 0.056829482117450036,
+        "support_only": 0.921542738020531,
+        "opposition_only": 0.009801918011226486,
+        "both": 0.01182586185079252
+      }
+    }
+  }
+}

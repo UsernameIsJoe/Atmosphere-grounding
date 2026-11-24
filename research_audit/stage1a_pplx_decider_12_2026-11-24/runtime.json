@@ -1,0 +1,31 @@
+{
+  "start_time": 1795539342.9044921,
+  "checkpoint": "/workspace/pplx_decider_checkpoint",
+  "model_repo": "perplexity-ai/pplx-decider-v1.2",
+  "model_revision": "cce0f3f80033e9d89d80831d5281fd72124aacce",
+  "torch": "2.14.0+cu130",
+  "cuda_runtime": "13.0",
+  "gpu_name": "NVIDIA RTX PRO 6000 Blackwell Server Edition",
+  "gpu": "NVIDIA RTX PRO 6000 Blackwell Server Edition, 595.112.07, 97887 MiB",
+  "package_versions": {
+    "torch": "2.14.0",
+    "torchvision": "0.29.0",
+    "transformers": "5.17.0",
+    "safetensors": "0.8.0",
+    "pillow": "12.3.0",
+    "huggingface-hub": "1.31.0"
+  },
+  "saved_temperature": 1.3823494677922652,
+  "fast": false,
+  "batch_size": 1,
+  "max_length": 8192,
+  "seed": 42,
+  "deterministic_algorithms": false,
+  "qualification": "Official reference path; use_cache=False is enforced by model source. No FP8, quantization, packing or compilation. Native criterion reordering jointly changes positions and internal answer codes.",
+  "load_seconds": 4.74120267899707,
+  "min_input_tokens": 2511,
+  "max_input_tokens": 2627,
+  "reload_seconds": 4.4199482769472525,
+  "end_time": 1795539684.7363703,
+  "peak_gpu_memory_bytes": 53227852288
+}

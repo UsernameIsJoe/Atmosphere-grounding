@@ -1,0 +1,178 @@
+{
+  "date": "2026-11-24",
+  "reviewer": "current assistant; exact backend identifier not exposed",
+  "blinded": false,
+  "method": "Read each original target and full review against the frozen v0.5 codebook; inspect actual four-order native means. This is qualitative plausibility review, not calibrated numerical ground truth. Earlier conversation was visible.",
+  "prior_human_context": "Researcher previously expressed general agreement on the four Gemma boundary cases K04/K05/K06/U06. This is not a human adjudication of new Decider probabilities.",
+  "new_decider_human_probability_adjudication": false,
+  "cases": [
+    {
+      "case_id": "K01",
+      "target_segment": "It was so stressful but her humanity made everything so much better!",
+      "native_order_mean": {
+        "neither": 0.1002185526210564,
+        "support_only": 0.05130956096872917,
+        "opposition_only": 0.6281753821335012,
+        "both": 0.22029650427671335
+      },
+      "assessment": "clear_attribution_mismatch",
+      "assistant_leaning": "neither",
+      "reason": "The target names stress and relief, but the full review attributes them to a late photographer and accommodation of a personal wedding schedule. Neither qualifies as a place-calm judgment under the stated attribution rule. Opposition-only plus both receives 84.85%, so the lower maximum than Gemma does not mean the full distribution handles the error better.",
+      "human_adjudication_of_new_probability_values": false
+    },
+    {
+      "case_id": "K02",
+      "target_segment": "Lights in the small box were years away- it was completely dark.",
+      "native_order_mean": {
+        "neither": 0.9544059365225683,
+        "support_only": 0.006478894049780042,
+        "opposition_only": 0.036968918647394676,
+        "both": 0.0021462507802567777
+      },
+      "assessment": "semantically_reasonable",
+      "assistant_leaning": "neither",
+      "reason": "Darkness in a poorly maintained restroom is not in itself reported tranquility or disturbance. Strong neither is consistent with the calm boundary, without making a safety judgment.",
+      "human_adjudication_of_new_probability_values": false
+    },
+    {
+      "case_id": "K03",
+      "target_segment": "I wouldn't go here if your looking for walk.",
+      "native_order_mean": {
+        "neither": 0.994200032609356,
+        "support_only": 0.0017457283351608218,
+        "opposition_only": 0.003104636391996874,
+        "both": 0.0009496026634863147
+      },
+      "assessment": "semantically_reasonable",
+      "assistant_leaning": "neither",
+      "reason": "The target concerns suitability for a walk. Other sentences mention sparse attendance and a pleasant park, but they cannot silently become evidence in this target. Strong neither is reasonable.",
+      "human_adjudication_of_new_probability_values": false
+    },
+    {
+      "case_id": "K04",
+      "target_segment": "What made this visit extra special was how surprisingly uncrowded it was.",
+      "native_order_mean": {
+        "neither": 0.06998828280774248,
+        "support_only": 0.907564449635025,
+        "opposition_only": 0.009369840150861276,
+        "both": 0.013077427406371377
+      },
+      "assessment": "boundary_case",
+      "assistant_leaning": "support_only_plausible",
+      "reason": "Surprisingly uncrowded is a reported spatial/social condition supporting an inferential calm reading, but it is not a direct report of tranquility. Support at 90.76% is defensible only if this T inference is accepted. Subsequent comfortable-strolling text may clarify context but cannot replace the target.",
+      "human_adjudication_of_new_probability_values": false
+    },
+    {
+      "case_id": "K05",
+      "target_segment": "If the owner of the chickens sees it, he yells from his home and asks if you are feeding poison to them.",
+      "native_order_mean": {
+        "neither": 0.4559239484061218,
+        "support_only": 0.008104545786702846,
+        "opposition_only": 0.5280682015778289,
+        "both": 0.007903304229346375
+      },
+      "assessment": "boundary_case",
+      "assistant_leaning": "opposition_only_plausible",
+      "reason": "Yelling directed at visitors can disturb an encountered place experience. The 52.81% opposition versus 45.59% neither split exposes the interaction-versus-place-atmosphere boundary. This is a plausible ambiguity profile, not a measured 53% chance of correctness.",
+      "human_adjudication_of_new_probability_values": false
+    },
+    {
+      "case_id": "K06",
+      "target_segment": "It’s not closed to the street though so you have to keep an eye on your kids.",
+      "native_order_mean": {
+        "neither": 0.95466701621554,
+        "support_only": 0.003544952310807369,
+        "opposition_only": 0.03868585432586013,
+        "both": 0.003102177147792609
+      },
+      "assessment": "boundary_case",
+      "assistant_leaning": "neither_with_plausible_opposition",
+      "reason": "The target directly concerns children and an open boundary to traffic. Neither for calm is reasonable; heightened vigilance can also support T opposition. A 95.47% neither reading is more decisive than the earlier softened Gemma distribution and does not resolve the construct boundary.",
+      "human_adjudication_of_new_probability_values": false
+    },
+    {
+      "case_id": "U01",
+      "target_segment": "1/2 of the space was empty to become a dance floor later in the night.",
+      "native_order_mean": {
+        "neither": 0.8816648342216304,
+        "support_only": 0.050043023347835294,
+        "opposition_only": 0.056930672910900065,
+        "both": 0.011361469519634305
+      },
+      "assessment": "semantically_reasonable",
+      "assistant_leaning": "neither",
+      "reason": "The target describes space reserved for a future dance floor, not present tranquility, disturbance, or a visitor response. Neither is reasonable. Its 88.17% concentration is less strong than several unrelated-content cases but cannot be independently calibrated from this reading.",
+      "human_adjudication_of_new_probability_values": false
+    },
+    {
+      "case_id": "U02",
+      "target_segment": "The three exhibits on display were quite underwhelming…",
+      "native_order_mean": {
+        "neither": 0.9958355538173749,
+        "support_only": 0.0008835083146803569,
+        "opposition_only": 0.0026866329629867715,
+        "both": 0.0005943049049581476
+      },
+      "assessment": "semantically_reasonable",
+      "assistant_leaning": "neither",
+      "reason": "Underwhelming exhibits are a content-quality assessment. They do not establish calm opposition or support. Strong neither is appropriate to the target.",
+      "human_adjudication_of_new_probability_values": false
+    },
+    {
+      "case_id": "U03",
+      "target_segment": "It is hard to get the sound of the Memorial Drive cars out of your head as they are only a few yards from this park with no real barriers blocking the sound.",
+      "native_order_mean": {
+        "neither": 0.0077617520210005045,
+        "support_only": 0.0031380382720091983,
+        "opposition_only": 0.9864026974971118,
+        "both": 0.0026975122098783716
+      },
+      "assessment": "semantically_reasonable",
+      "assistant_leaning": "opposition_only",
+      "reason": "The target explicitly reports intrusive car sound affecting the visitor at the park and no barriers to that noise. Strong calm opposition is supported by the text, with no need to infer calm from the mere existence of a road.",
+      "human_adjudication_of_new_probability_values": false
+    },
+    {
+      "case_id": "U04",
+      "target_segment": "This museum is fun for all ages.",
+      "native_order_mean": {
+        "neither": 0.9777968923234948,
+        "support_only": 0.011916469063525208,
+        "opposition_only": 0.008515401943322797,
+        "both": 0.0017712366696572908
+      },
+      "assessment": "semantically_reasonable",
+      "assistant_leaning": "neither",
+      "reason": "Fun for all ages concerns enjoyment and suitability, not tranquility. Strong neither is consistent with separating emotion dimensions.",
+      "human_adjudication_of_new_probability_values": false
+    },
+    {
+      "case_id": "U05",
+      "target_segment": "This station is epic and famous, but not the cleanest.",
+      "native_order_mean": {
+        "neither": 0.9498346994031215,
+        "support_only": 0.004411033928626816,
+        "opposition_only": 0.04166856944003838,
+        "both": 0.0040856972282134535
+      },
+      "assessment": "semantically_reasonable",
+      "assistant_leaning": "neither",
+      "reason": "Fame and imperfect cleanliness do not themselves imply calm or disturbance. Strong neither is reasonable; context complaints about a closed toilet cannot supply new target evidence.",
+      "human_adjudication_of_new_probability_values": false
+    },
+    {
+      "case_id": "U06",
+      "target_segment": "Lovely sitting under the fairy lights in a comfy Adirondack chair, while a busker played songs from the 70s.",
+      "native_order_mean": {
+        "neither": 0.40653301786184204,
+        "support_only": 0.5642025516386653,
+        "opposition_only": 0.013851352105680004,
+        "both": 0.015413078393812691
+      },
+      "assessment": "boundary_case",
+      "assistant_leaning": "support_only_plausible",
+      "reason": "The lovely seated experience, comfortable chair and music support a plausible ease/relaxation inference, without explicitly reporting tranquility. The 56.42% support versus 40.65% neither split is semantically plausible. Music and comfort alone are not automatically calm, and these proportions have not been human-validated.",
+      "human_adjudication_of_new_probability_values": false
+    }
+  ]
+}

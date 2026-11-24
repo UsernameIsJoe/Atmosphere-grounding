@@ -1,0 +1,122 @@
+{
+  "date": "2026-11-24",
+  "folder": "research_audit/stage1a_pplx_decider_12_2026-11-24",
+  "files": {
+    "README.md": {
+      "bytes": 16276,
+      "sha256": "8d8bbdaf8e6608664bd700ab5d74ed251764198484c55c9477c2291848e4303a"
+    },
+    "QUALITATIVE_AUDIT.md": {
+      "bytes": 6620,
+      "sha256": "4e808d57abfd6de41bc3f9386fe6a0be2c36704e92636b3508b38da236dd0079"
+    },
+    "qualitative_audit.json": {
+      "bytes": 9731,
+      "sha256": "d8d27796171b7605a1eabb2ffb8ddbdca046c0201fd07f79e4bfe6e8c0d3b288"
+    },
+    "PROTOCOL.json": {
+      "bytes": 2176,
+      "sha256": "f92d8f4b0168d2e79ac48e8329d1136cbeee73a8dff3f979f164ba6866dccd4e"
+    },
+    "inputs.jsonl": {
+      "bytes": 7101,
+      "sha256": "2bd95d20f6df4ae4ff340e450ea19c20ec10d4cda4232568531f2dd3bcc650c9"
+    },
+    "codebook_v05.md": {
+      "bytes": 10679,
+      "sha256": "eaf8e1f4498087d7847bc321feaa7a224121c51b61b7ff320a0f88d749242e60"
+    },
+    "decision_instructions.txt": {
+      "bytes": 11525,
+      "sha256": "b3ce2e093e8e65067ebf70f642a26b4baddeef455108fcc1195ee79fe5b20382"
+    },
+    "model_source_manifest.json": {
+      "bytes": 2492,
+      "sha256": "a4bd08a78ae8aab55e504d32e55db29993a759b16759eb59ab526a7b87b5a23d"
+    },
+    "hf_metadata.json": {
+      "bytes": 13060,
+      "sha256": "c6efee4176538d0939bcb799d93e6cc80fc0a77f7ba4cfa88bb8e13f91bfeef7"
+    },
+    "checkpoint_integrity.json": {
+      "bytes": 4002,
+      "sha256": "dc3d72ebbcb40919b6a84e63d331435e1e5212fd2fb253af700185d8b0a9722f"
+    },
+    "runtime.json": {
+      "bytes": 1175,
+      "sha256": "2eacbace44bbe55a1855648633a3cd53153eeec5040f8cd2fc75c4f9ea4cbec7"
+    },
+    "RUN_COMPLETE.json": {
+      "bytes": 123,
+      "sha256": "6e52b552433f003bd788aa749b40e4c1f0308422bb333339abf542719584eb44"
+    },
+    "run_decider.py": {
+      "bytes": 7478,
+      "sha256": "726930b5ef5fe0eed67391a99c85c184655c1e34e0ab51acef9741165440ca7f"
+    },
+    "bootstrap.py": {
+      "bytes": 2918,
+      "sha256": "c4d67641862d6a29de1ffbe5435ae6796bb7504c067273de92ead497aaf5dcfa"
+    },
+    "readouts.jsonl": {
+      "bytes": 377225,
+      "sha256": "3448d5ff86bd194309ecfc03e50c2a5f37119fa3e3461d43cf459b09f7faf4f3"
+    },
+    "raw_results_bundle.tar.gz": {
+      "bytes": 640066,
+      "sha256": "5404584c45c5c36b993a83fb8c53419d9d48c65eaf3511615b3aeeab1dae9c67"
+    },
+    "INTEGRITY.json": {
+      "bytes": 5150,
+      "sha256": "d345157ce0f95b4ecdb81a48e11c07989c6a160a6f9d68ea760dfd694c983aa0"
+    },
+    "archive_integrity.json": {
+      "bytes": 145,
+      "sha256": "cf0f2020b06a82d6c790db0b18bec845833b2297d746e1726361ffbde4abf78a"
+    },
+    "baseline_vectors.json": {
+      "bytes": 8320,
+      "sha256": "b0fb09de9efb77edfeb4666d81df7dfa567c53c58e68df13a3537a120f92279e"
+    },
+    "analyze_decider.py": {
+      "bytes": 9401,
+      "sha256": "ebabe0e2a054c9efc3dbbc39c07a14fda3761142432eceeb3484e6dddb1bf8f5"
+    },
+    "summary.json": {
+      "bytes": 6183,
+      "sha256": "56ff487e166f465a86f86ff7e884ed61612ba8016af18f49db4323a63f4da078"
+    },
+    "condition_repeatability.csv": {
+      "bytes": 6001,
+      "sha256": "6492873e53fb53ccbf4cebe2b0d4f53d5e484f34bb8a11898c139d21b2756e85"
+    },
+    "case_probability_summary.csv": {
+      "bytes": 3989,
+      "sha256": "46a94e20f1710d821fccbb5f373328e44280a60a08ebe8b8da7e94ff524e55a1"
+    },
+    "order_mean_vectors.csv": {
+      "bytes": 5128,
+      "sha256": "aa8994780c9cdc618b2b7e6503600c2c46d684c83d037140d5e0d63f7bab15ef"
+    },
+    "comparison_with_saved_baselines.csv": {
+      "bytes": 2851,
+      "sha256": "f1462fad32870188d5b91ec1ed7aa96ed0222b737bee6b0eb82ebf1de46cade8"
+    },
+    "plot_decider.py": {
+      "bytes": 5829,
+      "sha256": "c364b0ffe918c56d79759ce89598121e942db759a5596fdd04d59dc843670b9b"
+    },
+    "native_probability_profiles.png": {
+      "bytes": 233595,
+      "sha256": "54753fbbeebb49f73ad7322c03f4f6306cfaebc5dbb8ddb18b520961413e8b22"
+    },
+    "native_order_sensitivity.png": {
+      "bytes": 234708,
+      "sha256": "2508ffb8f43cdb4c34594fde92ccd13e9e0add1896de9dde7327d00c69af7831"
+    },
+    "cleanup.json": {
+      "bytes": 587,
+      "sha256": "101faa3f7f915298ee2be77b9f33db0121a819c952313f63f1e7c573a92317d5"
+    }
+  }
+}

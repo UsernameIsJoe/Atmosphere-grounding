@@ -287,3 +287,22 @@ Five figures and their data are included in the linked discussion: four-case and
 The added chart shows that at T=4 the mean review-level mapping gap is **4.18 percentage points**, the median is **1.58**, and the maximum is **14.20**. Typical sensitivity increases through the explored temperature grid even though the maximum declines after T=4.
 
 Two operations are now explicitly separated: **arithmetic means of four semantic-aligned probability vectors** give a combined prediction, whereas **medians of twelve review-level gaps** summarize typical sensitivity. The lower median curve does not establish that median prediction aggregation is better or remove the underlying variation. The current comparison representation retains arithmetic probability averaging; median and maximum are reported for sensitivity, with the mean alongside them. No production training temperature or confidence-weighting scheme is adopted.
+
+
+---
+
+## 16. PPLX-Decider v1.2 native probability experiment — November 24
+
+The researcher asked to test the decision model discussed in a side conversation. The exact model was resolved as **perplexity-ai/pplx-decider-v1.2** and executed at pinned revision `cce0f3f80033e9d89d80831d5281fd72124aacce`. The [completed report and artifacts](../research_audit/stage1a_pplx_decider_12_2026-11-24/README.md) preserve the actual design, outputs, figures and code.
+
+The same twelve real target segments, full-review attribution context and unchanged v0.5 codebook were used, with calm as the only emotion. The official Python BF16 reference path (`fast=False`) reads a separate decision head without generating tokens or using a KV cache. Its native publisher temperature **1.3823494677922652** was applied exactly once. All four raw pre-temperature logits, native probabilities and T=1 probabilities were retained. Twelve official `.decide` checks matched the public logits-plus-formatter calculation exactly. The API's confidence field is only a rescaling of the largest probability, not independent correctness evidence.
+
+Four balanced cyclic criteria orders × twelve targets × ten shuffled repeat blocks produced **480 main readouts**. A model unload/reload added twelve canonical readouts, and the SDK checks required twelve extra forwards: **492 logged records and 504 total model forward passes**. Every one of the 48 unique requests had identical logits and probabilities across all ten repeats. All twelve canonical vectors also matched exactly after reload. No repeat or order verdict changed.
+
+The median review-level native order gap was **1.07 percentage points**, the mean **1.86**, and the maximum **6.90**. Native reordering changes both criterion positions and their internal A–D codes; it is not the same isolated letter-assignment factor used in the Gemma plots. Four cyclic orders are not all 24 permutations. These observations establish repeatability for this tested hardware/software path, without guaranteeing arbitrary deployment settings or wording robustness.
+
+All twelve combined verdicts match saved Gemma verdicts. The distributions are less saturated: mean winning probability **86.02%**, versus **89.81%** with the same Decider logits at T=1; none of the 480 main requests reaches 99.9%. K05 owner yelling is near a split between opposition **52.81%** and neither **45.59%**; U06 comfortable seating/music is support **56.42%** and neither **40.65%**. These alternatives are semantically plausible but their numerical calibration remains untested.
+
+The known K01 personal-wedding-logistics attribution error persists: opposition only **62.82%**, both **22.03%**, neither **10.02%**. A lower maximum is not automatically improved uncertainty: **84.85%** still goes to states containing opposition, while the appropriate neither interpretation receives less mass than Gemma's illustrative T=4 vector. The assistant audit records seven reasonable profiles, this clear attribution mismatch, and four construct-boundary cases. It does not treat inherited verdicts as independent gold labels, infer new human approval of the percentages, or claim that training weights have been validated.
+
+The owned GPU was terminated after the complete archive and all 36 manifest-listed files were verified. Estimated compute was **$0.59** at **$2.69/hour**; the fresh post-termination pod list was empty. This adds a promising probability reader to the side study. The production pipeline, emotion targets and training-weighting scheme remain unchanged.

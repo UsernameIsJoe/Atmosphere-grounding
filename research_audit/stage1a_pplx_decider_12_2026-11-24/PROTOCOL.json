@@ -1,0 +1,36 @@
+{
+  "date": "2026-11-24",
+  "source_project_commit": "e847d43069035f34f9f9a50b740d79c4635edf15",
+  "model_repo": "perplexity-ai/pplx-decider-v1.2",
+  "model_revision": "cce0f3f80033e9d89d80831d5281fd72124aacce",
+  "precision": "BF16",
+  "inference_path": "Official Python Decider reference path, fast=False, one request at a time, no KV cache, no generation.",
+  "task": "Same twelve real target segments with full-review attribution context; calm only; unchanged v0.5 evidence definitions.",
+  "states": [
+    "neither",
+    "support_only",
+    "opposition_only",
+    "both"
+  ],
+  "orders": 4,
+  "unique_requests": 48,
+  "main_repeats_per_request": 10,
+  "main_readouts": 480,
+  "native_decide_alignment_checks": 12,
+  "reload_canonical_readouts": 12,
+  "temperature": "Use publisher decision_config temperature exactly once; retain raw pre-temperature readout logits and T=1 distributions separately. Do not fit an emotion-specific temperature from these twelve cases.",
+  "factors": "Native criteria reordering jointly changes option positions and their internal A-D code assignments. This is not Gemma's isolated fixed-position letter-assignment factor. Four cyclic orders, not all 24 permutations.",
+  "repeatability": "Serial one-request inference; seed 42; reference defaults; no fast packing, compilation, FP8 or new quantization. Repeats shuffled in ten blocks.",
+  "evaluation": "Compare repeat ranges, option-order max/mean/median review-level gaps, semantic mapping averages, winning-state changes and qualitative case reading. Do not use inherited provisional references for a claimed independent accuracy or calibration score.",
+  "budget": {
+    "hourly_max_without_further_approval_usd": 3,
+    "target_total_below_usd": 3,
+    "gpu_stop_monitor_minutes": 50
+  },
+  "input_hashes": {
+    "inputs.jsonl": "2bd95d20f6df4ae4ff340e450ea19c20ec10d4cda4232568531f2dd3bcc650c9",
+    "codebook_v05.md": "eaf8e1f4498087d7847bc321feaa7a224121c51b61b7ff320a0f88d749242e60",
+    "decision_instructions.txt": "b3ce2e093e8e65067ebf70f642a26b4baddeef455108fcc1195ee79fe5b20382",
+    "requests.jsonl": "96706d1002e658e17dd0a273d3285cdf6eb2318214f4982989c810bca42708ec"
+  }
+}
