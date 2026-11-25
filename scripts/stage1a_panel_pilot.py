@@ -26,6 +26,11 @@ VERSION = "stage1a_clauses_panel_v1"
 # Only split coordinating conjunctions at an explicit pause; no semantic rewrite.
 BOUNDARY = re.compile(r"[.!?;]+(?=\s|$)|,(?=\s+(?:but|however|although|yet|while)\b)", re.I)
 CLAUSE_SPLIT = re.compile(r"\s+(?:but|however|yet|whereas|while)\s+", re.I)
+# Name initials and personal titles are not sentence ends when a name follows.
+# Keep this narrow: e.g. "etc. There" and "Ames St. Public" still end sentences.
+NAME_ABBREVIATION = re.compile(
+    r"\b(?:[A-Z]|Mr|Mrs|Ms|Dr|Prof)\.(?=\s+(?:[A-Z]|and\s+[A-Z]))"
+)
 
 RUBRIC = {
     "calm": {
@@ -134,7 +139,10 @@ def segment_review(text: str) -> list[dict]:
         return []
     chunks = []
     cursor = 0
+    name_periods = {m.end() - 1 for m in NAME_ABBREVIATION.finditer(text)}
     for match in BOUNDARY.finditer(text):
+        if match.group() == "." and match.start() in name_periods:
+            continue
         chunks.append((cursor, match.end()))
         cursor = match.end()
     if cursor < len(text):

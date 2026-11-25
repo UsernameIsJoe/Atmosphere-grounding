@@ -37,6 +37,32 @@ def test_clause_offsets_and_contrast():
     assert "crowded" in units[1]["text"]
 
 
+@pytest.mark.parametrize("text, expected", [
+    ("John F. Kennedy Memorial Park is peaceful. Nice trees.",
+     ["John F. Kennedy Memorial Park is peaceful.", "Nice trees."]),
+    ("A memorial to President John F. Kennedy. The fountain is simple.",
+     ["A memorial to President John F. Kennedy.", "The fountain is simple."]),
+    ("Dr. Paul Dudley White Bike Path is nearby. It is busy.",
+     ["Dr. Paul Dudley White Bike Path is nearby.", "It is busy."]),
+    ("The Richard A. and Susan F. Smith Campus Center is tall.",
+     ["The Richard A. and Susan F. Smith Campus Center is tall."]),
+    ("Dr. Smith liked the park, but it was crowded! Quiet later? Yes; lovely.",
+     ["Dr. Smith liked the park,", "but it was crowded!", "Quiet later?", "Yes;", "lovely."]),
+    ("Play structures, swings, etc. There are tall trees.",
+     ["Play structures, swings, etc.", "There are tall trees."]),
+    ("Parking on Ames St. Public parking allowed.",
+     ["Parking on Ames St.", "Public parking allowed."]),
+    ("A memorial to John F. Kennedy.", ["A memorial to John F. Kennedy."]),
+    ("It costs 3.5 dollars. Nice park.", ["It costs 3.5 dollars.", "Nice park."]),
+])
+def test_name_abbreviations_preserve_real_boundaries_and_offsets(text, expected):
+    units = pilot.segment_review(text)
+    assert [u["text"] for u in units] == expected
+    assert [u["unit_id"] for u in units] == list(range(len(units)))
+    assert all(text[u["start"]:u["end"]] == u["text"] for u in units)
+    assert all(a["end"] <= b["start"] for a, b in zip(units, units[1:]))
+
+
 def test_quote_exactness_and_offset_provenance():
     unit = pilot.segment_review("A peaceful park.")[0]
     result = pilot.validate_label(annotation(), unit)
